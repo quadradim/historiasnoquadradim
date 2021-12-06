@@ -1,0 +1,30 @@
+[gd_scene format=2]
+
+[node name="Map" type="Node"]
+
+[node name="Background" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Place1" type="ColorRect" parent="."]
+margin_left = 336.0
+margin_top = 168.0
+margin_right = 376.0
+margin_bottom = 208.0
+color = Color( 0.886275, 0.854902, 0.0235294, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Place2" type="ColorRect" parent="."]
+margin_left = 600.0
+margin_top = 296.0
+margin_right = 640.0
+margin_bottom = 336.0
+color = Color( 0.886275, 0.854902, 0.0235294, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}

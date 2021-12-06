@@ -11,6 +11,7 @@ config_version=4
 [application]
 
 config/name="Historias No Quadradim - Protótipo"
+run/main_scene="res://scenes/GUI/Production.tscn"
 config/icon="res://icon.png"
 
 [physics]
