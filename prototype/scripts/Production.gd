@@ -1,9 +1,8 @@
 extends Node
 
-onready var transition_animation = $TransitionAnimation
+signal end_production
 
-func _ready():
-	transition_animation.play("production_fade_in")
+# export (String) var name = "default"
 
 func _on_OpeningDuration_timeout():
-	get_tree().change_scene("res://scenes/GUI/LogoOpening.tscn")
+	emit_signal("end_production")
