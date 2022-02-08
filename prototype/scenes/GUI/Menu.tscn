@@ -30,31 +30,32 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="MapButton" type="Button" parent="MenuLayer"]
-anchor_left = 0.475586
-anchor_top = 0.587
-anchor_right = 0.547188
-anchor_bottom = 0.6
-margin_left = -95.0
-margin_top = -24.2
-margin_right = 86.68
-margin_bottom = 40.0
-custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
-text = "Map"
-__meta__ = {
-"_edit_use_anchors_": true
-}
-
 [node name="StartButton" type="Button" parent="MenuLayer"]
 anchor_left = 0.47675
-anchor_top = 0.333667
+anchor_top = 0.320333
 anchor_right = 0.53925
-anchor_bottom = 0.333667
+anchor_bottom = 0.320333
 margin_left = -112.192
 margin_top = -40.2
 margin_right = 111.808
 margin_bottom = 39.8
+rect_pivot_offset = Vector2( 168, 144 )
 text = "Start"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Map" type="Button" parent="MenuLayer"]
+anchor_left = 0.47675
+anchor_top = 0.547
+anchor_right = 0.53925
+anchor_bottom = 0.547
+margin_left = -112.192
+margin_top = -40.2
+margin_right = 111.808
+margin_bottom = 39.8
+rect_pivot_offset = Vector2( 168, 144 )
+text = "Map"
 __meta__ = {
 "_edit_use_anchors_": true
 }
@@ -74,5 +75,5 @@ __meta__ = {
 [node name="OpeningAnimation" type="AnimationPlayer" parent="."]
 anims/menu_fade_in = SubResource( 1 )
 
-[connection signal="pressed" from="MenuLayer/MapButton" to="." method="_on_MapButton_pressed"]
 [connection signal="pressed" from="MenuLayer/StartButton" to="." method="_on_StartButton_pressed"]
+[connection signal="pressed" from="MenuLayer/Map" to="." method="_on_StartButton_pressed"]
