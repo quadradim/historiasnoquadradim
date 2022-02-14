@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://scripts/Menu.gd" type="Script" id=1]
+[ext_resource path="res://assets/Images/icone_engrenagem.png" type="Texture" id=2]
 
 [sub_resource type="Animation" id=1]
 resource_name = "menu_fade_in"
@@ -29,6 +30,11 @@ anchor_bottom = 1.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="icone_engrenagem" type="Sprite" parent="MenuLayer"]
+position = Vector2( 904, 504 )
+scale = Vector2( 0.0234375, 0.0234375 )
+texture = ExtResource( 2 )
 
 [node name="StartButton" type="Button" parent="MenuLayer"]
 anchor_left = 0.47675
