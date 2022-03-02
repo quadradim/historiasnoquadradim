@@ -178,8 +178,9 @@ margin_top = 24.0
 
 [node name="Missoes" type="Tabs" parent="TabsContent/TabContainer"]
 visible = false
-margin_right = 40.0
-margin_bottom = 24.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 24.0
 
 [node name="Result" type="ColorRect" parent="TabsContent"]
 margin_left = 536.0

@@ -1,0 +1,90 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://assets/Styles/Themes/UI-Default.tres" type="Theme" id=1]
+
+[node name="CharacterChoice" type="CanvasLayer"]
+
+[node name="BackGround1" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 1 )
+color = Color( 0.14902, 0.152941, 0.129412, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BackGround2" type="ColorRect" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -492.5
+margin_top = -279.5
+margin_right = 492.5
+margin_bottom = 279.5
+color = Color( 0.976471, 0.882353, 0.435294, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DividingBar" type="ColorRect" parent="."]
+margin_left = 11.0
+margin_top = 404.0
+margin_right = 1014.0
+margin_bottom = 444.0
+color = Color( 0.615686, 0.372549, 0.337255, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BarShadow" type="ColorRect" parent="."]
+margin_left = 11.0
+margin_top = 441.0
+margin_right = 1014.0
+margin_bottom = 453.0
+color = Color( 0.270588, 0.188235, 0.176471, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BottomBar" type="ColorRect" parent="."]
+anchor_left = 0.057
+anchor_top = 0.86
+anchor_right = 0.057
+anchor_bottom = 0.86
+margin_left = -35.368
+margin_top = -63.0
+margin_right = 943.632
+margin_bottom = 63.0
+color = Color( 0.501961, 0.34902, 0.32549, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ItemsMenu" type="ColorRect" parent="."]
+anchor_left = 0.184
+anchor_top = 0.468
+anchor_right = 0.184
+anchor_bottom = 0.468
+margin_left = -151.416
+margin_top = -252.8
+margin_right = 181.584
+margin_bottom = 205.2
+color = Color( 0.247059, 0.196078, 0.188235, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BackpackMenu" type="ColorRect" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 180.0
+margin_top = -219.0
+margin_right = 476.0
+margin_bottom = 104.0
+color = Color( 0.996078, 0.972549, 0.866667, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
