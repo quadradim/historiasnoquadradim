@@ -10,6 +10,7 @@ func _ready():
 	tabs_vector.append($MapTab)
 	tabs_vector.append($CharactersTab)
 	
+	print(tabs_vector)
 	# Settings
 	$HistorianTab/PlayerName.text = $HistorianTab/Player.get_name()
 	
