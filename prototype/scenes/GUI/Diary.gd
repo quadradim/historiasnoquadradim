@@ -1,10 +1,26 @@
 extends CanvasLayer
 
+enum DiaryTabs{HISTORIADOR, MAPA, PERSONAGENS, MISSOES}
+
+var tabs_vector = []
+
 func _ready():
-	pass
+	# Add Tabs
+	tabs_vector.append($HistorianTab)
+	tabs_vector.append($MapTab)
+	tabs_vector.append($CharactersTab)
+	
+	# Settings
+	$HistorianTab/PlayerName.text = $HistorianTab/Player.get_name()
+	
+	hide_tabs()
 
+func hide_tabs():
+	for tab in tabs_vector:
+		tab.hide()
 
-func _on_Mapa_gui_input(event):
-	if event.is_pressed() and event.button_index == BUTTON_LEFT:
-		$AbaMapa.layer = 1
-		$Mapa.color = '#ff0000'
+func _process(delta):
+	hide_tabs()
+	
+	if $TabsContent/TabContainer.current_tab < tabs_vector.size():
+		tabs_vector[$TabsContent/TabContainer.current_tab].show()

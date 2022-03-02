@@ -1,107 +1,267 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=19 format=2]
 
-[ext_resource path="res://assets/Images/vector-graphics-portable-network-graphics-computer-icons-clip-art-magnifying-glass-png-favpng-uuSX3pTW6uenQcdfUUPDhMESR.png" type="Texture" id=1]
+[ext_resource path="res://assets/Images/Mapa/QUADRADIM MAPA transp.png" type="Texture" id=1]
 [ext_resource path="res://scenes/GUI/Diary.gd" type="Script" id=2]
-[ext_resource path="res://assets/Images/unb-logo.png" type="Texture" id=3]
-[ext_resource path="res://assets/Images/Temp-Logo.png" type="Texture" id=4]
+[ext_resource path="res://assets/Images/Temp/personagem.png" type="Texture" id=3]
+[ext_resource path="res://scenes/AuxScenes/Player.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/AuxScenes/Character.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/AuxScenes/CharacterInfo.tscn" type="PackedScene" id=6]
+[ext_resource path="res://assets/Fonts/cedarville_pnkfun1_cursive/Cedarville PnkFun 1 Cursive.ttf" type="DynamicFontData" id=7]
+
+[sub_resource type="StyleBoxFlat" id=5]
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.788235, 0.709804, 0.698039, 1 )
+
+[sub_resource type="StyleBoxFlat" id=4]
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.835294, 0.760784, 1, 1 )
+border_width_top = 5
+border_width_bottom = 5
+
+[sub_resource type="StyleBoxFlat" id=6]
+
+[sub_resource type="StyleBoxFlat" id=11]
+bg_color = Color( 0.788235, 0.709804, 0.698039, 1 )
+
+[sub_resource type="StyleBoxFlat" id=7]
+bg_color = Color( 0.788235, 0.709804, 0.698039, 1 )
+
+[sub_resource type="StyleBoxFlat" id=9]
+bg_color = Color( 0.835294, 0.760784, 1, 1 )
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color( 0.835294, 0.760784, 1, 1 )
+
+[sub_resource type="StyleBoxFlat" id=8]
+bg_color = Color( 0.788235, 0.709804, 0.698039, 1 )
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color( 0.788235, 0.709804, 0.698039, 1 )
+
+[sub_resource type="Theme" id=10]
+Button/colors/font_color = Color( 0.305882, 0.254902, 0.254902, 1 )
+Button/colors/font_color_disabled = Color( 0, 0, 0, 0.478431 )
+Button/colors/font_color_focus = Color( 0.32549, 0.294118, 0.52549, 1 )
+Button/colors/font_color_hover = Color( 0.372549, 0.380392, 0.592157, 1 )
+Button/colors/font_color_pressed = Color( 0.960784, 0.890196, 1, 1 )
+Button/constants/hseparation = 2
+Button/fonts/font = null
+Button/styles/disabled = SubResource( 5 )
+Button/styles/focus = SubResource( 3 )
+Button/styles/hover = SubResource( 4 )
+Button/styles/normal = SubResource( 2 )
+Button/styles/pressed = SubResource( 6 )
+Panel/styles/panel = SubResource( 11 )
+TabContainer/colors/font_color_bg = Color( 0.0431373, 0.0352941, 0.0352941, 0.611765 )
+TabContainer/colors/font_color_disabled = Color( 0.305882, 0.286275, 0.286275, 0.545098 )
+TabContainer/colors/font_color_fg = Color( 0.286275, 0.25098, 0.25098, 1 )
+TabContainer/constants/hseparation = 4
+TabContainer/constants/label_valign_bg = 2
+TabContainer/constants/label_valign_fg = 0
+TabContainer/constants/side_margin = 8
+TabContainer/constants/top_margin = 24
+TabContainer/fonts/font = null
+TabContainer/icons/decrement = null
+TabContainer/icons/decrement_highlight = null
+TabContainer/icons/increment = null
+TabContainer/icons/increment_highlight = null
+TabContainer/icons/menu = null
+TabContainer/icons/menu_highlight = null
+TabContainer/styles/panel = SubResource( 7 )
+TabContainer/styles/tab_bg = SubResource( 9 )
+TabContainer/styles/tab_disabled = SubResource( 9 )
+TabContainer/styles/tab_fg = SubResource( 8 )
+Tabs/colors/font_color_bg = Color( 0.52549, 0.0705882, 0.0705882, 1 )
+Tabs/colors/font_color_disabled = Color( 0.9, 0.9, 0.9, 0.2 )
+Tabs/colors/font_color_fg = Color( 0.94, 0.94, 0.94, 1 )
+Tabs/constants/hseparation = 4
+Tabs/constants/label_valign_bg = 2
+Tabs/constants/label_valign_fg = 0
+Tabs/constants/top_margin = 24
+Tabs/fonts/font = null
+Tabs/icons/close = null
+Tabs/icons/decrement = null
+Tabs/icons/decrement_highlight = null
+Tabs/icons/increment = null
+Tabs/icons/increment_highlight = null
+Tabs/styles/button = null
+Tabs/styles/button_pressed = null
+Tabs/styles/tab_bg = null
+Tabs/styles/tab_disabled = null
+Tabs/styles/tab_fg = null
+
+[sub_resource type="DynamicFont" id=12]
+size = 40
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 7 )
 
 [node name="Diary" type="CanvasLayer"]
+pause_mode = 2
 script = ExtResource( 2 )
 
-[node name="Cover" type="ColorRect" parent="."]
-margin_left = 136.0
-margin_top = 56.0
-margin_right = 760.0
-margin_bottom = 480.0
-color = Color( 0.211765, 0.14902, 0.0980392, 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="SceneStyle" type="Node2D" parent="."]
 
-[node name="Page" type="ColorRect" parent="."]
+[node name="Border" type="ColorRect" parent="SceneStyle"]
+margin_right = 1016.0
+margin_bottom = 600.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="Background" type="ColorRect" parent="SceneStyle"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 16.0
+margin_top = 24.0
+margin_right = 1000.0
+margin_bottom = 582.0
+color = Color( 0.972549, 0.882353, 0.435294, 1 )
+
+[node name="Cover" type="ColorRect" parent="SceneStyle"]
 margin_left = 152.0
 margin_top = 96.0
-margin_right = 432.0
-margin_bottom = 464.0
+margin_right = 872.0
+margin_bottom = 512.0
+color = Color( 0.160784, 0.0901961, 0.0901961, 1 )
+
+[node name="PageCover1" type="ColorRect" parent="SceneStyle"]
+margin_left = 160.0
+margin_top = 104.0
+margin_right = 512.0
+margin_bottom = 504.0
+color = Color( 0.501961, 0.34902, 0.32549, 1 )
+
+[node name="PageCover2" type="ColorRect" parent="SceneStyle"]
+margin_left = 528.0
+margin_top = 104.0
+margin_right = 864.0
+margin_bottom = 504.0
+color = Color( 0.501961, 0.34902, 0.32549, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Page2" type="ColorRect" parent="."]
-margin_left = 464.0
-margin_top = 96.0
-margin_right = 744.0
-margin_bottom = 464.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="TabsContent" type="Node2D" parent="."]
 
-[node name="Mapa" type="ColorRect" parent="."]
-margin_left = 152.0
-margin_top = 72.0
-margin_right = 208.0
-margin_bottom = 96.0
-color = Color( 0.541176, 0.439216, 0.662745, 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="TabContainer" type="TabContainer" parent="TabsContent"]
+anchor_right = 0.269
+anchor_bottom = 0.587
+margin_left = 168.0
+margin_top = 88.0
+margin_right = 504.0
+margin_bottom = 496.0
+theme = SubResource( 10 )
+tab_align = 0
 
-[node name="Personagem" type="ColorRect" parent="."]
-margin_left = 216.0
-margin_top = 72.0
-margin_right = 272.0
-margin_bottom = 96.0
-color = Color( 0.87451, 0.360784, 0.360784, 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="Historiador" type="Tabs" parent="TabsContent/TabContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 24.0
 
-[node name="Investigação" type="ColorRect" parent="."]
-margin_left = 280.0
-margin_top = 72.0
-margin_right = 336.0
-margin_bottom = 96.0
-color = Color( 0.886275, 0.901961, 0.329412, 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="Mapa" type="Tabs" parent="TabsContent/TabContainer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 24.0
 
-[node name="Historiador" type="ColorRect" parent="."]
-margin_left = 344.0
-margin_top = 72.0
-margin_right = 400.0
-margin_bottom = 96.0
-color = Color( 0.27451, 0.701961, 0.352941, 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="Personagens" type="Tabs" parent="TabsContent/TabContainer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 24.0
 
-[node name="Mapa2" type="ColorRect" parent="."]
-margin_left = 464.0
-margin_top = 72.0
-margin_right = 520.0
-margin_bottom = 96.0
-color = Color( 0.203922, 0.827451, 0.843137, 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="Missoes" type="Tabs" parent="TabsContent/TabContainer"]
+visible = false
+margin_right = 40.0
+margin_bottom = 24.0
 
-[node name="AbaMapa" type="CanvasLayer" parent="."]
-layer = -1
+[node name="Result" type="ColorRect" parent="TabsContent"]
+margin_left = 536.0
+margin_top = 112.0
+margin_right = 856.0
+margin_bottom = 496.0
+color = Color( 0.788235, 0.709804, 0.698039, 1 )
 
-[node name="lupa" type="Sprite" parent="AbaMapa"]
-position = Vector2( 288, 280 )
-scale = Vector2( 0.207317, 0.207317 )
+[node name="MapTab" type="Node2D" parent="."]
+visible = false
+
+[node name="MapBackground" type="ColorRect" parent="MapTab"]
+margin_left = 304.0
+margin_top = 224.0
+margin_right = 712.0
+margin_bottom = 472.0
+
+[node name="Map" type="Sprite" parent="MapTab"]
+position = Vector2( 504, 344 )
+scale = Vector2( 0.2275, 0.2275 )
 texture = ExtResource( 1 )
 
-[node name="unb-logo" type="Sprite" parent="AbaMapa"]
-position = Vector2( 608, 328 )
-scale = Vector2( 0.0874999, 0.0874999 )
+[node name="Stick1" type="ColorRect" parent="MapTab"]
+margin_left = 275.0
+margin_top = 240.0
+margin_right = 328.0
+margin_bottom = 256.0
+color = Color( 0.972549, 0.882353, 0.435294, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Stick2" type="ColorRect" parent="MapTab"]
+margin_left = 664.0
+margin_top = 200.0
+margin_right = 680.0
+margin_bottom = 240.0
+color = Color( 0.972549, 0.882353, 0.435294, 1 )
+
+[node name="Stick3" type="ColorRect" parent="MapTab"]
+margin_left = 296.0
+margin_top = 432.0
+margin_right = 315.0
+margin_bottom = 480.0
+color = Color( 0.972549, 0.882353, 0.435294, 1 )
+
+[node name="HistorianTab" type="Node2D" parent="."]
+visible = false
+
+[node name="Player" parent="HistorianTab" instance=ExtResource( 4 )]
+position = Vector2( 288, 192 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="PlayerName" type="RichTextLabel" parent="HistorianTab"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = 624.0
+margin_top = 136.0
+margin_right = 824.0
+margin_bottom = 224.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = SubResource( 12 )
+text = "Name"
+
+[node name="CharactersTab" type="Node2D" parent="."]
+
+[node name="Crab" parent="CharactersTab" instance=ExtResource( 5 )]
+position = Vector2( 182.8, 128 )
+scale = Vector2( 0.15, 0.15 )
+
+[node name="CharacterInfo" parent="CharactersTab" instance=ExtResource( 6 )]
+position = Vector2( 566.2, 136 )
+scale = Vector2( 0.6, 0.6 )
+
+[node name="GridContainer" type="GridContainer" parent="CharactersTab"]
+margin_left = 184.0
+margin_top = 216.0
+margin_right = 488.0
+margin_bottom = 488.0
+columns = 3
+
+[node name="Sprite" type="Sprite" parent="CharactersTab/GridContainer"]
+position = Vector2( 72, 64 )
+scale = Vector2( 0.0986622, 0.0986622 )
 texture = ExtResource( 3 )
-
-[node name="Temp-Logo" type="Sprite" parent="AbaMapa"]
-position = Vector2( 608, 184 )
-scale = Vector2( 0.19378, 0.19378 )
-texture = ExtResource( 4 )
-
-[connection signal="gui_input" from="Mapa" to="." method="_on_Mapa_gui_input"]
