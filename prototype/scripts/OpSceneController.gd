@@ -48,8 +48,11 @@ func end_current_scene():
 		# Character Choice
 		load_control_scene('res://scenes/FirstAccess/CharacterChoice.tscn', 'CharacterChoice', 'end_choice')
 	elif current_scene_name == 'CharacterChoice':
-		# Menu Access
-		load_control_scene('res://scenes/GUI/Menu.tscn', 'Menu', 'end_menu')
+		# Diary
+		load_control_scene('res://scenes/GUI/Diary.tscn', 'Diary', 'end_diary')
+	elif current_scene_name == 'Diary':
+		# Menu	
+		load_control_scene('res://scenes/GUI/Menu.tscn', 'Meny', 'None')
 		
 	transition_animation.play("fade_in")
 	transition_animation_name = "fade_in"

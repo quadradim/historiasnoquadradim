@@ -2,10 +2,14 @@ extends CanvasLayer
 
 signal end_access02
 
-var text_tutorials = ['Quando clicar em iniciar ou recomeçar, o/a jogador(a) será levado ao cenário principal em que consta o mapa do Distrito Federal, ambientado em uma Brasília histórica...']
+var text_tutorials = ['O Jogo Atitude Historiadora, surgido na Universidade de Brasília como Histórias no Quadradim,  propõe uma dupla imersão: em histórias pouco conhecidas do Distrito Federal e na experimentação de práticas vivenciadas por historiadores e historiadoras: trabalhando com fontes, desvendando pistas, encontrando personagens e reconhecendo novas narrativas...',
+'Sua missão é interagir com indícios do passado para completar as lacunas de seu diário de bordo. Ao final, essa jornada investigativa será dividida em nove episódios, desvendando alguns episódios pouco conhecidos na história desse nosso quadradim...',
+'Para além do Plano Piloto de concreto, de JK e seu panteão de heróis, a nossa aventura parte dos redemoinhos de poeira, para percorrer chafarizes, quadradões, caixas d\'água e gambiarras. Nela, estão trabalhadores em rebelião, mulheres negras, periferias plurais, indígenas, estudantes e outras coletividades em luta. Afinal, desde o passado,  nem tudo está nas asas, e menos ainda nos eixos.']
+
 var text_position = 0
 var current_text_pos = 0
 var current_text = ''
+var presses_count = 0
 
 func write_text():
 	pass
@@ -20,6 +24,12 @@ func _on_WritingTime_timeout():
 		$TutorialText.text = current_text
 	$WritingTime.start()
 
-
 func _on_Mapa_pressed():
-	emit_signal("end_access02")
+	if presses_count < text_tutorials.size() - 1:
+		$TutorialText.text = ''
+		text_position+=1
+		current_text = ''
+		current_text_pos = 0
+		presses_count += 1
+	else:
+		emit_signal("end_access02")

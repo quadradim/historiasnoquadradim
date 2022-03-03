@@ -4,6 +4,8 @@ enum DiaryTabs{HISTORIADOR, MAPA, PERSONAGENS, MISSOES}
 
 var tabs_vector = []
 
+signal end_diary
+
 func _ready():
 	# Add Tabs
 	tabs_vector.append($HistorianTab)
@@ -34,3 +36,6 @@ func hide_tabs():
 		
 func clicked_character(char_src, char_name, char_info):
 	update_character_info(char_src, char_name, char_info)
+	
+func exit_diary():
+	emit_signal('end_diary')

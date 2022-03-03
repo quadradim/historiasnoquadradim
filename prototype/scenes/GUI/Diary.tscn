@@ -365,8 +365,10 @@ margin_top = 497.0
 margin_right = 991.0
 margin_bottom = 548.0
 theme = ExtResource( 10 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "Continuar"
 
 [connection signal="character_clicked" from="CharactersTab/Char1" to="." method="clicked_character"]
 [connection signal="character_clicked" from="CharactersTab/Char2" to="." method="clicked_character"]
 [connection signal="character_clicked" from="CharactersTab/Char3" to="." method="clicked_character"]
+[connection signal="pressed" from="Return" to="." method="exit_diary"]
