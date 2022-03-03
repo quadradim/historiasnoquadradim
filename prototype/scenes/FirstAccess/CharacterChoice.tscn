@@ -74,20 +74,6 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="ItemsMenu" type="ColorRect" parent="."]
-anchor_left = 0.184
-anchor_top = 0.468
-anchor_right = 0.184
-anchor_bottom = 0.468
-margin_left = -151.416
-margin_top = -252.8
-margin_right = 181.584
-margin_bottom = 205.2
-color = Color( 0.247059, 0.196078, 0.188235, 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
 [node name="BackpackMenu" type="ColorRect" parent="."]
 anchor_left = 0.5
 anchor_top = 0.5
@@ -105,12 +91,11 @@ __meta__ = {
 [node name="TabContainer" type="TabContainer" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 38.0
-margin_top = 26.0
-margin_right = -655.0
-margin_bottom = -115.0
+margin_left = 40.0
+margin_top = 32.0
+margin_right = -654.0
+margin_bottom = -107.0
 theme = ExtResource( 1 )
-tab_align = 0
 all_tabs_in_front = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -131,6 +116,7 @@ margin_right = 46.25
 margin_bottom = 80.25
 rect_scale = Vector2( 0.15, 0.15 )
 object_source = ExtResource( 3 )
+description = "Pikachu"
 
 [node name="img2" parent="TabContainer/Habilidades" instance=ExtResource( 2 )]
 margin_left = 115.25
@@ -139,6 +125,7 @@ margin_right = 155.25
 margin_bottom = 80.25
 rect_scale = Vector2( 0.15, 0.15 )
 object_source = ExtResource( 11 )
+description = "Totodile"
 
 [node name="img3" parent="TabContainer/Habilidades" instance=ExtResource( 2 )]
 margin_left = 222.25
@@ -147,6 +134,7 @@ margin_right = 262.25
 margin_bottom = 80.25
 rect_scale = Vector2( 0.15, 0.15 )
 object_source = ExtResource( 6 )
+description = "Mankey"
 
 [node name="img4" parent="TabContainer/Habilidades" instance=ExtResource( 2 )]
 margin_left = 6.25
@@ -155,6 +143,7 @@ margin_right = 46.25
 margin_bottom = 215.25
 rect_scale = Vector2( 0.15, 0.15 )
 object_source = ExtResource( 5 )
+description = "Snorlax"
 
 [node name="img5" parent="TabContainer/Habilidades" instance=ExtResource( 2 )]
 margin_left = 115.25
@@ -163,6 +152,7 @@ margin_right = 155.25
 margin_bottom = 215.25
 rect_scale = Vector2( 0.15, 0.15 )
 object_source = ExtResource( 12 )
+description = "Peixe"
 
 [node name="img6" parent="TabContainer/Habilidades" instance=ExtResource( 2 )]
 margin_left = 222.25
@@ -171,6 +161,7 @@ margin_right = 262.25
 margin_bottom = 215.25
 rect_scale = Vector2( 0.15, 0.15 )
 object_source = ExtResource( 9 )
+description = "Baiacu"
 
 [node name="img7" parent="TabContainer/Habilidades" instance=ExtResource( 2 )]
 margin_left = 6.25
@@ -179,6 +170,7 @@ margin_right = 46.25
 margin_bottom = 350.25
 rect_scale = Vector2( 0.15, 0.15 )
 object_source = ExtResource( 7 )
+description = "Charmander"
 
 [node name="img8" parent="TabContainer/Habilidades" instance=ExtResource( 2 )]
 margin_left = 115.25
@@ -187,6 +179,7 @@ margin_right = 155.25
 margin_bottom = 350.25
 rect_scale = Vector2( 0.15, 0.15 )
 object_source = ExtResource( 10 )
+description = "Shrek"
 
 [node name="img9" parent="TabContainer/Habilidades" instance=ExtResource( 2 )]
 margin_left = 222.25
@@ -195,6 +188,7 @@ margin_right = 262.25
 margin_bottom = 351.25
 rect_scale = Vector2( 0.15, 0.15 )
 object_source = ExtResource( 8 )
+description = "Vasco"
 
 [node name="ZoomItem" type="ColorRect" parent="TabContainer/Habilidades"]
 margin_left = 324.25
@@ -211,18 +205,28 @@ anchor_left = 0.329
 anchor_top = 0.376
 anchor_right = 0.329
 anchor_bottom = 0.376
-margin_left = -100.042
+margin_left = -82.042
 margin_top = -95.296
 margin_right = 185.958
-margin_bottom = 162.704
+margin_bottom = 99.704
 color = Color( 0.996078, 0.972549, 0.866667, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Abiliity" type="Sprite" parent="TabContainer/Habilidades"]
-position = Vector2( 454.25, 177.25 )
-scale = Vector2( 0.3, 0.3 )
+position = Vector2( 483.25, 148.25 )
+scale = Vector2( 0.2, 0.2 )
+
+[node name="AbiliityDescription" type="RichTextLabel" parent="TabContainer/Habilidades"]
+margin_left = 336.25
+margin_top = 251.25
+margin_right = 610.25
+margin_bottom = 318.25
+theme = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Estilo" type="Tabs" parent="TabContainer"]
 visible = false
