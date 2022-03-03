@@ -19,8 +19,22 @@ anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = -20.0
 margin_top = -20.0
+margin_right = 572.0
+margin_bottom = 564.0
+color = Color( 0.996078, 0.972549, 0.866667, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Background2" type="ColorRect" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 4.0
+margin_top = 4.0
 margin_right = 548.0
-margin_bottom = 548.0
+margin_bottom = 540.0
 color = Color( 0.996078, 0.972549, 0.866667, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -31,3 +45,4 @@ position = Vector2( 288, 288 )
 scale = Vector2( 0.5, 0.5 )
 
 [connection signal="gui_input" from="Background" to="." method="click_object"]
+[connection signal="gui_input" from="Background2" to="." method="click_object"]
