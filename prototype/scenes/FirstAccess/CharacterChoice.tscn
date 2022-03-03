@@ -19,7 +19,7 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = -492.5
-margin_top = -279.5
+margin_top = -203.3
 margin_right = 492.5
 margin_bottom = 279.5
 color = Color( 0.976471, 0.882353, 0.435294, 1 )
@@ -88,3 +88,34 @@ color = Color( 0.996078, 0.972549, 0.866667, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="TabContainer" type="TabContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 38.0
+margin_top = 26.0
+margin_right = -655.0
+margin_bottom = -115.0
+theme = ExtResource( 1 )
+tab_align = 0
+all_tabs_in_front = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Abiliity" type="Tabs" parent="TabContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 3.75
+margin_top = 38.75
+margin_right = -3.75
+margin_bottom = -3.75
+
+[node name="Style" type="Tabs" parent="TabContainer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
