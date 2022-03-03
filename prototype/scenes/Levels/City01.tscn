@@ -1,0 +1,33 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://assets/Images/Cenas/CenarioPrototipo02.png" type="Texture" id=1]
+
+[node name="City01" type="CanvasLayer"]
+
+[node name="CityControl" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="Background" type="ColorRect" parent="CityControl"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.14902, 0.152941, 0.129412, 1 )
+
+[node name="ColorRect" type="ColorRect" parent="CityControl"]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -516.0
+margin_top = -304.0
+margin_right = 476.0
+margin_bottom = 264.0
+color = Color( 0.941176, 0.894118, 0.894118, 1 )
+
+[node name="ImageBackground" type="Sprite" parent="CityControl"]
+position = Vector2( 520, 304 )
+scale = Vector2( 0.324238, 0.324238 )
+texture = ExtResource( 1 )

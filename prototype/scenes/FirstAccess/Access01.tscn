@@ -36,9 +36,9 @@ margin_top = 232.0
 margin_right = 816.0
 margin_bottom = 384.0
 rect_rotation = -1.0
-custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_constants/line_spacing = -11
+custom_fonts/font = SubResource( 1 )
 autowrap = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -59,10 +59,7 @@ margin_left = 704.0
 margin_top = 432.0
 margin_right = 840.0
 margin_bottom = 476.0
-text = "Mapa"
-__meta__ = {
-"_edit_use_anchors_": false
-}
+text = "Proximo"
 
 [connection signal="timeout" from="WritingTime" to="." method="_on_WritingTime_timeout"]
 [connection signal="pressed" from="Mapa" to="." method="_on_Mapa_pressed"]
