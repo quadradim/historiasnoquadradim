@@ -42,6 +42,7 @@ font_data = ExtResource( 3 )
 [node name="CharacterInfo" type="Node2D"]
 position = Vector2( 16, 16 )
 script = ExtResource( 1 )
+character_image = ExtResource( 2 )
 character_name = "Não Definido"
 character_class = "Não Definido"
 character_description = "Não Definido"
@@ -55,8 +56,7 @@ color = Color( 1, 1, 1, 0.427451 )
 
 [node name="Image" type="Sprite" parent="."]
 position = Vector2( 216, 176 )
-scale = Vector2( 0.596667, 0.596667 )
-texture = ExtResource( 2 )
+scale = Vector2( 0.4, 0.4 )
 
 [node name="Name" type="RichTextLabel" parent="."]
 margin_left = 8.0

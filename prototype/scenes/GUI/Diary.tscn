@@ -1,11 +1,15 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://assets/Images/Mapa/QUADRADIM MAPA transp.png" type="Texture" id=1]
 [ext_resource path="res://scenes/GUI/Diary.gd" type="Script" id=2]
+[ext_resource path="res://assets/Images/Temp/personagem.png" type="Texture" id=3]
 [ext_resource path="res://scenes/AuxScenes/Player.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scenes/AuxScenes/Character.tscn" type="PackedScene" id=5]
 [ext_resource path="res://scenes/AuxScenes/CharacterInfo.tscn" type="PackedScene" id=6]
 [ext_resource path="res://assets/Fonts/cedarville_pnkfun1_cursive/Cedarville PnkFun 1 Cursive.ttf" type="DynamicFontData" id=7]
+[ext_resource path="res://assets/Images/Temp/totodile.png" type="Texture" id=8]
+[ext_resource path="res://assets/Images/Temp/Charmander.png" type="Texture" id=9]
+[ext_resource path="res://assets/Styles/Themes/UI-Default.tres" type="Theme" id=10]
 
 [sub_resource type="StyleBoxFlat" id=5]
 
@@ -97,6 +101,10 @@ Tabs/styles/tab_fg = null
 [sub_resource type="DynamicFont" id=12]
 size = 40
 outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 7 )
+
+[sub_resource type="DynamicFont" id=13]
+size = 20
 font_data = ExtResource( 7 )
 
 [node name="Diary" type="CanvasLayer"]
@@ -211,7 +219,6 @@ margin_bottom = 188.0
 color = Color( 0.788235, 0.709804, 0.698039, 1 )
 
 [node name="HistorianTab" type="Control" parent="."]
-visible = false
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -233,6 +240,48 @@ margin_bottom = -112.0
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 custom_fonts/normal_font = SubResource( 12 )
 text = "Name"
+
+[node name="Abilitie1" type="RichTextLabel" parent="HistorianTab"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 76.0
+margin_top = -96.75
+margin_right = 292.0
+margin_bottom = 24.25
+custom_colors/default_color = Color( 0.172549, 0.0352941, 0.0352941, 1 )
+custom_fonts/normal_font = SubResource( 13 )
+text = "Habilidade Um
+"
+
+[node name="Abilitie2" type="RichTextLabel" parent="HistorianTab"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 76.0
+margin_top = 3.20001
+margin_right = 292.0
+margin_bottom = 107.2
+custom_colors/default_color = Color( 0.172549, 0.0352941, 0.0352941, 1 )
+custom_fonts/normal_font = SubResource( 13 )
+text = "Habilidade Um
+"
+
+[node name="Abilitie3" type="RichTextLabel" parent="HistorianTab"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 76.0
+margin_top = -48.0
+margin_right = 292.0
+margin_bottom = 50.0
+custom_colors/default_color = Color( 0.172549, 0.0352941, 0.0352941, 1 )
+custom_fonts/normal_font = SubResource( 13 )
+text = "Habilidade Um
+"
 
 [node name="MapTab" type="Control" parent="."]
 visible = false
@@ -285,10 +334,39 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 
-[node name="Crab" parent="CharactersTab" instance=ExtResource( 5 )]
+[node name="Char1" parent="CharactersTab" instance=ExtResource( 5 )]
 position = Vector2( -328, -173.6 )
 scale = Vector2( 0.15, 0.15 )
+char_src = ExtResource( 3 )
+char_name = "Pikachu"
+char_info = "Solta raiozinho"
+
+[node name="Char2" parent="CharactersTab" instance=ExtResource( 5 )]
+position = Vector2( -160, -173.6 )
+scale = Vector2( 0.15, 0.15 )
+char_src = ExtResource( 9 )
+char_name = "Charmander?"
+char_info = "Parece ter foguinho"
+
+[node name="Char3" parent="CharactersTab" instance=ExtResource( 5 )]
+position = Vector2( -244.4, -173.6 )
+scale = Vector2( 0.15, 0.15 )
+char_src = ExtResource( 8 )
+char_name = "Jacaré"
+char_info = "Tem cara de ser jacaré"
 
 [node name="CharacterInfo" parent="CharactersTab" instance=ExtResource( 6 )]
 position = Vector2( 48.0001, -164 )
 scale = Vector2( 0.6, 0.6 )
+
+[node name="Return" type="Button" parent="."]
+margin_left = 880.0
+margin_top = 528.0
+margin_right = 991.0
+margin_bottom = 579.0
+theme = ExtResource( 10 )
+text = "Retornar"
+
+[connection signal="character_clicked" from="CharactersTab/Char1" to="." method="clicked_character"]
+[connection signal="character_clicked" from="CharactersTab/Char2" to="." method="clicked_character"]
+[connection signal="character_clicked" from="CharactersTab/Char3" to="." method="clicked_character"]

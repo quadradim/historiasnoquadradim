@@ -22,7 +22,7 @@ margin_bottom = 464.0
 
 [node name="Image" type="Sprite" parent="."]
 position = Vector2( 232, 232 )
-scale = Vector2( 0.74, 0.74 )
+scale = Vector2( 0.5, 0.5 )
 
 [connection signal="input_event" from="." to="." method="clicked_character"]
 [connection signal="gui_input" from="Background1" to="." method="clicked_character"]
