@@ -10,4 +10,5 @@ func _ready():
 func choose_an_object(object_source,description):
 	$TabContainer/Habilidades/Abiliity.texture = object_source
 	$TabContainer/Habilidades/AbiliityDescription.text = description
+	
 	print(object_source)
