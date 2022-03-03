@@ -12,6 +12,13 @@ char_info = "None"
 [node name="Background1" type="ColorRect" parent="."]
 margin_right = 472.0
 margin_bottom = 472.0
+color = Color( 0.937255, 0.929412, 0.929412, 1 )
+
+[node name="Background2" type="ColorRect" parent="."]
+margin_left = 8.0
+margin_top = 8.0
+margin_right = 464.0
+margin_bottom = 464.0
 
 [node name="Image" type="Sprite" parent="."]
 position = Vector2( 232, 232 )
@@ -19,3 +26,4 @@ scale = Vector2( 0.74, 0.74 )
 
 [connection signal="input_event" from="." to="." method="clicked_character"]
 [connection signal="gui_input" from="Background1" to="." method="clicked_character"]
+[connection signal="gui_input" from="Background2" to="." method="clicked_character"]

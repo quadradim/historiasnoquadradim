@@ -42,8 +42,8 @@ func end_current_scene():
 		# First Access 
 		load_control_scene('res://scenes/FirstAccess/Access01.tscn', 'Access01', 'end_access01')
 	elif current_scene_name == 'Access01':
-		# Map Scene
-		load_control_scene('res://scenes/GUI/Map02.tscn', 'Map02', 'None')
+		# Character Choice
+		load_control_scene('res://scenes/FirstAccess/CharacterChoice.tscn', 'CharacterChoice', 'None')
 		
 	transition_animation.play("fade_in")
 	transition_animation_name = "fade_in"
