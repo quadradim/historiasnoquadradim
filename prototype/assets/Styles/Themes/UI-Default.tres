@@ -1,6 +1,7 @@
-[gd_resource type="Theme" load_steps=1504 format=2]
+[gd_resource type="Theme" load_steps=1505 format=2]
 
 [ext_resource path="res://assets/Fonts/Godot-Fontpack-d244bf6170b399a6d4d26a0d906058ddf2dafdf1/fonts/architect-s-daughter/ArchitectsDaughter.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://assets/Fonts/Godot-Fontpack-d244bf6170b399a6d4d26a0d906058ddf2dafdf1/fonts/montreal/Montreal-Regular.ttf" type="DynamicFontData" id=2]
 
 [sub_resource type="DynamicFont" id=1501]
 font_data = ExtResource( 1 )
@@ -9376,11 +9377,12 @@ content_margin_left = 7.0
 content_margin_right = 7.0
 content_margin_top = 3.0
 content_margin_bottom = 3.0
-bg_color = Color( 0.501961, 0.34902, 0.32549, 1 )
-border_width_left = 1
-border_width_top = 1
-border_width_right = 1
-border_color = Color( 0.125, 0.14375, 0.19375, 1 )
+bg_color = Color( 0.835294, 0.760784, 1, 1 )
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color( 0.501961, 0.34902, 0.32549, 1 )
 expand_margin_bottom = 1.0
 
 [sub_resource type="StyleBoxFlat" id=1436]
@@ -9389,10 +9391,10 @@ content_margin_right = 7.0
 content_margin_top = 3.0
 content_margin_bottom = 3.0
 bg_color = Color( 0.835294, 0.760784, 1, 1 )
-border_width_left = 7
-border_width_top = 7
-border_width_right = 7
-border_width_bottom = 7
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
 border_color = Color( 0.247059, 0.196078, 0.188235, 1 )
 expand_margin_bottom = 1.0
 
@@ -9824,7 +9826,7 @@ content_margin_bottom = -0.75
 
 [sub_resource type="DynamicFont" id=2189]
 extra_spacing_space = 10
-font_data = ExtResource( 1 )
+font_data = ExtResource( 2 )
 
 [sub_resource type="StyleBoxFlat" id=1481]
 content_margin_left = 3.75
@@ -9833,7 +9835,6 @@ content_margin_top = 3.75
 content_margin_bottom = 3.75
 bg_color = Color( 0.247059, 0.196078, 0.188235, 1 )
 border_width_left = 1
-border_width_top = 1
 border_width_right = 1
 border_width_bottom = 1
 border_color = Color( 0.1, 0.115, 0.155, 1 )

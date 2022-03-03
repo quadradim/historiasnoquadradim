@@ -103,15 +103,15 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Abiliity" type="Tabs" parent="TabContainer"]
+[node name="Habilidades" type="Tabs" parent="TabContainer"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 3.75
-margin_top = 38.75
+margin_top = 30.75
 margin_right = -3.75
 margin_bottom = -3.75
 
-[node name="Style" type="Tabs" parent="TabContainer"]
+[node name="Estilo" type="Tabs" parent="TabContainer"]
 visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
