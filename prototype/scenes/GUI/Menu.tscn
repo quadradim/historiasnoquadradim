@@ -119,4 +119,5 @@ texture = ExtResource( 4 )
 [node name="MenuAnimation" type="AnimationPlayer" parent="."]
 anims/BackgroundChange = SubResource( 1 )
 
+[connection signal="pressed" from="MenuControl/StartBtn" to="." method="press_game_start"]
 [connection signal="animation_finished" from="MenuAnimation" to="." method="animation_finished"]
