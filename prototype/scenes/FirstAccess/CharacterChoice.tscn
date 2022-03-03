@@ -1,9 +1,17 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://assets/Styles/Themes/UI-Default.tres" type="Theme" id=1]
 [ext_resource path="res://scenes/AuxScenes/HistorianObject.tscn" type="PackedScene" id=2]
 [ext_resource path="res://assets/Images/Temp/personagem.png" type="Texture" id=3]
 [ext_resource path="res://scenes/FirstAccess/CharacterChoice.gd" type="Script" id=4]
+[ext_resource path="res://assets/Images/Temp/snorlax.png" type="Texture" id=5]
+[ext_resource path="res://assets/Images/Temp/Mankey.png" type="Texture" id=6]
+[ext_resource path="res://assets/Images/Temp/Charmander.png" type="Texture" id=7]
+[ext_resource path="res://assets/Images/Temp/vasco.png" type="Texture" id=8]
+[ext_resource path="res://assets/Images/Temp/baiacu.png" type="Texture" id=9]
+[ext_resource path="res://assets/Images/Temp/shrek.png" type="Texture" id=10]
+[ext_resource path="res://assets/Images/Temp/totodile.png" type="Texture" id=11]
+[ext_resource path="res://assets/Images/Temp/Pokémon peixe.png" type="Texture" id=12]
 
 [node name="CharacterChoice" type="CanvasLayer"]
 script = ExtResource( 4 )
@@ -56,10 +64,10 @@ anchor_left = 0.057
 anchor_top = 0.86
 anchor_right = 0.057
 anchor_bottom = 0.86
-margin_left = -35.368
-margin_top = -63.0
-margin_right = 943.632
-margin_bottom = 63.0
+margin_left = -34.368
+margin_top = -64.0
+margin_right = 944.632
+margin_bottom = 62.0
 color = Color( 0.501961, 0.34902, 0.32549, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -103,37 +111,115 @@ margin_bottom = -115.0
 theme = ExtResource( 1 )
 tab_align = 0
 all_tabs_in_front = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Habilidades" type="Tabs" parent="TabContainer"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 3.75
-margin_top = 38.75
+margin_top = 30.75
 margin_right = -3.75
 margin_bottom = -3.75
 
-[node name="HistorianObject" parent="TabContainer/Habilidades" instance=ExtResource( 2 )]
+[node name="img1" parent="TabContainer/Habilidades" instance=ExtResource( 2 )]
 margin_left = 6.25
-margin_top = 7.25
+margin_top = 40.25
 margin_right = 46.25
-margin_bottom = 47.25
+margin_bottom = 80.25
 rect_scale = Vector2( 0.15, 0.15 )
 object_source = ExtResource( 3 )
 
-[node name="HistorianObject2" parent="TabContainer/Habilidades" instance=ExtResource( 2 )]
-margin_left = 110.25
-margin_top = 7.25
-margin_right = 150.25
-margin_bottom = 47.25
+[node name="img2" parent="TabContainer/Habilidades" instance=ExtResource( 2 )]
+margin_left = 115.25
+margin_top = 40.25
+margin_right = 155.25
+margin_bottom = 80.25
 rect_scale = Vector2( 0.15, 0.15 )
+object_source = ExtResource( 11 )
+
+[node name="img3" parent="TabContainer/Habilidades" instance=ExtResource( 2 )]
+margin_left = 222.25
+margin_top = 40.25
+margin_right = 262.25
+margin_bottom = 80.25
+rect_scale = Vector2( 0.15, 0.15 )
+object_source = ExtResource( 6 )
+
+[node name="img4" parent="TabContainer/Habilidades" instance=ExtResource( 2 )]
+margin_left = 6.25
+margin_top = 175.25
+margin_right = 46.25
+margin_bottom = 215.25
+rect_scale = Vector2( 0.15, 0.15 )
+object_source = ExtResource( 5 )
+
+[node name="img5" parent="TabContainer/Habilidades" instance=ExtResource( 2 )]
+margin_left = 115.25
+margin_top = 175.25
+margin_right = 155.25
+margin_bottom = 215.25
+rect_scale = Vector2( 0.15, 0.15 )
+object_source = ExtResource( 12 )
+
+[node name="img6" parent="TabContainer/Habilidades" instance=ExtResource( 2 )]
+margin_left = 222.25
+margin_top = 175.25
+margin_right = 262.25
+margin_bottom = 215.25
+rect_scale = Vector2( 0.15, 0.15 )
+object_source = ExtResource( 9 )
+
+[node name="img7" parent="TabContainer/Habilidades" instance=ExtResource( 2 )]
+margin_left = 6.25
+margin_top = 310.25
+margin_right = 46.25
+margin_bottom = 350.25
+rect_scale = Vector2( 0.15, 0.15 )
+object_source = ExtResource( 7 )
+
+[node name="img8" parent="TabContainer/Habilidades" instance=ExtResource( 2 )]
+margin_left = 115.25
+margin_top = 310.25
+margin_right = 155.25
+margin_bottom = 350.25
+rect_scale = Vector2( 0.15, 0.15 )
+object_source = ExtResource( 10 )
+
+[node name="img9" parent="TabContainer/Habilidades" instance=ExtResource( 2 )]
+margin_left = 222.25
+margin_top = 311.25
+margin_right = 262.25
+margin_bottom = 351.25
+rect_scale = Vector2( 0.15, 0.15 )
+object_source = ExtResource( 8 )
 
 [node name="Estilo" type="Tabs" parent="TabContainer"]
 visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 4.0
-margin_top = 32.0
-margin_right = -4.0
-margin_bottom = -4.0
+margin_left = 3.75
+margin_top = 30.75
+margin_right = -3.75
+margin_bottom = -3.75
 
-[connection signal="clicked_object" from="TabContainer/Habilidades/HistorianObject" to="." method="choose_an_object"]
+[node name="Next" type="Button" parent="."]
+margin_left = 896.0
+margin_top = 544.0
+margin_right = 1001.0
+margin_bottom = 580.0
+text = "Próximo"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="clicked_object" from="TabContainer/Habilidades/img1" to="." method="choose_an_object"]
+[connection signal="clicked_object" from="TabContainer/Habilidades/img2" to="." method="choose_an_object"]
+[connection signal="clicked_object" from="TabContainer/Habilidades/img3" to="." method="choose_an_object"]
+[connection signal="clicked_object" from="TabContainer/Habilidades/img4" to="." method="choose_an_object"]
+[connection signal="clicked_object" from="TabContainer/Habilidades/img5" to="." method="choose_an_object"]
+[connection signal="clicked_object" from="TabContainer/Habilidades/img6" to="." method="choose_an_object"]
+[connection signal="clicked_object" from="TabContainer/Habilidades/img7" to="." method="choose_an_object"]
+[connection signal="clicked_object" from="TabContainer/Habilidades/img8" to="." method="choose_an_object"]
+[connection signal="clicked_object" from="TabContainer/Habilidades/img9" to="." method="choose_an_object"]
