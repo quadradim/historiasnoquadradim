@@ -126,9 +126,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = -496.0
-margin_top = -284.0
+margin_top = -272.0
 margin_right = 496.0
-margin_bottom = 284.0
+margin_bottom = 272.0
 color = Color( 0.972549, 0.882353, 0.435294, 1 )
 
 [node name="Cover" type="ColorRect" parent="SceneStyle"]
@@ -361,9 +361,9 @@ scale = Vector2( 0.6, 0.6 )
 
 [node name="Return" type="Button" parent="."]
 margin_left = 880.0
-margin_top = 528.0
+margin_top = 497.0
 margin_right = 991.0
-margin_bottom = 579.0
+margin_bottom = 548.0
 theme = ExtResource( 10 )
 text = "Retornar"
 

@@ -52,18 +52,10 @@ script = ExtResource( 1 )
 [node name="MenuControl" type="Control" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_right = 40.0
-margin_bottom = 40.0
 
 [node name="Background1" type="ColorRect" parent="MenuControl"]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -532.0
-margin_top = -320.0
-margin_right = 492.0
-margin_bottom = 280.0
+anchor_right = 1.0
+anchor_bottom = 1.0
 color = Color( 0.14902, 0.152941, 0.129412, 1 )
 
 [node name="Background2" type="ColorRect" parent="MenuControl"]
@@ -71,10 +63,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -516.0
-margin_top = -304.0
-margin_right = 476.0
-margin_bottom = 264.0
+margin_left = -496.0
+margin_top = -272.0
+margin_right = 496.0
+margin_bottom = 272.0
 color = Color( 0.972549, 0.900794, 0.435294, 0.980757 )
 
 [node name="StartBtn" type="Button" parent="MenuControl"]
@@ -82,30 +74,30 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -364.0
-margin_top = 152.0
-margin_right = -241.0
-margin_bottom = 211.0
+margin_left = -368.0
+margin_top = 176.0
+margin_right = -245.0
+margin_bottom = 235.0
 theme = ExtResource( 2 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_fonts/font = SubResource( 2 )
 text = "Iniciar"
 
 [node name="ConfigBtn" type="Button" parent="MenuControl"]
-margin_left = 704.0
-margin_top = 472.0
-margin_right = 856.0
-margin_bottom = 531.0
+margin_left = 696.0
+margin_top = 464.0
+margin_right = 848.0
+margin_bottom = 523.0
 theme = ExtResource( 2 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_fonts/font = SubResource( 3 )
 text = "Config"
 
 [node name="Button" type="Button" parent="MenuControl"]
-margin_left = 416.0
-margin_top = 472.0
-margin_right = 577.0
-margin_bottom = 531.0
+margin_left = 400.0
+margin_top = 464.0
+margin_right = 561.0
+margin_bottom = 523.0
 theme = ExtResource( 2 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_fonts/font = SubResource( 4 )
