@@ -42,8 +42,14 @@ func end_current_scene():
 		# First Access 
 		load_control_scene('res://scenes/FirstAccess/Access01.tscn', 'Access01', 'end_access01')
 	elif current_scene_name == 'Access01':
+		# Second Access
+		load_control_scene('res://scenes/FirstAccess/Access02.tscn', 'Access02', 'end_access02')
+	elif current_scene_name == 'Access02':
 		# Character Choice
-		load_control_scene('res://scenes/FirstAccess/CharacterChoice.tscn', 'CharacterChoice', 'None')
+		load_control_scene('res://scenes/FirstAccess/CharacterChoice.tscn', 'CharacterChoice', 'end_choice')
+	elif current_scene_name == 'CharacterChoice':
+		# Menu Access
+		load_control_scene('res://scenes/GUI/Menu.tscn', 'Menu', 'end_menu')
 		
 	transition_animation.play("fade_in")
 	transition_animation_name = "fade_in"

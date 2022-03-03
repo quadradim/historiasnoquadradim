@@ -5,6 +5,8 @@ var items = []
 
 export(Resource) var image_source
 
+signal end_choice
+
 func _ready():
 	$TabContainer/Habilidades/Abiliity.texture = image_source
 	$TabContainer/Habilidades/AbiliityDescription.text = "Pikachu"
@@ -37,6 +39,6 @@ func choose_an_object(object_source,description):
 			break
 	print(object_source)
 
-
-
+func end_character_choice():
+	emit_signal("end_choice")
 
