@@ -365,7 +365,7 @@ margin_top = 497.0
 margin_right = 991.0
 margin_bottom = 548.0
 theme = ExtResource( 10 )
-text = "Retornar"
+text = "Continuar"
 
 [connection signal="character_clicked" from="CharactersTab/Char1" to="." method="clicked_character"]
 [connection signal="character_clicked" from="CharactersTab/Char2" to="." method="clicked_character"]
