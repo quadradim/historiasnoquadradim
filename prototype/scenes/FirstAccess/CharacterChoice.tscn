@@ -1,18 +1,19 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://assets/Styles/Themes/UI-Default.tres" type="Theme" id=1]
 [ext_resource path="res://scenes/AuxScenes/HistorianObject.tscn" type="PackedScene" id=2]
 [ext_resource path="res://assets/Images/Temp/personagem.png" type="Texture" id=3]
 [ext_resource path="res://scenes/FirstAccess/CharacterChoice.gd" type="Script" id=4]
-[ext_resource path="res://assets/Images/Temp/snorlax.png" type="Texture" id=5]
-[ext_resource path="res://assets/Images/Temp/Mankey.png" type="Texture" id=6]
-[ext_resource path="res://assets/Images/Temp/Charmander.png" type="Texture" id=7]
-[ext_resource path="res://assets/Images/Temp/vasco.png" type="Texture" id=8]
-[ext_resource path="res://assets/Images/Temp/baiacu.png" type="Texture" id=9]
-[ext_resource path="res://assets/Images/Temp/shrek.png" type="Texture" id=10]
-[ext_resource path="res://assets/Images/Temp/totodile.png" type="Texture" id=11]
-[ext_resource path="res://assets/Images/Temp/Pokémon peixe.png" type="Texture" id=12]
+[ext_resource path="res://assets/Images/Props/binoculos.png" type="Texture" id=5]
+[ext_resource path="res://assets/Images/Props/jogo da memória.png" type="Texture" id=6]
+[ext_resource path="res://assets/Images/Props/planeta.png" type="Texture" id=7]
+[ext_resource path="res://assets/Images/Props/cartazes.png" type="Texture" id=8]
+[ext_resource path="res://assets/Images/Props/jornal.png" type="Texture" id=9]
+[ext_resource path="res://assets/Images/Props/cubo.png" type="Texture" id=10]
+[ext_resource path="res://assets/Images/Props/pasta.png" type="Texture" id=11]
+[ext_resource path="res://assets/Images/Props/livros.png" type="Texture" id=12]
 [ext_resource path="res://assets/Images/Props/QUADRADIM_MOCHILA.png" type="Texture" id=13]
+[ext_resource path="res://assets/Images/Props/chapéu.png" type="Texture" id=14]
 
 [node name="CharacterChoice" type="CanvasLayer"]
 script = ExtResource( 4 )
@@ -108,7 +109,7 @@ margin_top = 40.25
 margin_right = 46.25
 margin_bottom = 80.25
 rect_scale = Vector2( 0.15, 0.15 )
-object_source = ExtResource( 3 )
+object_source = ExtResource( 5 )
 description = "Pikachu"
 
 [node name="img2" parent="TabContainer/Habilidades" instance=ExtResource( 2 )]
@@ -117,7 +118,7 @@ margin_top = 40.25
 margin_right = 155.25
 margin_bottom = 80.25
 rect_scale = Vector2( 0.15, 0.15 )
-object_source = ExtResource( 11 )
+object_source = ExtResource( 8 )
 description = "Totodile"
 
 [node name="img3" parent="TabContainer/Habilidades" instance=ExtResource( 2 )]
@@ -126,7 +127,7 @@ margin_top = 40.25
 margin_right = 262.25
 margin_bottom = 80.25
 rect_scale = Vector2( 0.15, 0.15 )
-object_source = ExtResource( 6 )
+object_source = ExtResource( 14 )
 description = "Mankey"
 
 [node name="img4" parent="TabContainer/Habilidades" instance=ExtResource( 2 )]
@@ -135,7 +136,7 @@ margin_top = 175.25
 margin_right = 46.25
 margin_bottom = 215.25
 rect_scale = Vector2( 0.15, 0.15 )
-object_source = ExtResource( 5 )
+object_source = ExtResource( 10 )
 description = "Snorlax"
 
 [node name="img5" parent="TabContainer/Habilidades" instance=ExtResource( 2 )]
@@ -144,7 +145,7 @@ margin_top = 175.25
 margin_right = 155.25
 margin_bottom = 215.25
 rect_scale = Vector2( 0.15, 0.15 )
-object_source = ExtResource( 12 )
+object_source = ExtResource( 6 )
 description = "Peixe"
 
 [node name="img6" parent="TabContainer/Habilidades" instance=ExtResource( 2 )]
@@ -162,7 +163,7 @@ margin_top = 310.25
 margin_right = 46.25
 margin_bottom = 350.25
 rect_scale = Vector2( 0.15, 0.15 )
-object_source = ExtResource( 7 )
+object_source = ExtResource( 12 )
 description = "Charmander"
 
 [node name="img8" parent="TabContainer/Habilidades" instance=ExtResource( 2 )]
@@ -171,7 +172,7 @@ margin_top = 310.25
 margin_right = 155.25
 margin_bottom = 350.25
 rect_scale = Vector2( 0.15, 0.15 )
-object_source = ExtResource( 10 )
+object_source = ExtResource( 11 )
 description = "Shrek"
 
 [node name="img9" parent="TabContainer/Habilidades" instance=ExtResource( 2 )]
@@ -180,7 +181,7 @@ margin_top = 311.25
 margin_right = 262.25
 margin_bottom = 351.25
 rect_scale = Vector2( 0.15, 0.15 )
-object_source = ExtResource( 8 )
+object_source = ExtResource( 7 )
 description = "Vasco"
 
 [node name="ZoomItem" type="ColorRect" parent="TabContainer/Habilidades"]

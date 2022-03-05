@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://scenes/GUI/Menu.gd" type="Script" id=1]
 [ext_resource path="res://assets/Styles/Themes/UI-Default.tres" type="Theme" id=2]
@@ -46,6 +46,10 @@ tracks/1/keys = {
 "values": [ Vector2( 0.825359, 0.825359 ), Vector2( 0.78, 0.78 ), Vector2( 0.825359, 0.825359 ) ]
 }
 
+[sub_resource type="DynamicFont" id=6]
+size = 30
+font_data = ExtResource( 3 )
+
 [node name="Menu" type="CanvasLayer"]
 script = ExtResource( 1 )
 
@@ -74,9 +78,9 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -368.0
+margin_left = -384.0
 margin_top = 176.0
-margin_right = -245.0
+margin_right = -261.0
 margin_bottom = 235.0
 theme = ExtResource( 2 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
@@ -84,9 +88,9 @@ custom_fonts/font = SubResource( 2 )
 text = "Iniciar"
 
 [node name="ConfigBtn" type="Button" parent="MenuControl"]
-margin_left = 696.0
+margin_left = 496.0
 margin_top = 464.0
-margin_right = 848.0
+margin_right = 648.0
 margin_bottom = 523.0
 theme = ExtResource( 2 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
@@ -94,14 +98,14 @@ custom_fonts/font = SubResource( 3 )
 text = "Config"
 
 [node name="Button" type="Button" parent="MenuControl"]
-margin_left = 400.0
+margin_left = 288.0
 margin_top = 464.0
-margin_right = 561.0
+margin_right = 466.0
 margin_bottom = 523.0
 theme = ExtResource( 2 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_fonts/font = SubResource( 4 )
-text = "Capítulos"
+text = "Episódios"
 
 [node name="Logo" type="Sprite" parent="MenuControl"]
 position = Vector2( 536, 240 )
@@ -110,6 +114,16 @@ texture = ExtResource( 4 )
 
 [node name="MenuAnimation" type="AnimationPlayer" parent="."]
 anims/BackgroundChange = SubResource( 1 )
+
+[node name="Button" type="Button" parent="."]
+margin_left = 688.0
+margin_top = 464.0
+margin_right = 904.0
+margin_bottom = 523.0
+theme = ExtResource( 2 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 6 )
+text = "Instruções"
 
 [connection signal="pressed" from="MenuControl/StartBtn" to="." method="press_game_start"]
 [connection signal="animation_finished" from="MenuAnimation" to="." method="animation_finished"]
