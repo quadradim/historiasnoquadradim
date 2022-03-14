@@ -1,25 +1,27 @@
 extends CanvasLayer
 
 signal end_access01
-
-var text_tutorials = ['Quando clicar em iniciar ou recomeçar, o/a jogador(a) será levado ao cenário principal em que consta o mapa do Distrito Federal, ambientado em uma Brasília histórica...']
-var text_position = 0
-var current_text_pos = 0
-var current_text = ''
-
-func write_text():
-	pass
+var animation_finish = false
+var discover = false
 
 func _ready():
-	pass # Replace with function body.
+	$Control/NoteArea/Message.hide()
+	$Control/MagnifierArea/Magnifier.scale = Vector2(0.08, 0.08)
+	$Control/NoteArea/Note.scale = Vector2(0,0)
 
-func _on_WritingTime_timeout():
-	if current_text_pos < len(text_tutorials[text_position]) and self.layer != -1:
-		current_text += text_tutorials[text_position][current_text_pos]
-		current_text_pos += 1
-		$TutorialText.text = current_text
-	$WritingTime.start()
+func click_magnifier(event):
+	if event.is_pressed() and event.button_index == BUTTON_LEFT and not discover:
+		$AnimationPlayer.play("MagnifierMove")
+		discover = true
 
+func magnifier_move_finished(anim_name):
+	$Control/NoteArea/Message.show()
+	if not animation_finish:
+		$AnimationPlayer.play("MagnifierClicked")
+	else:
+		$AnimationPlayer.play_backwards("MagnifierClicked")
+	animation_finish = not animation_finish
 
-func _on_Mapa_pressed():
-	emit_signal("end_access01")
+func next_scene(event):
+	if event.is_pressed() and event.button_index == BUTTON_LEFT:
+		emit_signal("end_access01")

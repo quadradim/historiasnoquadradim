@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://assets/Styles/Themes/UI-Default.tres" type="Theme" id=1]
+
+[node name="Dialog" type="CanvasLayer"]
+
+[node name="Text" type="RichTextLabel" parent="."]
+margin_right = 432.0
+margin_bottom = 168.0
+theme = ExtResource( 1 )
+text = "Este é um diálogo exemplo"

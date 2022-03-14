@@ -6,21 +6,22 @@
 [node name="Production" type="CanvasLayer"]
 script = ExtResource( 2 )
 
-[node name="Background" type="ColorRect" parent="."]
-anchor_right = 1.0
-anchor_bottom = 1.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 512, 288 )
-scale = Vector2( 0.125, 0.125 )
-texture = ExtResource( 1 )
-
 [node name="OpeningDuration" type="Timer" parent="."]
 wait_time = 2.0
 one_shot = true
 autostart = true
+
+[node name="ProductionControl" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Background" type="ColorRect" parent="ProductionControl"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Sprite" type="Sprite" parent="ProductionControl"]
+position = Vector2( 512, 288 )
+scale = Vector2( 0.125, 0.125 )
+texture = ExtResource( 1 )
 
 [connection signal="timeout" from="OpeningDuration" to="." method="_on_OpeningDuration_timeout"]
