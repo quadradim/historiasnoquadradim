@@ -71,55 +71,55 @@ margin_left = -496.0
 margin_top = -272.0
 margin_right = 496.0
 margin_bottom = 272.0
-color = Color( 0.972549, 0.900794, 0.435294, 0.980757 )
+color = Color( 0.972549, 0.882353, 0.435294, 1 )
 
 [node name="StartBtn" type="Button" parent="MenuControl"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -384.0
-margin_top = 176.0
-margin_right = -261.0
-margin_bottom = 235.0
+margin_left = -472.0
+margin_top = 168.0
+margin_right = -312.0
+margin_bottom = 227.0
 theme = ExtResource( 2 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_fonts/font = SubResource( 2 )
 text = "Iniciar"
 
 [node name="ConfigBtn" type="Button" parent="MenuControl"]
-margin_left = 496.0
-margin_top = 464.0
-margin_right = 648.0
-margin_bottom = 523.0
+margin_left = 240.0
+margin_top = 456.0
+margin_right = 507.0
+margin_bottom = 515.0
 theme = ExtResource( 2 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_fonts/font = SubResource( 3 )
-text = "Config"
+text = "Configurações"
 
 [node name="Button" type="Button" parent="MenuControl"]
-margin_left = 288.0
-margin_top = 464.0
-margin_right = 466.0
-margin_bottom = 523.0
+margin_left = 544.0
+margin_top = 456.0
+margin_right = 744.0
+margin_bottom = 515.0
 theme = ExtResource( 2 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_fonts/font = SubResource( 4 )
 text = "Episódios"
 
 [node name="Logo" type="Sprite" parent="MenuControl"]
-position = Vector2( 536, 240 )
-scale = Vector2( 0.810596, 0.810596 )
+position = Vector2( 507, 248 )
+scale = Vector2( 0.825359, 0.825359 )
 texture = ExtResource( 4 )
 
 [node name="MenuAnimation" type="AnimationPlayer" parent="."]
 anims/BackgroundChange = SubResource( 1 )
 
 [node name="Button" type="Button" parent="."]
-margin_left = 688.0
-margin_top = 464.0
-margin_right = 904.0
-margin_bottom = 523.0
+margin_left = 776.0
+margin_top = 456.0
+margin_right = 992.0
+margin_bottom = 515.0
 theme = ExtResource( 2 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_fonts/font = SubResource( 6 )

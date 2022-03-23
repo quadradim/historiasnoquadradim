@@ -4,7 +4,7 @@
 [ext_resource path="res://scenes/AuxScenes/HistorianObject.tscn" type="PackedScene" id=2]
 [ext_resource path="res://assets/Images/Temp/personagem.png" type="Texture" id=3]
 [ext_resource path="res://scenes/FirstAccess/CharacterChoice.gd" type="Script" id=4]
-[ext_resource path="res://assets/Images/Props/binoculos.png" type="Texture" id=5]
+[ext_resource path="res://assets/Images/Props/binoculos2.png" type="Texture" id=5]
 [ext_resource path="res://assets/Images/Props/jogo da memória.png" type="Texture" id=6]
 [ext_resource path="res://assets/Images/Props/planeta.png" type="Texture" id=7]
 [ext_resource path="res://assets/Images/Props/cartazes.png" type="Texture" id=8]

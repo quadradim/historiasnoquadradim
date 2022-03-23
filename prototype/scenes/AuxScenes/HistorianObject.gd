@@ -5,7 +5,7 @@ export(String) var description
 signal clicked_object(object_source,description)
 
 func _ready():
-	$Image.scale = Vector2(0.5, 0.5)
+	$Image.scale = Vector2(1, 1)
 	$Image.texture = object_source
 	
 func get_image():
