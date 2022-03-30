@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://scenes/AuxScenes/ChatBox.gd" type="Script" id=1]
+[ext_resource path="res://assets/Styles/Themes/ChatBox.tres" type="Theme" id=2]
 
 [node name="ChatBox" type="Control"]
 anchor_left = 0.5
@@ -25,6 +26,7 @@ margin_left = -396.0
 margin_top = -54.0
 margin_right = 527.0
 margin_bottom = 63.0
+theme = ExtResource( 2 )
 autowrap = true
 
 [node name="Back" type="Button" parent="."]
