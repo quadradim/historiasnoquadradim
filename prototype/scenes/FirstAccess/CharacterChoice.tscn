@@ -5,15 +5,15 @@
 [ext_resource path="res://assets/Images/Temp/personagem.png" type="Texture" id=3]
 [ext_resource path="res://scenes/FirstAccess/CharacterChoice.gd" type="Script" id=4]
 [ext_resource path="res://assets/Images/Props/binoculos2.png" type="Texture" id=5]
-[ext_resource path="res://assets/Images/Props/jogo da memória.png" type="Texture" id=6]
-[ext_resource path="res://assets/Images/Props/planeta.png" type="Texture" id=7]
-[ext_resource path="res://assets/Images/Props/cartazes.png" type="Texture" id=8]
-[ext_resource path="res://assets/Images/Props/jornal.png" type="Texture" id=9]
-[ext_resource path="res://assets/Images/Props/cubo.png" type="Texture" id=10]
-[ext_resource path="res://assets/Images/Props/pasta.png" type="Texture" id=11]
-[ext_resource path="res://assets/Images/Props/livros.png" type="Texture" id=12]
+[ext_resource path="res://assets/Images/Props/livros2.png" type="Texture" id=6]
+[ext_resource path="res://assets/Images/Props/jogo da memória2.png" type="Texture" id=7]
+[ext_resource path="res://assets/Images/Props/cartazes2.png" type="Texture" id=8]
+[ext_resource path="res://assets/Images/Props/jornal2.png" type="Texture" id=9]
+[ext_resource path="res://assets/Images/Props/cubo2.png" type="Texture" id=10]
+[ext_resource path="res://assets/Images/Props/chapéu2.png" type="Texture" id=11]
+[ext_resource path="res://assets/Images/Props/planeta2.png" type="Texture" id=12]
 [ext_resource path="res://assets/Images/Props/QUADRADIM_MOCHILA.png" type="Texture" id=13]
-[ext_resource path="res://assets/Images/Props/chapéu.png" type="Texture" id=14]
+[ext_resource path="res://assets/Images/Props/pasta2.png" type="Texture" id=14]
 
 [node name="CharacterChoice" type="CanvasLayer"]
 script = ExtResource( 4 )
@@ -126,8 +126,8 @@ margin_left = 222.25
 margin_top = 40.25
 margin_right = 262.25
 margin_bottom = 80.25
-rect_scale = Vector2( 0.15, 0.15 )
-object_source = ExtResource( 14 )
+rect_scale = Vector2( 0.155, 0.15 )
+object_source = ExtResource( 11 )
 description = "Mankey"
 
 [node name="img4" parent="TabContainer/Habilidades" instance=ExtResource( 2 )]
@@ -145,7 +145,7 @@ margin_top = 175.25
 margin_right = 155.25
 margin_bottom = 215.25
 rect_scale = Vector2( 0.15, 0.15 )
-object_source = ExtResource( 6 )
+object_source = ExtResource( 7 )
 description = "Peixe"
 
 [node name="img6" parent="TabContainer/Habilidades" instance=ExtResource( 2 )]
@@ -163,7 +163,7 @@ margin_top = 310.25
 margin_right = 46.25
 margin_bottom = 350.25
 rect_scale = Vector2( 0.15, 0.15 )
-object_source = ExtResource( 12 )
+object_source = ExtResource( 6 )
 description = "Charmander"
 
 [node name="img8" parent="TabContainer/Habilidades" instance=ExtResource( 2 )]
@@ -172,7 +172,7 @@ margin_top = 310.25
 margin_right = 155.25
 margin_bottom = 350.25
 rect_scale = Vector2( 0.15, 0.15 )
-object_source = ExtResource( 11 )
+object_source = ExtResource( 14 )
 description = "Shrek"
 
 [node name="img9" parent="TabContainer/Habilidades" instance=ExtResource( 2 )]
@@ -181,7 +181,7 @@ margin_top = 311.25
 margin_right = 262.25
 margin_bottom = 351.25
 rect_scale = Vector2( 0.15, 0.15 )
-object_source = ExtResource( 7 )
+object_source = ExtResource( 12 )
 description = "Vasco"
 
 [node name="ZoomItem" type="ColorRect" parent="TabContainer/Habilidades"]
@@ -190,9 +190,6 @@ margin_top = 31.25
 margin_right = 622.25
 margin_bottom = 327.25
 color = Color( 0.247059, 0.196078, 0.188235, 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="BackGround" type="ColorRect" parent="TabContainer/Habilidades/ZoomItem"]
 anchor_left = 0.329
@@ -204,9 +201,6 @@ margin_top = -95.296
 margin_right = 185.958
 margin_bottom = 99.704
 color = Color( 0.996078, 0.972549, 0.866667, 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Abiliity" type="Sprite" parent="TabContainer/Habilidades"]
 position = Vector2( 483.25, 148.25 )

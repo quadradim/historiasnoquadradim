@@ -20,6 +20,11 @@ func _ready():
 	items.append($TabContainer/Habilidades/img8)
 	items.append($TabContainer/Habilidades/img9)
 
+	var sizeto=Vector2(400,400)
+	var size=image_source.get_size()
+	var scale_factor=sizeto/size
+	$TabContainer/Habilidades/Abiliity.scale=scale_factor
+
 func choose_an_object(object_source,description):
 	$TabContainer/Habilidades/Abiliity.texture = object_source
 	$TabContainer/Habilidades/AbiliityDescription.text = description

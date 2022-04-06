@@ -33,9 +33,6 @@ margin_top = 4.0
 margin_right = 548.0
 margin_bottom = 540.0
 color = Color( 0.996078, 0.972549, 0.866667, 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Image" type="Sprite" parent="."]
 position = Vector2( 288, 288 )

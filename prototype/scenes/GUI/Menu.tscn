@@ -1,9 +1,14 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://scenes/GUI/Menu.gd" type="Script" id=1]
 [ext_resource path="res://assets/Styles/Themes/UI-Default.tres" type="Theme" id=2]
 [ext_resource path="res://assets/Fonts/Godot-Fontpack-d244bf6170b399a6d4d26a0d906058ddf2dafdf1/fonts/architect-s-daughter/ArchitectsDaughter.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://assets/Images/Logo.png" type="Texture" id=4]
+[ext_resource path="res://assets/Images/padrão1.png" type="Texture" id=5]
+[ext_resource path="res://assets/Images/Padrão3.png" type="Texture" id=6]
+[ext_resource path="res://assets/Images/Padrão2.png" type="Texture" id=7]
+[ext_resource path="res://assets/Images/Botão Mão.png" type="Texture" id=8]
+[ext_resource path="res://assets/Images/Botão Interrogação.png" type="Texture" id=9]
 
 [sub_resource type="DynamicFont" id=2]
 size = 30
@@ -22,33 +27,17 @@ resource_name = "BackgroundChange"
 length = 1.8
 loop = true
 tracks/0/type = "value"
-tracks/0/path = NodePath("MenuControl/Background2:color")
+tracks/0/path = NodePath("MenuControl/Logo:scale")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
 "times": PoolRealArray( 0, 0.8, 1.6 ),
-"transitions": PoolRealArray( 1.41421, 2.73208, 1 ),
-"update": 0,
-"values": [ Color( 0.972549, 0.882353, 0.435294, 1 ), Color( 0.972549, 0.972549, 0.435294, 0.905882 ), Color( 0.972549, 0.882353, 0.435294, 1 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("MenuControl/Logo:scale")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0, 0.8, 1.6 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 0.825359, 0.825359 ), Vector2( 0.78, 0.78 ), Vector2( 0.825359, 0.825359 ) ]
 }
-
-[sub_resource type="DynamicFont" id=6]
-size = 30
-font_data = ExtResource( 3 )
 
 [node name="Menu" type="CanvasLayer"]
 script = ExtResource( 1 )
@@ -60,70 +49,99 @@ anchor_bottom = 1.0
 [node name="Background1" type="ColorRect" parent="MenuControl"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-color = Color( 0.14902, 0.152941, 0.129412, 1 )
+color = Color( 0.968627, 0.964706, 0.94902, 1 )
 
-[node name="Background2" type="ColorRect" parent="MenuControl"]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -496.0
-margin_top = -272.0
-margin_right = 496.0
-margin_bottom = 272.0
-color = Color( 0.972549, 0.882353, 0.435294, 1 )
+[node name="Padrão1" type="Sprite" parent="MenuControl"]
+position = Vector2( 877, 356 )
+scale = Vector2( 0.302746, 0.305539 )
+texture = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="MenuControl"]
+position = Vector2( 163, 134 )
+scale = Vector2( 0.399134, 0.292803 )
+texture = ExtResource( 7 )
+
+[node name="Sprite2" type="Sprite" parent="MenuControl"]
+position = Vector2( 178.75, 328 )
+scale = Vector2( 0.270076, 0.226485 )
+texture = ExtResource( 6 )
+
+[node name="ColorRect3" type="ColorRect" parent="MenuControl"]
+margin_left = 318.0
+margin_top = 274.0
+margin_right = 591.0
+margin_bottom = 344.0
+color = Color( 0.898039, 0.784314, 0.0823529, 1 )
 
 [node name="StartBtn" type="Button" parent="MenuControl"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -472.0
-margin_top = 168.0
-margin_right = -312.0
-margin_bottom = 227.0
+margin_left = -189.0
+margin_top = -10.0
+margin_right = 76.0
+margin_bottom = 52.0
 theme = ExtResource( 2 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_fonts/font = SubResource( 2 )
 text = "Iniciar"
 
+[node name="ColorRect" type="ColorRect" parent="MenuControl"]
+margin_left = 314.0
+margin_top = 473.0
+margin_right = 592.0
+margin_bottom = 542.0
+color = Color( 0.898039, 0.784314, 0.0823529, 1 )
+
 [node name="ConfigBtn" type="Button" parent="MenuControl"]
-margin_left = 240.0
-margin_top = 456.0
-margin_right = 507.0
-margin_bottom = 515.0
+margin_left = 320.0
+margin_top = 478.0
+margin_right = 587.0
+margin_bottom = 537.0
 theme = ExtResource( 2 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_fonts/font = SubResource( 3 )
 text = "Configurações"
 
+[node name="ColorRect2" type="ColorRect" parent="MenuControl"]
+margin_left = 318.0
+margin_top = 376.0
+margin_right = 592.0
+margin_bottom = 442.0
+color = Color( 0.898039, 0.784314, 0.0823529, 1 )
+
 [node name="Button" type="Button" parent="MenuControl"]
-margin_left = 544.0
-margin_top = 456.0
-margin_right = 744.0
-margin_bottom = 515.0
+margin_left = 321.0
+margin_top = 379.0
+margin_right = 589.0
+margin_bottom = 438.0
 theme = ExtResource( 2 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_fonts/font = SubResource( 4 )
 text = "Episódios"
 
 [node name="Logo" type="Sprite" parent="MenuControl"]
-position = Vector2( 507, 248 )
-scale = Vector2( 0.825359, 0.825359 )
+position = Vector2( 485, 131 )
+scale = Vector2( 0.763247, 0.708022 )
 texture = ExtResource( 4 )
+
+[node name="CreditBtn" type="TextureButton" parent="MenuControl"]
+margin_left = 94.0
+margin_top = 521.0
+margin_right = 134.0
+margin_bottom = 561.0
+texture_normal = ExtResource( 8 )
+
+[node name="HelpBtn" type="TextureButton" parent="MenuControl"]
+margin_left = 31.0
+margin_top = 521.0
+margin_right = 71.0
+margin_bottom = 561.0
+texture_normal = ExtResource( 9 )
 
 [node name="MenuAnimation" type="AnimationPlayer" parent="."]
 anims/BackgroundChange = SubResource( 1 )
-
-[node name="Button" type="Button" parent="."]
-margin_left = 776.0
-margin_top = 456.0
-margin_right = 992.0
-margin_bottom = 515.0
-theme = ExtResource( 2 )
-custom_colors/font_color = Color( 1, 1, 1, 1 )
-custom_fonts/font = SubResource( 6 )
-text = "Instruções"
 
 [connection signal="pressed" from="MenuControl/StartBtn" to="." method="press_game_start"]
 [connection signal="animation_finished" from="MenuAnimation" to="." method="animation_finished"]
