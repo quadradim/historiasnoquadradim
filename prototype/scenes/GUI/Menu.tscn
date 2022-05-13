@@ -1,13 +1,14 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://scenes/GUI/Menu.gd" type="Script" id=1]
-[ext_resource path="res://assets/Styles/Themes/UI-Default.tres" type="Theme" id=2]
+[ext_resource path="res://assets/Styles/Themes/Menu.tres" type="Theme" id=2]
 [ext_resource path="res://assets/Fonts/Godot-Fontpack-d244bf6170b399a6d4d26a0d906058ddf2dafdf1/fonts/architect-s-daughter/ArchitectsDaughter.ttf" type="DynamicFontData" id=3]
-[ext_resource path="res://assets/Images/Logo.png" type="Texture" id=4]
-[ext_resource path="res://assets/Images/Padrão3.png" type="Texture" id=6]
-[ext_resource path="res://assets/Images/Padrão2.png" type="Texture" id=7]
-[ext_resource path="res://assets/Images/Botão Mão.png" type="Texture" id=8]
-[ext_resource path="res://assets/Images/Botão Interrogação.png" type="Texture" id=9]
+[ext_resource path="res://assets/Images/Composition/Menu/Botão Mão.png" type="Texture" id=4]
+[ext_resource path="res://assets/Images/Composition/Menu/Padrão2.png" type="Texture" id=5]
+[ext_resource path="res://assets/Images/Composition/Menu/Logo.png" type="Texture" id=6]
+[ext_resource path="res://assets/Images/Composition/Menu/Padrão1.png" type="Texture" id=7]
+[ext_resource path="res://assets/Images/Composition/Menu/Padrão3.png" type="Texture" id=8]
+[ext_resource path="res://assets/Images/Composition/Menu/Botão Interrogação.png" type="Texture" id=9]
 
 [sub_resource type="DynamicFont" id=2]
 size = 30
@@ -61,23 +62,17 @@ __meta__ = {
 [node name="Padrão1" type="Sprite" parent="MenuControl"]
 position = Vector2( 877, 356 )
 scale = Vector2( 0.302746, 0.305539 )
-
-[node name="Sprite" type="Sprite" parent="MenuControl"]
-position = Vector2( 163, 134 )
-scale = Vector2( 0.399134, 0.292803 )
 texture = ExtResource( 7 )
 
-[node name="Sprite2" type="Sprite" parent="MenuControl"]
-position = Vector2( 178.75, 328 )
-scale = Vector2( 0.270076, 0.226485 )
-texture = ExtResource( 6 )
+[node name="Padrão2" type="Sprite" parent="MenuControl"]
+position = Vector2( 136, 130 )
+scale = Vector2( 0.33033, 0.273509 )
+texture = ExtResource( 5 )
 
-[node name="ColorRect3" type="ColorRect" parent="MenuControl"]
-margin_left = 357.0
-margin_top = 288.0
-margin_right = 637.0
-margin_bottom = 358.0
-color = Color( 0.898039, 0.784314, 0.0823529, 1 )
+[node name="Padrão3" type="Sprite" parent="MenuControl"]
+position = Vector2( 200, 391 )
+scale = Vector2( 0.308902, 0.288057 )
+texture = ExtResource( 8 )
 
 [node name="StartBtn" type="Button" parent="MenuControl"]
 anchor_left = 0.5
@@ -93,13 +88,6 @@ custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_fonts/font = SubResource( 2 )
 text = "Iniciar"
 
-[node name="ColorRect" type="ColorRect" parent="MenuControl"]
-margin_left = 357.0
-margin_top = 484.0
-margin_right = 637.0
-margin_bottom = 553.0
-color = Color( 0.898039, 0.784314, 0.0823529, 1 )
-
 [node name="ConfigBtn" type="Button" parent="MenuControl"]
 margin_left = 365.0
 margin_top = 489.0
@@ -109,13 +97,6 @@ theme = ExtResource( 2 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_fonts/font = SubResource( 3 )
 text = "Configurações"
-
-[node name="ColorRect2" type="ColorRect" parent="MenuControl"]
-margin_left = 357.0
-margin_top = 380.0
-margin_right = 637.0
-margin_bottom = 454.0
-color = Color( 0.898039, 0.784314, 0.0823529, 1 )
 
 [node name="Button" type="Button" parent="MenuControl"]
 margin_left = 365.0
@@ -128,16 +109,16 @@ custom_fonts/font = SubResource( 4 )
 text = "Episódios"
 
 [node name="Logo" type="Sprite" parent="MenuControl"]
-position = Vector2( 552, 136 )
-scale = Vector2( 0.685, 0.685 )
-texture = ExtResource( 4 )
+position = Vector2( 518.699, 146.959 )
+scale = Vector2( 0.793009, 0.737039 )
+texture = ExtResource( 6 )
 
 [node name="CreditBtn" type="TextureButton" parent="MenuControl"]
 margin_left = 94.0
 margin_top = 521.0
 margin_right = 134.0
 margin_bottom = 561.0
-texture_normal = ExtResource( 8 )
+texture_normal = ExtResource( 4 )
 
 [node name="HelpBtn" type="TextureButton" parent="MenuControl"]
 margin_left = 31.0

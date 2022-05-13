@@ -1,0 +1,42 @@
+[gd_resource type="Theme" load_steps=9 format=2]
+
+[ext_resource path="res://assets/Fonts/bebas_neue/BebasNeue-Regular.otf" type="DynamicFontData" id=2]
+
+[sub_resource type="DynamicFont" id=6]
+size = 20
+font_data = ExtResource( 2 )
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0.247059, 0.196078, 0.188235, 1 )
+
+[sub_resource type="DynamicFont" id=7]
+size = 20
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=1]
+size = 22
+font_data = ExtResource( 2 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.247059, 0.196078, 0.188235, 1 )
+
+[sub_resource type="StyleBoxFlat" id=3]
+content_margin_left = 39.0
+content_margin_right = 39.0
+bg_color = Color( 0.501961, 0.34902, 0.32549, 1 )
+
+[sub_resource type="StyleBoxFlat" id=4]
+content_margin_left = 14.0
+content_margin_right = 14.0
+bg_color = Color( 0.247059, 0.196078, 0.188235, 1 )
+shadow_color = Color( 0.0666667, 0.0117647, 0.0117647, 0.6 )
+
+[resource]
+Button/fonts/font = SubResource( 6 )
+Button/styles/normal = SubResource( 5 )
+RichTextLabel/colors/default_color = Color( 0.996078, 0.972549, 0.866667, 1 )
+RichTextLabel/fonts/normal_font = SubResource( 7 )
+TabContainer/fonts/font = SubResource( 1 )
+TabContainer/styles/panel = SubResource( 2 )
+TabContainer/styles/tab_bg = SubResource( 3 )
+TabContainer/styles/tab_fg = SubResource( 4 )

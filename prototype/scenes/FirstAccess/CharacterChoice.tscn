@@ -1,20 +1,19 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=15 format=2]
 
-[ext_resource path="res://assets/Styles/Themes/UI-Default.tres" type="Theme" id=1]
+[ext_resource path="res://assets/Styles/Themes/Menu.tres" type="Theme" id=1]
 [ext_resource path="res://scenes/AuxScenes/HistorianObject.tscn" type="PackedScene" id=2]
-[ext_resource path="res://assets/Images/Padrão1.png" type="Texture" id=3]
+[ext_resource path="res://assets/Images/Composition/CharacterChoice/binoculos2.png" type="Texture" id=3]
 [ext_resource path="res://scenes/FirstAccess/CharacterChoice.gd" type="Script" id=4]
-[ext_resource path="res://assets/Images/Props/binoculos2.png" type="Texture" id=5]
-[ext_resource path="res://assets/Images/Props/livros2.png" type="Texture" id=6]
-[ext_resource path="res://assets/Images/Props/jogo da memória2.png" type="Texture" id=7]
-[ext_resource path="res://assets/Images/Props/cartazes2.png" type="Texture" id=8]
-[ext_resource path="res://assets/Images/Props/jornal2.png" type="Texture" id=9]
-[ext_resource path="res://assets/Images/Props/cubo2.png" type="Texture" id=10]
-[ext_resource path="res://assets/Images/Props/chapéu2.png" type="Texture" id=11]
-[ext_resource path="res://assets/Images/Props/planeta2.png" type="Texture" id=12]
-[ext_resource path="res://assets/Images/Props/QUADRADIM_MOCHILA.png" type="Texture" id=13]
-[ext_resource path="res://assets/Images/Props/pasta2.png" type="Texture" id=14]
-[ext_resource path="res://assets/Images/Padrão2.png" type="Texture" id=15]
+[ext_resource path="res://assets/Images/Composition/CharacterChoice/chapéu2.png" type="Texture" id=5]
+[ext_resource path="res://assets/Images/Composition/CharacterChoice/cubo2.png" type="Texture" id=6]
+[ext_resource path="res://assets/Images/Composition/CharacterChoice/planeta2.png" type="Texture" id=7]
+[ext_resource path="res://assets/Images/Composition/CharacterChoice/cartazes2.png" type="Texture" id=8]
+[ext_resource path="res://assets/Images/Composition/CharacterChoice/livros2.png" type="Texture" id=9]
+[ext_resource path="res://assets/Images/Composition/CharacterChoice/pasta2.png" type="Texture" id=10]
+[ext_resource path="res://assets/Images/Composition/CharacterChoice/jogo da memória2.png" type="Texture" id=11]
+[ext_resource path="res://assets/Images/Composition/CharacterChoice/jornal2.png" type="Texture" id=12]
+[ext_resource path="res://assets/Images/Composition/CharacterChoice/QUADRADIM_MOCHILA.png" type="Texture" id=13]
+[ext_resource path="res://assets/Styles/Themes/CharacterChoice.tres" type="Theme" id=15]
 
 [node name="CharacterChoice" type="CanvasLayer"]
 script = ExtResource( 4 )
@@ -43,9 +42,6 @@ margin_top = 404.0
 margin_right = 1014.0
 margin_bottom = 444.0
 color = Color( 0.615686, 0.372549, 0.337255, 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="BarShadow" type="ColorRect" parent="."]
 margin_left = 11.0
@@ -57,162 +53,150 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="BackgroundSymbol01" type="Sprite" parent="."]
-position = Vector2( 897.75, 159.652 )
-scale = Vector2( 0.203409, 0.203409 )
-texture = ExtResource( 3 )
-
 [node name="BottomBar" type="ColorRect" parent="."]
 anchor_left = 0.057
 anchor_top = 0.86
 anchor_right = 0.057
 anchor_bottom = 0.86
 margin_left = -42.368
-margin_top = -64.36
-margin_right = 947.632
+margin_top = -67.36
+margin_right = 949.632
 margin_bottom = 80.64
 color = Color( 0.501961, 0.34902, 0.32549, 1 )
-
-[node name="BackgroundSymbol02" type="Sprite" parent="."]
-position = Vector2( 600, 200 )
-scale = Vector2( 0.400758, 0.400758 )
-texture = ExtResource( 15 )
 
 [node name="TabContainer" type="TabContainer" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 40.0
-margin_top = 32.0
-margin_right = -654.0
-margin_bottom = -107.0
-theme = ExtResource( 1 )
+margin_left = 31.0
+margin_top = 24.0
+margin_right = -592.0
+margin_bottom = -90.0
+theme = ExtResource( 15 )
 all_tabs_in_front = true
 
-[node name="Habilities" type="Tabs" parent="TabContainer"]
+[node name="Habilidades" type="Tabs" parent="TabContainer"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 3.75
-margin_top = 30.75
-margin_right = -3.75
-margin_bottom = -3.75
-theme = ExtResource( 1 )
+margin_top = 37.0
+theme = ExtResource( 15 )
 
-[node name="HabilityPanel" type="ColorRect" parent="TabContainer/Habilities"]
-margin_left = 4.0
-margin_top = 9.0
-margin_right = 316.0
-margin_bottom = 398.0
+[node name="HabilityPanel" type="ColorRect" parent="TabContainer/Habilidades"]
+margin_left = 16.0
+margin_top = 16.0
+margin_right = 386.0
+margin_bottom = 414.0
+theme = ExtResource( 15 )
 color = Color( 0.976471, 0.901961, 0.533333, 1 )
 
-[node name="img1" parent="TabContainer/Habilities/HabilityPanel" instance=ExtResource( 2 )]
-margin_left = 8.25
-margin_top = 30.25
-margin_right = 48.25
-margin_bottom = 70.25
+[node name="img1" parent="TabContainer/Habilidades/HabilityPanel" instance=ExtResource( 2 )]
+margin_left = 11.0
+margin_top = 34.0
+margin_right = 51.0
+margin_bottom = 74.0
 rect_scale = Vector2( 0.15, 0.15 )
-object_source = ExtResource( 5 )
-description = "Pikachu"
+description = "Binoculos"
 
-[node name="img2" parent="TabContainer/Habilities/HabilityPanel" instance=ExtResource( 2 )]
-margin_left = 112.25
-margin_top = 30.25
-margin_right = 152.25
-margin_bottom = 70.25
+[node name="img2" parent="TabContainer/Habilidades/HabilityPanel" instance=ExtResource( 2 )]
+margin_left = 133.0
+margin_top = 34.0
+margin_right = 173.0
+margin_bottom = 74.0
 rect_scale = Vector2( 0.15, 0.15 )
 object_source = ExtResource( 8 )
-description = "Totodile"
+description = "Cartazes"
 
-[node name="img3" parent="TabContainer/Habilities/HabilityPanel" instance=ExtResource( 2 )]
-margin_left = 213.65
-margin_top = 30.25
-margin_right = 253.65
-margin_bottom = 70.25
+[node name="img3" parent="TabContainer/Habilidades/HabilityPanel" instance=ExtResource( 2 )]
+margin_left = 251.0
+margin_top = 34.0
+margin_right = 291.0
+margin_bottom = 74.0
 rect_scale = Vector2( 0.155, 0.15 )
-object_source = ExtResource( 11 )
-description = "Mankey"
+object_source = ExtResource( 5 )
+description = "Chapéu"
 
-[node name="img4" parent="TabContainer/Habilities/HabilityPanel" instance=ExtResource( 2 )]
-margin_left = 9.85001
-margin_top = 144.25
-margin_right = 49.85
-margin_bottom = 184.25
-rect_scale = Vector2( 0.15, 0.15 )
-object_source = ExtResource( 10 )
-description = "Snorlax"
-
-[node name="img5" parent="TabContainer/Habilities/HabilityPanel" instance=ExtResource( 2 )]
-margin_left = 112.25
-margin_top = 144.25
-margin_right = 152.25
-margin_bottom = 184.25
-rect_scale = Vector2( 0.15, 0.15 )
-object_source = ExtResource( 7 )
-description = "Peixe"
-
-[node name="img6" parent="TabContainer/Habilities/HabilityPanel" instance=ExtResource( 2 )]
-margin_left = 213.65
-margin_top = 145.25
-margin_right = 253.65
-margin_bottom = 185.25
-rect_scale = Vector2( 0.15, 0.15 )
-object_source = ExtResource( 9 )
-description = "Baiacu"
-
-[node name="img7" parent="TabContainer/Habilities/HabilityPanel" instance=ExtResource( 2 )]
-margin_left = 9.85001
-margin_top = 256.25
-margin_right = 49.85
-margin_bottom = 296.25
+[node name="img4" parent="TabContainer/Habilidades/HabilityPanel" instance=ExtResource( 2 )]
+margin_left = 11.0
+margin_top = 158.0
+margin_right = 51.0
+margin_bottom = 198.0
 rect_scale = Vector2( 0.15, 0.15 )
 object_source = ExtResource( 6 )
-description = "Charmander"
+description = "Cubo"
 
-[node name="img8" parent="TabContainer/Habilities/HabilityPanel" instance=ExtResource( 2 )]
-margin_left = 111.45
-margin_top = 256.25
-margin_right = 151.45
-margin_bottom = 296.25
+[node name="img5" parent="TabContainer/Habilidades/HabilityPanel" instance=ExtResource( 2 )]
+margin_left = 133.0
+margin_top = 158.0
+margin_right = 173.0
+margin_bottom = 198.0
 rect_scale = Vector2( 0.15, 0.15 )
-object_source = ExtResource( 14 )
-description = "Shrek"
+object_source = ExtResource( 11 )
+description = "Jogo da memória"
 
-[node name="img9" parent="TabContainer/Habilities/HabilityPanel" instance=ExtResource( 2 )]
-margin_left = 213.65
-margin_top = 256.25
-margin_right = 253.65
-margin_bottom = 296.25
+[node name="img6" parent="TabContainer/Habilidades/HabilityPanel" instance=ExtResource( 2 )]
+margin_left = 251.0
+margin_top = 158.0
+margin_right = 291.0
+margin_bottom = 198.0
 rect_scale = Vector2( 0.15, 0.15 )
 object_source = ExtResource( 12 )
-description = "Vasco"
+description = "Jornal"
 
-[node name="ZoomItem" type="ColorRect" parent="TabContainer/Habilities"]
-margin_left = 326.25
-margin_top = 39.25
-margin_right = 624.25
-margin_bottom = 335.25
+[node name="img7" parent="TabContainer/Habilidades/HabilityPanel" instance=ExtResource( 2 )]
+margin_left = 11.0
+margin_top = 285.0
+margin_right = 51.0
+margin_bottom = 325.0
+rect_scale = Vector2( 0.15, 0.15 )
+object_source = ExtResource( 9 )
+description = "Livros"
+
+[node name="img8" parent="TabContainer/Habilidades/HabilityPanel" instance=ExtResource( 2 )]
+margin_left = 133.0
+margin_top = 285.0
+margin_right = 173.0
+margin_bottom = 325.0
+rect_scale = Vector2( 0.15, 0.15 )
+object_source = ExtResource( 10 )
+description = "Pasta"
+
+[node name="img9" parent="TabContainer/Habilidades/HabilityPanel" instance=ExtResource( 2 )]
+margin_left = 251.0
+margin_top = 285.0
+margin_right = 291.0
+margin_bottom = 325.0
+rect_scale = Vector2( 0.15, 0.15 )
+object_source = ExtResource( 7 )
+description = "Planeta"
+
+[node name="ZoomItem" type="ColorRect" parent="TabContainer/Habilidades"]
+margin_left = 401.0
+margin_right = 704.0
+margin_bottom = 349.0
 color = Color( 0.247059, 0.196078, 0.188235, 1 )
 
-[node name="BackGround" type="ColorRect" parent="TabContainer/Habilities/ZoomItem"]
-anchor_left = 0.329
-anchor_top = 0.376
-anchor_right = 0.329
-anchor_bottom = 0.376
-margin_left = -82.042
-margin_top = -95.296
-margin_right = 185.958
-margin_bottom = 99.704
+[node name="BackGround" type="ColorRect" parent="TabContainer/Habilidades/ZoomItem"]
+anchor_left = 0.5
+anchor_top = 0.368
+anchor_right = 0.5
+anchor_bottom = 0.368
+margin_left = -142.5
+margin_top = -112.432
+margin_right = 131.5
+margin_bottom = 126.568
 color = Color( 0.996078, 0.972549, 0.866667, 1 )
 
-[node name="Abiliity" type="Sprite" parent="TabContainer/Habilities"]
+[node name="AbiliityDescription" type="RichTextLabel" parent="TabContainer/Habilidades"]
+margin_left = 410.0
+margin_top = 271.0
+margin_right = 693.0
+margin_bottom = 338.0
+theme = ExtResource( 15 )
+
+[node name="Abiliity" type="Sprite" parent="TabContainer/Habilidades"]
 position = Vector2( 483.25, 148.25 )
 scale = Vector2( 0.2, 0.2 )
-
-[node name="AbiliityDescription" type="RichTextLabel" parent="TabContainer/Habilities"]
-margin_left = 340.25
-margin_top = 257.25
-margin_right = 614.25
-margin_bottom = 324.25
-theme = ExtResource( 1 )
+centered = false
+offset = Vector2( -80, -200 )
 
 [node name="Estilo" type="Tabs" parent="TabContainer"]
 visible = false
@@ -224,25 +208,25 @@ margin_right = -3.75
 margin_bottom = -3.75
 
 [node name="Next" type="Button" parent="."]
-margin_left = 896.0
-margin_top = 520.0
+margin_left = 867.0
+margin_top = 512.0
 margin_right = 1001.0
 margin_bottom = 556.0
-theme = ExtResource( 1 )
-text = "Próximo"
+theme = ExtResource( 15 )
+text = "Continuar"
 
 [node name="QuadradimMochila" type="Sprite" parent="."]
-position = Vector2( 856, 216 )
+position = Vector2( 877, 216 )
 scale = Vector2( 0.766667, 0.766667 )
 texture = ExtResource( 13 )
 
-[connection signal="clicked_object" from="TabContainer/Habilities/HabilityPanel/img1" to="." method="choose_an_object"]
-[connection signal="clicked_object" from="TabContainer/Habilities/HabilityPanel/img2" to="." method="choose_an_object"]
-[connection signal="clicked_object" from="TabContainer/Habilities/HabilityPanel/img3" to="." method="choose_an_object"]
-[connection signal="clicked_object" from="TabContainer/Habilities/HabilityPanel/img4" to="." method="choose_an_object"]
-[connection signal="clicked_object" from="TabContainer/Habilities/HabilityPanel/img5" to="." method="choose_an_object"]
-[connection signal="clicked_object" from="TabContainer/Habilities/HabilityPanel/img6" to="." method="choose_an_object"]
-[connection signal="clicked_object" from="TabContainer/Habilities/HabilityPanel/img7" to="." method="choose_an_object"]
-[connection signal="clicked_object" from="TabContainer/Habilities/HabilityPanel/img8" to="." method="choose_an_object"]
-[connection signal="clicked_object" from="TabContainer/Habilities/HabilityPanel/img9" to="." method="choose_an_object"]
+[connection signal="clicked_object" from="TabContainer/Habilidades/HabilityPanel/img1" to="." method="choose_an_object"]
+[connection signal="clicked_object" from="TabContainer/Habilidades/HabilityPanel/img2" to="." method="choose_an_object"]
+[connection signal="clicked_object" from="TabContainer/Habilidades/HabilityPanel/img3" to="." method="choose_an_object"]
+[connection signal="clicked_object" from="TabContainer/Habilidades/HabilityPanel/img4" to="." method="choose_an_object"]
+[connection signal="clicked_object" from="TabContainer/Habilidades/HabilityPanel/img5" to="." method="choose_an_object"]
+[connection signal="clicked_object" from="TabContainer/Habilidades/HabilityPanel/img6" to="." method="choose_an_object"]
+[connection signal="clicked_object" from="TabContainer/Habilidades/HabilityPanel/img7" to="." method="choose_an_object"]
+[connection signal="clicked_object" from="TabContainer/Habilidades/HabilityPanel/img8" to="." method="choose_an_object"]
+[connection signal="clicked_object" from="TabContainer/Habilidades/HabilityPanel/img9" to="." method="choose_an_object"]
 [connection signal="pressed" from="Next" to="." method="end_character_choice"]

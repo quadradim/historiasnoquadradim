@@ -18,9 +18,6 @@ margin_top = 272.0
 margin_right = 376.064
 margin_bottom = 272.2
 custom_fonts/font = SubResource( 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="WriterTime" type="Timer" parent="."]
 wait_time = 0.5

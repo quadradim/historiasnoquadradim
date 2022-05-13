@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://scenes/AuxScenes/HistorianObject.gd" type="Script" id=1]
-[ext_resource path="res://assets/Images/Temp/crab.png" type="Texture" id=2]
+[ext_resource path="res://assets/Images/Composition/CharacterChoice/binoculos2.png" type="Texture" id=2]
 
 [node name="HistorianObject" type="Control"]
 margin_right = 40.0
@@ -16,12 +16,9 @@ anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = -20.0
 margin_top = -20.0
-margin_right = 572.0
-margin_bottom = 564.0
+margin_right = 669.0
+margin_bottom = 580.0
 color = Color( 0.996078, 0.972549, 0.866667, 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Background2" type="ColorRect" parent="."]
 anchor_left = 0.5
@@ -30,8 +27,8 @@ anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = 4.0
 margin_top = 4.0
-margin_right = 548.0
-margin_bottom = 540.0
+margin_right = 649.0
+margin_bottom = 556.0
 color = Color( 0.996078, 0.972549, 0.866667, 1 )
 
 [node name="Image" type="Sprite" parent="."]
