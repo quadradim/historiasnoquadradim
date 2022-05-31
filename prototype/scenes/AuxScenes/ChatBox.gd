@@ -11,6 +11,8 @@ var presses_count = 0
 
 var current_dialog = []
 
+signal new_dialog
+
 func write_text():
 	pass
 	
@@ -31,6 +33,7 @@ func load_file(file_src):
 
 func _ready():
 	load_file(str(chat_res))
+	emit_signal("new_dialog")
 		
 func Time_to_write():
 	if current_text_pos < len(current_dialog[text_position]) :
@@ -50,6 +53,7 @@ func _on_Button2_pressed():
 		current_text = ''
 		current_text_pos = 0
 		presses_count += 1
+		emit_signal("new_dialog")
 	else:
 		print('dale')
 	pass #
@@ -64,6 +68,5 @@ func _on_Back_pressed():
 
 	pass #
 
-
-
-	pass # Replace with function body.
+func get_text():
+	return current_dialog[text_position]

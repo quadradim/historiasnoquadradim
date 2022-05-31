@@ -1,9 +1,11 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://assets/Characters/Suzana.png" type="Texture" id=1]
 [ext_resource path="res://scenes/AuxScenes/ChatBox.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/dialogs/Suazana.gd" type="Script" id=3]
 
 [node name="Suzana" type="CanvasLayer"]
+script = ExtResource( 3 )
 
 [node name="BackGround" type="ColorRect" parent="."]
 anchor_left = 0.5
@@ -36,3 +38,5 @@ margin_top = 160.0
 margin_right = 496.04
 margin_bottom = 225.0
 chat_res = "res://dialogs/suzana.txt"
+
+[connection signal="new_dialog" from="ChatBox" to="." method="_on_ChatBox_new_dialog"]
