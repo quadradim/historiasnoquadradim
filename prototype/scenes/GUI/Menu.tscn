@@ -110,7 +110,7 @@ text = "Episódios"
 
 [node name="Logo" type="Sprite" parent="MenuControl"]
 position = Vector2( 518.699, 146.959 )
-scale = Vector2( 0.793009, 0.737039 )
+scale = Vector2( 0.685, 0.685 )
 texture = ExtResource( 6 )
 
 [node name="CreditBtn" type="TextureButton" parent="MenuControl"]
