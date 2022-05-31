@@ -38,6 +38,9 @@ func end_current_scene():
 	if current_scene_name == 'Production':
 		# Logo Scene
 		load_control_scene('res://scenes/GUI/LogoOpening.tscn','LogoOpening', 'end_logo_scene')
+	elif current_scene_name == 'LogoOpening':
+		# Menu	
+		load_control_scene('res://scenes/GUI/Menu.tscn', 'Menu', 'end_menu')
 	elif current_scene_name == 'Menu':
 		# First Access 
 		load_control_scene('res://scenes/FirstAccess/Access01.tscn', 'Access01', 'end_access01')
@@ -50,10 +53,10 @@ func end_current_scene():
 	elif current_scene_name == 'CharacterChoice':
 		# Diary
 		load_control_scene('res://scenes/GUI/Diary.tscn', 'Diary', 'end_diary')
-	elif current_scene_name == 'LogoOpening':
-		# Menu	
-		load_control_scene('res://scenes/GUI/Menu.tscn', 'Menu', 'end_menu')
-		
+	elif current_scene_name == 'Diary':
+		# Travel Car
+		load_control_scene('res://scenes/AuxScenes/TravelScene.tscn', 'TravelScene', 'end_travel')
+	print(current_scene_name)
 	transition_animation.play("fade_in")
 	transition_animation_name = "fade_in"
 
