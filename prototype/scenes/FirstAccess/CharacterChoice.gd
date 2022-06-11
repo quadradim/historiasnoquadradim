@@ -2,28 +2,24 @@ extends CanvasLayer
 
 var num_selected = []
 var items = []
+var style = false
 
 export(Resource) var image_source
-
 signal end_choice
 
 func _ready():
-	$TabContainer/Habilidades/Abiliity.texture = image_source
-	$TabContainer/Habilidades/AbiliityDescription.text = "Selecione 3 habilidades"
-	items.append($TabContainer/Habilidades/HabilityPanel/img1)
-	items.append($TabContainer/Habilidades/HabilityPanel/img2)
-	items.append($TabContainer/Habilidades/HabilityPanel/img3)
-	items.append($TabContainer/Habilidades/HabilityPanel/img4)
-	items.append($TabContainer/Habilidades/HabilityPanel/img5)
-	items.append($TabContainer/Habilidades/HabilityPanel/img6)
-	items.append($TabContainer/Habilidades/HabilityPanel/img7)
-	items.append($TabContainer/Habilidades/HabilityPanel/img8)
-	items.append($TabContainer/Habilidades/HabilityPanel/img9)
-
+	# Panel Style Settings
+	style = StyleBoxFlat.new()
+	style.set_bg_color(Color('#f8e16f'))
+	style.set_corner_radius_all(5)
+	
+	var hability_panel = get_node("TabContainer/Habilidades/HabilityPanel")
+	hability_panel.set('custom_styles/panel', style)
+	
 	var sizeto=Vector2(200,200)
 	var size=image_source.get_size()
 	var scale_factor=sizeto/size
-	$TabContainer/Habilidades/Abiliity.scale=scale_factor
+	#$TabContainer/Habilidades/Abiliity.scale=scale_factor
 
 func choose_an_object(object_source,description):
 	$TabContainer/Habilidades/Abiliity.texture = object_source

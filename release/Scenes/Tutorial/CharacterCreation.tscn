@@ -1,0 +1,198 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Assets/Styles/Themes/Menu.tres" type="Theme" id=1]
+[ext_resource path="res://Scenes/Auxiliar/HistorianObject.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Assets/Scenes/Tutorial/CharacterCreation/binoculos2.png" type="Texture" id=3]
+[ext_resource path="res://Scenes/Tutorial/CharacterCreation.gd" type="Script" id=4]
+[ext_resource path="res://Assets/Scenes/Tutorial/CharacterCreation/QUADRADIM_MOCHILA.png" type="Texture" id=13]
+[ext_resource path="res://Assets/Styles/Themes/CharacterChoice.tres" type="Theme" id=15]
+
+[node name="CharacterChoice" type="CanvasLayer"]
+script = ExtResource( 4 )
+image_source = ExtResource( 3 )
+
+[node name="BackGround1" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 1 )
+color = Color( 0.14902, 0.152941, 0.129412, 1 )
+
+[node name="BackGround2" type="ColorRect" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -496.0
+margin_top = -272.0
+margin_right = 496.0
+margin_bottom = 272.0
+color = Color( 0.945098, 0.933333, 0.905882, 1 )
+
+[node name="DividingBar" type="ColorRect" parent="."]
+margin_left = 11.0
+margin_top = 404.0
+margin_right = 1014.0
+margin_bottom = 444.0
+color = Color( 0.615686, 0.372549, 0.337255, 1 )
+
+[node name="BarShadow" type="ColorRect" parent="."]
+margin_left = 11.0
+margin_top = 441.0
+margin_right = 1014.0
+margin_bottom = 453.0
+color = Color( 0.270588, 0.188235, 0.176471, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BottomBar" type="ColorRect" parent="."]
+anchor_left = 0.057
+anchor_top = 0.86
+anchor_right = 0.057
+anchor_bottom = 0.86
+margin_left = -42.368
+margin_top = -67.36
+margin_right = 949.632
+margin_bottom = 80.64
+color = Color( 0.501961, 0.34902, 0.32549, 1 )
+
+[node name="TabContainer" type="TabContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 31.0
+margin_top = 24.0
+margin_right = -592.0
+margin_bottom = -90.0
+theme = ExtResource( 15 )
+all_tabs_in_front = true
+
+[node name="Habilidades" type="Tabs" parent="TabContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 12.0
+theme = ExtResource( 15 )
+
+[node name="HabilityPanel" type="ColorRect" parent="TabContainer/Habilidades"]
+margin_left = 16.0
+margin_top = 16.0
+margin_right = 386.0
+margin_bottom = 414.0
+theme = ExtResource( 15 )
+color = Color( 0.976471, 0.901961, 0.533333, 1 )
+
+[node name="img1" parent="TabContainer/Habilidades/HabilityPanel" instance=ExtResource( 2 )]
+margin_left = 11.0
+margin_top = 34.0
+margin_right = 51.0
+margin_bottom = 74.0
+rect_scale = Vector2( 0.15, 0.15 )
+
+[node name="img2" parent="TabContainer/Habilidades/HabilityPanel" instance=ExtResource( 2 )]
+margin_left = 133.0
+margin_top = 34.0
+margin_right = 173.0
+margin_bottom = 74.0
+rect_scale = Vector2( 0.15, 0.15 )
+
+[node name="img3" parent="TabContainer/Habilidades/HabilityPanel" instance=ExtResource( 2 )]
+margin_left = 251.0
+margin_top = 34.0
+margin_right = 291.0
+margin_bottom = 74.0
+rect_scale = Vector2( 0.155, 0.15 )
+
+[node name="img4" parent="TabContainer/Habilidades/HabilityPanel" instance=ExtResource( 2 )]
+margin_left = 11.0
+margin_top = 158.0
+margin_right = 51.0
+margin_bottom = 198.0
+rect_scale = Vector2( 0.15, 0.15 )
+
+[node name="img5" parent="TabContainer/Habilidades/HabilityPanel" instance=ExtResource( 2 )]
+margin_left = 133.0
+margin_top = 158.0
+margin_right = 173.0
+margin_bottom = 198.0
+rect_scale = Vector2( 0.15, 0.15 )
+
+[node name="img6" parent="TabContainer/Habilidades/HabilityPanel" instance=ExtResource( 2 )]
+margin_left = 251.0
+margin_top = 158.0
+margin_right = 291.0
+margin_bottom = 198.0
+rect_scale = Vector2( 0.15, 0.15 )
+
+[node name="img7" parent="TabContainer/Habilidades/HabilityPanel" instance=ExtResource( 2 )]
+margin_left = 11.0
+margin_top = 285.0
+margin_right = 51.0
+margin_bottom = 325.0
+rect_scale = Vector2( 0.15, 0.15 )
+
+[node name="img8" parent="TabContainer/Habilidades/HabilityPanel" instance=ExtResource( 2 )]
+margin_left = 133.0
+margin_top = 285.0
+margin_right = 173.0
+margin_bottom = 325.0
+rect_scale = Vector2( 0.15, 0.15 )
+
+[node name="img9" parent="TabContainer/Habilidades/HabilityPanel" instance=ExtResource( 2 )]
+margin_left = 251.0
+margin_top = 285.0
+margin_right = 291.0
+margin_bottom = 325.0
+rect_scale = Vector2( 0.15, 0.15 )
+
+[node name="ZoomItem" type="ColorRect" parent="TabContainer/Habilidades"]
+margin_left = 401.0
+margin_right = 704.0
+margin_bottom = 349.0
+color = Color( 0.247059, 0.196078, 0.188235, 1 )
+
+[node name="BackGround" type="ColorRect" parent="TabContainer/Habilidades/ZoomItem"]
+anchor_left = 0.5
+anchor_top = 0.368
+anchor_right = 0.5
+anchor_bottom = 0.368
+margin_left = -142.5
+margin_top = -112.432
+margin_right = 131.5
+margin_bottom = 126.568
+color = Color( 0.996078, 0.972549, 0.866667, 1 )
+
+[node name="AbiliityDescription" type="RichTextLabel" parent="TabContainer/Habilidades"]
+margin_left = 410.0
+margin_top = 271.0
+margin_right = 693.0
+margin_bottom = 338.0
+theme = ExtResource( 15 )
+
+[node name="Abiliity" type="Sprite" parent="TabContainer/Habilidades"]
+position = Vector2( 483.25, 148.25 )
+scale = Vector2( 0.2, 0.2 )
+centered = false
+offset = Vector2( -80, -200 )
+
+[node name="Estilo" type="Tabs" parent="TabContainer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 3.75
+margin_top = 30.75
+margin_right = -3.75
+margin_bottom = -3.75
+
+[node name="Next" type="Button" parent="."]
+margin_left = 867.0
+margin_top = 512.0
+margin_right = 1001.0
+margin_bottom = 556.0
+theme = ExtResource( 15 )
+text = "Continuar"
+
+[node name="QuadradimMochila" type="Sprite" parent="."]
+position = Vector2( 877, 216 )
+scale = Vector2( 0.766667, 0.766667 )
+texture = ExtResource( 13 )
+
+[connection signal="pressed" from="Next" to="." method="end_character_choice"]

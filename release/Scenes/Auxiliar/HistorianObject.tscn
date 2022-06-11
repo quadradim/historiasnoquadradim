@@ -1,0 +1,38 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scenes/Auxiliar/HistorianObject.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Scenes/Tutorial/CharacterCreation/binoculos2.png" type="Texture" id=2]
+
+[node name="HistorianObject" type="Control"]
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 1 )
+object_source = ExtResource( 2 )
+
+[node name="Background" type="ColorRect" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -20.0
+margin_top = -20.0
+margin_right = 669.0
+margin_bottom = 580.0
+color = Color( 0.996078, 0.972549, 0.866667, 1 )
+
+[node name="Background2" type="ColorRect" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 4.0
+margin_top = 4.0
+margin_right = 649.0
+margin_bottom = 556.0
+color = Color( 0.996078, 0.972549, 0.866667, 1 )
+
+[node name="Image" type="Sprite" parent="."]
+position = Vector2( 288, 288 )
+
+[connection signal="gui_input" from="Background" to="." method="click_object"]
+[connection signal="gui_input" from="Background2" to="." method="click_object"]
