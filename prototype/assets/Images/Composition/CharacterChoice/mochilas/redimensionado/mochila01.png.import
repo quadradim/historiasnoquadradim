@@ -2,27 +2,27 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/binoculos.png-a73f196b563c862742630ef182330223.stex"
+path="res://.import/mochila01.png-55f1b56de1f48f17e4ad60ef36c784a1.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Images/Composition/CharacterChoice/binoculos.png"
-dest_files=[ "res://.import/binoculos.png-a73f196b563c862742630ef182330223.stex" ]
+source_file="res://assets/Images/Composition/CharacterChoice/mochilas/redimensionado/mochila01.png"
+dest_files=[ "res://.import/mochila01.png-55f1b56de1f48f17e4ad60ef36c784a1.stex" ]
 
 [params]
 
 compress/mode=0
-compress/lossy_quality=0.0
+compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
 flags/filter=true
-flags/mipmaps=true
-flags/anisotropic=true
+flags/mipmaps=false
+flags/anisotropic=false
 flags/srgb=2
 process/fix_alpha_border=true
 process/premult_alpha=false

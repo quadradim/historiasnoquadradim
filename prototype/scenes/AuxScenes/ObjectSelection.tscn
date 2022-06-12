@@ -27,3 +27,5 @@ custom_styles/panel = SubResource( 1 )
 position = Vector2( 263.875, 263.875 )
 scale = Vector2( 0.335288, 0.335288 )
 texture = ExtResource( 3 )
+
+[connection signal="gui_input" from="Background" to="." method="clicked_object"]
