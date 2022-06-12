@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/planeta.png-eafc06c1e66fed85e80b1e3ed9ac5384.stex"
+path="res://.import/livros.png-fda861c8cae33c3c8cdbbe174aae9018.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Images/Composition/CharacterChoice/planeta.png"
-dest_files=[ "res://.import/planeta.png-eafc06c1e66fed85e80b1e3ed9ac5384.stex" ]
+source_file="res://assets/Images/Composition/CharacterChoice/habilidades/livros.png"
+dest_files=[ "res://.import/livros.png-fda861c8cae33c3c8cdbbe174aae9018.stex" ]
 
 [params]
 

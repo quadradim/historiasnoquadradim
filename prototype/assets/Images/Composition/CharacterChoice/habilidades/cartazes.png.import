@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/jogo da memória.png-8b450643db9b302ef9a70645f4686b17.stex"
+path="res://.import/cartazes.png-d9e6f544c8a184b934ebe0d9422ff553.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Images/Composition/CharacterChoice/jogo da memória.png"
-dest_files=[ "res://.import/jogo da memória.png-8b450643db9b302ef9a70645f4686b17.stex" ]
+source_file="res://assets/Images/Composition/CharacterChoice/habilidades/cartazes.png"
+dest_files=[ "res://.import/cartazes.png-d9e6f544c8a184b934ebe0d9422ff553.stex" ]
 
 [params]
 

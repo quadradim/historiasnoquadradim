@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/livros.png-aff0c3faac528e958a5ae56a44c3574a.stex"
+path="res://.import/chapéu.png-2c347d0c08397b6eff7558956d740c4a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Images/Composition/CharacterChoice/livros.png"
-dest_files=[ "res://.import/livros.png-aff0c3faac528e958a5ae56a44c3574a.stex" ]
+source_file="res://assets/Images/Composition/CharacterChoice/habilidades/chapéu.png"
+dest_files=[ "res://.import/chapéu.png-2c347d0c08397b6eff7558956d740c4a.stex" ]
 
 [params]
 

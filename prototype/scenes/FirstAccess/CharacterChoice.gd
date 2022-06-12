@@ -25,16 +25,6 @@ func _ready():
 	var style_panel = get_node("TabContainer/Estilo/CreationPanel")
 	style_panel.set('custom_styles/panel', historian_style)
 	
-	items.append($TabContainer/Habilidades/CreationPanel/hab01)
-	items.append($TabContainer/Habilidades/CreationPanel/hab02)
-	items.append($TabContainer/Habilidades/CreationPanel/hab03)
-	items.append($TabContainer/Habilidades/CreationPanel/hab04)
-	items.append($TabContainer/Habilidades/CreationPanel/hab05)
-	items.append($TabContainer/Habilidades/CreationPanel/hab06)
-	items.append($TabContainer/Habilidades/CreationPanel/hab07)
-	items.append($TabContainer/Habilidades/CreationPanel/hab08)
-	items.append($TabContainer/Habilidades/CreationPanel/hab09)
-	
 	# Object Selected with Zoom
 	#90b9e1, 66a1dc
 	var historian_object_zoom_style = StyleBoxFlat.new()
@@ -58,7 +48,6 @@ func choose_an_hability(object_id, object_source,object_name,description):
 	elif id_item_selected.size() < 3:
 		object_id.select_object()
 		id_item_selected.append(object_id)
-
 
 func choose_a_backpack(object_id, object_source,object_name,description):
 	if not selected_backpack:

@@ -76,7 +76,6 @@ margin_bottom = -40.0
 theme = ExtResource( 15 )
 
 [node name="Habilidades" type="Tabs" parent="TabContainer"]
-visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_top = 37.0
@@ -95,7 +94,6 @@ margin_right = -176.0
 margin_bottom = -72.0
 rect_scale = Vector2( 0.22, 0.22 )
 rect_pivot_offset = Vector2( 256, 136 )
-object_source = ExtResource( 3 )
 object_name = "Observação"
 description = "Descrição de objeto"
 
@@ -237,6 +235,7 @@ margin_bottom = 115.0
 text = "Escolha três habilidades as quais você se identifica."
 
 [node name="Estilo" type="Tabs" parent="TabContainer"]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_top = 37.0

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/chapéu.png-c1fac5b0df22b1767275df38bb13d6f4.stex"
+path="res://.import/planeta.png-608becf14824c20bf51b15beda4c4420.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Images/Composition/CharacterChoice/chapéu.png"
-dest_files=[ "res://.import/chapéu.png-c1fac5b0df22b1767275df38bb13d6f4.stex" ]
+source_file="res://assets/Images/Composition/CharacterChoice/habilidades/planeta.png"
+dest_files=[ "res://.import/planeta.png-608becf14824c20bf51b15beda4c4420.stex" ]
 
 [params]
 

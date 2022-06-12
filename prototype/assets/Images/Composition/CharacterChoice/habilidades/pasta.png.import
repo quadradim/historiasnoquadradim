@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/cubo.png-240fe3908a388b1ccf08fd17df91db2a.stex"
+path="res://.import/pasta.png-2a42b31685a9711ab9f9313545cd2ac0.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Images/Composition/CharacterChoice/cubo.png"
-dest_files=[ "res://.import/cubo.png-240fe3908a388b1ccf08fd17df91db2a.stex" ]
+source_file="res://assets/Images/Composition/CharacterChoice/habilidades/pasta.png"
+dest_files=[ "res://.import/pasta.png-2a42b31685a9711ab9f9313545cd2ac0.stex" ]
 
 [params]
 
