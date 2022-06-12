@@ -313,6 +313,13 @@ position = Vector2( 608, 239.24 )
 scale = Vector2( 0.738888, 0.738888 )
 texture = ExtResource( 2 )
 
+[node name="BackpackText" type="Label" parent="TabContainer/Estilo"]
+margin_left = 31.44
+margin_top = 36.28
+margin_right = 389.44
+margin_bottom = 89.28
+text = "Escolha sua mochila:"
+
 [node name="ContinueButton" type="Button" parent="."]
 margin_left = 867.0
 margin_top = 512.0

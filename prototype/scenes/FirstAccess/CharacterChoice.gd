@@ -1,6 +1,5 @@
 extends CanvasLayer
 
-var items = []
 var id_item_selected = []
 var selected_backpack = false
 
@@ -10,6 +9,9 @@ signal end_choice
 func _ready():
 	# Message Box text style
 	$MessageBox/MessageText.add_color_override("font_color", Color('#000000'))
+	
+	# Backpack Text
+	$TabContainer/Estilo/BackpackText.add_color_override("font_color", Color('#7e888e'))
 	
 	# Button starts disabled
 	$ContinueButton.set_disabled(true)
@@ -36,7 +38,12 @@ func _ready():
 	var historian_object_zoom = get_node("TabContainer/Habilidades/HabilityZoomImage")
 	historian_object_zoom.set('custom_styles/panel', historian_object_zoom_style)
 	
-
+func _process(delta):
+	if id_item_selected.size() == 3 and selected_backpack:
+		$ContinueButton.set_disabled(false)
+	else:
+		$ContinueButton.set_disabled(true)
+	
 func choose_an_hability(object_id, object_source,object_name,description):
 	$TabContainer/Habilidades/HabilityZoomImage/HabiliityImage.texture = object_source
 	$TabContainer/Habilidades/HabilityZoomImage/HabilityZoomImageName/HabilityName.text = object_name
@@ -60,5 +67,14 @@ func choose_a_backpack(object_id, object_source,object_name,description):
 	$TabContainer/Estilo/BackpackZoom.texture = object_source
 
 func end_character_choice():
+	if id_item_selected.size() < 3:
+		$MessageBox/MessageText.text = "Selecione mais %s habilidades".format(
+			3-id_item_selected.size()
+		)
+		$MessageBox.popup()
+	elif not selected_backpack:
+		$MessageBox/MessageText.text = "Selecione uma mochila"
+		$MessageBox.popup()
+		
 	emit_signal("end_choice")
 
