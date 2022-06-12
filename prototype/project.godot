@@ -26,7 +26,7 @@ common/enable_pause_aware_picking=true
 
 [rendering]
 
-quality/filters/sharpen_intensity=0.345
-quality/filters/anisotropic_filter_level=2
+quality/filters/sharpen_intensity=0.079
 quality/filters/use_nearest_mipmap_filter=true
+quality/filters/msaa=2
 environment/default_environment="res://default_env.tres"

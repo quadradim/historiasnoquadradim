@@ -31,29 +31,29 @@ func _ready():
 	transition_animation.connect('animation_finished', self, 'end_transition_scene')
 	transition_animation.play("fade_out")
 	
-	load_control_scene('res://scenes/GUI/Production.tscn','Production', 'end_production')
+	load_control_scene('res://Scenes/Opening/Production.tscn','Production', 'end_production')
 	used_scenes[0].instance.layer = 1
 	
 func end_current_scene():
 	if current_scene_name == 'Production':
-		# Logo Scene
-		load_control_scene('res://scenes/GUI/LogoOpening.tscn','LogoOpening', 'end_logo_scene')
-	elif current_scene_name == 'Menu':
-		# First Access 
-		load_control_scene('res://scenes/FirstAccess/Access01.tscn', 'Access01', 'end_access01')
-	elif current_scene_name == 'Access01':
-		# Second Access
-		load_control_scene('res://scenes/FirstAccess/Access02.tscn', 'Access02', 'end_access02')
-	elif current_scene_name == 'Access02':
-		# Character Choice
-		load_control_scene('res://scenes/FirstAccess/CharacterChoice.tscn', 'CharacterChoice', 'end_choice')
-	elif current_scene_name == 'CharacterChoice':
-		# Diary
-		load_control_scene('res://scenes/GUI/Diary.tscn', 'Diary', 'end_diary')
+		# Next Scene -> Logo Opening
+		load_control_scene('res://Scenes/Opening/LogoOpening.tscn','LogoOpening', 'end_logo_scene')
 	elif current_scene_name == 'LogoOpening':
-		# Menu	
-		load_control_scene('res://scenes/GUI/Menu.tscn', 'Menu', 'end_menu')
-		
+		# Next Scene -> Menu	
+		load_control_scene('res://Scenes/GUI/Menu.tscn', 'Menu', 'end_menu')
+	elif current_scene_name == 'Menu':
+		# Next Scene -> Introcution Ticket 
+		load_control_scene('res://Scenes/Tutorial/IntroductionTicket.tscn', 'IntroductionTicket', 'end_access01')
+	elif current_scene_name == 'IntroductionTicket':
+		# Next Scene -> Instructions and informations about the game
+		load_control_scene('res://Scenes/Tutorial/AboutGame.tscn', 'AboutGame', 'end_access02')
+	elif current_scene_name == 'AboutGame':
+		# Next Scene -> Character Creation
+		load_control_scene('res://Scenes/Tutorial/CharacterCreation.tscn', 'CharacterCreation', 'end_choice')
+	elif current_scene_name == 'CharacterCreation':
+		# Next Scene -> Showing Diary to users
+		load_control_scene('res://Scenes/GUI/Diary.tscn', 'Diary', 'end_diary')
+
 	transition_animation.play("fade_in")
 	transition_animation_name = "fade_in"
 

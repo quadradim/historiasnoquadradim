@@ -1,0 +1,30 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scenes/Auxiliar/Character.gd" type="Script" id=2]
+[ext_resource path="res://Assets/Images/Temp/personagem.png" type="Texture" id=3]
+
+[node name="Character" type="Area2D"]
+script = ExtResource( 2 )
+char_src = ExtResource( 3 )
+char_name = "None"
+char_info = "None"
+
+[node name="Background1" type="ColorRect" parent="."]
+margin_right = 472.0
+margin_bottom = 472.0
+color = Color( 0.937255, 0.929412, 0.929412, 1 )
+
+[node name="Background2" type="ColorRect" parent="."]
+margin_left = 8.0
+margin_top = 8.0
+margin_right = 464.0
+margin_bottom = 464.0
+
+[node name="Image" type="Sprite" parent="."]
+position = Vector2( 232, 232 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 3 )
+
+[connection signal="input_event" from="." to="." method="clicked_character"]
+[connection signal="gui_input" from="Background1" to="." method="clicked_character"]
+[connection signal="gui_input" from="Background2" to="." method="clicked_character"]

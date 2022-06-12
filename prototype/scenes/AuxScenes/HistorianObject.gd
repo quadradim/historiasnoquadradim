@@ -16,7 +16,7 @@ func click_object(event):
 		emit_signal("clicked_object", object_source,description)
 		
 func select_object():
-	$Background.color = '#d5c2ff'
+	$Background.color = '#d0a473'
 func unselect_object():
 	$Background.color = '#fef8dd'
 		
