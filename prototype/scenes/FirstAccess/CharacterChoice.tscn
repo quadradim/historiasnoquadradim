@@ -49,9 +49,6 @@ margin_top = 441.0
 margin_right = 1014.0
 margin_bottom = 453.0
 color = Color( 0.270588, 0.188235, 0.176471, 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="BottomBar" type="ColorRect" parent="."]
 anchor_left = 0.057

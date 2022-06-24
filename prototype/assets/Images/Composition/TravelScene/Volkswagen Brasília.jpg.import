@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Carro 3.png-766ad000edd4f8d8f8e79a630a6541ff.stex"
+path="res://.import/Volkswagen Brasília.jpg-4bcc75e7dca08b94a7c1bb31b1c3f979.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Images/Composition/TravelScene/Carro 3.png"
-dest_files=[ "res://.import/Carro 3.png-766ad000edd4f8d8f8e79a630a6541ff.stex" ]
+source_file="res://assets/Images/Composition/TravelScene/Volkswagen Brasília.jpg"
+dest_files=[ "res://.import/Volkswagen Brasília.jpg-4bcc75e7dca08b94a7c1bb31b1c3f979.stex" ]
 
 [params]
 

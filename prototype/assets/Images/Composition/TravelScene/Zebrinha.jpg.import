@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Carro 2.png-319157f1d2ab9b236f51440b3719a15c.stex"
+path="res://.import/Zebrinha.jpg-f2510bc9d0f551274d81745eb8582232.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Images/Composition/TravelScene/Carro 2.png"
-dest_files=[ "res://.import/Carro 2.png-319157f1d2ab9b236f51440b3719a15c.stex" ]
+source_file="res://assets/Images/Composition/TravelScene/Zebrinha.jpg"
+dest_files=[ "res://.import/Zebrinha.jpg-f2510bc9d0f551274d81745eb8582232.stex" ]
 
 [params]
 

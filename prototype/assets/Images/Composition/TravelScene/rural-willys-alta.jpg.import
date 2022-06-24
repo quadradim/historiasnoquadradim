@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Carro 1.png-8fae2c6d3530934a396655debaca8d22.stex"
+path="res://.import/rural-willys-alta.jpg-bddee569fe2dea38b0d32fd903674cda.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Images/Composition/TravelScene/Carro 1.png"
-dest_files=[ "res://.import/Carro 1.png-8fae2c6d3530934a396655debaca8d22.stex" ]
+source_file="res://assets/Images/Composition/TravelScene/rural-willys-alta.jpg"
+dest_files=[ "res://.import/rural-willys-alta.jpg-bddee569fe2dea38b0d32fd903674cda.stex" ]
 
 [params]
 
