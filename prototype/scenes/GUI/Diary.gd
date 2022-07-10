@@ -1,6 +1,7 @@
 extends CanvasLayer
 
 var player_data
+signal end_diary
 
 func _ready():
 	player_data = $PlayerEntitiy.read()
@@ -22,4 +23,5 @@ func _ready():
 
 
 func _on_Button_pressed():
+	print("FIM DO DIÁRIO")
 	emit_signal("end_diary")
