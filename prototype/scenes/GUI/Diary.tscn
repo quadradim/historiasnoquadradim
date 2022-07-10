@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://assets/Styles/Themes/Menu.tres" type="Theme" id=1]
 [ext_resource path="res://scenes/GUI/Diary.gd" type="Script" id=2]
@@ -7,6 +7,8 @@
 [ext_resource path="res://assets/Images/Composition/Menu/Padrão1.png" type="Texture" id=5]
 [ext_resource path="res://assets/Images/Composition/diary/diaryform.png" type="Texture" id=6]
 [ext_resource path="res://assets/Images/Composition/diary/profile.png" type="Texture" id=7]
+[ext_resource path="res://assets/Images/Composition/CharacterChoice/mochilas/redimensionado/mochila01.png" type="Texture" id=8]
+[ext_resource path="res://assets/Images/Composition/diary/tape.png" type="Texture" id=9]
 
 [sub_resource type="StyleBoxFlat" id=4]
 bg_color = Color( 1, 0, 0, 0 )
@@ -79,6 +81,13 @@ Tabs/styles/tab_bg = SubResource( 8 )
 Tabs/styles/tab_disabled = SubResource( 9 )
 Tabs/styles/tab_fg = SubResource( 10 )
 
+[sub_resource type="StyleBoxFlat" id=13]
+bg_color = Color( 1, 1, 1, 0.666667 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
 [node name="Diary" type="CanvasLayer"]
 script = ExtResource( 2 )
 
@@ -121,6 +130,12 @@ rect_pivot_offset = Vector2( 231.721, 236.044 )
 theme = SubResource( 6 )
 tab_align = 0
 
+[node name="Profile" type="Sprite" parent="ImagesTab"]
+position = Vector2( 41.6768, -12.2349 )
+rotation = -1.5708
+scale = Vector2( 0.129982, 0.129982 )
+texture = ExtResource( 7 )
+
 [node name="Tabs" type="Tabs" parent="ImagesTab"]
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -130,11 +145,29 @@ custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
 custom_colors/font_color_bg = Color( 0, 0, 0, 1 )
 custom_colors/font_color_fg = Color( 0, 0, 0, 1 )
 
-[node name="Profile" type="Sprite" parent="ImagesTab/Tabs"]
-position = Vector2( 41.6768, -76.2349 )
-rotation = 4.71239
-scale = Vector2( 0.129982, 0.129982 )
-texture = ExtResource( 7 )
+[node name="Panel" type="Panel" parent="ImagesTab/Tabs"]
+margin_left = 29.6766
+margin_top = 0.765198
+margin_right = 249.677
+margin_bottom = 310.765
+custom_styles/panel = SubResource( 13 )
+
+[node name="Mochila01" type="Sprite" parent="ImagesTab/Tabs"]
+position = Vector2( 137.677, 150.765 )
+rotation = -1.5708
+scale = Vector2( 0.4225, 0.4225 )
+texture = ExtResource( 8 )
+
+[node name="Tape1" type="Sprite" parent="ImagesTab/Tabs"]
+position = Vector2( 42.6766, 292.765 )
+scale = Vector2( 0.210754, 0.210754 )
+texture = ExtResource( 9 )
+
+[node name="Tape2" type="Sprite" parent="ImagesTab/Tabs"]
+position = Vector2( 216.677, 11.7652 )
+rotation = -0.443314
+scale = Vector2( 0.27166, 0.27166 )
+texture = ExtResource( 9 )
 
 [node name="Tabs2" type="Tabs" parent="ImagesTab"]
 visible = false

@@ -19,4 +19,3 @@ func select_object():
 	$Background.color = '#d0a473'
 func unselect_object():
 	$Background.color = '#fef8dd'
-		
