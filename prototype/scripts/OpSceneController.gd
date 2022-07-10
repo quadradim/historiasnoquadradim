@@ -54,8 +54,8 @@ func end_current_scene():
 		# Diary
 		load_control_scene('res://scenes/GUI/Diary.tscn', 'Diary', 'end_diary')
 	elif current_scene_name == 'Diary':
-		# Travel Car
-		load_control_scene('res://scenes/AuxScenes/TravelScene.tscn', 'TravelScene', 'end_travel')
+		# Suzana Dialog
+		load_control_scene('res://scenes/dialogs/Suazana.tscn', 'Suzana', 'end_suzana_dialog')
 	print(current_scene_name)
 	transition_animation.play("fade_in")
 	transition_animation_name = "fade_in"
