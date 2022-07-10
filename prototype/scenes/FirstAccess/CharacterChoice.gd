@@ -6,7 +6,7 @@ var selected_backpack = false
 export(Resource) var image_source
 signal end_choice
 
-func _ready():
+func _ready():	
 	# Message Box text style
 	$MessageBox/MessageText.add_color_override("font_color", Color('#000000'))
 	
@@ -14,7 +14,7 @@ func _ready():
 	$TabContainer/Estilo/BackpackText.add_color_override("font_color", Color('#7e888e'))
 	
 	# Button starts disabled
-	$ContinueButton.set_disabled(true)
+	$ContinueButton.set_disabled(false)
 	
 	# Panel Style Settings
 	var historian_style = StyleBoxFlat.new()
@@ -37,12 +37,13 @@ func _ready():
 	
 	var historian_object_zoom = get_node("TabContainer/Habilidades/HabilityZoomImage")
 	historian_object_zoom.set('custom_styles/panel', historian_object_zoom_style)
-	
-func _process(delta):
-	if id_item_selected.size() == 3 and selected_backpack:
-		$ContinueButton.set_disabled(false)
-	else:
-		$ContinueButton.set_disabled(true)
+
+# Deactivate Button if not defined	
+#func _process(delta):
+#	if id_item_selected.size() == 3 and selected_backpack:
+#		$ContinueButton.set_disabled(false)
+#	else:
+#		$ContinueButton.set_disabled(true)
 	
 func choose_an_hability(object_id, object_source,object_name,description):
 	$TabContainer/Habilidades/HabilityZoomImage/HabiliityImage.texture = object_source
@@ -68,13 +69,29 @@ func choose_a_backpack(object_id, object_source,object_name,description):
 
 func end_character_choice():
 	if id_item_selected.size() < 3:
-		$MessageBox/MessageText.text = "Selecione mais %s habilidades".format(
-			3-id_item_selected.size()
+		$MessageBox/MessageText.text = "Selecione mais {items} habilidade(s)".format(
+			{"items": 3-id_item_selected.size()}
 		)
 		$MessageBox.popup()
 	elif not selected_backpack:
 		$MessageBox/MessageText.text = "Selecione uma mochila"
 		$MessageBox.popup()
-		
-	emit_signal("end_choice")
+	elif len($PlayerName.text) < 5:
+		$MessageBox/MessageText.text = "O nome necessita de no mínimo 5 caracteres"
+		$MessageBox.popup()
+	else:
+		var items_selected_info = []
+		for item in id_item_selected:
+			items_selected_info.append([item.get_image_path(), item.object_name])
+			
+		$PlayerEntity.insert(
+			{
+				"name": $PlayerName.text,
+				"habilities": items_selected_info,
+				"backpack": $TabContainer/Estilo/BackpackZoom.texture.resource_path,
+				"historiometer": 0
+			}
+		)
+		print($PlayerEntity.read())
+		emit_signal("end_choice")
 
