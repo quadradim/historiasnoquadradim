@@ -20,10 +20,7 @@ func _load_file(load_type):
 	return false
 	
 func _ready():
-	print('Hello!')
-
-func verify():
-	return "Player Class was loaded..."
+	pass
 
 func read():
 	var file = _load_file(File.READ)
@@ -36,7 +33,6 @@ func read():
 func insert(new_data):
 	var file = _load_file(File.WRITE)
 	if file:
-		print('storing user data..')
 		file.store_var(new_data)
 		return true
 	return false
