@@ -41,3 +41,6 @@ func select_object():
 	
 func unselect_object():
 	style.set_border_color(Color('#f8e16f'))
+
+func get_image_path():
+	return $Background/Object.texture.resource_path

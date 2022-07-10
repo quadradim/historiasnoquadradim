@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=30 format=2]
 
 [ext_resource path="res://assets/Styles/Themes/Menu.tres" type="Theme" id=1]
 [ext_resource path="res://assets/Images/Composition/CharacterChoice/mochilas/redimensionado/mochila01.png" type="Texture" id=2]
@@ -22,6 +22,8 @@
 [ext_resource path="res://assets/Images/Composition/CharacterChoice/mochilas/redimensionado/mochila04.png" type="Texture" id=20]
 [ext_resource path="res://assets/Images/Composition/CharacterChoice/mochilas/redimensionado/mochila05.png" type="Texture" id=21]
 [ext_resource path="res://assets/Images/Composition/CharacterChoice/mochilas/redimensionado/mochila06.png" type="Texture" id=22]
+[ext_resource path="res://assets/Fonts/arial/Arialn.ttf" type="DynamicFontData" id=23]
+[ext_resource path="res://entities/Player.tscn" type="PackedScene" id=24]
 
 [sub_resource type="StyleBoxFlat" id=3]
 bg_color = Color( 0.564706, 0.72549, 0.882353, 1 )
@@ -37,6 +39,25 @@ corner_radius_bottom_left = 5
 
 [sub_resource type="Theme" id=4]
 Panel/styles/panel = SubResource( 3 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 30
+outline_color = Color( 1, 1, 1, 0 )
+font_data = ExtResource( 23 )
+
+[sub_resource type="StyleBoxFlat" id=7]
+bg_color = Color( 1, 1, 1, 0.121569 )
+
+[sub_resource type="StyleBoxFlat" id=6]
+bg_color = Color( 1, 1, 1, 0.121569 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+expand_margin_left = 2.0
+expand_margin_right = 2.0
+expand_margin_top = 2.0
+expand_margin_bottom = 2.0
 
 [node name="CharacterChoice" type="CanvasLayer"]
 script = ExtResource( 4 )
@@ -182,10 +203,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = 253.828
-margin_top = -210.5
-margin_right = 522.828
-margin_bottom = 19.5
+margin_left = 285.0
+margin_top = -190.5
+margin_right = 554.0
+margin_bottom = 39.5
 rect_pivot_offset = Vector2( 134.5, 115 )
 theme = SubResource( 4 )
 
@@ -353,6 +374,21 @@ margin_right = 233.5
 margin_bottom = 80.0
 align = 1
 valign = 1
+
+[node name="PlayerName" type="LineEdit" parent="."]
+margin_left = 546.0
+margin_top = 31.0
+margin_right = 950.0
+margin_bottom = 96.0
+custom_colors/cursor_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 0.454902 )
+custom_fonts/font = SubResource( 5 )
+custom_styles/focus = SubResource( 7 )
+custom_styles/normal = SubResource( 6 )
+placeholder_text = "Digite seu Nome"
+placeholder_alpha = 1.0
+
+[node name="PlayerEntity" parent="." instance=ExtResource( 24 )]
 
 [connection signal="clicked_object" from="TabContainer/Habilidades/CreationPanel/hab01" to="." method="choose_an_hability"]
 [connection signal="clicked_object" from="TabContainer/Habilidades/CreationPanel/hab02" to="." method="choose_an_hability"]
