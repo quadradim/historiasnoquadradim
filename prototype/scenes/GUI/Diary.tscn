@@ -215,12 +215,12 @@ scale = Vector2( 0.27166, 0.27166 )
 texture = ExtResource( 9 )
 
 [node name="ItemPanel01" type="Panel" parent="ImagesTab/ProfileTab"]
-margin_left = 279.677
-margin_top = 606.765
-margin_right = 402.677
-margin_bottom = 751.765
+margin_left = 147.62
+margin_top = 574.541
+margin_right = 270.62
+margin_bottom = 719.541
 rect_rotation = 332.0
-rect_pivot_offset = Vector2( -43.1584, 292.59 )
+rect_pivot_offset = Vector2( 58.9371, 72.9679 )
 custom_styles/panel = SubResource( 14 )
 
 [node name="hability" type="Sprite" parent="ImagesTab/ProfileTab/ItemPanel01"]
@@ -269,10 +269,10 @@ scale = Vector2( 0.19473, 0.19473 )
 texture = ExtResource( 9 )
 
 [node name="ItemPanel03" type="Panel" parent="ImagesTab/ProfileTab"]
-margin_left = 91.6766
-margin_top = 400.765
-margin_right = 214.677
-margin_bottom = 545.765
+margin_left = 94.677
+margin_top = 384.765
+margin_right = 217.677
+margin_bottom = 529.765
 rect_pivot_offset = Vector2( 62.5682, 66.5615 )
 custom_styles/panel = SubResource( 14 )
 
