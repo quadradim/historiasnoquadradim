@@ -15,12 +15,13 @@ func load_file(file_src):
 	
 	while not file.eof_reached():
 		var current_line = file.get_line()
-#		print(current_line)
 		if current_line == "**":
 			current_dialog.append(dialog)
 			dialog = ""
 		else:
 			dialog += current_line
+	if len(dialog) > 0:
+		current_dialog.append(dialog)
 	file.close()
 
 func reset_current_text():
@@ -32,10 +33,13 @@ func _ready():
 	load_file(str(chat_res))
 
 func Time_to_write():
-	if current_text_pos < len(current_dialog[text_position]) :
+	if text_position < len(current_dialog) \
+	and current_text_pos < len(current_dialog[text_position]):
 		current_text += current_dialog[text_position][current_text_pos]
 		current_text_pos += 1
 		$ChatText.text = current_text
+	else:
+		emit_signal("end_dialog")
 	$Timer.start()
 
 func next_dialog():
@@ -43,7 +47,7 @@ func next_dialog():
 		reset_current_text()
 		text_position += 1
 	else:
-		emit_signal('end_dialog')
+		emit_signal("end_dialog")
 
 func previous_dialog():
 	if text_position > 0:
