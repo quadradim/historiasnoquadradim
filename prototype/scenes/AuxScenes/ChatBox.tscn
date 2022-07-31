@@ -56,6 +56,6 @@ expand_icon = true
 wait_time = 0.02
 autostart = true
 
-[connection signal="pressed" from="Back" to="." method="_on_Back_pressed"]
-[connection signal="pressed" from="Next" to="." method="_on_Button2_pressed"]
+[connection signal="pressed" from="Back" to="." method="previous_dialog"]
+[connection signal="pressed" from="Next" to="." method="next_dialog"]
 [connection signal="timeout" from="Timer" to="." method="Time_to_write"]
