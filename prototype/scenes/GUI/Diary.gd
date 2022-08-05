@@ -1,41 +1,27 @@
 extends CanvasLayer
 
-enum DiaryTabs{HISTORIADOR, MAPA, PERSONAGENS, MISSOES}
-
-var tabs_vector = []
-
+var player_data
 signal end_diary
 
 func _ready():
-	# Add Tabs
-	tabs_vector.append($HistorianTab)
-	tabs_vector.append($MapTab)
-	tabs_vector.append($CharactersTab)
+	player_data = $PlayerEntitiy.read()
 	
-	print(tabs_vector)
-	# Settings
-	$HistorianTab/PlayerName.text = $HistorianTab/Player.get_name()
+	# Load backpack
+	$ImagesTab/ProfileTab/BackpackPanel/Backpack.texture = load(player_data["backpack"])
 	
-	hide_tabs()
+	# Load Habilities
+	$ImagesTab/ProfileTab/ItemPanel01/hability.texture = load(player_data["habilities"][0][0])
+	$ImagesTab/ProfileTab/ItemPanel02/hability.texture = load(player_data["habilities"][1][0])
+	$ImagesTab/ProfileTab/ItemPanel03/hability.texture = load(player_data["habilities"][2][0])
+	
+	# Load Name
+	$ImagesTab/ProfileTab/HistorianName.text = player_data["name"]
+	
+	# New Message Popup
+	$FirstAccessMessage.popup()
+	$FirstAccessMessageAnimation.play("NewGame")
 
-func _process(delta):
-	hide_tabs()
-	
-	if $TabsContent/TabContainer.current_tab < tabs_vector.size():
-		tabs_vector[$TabsContent/TabContainer.current_tab].show()
 
-func update_character_info(image, name, description):
-	var CharInfo = $CharactersTab/CharacterInfo
-	CharInfo.set_image(image)
-	CharInfo.set_name(name)
-	CharInfo.set_description(description)
-	
-func hide_tabs():
-	for tab in tabs_vector:
-		tab.hide()
-		
-func clicked_character(char_src, char_name, char_info):
-	update_character_info(char_src, char_name, char_info)
-	
-func exit_diary():
-	emit_signal('end_diary')
+func _on_Button_pressed():
+	print("FIM DO DIÁRIO")
+	emit_signal("end_diary")

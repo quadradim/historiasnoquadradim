@@ -1,11 +1,16 @@
 extends Node
 
-var player_src = "user://Player.dat"
+const save_dir = "user://saves/"
+var player_src = save_dir + "Player.dat"
 var password = "40028922Yudi"
-var historiameter = 0
 
 func _load_file(load_type):
 	if load_type == File.WRITE or load_type == File.READ:
+		
+		var dir = Directory.new()
+		if !dir.dir_exists(save_dir):
+			dir.make_dir_recursive(save_dir)
+		
 		var file = File.new()
 		var status = file.open_encrypted_with_pass(player_src, load_type, password)
 		if status == OK:
@@ -15,10 +20,7 @@ func _load_file(load_type):
 	return false
 	
 func _ready():
-	print('Hello!')
-
-func verify():
-	return "Player Class was loaded..."
+	pass
 
 func read():
 	var file = _load_file(File.READ)
@@ -31,16 +33,6 @@ func read():
 func insert(new_data):
 	var file = _load_file(File.WRITE)
 	if file:
-		print('storing user data..')
 		file.store_var(new_data)
 		return true
 	return false
-
-func set_historiometer():
-	pass
-	
-func set_username():
-	pass
-	
-func set_elements():
-	pass
