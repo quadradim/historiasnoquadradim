@@ -95,3 +95,8 @@ func end_character_choice():
 		print($PlayerEntity.read())
 		emit_signal("end_choice")
 
+func play_music():
+	$MainMusic.play()
+	
+func music_finished():
+	$MainMusic.play()

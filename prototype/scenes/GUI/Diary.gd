@@ -21,7 +21,12 @@ func _ready():
 	$FirstAccessMessage.popup()
 	$FirstAccessMessageAnimation.play("NewGame")
 
-
 func _on_Button_pressed():
 	print("FIM DO DIÁRIO")
 	emit_signal("end_diary")
+
+func play_music():
+	$MainMusic.play()
+
+func music_finished():
+	$MainMusic.play()

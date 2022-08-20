@@ -15,7 +15,7 @@ func write_text():
 	pass
 
 func _ready():
-	pass # Replace with function body.
+	pass
 
 func _on_WritingTime_timeout():
 	if current_text_pos < len(text_tutorials[text_position]) and self.layer != -1:
@@ -33,3 +33,12 @@ func _on_Mapa_pressed():
 		presses_count += 1
 	else:
 		emit_signal("end_access02")
+
+func start_writing():
+	$WritingTime.start()		
+
+func play_music():
+	$MainMusic.play()
+
+func music_finished():
+	$MainMusic.play()

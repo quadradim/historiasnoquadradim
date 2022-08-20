@@ -15,7 +15,6 @@ class SceneUsed:
 func load_control_scene(local, name, out_signal):
 	# 'out_signal' : The scene must to emit a signal
 	# 					  when you want out scene.
-	print(local)
 	var new_scene = SceneUsed.new()
 	new_scene.instance = load(local).instance()
 	new_scene.instance.layer = -1
@@ -26,6 +25,11 @@ func load_control_scene(local, name, out_signal):
 	current_scene_name = name
 	
 	add_child(used_scenes[-1].instance)
+
+func load_audio():
+	return
+	if current_scene_name in 'Access01,Access02,CharacterChoice,Diary,Suzana':
+		used_scenes[0].instance.play_music()
 
 func _ready():
 	transition_animation.connect('animation_finished', self, 'end_transition_scene')
@@ -71,8 +75,14 @@ func end_transition_scene(anim_name):
 		if used_scenes.size() > 0:
 			used_scenes[0].instance.layer = 1
 			
+			load_audio()
+			
+			if current_scene_name == 'Access02':
+				used_scenes[0].instance.start_writing()
+			
 	elif transition_animation_name == "fade_out":
 		transition_animation_name = "fade_in"
+		
 #func _on_Production_end_production():
 #	logo_scene = load('res://scenes/GUI/LogoOpening.tscn').instance()
 #	logo_scene.layer = -1

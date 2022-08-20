@@ -25,3 +25,9 @@ func magnifier_move_finished(anim_name):
 func next_scene(event):
 	if event.is_pressed() and event.button_index == BUTTON_LEFT:
 		emit_signal("end_access01")
+		
+func play_music():
+	$MainMusic.play()
+	
+func main_music_finished():
+	$MainMusic.play()
