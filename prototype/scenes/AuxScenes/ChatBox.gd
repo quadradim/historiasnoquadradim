@@ -2,6 +2,8 @@ extends Control
 
 export(String, FILE) var chat_res
 signal end_dialog
+signal player_dialog
+signal suzana_dialog
 
 var text_position = 0
 var current_text_pos = 0
@@ -12,10 +14,14 @@ func load_file(file_src):
 	var file = File.new()
 	file.open(file_src, File.READ)
 	var dialog = ""
-	
 	while not file.eof_reached():
 		var current_line = file.get_line()
-		if current_line == "**":
+		if current_line == "*P*":
+			emit_signal("player_dialog")
+			current_dialog.append(dialog)
+			dialog = ""
+		elif current_line == "*S*":
+			emit_signal("suzana_dialog")
 			current_dialog.append(dialog)
 			dialog = ""
 		else:
