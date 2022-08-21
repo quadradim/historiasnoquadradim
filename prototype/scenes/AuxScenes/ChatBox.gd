@@ -64,9 +64,9 @@ func Time_to_write():
 	$Timer.start()
 
 func next_dialog():
+	reset_current_text()
+	text_position += 1
 	if text_position < len(current_dialog):
-		reset_current_text()
-		text_position += 1
 		$ProfileImages.display(
 			img[profile_image_indices[text_position]],
 			image_scale[profile_image_indices[text_position]]
