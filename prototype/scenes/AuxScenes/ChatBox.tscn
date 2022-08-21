@@ -30,10 +30,14 @@ margin_right = 388.0
 margin_bottom = 92.0
 
 [node name="ChatText" type="Label" parent="."]
-margin_left = -321.0
-margin_top = -50.0
-margin_right = 419.0
-margin_bottom = 63.0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -360.0
+margin_top = -74.0
+margin_right = 358.0
+margin_bottom = 40.0
 theme = ExtResource( 2 )
 autowrap = true
 
@@ -58,10 +62,9 @@ wait_time = 0.02
 autostart = true
 
 [node name="ProfileImages" parent="." instance=ExtResource( 6 )]
-position = Vector2( -369, -93 )
+position = Vector2( -345, -83 )
 
-[connection signal="player_dialog" from="." to="ProfileImages" method="_on_ChatBox_player_dialog"]
-[connection signal="suzana_dialog" from="." to="ProfileImages" method="_on_ChatBox_suzana_dialog"]
+[connection signal="Display" from="." to="ProfileImages" method="_on_ChatBox_Display"]
 [connection signal="pressed" from="Back" to="." method="previous_dialog"]
 [connection signal="pressed" from="Next" to="." method="next_dialog"]
 [connection signal="timeout" from="Timer" to="." method="Time_to_write"]
