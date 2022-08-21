@@ -48,8 +48,6 @@ func _ready():
 		Vector2(0.05,0.05)
 	)
 	
-	start()
-	
 func start():
 	$Timer.start()
 

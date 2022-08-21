@@ -26,9 +26,14 @@ func load_control_scene(local, name, out_signal):
 	
 	add_child(used_scenes[-1].instance)
 
+func start_events():
+	if current_scene_name == 'Access02':
+		used_scenes[0].instance.start_writing()
+	if current_scene_name == 'Suzana':
+		used_scenes[0].instance.start()
+
 func load_audio():
-	return
-	if current_scene_name in 'Access01,Access02,CharacterChoice,Diary,Suzana':
+	if current_scene_name in 'Access01,Access02,CharacterChoice,Diary':
 		used_scenes[0].instance.play_music()
 
 func _ready():
@@ -76,9 +81,7 @@ func end_transition_scene(anim_name):
 			used_scenes[0].instance.layer = 1
 			
 			load_audio()
-			
-			if current_scene_name == 'Access02':
-				used_scenes[0].instance.start_writing()
+			start_events()
 			
 	elif transition_animation_name == "fade_out":
 		transition_animation_name = "fade_in"

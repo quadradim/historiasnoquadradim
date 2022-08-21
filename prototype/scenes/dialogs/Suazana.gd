@@ -6,3 +6,6 @@ func _ready():
 
 func _on_ChatBox_new_dialog():
 	$ChatBox.get_text()
+	
+func start():
+	$ChatBox.start()
