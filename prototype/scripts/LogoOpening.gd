@@ -10,7 +10,7 @@ func _ready():
 
 func _on_Background_gui_input(event):
 	if event.is_pressed() and event.button_index == BUTTON_LEFT:
-		emit_signal("end_logo_scene")
+		emit_signal("end_logo_scene", "menu")
 		#get_tree().change_scene("res://scenes/GUI/Menu.tscn")
 
 func _on_LogoAnimation_animation_finished(anim_name):

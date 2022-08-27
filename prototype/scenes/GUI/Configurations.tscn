@@ -1,0 +1,32 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://assets/Styles/Themes/Menu.tres" type="Theme" id=1]
+[ext_resource path="res://assets/Images/Composition/Menu/Padrão3.png" type="Texture" id=2]
+[ext_resource path="res://assets/Images/Composition/Menu/Padrão2.png" type="Texture" id=3]
+[ext_resource path="res://assets/Images/Composition/Menu/Padrão1.png" type="Texture" id=4]
+[ext_resource path="res://scenes/AuxScenes/ConfigurationWindow.tscn" type="PackedScene" id=5]
+
+[node name="Configurations" type="CanvasLayer"]
+
+[node name="BackGround" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 1 )
+color = Color( 0.945098, 0.933333, 0.905882, 1 )
+
+[node name="Subackground01" type="Sprite" parent="BackGround"]
+position = Vector2( 200, 478.65 )
+scale = Vector2( 0.308902, 0.288057 )
+texture = ExtResource( 2 )
+
+[node name="Subackground02" type="Sprite" parent="BackGround"]
+position = Vector2( 880, 354.7 )
+scale = Vector2( 0.302746, 0.305539 )
+texture = ExtResource( 4 )
+
+[node name="Subackground03" type="Sprite" parent="BackGround"]
+position = Vector2( 704, 122.7 )
+scale = Vector2( 0.33033, 0.273509 )
+texture = ExtResource( 3 )
+
+[node name="Configuration" parent="." instance=ExtResource( 5 )]

@@ -21,12 +21,14 @@ func _ready():
 	$FirstAccessMessage.popup()
 	$FirstAccessMessageAnimation.play("NewGame")
 
+func _process(delta):
+	$MainMusic.update("soundtrack")
+
 func _on_Button_pressed():
-	print("FIM DO DIÁRIO")
-	emit_signal("end_diary")
+	emit_signal("end_diary", "suzana")
 
 func play_music():
-	$MainMusic.play()
+	return $MainMusic
 
 func music_finished():
 	$MainMusic.play()

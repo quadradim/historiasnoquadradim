@@ -2,7 +2,7 @@
 
 [ext_resource path="res://assets/icons/configuracao.png" type="Texture" id=1]
 [ext_resource path="res://scenes/AuxScenes/ConfigurationPopup.gd" type="Script" id=2]
-[ext_resource path="res://scenes/GUI/Configuration.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/AuxScenes/ConfigurationWindow.tscn" type="PackedScene" id=3]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.6, 0.6, 0.6, 0 )

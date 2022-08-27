@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=2]
+[gd_scene load_steps=32 format=2]
 
 [ext_resource path="res://assets/Styles/Themes/Menu.tres" type="Theme" id=1]
 [ext_resource path="res://assets/Images/Composition/CharacterChoice/mochilas/redimensionado/mochila01.png" type="Texture" id=2]
@@ -25,6 +25,7 @@
 [ext_resource path="res://assets/Fonts/arial/Arialn.ttf" type="DynamicFontData" id=23]
 [ext_resource path="res://entities/Player.tscn" type="PackedScene" id=24]
 [ext_resource path="res://soundtrack/Loop3x.mp3" type="AudioStream" id=25]
+[ext_resource path="res://scenes/AuxScenes/AudioController.tscn" type="PackedScene" id=26]
 
 [sub_resource type="StyleBoxFlat" id=3]
 bg_color = Color( 0.564706, 0.72549, 0.882353, 1 )
@@ -391,7 +392,7 @@ placeholder_alpha = 1.0
 
 [node name="PlayerEntity" parent="." instance=ExtResource( 24 )]
 
-[node name="MainMusic" type="AudioStreamPlayer" parent="."]
+[node name="MainMusic" parent="." instance=ExtResource( 26 )]
 stream = ExtResource( 25 )
 
 [connection signal="clicked_object" from="TabContainer/Habilidades/CreationPanel/hab01" to="." method="choose_an_hability"]
@@ -410,4 +411,3 @@ stream = ExtResource( 25 )
 [connection signal="clicked_object" from="TabContainer/Estilo/CreationPanel/back06" to="." method="choose_a_backpack"]
 [connection signal="clicked_object" from="TabContainer/Estilo/CreationPanel/back07" to="." method="choose_a_backpack"]
 [connection signal="pressed" from="ContinueButton" to="." method="end_character_choice"]
-[connection signal="finished" from="MainMusic" to="." method="music_finished"]
