@@ -25,10 +25,14 @@ func update_volume():
 	)
 	
 func _ready():
-	player_data = $PlayerEntity.read()
-	$PanelConfig/Soundeffect.value = player_data["soundeffect"]
-	$PanelConfig/Soundtrack.value = player_data["soundtrack"]
-	
+	if $PlayerEntity.player_exists():
+		player_data = $PlayerEntity.read()
+		$PanelConfig/Soundeffect.value = player_data["soundeffect"]
+		$PanelConfig/Soundtrack.value = player_data["soundtrack"]
+	else:
+		$PanelConfig/Soundeffect.value = 0
+		$PanelConfig/Soundtrack.value = 0
+		
 	update_volume()
 	
 func _process(delta):
