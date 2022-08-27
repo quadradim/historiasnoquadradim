@@ -54,6 +54,11 @@ var scenes_data = {
 		'end_suzana_dialog',
 		true
 	],
+	'episodes_selection': [
+		'res://scenes/GUI/EpisodeSelection.tscn',
+		'end_episode_selection',
+		false
+	],
 }
 
 func load_control_scene(local, name, out_signal):

@@ -17,3 +17,6 @@ func config_pressed():
 
 func exit_configuration():
 	$MenuControl/ConfigurationWindow.get_child(0).hide()
+
+func episodes_selection_pressed():
+	emit_signal("end_menu", "episodes_selection")

@@ -71,4 +71,4 @@ func select_level():
 		emit_signal("end_episode_selection", "level3")
 
 func back_menu():
-	emit_signal("end_episode_selection", "Menu")
+	emit_signal("end_episode_selection", "menu")
