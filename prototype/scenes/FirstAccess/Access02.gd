@@ -17,6 +17,9 @@ func write_text():
 func _ready():
 	pass
 
+func _process(delta):
+	$MainMusic.update("soundtrack")
+
 func _on_WritingTime_timeout():
 	if current_text_pos < len(text_tutorials[text_position]) and self.layer != -1:
 		current_text += text_tutorials[text_position][current_text_pos]
@@ -32,13 +35,13 @@ func _on_Mapa_pressed():
 		current_text_pos = 0
 		presses_count += 1
 	else:
-		emit_signal("end_access02")
+		emit_signal("end_access02", "character_choice")
 
 func start_writing():
 	$WritingTime.start()		
 
 func play_music():
-	$MainMusic.play()
+	return $MainMusic
 
 func music_finished():
 	$MainMusic.play()

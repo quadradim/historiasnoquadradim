@@ -30,6 +30,10 @@ func read():
 		return content
 	return false
 	
+func player_exists():
+	var dir = Directory.new()
+	return dir.file_exists(player_src)
+	
 func insert(new_data):
 	var file = _load_file(File.WRITE)
 	if file:

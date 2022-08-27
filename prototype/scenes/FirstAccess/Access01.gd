@@ -9,6 +9,9 @@ func _ready():
 	$Control/MagnifierArea/Magnifier.scale = Vector2(0.08, 0.08)
 	$Control/NoteArea/Note.scale = Vector2(0,0)
 
+func _process(delta):
+	$MainMusic.update("soundtrack")
+
 func click_magnifier(event):
 	if event.is_pressed() and event.button_index == BUTTON_LEFT and not discover:
 		$AnimationPlayer.play("MagnifierMove")
@@ -24,10 +27,10 @@ func magnifier_move_finished(anim_name):
 
 func next_scene(event):
 	if event.is_pressed() and event.button_index == BUTTON_LEFT:
-		emit_signal("end_access01")
+		emit_signal("end_access01", "access02")
 		
 func play_music():
-	$MainMusic.play()
+	return $MainMusic
 	
 func main_music_finished():
 	$MainMusic.play()

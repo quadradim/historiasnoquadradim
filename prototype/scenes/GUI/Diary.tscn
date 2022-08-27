@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=2]
+[gd_scene load_steps=31 format=2]
 
 [ext_resource path="res://assets/Styles/Themes/Menu.tres" type="Theme" id=1]
 [ext_resource path="res://scenes/GUI/Diary.gd" type="Script" id=2]
@@ -14,6 +14,7 @@
 [ext_resource path="res://assets/Fonts/arial/Arialn.ttf" type="DynamicFontData" id=12]
 [ext_resource path="res://assets/Styles/Themes/CharacterChoice.tres" type="Theme" id=13]
 [ext_resource path="res://soundtrack/Loop5 - Diário.mp3" type="AudioStream" id=14]
+[ext_resource path="res://scenes/AuxScenes/AudioController.tscn" type="PackedScene" id=15]
 
 [sub_resource type="StyleBoxFlat" id=4]
 bg_color = Color( 1, 0, 0, 0 )
@@ -369,8 +370,7 @@ theme = ExtResource( 13 )
 custom_fonts/font = SubResource( 18 )
 text = "Próximo"
 
-[node name="MainMusic" type="AudioStreamPlayer" parent="."]
+[node name="MainMusic" parent="." instance=ExtResource( 15 )]
 stream = ExtResource( 14 )
 
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
-[connection signal="finished" from="MainMusic" to="." method="music_finished"]

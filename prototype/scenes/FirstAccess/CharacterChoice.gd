@@ -6,7 +6,12 @@ var selected_backpack = false
 export(Resource) var image_source
 signal end_choice
 
+var player_data
+
 func _ready():	
+	# Get Current Data
+	player_data = $PlayerEntity.read()
+	
 	# Message Box text style
 	$MessageBox/MessageText.add_color_override("font_color", Color('#000000'))
 	
@@ -37,6 +42,9 @@ func _ready():
 	
 	var historian_object_zoom = get_node("TabContainer/Habilidades/HabilityZoomImage")
 	historian_object_zoom.set('custom_styles/panel', historian_object_zoom_style)
+
+func _process(delta):
+	$MainMusic.update("soundtrack")
 
 # Deactivate Button if not defined	
 #func _process(delta):
@@ -83,20 +91,22 @@ func end_character_choice():
 		var items_selected_info = []
 		for item in id_item_selected:
 			items_selected_info.append([item.get_image_path(), item.object_name])
-			
+		
 		$PlayerEntity.insert(
 			{
 				"name": $PlayerName.text,
 				"habilities": items_selected_info,
 				"backpack": $TabContainer/Estilo/BackpackZoom.texture.resource_path,
-				"historiometer": 0
+				"historiometer": 0,
+				"soundtrack": player_data["soundtrack"],
+				"soundeffect": player_data["soundeffect"]
 			}
 		)
-		print($PlayerEntity.read())
-		emit_signal("end_choice")
+
+		emit_signal("end_choice", "diary")
 
 func play_music():
-	$MainMusic.play()
+	return $MainMusic
 	
 func music_finished():
 	$MainMusic.play()

@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://scenes/GUI/Menu.gd" type="Script" id=1]
 [ext_resource path="res://assets/Styles/Themes/Menu.tres" type="Theme" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://assets/Images/Composition/Menu/Padrão1.png" type="Texture" id=7]
 [ext_resource path="res://assets/Images/Composition/Menu/Padrão3.png" type="Texture" id=8]
 [ext_resource path="res://assets/Images/Composition/Menu/Botão Interrogação.png" type="Texture" id=9]
+[ext_resource path="res://scenes/AuxScenes/ConfigurationWindow.tscn" type="PackedScene" id=10]
 
 [sub_resource type="DynamicFont" id=2]
 size = 30
@@ -48,6 +49,9 @@ anchor_bottom = 1.0
 __meta__ = {
 "_edit_lock_": true
 }
+
+[node name="ConfigurationWindow" parent="MenuControl" instance=ExtResource( 10 )]
+layer = 2
 
 [node name="Background1" type="ColorRect" parent="MenuControl"]
 anchor_right = 1.0
@@ -130,5 +134,7 @@ texture_normal = ExtResource( 9 )
 [node name="MenuAnimation" type="AnimationPlayer" parent="."]
 anims/BackgroundChange = SubResource( 1 )
 
+[connection signal="exit_button" from="MenuControl/ConfigurationWindow" to="." method="exit_configuration"]
 [connection signal="pressed" from="MenuControl/StartBtn" to="." method="press_game_start"]
+[connection signal="pressed" from="MenuControl/ConfigBtn" to="." method="config_pressed"]
 [connection signal="animation_finished" from="MenuAnimation" to="." method="animation_finished"]
