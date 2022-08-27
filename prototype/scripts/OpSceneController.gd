@@ -16,35 +16,43 @@ var current_scene_name
 var scenes_data = {
 #	'name': [
 #		'local',
-#		'emited_signal'
+#		'emited_signal',
+#		'has_config'
 #	]
 	'logo_opening': [
 		'res://scenes/GUI/LogoOpening.tscn',
-		'end_logo_scene'
+		'end_logo_scene',
+		false
 	],
 	'menu': [
 		'res://scenes/GUI/Menu.tscn',
-		'end_menu'
+		'end_menu',
+		false
 	],
 	'access01': [
 		'res://scenes/FirstAccess/Access01.tscn',
-		'end_access01'
+		'end_access01',
+		true,
 	],
 	'access02': [
 		'res://scenes/FirstAccess/Access02.tscn',
-		'end_access02'
+		'end_access02',
+		true
 	],
 	'character_choice': [
 		'res://scenes/FirstAccess/CharacterChoice.tscn',
-		'end_choice'
+		'end_choice',
+		true
 	],
 	'diary': [
 		'res://scenes/GUI/Diary.tscn',
-		'end_diary'
+		'end_diary',
+		true
 	],
 	'suzana': [
 		'res://scenes/dialogs/Suazana.tscn',
-		'end_suzana_dialog'
+		'end_suzana_dialog',
+		true
 	],
 }
 
@@ -92,6 +100,8 @@ func _ready():
 	if not $PlayerEntity.player_exists():
 		create_player()
 		
+	$ConfigurationPopup.layer = -1
+	
 	transition_animation.connect('animation_finished', self, 'end_transition_scene')
 	transition_animation.play("fade_out")
 	
@@ -101,11 +111,15 @@ func _ready():
 func change_scene(scene):
 	for current_scene in scenes_data:
 		if scene == current_scene:
+			if scenes_data[current_scene][2]:
+				$ConfigurationPopup.layer = 2
+				
 			load_control_scene(
 				scenes_data[current_scene][0],
 				scene,
 				scenes_data[current_scene][1]
-			)	
+			)
+			
 
 	transition_animation.play("fade_in")
 	transition_animation_name = "fade_in"
