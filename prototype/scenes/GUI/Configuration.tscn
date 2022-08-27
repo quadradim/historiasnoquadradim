@@ -1,0 +1,152 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://assets/Fonts/bebas_neue/BebasNeue-Regular.otf" type="DynamicFontData" id=1]
+[ext_resource path="res://scenes/GUI/Configuration.gd" type="Script" id=2]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.945098, 0.933333, 0.905882, 1 )
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 6
+border_color = Color( 0.4, 0.631373, 0.862745, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="DynamicFont" id=2]
+size = 40
+outline_color = Color( 0.0235294, 0.0313726, 0.109804, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.45098, 0.533333, 0.556863, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0.505882, 0.545098, 0.560784, 1 )
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+expand_margin_left = 4.0
+expand_margin_right = 4.0
+expand_margin_top = 4.0
+expand_margin_bottom = 4.0
+shadow_offset = Vector2( 2, 2 )
+
+[sub_resource type="DynamicFont" id=4]
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=5]
+outline_color = Color( 0.215686, 0.298039, 0.388235, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=8]
+bg_color = Color( 0.972549, 0.882353, 0.435294, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0.4, 0.631373, 0.862745, 1 )
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[sub_resource type="StyleBoxFlat" id=7]
+bg_color = Color( 0.972549, 0.882353, 0.435294, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0.4, 0.631373, 0.862745, 1 )
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[sub_resource type="StyleBoxFlat" id=6]
+bg_color = Color( 0.972549, 0.882353, 0.435294, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0.4, 0.631373, 0.862745, 1 )
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[node name="Configuration" type="CanvasLayer"]
+script = ExtResource( 2 )
+
+[node name="PanelConfig" type="Panel" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -264.5
+margin_top = -157.5
+margin_right = 264.5
+margin_bottom = 157.5
+custom_styles/panel = SubResource( 1 )
+
+[node name="Title" type="Label" parent="PanelConfig"]
+margin_left = 168.5
+margin_top = 13.5
+margin_right = 363.5
+margin_bottom = 61.5
+custom_colors/font_color = Color( 0.0235294, 0.0313726, 0.109804, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "Configurações"
+
+[node name="Soundeffect" type="HSlider" parent="PanelConfig"]
+margin_left = 120.5
+margin_top = 109.5
+margin_right = 421.5
+margin_bottom = 160.5
+custom_styles/slider = SubResource( 3 )
+
+[node name="SoundEffectLabel" type="Label" parent="PanelConfig/Soundeffect"]
+margin_left = 104.0
+margin_top = -8.0
+margin_right = 189.0
+margin_bottom = 12.0
+custom_colors/font_color = Color( 0.0235294, 0.0313726, 0.109804, 1 )
+custom_fonts/font = SubResource( 4 )
+text = "Efeitos Sonoros"
+
+[node name="Soundtrack" type="HSlider" parent="PanelConfig"]
+margin_left = 120.5
+margin_top = 172.5
+margin_right = 421.5
+margin_bottom = 223.5
+custom_styles/slider = SubResource( 3 )
+
+[node name="SoundTrackLabel" type="Label" parent="PanelConfig/Soundtrack"]
+margin_left = 104.0
+margin_top = -8.0
+margin_right = 189.0
+margin_bottom = 12.0
+custom_colors/font_color = Color( 0.0235294, 0.0313726, 0.109804, 1 )
+custom_fonts/font = SubResource( 4 )
+text = "Trilha Sonora"
+
+[node name="Button" type="Button" parent="PanelConfig"]
+margin_left = 433.0
+margin_top = 262.0
+margin_right = 505.0
+margin_bottom = 290.0
+custom_colors/font_color = Color( 0.215686, 0.298039, 0.388235, 1 )
+custom_colors/font_color_hover = Color( 0.356863, 0.435294, 0.521569, 1 )
+custom_colors/font_color_pressed = Color( 0.356863, 0.435294, 0.521569, 1 )
+custom_fonts/font = SubResource( 5 )
+custom_styles/hover = SubResource( 8 )
+custom_styles/pressed = SubResource( 7 )
+custom_styles/normal = SubResource( 6 )
+text = "Sair"
+
+[connection signal="pressed" from="PanelConfig/Button" to="." method="button_pressed"]
