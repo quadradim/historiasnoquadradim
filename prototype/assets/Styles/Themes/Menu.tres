@@ -4,7 +4,7 @@
 [ext_resource path="res://assets/Fonts/bebas_neue/BebasNeue-Regular.otf" type="DynamicFontData" id=2]
 
 [sub_resource type="DynamicFont" id=1501]
-size = 15
+size = 25
 extra_spacing_top = 2
 extra_spacing_bottom = 2
 extra_spacing_char = 1

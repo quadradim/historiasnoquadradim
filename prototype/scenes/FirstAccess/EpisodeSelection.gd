@@ -1,6 +1,9 @@
 extends Control
 
-
+signal level1
+signal level2
+signal level3
+signal end_episode_selection
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
@@ -33,6 +36,9 @@ func _on_ButtonNext_pressed():
 		if bool(locked_episodes[episode_number]) == false:
 			$PlayableColor.visible = false
 			$LockedColor.visible = true
+			$Level1Text.visible = false
+			$Level2Text.visible = false
+			$Level3Text.visible = false
 			$Padlock.visible = true
 		else:
 			$PlayableColor.visible = true
@@ -55,9 +61,29 @@ func _on_ButtonBack_pressed():
 		if bool(locked_episodes[episode_number]) == false:
 			$PlayableColor.visible = false
 			$LockedColor.visible = true
+			$Level1Text.visible = false
+			$Level2Text.visible = false
+			$Level3Text.visible = false
 			$Padlock.visible = true
 		else:
 			$PlayableColor.visible = true
 			$LockedColor.visible = false
 			$Padlock.visible = false
 	pass # Replace with function body.
+
+func _on_SelectLevelButton_pressed():
+	if bool(current_episode[0]) and bool(locked_episodes[0]):
+		print("level1")
+		emit_signal("end_episode_selection", "level1")
+	if bool(current_episode[1]) and bool(locked_episodes[1]):
+		print("level2")
+		emit_signal("end_episode_selection", "level2")
+	if bool(current_episode[2]) and bool(locked_episodes[2]):
+		print("level3")
+		emit_signal("end_episode_selection", "level3")
+	pass
+
+func _on_OutButton_pressed():
+	emit_signal("end_episode_selection", "Menu")
+	pass
+	

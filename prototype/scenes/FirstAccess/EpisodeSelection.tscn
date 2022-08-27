@@ -1,6 +1,7 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://assets/Images/Composition/EpisodeSelection/multidão_do_darcy.jpeg" type="Texture" id=1]
+[ext_resource path="res://assets/Styles/Themes/Menu.tres" type="Theme" id=2]
 [ext_resource path="res://assets/icons/previous.png" type="Texture" id=3]
 [ext_resource path="res://assets/icons/next.png" type="Texture" id=4]
 [ext_resource path="res://assets/Images/Composition/Menu/Padrão3.png" type="Texture" id=5]
@@ -21,6 +22,10 @@ corner_radius_top_left = 12
 corner_radius_top_right = 12
 corner_radius_bottom_right = 12
 corner_radius_bottom_left = 12
+
+[sub_resource type="DynamicFont" id=12]
+size = 40
+font_data = ExtResource( 10 )
 
 [sub_resource type="DynamicFont" id=7]
 size = 30
@@ -116,6 +121,18 @@ margin_right = 416.0
 margin_bottom = 197.0
 custom_styles/panel = SubResource( 2 )
 
+[node name="Title" type="Label" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -136.0
+margin_top = 24.0
+margin_right = 137.0
+margin_bottom = 72.0
+custom_colors/font_color = Color( 0.0235294, 0.0313726, 0.109804, 1 )
+custom_fonts/font = SubResource( 12 )
+text = "Seleção de episódios"
+align = 1
+
 [node name="Level1Text" type="Label" parent="."]
 anchor_left = 0.5
 anchor_top = 0.5
@@ -142,7 +159,7 @@ margin_right = 166.5
 margin_bottom = 18.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 7 )
-text = "Bloqueado"
+text = "Level2"
 align = 1
 
 [node name="Level3Text" type="Label" parent="."]
@@ -157,12 +174,12 @@ margin_right = 166.5
 margin_bottom = 18.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 7 )
-text = "Bloqueado"
+text = "Level3"
 align = 1
 
 [node name="Padlock" type="Sprite" parent="."]
 visible = false
-position = Vector2( 510, 197 )
+position = Vector2( 512, 272 )
 scale = Vector2( 0.259089, 0.259089 )
 texture = ExtResource( 9 )
 
@@ -188,5 +205,25 @@ custom_styles/focus = SubResource( 10 )
 custom_styles/normal = SubResource( 11 )
 icon = ExtResource( 3 )
 
+[node name="SelectLevelButton" type="TextureButton" parent="."]
+margin_left = 151.0
+margin_top = 91.0
+margin_right = 865.0
+margin_bottom = 480.0
+
+[node name="OutButton" type="Button" parent="."]
+anchor_left = -0.07
+anchor_top = 0.815
+anchor_right = -0.07
+anchor_bottom = 0.815
+margin_left = 103.68
+margin_top = 34.56
+margin_right = 231.68
+margin_bottom = 82.56
+theme = ExtResource( 2 )
+text = "Sair"
+
 [connection signal="pressed" from="ButtonNext" to="." method="_on_ButtonNext_pressed"]
 [connection signal="pressed" from="ButtonBack" to="." method="_on_ButtonBack_pressed"]
+[connection signal="pressed" from="SelectLevelButton" to="." method="_on_SelectLevelButton_pressed"]
+[connection signal="pressed" from="OutButton" to="." method="_on_OutButton_pressed"]
