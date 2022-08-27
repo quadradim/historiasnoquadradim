@@ -59,6 +59,11 @@ var scenes_data = {
 		'end_episode_selection',
 		false
 	],
+	'analyze_photos': [
+		'res://scenes/observation/PhotoAnalyze.tscn',
+		'end_analyze',
+		false
+	]
 }
 
 func load_control_scene(local, name, out_signal):
