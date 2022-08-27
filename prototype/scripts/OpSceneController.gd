@@ -33,6 +33,7 @@ func start_events():
 		used_scenes[0].instance.start()
 
 func load_audio():
+	return
 	if current_scene_name in 'Access01,Access02,CharacterChoice,Diary':
 		used_scenes[0].instance.play_music()
 
