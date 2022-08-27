@@ -2,7 +2,11 @@
 
 [ext_resource path="res://scenes/AuxScenes/ProfileImages.gd" type="Script" id=1]
 [ext_resource path="res://assets/Fonts/bebas_neue/BebasNeue-Regular.otf" type="DynamicFontData" id=2]
+<<<<<<< Updated upstream
 [ext_resource path="res://assets/Images/Composition/ProfileImages/suzana_face.png" type="Texture" id=3]
+=======
+[ext_resource path="res://assets/Images/Composition/ProfileImages/Suzana_Face.png" type="Texture" id=3]
+>>>>>>> Stashed changes
 
 [sub_resource type="DynamicFont" id=6]
 size = 20
@@ -154,7 +158,14 @@ rect_pivot_offset = Vector2( 43.5, 43.5 )
 theme = SubResource( 15 )
 
 [node name="Image" type="Sprite" parent="."]
+<<<<<<< Updated upstream
 position = Vector2( 1, 2 )
 scale = Vector2( 0.169291, 0.169291 )
 texture = ExtResource( 3 )
 offset = Vector2( -16.7292, -12.147 )
+=======
+position = Vector2( -5, -6 )
+scale = Vector2( 0.754808, 0.754808 )
+texture = ExtResource( 3 )
+offset = Vector2( 12.8057, 11.4809 )
+>>>>>>> Stashed changes
