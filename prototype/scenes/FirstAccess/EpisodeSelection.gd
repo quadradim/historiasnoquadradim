@@ -1,4 +1,4 @@
-	extends Control
+extends Control
 
 
 # Declare member variables here. Examples:
@@ -24,13 +24,12 @@ func _on_ButtonNext_pressed():
 		episode_number += 1
 		current_episode[episode_number] = current_episode[episode_number - 1]
 		current_episode[episode_number - 1] = 0
-		$Nucleo.visible = bool(current_episode[0])
-		$NucleoText.visible = bool(current_episode[0])
-		$Taguatinga.visible = bool(current_episode[1])
-		$TaguatingaText.visible = bool(current_episode[1])
-		$PlanoPiloto.visible = bool(current_episode[2])	
-		$PlanoPilotoText.visible = bool(current_episode[2])
-		
+		$Level1.visible = bool(current_episode[0])
+		$Level1Text.visible = bool(current_episode[0])
+		$Level2.visible = bool(current_episode[1])
+		$Level2Text.visible = bool(current_episode[1])
+		$Level3.visible = bool(current_episode[2])	
+		$Level3Text.visible = bool(current_episode[2])
 		if bool(locked_episodes[episode_number]) == false:
 			$PlayableColor.visible = false
 			$LockedColor.visible = true
@@ -47,13 +46,12 @@ func _on_ButtonBack_pressed():
 		episode_number -= 1
 		current_episode[episode_number] = current_episode[episode_number + 1]
 		current_episode[episode_number + 1] = 0
-		$Nucleo.visible = bool(current_episode[0])
-		$NucleoText.visible = bool(current_episode[0])
-		$Taguatinga.visible = bool(current_episode[1])
-		$TaguatingaText.visible = bool(current_episode[1])
-		$PlanoPiloto.visible = bool(current_episode[2])	
-		$PlanoPilotoText.visible = bool(current_episode[2])
-		
+		$Level1.visible = bool(current_episode[0])
+		$Level1Text.visible = bool(current_episode[0])
+		$Level2.visible = bool(current_episode[1])
+		$Level2Text.visible = bool(current_episode[1])
+		$Level3.visible = bool(current_episode[2])	
+		$Level3Text.visible = bool(current_episode[2])
 		if bool(locked_episodes[episode_number]) == false:
 			$PlayableColor.visible = false
 			$LockedColor.visible = true
