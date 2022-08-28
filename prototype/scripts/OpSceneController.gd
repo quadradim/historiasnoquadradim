@@ -63,7 +63,12 @@ var scenes_data = {
 		'res://scenes/observation/PhotoAnalyze.tscn',
 		'end_analyze',
 		false
-	]
+	],
+	'lavadeiras': [
+		'res://scenes/observation/PhotoAnalyze.tscn',
+		'end_analyze',
+		false
+	],
 }
 
 func load_control_scene(local, name, out_signal):
@@ -129,7 +134,6 @@ func change_scene(scene):
 				scene,
 				scenes_data[current_scene][1]
 			)
-			
 
 	transition_animation.play("fade_in")
 	transition_animation_name = "fade_in"
