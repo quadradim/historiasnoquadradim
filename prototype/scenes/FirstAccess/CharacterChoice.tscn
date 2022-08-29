@@ -117,8 +117,8 @@ margin_right = -176.0
 margin_bottom = -72.0
 rect_scale = Vector2( 0.22, 0.22 )
 rect_pivot_offset = Vector2( 256, 136 )
-object_name = "Observação"
-description = "Descrição de objeto"
+object_name = "Olhar Aguçado"
+description = "Análise atenta aos detalhes aparentemente insignificantes"
 
 [node name="hab02" parent="TabContainer/Habilidades/CreationPanel" instance=ExtResource( 13 )]
 margin_left = -40.0
@@ -128,7 +128,8 @@ margin_bottom = -72.0
 rect_scale = Vector2( 0.22, 0.22 )
 rect_pivot_offset = Vector2( 256, 136 )
 object_source = ExtResource( 8 )
-object_name = "----"
+object_name = "Criticidade"
+description = "Capacidade de elaborar questionamentos críticos"
 
 [node name="hab03" parent="TabContainer/Habilidades/CreationPanel" instance=ExtResource( 13 )]
 margin_left = 96.0
@@ -138,7 +139,8 @@ margin_bottom = -72.0
 rect_scale = Vector2( 0.22, 0.22 )
 rect_pivot_offset = Vector2( 256, 136 )
 object_source = ExtResource( 5 )
-object_name = "Busca"
+object_name = "Curiosidade"
+description = "Interesse por conhecer coisas novas"
 
 [node name="hab04" parent="TabContainer/Habilidades/CreationPanel" instance=ExtResource( 13 )]
 margin_left = -176.0
@@ -148,7 +150,8 @@ margin_bottom = 64.0
 rect_scale = Vector2( 0.22, 0.22 )
 rect_pivot_offset = Vector2( 256, 136 )
 object_source = ExtResource( 6 )
-object_name = "Lógica"
+object_name = "Raciocínio lógico"
+description = "Organização do pensamento para a resolução de um problema "
 
 [node name="hab05" parent="TabContainer/Habilidades/CreationPanel" instance=ExtResource( 13 )]
 margin_left = -40.0

@@ -57,5 +57,5 @@ scale = Vector2( 0.188798, 0.188798 )
 texture = ExtResource( 2 )
 
 [connection signal="finished" from="MainMusic" to="." method="replay_audio"]
-[connection signal="pressed" from="DistratoraBox" to="." method="suzana_dialog"]
-[connection signal="pressed" from="SuzanaBox" to="." method="distratora_dialog"]
+[connection signal="pressed" from="DistratoraBox" to="." method="distratora_dialog"]
+[connection signal="pressed" from="SuzanaBox" to="." method="suzana_dialog"]

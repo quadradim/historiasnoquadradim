@@ -19,4 +19,4 @@ func previous_image():
 		$PhotoPanel/image.texture = img[current_image]
 
 func exit():
-	emit_signal("end_analyze")
+	emit_signal("end_analyze", "lavadeiras")

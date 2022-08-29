@@ -66,12 +66,17 @@ var scenes_data = {
 	],
 	'lavadeiras': [
 		'res://scenes/ambience/Lavadeiras.tscn',
-		'end_analyze',
+		'end_lavadeira',
 		true
 	],
 	'travel_scene': [
 		'res://scenes/GUI/TravelScene.tscn',
 		'end_travel_scene',
+		false
+	],
+	'introd_lavadeiras': [
+		'res://scenes/Introductions/Lavadeiras.tscn',
+		'introd_lava',
 		false
 	]
 }
@@ -97,7 +102,7 @@ func start_events():
 		used_scenes[0].instance.start()
 
 func load_audio():
-	if current_scene_name in 'access01,access02,character_choice,diary,suzana':
+	if current_scene_name in 'access01,access02,character_choice,diary,suzana,lavadeiras':
 		var audio = used_scenes[0].instance.play_music()
 		
 		var player_data = $PlayerEntity.read()

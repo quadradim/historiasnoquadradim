@@ -1,5 +1,7 @@
 extends CanvasLayer
 
+signal end_lavadeira
+
 func _ready():
 	pass # Replace with function body.
 

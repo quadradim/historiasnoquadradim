@@ -19,9 +19,8 @@ func _on_ZebrinhaButton_pressed():
 		$MessageBox/MessageText.text = "O veículo selecionado não está disponível"
 		$MessageBox.popup()
 	else:
-		emit_signal("end_travel_scene", "lavadeiras")
+		emit_signal("end_travel_scene", "introd_lavadeiras")
 	pass # Replace with function body.
-
 
 func _on_BrasiliaButton_pressed():
 	if bool(locked_veicles[2]) == false:
