@@ -28,7 +28,7 @@ func load_control_scene(local, name, out_signal):
 	used_scenes.append(new_scene)
 	current_scene_name = name
 	
-	$CurrentScene.add_child(used_scenes[-1].instance)
+	add_child(used_scenes[-1].instance)
 
 func start_events():
 	if current_scene_name == 'access02':
@@ -68,19 +68,19 @@ func _ready():
 	transition_animation.connect('animation_finished', self, 'end_transition_scene')
 	transition_animation.play("fade_out")
 	
-	load_control_scene('res://scenes/GUI/Production.tscn', 'production', 'end_production')
-	used_scenes[0].instance.layer = 1
+	load_control_scene(
+		'res://scenes/GUI/Production.tscn',
+		'production',
+		'end_production'
+	)
 
-func _process(delta):
-	if show_settings:
-		$ConfigurationPopup.layer = 1
-		return
-	$ConfigurationPopup.layer = -1
+	used_scenes[0].instance.layer = 1
 
 func change_scene(scene):
 	for current_scene in scenes_data:
 		if scene == current_scene:
 			if scenes_data[current_scene][2]:
+				$ConfigurationPopup.layer = 2
 				show_settings = true
 			else:
 				$ConfigurationPopup.layer = -1
