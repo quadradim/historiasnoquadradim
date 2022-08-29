@@ -6,6 +6,7 @@ onready var transition_animation_name = "fade_out"
 var used_scenes = []
 
 var logo_scene
+var show_settings = false
 
 class SceneUsed:
 	var instance
@@ -137,7 +138,7 @@ func change_scene(scene):
 	for current_scene in scenes_data:
 		if scene == current_scene:
 			if scenes_data[current_scene][2]:
-				$ConfigurationPopup.layer = 2
+				show_settings = true
 				
 			load_control_scene(
 				scenes_data[current_scene][0],
@@ -145,6 +146,7 @@ func change_scene(scene):
 				scenes_data[current_scene][1]
 			)
 
+	$ConfigurationPopup.layer = -1
 	transition_animation.play("fade_in")
 	transition_animation_name = "fade_in"
 
@@ -157,6 +159,9 @@ func end_transition_scene(anim_name):
 		transition_animation_name = "finish_animations"
 		
 		if used_scenes.size() > 0:
+			if show_settings:
+				$ConfigurationPopup.layer = 2
+			show_settings = false
 			used_scenes[0].instance.layer = 1
 			
 			load_audio()
