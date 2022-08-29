@@ -83,30 +83,39 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -147.0
-margin_top = 4.0
-margin_right = 118.0
-margin_bottom = 66.0
+margin_left = -144.0
+margin_right = 123.0
+margin_bottom = 63.0
 theme = ExtResource( 2 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_fonts/font = SubResource( 2 )
 text = "Iniciar"
 
 [node name="ConfigBtn" type="Button" parent="MenuControl"]
-margin_left = 365.0
-margin_top = 489.0
-margin_right = 632.0
-margin_bottom = 548.0
+margin_left = 368.0
+margin_top = 432.0
+margin_right = 636.0
+margin_bottom = 495.0
 theme = ExtResource( 2 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_fonts/font = SubResource( 3 )
 text = "Configurações"
 
+[node name="Sair" type="Button" parent="MenuControl"]
+margin_left = 368.0
+margin_top = 504.0
+margin_right = 636.0
+margin_bottom = 567.0
+theme = ExtResource( 2 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "Sair"
+
 [node name="EpisodesBtn" type="Button" parent="MenuControl"]
-margin_left = 365.0
-margin_top = 388.0
-margin_right = 633.0
-margin_bottom = 447.0
+margin_left = 368.0
+margin_top = 360.0
+margin_right = 636.0
+margin_bottom = 423.0
 theme = ExtResource( 2 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_fonts/font = SubResource( 4 )
@@ -137,5 +146,6 @@ anims/BackgroundChange = SubResource( 1 )
 [connection signal="exit_button" from="MenuControl/ConfigurationWindow" to="." method="exit_configuration"]
 [connection signal="pressed" from="MenuControl/StartBtn" to="." method="press_game_start"]
 [connection signal="pressed" from="MenuControl/ConfigBtn" to="." method="config_pressed"]
+[connection signal="pressed" from="MenuControl/Sair" to="." method="quit_game"]
 [connection signal="pressed" from="MenuControl/EpisodesBtn" to="." method="episodes_selection_pressed"]
 [connection signal="animation_finished" from="MenuAnimation" to="." method="animation_finished"]

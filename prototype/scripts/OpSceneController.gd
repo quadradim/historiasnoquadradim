@@ -93,6 +93,9 @@ func change_scene(scene):
 			)
 			break
 
+	if scene == "quit":
+		get_tree().quit()
+
 	transition_animation.play("fade_in")
 	transition_animation_name = "fade_in"
 

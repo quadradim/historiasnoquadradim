@@ -20,3 +20,6 @@ func exit_configuration():
 
 func episodes_selection_pressed():
 	emit_signal("end_menu", "episodes_selection")
+
+func quit_game():
+	emit_signal("end_menu", "quit")
