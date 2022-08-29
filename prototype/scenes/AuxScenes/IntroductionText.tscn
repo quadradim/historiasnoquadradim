@@ -1,0 +1,94 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://assets/Styles/Themes/Menu.tres" type="Theme" id=1]
+[ext_resource path="res://assets/Images/Composition/Menu/Padrão3.png" type="Texture" id=2]
+[ext_resource path="res://assets/Images/Composition/Menu/Padrão2.png" type="Texture" id=3]
+[ext_resource path="res://assets/Images/Composition/Menu/Padrão1.png" type="Texture" id=4]
+[ext_resource path="res://assets/Fonts/bebas_neue/BebasNeue-Regular.otf" type="DynamicFontData" id=5]
+[ext_resource path="res://scenes/AuxScenes/IntroductionText.gd" type="Script" id=6]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.945098, 0.933333, 0.905882, 1 )
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color( 0.4, 0.631373, 0.862745, 1 )
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.972549, 0.882353, 0.435294, 1 )
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color( 0.4, 0.631373, 0.862745, 1 )
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[sub_resource type="DynamicFont" id=3]
+font_data = ExtResource( 5 )
+
+[node name="IntroductionText" type="CanvasLayer"]
+script = ExtResource( 6 )
+
+[node name="BackGround" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 1 )
+color = Color( 0.945098, 0.933333, 0.905882, 1 )
+
+[node name="Subackground01" type="Sprite" parent="BackGround"]
+position = Vector2( 200, 478.65 )
+scale = Vector2( 0.308902, 0.288057 )
+texture = ExtResource( 2 )
+
+[node name="Subackground02" type="Sprite" parent="BackGround"]
+position = Vector2( 880, 354.7 )
+scale = Vector2( 0.302746, 0.305539 )
+texture = ExtResource( 4 )
+
+[node name="Subackground03" type="Sprite" parent="BackGround"]
+position = Vector2( 704, 122.7 )
+scale = Vector2( 0.33033, 0.273509 )
+texture = ExtResource( 3 )
+
+[node name="TextPanel" type="Panel" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -328.0
+margin_top = -192.0
+margin_right = 328.0
+margin_bottom = 192.0
+custom_styles/panel = SubResource( 1 )
+
+[node name="Next" type="Button" parent="."]
+margin_left = 744.0
+margin_top = 504.0
+margin_right = 839.0
+margin_bottom = 540.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_styles/normal = SubResource( 2 )
+text = "Próximo"
+
+[node name="Label" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -312.0
+margin_top = -176.0
+margin_right = 304.0
+margin_bottom = 176.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "Uma Mensagem Aqui"
+align = 1
+valign = 1
