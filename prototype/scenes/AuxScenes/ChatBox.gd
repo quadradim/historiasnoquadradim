@@ -12,6 +12,7 @@ var current_text_pos = 0
 var current_text = ''
 var current_dialog = []
 var image_scale = {}
+var line_counter = 0
 
 func load_file(file_src):
 	var file = File.new()
@@ -29,6 +30,7 @@ func load_file(file_src):
 					dialog = ""
 		if is_character_line == false:
 			dialog += current_line
+			line_counter += 1
 	if len(dialog) > 0:
 		current_dialog.append(dialog)
 	file.close()
@@ -62,9 +64,9 @@ func Time_to_write():
 	$Timer.start()
 
 func next_dialog():
-	reset_current_text()
-	text_position += 1
-	if text_position < len(current_dialog):
+	if text_position < line_counter-1:
+		reset_current_text()
+		text_position += 1
 		$ProfileImages.display(
 			img[profile_image_indices[text_position]],
 			image_scale[profile_image_indices[text_position]]
