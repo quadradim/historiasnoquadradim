@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/diaryform.png-bd8f6414d61e2a0cc219fd36e66364c7.stex"
+path="res://.import/Suzana_body.png-d37e710a65536f64a7ca0ef7e7d189e8.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Images/Composition/Diary/diaryform.png"
-dest_files=[ "res://.import/diaryform.png-bd8f6414d61e2a0cc219fd36e66364c7.stex" ]
+source_file="res://assets/Characters/suzana/Suzana_body.png"
+dest_files=[ "res://.import/Suzana_body.png-d37e710a65536f64a7ca0ef7e7d189e8.stex" ]
 
 [params]
 

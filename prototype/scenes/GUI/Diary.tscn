@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=2]
+[gd_scene load_steps=47 format=2]
 
 [ext_resource path="res://assets/Styles/Themes/Menu.tres" type="Theme" id=1]
 [ext_resource path="res://scenes/GUI/Diary.gd" type="Script" id=2]
@@ -6,7 +6,7 @@
 [ext_resource path="res://assets/Images/Composition/Menu/Padrão2.png" type="Texture" id=4]
 [ext_resource path="res://assets/Images/Composition/Menu/Padrão1.png" type="Texture" id=5]
 [ext_resource path="res://assets/Images/Composition/diary/diaryform.png" type="Texture" id=6]
-[ext_resource path="res://assets/Images/Composition/diary/profile.png" type="Texture" id=7]
+[ext_resource path="res://assets/Images/Composition/Diary/ícone1.png" type="Texture" id=7]
 [ext_resource path="res://assets/Images/Composition/CharacterChoice/mochilas/redimensionado/mochila01.png" type="Texture" id=8]
 [ext_resource path="res://assets/Images/Composition/diary/tape.png" type="Texture" id=9]
 [ext_resource path="res://entities/Player.tscn" type="PackedScene" id=10]
@@ -15,6 +15,13 @@
 [ext_resource path="res://assets/Styles/Themes/CharacterChoice.tres" type="Theme" id=13]
 [ext_resource path="res://soundtrack/Loop5 - Diário.mp3" type="AudioStream" id=14]
 [ext_resource path="res://scenes/AuxScenes/AudioController.tscn" type="PackedScene" id=15]
+[ext_resource path="res://assets/Images/Composition/Diary/ícone2.png" type="Texture" id=16]
+[ext_resource path="res://assets/Images/Composition/Diary/ícone 3.png" type="Texture" id=17]
+[ext_resource path="res://assets/Fonts/bebas_neue/BebasNeue-Regular.ttf" type="DynamicFontData" id=18]
+[ext_resource path="res://assets/Images/Composition/Diary/mapa.png" type="Texture" id=19]
+[ext_resource path="res://assets/Images/Composition/Diary/tape.png" type="Texture" id=20]
+[ext_resource path="res://assets/Images/Composition/Diary/1.png" type="Texture" id=21]
+[ext_resource path="res://assets/Characters/suzana/Suzana_body.png" type="Texture" id=22]
 
 [sub_resource type="StyleBoxFlat" id=4]
 bg_color = Color( 1, 0, 0, 0 )
@@ -87,26 +94,6 @@ Tabs/styles/tab_bg = SubResource( 8 )
 Tabs/styles/tab_disabled = SubResource( 9 )
 Tabs/styles/tab_fg = SubResource( 10 )
 
-[sub_resource type="StyleBoxFlat" id=13]
-bg_color = Color( 1, 1, 1, 0.666667 )
-corner_radius_top_left = 5
-corner_radius_top_right = 5
-corner_radius_bottom_right = 5
-corner_radius_bottom_left = 5
-
-[sub_resource type="StyleBoxFlat" id=14]
-bg_color = Color( 1, 1, 1, 0.639216 )
-
-[sub_resource type="DynamicFont" id=15]
-size = 30
-outline_color = Color( 0.4, 0.631373, 0.862745, 1 )
-font_data = ExtResource( 12 )
-
-[sub_resource type="DynamicFont" id=16]
-size = 25
-outline_color = Color( 0.196078, 0.282353, 0.376471, 1 )
-font_data = ExtResource( 12 )
-
 [sub_resource type="Animation" id=17]
 resource_name = "NewGame"
 length = 1.5
@@ -126,6 +113,71 @@ tracks/0/keys = {
 [sub_resource type="DynamicFont" id=18]
 size = 25
 font_data = ExtResource( 12 )
+
+[sub_resource type="StyleBoxFlat" id=13]
+bg_color = Color( 0.92549, 0.886275, 0.835294, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id=14]
+bg_color = Color( 0.92549, 0.886275, 0.835294, 1 )
+
+[sub_resource type="DynamicFont" id=15]
+size = 30
+outline_color = Color( 0.4, 0.631373, 0.862745, 1 )
+font_data = ExtResource( 12 )
+
+[sub_resource type="DynamicFont" id=16]
+size = 25
+outline_color = Color( 0.196078, 0.282353, 0.376471, 1 )
+font_data = ExtResource( 12 )
+
+[sub_resource type="DynamicFont" id=19]
+size = 30
+outline_color = Color( 0.4, 0.631373, 0.862745, 1 )
+font_data = ExtResource( 18 )
+
+[sub_resource type="DynamicFont" id=20]
+size = 30
+font_data = ExtResource( 18 )
+
+[sub_resource type="DynamicFont" id=21]
+size = 30
+font_data = ExtResource( 18 )
+
+[sub_resource type="StyleBoxFlat" id=22]
+bg_color = Color( 0.92549, 0.886275, 0.835294, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="DynamicFont" id=23]
+font_data = ExtResource( 18 )
+
+[sub_resource type="DynamicFont" id=24]
+size = 35
+font_data = ExtResource( 18 )
+
+[sub_resource type="StyleBoxFlat" id=25]
+bg_color = Color( 0.92549, 0.886275, 0.835294, 1 )
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[sub_resource type="StyleBoxFlat" id=26]
+bg_color = Color( 0.92549, 0.886275, 0.835294, 1 )
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[sub_resource type="DynamicFont" id=27]
+size = 18
+font_data = ExtResource( 18 )
 
 [node name="Diary" type="CanvasLayer"]
 script = ExtResource( 2 )
@@ -160,188 +212,23 @@ scale = Vector2( 0.252217, 0.252217 )
 texture = ExtResource( 6 )
 offset = Vector2( 0, 30.4258 )
 
-[node name="ImagesTab" type="TabContainer" parent="."]
-margin_left = 300.869
-margin_top = -156.125
-margin_right = 752.869
-margin_bottom = 264.875
-rect_rotation = 90.0
-rect_pivot_offset = Vector2( 211.224, 424.672 )
-theme = SubResource( 6 )
-tab_align = 0
-
-[node name="Profile" type="Sprite" parent="ImagesTab"]
-position = Vector2( 39.6768, 8.76514 )
-rotation = -1.5708
-scale = Vector2( 0.129982, 0.129982 )
+[node name="ProfileIcon" type="Sprite" parent="."]
+position = Vector2( 928, 95 )
+rotation = -3.57628e-06
+scale = Vector2( 0.252239, 0.276344 )
 texture = ExtResource( 7 )
 
-[node name="ProfileTab" type="Tabs" parent="ImagesTab"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_top = 64.0
-rect_pivot_offset = Vector2( 384.238, 198.554 )
-custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
-custom_colors/font_color_bg = Color( 0, 0, 0, 1 )
-custom_colors/font_color_fg = Color( 0, 0, 0, 1 )
-
-[node name="BackpackPanel" type="Panel" parent="ImagesTab/ProfileTab"]
-margin_left = 95.4057
-margin_top = 5.24017
-margin_right = 315.406
-margin_bottom = 315.24
-custom_styles/panel = SubResource( 13 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="Backpack" type="Sprite" parent="ImagesTab/ProfileTab/BackpackPanel"]
-position = Vector2( 108, 150 )
-rotation = -1.5708
-scale = Vector2( 0.4225, 0.4225 )
-texture = ExtResource( 8 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="Tape1" type="Sprite" parent="ImagesTab/ProfileTab/BackpackPanel"]
-position = Vector2( 13.0001, 292 )
-rotation = 4.2143e-15
-scale = Vector2( 0.210754, 0.210754 )
-texture = ExtResource( 9 )
-
-[node name="Tape2" type="Sprite" parent="ImagesTab/ProfileTab/BackpackPanel"]
-position = Vector2( 187.271, 18.525 )
-rotation = -0.443314
-scale = Vector2( 0.27166, 0.27166 )
-texture = ExtResource( 9 )
-
-[node name="ItemPanel01" type="Panel" parent="ImagesTab/ProfileTab"]
-margin_left = 147.62
-margin_top = 574.541
-margin_right = 270.62
-margin_bottom = 719.541
-rect_rotation = 332.0
-rect_pivot_offset = Vector2( 58.9371, 72.9679 )
-custom_styles/panel = SubResource( 14 )
-
-[node name="hability" type="Sprite" parent="ImagesTab/ProfileTab/ItemPanel01"]
-position = Vector2( 62.2287, 73.9168 )
-rotation = -1.5708
-scale = Vector2( 0.309605, 0.309605 )
-texture = ExtResource( 11 )
-
-[node name="Tape" type="Sprite" parent="ImagesTab/ProfileTab/ItemPanel01"]
-position = Vector2( 15.4455, 12.7994 )
-rotation = -1.40674
-scale = Vector2( 0.147519, 0.147519 )
-texture = ExtResource( 9 )
-
-[node name="Tape2" type="Sprite" parent="ImagesTab/ProfileTab/ItemPanel01"]
-position = Vector2( 113.651, 128.44 )
-rotation = -1.82561
-scale = Vector2( 0.19473, 0.19473 )
-texture = ExtResource( 9 )
-
-[node name="ItemPanel02" type="Panel" parent="ImagesTab/ProfileTab"]
-margin_left = 280.677
-margin_top = 426.765
-margin_right = 403.677
-margin_bottom = 571.765
-rect_rotation = 4.7
-rect_pivot_offset = Vector2( 62.5682, 66.5615 )
-custom_styles/panel = SubResource( 14 )
-
-[node name="hability" type="Sprite" parent="ImagesTab/ProfileTab/ItemPanel02"]
-position = Vector2( 63.608, 73.9396 )
-rotation = -1.5708
-scale = Vector2( 0.309605, 0.309605 )
-texture = ExtResource( 11 )
-
-[node name="Tape" type="Sprite" parent="ImagesTab/ProfileTab/ItemPanel02"]
-position = Vector2( 15.4455, 12.7994 )
-rotation = -1.40674
-scale = Vector2( 0.147519, 0.147519 )
-texture = ExtResource( 9 )
-
-[node name="Tape2" type="Sprite" parent="ImagesTab/ProfileTab/ItemPanel02"]
-position = Vector2( 113.651, 128.44 )
-rotation = -1.82561
-scale = Vector2( 0.19473, 0.19473 )
-texture = ExtResource( 9 )
-
-[node name="ItemPanel03" type="Panel" parent="ImagesTab/ProfileTab"]
-margin_left = 94.677
-margin_top = 384.765
-margin_right = 217.677
-margin_bottom = 529.765
-rect_pivot_offset = Vector2( 62.5682, 66.5615 )
-custom_styles/panel = SubResource( 14 )
-
-[node name="hability" type="Sprite" parent="ImagesTab/ProfileTab/ItemPanel03"]
-position = Vector2( 62.2287, 73.9168 )
-rotation = -1.5708
-scale = Vector2( 0.309605, 0.309605 )
-texture = ExtResource( 11 )
-
-[node name="Tape" type="Sprite" parent="ImagesTab/ProfileTab/ItemPanel03"]
-position = Vector2( 15.4455, 12.7994 )
-rotation = -1.40674
-scale = Vector2( 0.147519, 0.147519 )
-texture = ExtResource( 9 )
-
-[node name="Tape2" type="Sprite" parent="ImagesTab/ProfileTab/ItemPanel03"]
-position = Vector2( 113.651, 128.44 )
-rotation = -1.82561
-scale = Vector2( 0.19473, 0.19473 )
-texture = ExtResource( 9 )
-
-[node name="PageTitle" type="Label" parent="ImagesTab/ProfileTab"]
-margin_left = 77.6766
-margin_top = 505.765
-margin_right = 339.677
-margin_bottom = 560.765
-rect_rotation = 270.0
-rect_pivot_offset = Vector2( 46.1897, 124.584 )
-custom_colors/font_color = Color( 0.4, 0.631373, 0.862745, 1 )
-custom_fonts/font = SubResource( 15 )
-text = "Historiador"
-align = 1
-valign = 1
-
-[node name="HistorianName" type="Label" parent="ImagesTab/ProfileTab"]
-margin_left = 112.677
-margin_top = 516.765
-margin_right = 374.677
-margin_bottom = 571.765
-rect_rotation = 270.0
-rect_pivot_offset = Vector2( 46.1897, 124.584 )
-custom_colors/font_color = Color( 0.196078, 0.282353, 0.376471, 1 )
-custom_fonts/font = SubResource( 16 )
-text = "Nome"
-align = 1
-valign = 1
-
-[node name="Tabs2" type="Tabs" parent="ImagesTab"]
-visible = false
-margin_right = 40.0
-margin_bottom = 24.0
-
-[node name="PlayerEntitiy" parent="." instance=ExtResource( 10 )]
-
-[node name="FirstAccessMessageAnimation" type="AnimationPlayer" parent="."]
-method_call_mode = 1
-anims/NewGame = SubResource( 17 )
-
 [node name="FirstAccessMessage" type="WindowDialog" parent="."]
+visible = true
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -264.0
-margin_top = -106.0
-margin_right = 264.0
-margin_bottom = 106.0
+margin_left = -512.0
+margin_top = -208.0
+margin_right = 16.0002
+margin_bottom = 4.0
+rect_scale = Vector2( 1e-05, 1e-05 )
 rect_pivot_offset = Vector2( 257, 104 )
 theme = ExtResource( 13 )
 
@@ -360,7 +247,45 @@ align = 1
 valign = 1
 autowrap = true
 
-[node name="Button" type="Button" parent="."]
+[node name="PlayerButton" type="TextureButton" parent="."]
+margin_left = 328.0
+margin_top = -163.0
+margin_right = 417.0
+margin_bottom = -91.0
+rect_rotation = 90.0
+rect_pivot_offset = Vector2( 211.224, 424.672 )
+theme = SubResource( 6 )
+
+[node name="MapButton" type="TextureButton" parent="."]
+margin_left = 892.0
+margin_top = 147.0
+margin_right = 963.0
+margin_bottom = 235.0
+
+[node name="CharactersButton" type="TextureButton" parent="."]
+margin_left = 894.0
+margin_top = 246.0
+margin_right = 965.0
+margin_bottom = 334.0
+rect_pivot_offset = Vector2( -824, -38 )
+
+[node name="MapIcon" type="Sprite" parent="."]
+position = Vector2( 926, 193 )
+scale = Vector2( 0.23652, 0.23652 )
+texture = ExtResource( 16 )
+
+[node name="CharactersIcon" type="Sprite" parent="."]
+position = Vector2( 928, 288 )
+scale = Vector2( 0.232954, 0.232954 )
+texture = ExtResource( 17 )
+
+[node name="PlayerEntitiy" parent="." instance=ExtResource( 10 )]
+
+[node name="FirstAccessMessageAnimation" type="AnimationPlayer" parent="."]
+method_call_mode = 1
+anims/NewGame = SubResource( 17 )
+
+[node name="NextButton" type="Button" parent="."]
 margin_left = 885.0
 margin_top = 517.0
 margin_right = 1017.0
@@ -373,4 +298,388 @@ text = "Próximo"
 [node name="MainMusic" parent="." instance=ExtResource( 15 )]
 stream = ExtResource( 14 )
 
-[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
+[node name="ProfileTab" type="Tabs" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 287.0
+margin_top = 231.0
+margin_right = 287.0
+margin_bottom = 172.0
+rect_rotation = 90.0
+rect_pivot_offset = Vector2( 384.238, 198.554 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_bg = Color( 0, 0, 0, 1 )
+custom_colors/font_color_fg = Color( 0, 0, 0, 1 )
+
+[node name="BackpackPanel" type="Panel" parent="ProfileTab"]
+margin_left = 95.4057
+margin_top = 5.24017
+margin_right = 315.406
+margin_bottom = 315.24
+custom_styles/panel = SubResource( 13 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Backpack" type="Sprite" parent="ProfileTab/BackpackPanel"]
+position = Vector2( 108, 150 )
+rotation = -1.5708
+scale = Vector2( 0.4225, 0.4225 )
+texture = ExtResource( 8 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Tape1" type="Sprite" parent="ProfileTab/BackpackPanel"]
+position = Vector2( 13.0001, 292 )
+rotation = 4.2143e-15
+scale = Vector2( 0.210754, 0.210754 )
+texture = ExtResource( 9 )
+
+[node name="Tape2" type="Sprite" parent="ProfileTab/BackpackPanel"]
+position = Vector2( 187.271, 18.525 )
+rotation = -0.443314
+scale = Vector2( 0.27166, 0.27166 )
+texture = ExtResource( 9 )
+
+[node name="ItemPanel01" type="Panel" parent="ProfileTab"]
+margin_left = 147.62
+margin_top = 574.541
+margin_right = 270.62
+margin_bottom = 719.541
+rect_rotation = 332.0
+rect_pivot_offset = Vector2( 58.9371, 72.9679 )
+custom_styles/panel = SubResource( 14 )
+
+[node name="hability" type="Sprite" parent="ProfileTab/ItemPanel01"]
+position = Vector2( 62.2287, 73.9168 )
+rotation = -1.5708
+scale = Vector2( 0.309605, 0.309605 )
+texture = ExtResource( 11 )
+
+[node name="Tape" type="Sprite" parent="ProfileTab/ItemPanel01"]
+position = Vector2( 15.4455, 12.7994 )
+rotation = -1.40674
+scale = Vector2( 0.147519, 0.147519 )
+texture = ExtResource( 9 )
+
+[node name="Tape2" type="Sprite" parent="ProfileTab/ItemPanel01"]
+position = Vector2( 113.651, 128.44 )
+rotation = -1.82561
+scale = Vector2( 0.19473, 0.19473 )
+texture = ExtResource( 9 )
+
+[node name="ItemPanel02" type="Panel" parent="ProfileTab"]
+margin_left = 280.677
+margin_top = 426.765
+margin_right = 403.677
+margin_bottom = 571.765
+rect_rotation = 4.7
+rect_pivot_offset = Vector2( 62.5682, 66.5615 )
+custom_styles/panel = SubResource( 14 )
+
+[node name="hability" type="Sprite" parent="ProfileTab/ItemPanel02"]
+position = Vector2( 63.608, 73.9396 )
+rotation = -1.5708
+scale = Vector2( 0.309605, 0.309605 )
+texture = ExtResource( 11 )
+
+[node name="Tape" type="Sprite" parent="ProfileTab/ItemPanel02"]
+position = Vector2( 15.4455, 12.7994 )
+rotation = -1.40674
+scale = Vector2( 0.147519, 0.147519 )
+texture = ExtResource( 9 )
+
+[node name="Tape2" type="Sprite" parent="ProfileTab/ItemPanel02"]
+position = Vector2( 113.651, 128.44 )
+rotation = -1.82561
+scale = Vector2( 0.19473, 0.19473 )
+texture = ExtResource( 9 )
+
+[node name="ItemPanel03" type="Panel" parent="ProfileTab"]
+margin_left = 94.677
+margin_top = 384.765
+margin_right = 217.677
+margin_bottom = 529.765
+rect_pivot_offset = Vector2( 62.5682, 66.5615 )
+custom_styles/panel = SubResource( 14 )
+
+[node name="hability" type="Sprite" parent="ProfileTab/ItemPanel03"]
+position = Vector2( 62.2287, 73.9168 )
+rotation = -1.5708
+scale = Vector2( 0.309605, 0.309605 )
+texture = ExtResource( 11 )
+
+[node name="Tape" type="Sprite" parent="ProfileTab/ItemPanel03"]
+position = Vector2( 15.4455, 12.7994 )
+rotation = -1.40674
+scale = Vector2( 0.147519, 0.147519 )
+texture = ExtResource( 9 )
+
+[node name="Tape2" type="Sprite" parent="ProfileTab/ItemPanel03"]
+position = Vector2( 113.651, 128.44 )
+rotation = -1.82561
+scale = Vector2( 0.19473, 0.19473 )
+texture = ExtResource( 9 )
+
+[node name="PageTitle" type="Label" parent="ProfileTab"]
+margin_left = 77.6766
+margin_top = 505.765
+margin_right = 339.677
+margin_bottom = 560.765
+rect_rotation = 270.0
+rect_pivot_offset = Vector2( 46.1897, 124.584 )
+custom_colors/font_color = Color( 0.4, 0.631373, 0.862745, 1 )
+custom_fonts/font = SubResource( 15 )
+text = "Historiador"
+align = 1
+valign = 1
+
+[node name="HistorianName" type="Label" parent="ProfileTab"]
+margin_left = 112.677
+margin_top = 516.765
+margin_right = 374.677
+margin_bottom = 571.765
+rect_rotation = 270.0
+rect_pivot_offset = Vector2( 46.1897, 124.584 )
+custom_colors/font_color = Color( 0.196078, 0.282353, 0.376471, 1 )
+custom_fonts/font = SubResource( 16 )
+text = "Nome"
+align = 1
+valign = 1
+
+[node name="MapTab" type="Tabs" parent="."]
+visible = false
+margin_right = 40.0
+margin_bottom = 24.0
+
+[node name="Map" type="Sprite" parent="MapTab"]
+position = Vector2( 705, 250.875 )
+scale = Vector2( 0.254032, 0.254032 )
+texture = ExtResource( 19 )
+
+[node name="City1" type="Label" parent="MapTab"]
+margin_left = 161.0
+margin_top = 86.875
+margin_right = 368.0
+margin_bottom = 131.875
+custom_colors/font_color = Color( 0.4, 0.631373, 0.862745, 1 )
+custom_fonts/font = SubResource( 19 )
+text = "-Núcleo bandeirante"
+
+[node name="City1Button" type="TextureButton" parent="MapTab/City1"]
+margin_left = -4.00003
+margin_top = 0.125031
+margin_right = 211.0
+margin_bottom = 32.125
+
+[node name="City2" type="Label" parent="MapTab"]
+margin_left = 161.0
+margin_top = 134.875
+margin_right = 375.0
+margin_bottom = 177.875
+custom_colors/font_color = Color( 0.4, 0.631373, 0.862745, 1 )
+custom_fonts/font = SubResource( 20 )
+text = "-Taguatinga"
+
+[node name="City2Button" type="TextureButton" parent="MapTab/City2"]
+margin_left = -4.0
+margin_top = 1.0
+margin_right = 132.0
+margin_bottom = 33.0
+
+[node name="City3" type="Label" parent="MapTab"]
+margin_left = 161.0
+margin_top = 182.875
+margin_right = 371.0
+margin_bottom = 230.875
+custom_colors/font_color = Color( 0.4, 0.631373, 0.862745, 1 )
+custom_fonts/font = SubResource( 21 )
+text = "-Plano Piloto"
+
+[node name="City3Button" type="TextureButton" parent="MapTab/City3"]
+margin_right = 138.0
+margin_bottom = 32.0
+
+[node name="Panel" type="Panel" parent="MapTab"]
+margin_left = 156.822
+margin_top = 265.62
+margin_right = 482.822
+margin_bottom = 441.62
+custom_styles/panel = SubResource( 22 )
+
+[node name="Tape1" type="Sprite" parent="MapTab"]
+position = Vector2( 172.822, 268.62 )
+rotation = 1.90241
+scale = Vector2( 0.121803, 0.121803 )
+texture = ExtResource( 20 )
+
+[node name="Tape2" type="Sprite" parent="MapTab"]
+position = Vector2( 470.822, 431.62 )
+rotation = 1.5708
+scale = Vector2( 0.104412, 0.104412 )
+texture = ExtResource( 20 )
+
+[node name="CityDescription" type="Label" parent="MapTab"]
+margin_left = 183.0
+margin_top = 290.875
+margin_right = 475.0
+margin_bottom = 416.875
+custom_colors/font_color = Color( 0.290196, 0.211765, 0.290196, 1 )
+custom_fonts/font = SubResource( 23 )
+text = "texto falando umpouco sobre a cidade e seu contexto 
+social histórico.
+"
+
+[node name="CharactersTab" type="Tabs" parent="."]
+visible = false
+margin_right = 40.0
+margin_bottom = 24.0
+
+[node name="Title" type="Label" parent="CharactersTab"]
+anchor_left = -8.694
+anchor_top = -1.175
+anchor_right = -8.694
+anchor_bottom = -1.175
+margin_left = 543.76
+margin_top = 100.2
+margin_right = 790.76
+margin_bottom = 143.2
+custom_colors/font_color = Color( 0.4, 0.631373, 0.862745, 1 )
+custom_fonts/font = SubResource( 24 )
+text = "Personagens"
+align = 1
+
+[node name="CharactersBackground" type="Sprite" parent="CharactersTab"]
+position = Vector2( 329, 302 )
+scale = Vector2( 0.232984, 0.232984 )
+texture = ExtResource( 21 )
+
+[node name="CharacterBackground" type="Panel" parent="CharactersTab"]
+anchor_left = -1.005
+anchor_top = -0.811
+anchor_right = -1.005
+anchor_bottom = -0.811
+margin_left = 584.2
+margin_top = 107.464
+margin_right = 912.2
+margin_bottom = 394.464
+custom_styles/panel = SubResource( 25 )
+__meta__ = {
+"_editor_description_": "	"
+}
+
+[node name="DescriptionBackground" type="Panel" parent="CharactersTab"]
+anchor_bottom = 0.227
+margin_left = 544.0
+margin_top = 392.0
+margin_right = 872.0
+margin_bottom = 473.552
+custom_styles/panel = SubResource( 26 )
+
+[node name="DescriptionText" type="Label" parent="CharactersTab"]
+margin_left = 555.0
+margin_top = 397.0
+margin_right = 861.0
+margin_bottom = 450.0
+custom_colors/font_color = Color( 0.290196, 0.211765, 0.290196, 1 )
+custom_fonts/font = SubResource( 27 )
+text = "Texto falando umpouco sobre o personagem e
+ seu contexto social historico."
+
+[node name="Character1" type="Sprite" parent="CharactersTab"]
+position = Vector2( 223, 204 )
+scale = Vector2( 0.102218, 0.102218 )
+texture = ExtResource( 22 )
+
+[node name="Character1Button" type="TextureButton" parent="CharactersTab/Character1"]
+margin_left = -489.0
+margin_top = -470.0
+margin_right = 460.0
+margin_bottom = 450.0
+
+[node name="Character2" type="Sprite" parent="CharactersTab"]
+position = Vector2( 888.563, 238.563 )
+
+[node name="Character2Button" type="TextureButton" parent="CharactersTab/Character2"]
+anchor_bottom = 1.0
+margin_left = -613.0
+margin_top = -82.0
+margin_right = -519.0
+margin_bottom = 9.0
+
+[node name="Character3" type="Sprite" parent="CharactersTab"]
+position = Vector2( 888.563, 238.563 )
+
+[node name="Character3Button" type="TextureButton" parent="CharactersTab/Character3"]
+margin_left = -515.0
+margin_top = -82.0
+margin_right = -418.0
+margin_bottom = 12.0
+
+[node name="Character4" type="Sprite" parent="CharactersTab"]
+position = Vector2( 888.563, 238.563 )
+
+[node name="Character4Button" type="TextureButton" parent="CharactersTab/Character4"]
+margin_left = -714.0
+margin_top = 16.0
+margin_right = -618.0
+margin_bottom = 111.0
+
+[node name="Character5" type="Sprite" parent="CharactersTab"]
+position = Vector2( 888.563, 238.563 )
+
+[node name="Character5Button" type="TextureButton" parent="CharactersTab/Character5"]
+margin_left = -614.0
+margin_top = 17.0
+margin_right = -518.0
+margin_bottom = 109.0
+
+[node name="Character6" type="Sprite" parent="CharactersTab"]
+position = Vector2( 888.563, 238.563 )
+
+[node name="Character6Button" type="TextureButton" parent="CharactersTab/Character6"]
+margin_left = -514.0
+margin_top = 18.0
+margin_right = -418.0
+margin_bottom = 109.0
+
+[node name="Character7" type="Sprite" parent="CharactersTab"]
+position = Vector2( 888.563, 238.563 )
+
+[node name="Character7Button" type="TextureButton" parent="CharactersTab/Character7"]
+margin_left = -714.0
+margin_top = 115.0
+margin_right = -619.0
+margin_bottom = 209.0
+
+[node name="Character8" type="Sprite" parent="CharactersTab"]
+position = Vector2( 888.563, 238.563 )
+
+[node name="Character8Button" type="TextureButton" parent="CharactersTab/Character8"]
+margin_left = -613.0
+margin_top = 115.0
+margin_right = -517.0
+margin_bottom = 210.0
+
+[node name="Character9" type="Sprite" parent="CharactersTab"]
+position = Vector2( 888.563, 238.563 )
+
+[node name="Character9Button" type="TextureButton" parent="CharactersTab/Character9"]
+margin_left = -515.0
+margin_top = 117.0
+margin_right = -418.0
+margin_bottom = 209.0
+
+[node name="CharacterZoom" type="Sprite" parent="CharactersTab"]
+position = Vector2( 694, 231 )
+scale = Vector2( 0.315949, 0.315949 )
+
+[connection signal="pressed" from="PlayerButton" to="." method="_on_PlayerButton_pressed"]
+[connection signal="pressed" from="MapButton" to="." method="_on_MapButton_pressed"]
+[connection signal="pressed" from="CharactersButton" to="." method="_on_CharactersButton_pressed"]
+[connection signal="pressed" from="NextButton" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="MapTab/City1/City1Button" to="." method="_on_City1Button_pressed"]
+[connection signal="pressed" from="MapTab/City2/City2Button" to="." method="_on_City2Button_pressed"]
+[connection signal="pressed" from="MapTab/City3/City3Button" to="." method="_on_City3Button_pressed"]
+[connection signal="pressed" from="CharactersTab/Character1/Character1Button" to="." method="_on_Character1Button_pressed"]

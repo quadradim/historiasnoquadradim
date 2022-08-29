@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/profile.png-ed3a5b9e8b7f9d9fdf1d1b398e79ee6b.stex"
+path="res://.import/Historiometro.png-335bb68d05bef953ec504f5345adeac9.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Images/Composition/diary/profile.png"
-dest_files=[ "res://.import/profile.png-ed3a5b9e8b7f9d9fdf1d1b398e79ee6b.stex" ]
+source_file="res://assets/Images/Composition/Diary/Historiometro.png"
+dest_files=[ "res://.import/Historiometro.png-335bb68d05bef953ec504f5345adeac9.stex" ]
 
 [params]
 
@@ -21,8 +21,8 @@ compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
 flags/filter=true
-flags/mipmaps=true
-flags/anisotropic=true
+flags/mipmaps=false
+flags/anisotropic=false
 flags/srgb=2
 process/fix_alpha_border=true
 process/premult_alpha=false
