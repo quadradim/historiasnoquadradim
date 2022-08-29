@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=2]
+[gd_scene load_steps=46 format=2]
 
 [ext_resource path="res://assets/Styles/Themes/Menu.tres" type="Theme" id=1]
 [ext_resource path="res://scenes/GUI/Diary.gd" type="Script" id=2]
@@ -6,21 +6,20 @@
 [ext_resource path="res://assets/Images/Composition/Menu/Padrão2.png" type="Texture" id=4]
 [ext_resource path="res://assets/Images/Composition/Menu/Padrão1.png" type="Texture" id=5]
 [ext_resource path="res://assets/Images/Composition/diary/diaryform.png" type="Texture" id=6]
-[ext_resource path="res://assets/Images/Composition/Diary/ícone1.png" type="Texture" id=7]
+[ext_resource path="res://assets/Images/Composition/diary/ícone1.png" type="Texture" id=7]
 [ext_resource path="res://assets/Images/Composition/CharacterChoice/mochilas/redimensionado/mochila01.png" type="Texture" id=8]
-[ext_resource path="res://assets/Images/Composition/diary/tape.png" type="Texture" id=9]
 [ext_resource path="res://entities/Player.tscn" type="PackedScene" id=10]
 [ext_resource path="res://assets/Images/Composition/CharacterChoice/chapéu2.png" type="Texture" id=11]
 [ext_resource path="res://assets/Fonts/arial/Arialn.ttf" type="DynamicFontData" id=12]
 [ext_resource path="res://assets/Styles/Themes/CharacterChoice.tres" type="Theme" id=13]
 [ext_resource path="res://soundtrack/Loop5 - Diário.mp3" type="AudioStream" id=14]
 [ext_resource path="res://scenes/AuxScenes/AudioController.tscn" type="PackedScene" id=15]
-[ext_resource path="res://assets/Images/Composition/Diary/ícone2.png" type="Texture" id=16]
-[ext_resource path="res://assets/Images/Composition/Diary/ícone 3.png" type="Texture" id=17]
+[ext_resource path="res://assets/Images/Composition/diary/ícone2.png" type="Texture" id=16]
+[ext_resource path="res://assets/Images/Composition/diary/ícone 3.png" type="Texture" id=17]
 [ext_resource path="res://assets/Fonts/bebas_neue/BebasNeue-Regular.ttf" type="DynamicFontData" id=18]
-[ext_resource path="res://assets/Images/Composition/Diary/mapa.png" type="Texture" id=19]
-[ext_resource path="res://assets/Images/Composition/Diary/tape.png" type="Texture" id=20]
-[ext_resource path="res://assets/Images/Composition/Diary/1.png" type="Texture" id=21]
+[ext_resource path="res://assets/Images/Composition/diary/mapa.png" type="Texture" id=19]
+[ext_resource path="res://assets/Images/Composition/diary/tape.png" type="Texture" id=20]
+[ext_resource path="res://assets/Images/Composition/diary/1.png" type="Texture" id=21]
 [ext_resource path="res://assets/Characters/suzana/Suzana_body.png" type="Texture" id=22]
 
 [sub_resource type="StyleBoxFlat" id=4]
@@ -334,13 +333,13 @@ __meta__ = {
 position = Vector2( 13.0001, 292 )
 rotation = 4.2143e-15
 scale = Vector2( 0.210754, 0.210754 )
-texture = ExtResource( 9 )
+texture = ExtResource( 20 )
 
 [node name="Tape2" type="Sprite" parent="ProfileTab/BackpackPanel"]
 position = Vector2( 187.271, 18.525 )
 rotation = -0.443314
 scale = Vector2( 0.27166, 0.27166 )
-texture = ExtResource( 9 )
+texture = ExtResource( 20 )
 
 [node name="ItemPanel01" type="Panel" parent="ProfileTab"]
 margin_left = 147.62
@@ -361,13 +360,13 @@ texture = ExtResource( 11 )
 position = Vector2( 15.4455, 12.7994 )
 rotation = -1.40674
 scale = Vector2( 0.147519, 0.147519 )
-texture = ExtResource( 9 )
+texture = ExtResource( 20 )
 
 [node name="Tape2" type="Sprite" parent="ProfileTab/ItemPanel01"]
 position = Vector2( 113.651, 128.44 )
 rotation = -1.82561
 scale = Vector2( 0.19473, 0.19473 )
-texture = ExtResource( 9 )
+texture = ExtResource( 20 )
 
 [node name="ItemPanel02" type="Panel" parent="ProfileTab"]
 margin_left = 280.677
@@ -388,13 +387,13 @@ texture = ExtResource( 11 )
 position = Vector2( 15.4455, 12.7994 )
 rotation = -1.40674
 scale = Vector2( 0.147519, 0.147519 )
-texture = ExtResource( 9 )
+texture = ExtResource( 20 )
 
 [node name="Tape2" type="Sprite" parent="ProfileTab/ItemPanel02"]
 position = Vector2( 113.651, 128.44 )
 rotation = -1.82561
 scale = Vector2( 0.19473, 0.19473 )
-texture = ExtResource( 9 )
+texture = ExtResource( 20 )
 
 [node name="ItemPanel03" type="Panel" parent="ProfileTab"]
 margin_left = 94.677
@@ -414,13 +413,13 @@ texture = ExtResource( 11 )
 position = Vector2( 15.4455, 12.7994 )
 rotation = -1.40674
 scale = Vector2( 0.147519, 0.147519 )
-texture = ExtResource( 9 )
+texture = ExtResource( 20 )
 
 [node name="Tape2" type="Sprite" parent="ProfileTab/ItemPanel03"]
 position = Vector2( 113.651, 128.44 )
 rotation = -1.82561
 scale = Vector2( 0.19473, 0.19473 )
-texture = ExtResource( 9 )
+texture = ExtResource( 20 )
 
 [node name="PageTitle" type="Label" parent="ProfileTab"]
 margin_left = 77.6766

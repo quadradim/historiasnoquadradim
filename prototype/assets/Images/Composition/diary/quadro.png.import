@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/quadro.png-7cefe1768a3aa8d2f1f1cf09645ed838.stex"
+path="res://.import/quadro.png-de066a6591dd317bc0d1b20f6cbdadca.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Images/Composition/Diary/quadro.png"
-dest_files=[ "res://.import/quadro.png-7cefe1768a3aa8d2f1f1cf09645ed838.stex" ]
+source_file="res://assets/Images/Composition/diary/quadro.png"
+dest_files=[ "res://.import/quadro.png-de066a6591dd317bc0d1b20f6cbdadca.stex" ]
 
 [params]
 
