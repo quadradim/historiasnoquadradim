@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://scenes/AuxScenes/ConfigurationWindow.gd" type="Script" id=1]
 [ext_resource path="res://assets/Fonts/bebas_neue/BebasNeue-Regular.otf" type="DynamicFontData" id=2]
@@ -81,6 +81,10 @@ corner_radius_top_left = 2
 corner_radius_top_right = 2
 corner_radius_bottom_right = 2
 corner_radius_bottom_left = 2
+
+[sub_resource type="DynamicFont" id=9]
+outline_color = Color( 0.0235294, 0.0313726, 0.109804, 1 )
+font_data = ExtResource( 2 )
 
 [node name="Configuration" type="CanvasLayer"]
 script = ExtResource( 1 )
@@ -178,10 +182,10 @@ text = "0"
 align = 1
 
 [node name="Button" type="Button" parent="PanelConfig"]
-margin_left = 433.0
-margin_top = 262.0
-margin_right = 505.0
-margin_bottom = 290.0
+margin_left = 393.0
+margin_top = 254.0
+margin_right = 506.0
+margin_bottom = 291.0
 custom_colors/font_color = Color( 0.215686, 0.298039, 0.388235, 1 )
 custom_colors/font_color_hover = Color( 0.356863, 0.435294, 0.521569, 1 )
 custom_colors/font_color_pressed = Color( 0.356863, 0.435294, 0.521569, 1 )
@@ -189,10 +193,25 @@ custom_fonts/font = SubResource( 5 )
 custom_styles/hover = SubResource( 8 )
 custom_styles/pressed = SubResource( 7 )
 custom_styles/normal = SubResource( 6 )
-text = "Sair"
+text = "Fechar"
+
+[node name="Button2" type="Button" parent="PanelConfig"]
+margin_left = 33.0
+margin_top = 255.0
+margin_right = 145.0
+margin_bottom = 292.0
+custom_colors/font_color = Color( 0.215686, 0.298039, 0.388235, 1 )
+custom_fonts/font = SubResource( 9 )
+custom_styles/hover = SubResource( 8 )
+custom_styles/pressed = SubResource( 8 )
+custom_styles/focus = SubResource( 8 )
+custom_styles/disabled = SubResource( 8 )
+custom_styles/normal = SubResource( 8 )
+text = "Menu"
 
 [node name="PlayerEntity" parent="." instance=ExtResource( 3 )]
 
 [connection signal="value_changed" from="PanelConfig/Soundeffect" to="." method="change_soundeffect"]
 [connection signal="value_changed" from="PanelConfig/Soundtrack" to="." method="change_soundtrack"]
 [connection signal="pressed" from="PanelConfig/Button" to="." method="button_pressed"]
+[connection signal="pressed" from="PanelConfig/Button2" to="." method="menu_button_pressed"]

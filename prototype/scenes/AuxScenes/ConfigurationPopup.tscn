@@ -28,4 +28,5 @@ expand_icon = true
 layer = 2
 
 [connection signal="pressed" from="Button" to="." method="popup_config_window"]
+[connection signal="back_menu" from="ConfigurationWindow" to="." method="back_menu"]
 [connection signal="exit_button" from="ConfigurationWindow" to="." method="hide_window"]

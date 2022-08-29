@@ -1,6 +1,7 @@
 extends CanvasLayer
 
 signal exit_button
+signal back_menu
 
 var player_data
 
@@ -54,3 +55,6 @@ func change_soundeffect(value):
 func change_soundtrack(value):
 	player_data["soundtrack"] = value
 	$PlayerEntity.insert(player_data)
+
+func menu_button_pressed():
+	emit_signal("back_menu")

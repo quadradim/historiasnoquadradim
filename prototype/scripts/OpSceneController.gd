@@ -28,7 +28,7 @@ func load_control_scene(local, name, out_signal):
 	used_scenes.append(new_scene)
 	current_scene_name = name
 	
-	add_child(used_scenes[-1].instance)
+	$CurrentScene.add_child(used_scenes[-1].instance)
 
 func start_events():
 	if current_scene_name == 'access02':
@@ -57,8 +57,7 @@ func create_player():
 	)
 	
 func _ready():
-	scenes_data = preload("res://scenes/AuxScenes/LoadedScenes.gd")
-	scenes_data = scenes_data.new()
+	scenes_data = preload("res://scenes/AuxScenes/LoadedScenes.gd").new()
 	scenes_data = scenes_data.scenes_data
 	
 	if not $PlayerEntity.player_exists():
@@ -74,15 +73,17 @@ func _ready():
 
 func _process(delta):
 	if show_settings:
-		$ConfigurationPopup.layer = 2
+		$ConfigurationPopup.layer = 1
+		return
+	$ConfigurationPopup.layer = -1
 
 func change_scene(scene):
 	for current_scene in scenes_data:
 		if scene == current_scene:
 			if scenes_data[current_scene][2]:
-				$ConfigurationPopup.layer = 1
 				show_settings = true
 			else:
+				$ConfigurationPopup.layer = -1
 				show_settings = false
 				
 			load_control_scene(
@@ -111,3 +112,6 @@ func end_transition_scene(anim_name):
 			
 	elif transition_animation_name == "fade_out":
 		transition_animation_name = "fade_in"
+
+func setting_back_menu():
+	change_scene('menu')
