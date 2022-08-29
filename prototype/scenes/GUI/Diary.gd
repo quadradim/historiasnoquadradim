@@ -45,7 +45,7 @@ func _process(delta):
 	$MainMusic.update("soundtrack")
 
 func _on_Button_pressed():
-	emit_signal("end_diary", "suzana")
+	emit_signal("end_diary", "travel_scene")
 
 func play_music():
 	return $MainMusic

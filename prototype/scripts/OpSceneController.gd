@@ -65,10 +65,15 @@ var scenes_data = {
 		false
 	],
 	'lavadeiras': [
-		'res://scenes/observation/PhotoAnalyze.tscn',
+		'res://scenes/ambience/Lavadeiras.tscn',
 		'end_analyze',
-		false
+		true
 	],
+	'travel_scene': [
+		'res://scenes/GUI/TravelScene.tscn',
+		'end_travel_scene',
+		false
+	]
 }
 
 func load_control_scene(local, name, out_signal):
