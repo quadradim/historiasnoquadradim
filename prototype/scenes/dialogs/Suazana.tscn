@@ -40,6 +40,7 @@ margin_right = 62.0
 margin_bottom = 200.0
 img = [ ExtResource( 5 ), ExtResource( 6 ) ]
 cha = [ "*P*", "*S*" ]
+image_scales = [ Vector2( 0.05, 0.05 ), Vector2( 0.175, 0.175 ) ]
 has_profile = true
 
 [node name="MainMusic" parent="." instance=ExtResource( 8 )]

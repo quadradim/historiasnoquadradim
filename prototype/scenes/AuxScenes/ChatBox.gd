@@ -4,8 +4,10 @@ export(String, FILE) var chat_res
 signal end_dialog
 signal new_dialog
 signal Display
+
 export (Array, Resource) var img
 export (Array, String) var cha
+export (Array, Vector2) var image_scales
 
 var profile_image_indices = []
 var text_position = 0
@@ -44,14 +46,15 @@ func reset_current_text():
 	current_text_pos = 0
 
 func _ready():
-	image_scale[0] = Vector2(0.05,0.05)
-	image_scale[1] = Vector2(0.175,0.175)
+#	image_scale[0] = Vector2(0.05,0.05)
+#	image_scale[1] = Vector2(0.175,0.175)
 	
 	load_file(str(chat_res))
 	if has_profile:
 		$ProfileImages.display(
 			img[profile_image_indices[text_position]],
-			Vector2(0.05,0.05)
+			image_scales[profile_image_indices[text_position]]
+#			Vector2(0.05,0.05)
 		)
 
 func hide_profile():
@@ -77,7 +80,8 @@ func next_dialog():
 		if has_profile:
 			$ProfileImages.display(
 				img[profile_image_indices[text_position]],
-				image_scale[profile_image_indices[text_position]]
+				image_scales[profile_image_indices[text_position]]
+#				image_scale[profile_image_indices[text_position]]
 			)
 		
 		emit_signal("new_dialog")
@@ -92,5 +96,6 @@ func previous_dialog():
 		if has_profile:
 			$ProfileImages.display(
 				img[profile_image_indices[text_position]],
-				image_scale[profile_image_indices[text_position]]
+				image_scales[profile_image_indices[text_position]]
+#				image_scale[profile_image_indices[text_position]]
 			)
