@@ -2,6 +2,7 @@ extends Control
 
 export(String, FILE) var chat_res
 signal end_dialog
+signal new_dialog
 signal Display
 export (Array, Resource) var img
 export (Array, String) var cha
@@ -13,6 +14,8 @@ var current_text = ''
 var current_dialog = []
 var image_scale = {}
 var line_counter = 0
+
+export(bool) var has_profile
 
 func load_file(file_src):
 	var file = File.new()
@@ -45,11 +48,16 @@ func _ready():
 	image_scale[1] = Vector2(0.175,0.175)
 	
 	load_file(str(chat_res))
-	$ProfileImages.display(
-		img[profile_image_indices[text_position]],
-		Vector2(0.05,0.05)
-	)
-	
+	if has_profile:
+		$ProfileImages.display(
+			img[profile_image_indices[text_position]],
+			Vector2(0.05,0.05)
+		)
+
+func hide_profile():
+	has_profile = false
+	$ProfileImages.hide()
+
 func start():
 	$Timer.start()
 
@@ -59,18 +67,20 @@ func Time_to_write():
 		current_text += current_dialog[text_position][current_text_pos]
 		current_text_pos += 1
 		$ChatText.text = current_text
-	else:
-		emit_signal("end_dialog")
 	$Timer.start()
 
 func next_dialog():
 	if text_position < line_counter-1:
 		reset_current_text()
 		text_position += 1
-		$ProfileImages.display(
-			img[profile_image_indices[text_position]],
-			image_scale[profile_image_indices[text_position]]
-		)
+		
+		if has_profile:
+			$ProfileImages.display(
+				img[profile_image_indices[text_position]],
+				image_scale[profile_image_indices[text_position]]
+			)
+		
+		emit_signal("new_dialog")
 	else:
 		emit_signal("end_dialog")
 
@@ -78,7 +88,9 @@ func previous_dialog():
 	if text_position > 0:
 		reset_current_text()
 		text_position -= 1
-		$ProfileImages.display(
-			img[profile_image_indices[text_position]],
-			image_scale[profile_image_indices[text_position]]
-		)
+		
+		if has_profile:
+			$ProfileImages.display(
+				img[profile_image_indices[text_position]],
+				image_scale[profile_image_indices[text_position]]
+			)

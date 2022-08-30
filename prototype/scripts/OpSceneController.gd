@@ -73,7 +73,7 @@ func _ready():
 		'production',
 		'end_production'
 	)
-
+	
 	used_scenes[0].instance.layer = 1
 
 func change_scene(scene):

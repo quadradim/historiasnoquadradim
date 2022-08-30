@@ -40,6 +40,9 @@ margin_right = 62.0
 margin_bottom = 200.0
 img = [ ExtResource( 5 ), ExtResource( 6 ) ]
 cha = [ "*P*", "*S*" ]
+has_profile = true
 
 [node name="MainMusic" parent="." instance=ExtResource( 8 )]
 stream = ExtResource( 9 )
+
+[connection signal="end_dialog" from="ChatBox" to="." method="end_suzana_scene"]

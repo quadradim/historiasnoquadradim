@@ -36,7 +36,7 @@ var scenes_data = {
 	],
 	'suzana': [
 		'res://scenes/dialogs/Suazana.tscn',
-		'end_suzana_dialog',
+		'end_suzana_scene',
 		true
 	],
 	'episodes_selection': [
@@ -63,5 +63,10 @@ var scenes_data = {
 		'res://scenes/Introductions/Lavadeiras.tscn',
 		'introd_lava',
 		false
-	]
+	],
+	'intro_multidao': [
+		'res://scenes/Introductions/Multidao.tscn',
+		'end_multidao',
+		true
+	],
 }
