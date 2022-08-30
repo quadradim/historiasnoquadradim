@@ -69,4 +69,9 @@ var scenes_data = {
 		'end_multidao',
 		true
 	],
+	'multidao': [
+		'res://scenes/ambience/Multidao.tscn',
+		'end_multidao',
+		true
+	],
 }

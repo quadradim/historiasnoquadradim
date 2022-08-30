@@ -10,7 +10,7 @@ func _ready():
 
 func _on_Background_gui_input(event):
 	if event.is_pressed() and event.button_index == BUTTON_LEFT:
-		emit_signal("end_logo_scene", "suzana")
+		emit_signal("end_logo_scene", "menu")
 
 func _on_LogoAnimation_animation_finished(anim_name):
 	if !backward_animation:
