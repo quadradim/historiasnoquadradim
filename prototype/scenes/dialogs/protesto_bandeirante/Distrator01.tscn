@@ -27,5 +27,5 @@ margin_bottom = 200.0
 chat_res = "res://dialogs/distrator01_protesto_nucleo_bandeirante.txt"
 img = [ ExtResource( 4 ) ]
 cha = [ "*distrator1*" ]
-image_scales = [ Vector2( 0.175, 0.175 ) ]
+image_scales = [ Vector2( 0.18, 0.18 ) ]
 has_profile = true

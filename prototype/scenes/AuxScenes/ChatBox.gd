@@ -28,6 +28,7 @@ func load_file(file_src):
 		var current_line = file.get_line()
 		for i  in  range (len(cha)):
 			if cha[i] == current_line:
+				print(cha[i])
 				profile_image_indices.append(i)
 				is_character_line = true
 				if dialog != "":
@@ -51,6 +52,7 @@ func _ready():
 	
 	load_file(str(chat_res))
 	if has_profile:
+		print(profile_image_indices[text_position])
 		$ProfileImages.display(
 			img[profile_image_indices[text_position]],
 			image_scales[profile_image_indices[text_position]]
