@@ -44,6 +44,8 @@ func start_events():
 		used_scenes[0].instance.start()
 	elif current_scene_name == 'distractor3_darcy':
 		used_scenes[0].instance.start()
+	elif current_scene_name == 'intro_multidao':
+		used_scenes[0].instance.start()
 
 func load_audio():
 	if current_scene_name in """
