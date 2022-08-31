@@ -4,6 +4,11 @@ var scenes_data = {
 #		'emited_signal',
 #		'has_config'
 #	]
+	'production': [
+		'res://scenes/GUI/Production.tscn',
+		'end_production',
+		false
+	],
 	'logo_opening': [
 		'res://scenes/GUI/LogoOpening.tscn',
 		'end_logo_scene',

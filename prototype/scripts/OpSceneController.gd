@@ -46,7 +46,10 @@ func start_events():
 		used_scenes[0].instance.start()
 
 func load_audio():
-	if current_scene_name in 'access01,access02,character_choice,diary,suzana,lavadeiras':
+	if current_scene_name in """
+		access01,access02,character_choice,diary,suzana,lavadeiras,
+		lavadeira_amiga
+		""":
 		var audio = used_scenes[0].instance.play_music()
 		
 		var player_data = $PlayerEntity.read()
@@ -76,11 +79,12 @@ func _ready():
 	
 	transition_animation.connect('animation_finished', self, 'end_transition_scene')
 	transition_animation.play("fade_out")
-	
+
+	var initial_scene = 'production'
 	load_control_scene(
-		'res://scenes/GUI/Production.tscn',
-		'production',
-		'end_production'
+		scenes_data[initial_scene][0],
+		initial_scene,
+		scenes_data[initial_scene][1]
 	)
 
 	used_scenes[0].instance.layer = 1
