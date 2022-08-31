@@ -292,7 +292,7 @@ margin_bottom = 313.609
 rect_rotation = 22.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 9 )
-text = "Trabalhadores"
+text = "Retornismo"
 
 [node name="Word8Button" type="TextureButton" parent="Word8"]
 anchor_left = -0.144

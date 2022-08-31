@@ -1,6 +1,6 @@
 extends CanvasLayer
 var player_choice = []
-var correct_choice = ["Greve","Desordem","Baderna"]
+var correct_choice = ["Greve","Reivindicação","Desempregados"]
 var errors_counter = 0
 
 # Declare member variables here. Examples:
