@@ -82,7 +82,7 @@ func _ready():
 	transition_animation.connect('animation_finished', self, 'end_transition_scene')
 	transition_animation.play("fade_out")
 
-	var initial_scene = 'production'
+	var initial_scene = 'multidao'
 	load_control_scene(
 		scenes_data[initial_scene][0],
 		initial_scene,
@@ -132,8 +132,8 @@ func end_transition_scene(anim_name):
 		if used_scenes.size() > 0:
 			used_scenes[0].instance.layer = 1
 			
-			load_audio()
 			start_events()
+			load_audio()
 			
 	elif transition_animation_name == "fade_out":
 		transition_animation_name = "fade_in"

@@ -99,4 +99,9 @@ var scenes_data = {
 		'distractor_dialog',
 		true
 	],
+	'darcy_speech': [
+		'res://scenes/dialogs/protesto_bandeirante/Darcy.tscn',
+		'end_darcy_speech',
+		true
+		]
 }

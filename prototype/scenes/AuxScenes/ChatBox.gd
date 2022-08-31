@@ -28,6 +28,7 @@ func load_file(file_src):
 		var current_line = file.get_line()
 		for i  in  range (len(cha)):
 			if cha[i] == current_line:
+				line_counter += 1
 				profile_image_indices.append(i)
 				is_character_line = true
 				if dialog != "":
@@ -35,7 +36,6 @@ func load_file(file_src):
 					dialog = ""
 		if is_character_line == false:
 			dialog += current_line
-			line_counter += 1
 	if len(dialog) > 0:
 		current_dialog.append(dialog)
 	file.close()
