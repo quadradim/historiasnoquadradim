@@ -83,15 +83,36 @@ func _on_Character1Button_pressed():
 
 
 func _on_City1Button_pressed():
-	$MapTab/CityDescription.text = ("Núcleo Bandeirante")
-	pass # Replace with function body.
+	$MapTab/CityDescription.text = (
+	"""Núcleo Bandeirante: Localidade provisória, conhecida
+	como Cidade Livre, este era o lugar em que o comércio
+	e a vida social aconteciam durante a construção da nova
+	capital. Nascendo com data marcada para deixar de existir 
+	(abril de 1960), os moradores se organizavam naquele 
+	momento para exigir a fixação daquele núcleo pioneiro. 
+	Nos arredores da SubPrefeitura, trabalhadores começaram
+	 a se identificar como "a turma da boa vontade".""")
 
 
 func _on_City2Button_pressed():
-	$MapTab/CityDescription.text = ("Taguatinga")
-	pass # Replace with function body.
+	$MapTab/CityDescription.text = (
+	"""Taguatinga: Surgida pela resistência de pessoas migrantes 
+	que foram impedidas de adentrar a Cidade Livre, esta local-
+	idade foi reconhecida em junho de 1958, a partir de uma estra-
+	tégia de mobilização dos moradores. Inicialmente chamada de
+	Vila Sarah Kubitschek, era a localidade que reunia o maior
+	contingente populacional naquele momento, sendo o palco prin-
+	cipal do levante popular ocorrido em março de 1964. 
+	""")
 
 
 func _on_City3Button_pressed():
-	$MapTab/CityDescription.text = ("Plano Piloto")
-	pass # Replace with function body.
+	$MapTab/CityDescription.text = (
+	"""Plano Piloto/ Esplanada:  Prevista no Plano Urbanístico de
+	Lúcio Costa como uma via central que reúne os poderes políticos
+	da capital, a Esplanada dos Ministérios liga a Praça dos Três Po-
+	deres à Rodoviária do Plano Piloto. Desde o início de sua existên-
+	cia, esta localidade é palco de manifestações populares, recebendo
+	multidões que vêm de todos os lugares do país reivindicando direi-
+	tos.""" 
+	)

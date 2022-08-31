@@ -110,8 +110,8 @@ tracks/0/keys = {
 }
 
 [sub_resource type="DynamicFont" id=18]
-size = 25
-font_data = ExtResource( 12 )
+size = 23
+font_data = ExtResource( 18 )
 
 [sub_resource type="StyleBoxFlat" id=13]
 bg_color = Color( 0.92549, 0.886275, 0.835294, 1 )
@@ -154,6 +154,7 @@ corner_radius_bottom_right = 5
 corner_radius_bottom_left = 5
 
 [sub_resource type="DynamicFont" id=23]
+size = 14
 font_data = ExtResource( 18 )
 
 [sub_resource type="DynamicFont" id=24]
@@ -298,6 +299,7 @@ text = "Próximo"
 stream = ExtResource( 14 )
 
 [node name="ProfileTab" type="Tabs" parent="."]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 287.0
@@ -448,7 +450,6 @@ align = 1
 valign = 1
 
 [node name="MapTab" type="Tabs" parent="."]
-visible = false
 margin_right = 40.0
 margin_bottom = 24.0
 
@@ -520,15 +521,17 @@ scale = Vector2( 0.104412, 0.104412 )
 texture = ExtResource( 20 )
 
 [node name="CityDescription" type="Label" parent="MapTab"]
-margin_left = 183.0
-margin_top = 290.875
+margin_left = 168.0
+margin_top = 276.0
 margin_right = 475.0
-margin_bottom = 416.875
+margin_bottom = 434.0
 custom_colors/font_color = Color( 0.290196, 0.211765, 0.290196, 1 )
 custom_fonts/font = SubResource( 23 )
 text = "texto falando umpouco sobre a cidade e seu contexto 
 social histórico.
 "
+align = 1
+valign = 1
 
 [node name="CharactersTab" type="Tabs" parent="."]
 visible = false
