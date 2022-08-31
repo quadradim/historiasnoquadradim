@@ -71,7 +71,22 @@ var scenes_data = {
 	],
 	'multidao': [
 		'res://scenes/ambience/Multidao.tscn',
-		'end_multidao',
+		'distractor_selected',
+		true
+	],
+	'distractor1_darcy': [
+		'res://scenes/dialogs/protesto_bandeirante/Distrator01.tscn',
+		'distractor_dialog',
+		true
+	],
+	'distractor2_darcy': [
+		'res://scenes/dialogs/protesto_bandeirante/Distrator02.tscn',
+		'distractor_dialog',
+		true
+	],
+	'distractor3_darcy': [
+		'res://scenes/dialogs/protesto_bandeirante/Distrator03.tscn',
+		'distractor_dialog',
 		true
 	],
 }

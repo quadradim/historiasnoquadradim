@@ -1,15 +1,15 @@
 extends CanvasLayer
 
-var distractors_pressed = [0, 0, 0]
+signal distractor_selected
 
 func _ready():
 	pass
-
+	
 func distractor1_pressed():
-	print("distractor 1")
+	emit_signal("distractor_selected", "distractor1_darcy")
 
 func distractor2_pressed():
-	print("distractor 2")
+	emit_signal("distractor_selected", "distractor2_darcy")
 
 func distractor3_pressed():
-	print("distractor 3")
+	emit_signal("distractor_selected", "distractor3_darcy")

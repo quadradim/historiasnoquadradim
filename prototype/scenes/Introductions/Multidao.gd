@@ -14,4 +14,4 @@ func new_dialog_text():
 		$Transition.play("Transition")
 
 func multidao_end_scene():
-	emit_signal("end_multidao", "protesto")
+	emit_signal("end_multidao", "multidao")

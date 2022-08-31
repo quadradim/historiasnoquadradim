@@ -15,6 +15,7 @@ class SceneUsed:
 var current_scene_name
 
 var scenes_data
+var characters_darcy = [0, 0, 0]
 
 func load_control_scene(local, name, out_signal):
 	# 'out_signal' : The scene must to emit a signal
@@ -34,6 +35,12 @@ func start_events():
 	if current_scene_name == 'access02':
 		used_scenes[0].instance.start_writing()
 	if current_scene_name == 'suzana':
+		used_scenes[0].instance.start()
+	if current_scene_name == 'distractor1_darcy':
+		used_scenes[0].instance.start()
+	if current_scene_name == 'distractor2_darcy':
+		used_scenes[0].instance.start()
+	if current_scene_name == 'distractor3_darcy':
 		used_scenes[0].instance.start()
 
 func load_audio():
@@ -73,10 +80,17 @@ func _ready():
 		'production',
 		'end_production'
 	)
-	
+
 	used_scenes[0].instance.layer = 1
 
 func change_scene(scene):
+	if scene == 'distractor3_darcy' and not(characters_darcy[0] and characters_darcy[1]):
+		return
+	if scene == 'distractor1_darcy':
+		characters_darcy[0] = 1
+	if scene == 'distractor2_darcy': 
+		characters_darcy[1] = 1
+		 
 	for current_scene in scenes_data:
 		if scene == current_scene:
 			if scenes_data[current_scene][2]:

@@ -29,3 +29,5 @@ img = [ ExtResource( 4 ) ]
 cha = [ "*distrator1*" ]
 image_scales = [ Vector2( 0.18, 0.18 ) ]
 has_profile = true
+
+[connection signal="end_dialog" from="ChatBox" to="." method="end_distractor_dialog"]
