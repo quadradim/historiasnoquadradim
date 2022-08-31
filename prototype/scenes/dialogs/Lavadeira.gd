@@ -10,3 +10,6 @@ func end_scene_dialog():
 	
 func start():
 	$ChatBox.start()
+	
+func play_music():
+	return $MainMusic
