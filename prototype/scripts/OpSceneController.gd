@@ -82,14 +82,12 @@ func _ready():
 	transition_animation.connect('animation_finished', self, 'end_transition_scene')
 	transition_animation.play("fade_out")
 
-	var initial_scene = 'menu'
+	var initial_scene = 'production'
 	load_control_scene(
 		scenes_data[initial_scene][0],
 		initial_scene,
 		scenes_data[initial_scene][1]
 	)
-	
-	load_audio()
 
 	used_scenes[0].instance.layer = 1
 
