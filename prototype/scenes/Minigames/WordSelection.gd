@@ -3,18 +3,11 @@ var player_choice = []
 var correct_choice = ["Greve","Reivindicação","Desempregados"]
 var errors_counter = 0
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
+signal end_word_selection
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
 	$NextButton.disabled = true
 	pass # Replace with function body.
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
 
 func word1_button():
 	var font = $Word1.get("custom_fonts/font")

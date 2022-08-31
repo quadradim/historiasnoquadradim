@@ -100,8 +100,13 @@ var scenes_data = {
 		true
 	],
 	'darcy_speech': [
-		'res://scenes/dialogs/protesto_bandeirante/Darcy.tscn',
+		'res://scenes/dialogs/Darcy.tscn',
 		'end_darcy_speech',
 		true
-		]
+	],
+	'word_choice': [
+		'res://scenes/Minigames/WordSelection.tscn',
+		'end_word_selection',
+		true
+	],
 }

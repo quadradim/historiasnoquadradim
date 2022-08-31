@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://assets/Styles/Themes/Menu.tres" type="Theme" id=1]
 [ext_resource path="res://assets/Images/Composition/diary/tape.png" type="Texture" id=2]
@@ -71,6 +71,18 @@ use_mipmaps = true
 use_filter = true
 font_data = ExtResource( 7 )
 
+[sub_resource type="StyleBoxFlat" id=12]
+bg_color = Color( 0.898039, 0.780392, 0.0901961, 1 )
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color( 0.45098, 0.533333, 0.556863, 1 )
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
 [sub_resource type="DynamicFont" id=11]
 size = 23
 font_data = ExtResource( 7 )
@@ -110,10 +122,10 @@ scale = Vector2( 1.03939, 0.975408 )
 texture = ExtResource( 9 )
 
 [node name="InstructionText" type="Label" parent="."]
-margin_left = 23.0
-margin_top = 12.0
-margin_right = 554.0
-margin_bottom = 53.0
+margin_left = 288.0
+margin_top = 8.0
+margin_right = 819.0
+margin_bottom = 49.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 10 )
 text = "com quais das palavras abaixo podemos definir o que aconteceu?"
@@ -310,6 +322,12 @@ margin_top = 512.0
 margin_right = 1006.0
 margin_bottom = 564.0
 theme = ExtResource( 1 )
+custom_colors/font_color_disabled = Color( 0.443137, 0.52549, 0.54902, 1 )
+custom_styles/hover = SubResource( 12 )
+custom_styles/pressed = SubResource( 12 )
+custom_styles/focus = SubResource( 12 )
+custom_styles/disabled = SubResource( 12 )
+custom_styles/normal = SubResource( 12 )
 text = "Próximo"
 
 [node name="MessageBox" type="WindowDialog" parent="."]
