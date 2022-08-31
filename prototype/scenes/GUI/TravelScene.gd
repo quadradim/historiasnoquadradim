@@ -1,7 +1,7 @@
 extends CanvasLayer
 
 signal end_travel_scene
-var locked_veicles = [0,1,0]
+var locked_veicles = [0,0,1]
 
 func _ready():
 	pass # Replace with function body.
@@ -19,7 +19,7 @@ func _on_ZebrinhaButton_pressed():
 		$MessageBox/MessageText.text = "O veículo selecionado não está disponível"
 		$MessageBox.popup()
 	else:
-		emit_signal("end_travel_scene", "introd_lavadeiras")
+		emit_signal("end_travel_scene", "level2")
 	pass # Replace with function body.
 
 func _on_BrasiliaButton_pressed():
@@ -27,5 +27,5 @@ func _on_BrasiliaButton_pressed():
 		$MessageBox/MessageText.text = "O veículo selecionado não está disponível"
 		$MessageBox.popup()
 	else:
-		emit_signal("end_travel_scene", "level3")
+		emit_signal("end_travel_scene", "introd_lavadeiras")
 	pass # Replace with function body.

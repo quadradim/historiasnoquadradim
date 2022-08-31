@@ -112,7 +112,7 @@ func _on_City3Button_pressed():
 	Lúcio Costa como uma via central que reúne os poderes políticos
 	da capital, a Esplanada dos Ministérios liga a Praça dos Três Po-
 	deres à Rodoviária do Plano Piloto. Desde o início de sua existên-
-	cia, esta localidade é palco de manifestações populares, recebendo
-	multidões que vêm de todos os lugares do país reivindicando direi-
-	tos.""" 
+	cia, esta localidade é palco de manifestações populares, recebe-
+	ndo multidões que vêm de todos os lugares do país reivindicando
+	direitos.""" 
 	)
