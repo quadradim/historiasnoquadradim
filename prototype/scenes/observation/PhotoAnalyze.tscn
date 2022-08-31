@@ -144,7 +144,7 @@ margin_right = 608.0
 margin_bottom = 83.0
 custom_colors/font_color = Color( 0.0235294, 0.0313726, 0.109804, 1 )
 custom_fonts/font = SubResource( 3 )
-text = "Análise as Images
+text = "Analíse as Images
 "
 
 [node name="Button" type="Button" parent="."]

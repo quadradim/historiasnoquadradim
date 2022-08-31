@@ -9,3 +9,9 @@ func start():
 	
 func end_speech():
 	emit_signal("end_darcy_speech", "word_choice")
+
+func _process(delta):
+	$MainMusic.update("soundtrack")
+
+func play_music():
+	return $MainMusic
