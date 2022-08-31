@@ -6,7 +6,7 @@ var object_id
 export(Resource) var object_source
 #export(Resource) var object_source_zoom
 export(String) var object_name
-export(String) var description
+export(String, MULTILINE) var description
 var style = false
 
 func _ready():

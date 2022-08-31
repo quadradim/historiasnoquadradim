@@ -118,7 +118,7 @@ margin_bottom = -72.0
 rect_scale = Vector2( 0.22, 0.22 )
 rect_pivot_offset = Vector2( 256, 136 )
 object_name = "Olhar Aguçado"
-description = "Análise atenta aos detalhes aparentemente insignificantes"
+description = "Olhar aguçado: análise atenta aos detalhes aparentemente insignificantes"
 
 [node name="hab02" parent="TabContainer/Habilidades/CreationPanel" instance=ExtResource( 13 )]
 margin_left = -40.0
@@ -129,7 +129,8 @@ rect_scale = Vector2( 0.22, 0.22 )
 rect_pivot_offset = Vector2( 256, 136 )
 object_source = ExtResource( 8 )
 object_name = "Criticidade"
-description = "Capacidade de elaborar questionamentos críticos"
+description = "Problematização: método de ir além de pensamentos do senso comum
+"
 
 [node name="hab03" parent="TabContainer/Habilidades/CreationPanel" instance=ExtResource( 13 )]
 margin_left = 96.0
@@ -140,7 +141,7 @@ rect_scale = Vector2( 0.22, 0.22 )
 rect_pivot_offset = Vector2( 256, 136 )
 object_source = ExtResource( 5 )
 object_name = "Curiosidade"
-description = "Interesse por conhecer coisas novas"
+description = "Capacidade investigativa: formulação de perguntas e busca pelas respostas de maneira autônoma e independente"
 
 [node name="hab04" parent="TabContainer/Habilidades/CreationPanel" instance=ExtResource( 13 )]
 margin_left = -176.0
@@ -151,7 +152,8 @@ rect_scale = Vector2( 0.22, 0.22 )
 rect_pivot_offset = Vector2( 256, 136 )
 object_source = ExtResource( 6 )
 object_name = "Raciocínio lógico"
-description = "Organização do pensamento para a resolução de um problema "
+description = "raciocínio lógico: organização do pensamento para a resolução de um problema.
+"
 
 [node name="hab05" parent="TabContainer/Habilidades/CreationPanel" instance=ExtResource( 13 )]
 margin_left = -40.0
@@ -162,6 +164,7 @@ rect_scale = Vector2( 0.22, 0.22 )
 rect_pivot_offset = Vector2( 256, 136 )
 object_source = ExtResource( 11 )
 object_name = "Memória"
+description = "Memorização: processo mental para reunir informações de forma sistemática"
 
 [node name="hab06" parent="TabContainer/Habilidades/CreationPanel" instance=ExtResource( 13 )]
 margin_left = 96.0
@@ -172,6 +175,7 @@ rect_scale = Vector2( 0.22, 0.22 )
 rect_pivot_offset = Vector2( 256, 136 )
 object_source = ExtResource( 12 )
 object_name = "---"
+description = "Curiosidade: interesse por conhecer coisas novas"
 
 [node name="hab07" parent="TabContainer/Habilidades/CreationPanel" instance=ExtResource( 13 )]
 margin_left = -176.0
@@ -182,6 +186,7 @@ rect_scale = Vector2( 0.22, 0.22 )
 rect_pivot_offset = Vector2( 256, 136 )
 object_source = ExtResource( 9 )
 object_name = "Referências"
+description = "Criticidade:  capacidade de elaborar questionamentos críticos"
 
 [node name="hab08" parent="TabContainer/Habilidades/CreationPanel" instance=ExtResource( 13 )]
 margin_left = -40.0
@@ -192,6 +197,7 @@ rect_scale = Vector2( 0.22, 0.22 )
 rect_pivot_offset = Vector2( 256, 136 )
 object_source = ExtResource( 10 )
 object_name = "Arquivos"
+description = "Seletividade: capacidade se posicionar diantes da diversidade de fontes"
 
 [node name="hab09" parent="TabContainer/Habilidades/CreationPanel" instance=ExtResource( 13 )]
 margin_left = 96.0
@@ -202,6 +208,7 @@ rect_scale = Vector2( 0.22, 0.22 )
 rect_pivot_offset = Vector2( 256, 136 )
 object_source = ExtResource( 7 )
 object_name = "Geospacial"
+description = "Escuta sensível: atenção ao que é dito e disposição à compreensão"
 
 [node name="HabilityZoomImage" type="Panel" parent="TabContainer/Habilidades"]
 anchor_left = 0.5
