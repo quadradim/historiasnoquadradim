@@ -50,7 +50,7 @@ func start_events():
 func load_audio():
 	if current_scene_name in """
 		access01,access02,character_choice,diary,suzana,lavadeiras,
-		lavadeira_amiga,menu
+		lavadeira_amiga,menu,multidao
 		""":
 		var audio = used_scenes[0].instance.play_music()
 		

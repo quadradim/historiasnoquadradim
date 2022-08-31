@@ -13,3 +13,9 @@ func distractor2_pressed():
 
 func distractor3_pressed():
 	emit_signal("distractor_selected", "distractor3_darcy")
+
+func _process(delta):
+	$MainMusic.update("soundtrack")
+	
+func play_music():
+	return $MainMusic

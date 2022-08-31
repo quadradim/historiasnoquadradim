@@ -28,5 +28,4 @@ func _process(delta):
 	$MainMusic.update("soundtrack")
 	
 func play_music():
-	print("playing...")
 	return $MainMusic
