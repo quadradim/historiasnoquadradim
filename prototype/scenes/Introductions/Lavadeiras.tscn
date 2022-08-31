@@ -7,7 +7,8 @@
 script = ExtResource( 2 )
 
 [node name="IntroductionText" parent="." instance=ExtResource( 1 )]
-text = "A história trazida pelo nosso primeiro arco vem desses tempos frios de planalto central e nos conduz até o episódio que inicia essa aventura investigativa: o Levante da Turma da Boa Vontade.E para começar análise algumas fotos..."
+text = "A história trazida pelo nosso primeiro arco vem desses tempos frios de planalto central e nos conduz até o episódio que inicia essa aventura investigativa: o Levante da Turma da Boa Vontade.
+E para começar análise algumas fotos..."
 next_scene = "analyze_photos"
 
 [connection signal="end_introduction" from="IntroductionText" to="." method="end_introduction"]
