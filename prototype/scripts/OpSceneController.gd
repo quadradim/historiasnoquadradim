@@ -48,7 +48,7 @@ func start_events():
 func load_audio():
 	if current_scene_name in """
 		access01,access02,character_choice,diary,suzana,lavadeiras,
-		lavadeira_amiga
+		lavadeira_amiga,menu
 		""":
 		var audio = used_scenes[0].instance.play_music()
 		
@@ -80,12 +80,14 @@ func _ready():
 	transition_animation.connect('animation_finished', self, 'end_transition_scene')
 	transition_animation.play("fade_out")
 
-	var initial_scene = 'lavadeiras'
+	var initial_scene = 'menu'
 	load_control_scene(
 		scenes_data[initial_scene][0],
 		initial_scene,
 		scenes_data[initial_scene][1]
 	)
+	
+	load_audio()
 
 	used_scenes[0].instance.layer = 1
 

@@ -23,3 +23,10 @@ func episodes_selection_pressed():
 
 func quit_game():
 	emit_signal("end_menu", "quit")
+
+func _process(delta):
+	$MainMusic.update("soundtrack")
+	
+func play_music():
+	print("playing...")
+	return $MainMusic
