@@ -54,6 +54,11 @@ var scenes_data = {
 		'end_lavadeira',
 		true
 	],
+	'lavadeira_amiga': [
+		'res://scenes/dialogs/Lavadeira.tscn',
+		'end_lavadeira',
+		true
+	],
 	'travel_scene': [
 		'res://scenes/GUI/TravelScene.tscn',
 		'end_travel_scene',

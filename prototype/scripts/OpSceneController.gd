@@ -34,13 +34,15 @@ func load_control_scene(local, name, out_signal):
 func start_events():
 	if current_scene_name == 'access02':
 		used_scenes[0].instance.start_writing()
-	if current_scene_name == 'suzana':
+	elif current_scene_name == 'suzana':
 		used_scenes[0].instance.start()
-	if current_scene_name == 'distractor1_darcy':
+	elif current_scene_name == 'lavadeira_amiga':
 		used_scenes[0].instance.start()
-	if current_scene_name == 'distractor2_darcy':
+	elif current_scene_name == 'distractor1_darcy':
 		used_scenes[0].instance.start()
-	if current_scene_name == 'distractor3_darcy':
+	elif current_scene_name == 'distractor2_darcy':
+		used_scenes[0].instance.start()
+	elif current_scene_name == 'distractor3_darcy':
 		used_scenes[0].instance.start()
 
 func load_audio():

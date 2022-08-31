@@ -12,7 +12,7 @@ func suzana_dialog():
 	emit_signal("end_lavadeira", "suzana")
 
 func distratora_dialog():
-	emit_signal("end_lavadeira", "lavadeira_distratora")
+	emit_signal("end_lavadeira", "lavadeira_amiga")
 
 func play_music():
 	return $MainMusic
