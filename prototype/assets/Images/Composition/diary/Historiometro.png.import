@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Historiometro.png-5890a9f6b93a59fdd8751bdd7d5eec58.stex"
+path="res://.import/Historiometro.png-335bb68d05bef953ec504f5345adeac9.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Images/Composition/diary/Historiometro.png"
-dest_files=[ "res://.import/Historiometro.png-5890a9f6b93a59fdd8751bdd7d5eec58.stex" ]
+source_file="res://assets/Images/Composition/Diary/Historiometro.png"
+dest_files=[ "res://.import/Historiometro.png-335bb68d05bef953ec504f5345adeac9.stex" ]
 
 [params]
 

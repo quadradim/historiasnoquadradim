@@ -58,6 +58,7 @@ func _on_PlayerButton_pressed():
 	$ProfileTab.visible = true
 	$MapTab.visible = false
 	$CharactersTab.visible = false
+	$AbillityTab.visible = false
 	pass # Replace with function body.
 
 
@@ -65,6 +66,7 @@ func _on_MapButton_pressed():
 	$ProfileTab.visible = false
 	$MapTab.visible = true
 	$CharactersTab.visible = false
+	$AbillityTab.visible = false
 	pass # Replace with function body.
 
 
@@ -72,8 +74,15 @@ func _on_CharactersButton_pressed():
 	$ProfileTab.visible = false
 	$MapTab.visible = false
 	$CharactersTab.visible = true
+	$AbillityTab.visible = false
 	pass # Replace with function body.
 
+func _on_AbillityButton_pressed():
+	$ProfileTab.visible = false
+	$MapTab.visible = false
+	$CharactersTab.visible = false
+	$AbillityTab.visible = true
+	pass # Replace with function body.
 
 func _on_Character1Button_pressed():
 	$CharactersTab/CharacterZoom.texture = $CharactersTab/Character1.texture
@@ -81,7 +90,8 @@ func _on_Character1Button_pressed():
 	$CharactersTab/DescriptionText.text = ("Dona Suzana")
 	pass # Replace with function body.
 
-
+func _on_TextureButton_pressed():
+	pass # Replace with function body.
 func _on_City1Button_pressed():
 	$MapTab/CityDescription.text = (
 	"""Núcleo Bandeirante: Localidade provisória, conhecida
@@ -116,3 +126,66 @@ func _on_City3Button_pressed():
 	ndo multidões que vêm de todos os lugares do país reivindicando
 	direitos.""" 
 	)
+
+func _on_BinoculosButton_pressed():
+	$AbillityTab/CharacterZoom.texture = $AbillityTab/Binoculos.texture
+	$AbillityTab/CharacterZoom.scale = Vector2(0.38,0.38)
+	$AbillityTab/AbillityName.text = ("olhar aguçado")
+	$AbillityTab/DescriptionText.text = ("Análise atenta aos detalhes aparentemente insignificantes")
+	pass # Replace with function body.
+
+func _on_CartazesButton_pressed():
+	$AbillityTab/CharacterZoom.texture = $AbillityTab/Cartazes.texture
+	$AbillityTab/CharacterZoom.scale = Vector2(0.33,0.33)
+	$AbillityTab/AbillityName.text = ("problematização")
+	$AbillityTab/DescriptionText.text = ("Método de ir além de pensamentos do senso comum")
+	pass # Replace with function body.
+
+func _on_ChapuButton_pressed():
+	$AbillityTab/CharacterZoom.texture = $AbillityTab/Chapeu.texture
+	$AbillityTab/CharacterZoom.scale = Vector2(0.35,0.35)
+	$AbillityTab/AbillityName.text = ("capacidade investigativa")
+	$AbillityTab/DescriptionText.text = ("Formulação de perguntas e busca pelas respostas de maneira autônoma e independente")
+	pass # Replace with function body.
+
+func _on_CuboButton_pressed():
+	$AbillityTab/CharacterZoom.texture = $AbillityTab/Cubo.texture
+	$AbillityTab/CharacterZoom.scale = Vector2(0.22,0.22)
+	$AbillityTab/AbillityName.text = ("raciocínio lógico")
+	$AbillityTab/DescriptionText.text = ("Organização do pensamento para a resolução de um problema")
+	pass # Replace with function body.
+
+func _on_jogoDaMemriaButton_pressed():
+	$AbillityTab/CharacterZoom.texture = $AbillityTab/JogoDaMemoria.texture
+	$AbillityTab/CharacterZoom.scale = Vector2(0.316,0.316)
+	$AbillityTab/AbillityName.text = ("memorização")
+	$AbillityTab/DescriptionText.text = ("Processo mental para reunir informações de forma sistemática")
+	pass # Replace with function body.
+
+func _on_JornalButton_pressed():
+	$AbillityTab/CharacterZoom.texture = $AbillityTab/Jornal.texture
+	$AbillityTab/CharacterZoom.scale = Vector2(0.37,0.37)
+	$AbillityTab/AbillityName.text = ("curiosidade")
+	$AbillityTab/DescriptionText.text = ("Interesse por conhecer coisas novas")
+	pass # Replace with function body.
+
+func _on_LivrosButton_pressed():
+	$AbillityTab/CharacterZoom.texture = $AbillityTab/Livros.texture
+	$AbillityTab/CharacterZoom.scale = Vector2(0.4,0.4)
+	$AbillityTab/AbillityName.text = ("seletividade")
+	$AbillityTab/DescriptionText.text = ("Capacidade de identificar fontes que permitam reconhecer vestígios da história")
+	pass # Replace with function body.
+
+func _on_PastaButton_pressed():
+	$AbillityTab/CharacterZoom.texture = $AbillityTab/Pasta.texture
+	$AbillityTab/CharacterZoom.scale = Vector2(0.38,0.38)
+	$AbillityTab/AbillityName.text = ("escuta sensível")
+	$AbillityTab/DescriptionText.text = ("Atenção ao que é dito e capacidade de compreensão do que não parece óbvio")
+	pass # Replace with function body.
+
+func _on_PlanetaButton_pressed():
+	$AbillityTab/CharacterZoom.texture = $AbillityTab/Planeta.texture
+	$AbillityTab/CharacterZoom.scale = Vector2(0.316,0.316)
+	$AbillityTab/DescriptionText.text = ("Forma de se posicionar, criticar evidências e elaborar inferências")
+	$AbillityTab/AbillityName.text = ("criticidade")
+	pass # Replace with function body.

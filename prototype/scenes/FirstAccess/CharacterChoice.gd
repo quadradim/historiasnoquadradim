@@ -9,6 +9,7 @@ signal end_choice
 var player_data
 
 func _ready():	
+	
 	# Get Current Data
 	player_data = $PlayerEntity.read()
 	
@@ -110,3 +111,7 @@ func play_music():
 	
 func music_finished():
 	$MainMusic.play()
+
+func _on_TabContainer_tab_changed(tab):
+	$BackpackTable.visible = !$BackpackTable.visible
+	pass # Replace with function body.

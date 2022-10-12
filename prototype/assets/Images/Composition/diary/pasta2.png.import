@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/diaryform.png-bd8f6414d61e2a0cc219fd36e66364c7.stex"
+path="res://.import/pasta2.png-f72d2ae13aa3e92fb28cee925c0e0811.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Images/Composition/Diary/diaryform.png"
-dest_files=[ "res://.import/diaryform.png-bd8f6414d61e2a0cc219fd36e66364c7.stex" ]
+source_file="res://assets/Images/Composition/Diary/pasta2.png"
+dest_files=[ "res://.import/pasta2.png-f72d2ae13aa3e92fb28cee925c0e0811.stex" ]
 
 [params]
 
