@@ -1,30 +1,18 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://assets/Styles/Themes/Menu.tres" type="Theme" id=1]
 [ext_resource path="res://assets/Images/Composition/Menu/Padrão3.png" type="Texture" id=2]
 [ext_resource path="res://assets/Images/Composition/Menu/Padrão2.png" type="Texture" id=3]
 [ext_resource path="res://assets/Images/Composition/Menu/Padrão1.png" type="Texture" id=4]
+[ext_resource path="res://assets/Styles/Themes/CharacterChoice.tres" type="Theme" id=5]
 [ext_resource path="res://assets/icons/next.png" type="Texture" id=6]
 [ext_resource path="res://assets/icons/previous.png" type="Texture" id=7]
 [ext_resource path="res://scenes/observation/PhotoAnalyze.gd" type="Script" id=8]
-[ext_resource path="res://assets/Cena/AnáliseDeFotos/Foto 5.png" type="Texture" id=9]
+[ext_resource path="res://assets/Fonts/bebas_neue/BebasNeue-Regular.ttf" type="DynamicFontData" id=9]
 [ext_resource path="res://assets/Fonts/bebas_neue/BebasNeue-Regular.otf" type="DynamicFontData" id=10]
-[ext_resource path="res://assets/Cena/AnáliseDeFotos/Foto 4.png" type="Texture" id=11]
+[ext_resource path="res://assets/Cena/AnáliseDeFotos/circulo.png" type="Texture" id=11]
 [ext_resource path="res://assets/Cena/AnáliseDeFotos/Foto 2.png" type="Texture" id=12]
-[ext_resource path="res://assets/Cena/AnáliseDeFotos/Foto 3.png" type="Texture" id=13]
 [ext_resource path="res://assets/Cena/AnáliseDeFotos/Foto 1.png" type="Texture" id=14]
-
-[sub_resource type="StyleBoxFlat" id=1]
-bg_color = Color( 0.972549, 0.882353, 0.435294, 1 )
-border_width_left = 10
-border_width_top = 10
-border_width_right = 10
-border_width_bottom = 10
-border_color = Color( 0.4, 0.631373, 0.862745, 1 )
-corner_radius_top_left = 5
-corner_radius_top_right = 5
-corner_radius_bottom_right = 5
-corner_radius_bottom_left = 5
 
 [sub_resource type="StyleBoxFlat" id=2]
 bg_color = Color( 0.972549, 0.882353, 0.435294, 1 )
@@ -67,9 +55,48 @@ corner_radius_top_right = 3
 corner_radius_bottom_right = 3
 corner_radius_bottom_left = 3
 
+[sub_resource type="Animation" id=6]
+resource_name = "Instruction"
+length = 1.3
+tracks/0/type = "value"
+tracks/0/path = NodePath("MinigameExplanation:rect_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 1, 1 ) ]
+}
+
+[sub_resource type="StyleBoxFlat" id=7]
+bg_color = Color( 0.984314, 0.992157, 1, 1 )
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color( 0.4, 0.631373, 0.862745, 1 )
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[sub_resource type="DynamicFont" id=8]
+size = 19
+font_data = ExtResource( 9 )
+
+[sub_resource type="StyleBoxFlat" id=9]
+border_width_left = 15
+border_width_top = 15
+border_width_right = 15
+border_width_bottom = 15
+border_color = Color( 0.141176, 0.0470588, 0.0470588, 1 )
+border_blend = true
+
 [node name="PhotoAnalyze" type="CanvasLayer"]
 script = ExtResource( 8 )
-img = [ ExtResource( 14 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 11 ), ExtResource( 9 ) ]
 
 [node name="BackGround" type="ColorRect" parent="."]
 anchor_right = 1.0
@@ -92,31 +119,41 @@ position = Vector2( 704, 122.7 )
 scale = Vector2( 0.33033, 0.273509 )
 texture = ExtResource( 3 )
 
-[node name="PhotoPanel" type="Panel" parent="."]
+[node name="MinigameExplanation" type="WindowDialog" parent="."]
 anchor_left = 0.5
-anchor_top = 0.5
+anchor_top = 0.466
 anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -176.0
-margin_top = -244.0
-margin_right = 176.0
-margin_bottom = 244.0
-custom_styles/panel = SubResource( 1 )
-__meta__ = {
-"_editor_description_": "
-"
-}
+anchor_bottom = 0.466
+margin_left = -281.0
+margin_top = -74.416
+margin_right = 270.0
+margin_bottom = 172.584
+grow_horizontal = 2
+grow_vertical = 2
+rect_pivot_offset = Vector2( 272, 124 )
+theme = ExtResource( 5 )
 
-[node name="image" type="Sprite" parent="PhotoPanel"]
-position = Vector2( 175.985, 243.979 )
-scale = Vector2( 0.399798, 0.569976 )
-texture = ExtResource( 14 )
+[node name="MinigameMensage" type="Label" parent="MinigameExplanation"]
+anchor_left = 0.502
+anchor_top = 0.495
+anchor_right = 0.502
+anchor_bottom = 0.495
+margin_left = -248.602
+margin_top = -93.265
+margin_right = 228.398
+margin_bottom = 20.735
+rect_scale = Vector2( 1.00217, 1.68766 )
+custom_colors/font_color = Color( 0.329412, 0.321569, 0.321569, 1 )
+text = "Analise as imagens e encontre pontos que possam dizer mais sobre o que aconteceu no levante da turma da boa vontade."
+align = 1
+valign = 1
+autowrap = true
 
 [node name="Next" type="Button" parent="."]
-margin_left = 728.0
-margin_top = 248.0
-margin_right = 760.0
-margin_bottom = 324.0
+margin_left = 810.0
+margin_top = 252.0
+margin_right = 842.0
+margin_bottom = 328.0
 custom_styles/hover = SubResource( 2 )
 custom_styles/pressed = SubResource( 2 )
 custom_styles/focus = SubResource( 2 )
@@ -126,10 +163,10 @@ icon = ExtResource( 6 )
 expand_icon = true
 
 [node name="Prev" type="Button" parent="."]
-margin_left = 256.0
-margin_top = 248.0
-margin_right = 292.0
-margin_bottom = 324.0
+margin_left = 159.0
+margin_top = 249.0
+margin_right = 195.0
+margin_bottom = 325.0
 custom_styles/hover = SubResource( 2 )
 custom_styles/pressed = SubResource( 2 )
 custom_styles/focus = SubResource( 2 )
@@ -138,14 +175,15 @@ custom_styles/normal = SubResource( 2 )
 icon = ExtResource( 7 )
 
 [node name="Title" type="Label" parent="."]
-margin_left = 432.0
-margin_top = 8.0
-margin_right = 608.0
-margin_bottom = 83.0
+visible = false
+margin_left = 41.0
+margin_top = 33.0
+margin_right = 230.0
+margin_bottom = 108.0
+rect_pivot_offset = Vector2( 98, 32 )
 custom_colors/font_color = Color( 0.0235294, 0.0313726, 0.109804, 1 )
 custom_fonts/font = SubResource( 3 )
-text = "Analíse as Images
-"
+text = "Analise as Imagens"
 
 [node name="Button" type="Button" parent="."]
 margin_left = 880.0
@@ -161,6 +199,140 @@ custom_styles/disabled = SubResource( 4 )
 custom_styles/normal = SubResource( 4 )
 text = "Proximo"
 
+[node name="InstructionAnimation" type="AnimationPlayer" parent="."]
+method_call_mode = 1
+anims/Instruction = SubResource( 6 )
+
+[node name="ClueMensage" type="WindowDialog" parent="."]
+margin_left = 272.0
+margin_top = 133.0
+margin_right = 786.0
+margin_bottom = 409.0
+custom_styles/panel = SubResource( 7 )
+
+[node name="Label" type="Label" parent="ClueMensage"]
+margin_left = 28.0
+margin_top = 23.0
+margin_right = 491.0
+margin_bottom = 256.0
+custom_colors/font_color = Color( 0.207843, 0.203922, 0.203922, 1 )
+custom_fonts/font = SubResource( 8 )
+text = "Observar como a placa está destruída, amassada ao chão e o que está escrito nela. Na placa está escrito prefeitura, mas o que se tem nesse período na capital são subprefeituras, pois as prefeituras são criadas somente após a reestruturação administrativa do Distrito Federal com a LEI Nº 4.545, DE 10 DE DEZEMBRO DE 1964.
+"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="PhotoPanel" type="Panel" parent="."]
+margin_left = 257.0
+margin_top = 48.0
+margin_right = 769.0
+margin_bottom = 551.0
+custom_styles/panel = SubResource( 9 )
+
+[node name="PhotoOne" type="Sprite" parent="PhotoPanel"]
+position = Vector2( 255.883, 251.75 )
+scale = Vector2( 0.633905, 0.633905 )
+texture = ExtResource( 14 )
+
+[node name="FirstClue" type="Sprite" parent="PhotoPanel/PhotoOne"]
+visible = false
+position = Vector2( 110.991, -211.267 )
+scale = Vector2( 1.82612, 0.933472 )
+texture = ExtResource( 11 )
+
+[node name="FirstButton" type="TextureButton" parent="PhotoPanel/PhotoOne"]
+margin_left = -99.0128
+margin_top = -327.951
+margin_right = 254.987
+margin_bottom = -134.951
+
+[node name="SecondClue" type="Sprite" parent="PhotoPanel/PhotoOne"]
+visible = false
+position = Vector2( 61.0749, 247.247 )
+scale = Vector2( 1.09481, 0.528773 )
+texture = ExtResource( 11 )
+
+[node name="SecoondButton" type="TextureButton" parent="PhotoPanel/PhotoOne"]
+margin_left = -79.0
+margin_top = 193.0
+margin_right = 157.0
+margin_bottom = 297.0
+
+[node name="ThirdClue" type="Sprite" parent="PhotoPanel/PhotoOne"]
+visible = false
+position = Vector2( 154.781, 126.596 )
+scale = Vector2( 0.997839, 0.580848 )
+texture = ExtResource( 11 )
+
+[node name="ThirdButton" type="TextureButton" parent="PhotoPanel/PhotoOne"]
+margin_left = 58.9885
+margin_top = 99.877
+margin_right = 250.988
+margin_bottom = 216.877
+
+[node name="FourthClue" type="Sprite" parent="PhotoPanel/PhotoOne"]
+visible = false
+position = Vector2( 313.871, -22.4571 )
+scale = Vector2( 0.817908, 0.539212 )
+texture = ExtResource( 11 )
+
+[node name="FourthButton" type="TextureButton" parent="PhotoPanel/PhotoOne"]
+margin_left = 262.0
+margin_top = -58.0
+margin_right = 371.0
+margin_bottom = 17.0
+
+[node name="PhotoTwo" type="Sprite" parent="PhotoPanel"]
+visible = false
+position = Vector2( 256, 251.5 )
+scale = Vector2( 0.625798, 0.611959 )
+texture = ExtResource( 12 )
+
+[node name="FirstClue" type="Sprite" parent="PhotoPanel/PhotoTwo"]
+visible = false
+position = Vector2( -123.043, -236.127 )
+scale = Vector2( 1.86961, 1.29911 )
+texture = ExtResource( 11 )
+
+[node name="FirstButton" type="TextureButton" parent="PhotoPanel/PhotoTwo"]
+margin_left = -310.004
+margin_top = -345.252
+margin_right = -131.004
+margin_bottom = -163.252
+
+[node name="ThirdClue" type="Sprite" parent="PhotoPanel/PhotoTwo"]
+visible = false
+position = Vector2( -206.936, 288.826 )
+scale = Vector2( 1.55801, 1.01722 )
+texture = ExtResource( 11 )
+
+[node name="ThirdButton" type="TextureButton" parent="PhotoPanel/PhotoTwo"]
+margin_left = -339.367
+margin_top = 203.38
+margin_right = -159.367
+margin_bottom = 360.38
+
+[node name="FourthClue" type="Sprite" parent="PhotoPanel/PhotoTwo"]
+visible = false
+position = Vector2( 158.198, -71.0832 )
+scale = Vector2( 1, 0.683836 )
+texture = ExtResource( 11 )
+
+[node name="FourthButton" type="TextureButton" parent="PhotoPanel/PhotoTwo"]
+margin_left = 69.0
+margin_top = -117.0
+margin_right = 245.0
+margin_bottom = -27.0
+
+[connection signal="popup_hide" from="MinigameExplanation" to="." method="_on_MinigameExplanation_popup_hide"]
 [connection signal="pressed" from="Next" to="." method="next_image"]
 [connection signal="pressed" from="Prev" to="." method="previous_image"]
 [connection signal="pressed" from="Button" to="." method="exit"]
+[connection signal="button_down" from="PhotoPanel/PhotoOne/FirstButton" to="." method="_on_FirstButton_button_down"]
+[connection signal="button_down" from="PhotoPanel/PhotoOne/SecoondButton" to="." method="_on_SecoondButton_button_down"]
+[connection signal="button_down" from="PhotoPanel/PhotoOne/ThirdButton" to="." method="_on_ThirdButton_button_down"]
+[connection signal="button_down" from="PhotoPanel/PhotoOne/FourthButton" to="." method="_on_FourthButton_button_down"]
+[connection signal="button_down" from="PhotoPanel/PhotoTwo/FirstButton" to="." method="_on_FirstButton_button_down"]
+[connection signal="button_down" from="PhotoPanel/PhotoTwo/ThirdButton" to="." method="_on_ThirdButton_button_down"]
+[connection signal="button_down" from="PhotoPanel/PhotoTwo/FourthButton" to="." method="_on_FourthButton_button_down"]

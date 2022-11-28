@@ -100,8 +100,10 @@ stream = ExtResource( 2 )
 margin_top = 160.0
 margin_bottom = 208.0
 chat_res = "res://dialogs/lavadeira.txt"
+chat = "narra*Suzana te guia pela terra vermelha, enquanto o vento bate em seu rosto. No horizonte, é possível ver uma pequena multidão fervilhante. Com expectativa, você aperta os passos já imaginando tudo aquilo que pode estar acontecendo.
+*narra*Você escuta uma voz imponente vindo do centro do grupo de trabalhadores. Se apertando entre as pessoas você procura por uma brecha para ver tudo que está acontecendo e descobrir a face de quem fala."
 img = [ ExtResource( 1 ) ]
-cha = [ "*narra*" ]
+cha = [ "narra" ]
 
 [connection signal="end_dialog" from="ChatBox" to="." method="multidao_end_scene"]
 [connection signal="new_dialog" from="ChatBox" to="." method="new_dialog_text"]

@@ -8,6 +8,10 @@
 [ext_resource path="res://assets/Images/Composition/diary/diaryform.png" type="Texture" id=6]
 [ext_resource path="res://assets/Images/Composition/diary/ícone1.png" type="Texture" id=7]
 [ext_resource path="res://assets/Images/Composition/CharacterChoice/mochilas/redimensionado/mochila01.png" type="Texture" id=8]
+<<<<<<< HEAD
+=======
+[ext_resource path="res://assets/Images/Composition/diary/cubo2.png" type="Texture" id=9]
+>>>>>>> a096312 (PhotoAnalyze implementation)
 [ext_resource path="res://entities/Player.tscn" type="PackedScene" id=10]
 [ext_resource path="res://assets/Images/Composition/CharacterChoice/chapéu2.png" type="Texture" id=11]
 [ext_resource path="res://assets/Fonts/arial/Arialn.ttf" type="DynamicFontData" id=12]
@@ -21,6 +25,17 @@
 [ext_resource path="res://assets/Images/Composition/diary/tape.png" type="Texture" id=20]
 [ext_resource path="res://assets/Images/Composition/diary/1.png" type="Texture" id=21]
 [ext_resource path="res://assets/Characters/suzana/Suzana_body.png" type="Texture" id=22]
+<<<<<<< HEAD
+=======
+[ext_resource path="res://assets/Images/Composition/diary/binoculos2.png" type="Texture" id=23]
+[ext_resource path="res://assets/Images/Composition/diary/cartazes.png" type="Texture" id=24]
+[ext_resource path="res://assets/Images/Composition/diary/planeta2.png" type="Texture" id=25]
+[ext_resource path="res://assets/Images/Composition/diary/livros2.png" type="Texture" id=26]
+[ext_resource path="res://assets/Images/Composition/diary/jornal2.png" type="Texture" id=27]
+[ext_resource path="res://assets/Images/Composition/diary/jogo_da_memória2.png" type="Texture" id=28]
+[ext_resource path="res://assets/Images/Composition/diary/chapéu2.png" type="Texture" id=29]
+[ext_resource path="res://assets/Images/Composition/diary/pasta2.png" type="Texture" id=30]
+>>>>>>> a096312 (PhotoAnalyze implementation)
 
 [sub_resource type="StyleBoxFlat" id=4]
 bg_color = Color( 1, 0, 0, 0 )
@@ -278,11 +293,19 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
+<<<<<<< HEAD
 margin_left = -512.0
 margin_top = -248.0
 margin_right = 16.0
 margin_bottom = 52.0
 rect_scale = Vector2( 1e-05, 1e-05 )
+=======
+margin_left = -252.0
+margin_top = -120.0
+margin_right = 276.0
+margin_bottom = 92.0
+rect_scale = Vector2( 0.857143, 0.857143 )
+>>>>>>> a096312 (PhotoAnalyze implementation)
 rect_pivot_offset = Vector2( 257, 104 )
 theme = ExtResource( 13 )
 
@@ -738,7 +761,179 @@ margin_bottom = 209.0
 position = Vector2( 694, 231 )
 scale = Vector2( 0.315949, 0.315949 )
 
-[connection signal="popup_hide" from="FirstAccessMessage" to="." method="_on_FirstAccessMessage_popup_hide"]
+[node name="AbillityTab" type="Tabs" parent="."]
+visible = false
+margin_right = 40.0
+margin_bottom = 24.0
+
+[node name="CharactersBackground" type="Sprite" parent="AbillityTab"]
+position = Vector2( 328, 254 )
+scale = Vector2( 0.28875, 0.28875 )
+texture = ExtResource( 21 )
+
+[node name="Title" type="Label" parent="AbillityTab"]
+anchor_left = -8.694
+anchor_top = -1.175
+anchor_right = -8.694
+anchor_bottom = -1.175
+margin_left = 535.76
+margin_top = 49.2
+margin_right = 782.76
+margin_bottom = 92.2
+custom_colors/font_color = Color( 0.4, 0.631373, 0.862745, 1 )
+custom_fonts/font = SubResource( 24 )
+text = "HABILIDADES"
+align = 1
+
+[node name="AbillityName" type="Label" parent="AbillityTab"]
+anchor_left = -8.694
+anchor_top = -1.175
+anchor_right = -8.694
+anchor_bottom = -1.175
+margin_left = 927.76
+margin_top = 61.2
+margin_right = 1174.76
+margin_bottom = 104.2
+custom_colors/font_color = Color( 0.4, 0.631373, 0.862745, 1 )
+custom_fonts/font = SubResource( 24 )
+align = 1
+
+[node name="CharacterBackground" type="Panel" parent="AbillityTab"]
+anchor_left = -1.005
+anchor_top = -0.811
+anchor_right = -1.005
+anchor_bottom = -0.811
+margin_left = 584.2
+margin_top = 107.464
+margin_right = 912.2
+margin_bottom = 394.464
+custom_styles/panel = SubResource( 25 )
+__meta__ = {
+"_editor_description_": "	"
+}
+
+[node name="DescriptionBackground" type="Panel" parent="AbillityTab"]
+anchor_bottom = 0.227
+margin_left = 544.0
+margin_top = 392.0
+margin_right = 872.0
+margin_bottom = 473.552
+custom_styles/panel = SubResource( 26 )
+
+[node name="DescriptionText" type="Label" parent="AbillityTab"]
+margin_left = 555.0
+margin_top = 397.0
+margin_right = 861.0
+margin_bottom = 450.0
+custom_colors/font_color = Color( 0.290196, 0.211765, 0.290196, 1 )
+custom_fonts/font = SubResource( 27 )
+text = "Descrição de habilidades."
+autowrap = true
+
+[node name="Binoculos" type="Sprite" parent="AbillityTab"]
+position = Vector2( 195, 133 )
+scale = Vector2( 0.102218, 0.102218 )
+texture = ExtResource( 23 )
+
+[node name="BinoculosButton" type="TextureButton" parent="AbillityTab/Binoculos"]
+margin_left = -567.415
+margin_top = -586.98
+margin_right = 586.585
+margin_bottom = 549.02
+
+[node name="Cartazes" type="Sprite" parent="AbillityTab"]
+position = Vector2( 319.567, 131.567 )
+scale = Vector2( 0.147293, 0.147293 )
+texture = ExtResource( 24 )
+
+[node name="CartazesButton" type="TextureButton" parent="AbillityTab/Cartazes"]
+anchor_bottom = 1.0
+margin_left = -411.0
+margin_top = -404.0
+margin_right = 417.0
+margin_bottom = -403.0
+
+[node name="Chapeu" type="Sprite" parent="AbillityTab"]
+position = Vector2( 443, 131 )
+scale = Vector2( 0.131931, 0.131931 )
+texture = ExtResource( 29 )
+
+[node name="ChapéuButton" type="TextureButton" parent="AbillityTab/Chapeu"]
+margin_left = -440.0
+margin_top = -432.0
+margin_right = 440.0
+margin_bottom = 439.0
+
+[node name="Cubo" type="Sprite" parent="AbillityTab"]
+position = Vector2( 191.945, 248.491 )
+scale = Vector2( 0.079256, 0.079256 )
+texture = ExtResource( 9 )
+
+[node name="CuboButton" type="TextureButton" parent="AbillityTab/Cubo"]
+margin_left = -718.0
+margin_top = -637.0
+margin_right = 809.0
+margin_bottom = 776.0
+
+[node name="JogoDaMemoria" type="Sprite" parent="AbillityTab"]
+position = Vector2( 320, 253 )
+scale = Vector2( 0.130692, 0.130692 )
+texture = ExtResource( 28 )
+
+[node name="jogoDaMemóriaButton" type="TextureButton" parent="AbillityTab/JogoDaMemoria"]
+margin_left = -459.0
+margin_top = -428.0
+margin_right = 452.0
+margin_bottom = 452.0
+
+[node name="Jornal" type="Sprite" parent="AbillityTab"]
+position = Vector2( 445, 254 )
+scale = Vector2( 0.13319, 0.13319 )
+texture = ExtResource( 27 )
+
+[node name="JornalButton" type="TextureButton" parent="AbillityTab/Jornal"]
+margin_left = -443.0
+margin_top = -435.0
+margin_right = 435.0
+margin_bottom = 428.0
+
+[node name="Livros" type="Sprite" parent="AbillityTab"]
+position = Vector2( 196, 373 )
+scale = Vector2( 0.124023, 0.124023 )
+texture = ExtResource( 26 )
+
+[node name="LivrosButton" type="TextureButton" parent="AbillityTab/Livros"]
+margin_left = -460.0
+margin_top = -427.0
+margin_right = 475.0
+margin_bottom = 484.0
+
+[node name="Pasta" type="Sprite" parent="AbillityTab"]
+position = Vector2( 314, 374 )
+scale = Vector2( 0.138127, 0.138127 )
+texture = ExtResource( 30 )
+
+[node name="PastaButton" type="TextureButton" parent="AbillityTab/Pasta"]
+margin_left = -391.0
+margin_top = -391.0
+margin_right = 478.0
+margin_bottom = 434.0
+
+[node name="Planeta" type="Sprite" parent="AbillityTab"]
+position = Vector2( 439.008, 372.508 )
+scale = Vector2( 0.128853, 0.135049 )
+texture = ExtResource( 25 )
+
+[node name="PlanetaButton" type="TextureButton" parent="AbillityTab/Planeta"]
+margin_left = -435.0
+margin_top = -389.0
+margin_right = 496.0
+margin_bottom = 470.0
+
+[node name="CharacterZoom" type="Sprite" parent="AbillityTab"]
+position = Vector2( 694, 231 )
+scale = Vector2( 0.315949, 0.315949 )
+
 [connection signal="pressed" from="PlayerButton" to="." method="_on_PlayerButton_pressed"]
 [connection signal="pressed" from="MapButton" to="." method="_on_MapButton_pressed"]
 [connection signal="pressed" from="CharactersButton" to="." method="_on_CharactersButton_pressed"]
