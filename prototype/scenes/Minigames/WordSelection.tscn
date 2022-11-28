@@ -216,7 +216,7 @@ margin_bottom = 375.609
 rect_rotation = 4.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 5 )
-text = "Reividicação"
+text = "Reivindicação"
 
 [node name="Word4Button" type="TextureButton" parent="Word4"]
 margin_left = -34.1964

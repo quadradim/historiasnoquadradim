@@ -8,7 +8,7 @@
 [ext_resource path="res://assets/Images/Composition/diary/diaryform.png" type="Texture" id=6]
 [ext_resource path="res://assets/Images/Composition/diary/ícone1.png" type="Texture" id=7]
 [ext_resource path="res://assets/Images/Composition/CharacterChoice/mochilas/redimensionado/mochila01.png" type="Texture" id=8]
-[ext_resource path="res://assets/Images/Composition/Diary/cubo2.png" type="Texture" id=9]
+[ext_resource path="res://assets/Images/Composition/diary/cubo2.png" type="Texture" id=9]
 [ext_resource path="res://entities/Player.tscn" type="PackedScene" id=10]
 [ext_resource path="res://assets/Images/Composition/CharacterChoice/chapéu2.png" type="Texture" id=11]
 [ext_resource path="res://assets/Fonts/arial/Arialn.ttf" type="DynamicFontData" id=12]
@@ -22,14 +22,14 @@
 [ext_resource path="res://assets/Images/Composition/diary/tape.png" type="Texture" id=20]
 [ext_resource path="res://assets/Images/Composition/diary/1.png" type="Texture" id=21]
 [ext_resource path="res://assets/Characters/suzana/Suzana_body.png" type="Texture" id=22]
-[ext_resource path="res://assets/Images/Composition/Diary/binoculos2.png" type="Texture" id=23]
-[ext_resource path="res://assets/Images/Composition/Diary/chapéu2.png" type="Texture" id=24]
-[ext_resource path="res://assets/Images/Composition/Diary/livros2.png" type="Texture" id=25]
-[ext_resource path="res://assets/Images/Composition/Diary/cartazes.png" type="Texture" id=26]
-[ext_resource path="res://assets/Images/Composition/Diary/jogo_da_memória2.png" type="Texture" id=27]
-[ext_resource path="res://assets/Images/Composition/Diary/jornal2.png" type="Texture" id=28]
-[ext_resource path="res://assets/Images/Composition/Diary/pasta2.png" type="Texture" id=29]
-[ext_resource path="res://assets/Images/Composition/Diary/planeta2.png" type="Texture" id=30]
+[ext_resource path="res://assets/Images/Composition/diary/binoculos2.png" type="Texture" id=23]
+[ext_resource path="res://assets/Images/Composition/diary/cartazes.png" type="Texture" id=24]
+[ext_resource path="res://assets/Images/Composition/diary/planeta2.png" type="Texture" id=25]
+[ext_resource path="res://assets/Images/Composition/diary/livros2.png" type="Texture" id=26]
+[ext_resource path="res://assets/Images/Composition/diary/jornal2.png" type="Texture" id=27]
+[ext_resource path="res://assets/Images/Composition/diary/jogo_da_memória2.png" type="Texture" id=28]
+[ext_resource path="res://assets/Images/Composition/diary/chapéu2.png" type="Texture" id=29]
+[ext_resource path="res://assets/Images/Composition/diary/pasta2.png" type="Texture" id=30]
 
 [sub_resource type="StyleBoxFlat" id=4]
 bg_color = Color( 1, 0, 0, 0 )
@@ -233,11 +233,11 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -512.0
-margin_top = -208.0
-margin_right = 16.0002
-margin_bottom = 4.0
-rect_scale = Vector2( 1e-05, 1e-05 )
+margin_left = -252.0
+margin_top = -120.0
+margin_right = 276.0
+margin_bottom = 92.0
+rect_scale = Vector2( 0.857143, 0.857143 )
 rect_pivot_offset = Vector2( 257, 104 )
 theme = ExtResource( 13 )
 
@@ -775,7 +775,7 @@ margin_bottom = 549.02
 [node name="Cartazes" type="Sprite" parent="AbillityTab"]
 position = Vector2( 319.567, 131.567 )
 scale = Vector2( 0.147293, 0.147293 )
-texture = ExtResource( 26 )
+texture = ExtResource( 24 )
 
 [node name="CartazesButton" type="TextureButton" parent="AbillityTab/Cartazes"]
 anchor_bottom = 1.0
@@ -787,7 +787,7 @@ margin_bottom = -403.0
 [node name="Chapeu" type="Sprite" parent="AbillityTab"]
 position = Vector2( 443, 131 )
 scale = Vector2( 0.131931, 0.131931 )
-texture = ExtResource( 24 )
+texture = ExtResource( 29 )
 
 [node name="ChapéuButton" type="TextureButton" parent="AbillityTab/Chapeu"]
 margin_left = -440.0
@@ -809,7 +809,7 @@ margin_bottom = 776.0
 [node name="JogoDaMemoria" type="Sprite" parent="AbillityTab"]
 position = Vector2( 320, 253 )
 scale = Vector2( 0.130692, 0.130692 )
-texture = ExtResource( 27 )
+texture = ExtResource( 28 )
 
 [node name="jogoDaMemóriaButton" type="TextureButton" parent="AbillityTab/JogoDaMemoria"]
 margin_left = -459.0
@@ -820,7 +820,7 @@ margin_bottom = 452.0
 [node name="Jornal" type="Sprite" parent="AbillityTab"]
 position = Vector2( 445, 254 )
 scale = Vector2( 0.13319, 0.13319 )
-texture = ExtResource( 28 )
+texture = ExtResource( 27 )
 
 [node name="JornalButton" type="TextureButton" parent="AbillityTab/Jornal"]
 margin_left = -443.0
@@ -831,7 +831,7 @@ margin_bottom = 428.0
 [node name="Livros" type="Sprite" parent="AbillityTab"]
 position = Vector2( 196, 373 )
 scale = Vector2( 0.124023, 0.124023 )
-texture = ExtResource( 25 )
+texture = ExtResource( 26 )
 
 [node name="LivrosButton" type="TextureButton" parent="AbillityTab/Livros"]
 margin_left = -460.0
@@ -842,7 +842,7 @@ margin_bottom = 484.0
 [node name="Pasta" type="Sprite" parent="AbillityTab"]
 position = Vector2( 314, 374 )
 scale = Vector2( 0.138127, 0.138127 )
-texture = ExtResource( 29 )
+texture = ExtResource( 30 )
 
 [node name="PastaButton" type="TextureButton" parent="AbillityTab/Pasta"]
 margin_left = -391.0
@@ -853,7 +853,7 @@ margin_bottom = 434.0
 [node name="Planeta" type="Sprite" parent="AbillityTab"]
 position = Vector2( 439.008, 372.508 )
 scale = Vector2( 0.128853, 0.135049 )
-texture = ExtResource( 30 )
+texture = ExtResource( 25 )
 
 [node name="PlanetaButton" type="TextureButton" parent="AbillityTab/Planeta"]
 margin_left = -435.0

@@ -92,8 +92,8 @@ texture = ExtResource( 17 )
 
 [node name="BackpackTable" type="Sprite" parent="."]
 visible = false
-position = Vector2( 500, 457 )
-scale = Vector2( 0.204644, 0.204644 )
+position = Vector2( 500, 472 )
+scale = Vector2( 0.230832, 0.230832 )
 texture = ExtResource( 27 )
 
 [node name="TabContainer" type="TabContainer" parent="."]

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/jornal2.png-873f7ba261dd7c7c8823329196662fce.stex"
+path="res://.import/jornal2.png-8078370e88d7c2931954da4979e325e7.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Images/Composition/Diary/jornal2.png"
-dest_files=[ "res://.import/jornal2.png-873f7ba261dd7c7c8823329196662fce.stex" ]
+source_file="res://assets/Images/Composition/diary/jornal2.png"
+dest_files=[ "res://.import/jornal2.png-8078370e88d7c2931954da4979e325e7.stex" ]
 
 [params]
 

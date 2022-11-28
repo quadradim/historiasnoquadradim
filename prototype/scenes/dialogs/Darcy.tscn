@@ -20,9 +20,19 @@ texture = ExtResource( 5 )
 margin_top = 156.0
 margin_bottom = 204.0
 chat_res = "res://dialogs/Darcy.txt"
-img = [ ExtResource( 1 ), ExtResource( 2 ) ]
-cha = [ "*D*", "*M*" ]
-image_scales = [ Vector2( 0.135, 0.135 ), Vector2( 0.13, 0.13 ) ]
+chat = "D*Gostaria de pedir a calma e a atenção de todos os trabalhadores presentes no Núcleo Bandeirante. Asseguro a vocês que todas as demandas serão atendidas.
+Estamos aqui do mesmo lado, entendo as dificuldades que vocês têm enfrentado, e são muito justas as demandas...*D*Logo que o Coronel Avelar me avisou do ocorrido, recebi a determinação de nosso presidente Jango para que resolvesse a situação dessas famílias.
+Deste modo, buscaremos enfrentar essa situação com a urgência que ela demanda. Hoje mesmo vamos começar a instalação de um Serviço de Triagem e Colocação de Desempregados.*M*som de palmas, seguidas de vaias e gritos: 
+“Estamos com fome!” “Isso!” “Isso!”*D*...
+*D*Vamos abrir novas frentes de trabalho a partir da construção de rodovias no sudoeste goiano.*M*Uma mulher grita: “E os homens vão trabalhar longe daqui é? Vocês querem é expulsar a gente!”*D*Acalmem-se. Para estas frentes de trabalho em Mato Sêco e São João… e, irão somente os trabalhadores solteiros.
+Em seguida, seria alocados os trabalhadores casados, nas obras da Ferrovia Brasília e nas proximidades...*D*Em conversa com o líder do movimento, já empenhamos a nossa palavra, nos comprometendo a assegurar de imediato o acesso ao restaurante da SAB a todas as famílias dos trabalhadores realocados. 
+De imediato me deslocarei com o Coronel Lemos de Avelar, para fazer este comunicado e acalmar os ânimos também na cidade de Taguatinga. Vocês não estão desamparados!*M*[Palmas]
+"
+img = [ ExtResource( 1 ), ExtResource( 1 ), ExtResource( 2 ) ]
+cha = [ "P", "D", "M" ]
+image_scales = [ Vector2( 0.135, 0.135 ), Vector2( 0.13, 0.13 ), Vector2( 0.13, 0.13 ) ]
+nam = [ "", "Darcy", "Multidão" ]
+resize_panel = [ Vector2( 0, 0 ), Vector2( 60, 26 ), Vector2( 85, 26 ) ]
 has_profile = true
 
 [node name="MainMusic" parent="." instance=ExtResource( 3 )]

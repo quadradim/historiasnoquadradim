@@ -38,9 +38,12 @@ margin_top = 152.0
 margin_right = 62.0
 margin_bottom = 200.0
 chat_res = "res://dialogs/lavadeira_amiga.txt"
-img = [ ExtResource( 3 ) ]
-cha = [ "*lavadeira*" ]
-image_scales = [ Vector2( 0.13, 0.13 ) ]
+chat = "lavadeira*Mermã de Deus! Que confusão é essa que tá acontecendo ali?"
+img = [ ExtResource( 3 ), ExtResource( 3 ) ]
+cha = [ "P", "lavadeira" ]
+image_scales = [ Vector2( 0.13, 0.13 ), Vector2( 0.13, 0.13 ) ]
+nam = [ "", "Lavadeira" ]
+resize_panel = [ Vector2( 113, 26 ), Vector2( 90, 26 ) ]
 has_profile = true
 
 [node name="MainMusic" parent="." instance=ExtResource( 5 )]

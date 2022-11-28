@@ -1,14 +1,14 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://scenes/AuxScenes/ProfileImages.gd" type="Script" id=1]
 [ext_resource path="res://assets/Fonts/bebas_neue/BebasNeue-Regular.otf" type="DynamicFontData" id=2]
 [ext_resource path="res://assets/Images/Composition/ProfileImages/suzana_face.png" type="Texture" id=3]
 
-[sub_resource type="DynamicFont" id=6]
+[sub_resource type="DynamicFont" id=20]
 size = 20
 font_data = ExtResource( 2 )
 
-[sub_resource type="StyleBoxFlat" id=10]
+[sub_resource type="StyleBoxFlat" id=21]
 bg_color = Color( 0.898039, 0.780392, 0.0901961, 0 )
 border_color = Color( 0.494118, 0.533333, 0.556863, 1 )
 corner_radius_top_left = 5
@@ -16,10 +16,10 @@ corner_radius_top_right = 5
 corner_radius_bottom_right = 5
 corner_radius_bottom_left = 5
 
-[sub_resource type="StyleBoxFlat" id=14]
+[sub_resource type="StyleBoxFlat" id=22]
 bg_color = Color( 0.6, 0.6, 0.6, 0 )
 
-[sub_resource type="StyleBoxFlat" id=11]
+[sub_resource type="StyleBoxFlat" id=23]
 bg_color = Color( 0.972549, 0.882353, 0.435294, 0 )
 border_color = Color( 0.4, 0.631373, 0.862745, 1 )
 corner_radius_top_left = 5
@@ -27,7 +27,7 @@ corner_radius_top_right = 5
 corner_radius_bottom_right = 5
 corner_radius_bottom_left = 5
 
-[sub_resource type="StyleBoxFlat" id=5]
+[sub_resource type="StyleBoxFlat" id=24]
 bg_color = Color( 0.972549, 0.882353, 0.435294, 0 )
 border_color = Color( 0.4, 0.631373, 0.862745, 1 )
 corner_radius_top_left = 5
@@ -35,7 +35,7 @@ corner_radius_top_right = 5
 corner_radius_bottom_right = 5
 corner_radius_bottom_left = 5
 
-[sub_resource type="StyleBoxFlat" id=9]
+[sub_resource type="StyleBoxFlat" id=25]
 bg_color = Color( 0.972549, 0.882353, 0.435294, 0 )
 border_color = Color( 0.4, 0.631373, 0.862745, 1 )
 corner_radius_top_left = 5
@@ -43,11 +43,11 @@ corner_radius_top_right = 5
 corner_radius_bottom_right = 5
 corner_radius_bottom_left = 5
 
-[sub_resource type="DynamicFont" id=8]
+[sub_resource type="DynamicFont" id=26]
 size = 29
 font_data = ExtResource( 2 )
 
-[sub_resource type="StyleBoxFlat" id=16]
+[sub_resource type="StyleBoxFlat" id=27]
 bg_color = Color( 0.501961, 0.443137, 0.309804, 1 )
 border_width_left = 3
 border_width_top = 3
@@ -59,29 +59,29 @@ corner_radius_top_right = 100
 corner_radius_bottom_right = 100
 corner_radius_bottom_left = 100
 
-[sub_resource type="DynamicFont" id=7]
+[sub_resource type="DynamicFont" id=28]
 size = 20
 font_data = ExtResource( 2 )
 
-[sub_resource type="DynamicFont" id=1]
+[sub_resource type="DynamicFont" id=29]
 size = 22
 font_data = ExtResource( 2 )
 
-[sub_resource type="StyleBoxFlat" id=2]
+[sub_resource type="StyleBoxFlat" id=30]
 bg_color = Color( 0.4, 0.631373, 0.862745, 1 )
 corner_radius_top_left = 5
 corner_radius_top_right = 5
 corner_radius_bottom_right = 5
 corner_radius_bottom_left = 10
 
-[sub_resource type="StyleBoxFlat" id=3]
+[sub_resource type="StyleBoxFlat" id=31]
 content_margin_left = 39.0
 content_margin_right = 39.0
 bg_color = Color( 0.215686, 0.298039, 0.388235, 1 )
 corner_radius_top_left = 5
 corner_radius_top_right = 5
 
-[sub_resource type="StyleBoxFlat" id=4]
+[sub_resource type="StyleBoxFlat" id=32]
 content_margin_left = 39.0
 content_margin_right = 39.0
 bg_color = Color( 0.4, 0.631373, 0.862745, 1 )
@@ -89,7 +89,7 @@ corner_radius_top_left = 5
 corner_radius_top_right = 5
 shadow_color = Color( 0.0666667, 0.0117647, 0.0117647, 0.6 )
 
-[sub_resource type="StyleBoxFlat" id=12]
+[sub_resource type="StyleBoxFlat" id=33]
 bg_color = Color( 0.945098, 0.933333, 0.905882, 1 )
 border_width_left = 5
 border_width_top = 5
@@ -111,32 +111,44 @@ Button/colors/font_color_focus = Color( 0.94, 0.94, 0.94, 1 )
 Button/colors/font_color_hover = Color( 0.94, 0.94, 0.94, 1 )
 Button/colors/font_color_pressed = Color( 0.4, 0.631373, 0.862745, 1 )
 Button/constants/hseparation = 2
-Button/fonts/font = SubResource( 6 )
-Button/styles/disabled = SubResource( 10 )
-Button/styles/focus = SubResource( 14 )
-Button/styles/hover = SubResource( 11 )
-Button/styles/normal = SubResource( 5 )
-Button/styles/pressed = SubResource( 9 )
+Button/fonts/font = SubResource( 20 )
+Button/styles/disabled = SubResource( 21 )
+Button/styles/focus = SubResource( 22 )
+Button/styles/hover = SubResource( 23 )
+Button/styles/normal = SubResource( 24 )
+Button/styles/pressed = SubResource( 25 )
 Label/colors/font_color = Color( 0.0588235, 0.054902, 0.0862745, 1 )
-Label/fonts/font = SubResource( 8 )
-Panel/styles/panel = SubResource( 16 )
+Label/fonts/font = SubResource( 26 )
+Panel/styles/panel = SubResource( 27 )
 RichTextLabel/colors/default_color = Color( 0.996078, 0.972549, 0.866667, 1 )
-RichTextLabel/fonts/normal_font = SubResource( 7 )
+RichTextLabel/fonts/normal_font = SubResource( 28 )
 TabContainer/colors/font_color_bg = Color( 0.69, 0.69, 0.69, 1 )
 TabContainer/colors/font_color_disabled = Color( 0.9, 0.9, 0.9, 0.2 )
 TabContainer/colors/font_color_fg = Color( 0.94, 0.94, 0.94, 1 )
-TabContainer/fonts/font = SubResource( 1 )
+TabContainer/fonts/font = SubResource( 29 )
 TabContainer/icons/decrement = null
 TabContainer/icons/decrement_highlight = null
 TabContainer/icons/increment = null
 TabContainer/icons/increment_highlight = null
 TabContainer/icons/menu = null
 TabContainer/icons/menu_highlight = null
-TabContainer/styles/panel = SubResource( 2 )
-TabContainer/styles/tab_bg = SubResource( 3 )
+TabContainer/styles/panel = SubResource( 30 )
+TabContainer/styles/tab_bg = SubResource( 31 )
 TabContainer/styles/tab_disabled = null
-TabContainer/styles/tab_fg = SubResource( 4 )
-WindowDialog/styles/panel = SubResource( 12 )
+TabContainer/styles/tab_fg = SubResource( 32 )
+WindowDialog/styles/panel = SubResource( 33 )
+
+[sub_resource type="StyleBoxFlat" id=17]
+bg_color = Color( 0.4, 0.631373, 0.862745, 1 )
+corner_radius_top_right = 10
+
+[sub_resource type="DynamicFont" id=18]
+size = 22
+font_data = ExtResource( 2 )
+
+[sub_resource type="StyleBoxFlat" id=19]
+bg_color = Color( 0.4, 0.631373, 0.862745, 1 )
+corner_radius_top_left = 20
 
 [node name="ProfileImages" type="Node2D"]
 script = ExtResource( 1 )
@@ -158,3 +170,25 @@ position = Vector2( 2, 1 )
 scale = Vector2( 0.169291, 0.169291 )
 texture = ExtResource( 3 )
 offset = Vector2( -16.7292, -12.147 )
+
+[node name="Panel" type="Panel" parent="."]
+margin_left = 40.0
+margin_top = -7.0
+margin_right = 153.0
+margin_bottom = 19.0
+custom_styles/panel = SubResource( 17 )
+
+[node name="Label" type="Label" parent="Panel"]
+margin_left = 5.0
+margin_top = -1.0
+margin_right = 113.0
+margin_bottom = 26.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 18 )
+
+[node name="Panel2" type="Panel" parent="."]
+margin_left = 37.0
+margin_top = 15.0
+margin_right = 43.0
+margin_bottom = 19.0
+custom_styles/panel = SubResource( 19 )

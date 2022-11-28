@@ -1,10 +1,14 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://assets/Cena/ProtestoBandeirante/Cenario.jpeg" type="Texture" id=1]
 [ext_resource path="res://assets/Characters/protesto/dist1.png" type="Texture" id=2]
 [ext_resource path="res://scenes/AuxScenes/ChatBox.tscn" type="PackedScene" id=3]
 [ext_resource path="res://assets/Characters/protesto/dist1- 3x4.png" type="Texture" id=4]
 [ext_resource path="res://scenes/dialogs/protesto_bandeirante/Distrator01.gd" type="Script" id=5]
+
+[sub_resource type="StreamTexture" id=1]
+flags = 4
+load_path = "res://.import/dist1- 3x4.png-7c30cbcc2e5727dd3292fd4e74d757cc.stex"
 
 [node name="Distrator01" type="CanvasLayer"]
 script = ExtResource( 5 )
@@ -25,9 +29,12 @@ margin_top = 152.0
 margin_right = 72.0
 margin_bottom = 200.0
 chat_res = "res://dialogs/distrator01_protesto_nucleo_bandeirante.txt"
-img = [ ExtResource( 4 ) ]
-cha = [ "*distrator1*" ]
-image_scales = [ Vector2( 0.18, 0.18 ) ]
+chat = "distrator1*Saí correndo da construção, só pra ver se esses políticos de Brasília vão resolver o nosso lado."
+img = [ SubResource( 1 ), ExtResource( 4 ) ]
+cha = [ "P", "distrator1" ]
+image_scales = [ Vector2( 0.18, 0.18 ), Vector2( 0.18, 0.18 ) ]
+nam = [ "Historiadora", "mascarado" ]
+resize_panel = [ Vector2( 113, 26 ), Vector2( 95, 26 ) ]
 has_profile = true
 
 [connection signal="end_dialog" from="ChatBox" to="." method="end_distractor_dialog"]

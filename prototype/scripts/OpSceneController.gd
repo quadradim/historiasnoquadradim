@@ -49,16 +49,16 @@ func start_events():
 	elif current_scene_name == 'darcy_speech':
 		used_scenes[0].instance.start()
 
-func load_audio():
-	if current_scene_name in """
-		access01,access02,character_choice,diary,suzana,lavadeiras,
-		lavadeira_amiga,menu,multidao,darcy_speech
-		""":
-		var audio = used_scenes[0].instance.play_music()
-		
-		var player_data = $PlayerEntity.read()
-		audio.set_volume_db(player_data["soundtrack"])
-		audio.play()
+#func load_audio():
+#	if current_scene_name in """
+#		access01,access02,character_choice,diary,suzana,lavadeiras,
+#		lavadeira_amiga,menu,multidao,darcy_speech
+#		""":
+#		var audio = used_scenes[0].instance.play_music()
+#
+#		var player_data = $PlayerEntity.read()
+#		audio.set_volume_db(player_data["soundtrack"])
+#		audio.play()
 
 func create_player():
 	$PlayerEntity.insert(
@@ -135,7 +135,7 @@ func end_transition_scene(anim_name):
 			used_scenes[0].instance.layer = 1
 			
 			start_events()
-			load_audio()
+#			load_audio()
 			
 	elif transition_animation_name == "fade_out":
 		transition_animation_name = "fade_in"

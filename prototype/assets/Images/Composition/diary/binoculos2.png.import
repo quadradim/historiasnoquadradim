@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/binoculos2.png-ecb58e5200f6e87f359085b2249c211e.stex"
+path="res://.import/binoculos2.png-179fb2be1367474605787c162cef3762.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Images/Composition/Diary/binoculos2.png"
-dest_files=[ "res://.import/binoculos2.png-ecb58e5200f6e87f359085b2249c211e.stex" ]
+source_file="res://assets/Images/Composition/diary/binoculos2.png"
+dest_files=[ "res://.import/binoculos2.png-179fb2be1367474605787c162cef3762.stex" ]
 
 [params]
 

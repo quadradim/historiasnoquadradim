@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/cartazes.png-44becfd0d75436c9bc3e1f0ba2534e73.stex"
+path="res://.import/cartazes.png-1067fa69269bd8461bedfb1421c2a9d5.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Images/Composition/Diary/cartazes.png"
-dest_files=[ "res://.import/cartazes.png-44becfd0d75436c9bc3e1f0ba2534e73.stex" ]
+source_file="res://assets/Images/Composition/diary/cartazes.png"
+dest_files=[ "res://.import/cartazes.png-1067fa69269bd8461bedfb1421c2a9d5.stex" ]
 
 [params]
 
