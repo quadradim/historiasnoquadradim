@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=2]
+[gd_scene load_steps=33 format=2]
 
 [ext_resource path="res://assets/Styles/Themes/Menu.tres" type="Theme" id=1]
 [ext_resource path="res://assets/Images/Composition/CharacterChoice/mochilas/redimensionado/mochila01.png" type="Texture" id=2]
@@ -60,6 +60,21 @@ expand_margin_left = 2.0
 expand_margin_right = 2.0
 expand_margin_top = 2.0
 expand_margin_bottom = 2.0
+
+[sub_resource type="Animation" id=8]
+resource_name = "popup"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1e-05, 1e-05 ), Vector2( 1, 1 ) ]
+}
 
 [node name="CharacterChoice" type="CanvasLayer"]
 script = ExtResource( 4 )
@@ -399,6 +414,39 @@ custom_styles/focus = SubResource( 7 )
 custom_styles/normal = SubResource( 6 )
 placeholder_text = "Digite seu Nome"
 placeholder_alpha = 1.0
+
+[node name="PopUp" type="AnimationPlayer" parent="."]
+root_node = NodePath("../FirstAccessMessage")
+anims/popup = SubResource( 8 )
+
+[node name="FirstAccessMessage" type="WindowDialog" parent="."]
+visible = true
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -532.0
+margin_top = -188.0
+margin_right = -32.0
+margin_bottom = 12.0
+rect_scale = Vector2( 1e-05, 1e-05 )
+rect_pivot_offset = Vector2( 257, 104 )
+theme = ExtResource( 15 )
+
+[node name="MessageText" type="Label" parent="FirstAccessMessage"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -232.0
+margin_top = -96.0
+margin_right = 235.0
+margin_bottom = 64.0
+custom_colors/font_color = Color( 0.196078, 0.282353, 0.376471, 0.670588 )
+text = "Antes de começar sua aventura, escolha a mochila que levará seus pertences e o diário de bordo."
+align = 1
+valign = 1
+autowrap = true
 
 [node name="PlayerEntity" parent="." instance=ExtResource( 24 )]
 

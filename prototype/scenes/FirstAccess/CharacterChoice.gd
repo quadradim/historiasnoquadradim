@@ -9,6 +9,8 @@ signal end_choice
 var player_data
 
 func _ready():	
+	$FirstAccessMessage.popup()
+	$PopUp.play("popup")
 	# Get Current Data
 	player_data = $PlayerEntity.read()
 	

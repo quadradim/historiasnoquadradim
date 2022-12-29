@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=2]
+[gd_scene load_steps=48 format=2]
 
 [ext_resource path="res://assets/Styles/Themes/Menu.tres" type="Theme" id=1]
 [ext_resource path="res://scenes/GUI/Diary.gd" type="Script" id=2]
@@ -107,6 +107,60 @@ tracks/0/keys = {
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ Vector2( 0, 0 ), Vector2( 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=29]
+resource_name = "Popup"
+tracks/0/type = "value"
+tracks/0/path = NodePath("../FirstAccessMessage:rect_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1e-05, 1e-05 ), Vector2( 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=28]
+resource_name = "ProfileAnimation"
+tracks/0/type = "value"
+tracks/0/path = NodePath("../ProfileIcon:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.252239, 0.276344 ), Vector2( 0.352, 0.376 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../MapIcon:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = false
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.23652, 0.23652 ), Vector2( 0.337, 0.337 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("../CharactersIcon:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = false
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.232954, 0.232954 ), Vector2( 0.333, 0.333 ) ]
 }
 
 [sub_resource type="DynamicFont" id=18]
@@ -225,9 +279,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = -512.0
-margin_top = -208.0
-margin_right = 16.0002
-margin_bottom = 4.0
+margin_top = -248.0
+margin_right = 16.0
+margin_bottom = 52.0
 rect_scale = Vector2( 1e-05, 1e-05 )
 rect_pivot_offset = Vector2( 257, 104 )
 theme = ExtResource( 13 )
@@ -242,7 +296,9 @@ margin_top = -80.0
 margin_right = 233.5
 margin_bottom = 80.0
 custom_colors/font_color = Color( 0.196078, 0.282353, 0.376471, 0.670588 )
-text = "Olá historiador! Este será seu diário de bordo que permitirá que possa acessar a várias informações importantes!"
+text = "O seu guia durante o jogo é o Diário de Bordo. Nele você encontrará quatro abas: a)
+Informações da jogadora; Mapa ; Personagens e Registro da investigação. Folheie seu diário
+e depois clique em PRÓXIMO para prosseguir"
 align = 1
 valign = 1
 autowrap = true
@@ -284,6 +340,11 @@ texture = ExtResource( 17 )
 [node name="FirstAccessMessageAnimation" type="AnimationPlayer" parent="."]
 method_call_mode = 1
 anims/NewGame = SubResource( 17 )
+
+[node name="IconsAnimation" type="AnimationPlayer" parent="."]
+root_node = NodePath("../CharactersTab")
+anims/Popup = SubResource( 29 )
+anims/ProfileAnimation = SubResource( 28 )
 
 [node name="NextButton" type="Button" parent="."]
 margin_left = 885.0
@@ -677,9 +738,12 @@ margin_bottom = 209.0
 position = Vector2( 694, 231 )
 scale = Vector2( 0.315949, 0.315949 )
 
+[connection signal="popup_hide" from="FirstAccessMessage" to="." method="_on_FirstAccessMessage_popup_hide"]
 [connection signal="pressed" from="PlayerButton" to="." method="_on_PlayerButton_pressed"]
 [connection signal="pressed" from="MapButton" to="." method="_on_MapButton_pressed"]
 [connection signal="pressed" from="CharactersButton" to="." method="_on_CharactersButton_pressed"]
+[connection signal="animation_finished" from="FirstAccessMessageAnimation" to="." method="_on_FirstAccessMessageAnimation_animation_finished2"]
+[connection signal="animation_finished" from="IconsAnimation" to="." method="_on_IconsAnimation_animation_finished"]
 [connection signal="pressed" from="NextButton" to="." method="_on_Button_pressed"]
 [connection signal="pressed" from="MapTab/City1/City1Button" to="." method="_on_City1Button_pressed"]
 [connection signal="pressed" from="MapTab/City2/City2Button" to="." method="_on_City2Button_pressed"]

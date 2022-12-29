@@ -3,6 +3,8 @@ extends CanvasLayer
 var player_data
 signal end_diary
 var locked_characters = [1,0,0,0,0,0,0,0,0]
+var animation_finish = false
+
 
 func _ready():
 	if bool(locked_characters[0]) == false:
@@ -40,6 +42,8 @@ func _ready():
 	# New Message Popup
 	$FirstAccessMessage.popup()
 	$FirstAccessMessageAnimation.play("NewGame")
+	
+
 
 func _process(delta):
 	$MainMusic.update("soundtrack")
@@ -116,3 +120,23 @@ func _on_City3Button_pressed():
 	ndo multidões que vêm de todos os lugares do país reivindicando
 	direitos.""" 
 	)
+
+
+
+func _on_FirstAccessMessageAnimation_animation_finished2(anim_name):
+	$IconsAnimation.play("ProfileAnimation")
+	pass # Replace with function body.
+
+
+func _on_IconsAnimation_animation_finished(anim_name):
+	if not animation_finish:
+		$IconsAnimation.play("ProfileAnimation")
+	else:
+		$IconsAnimation.play_backwards("ProfileAnimation")
+	animation_finish = not animation_finish
+	pass # Replace with function body.
+
+
+func _on_FirstAccessMessage_popup_hide():
+	$IconsAnimation.stop()
+	pass # Replace with function body.

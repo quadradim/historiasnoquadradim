@@ -8,6 +8,8 @@ func _ready():
 	$Control/NoteArea/Message.hide()
 	$Control/MagnifierArea/Magnifier.scale = Vector2(0.08, 0.08)
 	$Control/NoteArea/Note.scale = Vector2(0,0)
+	$FirstAccessMessage.popup()
+	$PopUpPlayer.play("Dale")
 
 func _process(delta):
 	$MainMusic.update("soundtrack")
@@ -34,3 +36,8 @@ func play_music():
 	
 func main_music_finished():
 	$MainMusic.play()
+
+
+func _on_TextureButton_pressed():
+	$Control/MagnifierArea.visible = true
+	pass # Replace with function body.
