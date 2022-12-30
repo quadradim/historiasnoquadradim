@@ -1,4 +1,4 @@
-[gd_scene load_steps=48 format=2]
+[gd_scene load_steps=57 format=2]
 
 [ext_resource path="res://assets/Styles/Themes/Menu.tres" type="Theme" id=1]
 [ext_resource path="res://scenes/GUI/Diary.gd" type="Script" id=2]
@@ -8,10 +8,7 @@
 [ext_resource path="res://assets/Images/Composition/diary/diaryform.png" type="Texture" id=6]
 [ext_resource path="res://assets/Images/Composition/diary/ícone1.png" type="Texture" id=7]
 [ext_resource path="res://assets/Images/Composition/CharacterChoice/mochilas/redimensionado/mochila01.png" type="Texture" id=8]
-<<<<<<< HEAD
-=======
 [ext_resource path="res://assets/Images/Composition/diary/cubo2.png" type="Texture" id=9]
->>>>>>> a096312 (PhotoAnalyze implementation)
 [ext_resource path="res://entities/Player.tscn" type="PackedScene" id=10]
 [ext_resource path="res://assets/Images/Composition/CharacterChoice/chapéu2.png" type="Texture" id=11]
 [ext_resource path="res://assets/Fonts/arial/Arialn.ttf" type="DynamicFontData" id=12]
@@ -25,8 +22,6 @@
 [ext_resource path="res://assets/Images/Composition/diary/tape.png" type="Texture" id=20]
 [ext_resource path="res://assets/Images/Composition/diary/1.png" type="Texture" id=21]
 [ext_resource path="res://assets/Characters/suzana/Suzana_body.png" type="Texture" id=22]
-<<<<<<< HEAD
-=======
 [ext_resource path="res://assets/Images/Composition/diary/binoculos2.png" type="Texture" id=23]
 [ext_resource path="res://assets/Images/Composition/diary/cartazes.png" type="Texture" id=24]
 [ext_resource path="res://assets/Images/Composition/diary/planeta2.png" type="Texture" id=25]
@@ -35,7 +30,6 @@
 [ext_resource path="res://assets/Images/Composition/diary/jogo_da_memória2.png" type="Texture" id=28]
 [ext_resource path="res://assets/Images/Composition/diary/chapéu2.png" type="Texture" id=29]
 [ext_resource path="res://assets/Images/Composition/diary/pasta2.png" type="Texture" id=30]
->>>>>>> a096312 (PhotoAnalyze implementation)
 
 [sub_resource type="StyleBoxFlat" id=4]
 bg_color = Color( 1, 0, 0, 0 )
@@ -293,19 +287,11 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-<<<<<<< HEAD
-margin_left = -512.0
-margin_top = -248.0
-margin_right = 16.0
-margin_bottom = 52.0
-rect_scale = Vector2( 1e-05, 1e-05 )
-=======
 margin_left = -252.0
 margin_top = -120.0
 margin_right = 276.0
 margin_bottom = 92.0
 rect_scale = Vector2( 0.857143, 0.857143 )
->>>>>>> a096312 (PhotoAnalyze implementation)
 rect_pivot_offset = Vector2( 257, 104 )
 theme = ExtResource( 13 )
 
