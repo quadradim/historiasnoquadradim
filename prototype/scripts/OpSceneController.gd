@@ -17,6 +17,8 @@ var current_scene_name
 var scenes_data
 var characters_darcy = [0, 0, 0]
 
+var previous_scene = null
+
 func load_control_scene(local, name, out_signal):
 	# 'out_signal' : The scene must to emit a signal
 	# 					  when you want out scene.
@@ -79,6 +81,7 @@ func _ready():
 		create_player()
 
 	$ConfigurationPopup.layer = -1
+	$Transition/BackpackClick.hide()
 
 	transition_animation.connect('animation_finished', self, 'end_transition_scene')
 	transition_animation.play("fade_out")
@@ -96,6 +99,13 @@ func _process(delta):
 	$Audio.update('soundtrack')
 	
 func change_scene(scene):
+	if scene == "diary_previous":
+		previous_scene = current_scene_name
+		scene = "diary"
+	elif previous_scene != null:
+		scene = previous_scene
+		previous_scene = null
+
 	if scene == 'distractor3_darcy' and not(characters_darcy[0] and characters_darcy[1]):
 		return
 	if scene == 'distractor1_darcy':
@@ -105,13 +115,8 @@ func change_scene(scene):
 
 	for current_scene in scenes_data:
 		if scene == current_scene:
-			if scenes_data[current_scene][2]:
-				$ConfigurationPopup.layer = 2
-				show_settings = true
-			else:
-				$ConfigurationPopup.layer = -1
-				show_settings = false
-
+			configuration_visibility()
+			
 			load_control_scene(
 				scenes_data[current_scene][0],
 				scene,
@@ -126,6 +131,8 @@ func change_scene(scene):
 	transition_animation_name = "fade_in"
 
 func end_transition_scene(anim_name):
+	backapack_visibility()
+
 	if transition_animation_name == "fade_in":
 		transition_animation.play("fade_out")
 
@@ -144,3 +151,20 @@ func end_transition_scene(anim_name):
 
 func setting_back_menu():
 	change_scene('menu')
+
+func clicked_in_backpack(scene):
+	change_scene(scene)
+	
+func backapack_visibility():
+	if scenes_data[current_scene_name][4]:
+		$Transition/BackpackClick.show()
+	else:
+		$Transition/BackpackClick.hide()
+
+func configuration_visibility():
+	if scenes_data[current_scene_name][2]:
+		$ConfigurationPopup.layer = 2
+		show_settings = true
+	else:
+		$ConfigurationPopup.layer = -1
+		show_settings = false
