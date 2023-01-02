@@ -3,7 +3,7 @@ extends CanvasLayer
 var player_data
 signal end_diary
 var locked_characters = [1,0,0,0,0,0,0,0,0]
-var animation_finish = false
+var animation_finish = true
 
 
 func _ready():
@@ -62,6 +62,7 @@ func _on_PlayerButton_pressed():
 	$ProfileTab.visible = true
 	$MapTab.visible = false
 	$CharactersTab.visible = false
+	$AbillityTab.visible = false
 	pass # Replace with function body.
 
 
@@ -69,6 +70,7 @@ func _on_MapButton_pressed():
 	$ProfileTab.visible = false
 	$MapTab.visible = true
 	$CharactersTab.visible = false
+	$AbillityTab.visible = false
 	pass # Replace with function body.
 
 
@@ -76,6 +78,14 @@ func _on_CharactersButton_pressed():
 	$ProfileTab.visible = false
 	$MapTab.visible = false
 	$CharactersTab.visible = true
+	$AbillityTab.visible = false
+	pass # Replace with function body.
+	
+func _on_AbillityButton_pressed():
+	$ProfileTab.visible = false
+	$MapTab.visible = false
+	$CharactersTab.visible = false
+	$AbillityTab.visible = true	
 	pass # Replace with function body.
 
 
@@ -138,5 +148,55 @@ func _on_IconsAnimation_animation_finished(anim_name):
 
 
 func _on_FirstAccessMessage_popup_hide():
+	$ProfileIcon.scale = Vector2(0.252,0.276)
+	$MapIcon.scale = Vector2(0.237,0.237)
+	$CharactersIcon.scale = Vector2(0.233,0.233)
 	$IconsAnimation.stop()
 	pass # Replace with function body.
+
+
+func _on_BinoculosButton_pressed():
+	$AbillityTab/AbillityName.text = ("olhar aguçado")
+	$AbillityTab/DescriptionText.text = ("Análise atenta aos detalhes aparentemente insignificantes")
+	pass # Replace with function body.
+
+
+func _on_CartazesButton_pressed():
+	$AbillityTab/AbillityName.text = ("problematização")
+	$AbillityTab/DescriptionText.text = ("Método de ir além de pensamentos do senso comum")
+	pass # Replace with function body.
+
+func _on_ChapuButton_pressed():
+	$AbillityTab/AbillityName.text = ("capacidade investigativa")
+	$AbillityTab/DescriptionText.text = ("Formulação de perguntas e busca pelas respostas de maneira autônoma e independente")
+	pass # Replace with function body.
+
+func _on_CuboButton_pressed():
+	$AbillityTab/AbillityName.text = ("raciocínio lógico")
+	$AbillityTab/DescriptionText.text = ("Organização do pensamento para a resolução de um problema")
+	pass # Replace with function body.
+
+func _on_jogoDaMemriaButton_pressed():
+	$AbillityTab/AbillityName.text = ("memorização")
+	$AbillityTab/DescriptionText.text = ("Processo mental para reunir informações de forma sistemática")
+	pass # Replace with function body.
+
+func _on_JornalButton_pressed():
+	$AbillityTab/AbillityName.text = ("curiosidade")
+	$AbillityTab/DescriptionText.text = ("Interesse por conhecer coisas novas")
+	pass # Replace with function body.
+
+func _on_LivrosButton_pressed():
+	$AbillityTab/AbillityName.text = ("seletividade")
+	$AbillityTab/DescriptionText.text = ("Capacidade de identificar fontes que permitam reconhecer vestígios da história")
+	pass # Replace with function body.
+
+func _on_PastaButton_pressed():
+	$AbillityTab/AbillityName.text = ("escuta sensível")
+	$AbillityTab/DescriptionText.text = ("Atenção ao que é dito e capacidade de compreensão do que não parece óbvio")
+	pass # Replace with function body.
+
+func _on_PlanetaButton_pressed():
+	$AbillityTab/DescriptionText.text = ("Forma de se posicionar, criticar evidências e elaborar inferências")
+	$AbillityTab/AbillityName.text = ("criticidade")
+	pass

@@ -22,9 +22,6 @@ script = ExtResource( 4 )
 [node name="Background" type="ColorRect" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="MapaSatelite" type="Sprite" parent="Background"]
 position = Vector2( 536, 304 )
@@ -69,5 +66,9 @@ text = "Continuar"
 [node name="MainMusic" parent="." instance=ExtResource( 8 )]
 stream = ExtResource( 7 )
 
+[node name="FinishWriting" type="Timer" parent="."]
+wait_time = 5.0
+
 [connection signal="timeout" from="WritingTime" to="." method="_on_WritingTime_timeout"]
 [connection signal="pressed" from="Mapa" to="." method="_on_Mapa_pressed"]
+[connection signal="timeout" from="FinishWriting" to="." method="_on_FinishWriting_timeout"]

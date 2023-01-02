@@ -1,4 +1,4 @@
-[gd_scene load_steps=57 format=2]
+[gd_scene load_steps=58 format=2]
 
 [ext_resource path="res://assets/Styles/Themes/Menu.tres" type="Theme" id=1]
 [ext_resource path="res://scenes/GUI/Diary.gd" type="Script" id=2]
@@ -30,6 +30,7 @@
 [ext_resource path="res://assets/Images/Composition/diary/jogo_da_memória2.png" type="Texture" id=28]
 [ext_resource path="res://assets/Images/Composition/diary/chapéu2.png" type="Texture" id=29]
 [ext_resource path="res://assets/Images/Composition/diary/pasta2.png" type="Texture" id=30]
+[ext_resource path="res://assets/Fonts/averia/Averia-BoldItalic.ttf" type="DynamicFontData" id=31]
 
 [sub_resource type="StyleBoxFlat" id=4]
 bg_color = Color( 1, 0, 0, 0 )
@@ -116,21 +117,6 @@ tracks/0/keys = {
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ Vector2( 0, 0 ), Vector2( 1, 1 ) ]
-}
-
-[sub_resource type="Animation" id=29]
-resource_name = "Popup"
-tracks/0/type = "value"
-tracks/0/path = NodePath("../FirstAccessMessage:rect_scale")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 1 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Vector2( 1e-05, 1e-05 ), Vector2( 1, 1 ) ]
 }
 
 [sub_resource type="Animation" id=28]
@@ -239,8 +225,12 @@ corner_radius_bottom_right = 3
 corner_radius_bottom_left = 3
 
 [sub_resource type="DynamicFont" id=27]
-size = 18
+size = 24
 font_data = ExtResource( 18 )
+
+[sub_resource type="DynamicFont" id=29]
+size = 24
+font_data = ExtResource( 31 )
 
 [node name="Diary" type="CanvasLayer"]
 script = ExtResource( 2 )
@@ -275,43 +265,6 @@ scale = Vector2( 0.252217, 0.252217 )
 texture = ExtResource( 6 )
 offset = Vector2( 0, 30.4258 )
 
-[node name="ProfileIcon" type="Sprite" parent="."]
-position = Vector2( 928, 95 )
-rotation = -3.57628e-06
-scale = Vector2( 0.252239, 0.276344 )
-texture = ExtResource( 7 )
-
-[node name="FirstAccessMessage" type="WindowDialog" parent="."]
-visible = true
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -252.0
-margin_top = -120.0
-margin_right = 276.0
-margin_bottom = 92.0
-rect_scale = Vector2( 0.857143, 0.857143 )
-rect_pivot_offset = Vector2( 257, 104 )
-theme = ExtResource( 13 )
-
-[node name="MessageText" type="Label" parent="FirstAccessMessage"]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -233.5
-margin_top = -80.0
-margin_right = 233.5
-margin_bottom = 80.0
-custom_colors/font_color = Color( 0.196078, 0.282353, 0.376471, 0.670588 )
-text = "O seu guia durante o jogo é o Diário de Bordo. Nele você encontrará quatro abas: a)
-Informações da jogadora; Mapa ; Personagens e Registro da investigação. Folheie seu diário
-e depois clique em PRÓXIMO para prosseguir"
-align = 1
-valign = 1
-autowrap = true
-
 [node name="PlayerButton" type="TextureButton" parent="."]
 margin_left = 328.0
 margin_top = -163.0
@@ -334,6 +287,18 @@ margin_right = 965.0
 margin_bottom = 334.0
 rect_pivot_offset = Vector2( -824, -38 )
 
+[node name="AbillityButton" type="TextureButton" parent="."]
+margin_left = 894.0
+margin_top = 346.0
+margin_right = 963.0
+margin_bottom = 431.0
+
+[node name="ProfileIcon" type="Sprite" parent="."]
+position = Vector2( 928, 95 )
+rotation = -3.57628e-06
+scale = Vector2( 0.252239, 0.276344 )
+texture = ExtResource( 7 )
+
 [node name="MapIcon" type="Sprite" parent="."]
 position = Vector2( 926, 193 )
 scale = Vector2( 0.23652, 0.23652 )
@@ -352,7 +317,6 @@ anims/NewGame = SubResource( 17 )
 
 [node name="IconsAnimation" type="AnimationPlayer" parent="."]
 root_node = NodePath("../CharactersTab")
-anims/Popup = SubResource( 29 )
 anims/ProfileAnimation = SubResource( 28 )
 
 [node name="NextButton" type="Button" parent="."]
@@ -369,7 +333,6 @@ text = "Próximo"
 stream = ExtResource( 14 )
 
 [node name="ProfileTab" type="Tabs" parent="."]
-visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 287.0
@@ -520,6 +483,7 @@ align = 1
 valign = 1
 
 [node name="MapTab" type="Tabs" parent="."]
+visible = false
 margin_right = 40.0
 margin_bottom = 24.0
 
@@ -632,10 +596,10 @@ anchor_left = -1.005
 anchor_top = -0.811
 anchor_right = -1.005
 anchor_bottom = -0.811
-margin_left = 584.2
-margin_top = 107.464
-margin_right = 912.2
-margin_bottom = 394.464
+margin_left = 568.2
+margin_top = 93.464
+margin_right = 919.2
+margin_bottom = 362.464
 custom_styles/panel = SubResource( 25 )
 __meta__ = {
 "_editor_description_": "	"
@@ -643,21 +607,21 @@ __meta__ = {
 
 [node name="DescriptionBackground" type="Panel" parent="CharactersTab"]
 anchor_bottom = 0.227
-margin_left = 544.0
-margin_top = 392.0
-margin_right = 872.0
-margin_bottom = 473.552
+margin_left = 538.0
+margin_top = 356.0
+margin_right = 879.0
+margin_bottom = 474.552
 custom_styles/panel = SubResource( 26 )
 
 [node name="DescriptionText" type="Label" parent="CharactersTab"]
-margin_left = 555.0
-margin_top = 397.0
-margin_right = 861.0
-margin_bottom = 450.0
+margin_left = 538.0
+margin_top = 356.0
+margin_right = 879.0
+margin_bottom = 478.0
 custom_colors/font_color = Color( 0.290196, 0.211765, 0.290196, 1 )
 custom_fonts/font = SubResource( 27 )
-text = "Texto falando umpouco sobre o personagem e
- seu contexto social historico."
+text = "Texto falando umpouco sobre o personagem e seu contexto social historico."
+autowrap = true
 
 [node name="Character1" type="Sprite" parent="CharactersTab"]
 position = Vector2( 223, 204 )
@@ -771,49 +735,42 @@ custom_fonts/font = SubResource( 24 )
 text = "HABILIDADES"
 align = 1
 
-[node name="AbillityName" type="Label" parent="AbillityTab"]
-anchor_left = -8.694
-anchor_top = -1.175
-anchor_right = -8.694
-anchor_bottom = -1.175
-margin_left = 927.76
-margin_top = 61.2
-margin_right = 1174.76
-margin_bottom = 104.2
-custom_colors/font_color = Color( 0.4, 0.631373, 0.862745, 1 )
-custom_fonts/font = SubResource( 24 )
-align = 1
-
 [node name="CharacterBackground" type="Panel" parent="AbillityTab"]
 anchor_left = -1.005
 anchor_top = -0.811
 anchor_right = -1.005
 anchor_bottom = -0.811
-margin_left = 584.2
-margin_top = 107.464
+margin_left = 578.2
+margin_top = 73.464
 margin_right = 912.2
-margin_bottom = 394.464
+margin_bottom = 295.464
 custom_styles/panel = SubResource( 25 )
 __meta__ = {
 "_editor_description_": "	"
 }
 
-[node name="DescriptionBackground" type="Panel" parent="AbillityTab"]
-anchor_bottom = 0.227
-margin_left = 544.0
-margin_top = 392.0
-margin_right = 872.0
-margin_bottom = 473.552
-custom_styles/panel = SubResource( 26 )
+[node name="AbillityName" type="Label" parent="AbillityTab"]
+anchor_left = -8.694
+anchor_top = -1.175
+anchor_right = -8.694
+anchor_bottom = -1.175
+margin_left = 891.76
+margin_top = 92.2
+margin_right = 1213.76
+margin_bottom = 136.2
+custom_colors/font_color = Color( 0.4, 0.631373, 0.862745, 1 )
+custom_fonts/font = SubResource( 24 )
+align = 1
 
 [node name="DescriptionText" type="Label" parent="AbillityTab"]
-margin_left = 555.0
-margin_top = 397.0
-margin_right = 861.0
-margin_bottom = 450.0
-custom_colors/font_color = Color( 0.290196, 0.211765, 0.290196, 1 )
-custom_fonts/font = SubResource( 27 )
+margin_left = 544.0
+margin_top = 119.0
+margin_right = 866.0
+margin_bottom = 253.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 29 )
 text = "Descrição de habilidades."
+align = 1
 autowrap = true
 
 [node name="Binoculos" type="Sprite" parent="AbillityTab"]
@@ -916,13 +873,41 @@ margin_top = -389.0
 margin_right = 496.0
 margin_bottom = 470.0
 
-[node name="CharacterZoom" type="Sprite" parent="AbillityTab"]
-position = Vector2( 694, 231 )
-scale = Vector2( 0.315949, 0.315949 )
+[node name="FirstAccessMessage" type="WindowDialog" parent="."]
+visible = true
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -502.0
+margin_top = -228.0
+margin_right = 26.0
+margin_bottom = 9.0
+rect_scale = Vector2( 1e-05, 1e-05 )
+rect_pivot_offset = Vector2( 257, 104 )
+theme = ExtResource( 13 )
+
+[node name="MessageText" type="Label" parent="FirstAccessMessage"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -234.5
+margin_top = -98.5
+margin_right = 232.5
+margin_bottom = 93.5
+custom_colors/font_color = Color( 0.196078, 0.282353, 0.376471, 0.670588 )
+text = "O seu guia durante o jogo é o Diário de Bordo. Nele você encontrará quatro abas: 
+Informações da jogadora; Mapa ; Personagens e Registro da investigação. Folheie seu diário
+e depois clique em PRÓXIMO para prosseguir"
+align = 1
+valign = 1
+autowrap = true
 
 [connection signal="pressed" from="PlayerButton" to="." method="_on_PlayerButton_pressed"]
 [connection signal="pressed" from="MapButton" to="." method="_on_MapButton_pressed"]
 [connection signal="pressed" from="CharactersButton" to="." method="_on_CharactersButton_pressed"]
+[connection signal="pressed" from="AbillityButton" to="." method="_on_AbillityButton_pressed"]
 [connection signal="animation_finished" from="FirstAccessMessageAnimation" to="." method="_on_FirstAccessMessageAnimation_animation_finished2"]
 [connection signal="animation_finished" from="IconsAnimation" to="." method="_on_IconsAnimation_animation_finished"]
 [connection signal="pressed" from="NextButton" to="." method="_on_Button_pressed"]
@@ -930,3 +915,13 @@ scale = Vector2( 0.315949, 0.315949 )
 [connection signal="pressed" from="MapTab/City2/City2Button" to="." method="_on_City2Button_pressed"]
 [connection signal="pressed" from="MapTab/City3/City3Button" to="." method="_on_City3Button_pressed"]
 [connection signal="pressed" from="CharactersTab/Character1/Character1Button" to="." method="_on_Character1Button_pressed"]
+[connection signal="pressed" from="AbillityTab/Binoculos/BinoculosButton" to="." method="_on_BinoculosButton_pressed"]
+[connection signal="pressed" from="AbillityTab/Cartazes/CartazesButton" to="." method="_on_CartazesButton_pressed"]
+[connection signal="pressed" from="AbillityTab/Chapeu/ChapéuButton" to="." method="_on_ChapuButton_pressed"]
+[connection signal="pressed" from="AbillityTab/Cubo/CuboButton" to="." method="_on_CuboButton_pressed"]
+[connection signal="pressed" from="AbillityTab/JogoDaMemoria/jogoDaMemóriaButton" to="." method="_on_jogoDaMemriaButton_pressed"]
+[connection signal="pressed" from="AbillityTab/Jornal/JornalButton" to="." method="_on_JornalButton_pressed"]
+[connection signal="pressed" from="AbillityTab/Livros/LivrosButton" to="." method="_on_LivrosButton_pressed"]
+[connection signal="pressed" from="AbillityTab/Pasta/PastaButton" to="." method="_on_PastaButton_pressed"]
+[connection signal="pressed" from="AbillityTab/Planeta/PlanetaButton" to="." method="_on_PlanetaButton_pressed"]
+[connection signal="popup_hide" from="FirstAccessMessage" to="." method="_on_FirstAccessMessage_popup_hide"]

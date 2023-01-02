@@ -5,7 +5,6 @@ var animation_finish = false
 var discover = false
 
 func _ready():
-	$Control/NoteArea/Message.hide()
 	$Control/MagnifierArea/Magnifier.scale = Vector2(0.08, 0.08)
 	$Control/NoteArea/Note.scale = Vector2(0,0)
 	$FirstAccessMessage.popup()
@@ -20,7 +19,8 @@ func click_magnifier(event):
 		discover = true
 
 func magnifier_move_finished(anim_name):
-	$Control/NoteArea/Message.show()
+	$Control/NoteArea.visible = true
+	
 	if not animation_finish:
 		$AnimationPlayer.play("MagnifierClicked")
 	else:

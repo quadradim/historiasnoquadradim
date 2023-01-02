@@ -47,6 +47,24 @@ var scenes_data = {
 		true,
 		null
 	],
+		'travel_scene': [
+		'res://scenes/GUI/TravelScene.tscn',
+		'end_travel_scene',
+		false,
+		null
+	],
+	'episode_intro':[
+		'res://scenes/Introductions/EpisodeIntro.tscn',
+		'end_episode_intro',
+		true,
+		null
+	],
+	'introd_lavadeiras': [
+		'res://scenes/Introductions/Lavadeiras.tscn',
+		'introd_lava',
+		false,
+		null
+	],
 	'suzana': [
 		'res://scenes/dialogs/Suazana.tscn',
 		'end_suzana_scene',
@@ -75,18 +93,6 @@ var scenes_data = {
 		'res://scenes/dialogs/Lavadeira.tscn',
 		'end_lavadeira',
 		true,
-		null
-	],
-	'travel_scene': [
-		'res://scenes/GUI/TravelScene.tscn',
-		'end_travel_scene',
-		false,
-		null
-	],
-	'introd_lavadeiras': [
-		'res://scenes/Introductions/Lavadeiras.tscn',
-		'introd_lava',
-		false,
 		null
 	],
 	'intro_multidao': [

@@ -15,6 +15,9 @@ func write_text():
 	pass
 
 func _ready():
+	$FinishWriting.start()
+	$WritingTime.start()
+	$Mapa.disabled = true
 	pass
 
 func _process(delta):
@@ -34,6 +37,8 @@ func _on_Mapa_pressed():
 		current_text = ''
 		current_text_pos = 0
 		presses_count += 1
+		$Mapa.disabled = true
+		$FinishWriting.start()
 	else:
 		emit_signal("end_access02", "character_choice")
 
@@ -45,3 +50,8 @@ func play_music():
 
 func music_finished():
 	$MainMusic.play()
+
+
+func _on_FinishWriting_timeout():
+	$Mapa.disabled = false
+	pass # Replace with function body.

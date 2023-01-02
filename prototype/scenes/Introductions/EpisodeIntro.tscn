@@ -1,0 +1,52 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://scenes/Introductions/EpisodeIntro.gd" type="Script" id=1]
+[ext_resource path="res://assets/Styles/Themes/CharacterChoice.tres" type="Theme" id=2]
+[ext_resource path="res://assets/ezgif.com-gif-maker.webm" type="VideoStream" id=3]
+[ext_resource path="res://assets/Images/Composition/Access01_02/mapa-satélite-de-brasília-brasil-ruas-da-cidade-128618769.png" type="Texture" id=4]
+[ext_resource path="res://assets/Images/Composition/Access01_02/Daco_4140150.png" type="Texture" id=5]
+
+[node name="EpisodeIntro" type="CanvasLayer"]
+script = ExtResource( 1 )
+
+[node name="Map" type="Sprite" parent="."]
+position = Vector2( 513.004, 288 )
+scale = Vector2( 0.641147, 0.641147 )
+texture = ExtResource( 4 )
+
+[node name="Paper" type="Sprite" parent="."]
+position = Vector2( 517, 297 )
+scale = Vector2( 0.977174, 0.977174 )
+texture = ExtResource( 5 )
+
+[node name="VideoPlayer" type="VideoPlayer" parent="."]
+margin_left = 105.0
+margin_top = 46.0
+margin_right = 945.0
+margin_bottom = 482.0
+stream = ExtResource( 3 )
+
+[node name="NextButton" type="Button" parent="."]
+margin_left = 449.0
+margin_top = 506.0
+margin_right = 585.0
+margin_bottom = 550.0
+theme = ExtResource( 2 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Continuar"
+
+[node name="EnableButton" type="Timer" parent="."]
+wait_time = 3.0
+
+[node name="StartVideo" type="Timer" parent="."]
+wait_time = 2.6
+
+[node name="PauseVideo" type="Timer" parent="."]
+wait_time = 2.5
+
+[connection signal="pressed" from="NextButton" to="." method="_on_NextButton_pressed"]
+[connection signal="timeout" from="EnableButton" to="." method="_on_EnableButton_timeout"]
+[connection signal="timeout" from="StartVideo" to="." method="_on_StartVideo_timeout"]
+[connection signal="timeout" from="PauseVideo" to="." method="_on_PauseVideo_timeout"]

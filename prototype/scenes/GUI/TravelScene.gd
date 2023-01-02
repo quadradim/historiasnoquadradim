@@ -27,5 +27,5 @@ func _on_BrasiliaButton_pressed():
 		$MessageBox/MessageText.text = "O veículo selecionado não está disponível"
 		$MessageBox.popup()
 	else:
-		emit_signal("end_travel_scene", "introd_lavadeiras")
+		emit_signal("end_travel_scene", "episode_intro")
 	pass # Replace with function body.

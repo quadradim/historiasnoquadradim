@@ -131,6 +131,7 @@ scale = Vector2( 0.941379, 0.941379 )
 texture = ExtResource( 2 )
 
 [node name="NoteArea" type="ColorRect" parent="Control"]
+visible = false
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -153,7 +154,7 @@ anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = -287.972
 margin_top = 150.0
-margin_right = 357.028
+margin_right = 358.028
 margin_bottom = 244.0
 theme = SubResource( 4 )
 text = "Há um bilhete junto com a lupa. O que está escrito? Clique no bilhete."
