@@ -27,7 +27,7 @@ Os arquivos aplicados as artes os arquivos tratados podem ser personagens, cená
     - <span style="color:olive">episodios</span>
         - <span style="color:darkgoldenrod">episodio</span>
             - <span style="color:darkkhaki">localidade</span>
-                - `cenarios`
+                - cenarios
                 - <span style="color:palegoldenrod">personagens</span>
                     - <span style="color:goldenrod">nome_do_personagem</span>
                     - <span style="color:goldenrod">nome_do_personagem</span>
@@ -41,9 +41,9 @@ Os arquivos aplicados as artes os arquivos tratados podem ser personagens, cená
         - <span style="color:darkgoldenrod">episodio</span>
         - <span style="color:darkgoldenrod">episodio</span>
     - <span style="color:olive">estilos</span>
-        - `Cores`
-        - `Fontes`
-        - `Interfaces`
+        - Cores
+        - Fontes
+        - Interfaces
 
 ## Nomenclatura de Pastas:
 - **Episodio**: O nome da pasta de um episódio será dada por `<numero_do_episodio>_<nomenclatura_do_episodio>`, exemplo:
