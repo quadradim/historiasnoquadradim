@@ -15,39 +15,39 @@ var scenes_data = {
 		'res://scenes/GUI/LogoOpening.tscn',
 		'end_logo_scene',
 		false,
-		null
+		'res://soundtrack/Loop1 Intro.mp3'
 	],
 	'menu': [
 		'res://scenes/GUI/Menu.tscn',
 		'end_menu',
 		false,
-		'res://soundtrack/Loop1 Intro.mp3'
+		'continue'
 	],
 	'access01': [
 		'res://scenes/FirstAccess/Access01.tscn',
 		'end_access01',
 		true,
-		'continue'
+		'res://soundtrack/Loop2-Atualizado.mp3'
 	],
 	'access02': [
 		'res://scenes/FirstAccess/Access02.tscn',
 		'end_access02',
 		true,
-		null
+		'continue'
 	],
 	'character_choice': [
 		'res://scenes/FirstAccess/CharacterChoice.tscn',
 		'end_choice',
 		true,
-		null
+		'res://soundtrack/Loop3x.mp3'
 	],
 	'diary': [
 		'res://scenes/GUI/Diary.tscn',
 		'end_diary',
 		true,
-		null
+		'res://soundtrack/Loop5 - Diário.mp3'
 	],
-		'travel_scene': [
+	'travel_scene': [
 		'res://scenes/GUI/TravelScene.tscn',
 		'end_travel_scene',
 		false,
@@ -69,13 +69,13 @@ var scenes_data = {
 		'res://scenes/dialogs/Suazana.tscn',
 		'end_suzana_scene',
 		true,
-		null
+		'continue'
 	],
 	'episodes_selection': [
 		'res://scenes/GUI/EpisodeSelection.tscn',
 		'end_episode_selection',
 		false,
-		null
+		'continue'
 	],
 	'analyze_photos': [
 		'res://scenes/observation/PhotoAnalyze.tscn',
@@ -87,13 +87,13 @@ var scenes_data = {
 		'res://scenes/ambience/Lavadeiras.tscn',
 		'end_lavadeira',
 		true,
-		null
+		'res://soundtrack/Loop4 Lavadeiras.mp3'
 	],
 	'lavadeira_amiga': [
 		'res://scenes/dialogs/Lavadeira.tscn',
 		'end_lavadeira',
 		true,
-		null
+		'continue'
 	],
 	'intro_multidao': [
 		'res://scenes/Introductions/Multidao.tscn',
@@ -105,31 +105,31 @@ var scenes_data = {
 		'res://scenes/ambience/Multidao.tscn',
 		'distractor_selected',
 		true,
-		null
+		"res://soundtrack/hotel diamantina.mp3"
 	],
 	'distractor1_darcy': [
 		'res://scenes/dialogs/protesto_bandeirante/Distrator01.tscn',
 		'distractor_dialog',
 		true,
-		null
+		'continue'
 	],
 	'distractor2_darcy': [
 		'res://scenes/dialogs/protesto_bandeirante/Distrator02.tscn',
 		'distractor_dialog',
 		true,
-		null
+		'continue'
 	],
 	'distractor3_darcy': [
 		'res://scenes/dialogs/protesto_bandeirante/Distrator03.tscn',
 		'distractor_dialog',
 		true,
-		null
+		"res://soundtrack/Levante da Boa Vontade.mp3"
 	],
 	'darcy_speech': [
 		'res://scenes/dialogs/Darcy.tscn',
 		'end_darcy_speech',
 		true,
-		null
+		"res://soundtrack/Loop Protesto Darcy.mp3"
 	],
 	'word_choice': [
 		'res://scenes/Minigames/WordSelection.tscn',

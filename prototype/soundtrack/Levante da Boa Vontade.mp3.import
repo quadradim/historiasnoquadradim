@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Levante da Boa Vontade.mp3-a14b0c3957595b12d1830621f6da1823.mp3str"
+
+[deps]
+
+source_file="res://soundtrack/Levante da Boa Vontade.mp3"
+dest_files=[ "res://.import/Levante da Boa Vontade.mp3-a14b0c3957595b12d1830621f6da1823.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
