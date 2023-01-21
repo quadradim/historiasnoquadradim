@@ -11,4 +11,6 @@ text = "A história trazida pelo nosso primeiro arco vem desses tempos frios de 
 E para começar análise algumas fotos..."
 next_scene = "analyze_photos"
 
+[node name="Timer" type="Timer" parent="."]
+
 [connection signal="end_introduction" from="IntroductionText" to="." method="end_introduction"]

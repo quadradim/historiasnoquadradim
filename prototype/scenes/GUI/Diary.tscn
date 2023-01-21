@@ -333,6 +333,7 @@ text = "Próximo"
 stream = ExtResource( 14 )
 
 [node name="ProfileTab" type="Tabs" parent="."]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 287.0
@@ -708,11 +709,10 @@ margin_right = -418.0
 margin_bottom = 209.0
 
 [node name="CharacterZoom" type="Sprite" parent="CharactersTab"]
-position = Vector2( 694, 231 )
+position = Vector2( 694, 200 )
 scale = Vector2( 0.315949, 0.315949 )
 
 [node name="AbillityTab" type="Tabs" parent="."]
-visible = false
 margin_right = 40.0
 margin_bottom = 24.0
 
@@ -743,7 +743,7 @@ anchor_bottom = -0.811
 margin_left = 578.2
 margin_top = 73.464
 margin_right = 912.2
-margin_bottom = 295.464
+margin_bottom = 276.464
 custom_styles/panel = SubResource( 25 )
 __meta__ = {
 "_editor_description_": "	"
