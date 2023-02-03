@@ -137,4 +137,52 @@ var scenes_data = {
 		true,
 		null
 	],
+	'taguatinga_introduction':[
+		'res://scenes/Introductions/TaguaIntroduction.tscn',
+		'end_taguatinga_introduction',
+		false,
+		null
+	],
+	'Taguatinga': [
+		'res://scenes/ambience/Taguatinga.tscn',
+		'end_taguatinga',
+		false,
+		null
+	],
+	'jose_dialog':[
+		'res://scenes/dialogs/investigação_taguatinga/JoséMiguel.tscn',
+		'end_jose_dialog',
+		false,
+		null
+	],
+	'policial_distrator_dialog':[
+	'res://scenes/dialogs/investigação_taguatinga/PolicialDistrator.tscn',
+	'end_policial_distrator_dialog',
+	false,
+	null
+	],
+	'chefe_de_policia_dialog':[
+		'res://scenes/dialogs/investigação_taguatinga/ChefeDePolicia.tscn',
+		'end_chefe_de_policia_dialog',
+		false,
+		null
+	],
+	'distrator_trabalhador_dialog':[
+		'res://scenes/dialogs/investigação_taguatinga/DistratorTrabalhador.tscn',
+		'end_distrator_trabalhador_dialog',
+		false,
+		null
+	],
+	'raulino_dialog':[
+		'res://scenes/dialogs/investigação_taguatinga/Raulino',
+		'end_raulino_dialog',
+		false,
+		null
+	],
+	'folheto_raulino':[
+		'res://scenes/ambience/FolhetoRaulino',
+		'end_folheto_raulino',
+		false,
+		null
+	]
 }

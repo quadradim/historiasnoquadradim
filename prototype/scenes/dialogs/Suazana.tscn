@@ -48,7 +48,6 @@ cha = [ "P", "S" ]
 image_scales = [ Vector2( 0.05, 0.05 ), Vector2( 0.175, 0.175 ) ]
 nam = [ "Historiadora", "Dona Suzana" ]
 resize_panel = [ Vector2( 113, 26 ), Vector2( 108, 26 ) ]
-has_profile = true
 
 [node name="MainMusic" parent="." instance=ExtResource( 8 )]
 stream = ExtResource( 9 )

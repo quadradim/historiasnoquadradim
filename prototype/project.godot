@@ -14,6 +14,10 @@ config/name="Historias No Quadradim - Protótipo"
 run/main_scene="res://scenes/AuxScenes/OpSceneController.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+Global="*res://Global.gd"
+
 [display]
 
 window/size/height=576

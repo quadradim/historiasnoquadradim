@@ -15,6 +15,18 @@
 size = 24
 font_data = ExtResource( 7 )
 
+[sub_resource type="StyleBoxFlat" id=12]
+bg_color = Color( 0.898039, 0.780392, 0.0901961, 1 )
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color( 0.45098, 0.533333, 0.556863, 1 )
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
 [sub_resource type="DynamicFont" id=2]
 size = 24
 outline_color = Color( 0.698039, 0.768627, 0.0823529, 0.898039 )
@@ -71,18 +83,6 @@ use_mipmaps = true
 use_filter = true
 font_data = ExtResource( 7 )
 
-[sub_resource type="StyleBoxFlat" id=12]
-bg_color = Color( 0.898039, 0.780392, 0.0901961, 1 )
-border_width_left = 3
-border_width_top = 3
-border_width_right = 3
-border_width_bottom = 3
-border_color = Color( 0.45098, 0.533333, 0.556863, 1 )
-corner_radius_top_left = 3
-corner_radius_top_right = 3
-corner_radius_bottom_right = 3
-corner_radius_bottom_left = 3
-
 [sub_resource type="DynamicFont" id=11]
 size = 23
 font_data = ExtResource( 7 )
@@ -93,6 +93,9 @@ script = ExtResource( 8 )
 [node name="BackGround" type="ColorRect" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
+margin_left = -6.10352e-05
+margin_top = -3.05176e-05
+margin_right = -6.10352e-05
 theme = ExtResource( 1 )
 color = Color( 0.945098, 0.933333, 0.905882, 1 )
 
@@ -112,7 +115,7 @@ scale = Vector2( 0.33033, 0.273509 )
 texture = ExtResource( 5 )
 
 [node name="Cover" type="Sprite" parent="."]
-position = Vector2( 535.5, 279.609 )
+position = Vector2( 462.5, 282.609 )
 scale = Vector2( 0.228307, 0.243283 )
 texture = ExtResource( 3 )
 
@@ -122,16 +125,30 @@ scale = Vector2( 1.03939, 0.975408 )
 texture = ExtResource( 9 )
 
 [node name="InstructionText" type="Label" parent="."]
-margin_left = 288.0
-margin_top = 8.0
-margin_right = 819.0
-margin_bottom = 49.0
+margin_left = 175.0
+margin_top = 10.0
+margin_right = 706.0
+margin_bottom = 51.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 10 )
 text = "com quais das palavras abaixo podemos definir o que aconteceu?"
 
+[node name="TryButton" type="Button" parent="."]
+margin_left = 708.0
+margin_top = 443.0
+margin_right = 778.0
+margin_bottom = 479.0
+theme = ExtResource( 1 )
+custom_colors/font_color_disabled = Color( 0.443137, 0.52549, 0.54902, 1 )
+custom_styles/hover = SubResource( 12 )
+custom_styles/pressed = SubResource( 12 )
+custom_styles/focus = SubResource( 12 )
+custom_styles/disabled = SubResource( 12 )
+custom_styles/normal = SubResource( 12 )
+text = "Ok"
+
 [node name="Tape1" type="Sprite" parent="."]
-position = Vector2( 273.5, 107.609 )
+position = Vector2( 200.5, 110.609 )
 rotation = 2.05076
 scale = Vector2( 0.356061, 0.356061 )
 texture = ExtResource( 2 )
@@ -141,10 +158,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -275.5
-margin_top = -202.391
-margin_right = -229.5
-margin_bottom = -139.391
+margin_left = -348.5
+margin_top = -199.391
+margin_right = -302.5
+margin_bottom = -136.391
 rect_rotation = -14.5
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 2 )
@@ -159,16 +176,16 @@ margin_right = 118.459
 margin_bottom = 49.5558
 
 [node name="Tape2" type="Sprite" parent="."]
-position = Vector2( 753.5, 134.609 )
+position = Vector2( 680.5, 137.609 )
 rotation = 2.35619
 scale = Vector2( 0.356, 0.356 )
 texture = ExtResource( 2 )
 
 [node name="Word2" type="Label" parent="."]
-margin_left = 712.5
-margin_top = 117.609
-margin_right = 792.5
-margin_bottom = 147.609
+margin_left = 639.5
+margin_top = 120.609
+margin_right = 719.5
+margin_bottom = 150.609
 rect_rotation = 6.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 3 )
@@ -181,16 +198,16 @@ margin_right = 128.603
 margin_bottom = 30.4231
 
 [node name="Tape3" type="Sprite" parent="."]
-position = Vector2( 640.5, 444.609 )
+position = Vector2( 567.5, 447.609 )
 rotation = 1.91986
 scale = Vector2( 0.356, 0.356 )
 texture = ExtResource( 2 )
 
 [node name="Word3" type="Label" parent="."]
-margin_left = 594.5
-margin_top = 450.609
-margin_right = 663.5
-margin_bottom = 480.609
+margin_left = 521.5
+margin_top = 453.609
+margin_right = 590.5
+margin_bottom = 483.609
 rect_rotation = -20.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 4 )
@@ -203,16 +220,16 @@ margin_right = 133.831
 margin_bottom = 28.6297
 
 [node name="Tape4" type="Sprite" parent="."]
-position = Vector2( 782.5, 364.609 )
+position = Vector2( 709.5, 367.609 )
 rotation = -0.785398
 scale = Vector2( 0.356, 0.356 )
 texture = ExtResource( 2 )
 
 [node name="Word4" type="Label" parent="."]
-margin_left = 728.5
-margin_top = 345.609
-margin_right = 840.5
-margin_bottom = 375.609
+margin_left = 655.5
+margin_top = 348.609
+margin_right = 767.5
+margin_bottom = 378.609
 rect_rotation = 4.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 5 )
@@ -225,16 +242,16 @@ margin_right = 141.804
 margin_bottom = 29.3814
 
 [node name="Tape5" type="Sprite" parent="."]
-position = Vector2( 393.5, 206.609 )
+position = Vector2( 320.5, 209.609 )
 rotation = 2.35619
 scale = Vector2( 0.356, 0.356 )
 texture = ExtResource( 2 )
 
 [node name="Word5" type="Label" parent="."]
-margin_left = 359.5
-margin_top = 189.609
-margin_right = 428.5
-margin_bottom = 219.609
+margin_left = 286.5
+margin_top = 192.609
+margin_right = 355.5
+margin_bottom = 222.609
 rect_rotation = 5.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 6 )
@@ -247,16 +264,16 @@ margin_right = 121.69
 margin_bottom = 28.9035
 
 [node name="Tape6" type="Sprite" parent="."]
-position = Vector2( 669.5, 252.609 )
+position = Vector2( 596.5, 255.609 )
 rotation = 2.67035
 scale = Vector2( 0.356, 0.356 )
 texture = ExtResource( 2 )
 
 [node name="Word6" type="Label" parent="."]
-margin_left = 610.5
-margin_top = 211.609
-margin_right = 736.5
-margin_bottom = 241.609
+margin_left = 537.5
+margin_top = 214.609
+margin_right = 663.5
+margin_bottom = 244.609
 rect_rotation = 24.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 7 )
@@ -269,16 +286,16 @@ margin_right = 157.575
 margin_bottom = 29.5925
 
 [node name="Tape7" type="Sprite" parent="."]
-position = Vector2( 321.5, 428.609 )
+position = Vector2( 248.5, 431.609 )
 rotation = 2.19911
 scale = Vector2( 0.356, 0.356 )
 texture = ExtResource( 2 )
 
 [node name="Word7" type="Label" parent="."]
-margin_left = 266.5
-margin_top = 417.609
-margin_right = 388.5
-margin_bottom = 508.609
+margin_left = 193.5
+margin_top = 420.609
+margin_right = 315.5
+margin_bottom = 511.609
 rect_rotation = -3.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 8 )
@@ -291,16 +308,16 @@ margin_right = 144.997
 margin_bottom = 32.1145
 
 [node name="Tape8" type="Sprite" parent="."]
-position = Vector2( 326.5, 316.609 )
+position = Vector2( 253.5, 319.609 )
 rotation = 2.62498
 scale = Vector2( 0.356, 0.356 )
 texture = ExtResource( 2 )
 
 [node name="Word8" type="Label" parent="."]
-margin_left = 275.5
-margin_top = 283.609
-margin_right = 400.5
-margin_bottom = 313.609
+margin_left = 202.5
+margin_top = 286.609
+margin_right = 327.5
+margin_bottom = 316.609
 rect_rotation = 22.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 9 )
@@ -315,20 +332,6 @@ margin_left = -14.0
 margin_top = -19.51
 margin_right = 166.0
 margin_bottom = 12.49
-
-[node name="NextButton" type="Button" parent="."]
-margin_left = 848.0
-margin_top = 512.0
-margin_right = 1006.0
-margin_bottom = 564.0
-theme = ExtResource( 1 )
-custom_colors/font_color_disabled = Color( 0.443137, 0.52549, 0.54902, 1 )
-custom_styles/hover = SubResource( 12 )
-custom_styles/pressed = SubResource( 12 )
-custom_styles/focus = SubResource( 12 )
-custom_styles/disabled = SubResource( 12 )
-custom_styles/normal = SubResource( 12 )
-text = "Próximo"
 
 [node name="MessageBox" type="WindowDialog" parent="."]
 anchor_left = 0.5
@@ -358,6 +361,15 @@ align = 1
 valign = 1
 autowrap = true
 
+[node name="NextButton" type="Button" parent="."]
+margin_left = 875.0
+margin_top = 500.0
+margin_right = 989.0
+margin_bottom = 540.0
+theme = ExtResource( 1 )
+text = "Próximo"
+
+[connection signal="pressed" from="TryButton" to="." method="Try_Button"]
 [connection signal="pressed" from="Word1/Word1Button" to="." method="word1_button"]
 [connection signal="pressed" from="Word2/Word2Button" to="." method="word2_button"]
 [connection signal="pressed" from="Word3/Word3Button" to="." method="word3_button"]
@@ -366,4 +378,4 @@ autowrap = true
 [connection signal="pressed" from="Word6/Word6Button" to="." method="word6_button"]
 [connection signal="pressed" from="Word7/Word7Button" to="." method="word7_button"]
 [connection signal="pressed" from="Word8/Word8Button" to="." method="word8_button"]
-[connection signal="pressed" from="NextButton" to="." method="next_button"]
+[connection signal="pressed" from="NextButton" to="." method="_on_NextButton_pressed"]

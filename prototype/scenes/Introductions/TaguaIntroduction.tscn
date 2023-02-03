@@ -32,3 +32,5 @@ custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
 custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Continuar"
+
+[connection signal="pressed" from="NextButton" to="." method="_on_NextButton_pressed"]

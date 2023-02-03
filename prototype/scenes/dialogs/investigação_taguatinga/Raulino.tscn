@@ -1,0 +1,54 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://assets/Images/Composition/Taguatinga/3-Taguatinga (não-finalizado).png" type="Texture" id=1]
+[ext_resource path="res://assets/Images/Composition/Taguatinga/multidão.png" type="Texture" id=2]
+[ext_resource path="res://assets/Images/Composition/Taguatinga/raulino.png" type="Texture" id=3]
+[ext_resource path="res://scenes/AuxScenes/ChatBox.tscn" type="PackedScene" id=4]
+[ext_resource path="res://assets/Images/Composition/Darcy/multidão.png" type="Texture" id=5]
+[ext_resource path="res://assets/Images/Composition/Taguatinga/raulino_profile.png" type="Texture" id=6]
+[ext_resource path="res://assets/Characters/Jogador/JOGADOR.png" type="Texture" id=7]
+[ext_resource path="res://scenes/dialogs/investigação_taguatinga/Raulino.gd" type="Script" id=8]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource( 8 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 744.8, 165 )
+scale = Vector2( 1.44828, 1.44828 )
+texture = ExtResource( 1 )
+
+[node name="Sprite2" type="Sprite" parent="Sprite"]
+position = Vector2( 0.352417, 53.5924 )
+scale = Vector2( 1.00173, 1.00173 )
+texture = ExtResource( 2 )
+
+[node name="Sprite2" type="Sprite" parent="."]
+position = Vector2( 464, 277 )
+scale = Vector2( 1.07711, 1.07711 )
+texture = ExtResource( 3 )
+
+[node name="ChatBox" parent="." instance=ExtResource( 4 )]
+margin_left = -58.0
+margin_top = 132.0
+margin_right = 38.0
+margin_bottom = 180.0
+chat = "*P* tarde, meu senhor. Você é quem está no comando do movimento?
+*R8 Sim, e estamos aqui em busca dos nossos direitos,jovem. “É pão ou morte”.
+*M* PÃO OU MORTE! PÃO OU MORTE!” “PÃO OU MORTE!”)  
+*P*Estou tentando compreender o que está acontecendo por aqui, já conversei com o senhor chefe de polícia e um jornalista que está em busca do senhor e de mais dois indivíduos. 
+*R*Pois eu vou lhe contar o absurdo que estão fazendo com a gente. Estamos aqui há 3 dias reivindicando nossos direitos e esses senhores só prometem botar a gente pra trabalhar, mas não cumprem, estamos com fome, sem emprego e sem moradia.  
+*P*Então, todo mundo aqui está desempregado?
+*R*Também tem desempregados. O movimento se chama “Turma da boa vontade” porque tem gente trabalhando sem receber. Está todo mundo em busca de alimentação e um salário que pague nossas contas. Ninguém passa, nem bicicleta, nem gente, nem ônibus até conseguirmos nossos direitos! É PÃO OU MORTE! 
+*J*Que absurdo, senhor Raulino. Então está explicado a revolta dos seus colegas da boa vontade... quer dizer... turma da boa vontade. Certo? 
+*R*Isso mesmo. Vamos quebrar tudo se não pagarem a gente! E quem é você? Quer se unir à nossa causa? 
+*J*Eu sou historiador(a), estou apenas tentando compreender melhor o que está acontecendo aqui, senhor Raulino. 
+*R*Certo. Vou lhe mostrar então meu caderninho de contas e a merreca que recebem os trabalhadores, porque eu nem isso estou recebendo mais, estou desempregado, e minha família está sem alimentação.
+ 
+"
+img = [ ExtResource( 7 ), ExtResource( 6 ), ExtResource( 5 ) ]
+cha = [ "P", "R", "M" ]
+image_scales = [ Vector2( 0.05, 0.05 ), Vector2( 0.65, 0.65 ), Vector2( 0.13, 0.13 ) ]
+nam = [ "Historiadora", "Raulino", "Multidão" ]
+resize_panel = [ Vector2( 113, 26 ), Vector2( 90, 26 ), Vector2( 113, 26 ) ]
+
+[connection signal="end_dialog" from="ChatBox" to="." method="_on_ChatBox_end_dialog"]

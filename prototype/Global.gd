@@ -1,6 +1,6 @@
-extends CanvasLayer
+extends Node
 
-signal end_taguatinga_introduction
+var counter
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
@@ -14,8 +14,3 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
-
-
-func _on_NextButton_pressed():
-	emit_signal("end_taguatinga_introduction","Taguatinga")
-	pass # Replace with function body.

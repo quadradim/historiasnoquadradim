@@ -9,6 +9,7 @@ signal change_face1
 signal change_face2
 signal change_face3
 signal change_face4
+signal close_chat
 
 export (Array, Resource) var img
 export (Array, String) var cha
@@ -46,7 +47,7 @@ export(bool) var has_profile
 #	if len(dialog) > 0:
 #		current_dialog.append(dialog)
 #	file.close()
-	
+
 func load_chat(entire_chat):
 	entire_chat = entire_chat.split('*')
 	var dialog = ""
@@ -72,7 +73,10 @@ func reset_current_text():
 	$ChatText.text = ''
 	current_text = ''
 	current_text_pos = 0
-
+	
+func setChat(var a):
+	chat = a
+	
 func _ready():
 #	image_scale[0] = Vector2(0.05,0.05)
 #	image_scale[1] = Vector2(0.175,0.175)
@@ -91,14 +95,17 @@ func _ready():
 				image_scales[profile_image_indices[text_position]],
 				resize_panel[profile_image_indices[text_position]]
 			)
-	
+	else:
+		hide_profile()
+
 func hide_profile():
 	has_profile = false
 	$SupportingCharacterChatBox/ProfileImages.hide()
+	$Next.hide()
+	$Back.hide()
 
 func start():
 	$Timer.start()
-	
 
 func Time_to_write():
 	if text_position < len(current_dialog) \
@@ -106,7 +113,11 @@ func Time_to_write():
 		current_text += current_dialog[text_position][current_text_pos]
 		current_text_pos += 1
 		$ChatText.text = current_text
+	elif has_profile == false:
+		$NextButton.visible = true
 	$Timer.start()
+		
+		
 
 func next_dialog():
 	if text_position < line_counter/2 -1:
@@ -158,7 +169,10 @@ func previous_dialog():
 					resize_panel[profile_image_indices[text_position]]
 				)
 
-
 func _on_Writting_Timer_timeout():
 	Time_to_write()
+	pass # Replace with function body.
+
+func _on_NextButton_pressed():
+	emit_signal("close_chat")
 	pass # Replace with function body.

@@ -83,7 +83,7 @@ func _ready():
 	transition_animation.connect('animation_finished', self, 'end_transition_scene')
 	transition_animation.play("fade_out")
 
-	var initial_scene = 'production'
+	var initial_scene = 'taguatinga_introduction'
 	load_control_scene(
 		scenes_data[initial_scene][0],
 		initial_scene,

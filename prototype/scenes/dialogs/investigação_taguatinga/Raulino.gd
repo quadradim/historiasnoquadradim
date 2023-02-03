@@ -1,6 +1,6 @@
 extends CanvasLayer
 
-signal end_taguatinga_introduction
+signal end_raulino_dialog
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
@@ -16,6 +16,6 @@ func _ready():
 #	pass
 
 
-func _on_NextButton_pressed():
-	emit_signal("end_taguatinga_introduction","Taguatinga")
+func _on_ChatBox_end_dialog():
+	emit_signal("end_raulino_dialog","folheto_raulino")
 	pass # Replace with function body.

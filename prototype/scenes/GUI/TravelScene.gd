@@ -11,7 +11,7 @@ func _on_RuralWillysButton_pressed():
 		$MessageBox/MessageText.text = "O veículo selecionado não está disponível"
 		$MessageBox.popup()
 	else:
-		emit_signal("end_travel_scene", "level1")
+		emit_signal("end_travel_scene", "taguatinga_introduction")
 	pass # Replace with function body.
 
 func _on_ZebrinhaButton_pressed():
