@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://assets/Images/Composition/ProfileImages/lupa_profile.png" type="Texture" id=1]
 [ext_resource path="res://soundtrack/Loop4 Lavadeiras.mp3" type="AudioStream" id=2]
@@ -51,6 +51,21 @@ tracks/2/keys = {
 "values": [ false, true ]
 }
 
+[sub_resource type="Animation" id=3]
+resource_name = "ChatPop"
+tracks/0/type = "value"
+tracks/0/path = NodePath("ChatBox:rect_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1e-05, 1e-05 ), Vector2( 1, 1 ) ]
+}
+
 [node name="Multidao" type="CanvasLayer"]
 script = ExtResource( 3 )
 
@@ -99,11 +114,19 @@ stream = ExtResource( 2 )
 [node name="ChatBox" parent="." instance=ExtResource( 4 )]
 margin_top = 160.0
 margin_bottom = 208.0
+rect_scale = Vector2( 1e-05, 1e-05 )
 chat_res = "res://dialogs/lavadeira.txt"
-chat = "narra*Suzana te guia pela terra vermelha, enquanto o vento bate em seu rosto. No horizonte, é possível ver uma pequena multidão fervilhante. Com expectativa, você aperta os passos já imaginando tudo aquilo que pode estar acontecendo.
-*narra*Você escuta uma voz imponente vindo do centro do grupo de trabalhadores. Se apertando entre as pessoas você procura por uma brecha para ver tudo que está acontecendo e descobrir a face de quem fala."
 img = [ ExtResource( 1 ) ]
 cha = [ "narra" ]
+has_profile = false
 
+[node name="ChatPop" type="AnimationPlayer" parent="."]
+anims/ChatPop = SubResource( 3 )
+
+[node name="Timer1" type="Timer" parent="."]
+
+[connection signal="animation_finished" from="Transition" to="." method="_on_Transition_animation_finished"]
+[connection signal="close_chat" from="ChatBox" to="." method="_on_ChatBox_close_chat"]
 [connection signal="end_dialog" from="ChatBox" to="." method="multidao_end_scene"]
 [connection signal="new_dialog" from="ChatBox" to="." method="new_dialog_text"]
+[connection signal="timeout" from="Timer1" to="." method="_on_Timer1_timeout"]

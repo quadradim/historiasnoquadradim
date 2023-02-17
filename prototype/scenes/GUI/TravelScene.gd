@@ -1,7 +1,7 @@
 extends CanvasLayer
 
 signal end_travel_scene
-var locked_veicles = [0,0,1]
+var locked_veicles = [1,0,1]
 
 func _ready():
 	pass # Replace with function body.

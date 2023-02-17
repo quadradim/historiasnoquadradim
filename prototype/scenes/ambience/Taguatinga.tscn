@@ -227,7 +227,7 @@ scale = Vector2( 0.999999, 1.068 )
 texture = ExtResource( 10 )
 
 [node name="DistratorTrabalhador" type="Sprite" parent="Multidao"]
-modulate = Color( 0.0392157, 0.0392157, 0.0392157, 0.0392157 )
+modulate = Color( 0.0384615, 0.0384615, 0.0384615, 0.0384615 )
 position = Vector2( 311.628, -10.1966 )
 scale = Vector2( 0.657961, 0.616067 )
 texture = ExtResource( 5 )
@@ -239,7 +239,7 @@ margin_right = 104.0
 margin_bottom = 200.0
 
 [node name="Raulino" type="Sprite" parent="Multidao"]
-modulate = Color( 0.0392157, 0.0392157, 0.0392157, 0.0392157 )
+modulate = Color( 0.0384615, 0.0384615, 0.0384615, 0.0384615 )
 position = Vector2( -196.247, 28.0899 )
 scale = Vector2( 0.809703, 0.758148 )
 texture = ExtResource( 4 )

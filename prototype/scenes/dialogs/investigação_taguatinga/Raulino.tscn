@@ -33,18 +33,16 @@ margin_top = 132.0
 margin_right = 38.0
 margin_bottom = 180.0
 chat = "*P* tarde, meu senhor. Você é quem está no comando do movimento?
-*R8 Sim, e estamos aqui em busca dos nossos direitos,jovem. “É pão ou morte”.
+*R* Sim, e estamos aqui em busca dos nossos direitos,jovem. “É pão ou morte”.
 *M* PÃO OU MORTE! PÃO OU MORTE!” “PÃO OU MORTE!”)  
 *P*Estou tentando compreender o que está acontecendo por aqui, já conversei com o senhor chefe de polícia e um jornalista que está em busca do senhor e de mais dois indivíduos. 
 *R*Pois eu vou lhe contar o absurdo que estão fazendo com a gente. Estamos aqui há 3 dias reivindicando nossos direitos e esses senhores só prometem botar a gente pra trabalhar, mas não cumprem, estamos com fome, sem emprego e sem moradia.  
 *P*Então, todo mundo aqui está desempregado?
 *R*Também tem desempregados. O movimento se chama “Turma da boa vontade” porque tem gente trabalhando sem receber. Está todo mundo em busca de alimentação e um salário que pague nossas contas. Ninguém passa, nem bicicleta, nem gente, nem ônibus até conseguirmos nossos direitos! É PÃO OU MORTE! 
-*J*Que absurdo, senhor Raulino. Então está explicado a revolta dos seus colegas da boa vontade... quer dizer... turma da boa vontade. Certo? 
+*P*Que absurdo, senhor Raulino. Então está explicado a revolta dos seus colegas da boa vontade... quer dizer... turma da boa vontade. Certo? 
 *R*Isso mesmo. Vamos quebrar tudo se não pagarem a gente! E quem é você? Quer se unir à nossa causa? 
-*J*Eu sou historiador(a), estou apenas tentando compreender melhor o que está acontecendo aqui, senhor Raulino. 
-*R*Certo. Vou lhe mostrar então meu caderninho de contas e a merreca que recebem os trabalhadores, porque eu nem isso estou recebendo mais, estou desempregado, e minha família está sem alimentação.
- 
-"
+*P*Eu sou historiador(a), estou apenas tentando compreender melhor o que está acontecendo aqui, senhor Raulino. 
+*R*Certo. Vou lhe mostrar então meu caderninho de contas e a merreca que recebem os trabalhadores, porque eu nem isso estou recebendo mais, estou desempregado, e minha família está sem alimentação."
 img = [ ExtResource( 7 ), ExtResource( 6 ), ExtResource( 5 ) ]
 cha = [ "P", "R", "M" ]
 image_scales = [ Vector2( 0.05, 0.05 ), Vector2( 0.65, 0.65 ), Vector2( 0.13, 0.13 ) ]

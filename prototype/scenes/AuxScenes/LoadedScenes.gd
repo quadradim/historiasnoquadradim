@@ -174,13 +174,13 @@ var scenes_data = {
 		null
 	],
 	'raulino_dialog':[
-		'res://scenes/dialogs/investigação_taguatinga/Raulino',
+		'res://scenes/dialogs/investigação_taguatinga/Raulino.tscn',
 		'end_raulino_dialog',
 		false,
 		null
 	],
 	'folheto_raulino':[
-		'res://scenes/ambience/FolhetoRaulino',
+		'res://scenes/ambience/FolhetoRaulino.tscn',
 		'end_folheto_raulino',
 		false,
 		null
