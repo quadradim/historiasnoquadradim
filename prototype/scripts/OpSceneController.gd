@@ -7,6 +7,7 @@ var used_scenes = []
 
 var logo_scene
 var show_settings = false
+var mouse_enabled = true
 
 class SceneUsed:
 	var instance
@@ -81,6 +82,8 @@ func _ready():
 	$ConfigurationPopup.layer = -1
 
 	transition_animation.connect('animation_finished', self, 'end_transition_scene')
+	transition_animation.connect('animation_started', self, 'transition_animation_started')
+
 	transition_animation.play("fade_out")
 
 	var initial_scene = 'production'
@@ -96,6 +99,9 @@ func _process(delta):
 	$Audio.update('soundtrack')
 	
 func change_scene(scene):
+	if not mouse_enabled:
+		return
+
 	if scene == 'distractor3_darcy' and not(characters_darcy[0] and characters_darcy[1]):
 		return
 	if scene == 'distractor1_darcy':
@@ -126,6 +132,10 @@ func change_scene(scene):
 	transition_animation_name = "fade_in"
 
 func end_transition_scene(anim_name):
+	if anim_name == "fade_out":
+		$ConfigurationPopup.show()
+		mouse_enabled = true
+		
 	if transition_animation_name == "fade_in":
 		transition_animation.play("fade_out")
 
@@ -141,6 +151,11 @@ func end_transition_scene(anim_name):
 
 	elif transition_animation_name == "fade_out":
 		transition_animation_name = "fade_in"
+
+func transition_animation_started(anim_name):
+	if anim_name == "fade_in":
+		$ConfigurationPopup.hide()
+		mouse_enabled = false
 
 func setting_back_menu():
 	change_scene('menu')
