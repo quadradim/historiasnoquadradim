@@ -26,6 +26,7 @@ var image_scale = {}
 var line_counter = 0
 
 export(bool) var has_profile
+export(bool) var chat2
 
 #func load_file(file_src):
 #	var file = File.new()
@@ -82,8 +83,8 @@ func _ready():
 #	image_scale[1] = Vector2(0.175,0.175)
 #	load_file(str(chat_res))
 	load_chat(chat)
-	if has_profile:
-		if profile_image_indices[text_position] == 0:
+	if has_profile and chat2 == false:
+		if cha[profile_image_indices[text_position]] == "P":
 			$MainCharacterChatBox.visible = true
 			$SupportingCharacterChatBox.visible = false
 		else:
@@ -91,6 +92,14 @@ func _ready():
 			$SupportingCharacterChatBox.visible = true
 			$SupportingCharacterChatBox/ProfileImages/Panel/Label.text = nam[profile_image_indices[text_position]]
 			$SupportingCharacterChatBox/ProfileImages.display(
+				img[profile_image_indices[text_position]],
+				image_scales[profile_image_indices[text_position]],
+				resize_panel[profile_image_indices[text_position]]
+			)
+	elif chat2:
+		$MainCharacterChatBox.visible = false
+		$SupportingCharacterChatBox/ProfileImages/Panel/Label.text = nam[profile_image_indices[text_position]]
+		$SupportingCharacterChatBox/ProfileImages.display(
 				img[profile_image_indices[text_position]],
 				image_scales[profile_image_indices[text_position]],
 				resize_panel[profile_image_indices[text_position]]
@@ -133,8 +142,8 @@ func next_dialog():
 			emit_signal("change_face2")
 		if text_position == 9:
 			emit_signal("change_face4")
-		if has_profile:
-			if profile_image_indices[text_position] == 0:
+		if has_profile and chat2 == false:
+			if cha[profile_image_indices[text_position]] == "P":
 				$MainCharacterChatBox.visible = true
 				$SupportingCharacterChatBox.visible = false
 			else:
@@ -142,6 +151,14 @@ func next_dialog():
 				$SupportingCharacterChatBox.visible = true
 				$SupportingCharacterChatBox/ProfileImages/Panel/Label.text = nam[profile_image_indices[text_position]]
 				$SupportingCharacterChatBox/ProfileImages.display(
+					img[profile_image_indices[text_position]],
+					image_scales[profile_image_indices[text_position]],
+					resize_panel[profile_image_indices[text_position]]
+				)
+		elif chat2:
+			$SupportingCharacterChatBox.visible = true
+			$SupportingCharacterChatBox/ProfileImages/Panel/Label.text = nam[profile_image_indices[text_position]]
+			$SupportingCharacterChatBox/ProfileImages.display(
 					img[profile_image_indices[text_position]],
 					image_scales[profile_image_indices[text_position]],
 					resize_panel[profile_image_indices[text_position]]
@@ -155,8 +172,8 @@ func previous_dialog():
 		reset_current_text()
 		text_position -= 1
 		
-		if has_profile:
-			if profile_image_indices[text_position] == 0:
+		if has_profile and chat2 == false:
+			if cha[profile_image_indices[text_position]] == "P":
 				$MainCharacterChatBox.visible = true
 				$SupportingCharacterChatBox.visible = false
 			else:
@@ -164,6 +181,14 @@ func previous_dialog():
 				$SupportingCharacterChatBox.visible = true
 				$SupportingCharacterChatBox/ProfileImages/Panel/Label.text = nam[profile_image_indices[text_position]]
 				$SupportingCharacterChatBox/ProfileImages.display(
+					img[profile_image_indices[text_position]],
+					image_scales[profile_image_indices[text_position]],
+					resize_panel[profile_image_indices[text_position]]
+				)
+		elif chat2:
+			$SupportingCharacterChatBox.visible = true
+			$SupportingCharacterChatBox/ProfileImages/Panel/Label.text = nam[profile_image_indices[text_position]]
+			$SupportingCharacterChatBox/ProfileImages.display(
 					img[profile_image_indices[text_position]],
 					image_scales[profile_image_indices[text_position]],
 					resize_panel[profile_image_indices[text_position]]
@@ -176,3 +201,5 @@ func _on_Writting_Timer_timeout():
 func _on_NextButton_pressed():
 	emit_signal("close_chat")
 	pass # Replace with function body.
+
+

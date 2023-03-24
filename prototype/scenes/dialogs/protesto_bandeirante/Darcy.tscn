@@ -23,4 +23,3 @@ chat_res = "res://dialogs/Darcy.txt"
 img = [ ExtResource( 3 ), ExtResource( 2 ) ]
 cha = [ "*D*", "*M*" ]
 image_scales = [ Vector2( 0.098, 0.098 ), Vector2( 0.13, 0.13 ) ]
-has_profile = true

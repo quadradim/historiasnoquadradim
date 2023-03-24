@@ -35,6 +35,5 @@ cha = [ "P", "distrator1" ]
 image_scales = [ Vector2( 0.18, 0.18 ), Vector2( 0.18, 0.18 ) ]
 nam = [ "Historiadora", "mascarado" ]
 resize_panel = [ Vector2( 113, 26 ), Vector2( 95, 26 ) ]
-has_profile = true
 
 [connection signal="end_dialog" from="ChatBox" to="." method="end_distractor_dialog"]

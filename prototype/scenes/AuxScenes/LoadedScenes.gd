@@ -184,5 +184,35 @@ var scenes_data = {
 		'end_folheto_raulino',
 		false,
 		null
+	],
+	'plano_piloto_intro':[
+		'res://scenes/Introductions/PlanoPilotointro.tscn',
+		'end_plano_piloto_intro',
+		false,
+		null
+	],
+	'israel_dialog':[
+		'res://scenes/dialogs/Esplanada/IsraeldaSilva.tscn',
+		'end_israel_dialog',
+		false,
+		null
+	],
+	'ranieri_jornalista_dialog':[
+		'res://scenes/dialogs/Esplanada/RanieriJornalista.tscn',
+		'end_ranieri_jornalista_dialog',
+		false,
+		null
+	],
+	'israel_professora_dialog':[
+		'res://scenes/dialogs/Esplanada/IsraelProfessora.tscn',
+		'end_israel_professora_dialog',
+		false,
+		null
+	],
+	'word_selection_2':[
+		'res://scenes/Minigames/WordSelection2.tscn',
+		'end_word_selection_2',
+		false,
+		null
 	]
 }
