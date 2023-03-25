@@ -21,6 +21,7 @@ var characters_darcy = [0, 0, 0]
 func load_control_scene(local, name, out_signal):
 	# 'out_signal' : The scene must to emit a signal
 	# 					  when you want out scene.
+	print(local)
 	var new_scene = SceneUsed.new()
 	new_scene.instance = load(local).instance()
 	new_scene.instance.layer = -1
@@ -86,7 +87,7 @@ func _ready():
 
 	transition_animation.play("fade_out")
 
-	var initial_scene = 'production'
+	var initial_scene = 'israel_professora_dialog'
 	load_control_scene(
 		scenes_data[initial_scene][0],
 		initial_scene,

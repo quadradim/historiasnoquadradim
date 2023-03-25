@@ -143,7 +143,7 @@ func next_dialog():
 		if text_position == 9:
 			emit_signal("change_face4")
 		if has_profile and chat2 == false:
-			if cha[profile_image_indices[text_position]] == "P":
+			if len(profile_image_indices) > text_position and cha[profile_image_indices[text_position]] == "P":
 				$MainCharacterChatBox.visible = true
 				$SupportingCharacterChatBox.visible = false
 			else:

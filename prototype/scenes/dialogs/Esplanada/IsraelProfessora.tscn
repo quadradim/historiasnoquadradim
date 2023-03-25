@@ -5,7 +5,7 @@
 [ext_resource path="res://assets/Images/Composition/PlanoPilotoIntro/Em_Conversa (4).png" type="Texture" id=3]
 [ext_resource path="res://scenes/AuxScenes/ChatBox.tscn" type="PackedScene" id=4]
 [ext_resource path="res://assets/Characters/Jogador/JOGADOR.png" type="Texture" id=5]
-[ext_resource path="res://assets/Images/Composition/PlanoPilotoIntro/ícone_fala (2).png" type="Texture" id=6]
+[ext_resource path="res://assets/Images/Composition/PlanoPilotoIntro/ícone_fala (1).png" type="Texture" id=6]
 [ext_resource path="res://assets/Images/Composition/PlanoPilotoIntro/ícone_fala.png" type="Texture" id=7]
 [ext_resource path="res://scenes/dialogs/Esplanada/IsraelProfessora.gd" type="Script" id=8]
 
@@ -35,7 +35,7 @@ chat = "*I*PROFESSORA DOMINGAS!
 *O*Pois é… Estão falando disso como a causa da confusão, mas eu suspeito que não é bem assim, ouvi até que o governo pode cair a qualquer momento. Sei, não viu, mas essa coisa do retornismo tem cara de cortina de fumaça, pra confundir a gente.
 *P*Eu li mesmo num jornal que o presidente da câmara nega o retornismo. Mas então o que está motivando essa multidão, professora?
 *O* É um pouco de tudo. O povo não aguenta mais as condições de vida, falta tudo. Nós, professoras mesmo, acabamos de sair de uma greve grande, a Turma da Boa Vontade tá revoltada lá em Taguatinga e na Cidade Livre, crianças sem escola e mães sem alimento para colocar na mesa. 
-*PCaramba! Isso é desesperador, professora! 
+*P*Caramba! Isso é desesperador, professora! 
 *O*É… Aqui em Brasília se tornou essa desesperança, mas no Brasil todo a gente sabe que a vida não tá fácil para os trabalhadores, desde as reformas do Jango  que estão incomodando os setores mais conservadores. 
 *I*Será que tem a ver com aquele grande movimento que aconteceu no Rio de Janeiro que reuniu várias pessoas em defesa das reformas de base?
 *P*Sim! Foi o Comício da Central do Brasil, com mais de 150 mil pessoas reunidas. Parece que o medo dos mais poderosos é o povo nas ruas. Olhem esta notícia: [Entrega para eles um exemplar de jornal]
