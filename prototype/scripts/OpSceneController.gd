@@ -74,6 +74,16 @@ func create_player():
 	)
 
 func _ready():
+	$PlayerEntity.insert(
+		{
+			"name": "none",
+			"habilities": [],
+			"backpack": [],
+			"historiometer": 0,
+			"soundtrack": -20,
+			"soundeffect": -20
+		}
+	)
 	scenes_data = preload("res://scenes/AuxScenes/LoadedScenes.gd").new()
 	scenes_data = scenes_data.scenes_data
 

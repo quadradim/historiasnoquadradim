@@ -1,0 +1,102 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://scenes/AuxScenes/DiaryInventory.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/AuxScenes/PlayerBackPack.gd" type="Script" id=2]
+[ext_resource path="res://assets/Images/Composition/CharacterChoice/mochilas/redimensionado/mochila03.png" type="Texture" id=3]
+
+[sub_resource type="Animation" id=2]
+resource_name = "DiaryHide"
+tracks/0/type = "value"
+tracks/0/path = NodePath("DiaryInventory:rect_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1e-05, 1e-05 ) ]
+}
+
+[sub_resource type="Animation" id=1]
+resource_name = "DiaryPop"
+tracks/0/type = "value"
+tracks/0/path = NodePath("DiaryInventory:rect_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "DiaryHide"
+tracks/0/type = "value"
+tracks/0/path = NodePath("DiaryInventory:rect_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "Beating"
+length = 2.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("BackPack:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.2025, 0.2025 ), Vector2( 0.303, 0.303 ), Vector2( 0.203, 0.203 ) ]
+}
+
+[node name="PlayerBackPack" type="CanvasLayer"]
+script = ExtResource( 2 )
+
+[node name="BackPack" type="Sprite" parent="."]
+position = Vector2( 962, 70 )
+scale = Vector2( 0.203, 0.203 )
+texture = ExtResource( 3 )
+
+[node name="BackPackButton" type="TextureButton" parent="BackPack"]
+margin_left = -231.527
+margin_top = -266.01
+margin_right = 217.473
+margin_bottom = 261.99
+
+[node name="DiaryPopAnimation" type="AnimationPlayer" parent="."]
+anims/DiaryHide = SubResource( 2 )
+anims/DiaryPop = SubResource( 1 )
+
+[node name="DiaryHideAnimation" type="AnimationPlayer" parent="."]
+anims/DiaryHide = SubResource( 3 )
+
+[node name="DiaryInventory" parent="." instance=ExtResource( 1 )]
+visible = false
+rect_scale = Vector2( 1e-05, 1e-05 )
+
+[node name="BackPackBeating" type="AnimationPlayer" parent="."]
+anims/Beating = SubResource( 4 )
+
+[connection signal="pressed" from="BackPack/BackPackButton" to="." method="_on_TextureButton_pressed"]
+[connection signal="animation_finished" from="DiaryPopAnimation" to="." method="_on_DiaryPopAnimation_animation_finished"]
+[connection signal="animation_started" from="DiaryPopAnimation" to="." method="_on_DiaryPopAnimation_animation_started"]
+[connection signal="animation_finished" from="DiaryHideAnimation" to="." method="_on_DiaryHideAnimation_animation_finished"]
+[connection signal="animation_started" from="DiaryHideAnimation" to="." method="_on_DiaryHideAnimation_animation_started"]
+[connection signal="animation_finished" from="BackPackBeating" to="." method="_on_BackPackBeating_animation_finished"]

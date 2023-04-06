@@ -1,4 +1,4 @@
-extends CanvasLayer
+extends Tabs
 
 var player_data
 signal end_diary
@@ -30,6 +30,7 @@ func _ready():
 	
 	# Load backpack
 	$ProfileTab/BackpackPanel/Backpack.texture = load(player_data["backpack"])
+	
 	# Load Habilities
 #	$ProfileTab/ItemPanel01/hability.texture = load(player_data["habilities"][0][0])
 #	$ProfileTab/ItemPanel02/hability.texture = load(player_data["habilities"][1][0])
@@ -38,11 +39,6 @@ func _ready():
 	# Load Name
 	$ProfileTab/HistorianName.text = player_data["name"]
 	
-	# New Message Popup
-	$FirstAccessMessage.popup()
-	$FirstAccessMessageAnimation.play("NewGame")
-	
-
 
 func _process(delta):
 	$MainMusic.update("soundtrack")
@@ -150,7 +146,6 @@ func _on_FirstAccessMessage_popup_hide():
 	$ProfileIcon.scale = Vector2(0.252,0.276)
 	$MapIcon.scale = Vector2(0.237,0.237)
 	$CharactersIcon.scale = Vector2(0.233,0.233)
-	$AbilityIcon.scale = Vector2(0.221,0.221)
 	$IconsAnimation.stop()
 	pass # Replace with function body.
 

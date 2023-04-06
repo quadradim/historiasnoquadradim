@@ -112,11 +112,96 @@ margin_top = 40.0
 margin_right = -552.0
 margin_bottom = -40.0
 theme = ExtResource( 15 )
+tabs_visible = false
 
-[node name="Habilidades" type="Tabs" parent="TabContainer"]
+[node name="Estilo" type="Tabs" parent="TabContainer"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_top = 37.0
+
+[node name="CreationPanel" type="Panel" parent="TabContainer/Estilo"]
+margin_left = 8.0
+margin_top = 11.0
+margin_right = 424.0
+margin_bottom = 451.0
+
+[node name="back01" parent="TabContainer/Estilo/CreationPanel" instance=ExtResource( 13 )]
+margin_left = -352.0
+margin_top = -128.0
+margin_right = -352.0
+margin_bottom = -128.0
+rect_scale = Vector2( 0.22, 0.22 )
+object_source = ExtResource( 2 )
+object_name = "Observação"
+
+[node name="back02" parent="TabContainer/Estilo/CreationPanel" instance=ExtResource( 13 )]
+margin_left = -224.0
+margin_top = -128.0
+margin_right = -224.0
+margin_bottom = -128.0
+rect_scale = Vector2( 0.22, 0.22 )
+object_source = ExtResource( 18 )
+object_name = "Observação"
+
+[node name="back03" parent="TabContainer/Estilo/CreationPanel" instance=ExtResource( 13 )]
+margin_left = -96.0
+margin_top = -128.0
+margin_right = -96.0
+margin_bottom = -128.0
+rect_scale = Vector2( 0.22, 0.22 )
+object_source = ExtResource( 19 )
+object_name = "Observação"
+
+[node name="back05" parent="TabContainer/Estilo/CreationPanel" instance=ExtResource( 13 )]
+margin_left = -352.0
+margin_right = -352.0
+rect_scale = Vector2( 0.22, 0.22 )
+object_source = ExtResource( 20 )
+object_name = "Observação"
+
+[node name="back06" parent="TabContainer/Estilo/CreationPanel" instance=ExtResource( 13 )]
+margin_left = -224.0
+margin_right = -224.0
+rect_scale = Vector2( 0.22, 0.22 )
+object_source = ExtResource( 21 )
+object_name = "Observação"
+
+[node name="back07" parent="TabContainer/Estilo/CreationPanel" instance=ExtResource( 13 )]
+margin_left = -96.0
+margin_right = -96.0
+rect_scale = Vector2( 0.22, 0.22 )
+object_source = ExtResource( 22 )
+object_name = "Observação"
+
+[node name="BackpackTable" type="ColorRect" parent="TabContainer/Estilo"]
+margin_left = 432.0
+margin_top = 302.0
+margin_right = 784.0
+margin_bottom = 443.0
+color = Color( 0.447059, 0.301961, 0.207843, 1 )
+
+[node name="BackpackTable2" type="ColorRect" parent="TabContainer/Estilo"]
+margin_left = 432.0
+margin_top = 418.0
+margin_right = 784.0
+margin_bottom = 443.0
+color = Color( 0.180392, 0.12549, 0.0862745, 1 )
+
+[node name="BackpackZoom" type="Sprite" parent="TabContainer/Estilo"]
+position = Vector2( 608, 239.24 )
+scale = Vector2( 0.738888, 0.738888 )
+texture = ExtResource( 2 )
+
+[node name="BackpackText" type="Label" parent="TabContainer/Estilo"]
+margin_left = 31.44
+margin_top = 36.28
+margin_right = 389.44
+margin_bottom = 89.28
+text = "Escolha sua mochila:"
+
+[node name="Habilidades" type="Tabs" parent="TabContainer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
 theme = ExtResource( 15 )
 
 [node name="CreationPanel" type="Panel" parent="TabContainer/Habilidades"]
@@ -282,92 +367,6 @@ margin_right = 258.0
 margin_bottom = 115.0
 text = "Escolha três habilidades as quais você se identifica."
 
-[node name="Estilo" type="Tabs" parent="TabContainer"]
-visible = false
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_top = 37.0
-
-[node name="CreationPanel" type="Panel" parent="TabContainer/Estilo"]
-margin_left = 8.0
-margin_top = 11.0
-margin_right = 424.0
-margin_bottom = 451.0
-
-[node name="back01" parent="TabContainer/Estilo/CreationPanel" instance=ExtResource( 13 )]
-margin_left = -352.0
-margin_top = -128.0
-margin_right = -352.0
-margin_bottom = -128.0
-rect_scale = Vector2( 0.22, 0.22 )
-object_source = ExtResource( 2 )
-object_name = "Observação"
-
-[node name="back02" parent="TabContainer/Estilo/CreationPanel" instance=ExtResource( 13 )]
-margin_left = -224.0
-margin_top = -128.0
-margin_right = -224.0
-margin_bottom = -128.0
-rect_scale = Vector2( 0.22, 0.22 )
-object_source = ExtResource( 18 )
-object_name = "Observação"
-
-[node name="back03" parent="TabContainer/Estilo/CreationPanel" instance=ExtResource( 13 )]
-margin_left = -96.0
-margin_top = -128.0
-margin_right = -96.0
-margin_bottom = -128.0
-rect_scale = Vector2( 0.22, 0.22 )
-object_source = ExtResource( 19 )
-object_name = "Observação"
-
-[node name="back05" parent="TabContainer/Estilo/CreationPanel" instance=ExtResource( 13 )]
-margin_left = -352.0
-margin_right = -352.0
-rect_scale = Vector2( 0.22, 0.22 )
-object_source = ExtResource( 20 )
-object_name = "Observação"
-
-[node name="back06" parent="TabContainer/Estilo/CreationPanel" instance=ExtResource( 13 )]
-margin_left = -224.0
-margin_right = -224.0
-rect_scale = Vector2( 0.22, 0.22 )
-object_source = ExtResource( 21 )
-object_name = "Observação"
-
-[node name="back07" parent="TabContainer/Estilo/CreationPanel" instance=ExtResource( 13 )]
-margin_left = -96.0
-margin_right = -96.0
-rect_scale = Vector2( 0.22, 0.22 )
-object_source = ExtResource( 22 )
-object_name = "Observação"
-
-[node name="BackpackTable" type="ColorRect" parent="TabContainer/Estilo"]
-margin_left = 432.0
-margin_top = 302.0
-margin_right = 784.0
-margin_bottom = 443.0
-color = Color( 0.447059, 0.301961, 0.207843, 1 )
-
-[node name="BackpackTable2" type="ColorRect" parent="TabContainer/Estilo"]
-margin_left = 432.0
-margin_top = 418.0
-margin_right = 784.0
-margin_bottom = 443.0
-color = Color( 0.180392, 0.12549, 0.0862745, 1 )
-
-[node name="BackpackZoom" type="Sprite" parent="TabContainer/Estilo"]
-position = Vector2( 608, 239.24 )
-scale = Vector2( 0.738888, 0.738888 )
-texture = ExtResource( 2 )
-
-[node name="BackpackText" type="Label" parent="TabContainer/Estilo"]
-margin_left = 31.44
-margin_top = 36.28
-margin_right = 389.44
-margin_bottom = 89.28
-text = "Escolha sua mochila:"
-
 [node name="ContinueButton" type="Button" parent="."]
 margin_left = 867.0
 margin_top = 512.0
@@ -453,6 +452,12 @@ autowrap = true
 [node name="MainMusic" parent="." instance=ExtResource( 26 )]
 stream = ExtResource( 25 )
 
+[connection signal="clicked_object" from="TabContainer/Estilo/CreationPanel/back01" to="." method="choose_a_backpack"]
+[connection signal="clicked_object" from="TabContainer/Estilo/CreationPanel/back02" to="." method="choose_a_backpack"]
+[connection signal="clicked_object" from="TabContainer/Estilo/CreationPanel/back03" to="." method="choose_a_backpack"]
+[connection signal="clicked_object" from="TabContainer/Estilo/CreationPanel/back05" to="." method="choose_a_backpack"]
+[connection signal="clicked_object" from="TabContainer/Estilo/CreationPanel/back06" to="." method="choose_a_backpack"]
+[connection signal="clicked_object" from="TabContainer/Estilo/CreationPanel/back07" to="." method="choose_a_backpack"]
 [connection signal="clicked_object" from="TabContainer/Habilidades/CreationPanel/hab01" to="." method="choose_an_hability"]
 [connection signal="clicked_object" from="TabContainer/Habilidades/CreationPanel/hab02" to="." method="choose_an_hability"]
 [connection signal="clicked_object" from="TabContainer/Habilidades/CreationPanel/hab03" to="." method="choose_an_hability"]
@@ -462,10 +467,4 @@ stream = ExtResource( 25 )
 [connection signal="clicked_object" from="TabContainer/Habilidades/CreationPanel/hab07" to="." method="choose_an_hability"]
 [connection signal="clicked_object" from="TabContainer/Habilidades/CreationPanel/hab08" to="." method="choose_an_hability"]
 [connection signal="clicked_object" from="TabContainer/Habilidades/CreationPanel/hab09" to="." method="choose_an_hability"]
-[connection signal="clicked_object" from="TabContainer/Estilo/CreationPanel/back01" to="." method="choose_a_backpack"]
-[connection signal="clicked_object" from="TabContainer/Estilo/CreationPanel/back02" to="." method="choose_a_backpack"]
-[connection signal="clicked_object" from="TabContainer/Estilo/CreationPanel/back03" to="." method="choose_a_backpack"]
-[connection signal="clicked_object" from="TabContainer/Estilo/CreationPanel/back05" to="." method="choose_a_backpack"]
-[connection signal="clicked_object" from="TabContainer/Estilo/CreationPanel/back06" to="." method="choose_a_backpack"]
-[connection signal="clicked_object" from="TabContainer/Estilo/CreationPanel/back07" to="." method="choose_a_backpack"]
 [connection signal="pressed" from="ContinueButton" to="." method="end_character_choice"]

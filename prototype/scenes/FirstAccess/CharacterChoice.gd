@@ -78,7 +78,7 @@ func choose_a_backpack(object_id, object_source,object_name,description):
 	$TabContainer/Estilo/BackpackZoom.texture = object_source
 
 func end_character_choice():
-	if id_item_selected.size() < 3:
+	if id_item_selected.size() < 0:
 		$MessageBox/MessageText.text = "Selecione mais {items} habilidade(s)".format(
 			{"items": 3-id_item_selected.size()}
 		)
@@ -86,7 +86,7 @@ func end_character_choice():
 	elif not selected_backpack:
 		$MessageBox/MessageText.text = "Selecione uma mochila"
 		$MessageBox.popup()
-	elif len($PlayerName.text) < 5:
+	elif len($PlayerName.text) < 4:
 		$MessageBox/MessageText.text = "O nome necessita de no mínimo 5 caracteres"
 		$MessageBox.popup()
 	else:

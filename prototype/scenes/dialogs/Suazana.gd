@@ -27,33 +27,4 @@ func end_suzana_scene():
 	pass # Replace with function body.
 
 
-func _on_ChatBox_change_face1():
-	$SuzanaExpression1.visible = true
-	$SuzanaExpression2.visible = false
-	$SuzanaExpression3.visible = false
-	$SuzanaExpression4.visible = false
-	pass # Replace with function body.
 
-
-func _on_ChatBox_change_face2():
-	$SuzanaExpression1.visible = false
-	$SuzanaExpression2.visible = true
-	$SuzanaExpression3.visible = false
-	$SuzanaExpression4.visible = false
-	pass # Replace with function body.
-
-
-func _on_ChatBox_change_face3():
-	$SuzanaExpression1.visible = false
-	$SuzanaExpression2.visible = false
-	$SuzanaExpression3.visible = true
-	$SuzanaExpression4.visible = false
-	pass # Replace with function body.
-
-
-func _on_ChatBox_change_face4():
-	$SuzanaExpression1.visible = false
-	$SuzanaExpression2.visible = false
-	$SuzanaExpression3.visible = false
-	$SuzanaExpression4.visible = true
-	pass # Replace with function body.
