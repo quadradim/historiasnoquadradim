@@ -89,7 +89,7 @@ func _ready():
 
 	transition_animation.play("fade_out")
 
-	var initial_scene = 'character_choice'
+	var initial_scene = 'Taguatinga'
 	load_control_scene(
 		scenes_data[initial_scene][0],
 		initial_scene,

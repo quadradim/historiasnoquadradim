@@ -1,9 +1,8 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://scenes/dialogs/investigação_taguatinga/JoséMiguel.gd" type="Script" id=1]
 [ext_resource path="res://assets/Images/Composition/Taguatinga/3-Taguatinga (não-finalizado).png" type="Texture" id=2]
 [ext_resource path="res://scenes/AuxScenes/ChatBox.tscn" type="PackedScene" id=3]
-[ext_resource path="res://assets/Characters/Jogador/JOGADOR.png" type="Texture" id=4]
 [ext_resource path="res://assets/Images/Composition/Taguatinga/ícone_fala.png" type="Texture" id=5]
 [ext_resource path="res://assets/Images/Composition/Taguatinga/em_conversa.png" type="Texture" id=6]
 
@@ -33,9 +32,9 @@ chat = "*P*Com licença, senhor, você é o José Miguel? Esse caderninho é seu
 *J*Está ocorrendo um grande tumulto! Ainda não tenho certeza do que está acontecendo, mas parece que essa movimentação está ocorrendo há alguns dias! Estou em busca de mais pistas para publicar uma grande manchete de jornal! 
 *P*Como isso começou? Pode me dizer o que está acontecendo por aqui? 
 *J*Garoto(a), estou sem tempo pra conversinha, preciso ir atrás de pistas! Procure os oficiais da polícia, acredito que eles saberão dizer melhor o que está acontecendo nesses últimos dias. Se descobrir coisas interessantes, me procure! Estarei no mesmo lugar."
-img = [ ExtResource( 4 ), ExtResource( 5 ) ]
+img = [ null, ExtResource( 5 ) ]
 cha = [ "P", "J" ]
-image_scales = [ Vector2( 0.05, 0.05 ), Vector2( 0.95, 1.02 ) ]
+image_scales = [ Vector2( 0.05, 0.05 ), Vector2( 0.9, 0.9 ) ]
 nam = [ "Historiadora", "José Miguel" ]
 resize_panel = [ Vector2( 113, 26 ), Vector2( 101, 26 ) ]
 

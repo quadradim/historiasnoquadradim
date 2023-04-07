@@ -3,8 +3,8 @@
 [ext_resource path="res://assets/Fonts/bebas_neue/BebasNeue-Regular.otf" type="DynamicFontData" id=1]
 [ext_resource path="res://assets/Images/Composition/Taguatinga/3-Taguatinga (não-finalizado).png" type="Texture" id=2]
 [ext_resource path="res://assets/Images/Composition/Taguatinga/caderno_pro_cenário.png" type="Texture" id=3]
-[ext_resource path="res://assets/Images/Composition/Taguatinga/raulino.png" type="Texture" id=4]
-[ext_resource path="res://assets/Images/Composition/Taguatinga/dist_trabalhador.png" type="Texture" id=5]
+[ext_resource path="res://assets/Images/Composition/Taguatinga/raulino_resize25.png" type="Texture" id=4]
+[ext_resource path="res://assets/Images/Composition/Taguatinga/distrator_trabalhador_resize25.png" type="Texture" id=5]
 [ext_resource path="res://assets/Images/Composition/Taguatinga/no_cenário.png" type="Texture" id=6]
 [ext_resource path="res://assets/Images/Composition/Taguatinga/policial_distrator_sizeFULL.png" type="Texture" id=7]
 [ext_resource path="res://assets/Images/Composition/Taguatinga/no _cenário.png" type="Texture" id=8]
@@ -221,16 +221,15 @@ anims/RESET = SubResource( 5 )
 anims/ChatPop = SubResource( 4 )
 
 [node name="Multidao" type="Sprite" parent="."]
-visible = false
-modulate = Color( 0.00147929, 0.00147929, 0.00147929, 0.201183 )
+modulate = Color( 0, 0, 0, 0.215686 )
 position = Vector2( 514.247, 326 )
 scale = Vector2( 0.999999, 1.068 )
 texture = ExtResource( 10 )
 
 [node name="DistratorTrabalhador" type="Sprite" parent="Multidao"]
 modulate = Color( 0.0384615, 0.0384615, 0.0384615, 0.0384615 )
-position = Vector2( 311.628, -10.1966 )
-scale = Vector2( 0.657961, 0.616067 )
+position = Vector2( 291.958, 25.2216 )
+scale = Vector2( 0.809268, 0.75774 )
 texture = ExtResource( 5 )
 
 [node name="DistratorTrabalhadorButton" type="TextureButton" parent="Multidao/DistratorTrabalhador"]
@@ -241,8 +240,8 @@ margin_bottom = 200.0
 
 [node name="Raulino" type="Sprite" parent="Multidao"]
 modulate = Color( 0.0384615, 0.0384615, 0.0384615, 0.0384615 )
-position = Vector2( -196.247, 28.0899 )
-scale = Vector2( 0.809703, 0.758148 )
+position = Vector2( -192.878, 34.3387 )
+scale = Vector2( 0.83562, 0.782415 )
 texture = ExtResource( 4 )
 
 [node name="RaulinoButton" type="TextureButton" parent="Multidao/Raulino"]
