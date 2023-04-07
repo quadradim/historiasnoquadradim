@@ -1,0 +1,23 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/3_trecho.wav-ec7c2e2327aeb18e406e5f31d5d22db6.sample"
+
+[deps]
+
+source_file="res://dialogs/audio_description/01_introduction/3_trecho.wav"
+dest_files=[ "res://.import/3_trecho.wav-ec7c2e2327aeb18e406e5f31d5d22db6.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

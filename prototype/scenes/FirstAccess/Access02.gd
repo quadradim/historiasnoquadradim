@@ -2,6 +2,9 @@ extends CanvasLayer
 
 signal end_access02
 
+signal start_audio
+signal next_audio
+
 var text_tutorials = ['O Jogo Atitude Historiadora, surgido na Universidade de Brasília como Histórias no Quadradim,  propõe uma dupla imersão: em histórias pouco conhecidas do Distrito Federal e na experimentação de práticas vivenciadas por historiadores e historiadoras: trabalhando com fontes, desvendando pistas, encontrando personagens e reconhecendo novas narrativas...',
 'Sua missão é interagir com indícios do passado para completar as lacunas de seu diário de bordo. Ao final, essa jornada investigativa será dividida em nove episódios, desvendando alguns episódios pouco conhecidos na história desse nosso quadradim...',
 'Para além do Plano Piloto de concreto, de JK e seu panteão de heróis, a nossa aventura parte dos redemoinhos de poeira, para percorrer chafarizes, quadradões, caixas d\'água e gambiarras. Nela, estão trabalhadores em rebelião, mulheres negras, periferias plurais, indígenas, estudantes e outras coletividades em luta. Afinal, desde o passado,  nem tudo está nas asas, e menos ainda nos eixos.']
@@ -18,7 +21,6 @@ func _ready():
 	$FinishWriting.start()
 	$WritingTime.start()
 	$Mapa.disabled = true
-	pass
 
 func _process(delta):
 	$MainMusic.update("soundtrack")
@@ -39,11 +41,14 @@ func _on_Mapa_pressed():
 		presses_count += 1
 		$Mapa.disabled = true
 		$FinishWriting.start()
+
+		emit_signal("next_audio")
 	else:
 		emit_signal("end_access02", "character_choice")
 
 func start_writing():
-	$WritingTime.start()		
+	emit_signal("start_audio")
+	$WritingTime.start()
 
 func play_music():
 	return $MainMusic
@@ -54,4 +59,4 @@ func music_finished():
 
 func _on_FinishWriting_timeout():
 	$Mapa.disabled = false
-	pass # Replace with function body.
+

@@ -28,6 +28,9 @@ func load_control_scene(local, name, out_signal):
 	new_scene.out_signal = out_signal
 	new_scene.instance.connect(out_signal, self, 'change_scene')
 
+	new_scene.instance.connect('start_audio', self, 'start_audio_description')
+	new_scene.instance.connect('next_audio', self, 'change_audio_description')
+
 	used_scenes.append(new_scene)
 	current_scene_name = name
 
@@ -71,7 +74,8 @@ func create_player():
 			"historiometer":0,
 			"characters":0,
 			"soundtrack": -20,
-			"soundeffect": -20
+			"soundeffect": -20,
+			"audio_description": -20,
 		}
 	)
 
@@ -89,7 +93,7 @@ func _ready():
 
 	transition_animation.play("fade_out")
 
-	var initial_scene = 'Taguatinga'
+	var initial_scene = 'production'
 	load_control_scene(
 		scenes_data[initial_scene][0],
 		initial_scene,
@@ -100,6 +104,7 @@ func _ready():
 
 func _process(delta):
 	$Audio.update('soundtrack')
+	$AudioDescription.update('audio_description')
 	
 func change_scene(scene):
 	if not mouse_enabled:
@@ -162,3 +167,12 @@ func transition_animation_started(anim_name):
 
 func setting_back_menu():
 	change_scene('menu')
+
+func start_audio_description():
+	var player_data = $PlayerEntity.read()
+	$AudioDescription.stream = load(scenes_data[current_scene_name][4][0])
+	$AudioDescription.set_volume_db(player_data["audio_description"])
+	$AudioDescription.play()
+
+func change_audio_description():
+	print("Emit")

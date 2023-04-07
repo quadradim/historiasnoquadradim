@@ -4,12 +4,14 @@ var scenes_data = {
 #		'emited_signal',
 #		'has_config'
 #		'audio' => null, 'path', 'continue'
+#		'audio_description' => []
 #	]
 	'production': [
 		'res://scenes/GUI/Production.tscn',
 		'end_production',
 		false,
-		null
+		null,
+		[],
 	],
 	'logo_opening': [
 		'res://scenes/GUI/LogoOpening.tscn',
@@ -21,198 +23,237 @@ var scenes_data = {
 		'res://scenes/GUI/Menu.tscn',
 		'end_menu',
 		false,
-		'continue'
+		'continue',
+		[],
 	],
 	'access01': [
 		'res://scenes/FirstAccess/Access01.tscn',
 		'end_access01',
 		true,
-		'res://soundtrack/Loop2-Atualizado.mp3'
+		'res://soundtrack/Loop2-Atualizado.mp3',
+		[],
 	],
 	'access02': [
 		'res://scenes/FirstAccess/Access02.tscn',
 		'end_access02',
 		true,
-		'continue'
+		'continue',
+		[
+			"res://dialogs/audio_description/01_introduction/1_trecho.wav",
+			"res://dialogs/audio_description/01_introduction/2_trecho.wav",
+			"res://dialogs/audio_description/01_introduction/3_trecho.wav",
+			"res://dialogs/audio_description/01_introduction/4_trecho.wav",
+			"res://dialogs/audio_description/01_introduction/5_trecho.wav",
+		],
 	],
 	'character_choice': [
 		'res://scenes/FirstAccess/CharacterChoice.tscn',
 		'end_choice',
 		true,
-		'res://soundtrack/Loop3x.mp3'
+		'res://soundtrack/Loop3x.mp3',
+		[],
 	],
 	'diary': [
 		'res://scenes/GUI/Diary.tscn',
 		'end_diary',
 		true,
-		'res://soundtrack/Loop5 - Diário.mp3'
+		'res://soundtrack/Loop5 - Diário.mp3',
+		[],
 	],
 	'travel_scene': [
 		'res://scenes/GUI/TravelScene.tscn',
 		'end_travel_scene',
 		false,
-		null
+		null,
+		[],
 	],
 	'episode_intro':[
 		'res://scenes/Introductions/EpisodeIntro.tscn',
 		'end_episode_intro',
 		true,
-		null
+		null,
+		[],
 	],
 	'introd_lavadeiras': [
 		'res://scenes/Introductions/Lavadeiras.tscn',
 		'introd_lava',
 		false,
-		null
+		null,
+		[],
 	],
 	'suzana': [
 		'res://scenes/dialogs/Suazana.tscn',
 		'end_suzana_scene',
 		true,
-		'continue'
+		'continue',
+		[],
 	],
 	'episodes_selection': [
 		'res://scenes/GUI/EpisodeSelection.tscn',
 		'end_episode_selection',
 		false,
-		'continue'
+		'continue',
+		[],
 	],
 	'analyze_photos': [
 		'res://scenes/observation/PhotoAnalyze.tscn',
 		'end_analyze',
 		false,
-		null
+		null,
+		[],
 	],
 	'lavadeiras': [
 		'res://scenes/ambience/Lavadeiras.tscn',
 		'end_lavadeira',
 		true,
-		'res://soundtrack/Loop4 Lavadeiras.mp3'
+		'res://soundtrack/Loop4 Lavadeiras.mp3',
+		[],
 	],
 	'lavadeira_amiga': [
 		'res://scenes/dialogs/Lavadeira.tscn',
 		'end_lavadeira',
 		true,
-		'continue'
+		'continue',
+		[],
 	],
 	'intro_multidao': [
 		'res://scenes/Introductions/Multidao.tscn',
 		'end_multidao',
 		true,
-		null
+		null,
+		[],
 	],
 	'multidao': [
 		'res://scenes/ambience/Multidao.tscn',
 		'distractor_selected',
 		true,
-		"res://soundtrack/hotel diamantina.mp3"
+		"res://soundtrack/hotel diamantina.mp3",
+		[],
 	],
 	'distractor1_darcy': [
 		'res://scenes/dialogs/protesto_bandeirante/Distrator01.tscn',
 		'distractor_dialog',
 		true,
-		'continue'
+		'continue',
+		[],
 	],
 	'distractor2_darcy': [
 		'res://scenes/dialogs/protesto_bandeirante/Distrator02.tscn',
 		'distractor_dialog',
 		true,
-		'continue'
+		'continue',
+		[],
 	],
 	'distractor3_darcy': [
 		'res://scenes/dialogs/protesto_bandeirante/Distrator03.tscn',
 		'distractor_dialog',
 		true,
-		"res://soundtrack/Levante da Boa Vontade.mp3"
+		"res://soundtrack/Levante da Boa Vontade.mp3",
+		[],
 	],
 	'darcy_speech': [
 		'res://scenes/dialogs/Darcy.tscn',
 		'end_darcy_speech',
 		true,
-		"res://soundtrack/Loop Protesto Darcy.mp3"
+		"res://soundtrack/Loop Protesto Darcy.mp3",
+		[],
 	],
 	'word_choice': [
 		'res://scenes/Minigames/WordSelection.tscn',
 		'end_word_selection',
 		true,
-		null
+		null,
+		[],
 	],
 	'taguatinga_introduction':[
 		'res://scenes/Introductions/TaguaIntroduction.tscn',
 		'end_taguatinga_introduction',
 		false,
-		null
+		null,
+		[],
 	],
 	'Taguatinga': [
 		'res://scenes/ambience/Taguatinga.tscn',
 		'end_taguatinga',
 		false,
-		null
+		null,
+		[],
 	],
 	'jose_dialog':[
 		'res://scenes/dialogs/investigação_taguatinga/JoséMiguel.tscn',
 		'end_jose_dialog',
 		false,
-		null
+		null,
+		[],
 	],
 	'policial_distrator_dialog':[
-	'res://scenes/dialogs/investigação_taguatinga/PolicialDistrator.tscn',
-	'end_policial_distrator_dialog',
-	false,
-	null
+		'res://scenes/dialogs/investigação_taguatinga/PolicialDistrator.tscn',
+		'end_policial_distrator_dialog',
+		false,
+		null,
+		[],
 	],
 	'chefe_de_policia_dialog':[
 		'res://scenes/dialogs/investigação_taguatinga/ChefeDePolicia.tscn',
 		'end_chefe_de_policia_dialog',
 		false,
-		null
+		null,
+		[],
 	],
 	'distrator_trabalhador_dialog':[
 		'res://scenes/dialogs/investigação_taguatinga/DistratorTrabalhador.tscn',
 		'end_distrator_trabalhador_dialog',
 		false,
-		null
+		null,
+		[],
 	],
 	'raulino_dialog':[
 		'res://scenes/dialogs/investigação_taguatinga/Raulino.tscn',
 		'end_raulino_dialog',
 		false,
-		null
+		null,
+		[],
 	],
 	'folheto_raulino':[
 		'res://scenes/ambience/FolhetoRaulino.tscn',
 		'end_folheto_raulino',
 		false,
-		null
+		null,
+		[],
 	],
 	'plano_piloto_intro':[
 		'res://scenes/Introductions/PlanoPilotointro.tscn',
 		'end_plano_piloto_intro',
 		false,
-		null
+		null,
+		[],
 	],
 	'israel_dialog':[
 		'res://scenes/dialogs/Esplanada/IsraeldaSilva.tscn',
 		'end_israel_dialog',
 		false,
-		null
+		null,
+		[],
 	],
 	'ranieri_jornalista_dialog':[
 		'res://scenes/dialogs/Esplanada/RanieriJornalista.tscn',
 		'end_ranieri_jornalista_dialog',
 		false,
-		null
+		null,
+		[],
 	],
 	'israel_professora_dialog':[
 		'res://scenes/dialogs/Esplanada/IsraelProfessora.tscn',
 		'end_israel_professora_dialog',
 		false,
-		null
+		null,
+		[],
 	],
 	'word_selection_2':[
 		'res://scenes/Minigames/WordSelection2.tscn',
 		'end_word_selection_2',
 		false,
-		null
+		null,
+		[],
 	]
 }

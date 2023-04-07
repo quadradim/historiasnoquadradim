@@ -42,6 +42,8 @@ script = ExtResource( 2 )
 
 [node name="Audio" parent="." instance=ExtResource( 4 )]
 
+[node name="AudioDescription" parent="." instance=ExtResource( 4 )]
+
 [node name="PlayerEntity" parent="." instance=ExtResource( 1 )]
 
 [node name="TransitionAnimation" type="AnimationPlayer" parent="."]

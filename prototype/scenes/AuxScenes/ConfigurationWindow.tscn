@@ -99,6 +99,9 @@ margin_top = -157.5
 margin_right = 264.5
 margin_bottom = 157.5
 custom_styles/panel = SubResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Title" type="Label" parent="PanelConfig"]
 margin_left = 168.5
@@ -108,12 +111,15 @@ margin_bottom = 61.5
 custom_colors/font_color = Color( 0.0235294, 0.0313726, 0.109804, 1 )
 custom_fonts/font = SubResource( 2 )
 text = "Configurações"
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Soundeffect" type="HSlider" parent="PanelConfig"]
-margin_left = 120.5
-margin_top = 109.5
-margin_right = 421.5
-margin_bottom = 160.5
+margin_left = 127.5
+margin_top = 77.5
+margin_right = 428.5
+margin_bottom = 128.5
 custom_styles/slider = SubResource( 3 )
 min_value = -60.0
 max_value = 24.0
@@ -146,10 +152,11 @@ scale = Vector2( 0.0546875, 0.0668403 )
 texture = ExtResource( 4 )
 
 [node name="Soundtrack" type="HSlider" parent="PanelConfig"]
-margin_left = 120.5
-margin_top = 172.5
-margin_right = 421.5
-margin_bottom = 223.5
+margin_left = 127.5
+margin_top = 133.5
+margin_right = 428.5
+margin_bottom = 184.5
+rect_pivot_offset = Vector2( 248, 48 )
 custom_styles/slider = SubResource( 3 )
 min_value = -60.0
 max_value = 24.0
@@ -194,6 +201,9 @@ custom_styles/hover = SubResource( 8 )
 custom_styles/pressed = SubResource( 7 )
 custom_styles/normal = SubResource( 6 )
 text = "Fechar"
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Button2" type="Button" parent="PanelConfig"]
 margin_left = 33.0
@@ -208,6 +218,46 @@ custom_styles/focus = SubResource( 8 )
 custom_styles/disabled = SubResource( 8 )
 custom_styles/normal = SubResource( 8 )
 text = "Menu"
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="AudioDescription" type="HSlider" parent="PanelConfig"]
+margin_left = 128.5
+margin_top = 189.5
+margin_right = 429.5
+margin_bottom = 240.5
+rect_pivot_offset = Vector2( 248, 48 )
+custom_styles/slider = SubResource( 3 )
+min_value = -60.0
+max_value = 24.0
+
+[node name="Audio" type="Sprite" parent="PanelConfig/AudioDescription"]
+position = Vector2( -24, 25 )
+scale = Vector2( 0.0546875, 0.0668403 )
+texture = ExtResource( 4 )
+
+[node name="AudioDescriptionLabel" type="Label" parent="PanelConfig/AudioDescription"]
+margin_left = 104.0
+margin_top = -8.0
+margin_right = 189.0
+margin_bottom = 12.0
+custom_colors/font_color = Color( 0.0235294, 0.0313726, 0.109804, 1 )
+custom_fonts/font = SubResource( 4 )
+text = "Audio DESCRIÇÃO"
+
+[node name="volume" type="Label" parent="PanelConfig/AudioDescription"]
+anchor_left = 1.04
+anchor_top = 0.314
+anchor_right = 1.12
+anchor_bottom = 0.647
+margin_left = -0.0400391
+margin_top = 0.986
+margin_right = -0.119995
+margin_bottom = 0.00299835
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "0"
+align = 1
 
 [node name="PlayerEntity" parent="." instance=ExtResource( 3 )]
 
@@ -215,3 +265,4 @@ text = "Menu"
 [connection signal="value_changed" from="PanelConfig/Soundtrack" to="." method="change_soundtrack"]
 [connection signal="pressed" from="PanelConfig/Button" to="." method="button_pressed"]
 [connection signal="pressed" from="PanelConfig/Button2" to="." method="menu_button_pressed"]
+[connection signal="value_changed" from="PanelConfig/AudioDescription" to="." method="change_audiodescription"]
