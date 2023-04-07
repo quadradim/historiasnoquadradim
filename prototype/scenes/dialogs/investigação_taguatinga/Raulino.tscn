@@ -1,13 +1,15 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://assets/Images/Composition/Taguatinga/3-Taguatinga (não-finalizado).png" type="Texture" id=1]
 [ext_resource path="res://assets/Images/Composition/Taguatinga/multidão.png" type="Texture" id=2]
-[ext_resource path="res://assets/Images/Composition/Taguatinga/raulino.png" type="Texture" id=3]
+[ext_resource path="res://assets/Images/Composition/Taguatinga/raulino_perfil.png" type="Texture" id=3]
 [ext_resource path="res://scenes/AuxScenes/ChatBox.tscn" type="PackedScene" id=4]
 [ext_resource path="res://assets/Images/Composition/Darcy/multidão.png" type="Texture" id=5]
-[ext_resource path="res://assets/Images/Composition/Taguatinga/raulino_profile.png" type="Texture" id=6]
+[ext_resource path="res://assets/Images/Composition/Taguatinga/raulino_resize25.png" type="Texture" id=6]
 [ext_resource path="res://assets/Characters/Jogador/JOGADOR.png" type="Texture" id=7]
 [ext_resource path="res://scenes/dialogs/investigação_taguatinga/Raulino.gd" type="Script" id=8]
+[ext_resource path="res://scenes/AuxScenes/PlayerBackPack.tscn" type="PackedScene" id=9]
+[ext_resource path="res://assets/Styles/Themes/CharacterChoice.tres" type="Theme" id=10]
 
 [node name="CanvasLayer" type="CanvasLayer"]
 script = ExtResource( 8 )
@@ -23,9 +25,9 @@ scale = Vector2( 1.00173, 1.00173 )
 texture = ExtResource( 2 )
 
 [node name="Sprite2" type="Sprite" parent="."]
-position = Vector2( 464, 277 )
-scale = Vector2( 1.07711, 1.07711 )
-texture = ExtResource( 3 )
+position = Vector2( 461, 380 )
+scale = Vector2( 1.29625, 1.29625 )
+texture = ExtResource( 6 )
 
 [node name="ChatBox" parent="." instance=ExtResource( 4 )]
 margin_left = -58.0
@@ -43,10 +45,40 @@ chat = "*P* tarde, meu senhor. Você é quem está no comando do movimento?
 *R*Isso mesmo. Vamos quebrar tudo se não pagarem a gente! E quem é você? Quer se unir à nossa causa? 
 *P*Eu sou historiador(a), estou apenas tentando compreender melhor o que está acontecendo aqui, senhor Raulino. 
 *R*Certo. Vou lhe mostrar então meu caderninho de contas e a merreca que recebem os trabalhadores, porque eu nem isso estou recebendo mais, estou desempregado, e minha família está sem alimentação."
-img = [ ExtResource( 7 ), ExtResource( 6 ), ExtResource( 5 ) ]
+img = [ ExtResource( 7 ), ExtResource( 3 ), ExtResource( 5 ) ]
 cha = [ "P", "R", "M" ]
 image_scales = [ Vector2( 0.05, 0.05 ), Vector2( 0.65, 0.65 ), Vector2( 0.13, 0.13 ) ]
 nam = [ "Historiadora", "Raulino", "Multidão" ]
 resize_panel = [ Vector2( 113, 26 ), Vector2( 90, 26 ), Vector2( 113, 26 ) ]
+
+[node name="PlayerBackPack" parent="." instance=ExtResource( 9 )]
+
+[node name="UnlockedSkill" type="WindowDialog" parent="."]
+visible = true
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -21.0
+margin_top = -287.0
+margin_right = 475.0
+margin_bottom = -125.0
+rect_scale = Vector2( 0.785714, 0.785714 )
+theme = ExtResource( 10 )
+
+[node name="Label" type="Label" parent="UnlockedSkill"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.627
+anchor_bottom = 0.5
+margin_left = -237.818
+margin_top = -91.1818
+margin_right = 185.079
+margin_bottom = 91.8182
+custom_colors/font_color = Color( 0.196078, 0.282353, 0.376471, 0.670588 )
+text = "Parabéns! Foi desbloqueada a Habilidade capacidade investigativa."
+align = 1
+valign = 1
+autowrap = true
 
 [connection signal="end_dialog" from="ChatBox" to="." method="_on_ChatBox_end_dialog"]

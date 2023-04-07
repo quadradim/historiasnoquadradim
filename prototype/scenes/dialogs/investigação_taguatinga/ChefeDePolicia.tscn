@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://assets/Images/Composition/Taguatinga/policial_distrator_sizeFULL.png" type="Texture" id=1]
 [ext_resource path="res://assets/Images/Composition/Taguatinga/3-Taguatinga (não-finalizado).png" type="Texture" id=2]
@@ -6,6 +6,8 @@
 [ext_resource path="res://assets/Characters/Jogador/JOGADOR.png" type="Texture" id=4]
 [ext_resource path="res://assets/Images/Composition/Taguatinga/chefe_de_policia_perfil.png" type="Texture" id=5]
 [ext_resource path="res://scenes/dialogs/investigação_taguatinga/ChefeDePolicia.gd" type="Script" id=6]
+[ext_resource path="res://scenes/AuxScenes/PlayerBackPack.tscn" type="PackedScene" id=7]
+[ext_resource path="res://assets/Styles/Themes/CharacterChoice.tres" type="Theme" id=8]
 
 [node name="ChefeDePolicia" type="CanvasLayer"]
 script = ExtResource( 6 )
@@ -41,4 +43,35 @@ image_scales = [ Vector2( 0.05, 0.05 ), Vector2( 0.65, 0.65 ) ]
 nam = [ "Historiadora", "Policial" ]
 resize_panel = [ Vector2( 113, 26 ), Vector2( 70, 26 ) ]
 
+[node name="PlayerBackPack" parent="." instance=ExtResource( 7 )]
+
+[node name="UnlockedSkill" type="WindowDialog" parent="."]
+visible = true
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -21.0
+margin_top = -287.0
+margin_right = 475.0
+margin_bottom = -125.0
+rect_scale = Vector2( 0.785714, 0.785714 )
+theme = ExtResource( 8 )
+
+[node name="Label" type="Label" parent="UnlockedSkill"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.627
+anchor_bottom = 0.5
+margin_left = -237.818
+margin_top = -91.1818
+margin_right = 185.079
+margin_bottom = 91.8182
+custom_colors/font_color = Color( 0.196078, 0.282353, 0.376471, 0.670588 )
+text = "Parabéns! Foi desbloqueada a Habilidade escuta sensível."
+align = 1
+valign = 1
+autowrap = true
+
 [connection signal="end_dialog" from="ChatBox" to="." method="_on_ChatBox_end_dialog"]
+[connection signal="popup_hide" from="UnlockedSkill" to="." method="_on_UnlockedSkill_popup_hide"]

@@ -2,30 +2,10 @@ extends Tabs
 
 var player_data
 signal end_diary
-var locked_characters = [0,0,0,0,0,0,0,0,0]
 var animation_finish = true
 
 
 func _ready():
-#	if bool(locked_characters[0]) == false:
-#		$CharactersTab/Character1.texture = null
-#	if bool(locked_characters[1]) == false:
-#		$CharactersTab/Character2.texture = null
-#	if bool(locked_characters[2]) == false:
-#		$CharactersTab/Character3.texture = null
-#	if bool(locked_characters[3]) == false:
-#		$CharactersTab/Character4.texture = null
-#	if bool(locked_characters[4]) == false:
-#		$CharactersTab/Character5.texture = null
-#	if bool(locked_characters[5]) == false:
-#		$CharactersTab/Character6.texture = null
-#	if bool(locked_characters[6]) == false:
-#		$CharactersTab/Character7.texture = null
-#	if bool(locked_characters[7]) == false:
-#		$CharactersTab/Character8.texture = null
-#	if bool(locked_characters[8]) == false:
-#		$CharactersTab/Character9.texture = null
-	
 	player_data = $PlayerEntitiy.read()
 	
 	# Load backpack
@@ -39,7 +19,57 @@ func _ready():
 	# Load Name
 	$ProfileTab/HistorianName.text = player_data["name"]
 	
+	#Load Characters
+	if player_data["characters"] > 0:
+		$CharactersTab/Character1.visible = true
+	if player_data["characters"] > 1:
+		$CharactersTab/Character2.visible = true
+	if player_data["characters"] > 2:
+		$CharactersTab/Character3.visible = true
+	if player_data["characters"] > 3:
+		$CharactersTab/Character4.visible = true
+	if player_data["characters"] > 4:
+		$CharactersTab/Character5.visible = true
+	if player_data["characters"] > 5:
+		$CharactersTab/Character6.visible = true
+	if player_data["characters"] > 6:
+		$CharactersTab/Character7.visible = true
+	if player_data["characters"] > 7:
+		$CharactersTab/Character8.visible = true
+	if player_data["characters"] > 8:
+		$CharactersTab/Character9.visible = true
+	#Load Abilitys
+	$AbillityTab/Binoculos.visible = player_data["ability"][0]
+	$AbillityTab/Cartazes.visible = player_data["ability"][1]
+	$AbillityTab/Chapeu.visible = player_data["ability"][2]
+	$AbillityTab/Cubo.visible = player_data["ability"][3]
+	$AbillityTab/JogoDaMemoria.visible = player_data["ability"][4]
+	$AbillityTab/Jornal.visible = player_data["ability"][5]
+	$AbillityTab/Livros.visible = player_data["ability"][6]
+	$AbillityTab/Pasta.visible = player_data["ability"][7]
+	$AbillityTab/Planeta.visible = player_data["ability"][8]
+	
+	#Load Historiometer
+	if player_data["historiometer"] > 0:
+		$AbillityTab/HistoriometroTab/Historiomentro1.visible = true
+	if player_data["historiometer"] > 1:
+		$AbillityTab/HistoriometroTab/Historiomentro2.visible = true
+	if player_data["historiometer"] > 2:
+		$AbillityTab/HistoriometroTab/Historiomentro3.visible = true
+	if player_data["historiometer"] > 3:
+		$AbillityTab/HistoriometroTab/Historiomentro4.visible = true
+	if player_data["historiometer"] > 4:
+		$AbillityTab/HistoriometroTab/Historiomentro5.visible = true
+	if player_data["historiometer"] > 5:
+		$AbillityTab/HistoriometroTab/Historiomentro6.visible = true
+	if player_data["historiometer"] > 6:
+		$AbillityTab/HistoriometroTab/Historiomentro7.visible = true
+	if player_data["historiometer"] > 7:
+		$AbillityTab/HistoriometroTab/Historiomentro8.visible = true
+	if player_data["historiometer"] > 8:
+		$AbillityTab/HistoriometroTab/Historiomentro9.visible = true		
 
+	
 func _process(delta):
 	$MainMusic.update("soundtrack")
 

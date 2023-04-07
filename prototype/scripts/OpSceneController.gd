@@ -67,23 +67,15 @@ func create_player():
 			"name": "none",
 			"habilities": [],
 			"backpack": [],
-			"historiometer": 0,
+			"ability": [0,0,0,0,0,0,0,0,0],
+			"historiometer":0,
+			"characters":0,
 			"soundtrack": -20,
 			"soundeffect": -20
 		}
 	)
 
 func _ready():
-	$PlayerEntity.insert(
-		{
-			"name": "none",
-			"habilities": [],
-			"backpack": [],
-			"historiometer": 0,
-			"soundtrack": -20,
-			"soundeffect": -20
-		}
-	)
 	scenes_data = preload("res://scenes/AuxScenes/LoadedScenes.gd").new()
 	scenes_data = scenes_data.scenes_data
 
@@ -97,7 +89,7 @@ func _ready():
 
 	transition_animation.play("fade_out")
 
-	var initial_scene = 'production'
+	var initial_scene = 'character_choice'
 	load_control_scene(
 		scenes_data[initial_scene][0],
 		initial_scene,

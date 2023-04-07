@@ -5,7 +5,7 @@
 
 extends CanvasLayer
 var player_choice = []
-
+var player_data
 signal end_word_selection_2
 
 var max_options = 5
@@ -38,6 +38,8 @@ func connect_signal_options():
 		options[i].get_node("button").connect('pressed', self, 'press_option'+str(i))
 
 func _ready():
+	player_data = $PlayerBackPack/DiaryInventory/PlayerEntitiy.read()
+	$NextButton.disabled = true
 	$TryButton.disabled = true
 	
 	get_elements()
@@ -65,7 +67,24 @@ func press_try():
 		won = false
 
 	if won:
-		emit_signal("end_word_selection_2", "menu")
+		$NextButton.disabled = false
+		$MessageBox/MessageText.text = "Parabéns, resposta correta"
+		$MessageBox.popup()
+		$PlayerBackPack/DiaryInventory/PlayerEntitiy.insert(
+		{
+			"name": player_data["name"],
+			"habilities": player_data["habilities"],
+			"backpack": player_data["backpack"],
+			"ability": [1,1,1,1,0,0,0,1,1],
+			"historiometer":6,
+			"characters":1,
+			"soundtrack": player_data["soundtrack"],
+			"soundeffect": player_data["soundeffect"]
+		}
+	)
+		$PlayerBackPack/DiaryInventory._ready()
+		$UnlockedSkill.popup()
+		
 	else:
 		tries += 1
 
@@ -106,3 +125,8 @@ func press_option3():
 
 func press_option4():
 	option_pressed(4)
+
+
+func _on_NextButton_pressed():
+	emit_signal("end_word_selection_2", "menu")
+	pass # Replace with function body.

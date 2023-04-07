@@ -2,10 +2,12 @@ extends CanvasLayer
 var player_choice = []
 var correct_choice = ["Greve","Reivindicação","Desempregados"]
 var errors_counter = 0
+var player_data
 
 signal end_word_selection
 
 func _ready():
+	player_data = $PlayerBackPack/DiaryInventory/PlayerEntitiy.read()
 	$TryButton.disabled = true
 	$NextButton.disabled = true
 	pass # Replace with function body.
@@ -138,6 +140,20 @@ func Try_Button():
 		$MessageBox.popup()
 		$NextButton.disabled = false
 		$TryButton.disabled = true
+		$UnlockedSkill.popup()
+		$PlayerBackPack/DiaryInventory/PlayerEntitiy.insert(
+		{
+			"name": player_data["name"],
+			"habilities": player_data["habilities"],
+			"backpack": player_data["backpack"],
+			"ability": [1,0,0,1,0,0,0,0,1],
+			"historiometer":3,
+			"characters":1,
+			"soundtrack": player_data["soundtrack"],
+			"soundeffect": player_data["soundeffect"]
+		}
+	)
+		$PlayerBackPack/DiaryInventory._ready()
 	else:
 		errors_counter +=1
 		if errors_counter >= 3:
@@ -162,3 +178,5 @@ func Try_Button():
 func _on_NextButton_pressed():
 	emit_signal("end_word_selection","travel_scene")
 	pass # Replace with function body.
+
+

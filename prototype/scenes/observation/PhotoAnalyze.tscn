@@ -8,11 +8,11 @@
 [ext_resource path="res://assets/icons/next.png" type="Texture" id=6]
 [ext_resource path="res://assets/icons/previous.png" type="Texture" id=7]
 [ext_resource path="res://scenes/observation/PhotoAnalyze.gd" type="Script" id=8]
+[ext_resource path="res://assets/Images/Composition/AnáliseDeFotos/Foto 2.png" type="Texture" id=9]
 [ext_resource path="res://assets/Fonts/bebas_neue/BebasNeue-Regular.otf" type="DynamicFontData" id=10]
-[ext_resource path="res://assets/Cena/AnáliseDeFotos/circulo.png" type="Texture" id=11]
-[ext_resource path="res://assets/Cena/AnáliseDeFotos/Foto 2.png" type="Texture" id=12]
+[ext_resource path="res://assets/Images/Composition/AnáliseDeFotos/circulo.png" type="Texture" id=11]
+[ext_resource path="res://assets/Images/Composition/AnáliseDeFotos/Foto 1.png" type="Texture" id=12]
 [ext_resource path="res://scenes/AuxScenes/PlayerBackPack.tscn" type="PackedScene" id=13]
-[ext_resource path="res://assets/Cena/AnáliseDeFotos/Foto 1.png" type="Texture" id=14]
 
 [sub_resource type="StyleBoxFlat" id=2]
 bg_color = Color( 0.972549, 0.882353, 0.435294, 1 )
@@ -145,7 +145,7 @@ custom_styles/panel = SubResource( 9 )
 [node name="PhotoOne" type="Sprite" parent="PhotoPanel"]
 position = Vector2( 255.883, 251.75 )
 scale = Vector2( 0.633905, 0.633905 )
-texture = ExtResource( 14 )
+texture = ExtResource( 12 )
 
 [node name="FirstClue" type="Sprite" parent="PhotoPanel/PhotoOne"]
 visible = false
@@ -199,7 +199,7 @@ margin_bottom = 17.0
 visible = false
 position = Vector2( 256, 251.5 )
 scale = Vector2( 0.625798, 0.611959 )
-texture = ExtResource( 12 )
+texture = ExtResource( 9 )
 
 [node name="FirstClue" type="Sprite" parent="PhotoPanel/PhotoTwo"]
 visible = false
@@ -268,6 +268,7 @@ valign = 1
 autowrap = true
 
 [node name="UnlockedSkill" type="WindowDialog" parent="."]
+visible = true
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5

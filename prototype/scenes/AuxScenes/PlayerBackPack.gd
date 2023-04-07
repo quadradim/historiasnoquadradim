@@ -19,6 +19,8 @@ func _ready():
 
 
 func _on_TextureButton_pressed():
+	player_data = $DiaryInventory/PlayerEntitiy.read()
+	
 	if $DiaryInventory.visible == true:
 		$DiaryHideAnimation.play("DiaryHide")
 	else:

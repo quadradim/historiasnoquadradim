@@ -3,6 +3,7 @@ extends CanvasLayer
 signal end_lavadeira
 
 func _ready():
+	$PlayerBackPack.visible = true
 	pass # Replace with function body.
 
 func _process(delta):

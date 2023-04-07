@@ -1,17 +1,14 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://assets/Images/Composition/NucleoBandeirante/no_cenário.png" type="Texture" id=1]
 [ext_resource path="res://scenes/AuxScenes/ChatBox.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/dialogs/Suazana.gd" type="Script" id=3]
 [ext_resource path="res://assets/Images/Composition/NucleoBandeirante/1- Núcleo bandeirante.jpg" type="Texture" id=4]
 [ext_resource path="res://assets/Images/Composition/ProfileImages/lupa_profile.png" type="Texture" id=5]
-[ext_resource path="res://assets/Images/Composition/ProfileImages/suzana_face.png" type="Texture" id=6]
-[ext_resource path="res://assets/Characters/suzana/suzana_expressão4_resize25.png" type="Texture" id=7]
+[ext_resource path="res://assets/Images/Composition/NucleoBandeirante/ícone_fala.png" type="Texture" id=6]
 [ext_resource path="res://scenes/AuxScenes/AudioController.tscn" type="PackedScene" id=8]
 [ext_resource path="res://soundtrack/Loop4 Lavadeiras.mp3" type="AudioStream" id=9]
-[ext_resource path="res://assets/Characters/suzana/suzana_expressões6.png" type="Texture" id=10]
-[ext_resource path="res://assets/Characters/suzana/suzana_expressão3_resize25.png" type="Texture" id=11]
-[ext_resource path="res://assets/Characters/suzana/suzana_expressão5_resize25.png" type="Texture" id=12]
+[ext_resource path="res://scenes/AuxScenes/PlayerBackPack.tscn" type="PackedScene" id=13]
 
 [node name="Suzana" type="CanvasLayer"]
 script = ExtResource( 3 )
@@ -45,36 +42,14 @@ margin_bottom = 193.0
 chat = "P*Mulher de deus, vi que a subprefeitura está toda destruída. O que aconteceu? Cê tava lá?*S*Tava sim! Foi um tumulto grande, uma multidão destruiu a subprefeitura, e eles gritavam “pão ou morte”! Tinha gente de todo canto, até de Planaltina.  Destruíram até o açougue e a escola primária.*P*Minha nossa! E por que tudo isso?*S*Os homens foram pra conversar com os funcionários da prefeitura, mas nada de serem atendidos, fazia dias que eles tentavam essa conversa.*P*E o que você acha desse tumulto todo?*S*Olha, eu não tiro a razão não, viu, tudo trabalhando de graça pra prefeitura fazia meses, vendo as crianças em casa passando fome, viraram até chacota entre as mulheres, a gente dizia que eles eram “a turma da boa vontade”, mangando deles… *P*Vixe! E essa movimentação toda já acabou?*S*Que nada, tá é começando de novo! Já me disseram que tem um bando de gente de terno chegando nas Rural Willys, e os homens tão tudo descendo, alvoroçados...*P*E você vai pra lá? *S*Eu vou lá espiar, quer ir comigo?*P*Isso, vamos sim!"
 img = [ ExtResource( 5 ), ExtResource( 6 ) ]
 cha = [ "P", "S" ]
-image_scales = [ Vector2( 0.05, 0.05 ), Vector2( 0.175, 0.175 ) ]
+image_scales = [ Vector2( 0.8, 0.8 ), Vector2( 0.68, 0.68 ) ]
 nam = [ "Historiadora", "Dona Suzana" ]
 resize_panel = [ Vector2( 113, 26 ), Vector2( 108, 26 ) ]
 
 [node name="MainMusic" parent="." instance=ExtResource( 8 )]
 stream = ExtResource( 9 )
 
-[node name="SuzanaExpression1" type="Sprite" parent="."]
-visible = false
-position = Vector2( 424, 172 )
-scale = Vector2( 1.38974, 1.43919 )
-texture = ExtResource( 11 )
-
-[node name="SuzanaExpression2" type="Sprite" parent="."]
-visible = false
-position = Vector2( 269, 171.806 )
-scale = Vector2( 0.980183, 1.01152 )
-texture = ExtResource( 7 )
-
-[node name="SuzanaExpression3" type="Sprite" parent="."]
-visible = false
-position = Vector2( 269.172, 171.842 )
-scale = Vector2( 0.978404, 1.01203 )
-texture = ExtResource( 12 )
-
-[node name="SuzanaExpression4" type="Sprite" parent="."]
-visible = false
-position = Vector2( 269, 182.75 )
-scale = Vector2( 0.982759, 1.01825 )
-texture = ExtResource( 10 )
+[node name="PlayerBackPack" parent="." instance=ExtResource( 13 )]
 
 [connection signal="change_face1" from="ChatBox" to="." method="_on_ChatBox_change_face1"]
 [connection signal="change_face2" from="ChatBox" to="." method="_on_ChatBox_change_face2"]

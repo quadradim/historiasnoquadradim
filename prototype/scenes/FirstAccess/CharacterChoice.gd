@@ -99,7 +99,9 @@ func end_character_choice():
 				"name": $PlayerName.text,
 				"habilities": items_selected_info,
 				"backpack": $TabContainer/Estilo/BackpackZoom.texture.resource_path,
-				"historiometer": 0,
+				"ability": [0,0,0,0,0,0,0,0,0],
+				"historiometer":0,
+				"characters":0,
 				"soundtrack": player_data["soundtrack"],
 				"soundeffect": player_data["soundeffect"]
 			}

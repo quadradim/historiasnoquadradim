@@ -1,4 +1,4 @@
-[gd_scene load_steps=75 format=2]
+[gd_scene load_steps=83 format=2]
 
 [ext_resource path="res://assets/Styles/Themes/Menu.tres" type="Theme" id=1]
 [ext_resource path="res://scenes/GUI/Diary.gd" type="Script" id=2]
@@ -41,13 +41,21 @@
 [ext_resource path="res://assets/Images/Composition/diary/historiômetro/5.png" type="Texture" id=39]
 [ext_resource path="res://assets/Images/Composition/diary/historiômetro/2.png" type="Texture" id=40]
 [ext_resource path="res://assets/Images/Composition/diary/historiômetro/9.png" type="Texture" id=41]
-[ext_resource path="res://assets/Images/Composition/diary/Personagens/Diário_de_bordo_bloqueado (2).png" type="Texture" id=42]
-[ext_resource path="res://assets/Images/Composition/diary/Personagens/diário_de_bordo_bloqueado (1).png" type="Texture" id=43]
+[ext_resource path="res://assets/Images/Composition/diary/Personagens/Diário_de_bordo.png" type="Texture" id=42]
+[ext_resource path="res://assets/Images/Composition/diary/Personagens/diário_de_bordo2.png" type="Texture" id=43]
 [ext_resource path="res://assets/Images/Composition/diary/Personagens/Diário_de_bordo_bloqueado.png" type="Texture" id=44]
-[ext_resource path="res://assets/Images/Composition/diary/Personagens/Diário_de_bordo_bloqueado (3).png" type="Texture" id=45]
-[ext_resource path="res://assets/Images/Composition/diary/Personagens/Diário_de_bordo_bloqueado (4).png" type="Texture" id=46]
+[ext_resource path="res://assets/Images/Composition/diary/Personagens/domingas.png" type="Texture" id=45]
+[ext_resource path="res://assets/Images/Composition/diary/Personagens/ranieri.png" type="Texture" id=46]
 [ext_resource path="res://assets/Images/Composition/diary/Lupa2.png" type="Texture" id=47]
 [ext_resource path="res://assets/Images/Composition/diary/reforma.png" type="Texture" id=48]
+[ext_resource path="res://assets/Images/Composition/diary/Personagens/Raulino_bloqueado.png" type="Texture" id=49]
+[ext_resource path="res://assets/Images/Composition/diary/Personagens/Diário_de_bordo_bloqueado1.png" type="Texture" id=50]
+[ext_resource path="res://assets/Images/Composition/diary/Personagens/diario_de_bordo.png" type="Texture" id=51]
+[ext_resource path="res://assets/Images/Composition/diary/Personagens/Diário_de_bordo1.png" type="Texture" id=52]
+[ext_resource path="res://assets/Images/Composition/diary/Personagens/diário_de_bordo_bloqueado2.png" type="Texture" id=53]
+[ext_resource path="res://assets/Images/Composition/diary/Personagens/domingas_bloqueado.png" type="Texture" id=54]
+[ext_resource path="res://assets/Images/Composition/diary/Personagens/Raulino.png" type="Texture" id=55]
+[ext_resource path="res://assets/Images/Composition/diary/Personagens/Ranieri_bloqueado.png" type="Texture" id=56]
 
 [sub_resource type="StyleBoxFlat" id=30]
 bg_color = Color( 1, 0, 0, 0 )
@@ -366,6 +374,7 @@ text = "Próximo"
 stream = ExtResource( 14 )
 
 [node name="ProfileTab" type="Tabs" parent="."]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 287.0
@@ -609,7 +618,6 @@ align = 1
 valign = 1
 
 [node name="CharactersTab" type="Tabs" parent="."]
-visible = false
 margin_right = 40.0
 margin_bottom = 24.0
 
@@ -664,10 +672,16 @@ custom_fonts/font = SubResource( 27 )
 text = "Texto falando umpouco sobre o personagem e seu contexto social historico."
 autowrap = true
 
+[node name="Character10" type="Sprite" parent="CharactersTab"]
+position = Vector2( 224, 206 )
+scale = Vector2( 0.315, 0.315 )
+texture = ExtResource( 44 )
+
 [node name="Character1" type="Sprite" parent="CharactersTab"]
+visible = false
 position = Vector2( 224, 206 )
 scale = Vector2( 0.315337, 0.315337 )
-texture = ExtResource( 44 )
+texture = ExtResource( 42 )
 
 [node name="Character1Button" type="TextureButton" parent="CharactersTab/Character1"]
 margin_left = -155.0
@@ -675,8 +689,14 @@ margin_top = -155.0
 margin_right = 149.0
 margin_bottom = 141.0
 
+[node name="Character11" type="Sprite" parent="CharactersTab"]
+position = Vector2( 329, 211.993 )
+scale = Vector2( 0.331, 0.331 )
+texture = ExtResource( 53 )
+
 [node name="Character2" type="Sprite" parent="CharactersTab"]
-position = Vector2( 329, 212 )
+visible = false
+position = Vector2( 329, 211.993 )
 scale = Vector2( 0.330556, 0.330556 )
 texture = ExtResource( 43 )
 
@@ -687,10 +707,16 @@ margin_top = -163.0
 margin_right = 127.0
 margin_bottom = -113.0
 
-[node name="Character3" type="Sprite" parent="CharactersTab"]
+[node name="Character12" type="Sprite" parent="CharactersTab"]
 position = Vector2( 422, 204 )
 scale = Vector2( 0.344, 0.344 )
 texture = ExtResource( 22 )
+
+[node name="Character3" type="Sprite" parent="CharactersTab"]
+visible = false
+position = Vector2( 422, 204 )
+scale = Vector2( 0.344, 0.344 )
+texture = ExtResource( 51 )
 
 [node name="Character3Button" type="TextureButton" parent="CharactersTab/Character3"]
 margin_left = -142.0
@@ -698,10 +724,16 @@ margin_top = -137.0
 margin_right = 145.0
 margin_bottom = 136.0
 
+[node name="Character13" type="Sprite" parent="CharactersTab"]
+position = Vector2( 223, 303 )
+scale = Vector2( 0.327, 0.327 )
+texture = ExtResource( 49 )
+
 [node name="Character4" type="Sprite" parent="CharactersTab"]
+visible = false
 position = Vector2( 223, 303 )
 scale = Vector2( 0.327236, 0.327236 )
-texture = ExtResource( 42 )
+texture = ExtResource( 55 )
 
 [node name="Character4Button" type="TextureButton" parent="CharactersTab/Character4"]
 margin_left = -153.0
@@ -709,10 +741,16 @@ margin_top = -144.0
 margin_right = 143.0
 margin_bottom = 137.0
 
+[node name="Character14" type="Sprite" parent="CharactersTab"]
+position = Vector2( 324, 305 )
+scale = Vector2( 0.317, 0.317 )
+texture = ExtResource( 50 )
+
 [node name="Character5" type="Sprite" parent="CharactersTab"]
+visible = false
 position = Vector2( 324, 305 )
 scale = Vector2( 0.317073, 0.317073 )
-texture = ExtResource( 45 )
+texture = ExtResource( 52 )
 
 [node name="Character5Button" type="TextureButton" parent="CharactersTab/Character5"]
 margin_left = -157.692
@@ -720,10 +758,16 @@ margin_top = -157.692
 margin_right = 151.308
 margin_bottom = 142.308
 
+[node name="Character15" type="Sprite" parent="CharactersTab"]
+position = Vector2( 421, 302 )
+scale = Vector2( 0.337, 0.337 )
+texture = ExtResource( 54 )
+
 [node name="Character6" type="Sprite" parent="CharactersTab"]
+visible = false
 position = Vector2( 421, 302 )
 scale = Vector2( 0.337398, 0.337398 )
-texture = ExtResource( 46 )
+texture = ExtResource( 45 )
 
 [node name="Character6Button" type="TextureButton" parent="CharactersTab/Character6"]
 margin_left = -139.0
@@ -731,8 +775,16 @@ margin_top = -133.0
 margin_right = 154.0
 margin_bottom = 140.0
 
+[node name="Character16" type="Sprite" parent="CharactersTab"]
+position = Vector2( 223, 396 )
+scale = Vector2( 0.365, 0.365 )
+texture = ExtResource( 56 )
+
 [node name="Character7" type="Sprite" parent="CharactersTab"]
-position = Vector2( 888.563, 238.563 )
+visible = false
+position = Vector2( 223, 396 )
+scale = Vector2( 0.364709, 0.364709 )
+texture = ExtResource( 46 )
 
 [node name="Character7Button" type="TextureButton" parent="CharactersTab/Character7"]
 margin_left = -713.563

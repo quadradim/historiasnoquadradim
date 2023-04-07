@@ -1,23 +1,19 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://assets/Cena/ProtestoBandeirante/Cenario.jpeg" type="Texture" id=1]
-[ext_resource path="res://assets/Characters/protesto/dist1.png" type="Texture" id=2]
-[ext_resource path="res://assets/Characters/protesto/dist2.png" type="Texture" id=3]
-[ext_resource path="res://assets/Characters/protesto/dist3.png" type="Texture" id=4]
+[ext_resource path="res://assets/Images/Composition/NucleoBandeirante/sindicalista_distrator_multidão3.png" type="Texture" id=2]
+[ext_resource path="res://assets/Images/Composition/NucleoBandeirante/no_cenario1.png" type="Texture" id=3]
+[ext_resource path="res://assets/Images/Composition/NucleoBandeirante/no_cenário3.png" type="Texture" id=4]
 [ext_resource path="res://scenes/ambience/Multidao.gd" type="Script" id=5]
-[ext_resource path="res://assets/Fonts/bebas_neue/BebasNeue-Regular.ttf" type="DynamicFontData" id=6]
 [ext_resource path="res://scenes/AuxScenes/AudioController.tscn" type="PackedScene" id=7]
 [ext_resource path="res://soundtrack/hotel diamantina.mp3" type="AudioStream" id=8]
+[ext_resource path="res://scenes/AuxScenes/PlayerBackPack.tscn" type="PackedScene" id=9]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.6, 0.6, 0.6, 0 )
 
 [sub_resource type="StyleBoxFlat" id=2]
 bg_color = Color( 0.6, 0.6, 0.6, 0 )
-
-[sub_resource type="DynamicFont" id=3]
-size = 45
-font_data = ExtResource( 6 )
 
 [node name="Multidao" type="CanvasLayer"]
 script = ExtResource( 5 )
@@ -39,9 +35,9 @@ custom_styles/disabled = SubResource( 1 )
 custom_styles/normal = SubResource( 1 )
 
 [node name="Dist1" type="Sprite" parent="ButtonDist1"]
-position = Vector2( 128.5, 246.895 )
-scale = Vector2( 0.420775, 0.420775 )
-texture = ExtResource( 2 )
+position = Vector2( 114.75, 253.285 )
+scale = Vector2( 1.22115, 1.22115 )
+texture = ExtResource( 3 )
 
 [node name="ButtonDist2" type="Button" parent="."]
 margin_left = 344.0
@@ -55,27 +51,18 @@ custom_styles/disabled = SubResource( 2 )
 custom_styles/normal = SubResource( 2 )
 
 [node name="Dist2" type="Sprite" parent="ButtonDist2"]
-position = Vector2( 144, 224 )
-scale = Vector2( 0.358363, 0.358363 )
-texture = ExtResource( 3 )
-
-[node name="Label" type="Label" parent="ButtonDist2"]
-margin_left = 56.0
-margin_top = 312.0
-margin_right = 251.0
-margin_bottom = 367.0
-custom_colors/font_color = Color( 0.0235294, 0.0313726, 0.109804, 1 )
-custom_fonts/font = SubResource( 3 )
-text = "Pão ou Morte"
+position = Vector2( 143, 275 )
+scale = Vector2( 1.11422, 1.04925 )
+texture = ExtResource( 4 )
 
 [node name="MainMusic" parent="." instance=ExtResource( 7 )]
 stream = ExtResource( 8 )
 
 [node name="ButtonDist3" type="Button" parent="."]
-margin_left = 704.0
-margin_top = 104.0
-margin_right = 928.0
-margin_bottom = 584.0
+margin_left = 801.0
+margin_top = 160.0
+margin_right = 1001.0
+margin_bottom = 611.0
 custom_styles/hover = SubResource( 2 )
 custom_styles/pressed = SubResource( 2 )
 custom_styles/focus = SubResource( 2 )
@@ -83,9 +70,11 @@ custom_styles/disabled = SubResource( 2 )
 custom_styles/normal = SubResource( 2 )
 
 [node name="Dist3" type="Sprite" parent="ButtonDist3"]
-position = Vector2( 104, 240 )
-scale = Vector2( 0.405039, 0.405039 )
-texture = ExtResource( 4 )
+position = Vector2( 109, 234 )
+scale = Vector2( 0.860875, 0.860875 )
+texture = ExtResource( 2 )
+
+[node name="PlayerBackPack" parent="." instance=ExtResource( 9 )]
 
 [connection signal="pressed" from="ButtonDist1" to="." method="distractor1_pressed"]
 [connection signal="pressed" from="ButtonDist2" to="." method="distractor2_pressed"]

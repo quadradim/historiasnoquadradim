@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://assets/Fonts/bebas_neue/BebasNeue-Regular.otf" type="DynamicFontData" id=1]
 [ext_resource path="res://assets/Images/Composition/Taguatinga/3-Taguatinga (não-finalizado).png" type="Texture" id=2]
@@ -13,6 +13,7 @@
 [ext_resource path="res://scenes/AuxScenes/ChatBox.tscn" type="PackedScene" id=11]
 [ext_resource path="res://scenes/ambience/Taguatinga.gd" type="Script" id=12]
 [ext_resource path="res://assets/Styles/Themes/CharacterChoice.tres" type="Theme" id=13]
+[ext_resource path="res://scenes/AuxScenes/PlayerBackPack.tscn" type="PackedScene" id=14]
 
 [sub_resource type="Animation" id=1]
 resource_name = "NewGame"
@@ -245,7 +246,6 @@ scale = Vector2( 0.809703, 0.758148 )
 texture = ExtResource( 4 )
 
 [node name="RaulinoButton" type="TextureButton" parent="Multidao/Raulino"]
-visible = false
 margin_left = -104.0
 margin_top = -198.0
 margin_right = 111.0
@@ -262,6 +262,8 @@ has_profile = false
 
 [node name="FirstTimer" type="Timer" parent="."]
 wait_time = 3.0
+
+[node name="PlayerBackPack" parent="." instance=ExtResource( 14 )]
 
 [connection signal="pressed" from="ChefeDePolicia/ChafeButton" to="." method="_on_ChafeButton_pressed"]
 [connection signal="pressed" from="DistratorPolicial/DistratorButton" to="." method="_on_DistratorButton_pressed"]

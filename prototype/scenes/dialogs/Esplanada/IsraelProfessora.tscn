@@ -2,10 +2,10 @@
 
 [ext_resource path="res://assets/Images/Composition/PlanoPilotoIntro/5-congresso nacional.png" type="Texture" id=1]
 [ext_resource path="res://assets/Images/Composition/PlanoPilotoIntro/Em_Conversa (2).png" type="Texture" id=2]
-[ext_resource path="res://assets/Images/Composition/PlanoPilotoIntro/Em_Conversa (4).png" type="Texture" id=3]
+[ext_resource path="res://assets/Images/Composition/PlanoPilotoIntro/professora_resize25.png" type="Texture" id=3]
 [ext_resource path="res://scenes/AuxScenes/ChatBox.tscn" type="PackedScene" id=4]
-[ext_resource path="res://assets/Characters/Jogador/JOGADOR.png" type="Texture" id=5]
-[ext_resource path="res://assets/Images/Composition/PlanoPilotoIntro/ícone_fala (1).png" type="Texture" id=6]
+[ext_resource path="res://assets/Images/Composition/Jogador/JOGADOR.png" type="Texture" id=5]
+[ext_resource path="res://assets/Images/Composition/PlanoPilotoIntro/professora_domingas_profile.png" type="Texture" id=6]
 [ext_resource path="res://assets/Images/Composition/PlanoPilotoIntro/ícone_fala.png" type="Texture" id=7]
 [ext_resource path="res://scenes/dialogs/Esplanada/IsraelProfessora.gd" type="Script" id=8]
 
@@ -21,7 +21,8 @@ position = Vector2( 701, 370 )
 texture = ExtResource( 2 )
 
 [node name="Professora" type="Sprite" parent="."]
-position = Vector2( 313, 370 )
+position = Vector2( 386, 413 )
+scale = Vector2( 1.18077, 1.18077 )
 texture = ExtResource( 3 )
 
 [node name="ChatBox" parent="." instance=ExtResource( 4 )]
@@ -44,6 +45,6 @@ img = [ ExtResource( 7 ), ExtResource( 6 ), ExtResource( 5 ) ]
 cha = [ "I", "O", "P" ]
 image_scales = [ Vector2( 0.67, 0.68 ), Vector2( 0.67, 0.68 ), Vector2( 0.1, 0.1 ) ]
 nam = [ "Israel da Silva", "Prof. Domingas", "Historiadora" ]
-resize_panel = [ Vector2( 113, 26 ), Vector2( 113, 26 ), Vector2( 113, 26 ) ]
+resize_panel = [ Vector2( 120, 26 ), Vector2( 125, 26 ), Vector2( 113, 26 ) ]
 
 [connection signal="end_dialog" from="ChatBox" to="." method="_on_ChatBox_end_dialog"]
