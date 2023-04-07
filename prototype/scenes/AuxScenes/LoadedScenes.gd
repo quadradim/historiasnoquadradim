@@ -4,30 +4,36 @@ var scenes_data = {
 #		'emited_signal',
 #		'has_config'
 #		'audio' => null, 'path', 'continue'
+#		'has_bakcpack'
+		
 #	]
 	'production': [
 		'res://scenes/GUI/Production.tscn',
 		'end_production',
 		false,
-		null
+		null,
+		false
 	],
 	'logo_opening': [
 		'res://scenes/GUI/LogoOpening.tscn',
 		'end_logo_scene',
 		false,
-		'res://soundtrack/Loop1 Intro.mp3'
+		'res://soundtrack/Loop1 Intro.mp3',
+		false
 	],
 	'menu': [
 		'res://scenes/GUI/Menu.tscn',
 		'end_menu',
 		false,
-		'continue'
+		'continue',
+		false
 	],
 	'access01': [
 		'res://scenes/FirstAccess/Access01.tscn',
 		'end_access01',
 		true,
-		'res://soundtrack/Loop2-Atualizado.mp3'
+		'res://soundtrack/Loop2-Atualizado.mp3',
+		true
 	],
 	'access02': [
 		'res://scenes/FirstAccess/Access02.tscn',

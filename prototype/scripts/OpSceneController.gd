@@ -120,7 +120,12 @@ func change_scene(scene):
 			else:
 				$ConfigurationPopup.layer = -1
 				show_settings = false
-
+				
+			if scenes_data[current_scene][4]:
+				$PlayerBackPack.layer = 2
+			else:
+				$PlayerBackPack.layer = -1
+		
 			load_control_scene(
 				scenes_data[current_scene][0],
 				scene,
@@ -137,6 +142,7 @@ func change_scene(scene):
 func end_transition_scene(anim_name):
 	if anim_name == "fade_out":
 		$ConfigurationPopup.show()
+		$PlayerBackPack.show()
 		mouse_enabled = true
 		
 	if transition_animation_name == "fade_in":
@@ -158,6 +164,7 @@ func end_transition_scene(anim_name):
 func transition_animation_started(anim_name):
 	if anim_name == "fade_in":
 		$ConfigurationPopup.hide()
+		$PlayerBackPack.hide()
 		mouse_enabled = false
 
 func setting_back_menu():
