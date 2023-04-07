@@ -40,8 +40,8 @@ var scenes_data = {
 		'continue',
 		[
 			"res://dialogs/audio_description/01_introduction/1_trecho.wav",
-			"res://dialogs/audio_description/01_introduction/2_trecho.wav",
 			"res://dialogs/audio_description/01_introduction/3_trecho.wav",
+			"res://dialogs/audio_description/01_introduction/2_trecho.wav",
 			"res://dialogs/audio_description/01_introduction/4_trecho.wav",
 			"res://dialogs/audio_description/01_introduction/5_trecho.wav",
 		],

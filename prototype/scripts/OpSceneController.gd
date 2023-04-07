@@ -18,6 +18,11 @@ var current_scene_name
 var scenes_data
 var characters_darcy = [0, 0, 0]
 
+var next_audio_enabled = false
+var next_audio_should_play = false
+var audio_description_stack = []
+var current_audio = 0
+
 func load_control_scene(local, name, out_signal):
 	# 'out_signal' : The scene must to emit a signal
 	# 					  when you want out scene.
@@ -33,6 +38,7 @@ func load_control_scene(local, name, out_signal):
 
 	used_scenes.append(new_scene)
 	current_scene_name = name
+	current_audio = 0
 
 	add_child(used_scenes[-1].instance)
 
@@ -105,6 +111,7 @@ func _ready():
 func _process(delta):
 	$Audio.update('soundtrack')
 	$AudioDescription.update('audio_description')
+
 	
 func change_scene(scene):
 	if not mouse_enabled:
@@ -168,11 +175,15 @@ func transition_animation_started(anim_name):
 func setting_back_menu():
 	change_scene('menu')
 
-func start_audio_description():
+func play_audio_description():
 	var player_data = $PlayerEntity.read()
-	$AudioDescription.stream = load(scenes_data[current_scene_name][4][0])
+	$AudioDescription.stream = load(scenes_data[current_scene_name][4][current_audio])
 	$AudioDescription.set_volume_db(player_data["audio_description"])
 	$AudioDescription.play()
+	current_audio += 1
+
+func start_audio_description():
+	play_audio_description()
 
 func change_audio_description():
-	print("Emit")
+	play_audio_description()
