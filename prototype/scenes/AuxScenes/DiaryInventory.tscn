@@ -1,4 +1,4 @@
-[gd_scene load_steps=78 format=2]
+[gd_scene load_steps=84 format=2]
 
 [ext_resource path="res://entities/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/AuxScenes/AudioController.tscn" type="PackedScene" id=2]
@@ -49,11 +49,17 @@
 [ext_resource path="res://assets/Images/Composition/diary/binoculos_off.png" type="Texture" id=47]
 [ext_resource path="res://assets/Images/Composition/diary/jogo da memória_off.png" type="Texture" id=48]
 [ext_resource path="res://assets/Images/Composition/diary/jornal_off.png" type="Texture" id=49]
+[ext_resource path="res://assets/Images/Composition/diary/Personagens/Raulino_bloqueado.png" type="Texture" id=50]
 [ext_resource path="res://assets/Images/Composition/diary/escuta_off.png" type="Texture" id=51]
 [ext_resource path="res://assets/Images/Composition/diary/cartazes_off.png" type="Texture" id=52]
 [ext_resource path="res://assets/Images/Composition/diary/pasta_off.png" type="Texture" id=53]
+[ext_resource path="res://assets/Images/Composition/diary/Personagens/domingas_bloqueado.png" type="Texture" id=54]
 [ext_resource path="res://assets/Images/Composition/diary/chapéu_off.png" type="Texture" id=55]
 [ext_resource path="res://assets/Images/Composition/diary/livros_off.png" type="Texture" id=56]
+[ext_resource path="res://assets/Images/Composition/diary/Personagens/Raulino.png" type="Texture" id=57]
+[ext_resource path="res://assets/Images/Composition/diary/Personagens/domingas.png" type="Texture" id=58]
+[ext_resource path="res://assets/Images/Composition/diary/Personagens/Ranieri_bloqueado.png" type="Texture" id=59]
+[ext_resource path="res://assets/Images/Composition/diary/Personagens/ranieri.png" type="Texture" id=60]
 
 [sub_resource type="StyleBoxFlat" id=31]
 bg_color = Color( 1, 0, 0, 0 )
@@ -272,7 +278,6 @@ texture = ExtResource( 5 )
 stream = ExtResource( 16 )
 
 [node name="ProfileTab" type="Tabs" parent="."]
-visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 287.0
@@ -626,13 +631,13 @@ margin_bottom = 136.0
 [node name="Character13" type="Sprite" parent="CharactersTab"]
 position = Vector2( 225, 303 )
 scale = Vector2( 0.325203, 0.325203 )
-texture = ExtResource( 11 )
+texture = ExtResource( 50 )
 
 [node name="Character4" type="Sprite" parent="CharactersTab"]
 visible = false
 position = Vector2( 225, 303 )
 scale = Vector2( 0.325, 0.325 )
-texture = ExtResource( 45 )
+texture = ExtResource( 57 )
 
 [node name="Character4Button" type="TextureButton" parent="CharactersTab/Character4"]
 margin_left = -157.0
@@ -641,12 +646,15 @@ margin_right = 141.0
 margin_bottom = 138.0
 
 [node name="Character14" type="Sprite" parent="CharactersTab"]
-position = Vector2( 324, 306 )
+position = Vector2( 324, 305 )
 scale = Vector2( 0.311905, 0.311905 )
+texture = ExtResource( 11 )
 
 [node name="Character5" type="Sprite" parent="CharactersTab"]
+visible = false
 position = Vector2( 324, 305 )
 scale = Vector2( 0.317073, 0.317073 )
+texture = ExtResource( 45 )
 
 [node name="Character5Button" type="TextureButton" parent="CharactersTab/Character5"]
 margin_left = -157.692
@@ -655,12 +663,15 @@ margin_right = 151.308
 margin_bottom = 142.308
 
 [node name="Character15" type="Sprite" parent="CharactersTab"]
-position = Vector2( 429.616, 309.784 )
-scale = Vector2( 0.279545, 0.279545 )
+position = Vector2( 422, 302 )
+scale = Vector2( 0.333333, 0.333333 )
+texture = ExtResource( 54 )
 
 [node name="Character6" type="Sprite" parent="CharactersTab"]
+visible = false
 position = Vector2( 421, 302 )
 scale = Vector2( 0.337398, 0.337398 )
+texture = ExtResource( 58 )
 
 [node name="Character6Button" type="TextureButton" parent="CharactersTab/Character6"]
 margin_left = -145.229
@@ -669,17 +680,21 @@ margin_right = 147.771
 margin_bottom = 136.662
 
 [node name="Character16" type="Sprite" parent="CharactersTab"]
-position = Vector2( 1183.2, 509.522 )
-scale = Vector2( 0.0994374, 0.0994374 )
+position = Vector2( 224, 402 )
+scale = Vector2( 0.32364, 0.32364 )
+texture = ExtResource( 59 )
 
 [node name="Character7" type="Sprite" parent="CharactersTab"]
-position = Vector2( 888.563, 238.563 )
+visible = false
+position = Vector2( 224, 402 )
+scale = Vector2( 0.324, 0.324 )
+texture = ExtResource( 60 )
 
 [node name="Character7Button" type="TextureButton" parent="CharactersTab/Character7"]
-margin_left = -713.563
-margin_top = 117.437
-margin_right = -615.563
-margin_bottom = 211.437
+margin_left = -145.0
+margin_top = -151.0
+margin_right = 142.0
+margin_bottom = 148.0
 
 [node name="Character17" type="Sprite" parent="CharactersTab"]
 position = Vector2( 1183.2, 509.522 )
@@ -711,6 +726,7 @@ margin_bottom = 207.437
 position = Vector2( 694, 200 )
 
 [node name="AbillityTab" type="Tabs" parent="."]
+visible = false
 margin_left = -48.0
 margin_top = 38.4328
 margin_right = -8.0
@@ -1005,6 +1021,12 @@ texture = ExtResource( 43 )
 [connection signal="pressed" from="MapTab/City2/City2Button" to="." method="_on_City2Button_pressed"]
 [connection signal="pressed" from="MapTab/City3/City3Button" to="." method="_on_City3Button_pressed"]
 [connection signal="pressed" from="CharactersTab/Character1/Character1Button" to="." method="_on_Character1Button_pressed"]
+[connection signal="pressed" from="CharactersTab/Character2/Character2Button" to="." method="_on_Character2Button_pressed"]
+[connection signal="pressed" from="CharactersTab/Character3/Character3Button" to="." method="_on_Character3Button_pressed"]
+[connection signal="pressed" from="CharactersTab/Character4/Character4Button" to="." method="_on_Character4Button_pressed"]
+[connection signal="pressed" from="CharactersTab/Character5/Character5Button" to="." method="_on_Character5Button_pressed"]
+[connection signal="pressed" from="CharactersTab/Character6/Character6Button" to="." method="_on_Character6Button_pressed"]
+[connection signal="pressed" from="CharactersTab/Character7/Character7Button" to="." method="_on_Character7Button_pressed"]
 [connection signal="pressed" from="AbillityTab/Binoculos/BinoculosButton" to="." method="_on_BinoculosButton_pressed"]
 [connection signal="pressed" from="AbillityTab/Cartazes/CartazesButton" to="." method="_on_CartazesButton_pressed"]
 [connection signal="pressed" from="AbillityTab/Chapeu/ChapéuButton" to="." method="_on_ChapuButton_pressed"]

@@ -114,11 +114,7 @@ func _on_AbillityButton_pressed():
 	pass # Replace with function body.
 
 
-func _on_Character1Button_pressed():
-	$CharactersTab/CharacterZoom.texture = $CharactersTab/Character1.texture
-	$CharactersTab/CharacterZoom.scale = Vector2(0.316,0.316)
-	$CharactersTab/DescriptionText.text = ("Dona Suzana")
-	pass # Replace with function body.
+
 
 
 func _on_City1Button_pressed():
@@ -225,3 +221,45 @@ func _on_PlanetaButton_pressed():
 	$AbillityTab/DescriptionText.text = ("Forma de se posicionar, criticar evidências e elaborar inferências")
 	$AbillityTab/AbillityName.text = ("criticidade")
 	pass
+
+func _on_Character1Button_pressed():
+	$CharactersTab/CharacterZoom.texture = $CharactersTab/Character1.texture
+	$CharactersTab/CharacterZoom.scale = Vector2(1,1)
+	$CharactersTab/DescriptionText.text = ("Dona Suzana")
+	pass # Replace with function body.
+	
+func _on_Character2Button_pressed():
+	$CharactersTab/CharacterZoom.texture = $CharactersTab/Character2.texture
+	$CharactersTab/CharacterZoom.scale = Vector2(1,1)
+	$CharactersTab/DescriptionText.text = ("Darcy")
+	pass # Replace with function body.
+	
+func _on_Character3Button_pressed():
+	$CharactersTab/CharacterZoom.texture = $CharactersTab/Character3.texture
+	$CharactersTab/CharacterZoom.scale = Vector2(1,1)
+	$CharactersTab/DescriptionText.text = ("José Miguel")
+	pass # Replace with function body.
+
+func _on_Character4Button_pressed():
+	$CharactersTab/CharacterZoom.texture = $CharactersTab/Character4.texture
+	$CharactersTab/CharacterZoom.scale = Vector2(1,1)
+	$CharactersTab/DescriptionText.text = ("Raulino")
+	pass # Replace with function body.
+	
+func _on_Character5Button_pressed():
+	$CharactersTab/CharacterZoom.texture = $CharactersTab/Character5.texture
+	$CharactersTab/CharacterZoom.scale = Vector2(1,1)
+	$CharactersTab/DescriptionText.text = ("Israel Silva")
+	pass # Replace with function body.
+	
+func _on_Character6Button_pressed():
+	$CharactersTab/CharacterZoom.texture = $CharactersTab/Character6.texture
+	$CharactersTab/CharacterZoom.scale = Vector2(1,1)
+	$CharactersTab/DescriptionText.text = ("Professora Domingas")
+	pass # Replace with function body.
+	
+func _on_Character7Button_pressed():
+	$CharactersTab/CharacterZoom.texture = $CharactersTab/Character7.texture
+	$CharactersTab/CharacterZoom.scale = Vector2(1,1)
+	$CharactersTab/DescriptionText.text = ("Ranieri")
+	pass # Replace with function body.
