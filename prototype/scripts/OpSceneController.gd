@@ -111,9 +111,10 @@ func _ready():
 func _process(delta):
 	$Audio.update('soundtrack')
 	$AudioDescription.update('audio_description')
-
 	
 func change_scene(scene):
+	$AudioDescription.stop()
+
 	if not mouse_enabled:
 		return
 
