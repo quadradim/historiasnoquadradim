@@ -40,3 +40,9 @@ func insert(new_data):
 		file.store_var(new_data)
 		return true
 	return false
+	
+func modifier(key,value):
+	var current_data = read()
+	current_data[key] = value
+	insert(current_data)
+	

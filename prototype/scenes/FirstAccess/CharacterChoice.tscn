@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=2]
+[gd_scene load_steps=34 format=2]
 
 [ext_resource path="res://assets/Styles/Themes/Menu.tres" type="Theme" id=1]
 [ext_resource path="res://assets/Images/Composition/CharacterChoice/mochilas/redimensionado/mochila01.png" type="Texture" id=2]
@@ -26,6 +26,7 @@
 [ext_resource path="res://entities/Player.tscn" type="PackedScene" id=24]
 [ext_resource path="res://soundtrack/Loop3x.mp3" type="AudioStream" id=25]
 [ext_resource path="res://scenes/AuxScenes/AudioController.tscn" type="PackedScene" id=26]
+[ext_resource path="res://assets/Images/Composition/CharacterChoice/mesa.png" type="Texture" id=27]
 
 [sub_resource type="StyleBoxFlat" id=3]
 bg_color = Color( 0.564706, 0.72549, 0.882353, 1 )
@@ -90,19 +91,24 @@ __meta__ = {
 }
 
 [node name="Subackground01" type="Sprite" parent="BackGround"]
-position = Vector2( 200, 478.65 )
-scale = Vector2( 0.308902, 0.288057 )
+position = Vector2( 287, 442 )
+scale = Vector2( 1.43413, 1.33735 )
 texture = ExtResource( 14 )
 
 [node name="Subackground02" type="Sprite" parent="BackGround"]
-position = Vector2( 880, 354.7 )
-scale = Vector2( 0.302746, 0.305539 )
+position = Vector2( 851, 394 )
+scale = Vector2( 0.909105, 0.917492 )
 texture = ExtResource( 16 )
 
 [node name="Subackground03" type="Sprite" parent="BackGround"]
-position = Vector2( 704, 122.7 )
-scale = Vector2( 0.33033, 0.273509 )
+position = Vector2( 852.143, 117.848 )
+scale = Vector2( 1.15079, 0.952838 )
 texture = ExtResource( 17 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 475.96, 448.687 )
+scale = Vector2( 0.277943, 0.277943 )
+texture = ExtResource( 27 )
 
 [node name="TabContainer" type="TabContainer" parent="."]
 anchor_right = 1.0
@@ -172,22 +178,8 @@ rect_scale = Vector2( 0.22, 0.22 )
 object_source = ExtResource( 22 )
 object_name = "Observação"
 
-[node name="BackpackTable" type="ColorRect" parent="TabContainer/Estilo"]
-margin_left = 432.0
-margin_top = 302.0
-margin_right = 784.0
-margin_bottom = 443.0
-color = Color( 0.447059, 0.301961, 0.207843, 1 )
-
-[node name="BackpackTable2" type="ColorRect" parent="TabContainer/Estilo"]
-margin_left = 432.0
-margin_top = 418.0
-margin_right = 784.0
-margin_bottom = 443.0
-color = Color( 0.180392, 0.12549, 0.0862745, 1 )
-
 [node name="BackpackZoom" type="Sprite" parent="TabContainer/Estilo"]
-position = Vector2( 608, 239.24 )
+position = Vector2( 627, 271 )
 scale = Vector2( 0.738888, 0.738888 )
 texture = ExtResource( 2 )
 

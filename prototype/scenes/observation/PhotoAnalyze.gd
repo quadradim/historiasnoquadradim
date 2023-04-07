@@ -85,17 +85,18 @@ func _on_FourthButton_button_down():
 
 
 func _on_UnlockedSkill_popup_hide():
-	$PlayerBackPack/DiaryInventory/PlayerEntitiy.insert(
-	{
-		"name": player_data["name"],
-		"habilities": player_data["habilities"],
-		"backpack": player_data["backpack"],
-		"ability": [1,0,0,0,0,0,0,0,0],
-		"historiometer":1,
-		"characters":0,
-		"soundtrack": player_data["soundtrack"],
-		"soundeffect": player_data["soundeffect"]
-	}
-)
+	$PlayerBackPack/DiaryInventory/PlayerEntitiy.modifier("ability",[1,0,0,0,0,0,0,0,0])
+#	$PlayerBackPack/DiaryInventory/PlayerEntitiy.insert(
+#	{
+#		"name": player_data["name"],
+#		"habilities": player_data["habilities"],
+#		"backpack": player_data["backpack"],
+#		"ability": [1,0,0,0,0,0,0,0,0],
+#		"historiometer":1,
+#		"characters":0,
+#		"soundtrack": player_data["soundtrack"],
+#		"soundeffect": player_data["soundeffect"]
+#	}
+#)
 	$PlayerBackPack/DiaryInventory._ready()
 	pass # Replace with function body.
