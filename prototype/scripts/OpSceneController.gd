@@ -23,6 +23,15 @@ var next_audio_should_play = false
 var audio_description_stack = []
 var current_audio = 0
 
+var previous_played_scene = []
+var is_continued_audio = false
+
+func verify_if_back_to_previous_scene(name):
+	if len(previous_played_scene) != 0 and \
+	previous_played_scene[0] == name and \
+	scenes_data[current_scene_name][3] == 'continue':
+		is_continued_audio = true
+
 func load_control_scene(local, name, out_signal):
 	# 'out_signal' : The scene must to emit a signal
 	# 					  when you want out scene.
@@ -37,7 +46,11 @@ func load_control_scene(local, name, out_signal):
 	new_scene.instance.connect('next_audio', self, 'change_audio_description')
 
 	used_scenes.append(new_scene)
+	
+	verify_if_back_to_previous_scene(name)
+		
 	current_scene_name = name
+	
 	current_audio = 0
 
 	add_child(used_scenes[-1].instance)
@@ -64,11 +77,15 @@ func load_audio(audio):
 	if audio == null:
 		$Audio.stream = null
 		return
+	if is_continued_audio:
+		is_continued_audio = false
+		return
 	if audio != 'continue':
 		var player_data = $PlayerEntity.read()
 		$Audio.stream = load(audio)
 		$Audio.set_volume_db(player_data["soundtrack"])
 		$Audio.play()
+		is_continued_audio = false
 
 func create_player():
 	$PlayerEntity.insert(
@@ -82,6 +99,7 @@ func create_player():
 			"soundtrack": -20,
 			"soundeffect": -20,
 			"audio_description": -20,
+			"current_scene": "access01"
 		}
 	)
 
@@ -101,7 +119,7 @@ func _ready():
 
 	transition_animation.play("fade_out")
 
-	var initial_scene = 'taguatinga_introduction'
+	var initial_scene = "production"
 	load_control_scene(
 		scenes_data[initial_scene][0],
 		initial_scene,
@@ -132,6 +150,23 @@ func change_scene(scene):
 
 	if not mouse_enabled:
 		return
+	
+	# Quit
+	if scene == "quit":
+		get_tree().quit()
+
+	# Back to previous scenes
+	if current_scene_name == "menu" \
+	and $PlayerEntity.read()["current_scene"] != "menu":
+		scene = $PlayerEntity.read()["current_scene"]
+
+	if not(scene in "production,logo_opening,menu,episodes_selection"):
+		$PlayerEntity.modifier("current_scene", scene)
+	#=============================
+
+	previous_played_scene.append(current_scene_name)
+	if len(previous_played_scene) > 2:
+		previous_played_scene.pop_front()
 
 	if scene == 'distractor3_darcy' and not(characters_darcy[0] and characters_darcy[1]):
 		return
@@ -151,9 +186,6 @@ func change_scene(scene):
 				scenes_data[current_scene][1]
 			)
 			break
-
-	if scene == "quit":
-		get_tree().quit()
 
 	transition_animation.play("fade_in")
 	transition_animation_name = "fade_in"

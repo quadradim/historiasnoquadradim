@@ -105,6 +105,7 @@ func end_character_choice():
 				"soundtrack": player_data["soundtrack"],
 				"soundeffect": player_data["soundeffect"],
 				"audio_description": player_data["audio_description"],
+				"current_scene": "production"
 			}
 		)
 		print($PlayerEntity.read())
