@@ -264,6 +264,7 @@ has_profile = false
 wait_time = 3.0
 
 [node name="PlayerBackPack" parent="." instance=ExtResource( 14 )]
+visible = false
 
 [connection signal="pressed" from="ChefeDePolicia/ChafeButton" to="." method="_on_ChafeButton_pressed"]
 [connection signal="pressed" from="DistratorPolicial/DistratorButton" to="." method="_on_DistratorButton_pressed"]

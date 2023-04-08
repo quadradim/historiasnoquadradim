@@ -58,7 +58,6 @@ func start_events():
 	elif current_scene_name == 'intro_multidao':
 		used_scenes[0].instance.start()
 	elif current_scene_name == 'darcy_speech':
-		print("Starting Speech")
 		used_scenes[0].instance.start()
 
 func load_audio(audio):
@@ -76,7 +75,7 @@ func create_player():
 		{
 			"name": "none",
 			"habilities": [],
-			"backpack": [],
+			"backpack": "res://assets/Images/Composition/CharacterChoice/mochilas/redimensionado/mochila01.png",
 			"ability": [0,0,0,0,0,0,0,0,0],
 			"historiometer":0,
 			"characters":0,
@@ -92,15 +91,17 @@ func _ready():
 
 	if not $PlayerEntity.player_exists():
 		create_player()
+		$Backpack.load_backpack_structure()
 
 	$ConfigurationPopup.layer = -1
+	$Backpack.layer = -1
 
 	transition_animation.connect('animation_finished', self, 'end_transition_scene')
 	transition_animation.connect('animation_started', self, 'transition_animation_started')
 
 	transition_animation.play("fade_out")
 
-	var initial_scene = 'production'
+	var initial_scene = 'taguatinga_introduction'
 	load_control_scene(
 		scenes_data[initial_scene][0],
 		initial_scene,
@@ -113,6 +114,19 @@ func _process(delta):
 	$Audio.update('soundtrack')
 	$AudioDescription.update('audio_description')
 	
+	# Temporary Solution
+	$Backpack._ready()
+
+func object_layer(state_element, object_scene_element_layer):
+	var element_visible = false
+	if state_element:
+		object_scene_element_layer.layer = 2
+		element_visible = true
+	else:
+		object_scene_element_layer.layer = -1
+		element_visible = false
+	return element_visible
+
 func change_scene(scene):
 	$AudioDescription.stop()
 
@@ -128,12 +142,8 @@ func change_scene(scene):
 
 	for current_scene in scenes_data:
 		if scene == current_scene:
-			if scenes_data[current_scene][2]:
-				$ConfigurationPopup.layer = 2
-				show_settings = true
-			else:
-				$ConfigurationPopup.layer = -1
-				show_settings = false
+			show_settings = object_layer(scenes_data[current_scene][2], $ConfigurationPopup)
+			object_layer(scenes_data[current_scene][5], $Backpack)
 
 			load_control_scene(
 				scenes_data[current_scene][0],
@@ -151,6 +161,7 @@ func change_scene(scene):
 func end_transition_scene(anim_name):
 	if anim_name == "fade_out":
 		$ConfigurationPopup.show()
+		$Backpack.show()
 		mouse_enabled = true
 		
 	if transition_animation_name == "fade_in":
@@ -172,6 +183,7 @@ func end_transition_scene(anim_name):
 func transition_animation_started(anim_name):
 	if anim_name == "fade_in":
 		$ConfigurationPopup.hide()
+		$Backpack.hide()
 		mouse_enabled = false
 
 func setting_back_menu():

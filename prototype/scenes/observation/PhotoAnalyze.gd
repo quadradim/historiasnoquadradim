@@ -5,7 +5,8 @@ signal end_analyze
 var clues = 0
 
 func _ready():
-	player_data = $PlayerBackPack/DiaryInventory/PlayerEntitiy.read()
+	player_data = $Player.read()
+	print(player_data)
 	$MinigameExplanation.popup()
 	$InstructionAnimation.play("Instruction")
 	$Button.disabled = true
@@ -23,11 +24,8 @@ func previous_image():
 func exit():
 	emit_signal("end_analyze", "lavadeiras")
 
-
 func _on_MinigameExplanation_popup_hide():
 	$Title.visible = true
-	pass # Replace with function body.
-
 
 func _on_FirstButton_button_down():
 	if $PhotoPanel/PhotoOne/FirstClue.visible == false:
@@ -40,8 +38,6 @@ func _on_FirstButton_button_down():
 		$Button.disabled = false
 		$UnlockedSkill.popup()
 		$UnlockedSkillAnimation.play("Popmenssage")
-	pass # Replace with function body.
-
 
 func _on_SecoondButton_button_down():
 	if $PhotoPanel/PhotoOne/SecondClue.visible == false:
@@ -53,8 +49,6 @@ func _on_SecoondButton_button_down():
 		$Button.disabled = false
 		$UnlockedSkill.popup()
 		$UnlockedSkillAnimation.play("Popmenssage")
-	pass # Replace with function body.
-
 
 func _on_ThirdButton_button_down():
 	if $PhotoPanel/PhotoOne/ThirdClue.visible == false:
@@ -67,8 +61,6 @@ func _on_ThirdButton_button_down():
 		$Button.disabled = false
 		$UnlockedSkill.popup()
 		$UnlockedSkillAnimation.play("Popmenssage")
-	pass # Replace with function body.
-
 
 func _on_FourthButton_button_down():
 	if $PhotoPanel/PhotoOne/FourthClue.visible == false:
@@ -81,22 +73,8 @@ func _on_FourthButton_button_down():
 		$Button.disabled = false
 		$UnlockedSkill.popup()
 		$UnlockedSkillAnimation.play("Popmenssage")
-	pass # Replace with function body.
-
 
 func _on_UnlockedSkill_popup_hide():
-	$PlayerBackPack/DiaryInventory/PlayerEntitiy.modifier("ability",[1,0,0,0,0,0,0,0,0])
-#	$PlayerBackPack/DiaryInventory/PlayerEntitiy.insert(
-#	{
-#		"name": player_data["name"],
-#		"habilities": player_data["habilities"],
-#		"backpack": player_data["backpack"],
-#		"ability": [1,0,0,0,0,0,0,0,0],
-#		"historiometer":1,
-#		"characters":0,
-#		"soundtrack": player_data["soundtrack"],
-#		"soundeffect": player_data["soundeffect"]
-#	}
-#)
-	$PlayerBackPack/DiaryInventory._ready()
-	pass # Replace with function body.
+	$Player.modifier("ability",[1,0,0,0,0,0,0,0,0])
+
+#	$PlayerBackPack/DiaryInventory._ready()

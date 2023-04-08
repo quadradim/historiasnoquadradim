@@ -6,14 +6,14 @@ signal start_audio
 signal next_audio
 
 func _ready():
-	player_data = $PlayerBackPack/DiaryInventory/PlayerEntitiy.read()
+	player_data = $Player.read()
 
 func start():
 	$ChatBox.start()
 	emit_signal("start_audio")
 	
 func end_speech():
-	$PlayerBackPack/DiaryInventory/PlayerEntitiy.modifier("characters",2)
+	$Player.modifier("characters",2)
 	$PlayerBackPack/DiaryInventory._ready()
 
 	emit_signal("end_darcy_speech", "word_choice")

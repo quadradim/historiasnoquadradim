@@ -4,9 +4,8 @@ var player_data
 signal end_diary
 var animation_finish = true
 
-
-func _ready():
-	player_data = $PlayerEntitiy.read()
+func load_diary_statements():
+	player_data = $Player.read()
 	
 	# Load backpack
 	$ProfileTab/BackpackPanel/Backpack.texture = load(player_data["backpack"])
@@ -69,6 +68,8 @@ func _ready():
 	if player_data["historiometer"] > 8:
 		$AbillityTab/HistoriometroTab/Historiomentro9.visible = true		
 
+func _ready():
+	pass
 	
 func _process(delta):
 	$MainMusic.update("soundtrack")

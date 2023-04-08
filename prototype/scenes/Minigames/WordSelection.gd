@@ -7,10 +7,9 @@ var player_data
 signal end_word_selection
 
 func _ready():
-	player_data = $PlayerBackPack/DiaryInventory/PlayerEntitiy.read()
+	player_data = $Player.read()
 	$TryButton.disabled = true
 	$NextButton.disabled = true
-	pass # Replace with function body.
 
 func word1_button():
 	var font = $Word1.get("custom_fonts/font")
@@ -25,7 +24,6 @@ func word1_button():
 	else:
 		$TryButton.disabled = true
 	print(player_choice)
-	pass # Replace with function body.
 
 func word2_button():
 	var font = $Word2.get("custom_fonts/font")
@@ -40,7 +38,6 @@ func word2_button():
 	else:
 		$TryButton.disabled = true
 	print(player_choice)
-	pass # Replace with function body.
 
 func word3_button():
 	var font = $Word3.get("custom_fonts/font")
@@ -55,7 +52,6 @@ func word3_button():
 	else:
 		$TryButton.disabled = true
 	print(player_choice)
-	pass # Replace with function body.
 
 func word4_button():
 	var font = $Word4.get("custom_fonts/font")
@@ -70,7 +66,6 @@ func word4_button():
 	else:
 		$TryButton.disabled = true
 	print(player_choice)
-	pass # Replace with function body.
 
 func word5_button():
 	var font = $Word5.get("custom_fonts/font")
@@ -85,7 +80,6 @@ func word5_button():
 	else:
 		$TryButton.disabled = true
 	print(player_choice)
-	pass # Replace with function body.
 
 func word6_button():
 	var font = $Word6.get("custom_fonts/font")
@@ -100,7 +94,6 @@ func word6_button():
 	else:
 		$TryButton.disabled = true
 	print(player_choice)
-	pass # Replace with function body.
 
 func word7_button():
 	var font = $Word7.get("custom_fonts/font")
@@ -115,7 +108,6 @@ func word7_button():
 	else:
 		$TryButton.disabled = true
 	print(player_choice)
-	pass # Replace with function body.
 
 func word8_button():
 	var font = $Word8.get("custom_fonts/font")
@@ -130,7 +122,6 @@ func word8_button():
 	else:
 		$TryButton.disabled = true
 	print(player_choice)
-	pass # Replace with function body.
 
 
 func Try_Button():
@@ -142,18 +133,7 @@ func Try_Button():
 		$TryButton.disabled = true
 		$UnlockedSkill.popup()
 		$PlayerBackPack/DiaryInventory/PlayerEntitiy.modifier("ability",[1,0,0,1,0,0,0,0,1])
-#		$PlayerBackPack/DiaryInventory/PlayerEntitiy.insert(
-#		{
-#			"name": player_data["name"],
-#			"habilities": player_data["habilities"],
-#			"backpack": player_data["backpack"],
-#			"ability": [1,0,0,1,0,0,0,0,1],
-#			"historiometer":3,
-#			"characters":1,
-#			"soundtrack": player_data["soundtrack"],
-#			"soundeffect": player_data["soundeffect"]
-#		}
-#	)
+
 		$PlayerBackPack/DiaryInventory._ready()
 	else:
 		errors_counter +=1
@@ -173,11 +153,6 @@ func Try_Button():
 		else:
 			$MessageBox/MessageText.text = "Resposta incorreta, tente novamente"
 			$MessageBox.popup()
-	pass # Replace with function body.
-
 
 func _on_NextButton_pressed():
 	emit_signal("end_word_selection","travel_scene")
-	pass # Replace with function body.
-
-

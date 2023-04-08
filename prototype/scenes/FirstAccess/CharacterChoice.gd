@@ -107,7 +107,7 @@ func end_character_choice():
 				"audio_description": player_data["audio_description"],
 			}
 		)
-
+		print($PlayerEntity.read())
 		emit_signal("end_choice", "diary")
 
 func play_music():

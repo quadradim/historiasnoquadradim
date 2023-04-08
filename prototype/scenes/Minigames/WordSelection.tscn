@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://assets/Styles/Themes/Menu.tres" type="Theme" id=1]
 [ext_resource path="res://assets/Images/Composition/diary/tape.png" type="Texture" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://assets/Images/Composition/WordSelection/papel.png" type="Texture" id=9]
 [ext_resource path="res://assets/Styles/Themes/CharacterChoice.tres" type="Theme" id=10]
 [ext_resource path="res://scenes/AuxScenes/PlayerBackPack.tscn" type="PackedScene" id=11]
+[ext_resource path="res://entities/Player.tscn" type="PackedScene" id=12]
 
 [sub_resource type="DynamicFont" id=10]
 size = 24
@@ -353,6 +354,9 @@ theme = ExtResource( 10 )
 text = "Próximo"
 
 [node name="PlayerBackPack" parent="." instance=ExtResource( 11 )]
+visible = false
+
+[node name="Player" parent="." instance=ExtResource( 12 )]
 
 [node name="UnlockedSkill" type="WindowDialog" parent="."]
 visible = true

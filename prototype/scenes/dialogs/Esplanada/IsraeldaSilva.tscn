@@ -63,6 +63,7 @@ align = 1
 autowrap = true
 
 [node name="PlayerBackPack" parent="." instance=ExtResource( 9 )]
+visible = false
 
 [connection signal="end_dialog" from="ChatBox" to="." method="_on_ChatBox_end_dialog"]
 [connection signal="popup_hide" from="PopWindow" to="." method="_on_PopWindow_popup_hide"]

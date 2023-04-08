@@ -38,7 +38,9 @@ func insert(new_data):
 	var file = _load_file(File.WRITE)
 	if file:
 		file.store_var(new_data)
+		file.close()
 		return true
+	file.close()
 	return false
 	
 func modifier(key,value):

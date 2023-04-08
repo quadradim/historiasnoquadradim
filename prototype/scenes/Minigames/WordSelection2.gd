@@ -48,7 +48,7 @@ func create_default_style():
 		options[i]["custom_styles/panel"].corner_radius_top_right = 10
 
 func _ready():
-	player_data = $PlayerBackPack/DiaryInventory/PlayerEntitiy.read()
+	player_data = $Player.read()
 	$TryButton.disabled = true
 	
 	get_elements()
@@ -78,10 +78,10 @@ func press_try():
 		won = false
 
 	if won:
-		$PlayerBackPack/DiaryInventory/PlayerEntitiy.modifier("ability",[1,1,1,1,0,0,0,1,1])
+		$Player.modifier("ability",[1,1,1,1,0,0,0,1,1])
 		emit_signal("end_word_selection_2", "menu")
 
-		$PlayerBackPack/DiaryInventory._ready()
+#		$PlayerBackPack/DiaryInventory._ready()
 		$UnlockedSkill.popup()
 		
 	else:
