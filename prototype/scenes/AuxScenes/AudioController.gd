@@ -7,4 +7,5 @@ func _ready():
 
 func update(type_audio):
 	var player_data = $Player.read()
+	print(player_data)
 	self.set_volume_db(player_data[type_audio])

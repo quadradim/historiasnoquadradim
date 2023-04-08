@@ -103,7 +103,8 @@ func end_character_choice():
 				"historiometer":0,
 				"characters":0,
 				"soundtrack": player_data["soundtrack"],
-				"soundeffect": player_data["soundeffect"]
+				"soundeffect": player_data["soundeffect"],
+				"audio_description": player_data["audio_description"],
 			}
 		)
 

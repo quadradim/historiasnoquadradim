@@ -6,7 +6,7 @@
 [ext_resource path="res://scenes/AuxScenes/ChatBox.tscn" type="PackedScene" id=4]
 [ext_resource path="res://assets/Images/Composition/Darcy/multidão.png" type="Texture" id=5]
 [ext_resource path="res://assets/Images/Composition/Taguatinga/raulino_resize25.png" type="Texture" id=6]
-[ext_resource path="res://assets/Characters/Jogador/JOGADOR.png" type="Texture" id=7]
+[ext_resource path="res://assets/Images/Composition/Jogador/JOGADOR.png" type="Texture" id=7]
 [ext_resource path="res://scenes/dialogs/investigação_taguatinga/Raulino.gd" type="Script" id=8]
 [ext_resource path="res://scenes/AuxScenes/PlayerBackPack.tscn" type="PackedScene" id=9]
 [ext_resource path="res://assets/Styles/Themes/CharacterChoice.tres" type="Theme" id=10]
@@ -80,5 +80,7 @@ text = "Parabéns! Foi desbloqueada a Habilidade capacidade investigativa."
 align = 1
 valign = 1
 autowrap = true
+
+[node name="PlayerBackPack2" parent="." instance=ExtResource( 9 )]
 
 [connection signal="end_dialog" from="ChatBox" to="." method="_on_ChatBox_end_dialog"]

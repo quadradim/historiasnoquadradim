@@ -5,7 +5,7 @@
 [ext_resource path="res://assets/Images/Composition/Taguatinga/3-Taguatinga (não-finalizado).png" type="Texture" id=3]
 [ext_resource path="res://scenes/AuxScenes/ChatBox.tscn" type="PackedScene" id=4]
 [ext_resource path="res://assets/Images/Composition/Taguatinga/distrator_trabalhador_perfil (1).png" type="Texture" id=5]
-[ext_resource path="res://assets/Characters/Jogador/JOGADOR.png" type="Texture" id=6]
+[ext_resource path="res://assets/Images/Composition/Jogador/JOGADOR.png" type="Texture" id=6]
 [ext_resource path="res://scenes/dialogs/investigação_taguatinga/DistratorTrabalhador.gd" type="Script" id=7]
 
 [node name="DistratorTrabalhador" type="CanvasLayer"]

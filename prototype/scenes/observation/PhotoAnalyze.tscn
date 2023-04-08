@@ -66,25 +66,28 @@ tracks/0/keys = {
 [node name="PhotoAnalyze" type="CanvasLayer"]
 script = ExtResource( 8 )
 
-[node name="BackGround" type="ColorRect" parent="."]
+[node name="BackGround2" type="ColorRect" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
 theme = ExtResource( 1 )
 color = Color( 0.945098, 0.933333, 0.905882, 1 )
+__meta__ = {
+"_edit_lock_": true
+}
 
-[node name="Subackground01" type="Sprite" parent="BackGround"]
-position = Vector2( 200, 478.65 )
-scale = Vector2( 0.308902, 0.288057 )
+[node name="Subackground01" type="Sprite" parent="BackGround2"]
+position = Vector2( 214, 467 )
+scale = Vector2( 1.07312, 1.0007 )
 texture = ExtResource( 2 )
 
-[node name="Subackground02" type="Sprite" parent="BackGround"]
-position = Vector2( 880, 354.7 )
-scale = Vector2( 0.302746, 0.305539 )
+[node name="Subackground02" type="Sprite" parent="BackGround2"]
+position = Vector2( 869, 417 )
+scale = Vector2( 0.80249, 0.809894 )
 texture = ExtResource( 4 )
 
-[node name="Subackground03" type="Sprite" parent="BackGround"]
-position = Vector2( 704, 122.7 )
-scale = Vector2( 0.33033, 0.273509 )
+[node name="Subackground03" type="Sprite" parent="BackGround2"]
+position = Vector2( 861, 116 )
+scale = Vector2( 1.10653, 0.91619 )
 texture = ExtResource( 3 )
 
 [node name="Next" type="Button" parent="."]

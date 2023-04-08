@@ -39,7 +39,6 @@ func connect_signal_options():
 
 func _ready():
 	player_data = $PlayerBackPack/DiaryInventory/PlayerEntitiy.read()
-	$NextButton.disabled = true
 	$TryButton.disabled = true
 	
 	get_elements()
@@ -67,21 +66,20 @@ func press_try():
 		won = false
 
 	if won:
-		$NextButton.disabled = false
-		$MessageBox/MessageText.text = "Parabéns, resposta correta"
-		$MessageBox.popup()
-		$PlayerBackPack/DiaryInventory/PlayerEntitiy.insert(
-		{
-			"name": player_data["name"],
-			"habilities": player_data["habilities"],
-			"backpack": player_data["backpack"],
-			"ability": [1,1,1,1,0,0,0,1,1],
-			"historiometer":6,
-			"characters":1,
-			"soundtrack": player_data["soundtrack"],
-			"soundeffect": player_data["soundeffect"]
-		}
-	)
+		$PlayerBackPack/DiaryInventory/PlayerEntitiy.modifier("ability",[1,1,1,1,0,0,0,1,1])
+		emit_signal("end_word_selection_2", "menu")
+#		$PlayerBackPack/DiaryInventory/PlayerEntitiy.insert(
+#		{
+#			"name": player_data["name"],
+#			"habilities": player_data["habilities"],
+#			"backpack": player_data["backpack"],
+#			"ability": [1,1,1,1,0,0,0,1,1],
+#			"historiometer":6,
+#			"characters":1,
+#			"soundtrack": player_data["soundtrack"],
+#			"soundeffect": player_data["soundeffect"]
+#		}
+#	)
 		$PlayerBackPack/DiaryInventory._ready()
 		$UnlockedSkill.popup()
 		
@@ -127,6 +125,3 @@ func press_option4():
 	option_pressed(4)
 
 
-func _on_NextButton_pressed():
-	emit_signal("end_word_selection_2", "menu")
-	pass # Replace with function body.

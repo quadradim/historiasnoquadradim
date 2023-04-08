@@ -282,18 +282,18 @@ __meta__ = {
 }
 
 [node name="Subackground01" type="Sprite" parent="BackGround"]
-position = Vector2( 200, 478.65 )
-scale = Vector2( 0.308902, 0.288057 )
+position = Vector2( 214, 467 )
+scale = Vector2( 1.07312, 1.0007 )
 texture = ExtResource( 3 )
 
 [node name="Subackground02" type="Sprite" parent="BackGround"]
-position = Vector2( 880, 354.7 )
-scale = Vector2( 0.302746, 0.305539 )
+position = Vector2( 869, 417 )
+scale = Vector2( 0.80249, 0.809894 )
 texture = ExtResource( 5 )
 
 [node name="Subackground03" type="Sprite" parent="BackGround"]
-position = Vector2( 704, 122.7 )
-scale = Vector2( 0.33033, 0.273509 )
+position = Vector2( 861, 116 )
+scale = Vector2( 1.10653, 0.91619 )
 texture = ExtResource( 4 )
 
 [node name="DiaryImage" type="Sprite" parent="."]
@@ -663,10 +663,10 @@ margin_bottom = 474.552
 custom_styles/panel = SubResource( 26 )
 
 [node name="DescriptionText" type="Label" parent="CharactersTab"]
-margin_left = 538.0
-margin_top = 356.0
-margin_right = 879.0
-margin_bottom = 478.0
+margin_left = 549.0
+margin_top = 360.0
+margin_right = 865.0
+margin_bottom = 473.0
 custom_colors/font_color = Color( 0.290196, 0.211765, 0.290196, 1 )
 custom_fonts/font = SubResource( 27 )
 text = "Texto falando umpouco sobre o personagem e seu contexto social historico."

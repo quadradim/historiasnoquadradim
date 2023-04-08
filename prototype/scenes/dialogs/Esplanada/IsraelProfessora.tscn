@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://assets/Images/Composition/PlanoPilotoIntro/5-congresso nacional.png" type="Texture" id=1]
 [ext_resource path="res://assets/Images/Composition/PlanoPilotoIntro/Em_Conversa (2).png" type="Texture" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://assets/Images/Composition/PlanoPilotoIntro/professora_domingas_profile.png" type="Texture" id=6]
 [ext_resource path="res://assets/Images/Composition/PlanoPilotoIntro/ícone_fala.png" type="Texture" id=7]
 [ext_resource path="res://scenes/dialogs/Esplanada/IsraelProfessora.gd" type="Script" id=8]
+[ext_resource path="res://scenes/AuxScenes/PlayerBackPack.tscn" type="PackedScene" id=9]
 
 [node name="CanvasLayer" type="CanvasLayer"]
 script = ExtResource( 8 )
@@ -46,5 +47,7 @@ cha = [ "I", "O", "P" ]
 image_scales = [ Vector2( 0.67, 0.68 ), Vector2( 0.67, 0.68 ), Vector2( 0.1, 0.1 ) ]
 nam = [ "Israel da Silva", "Prof. Domingas", "Historiadora" ]
 resize_panel = [ Vector2( 120, 26 ), Vector2( 125, 26 ), Vector2( 113, 26 ) ]
+
+[node name="PlayerBackPack" parent="." instance=ExtResource( 9 )]
 
 [connection signal="end_dialog" from="ChatBox" to="." method="_on_ChatBox_end_dialog"]

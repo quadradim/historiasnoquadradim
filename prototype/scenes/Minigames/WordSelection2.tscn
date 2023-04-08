@@ -115,13 +115,12 @@ margin_right = 338.0
 margin_bottom = 47.0
 
 [node name="TryButton" type="Button" parent="."]
-margin_left = 525.0
-margin_top = 478.0
-margin_right = 595.0
-margin_bottom = 518.0
+margin_left = 834.0
+margin_top = 494.0
+margin_right = 904.0
+margin_bottom = 534.0
 theme = ExtResource( 9 )
-custom_colors/font_color_disabled = Color( 0.443137, 0.52549, 0.54902, 1 )
-text = "Ok"
+text = "  Próximo "
 
 [node name="MessageBox" type="WindowDialog" parent="."]
 anchor_left = 0.5
@@ -150,14 +149,6 @@ text = "aaaaaaaaaaaa
 align = 1
 valign = 1
 autowrap = true
-
-[node name="NextButton" type="Button" parent="."]
-margin_left = 838.0
-margin_top = 514.0
-margin_right = 970.0
-margin_bottom = 562.0
-theme = ExtResource( 9 )
-text = "Próximo"
 
 [node name="PlayerBackPack" parent="." instance=ExtResource( 8 )]
 
@@ -190,4 +181,3 @@ valign = 1
 autowrap = true
 
 [connection signal="pressed" from="TryButton" to="." method="press_try"]
-[connection signal="pressed" from="NextButton" to="." method="_on_NextButton_pressed"]
