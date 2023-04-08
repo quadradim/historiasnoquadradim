@@ -42,6 +42,7 @@ func _ready():
 	update_volume()
 	
 func _process(delta):
+	player_data = $PlayerEntity.read()
 	update_volume()
 
 func get_soundeffect():
