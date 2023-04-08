@@ -68,18 +68,7 @@ func press_try():
 	if won:
 		$PlayerBackPack/DiaryInventory/PlayerEntitiy.modifier("ability",[1,1,1,1,0,0,0,1,1])
 		emit_signal("end_word_selection_2", "menu")
-#		$PlayerBackPack/DiaryInventory/PlayerEntitiy.insert(
-#		{
-#			"name": player_data["name"],
-#			"habilities": player_data["habilities"],
-#			"backpack": player_data["backpack"],
-#			"ability": [1,1,1,1,0,0,0,1,1],
-#			"historiometer":6,
-#			"characters":1,
-#			"soundtrack": player_data["soundtrack"],
-#			"soundeffect": player_data["soundeffect"]
-#		}
-#	)
+
 		$PlayerBackPack/DiaryInventory._ready()
 		$UnlockedSkill.popup()
 		
@@ -123,5 +112,3 @@ func press_option3():
 
 func press_option4():
 	option_pressed(4)
-
-

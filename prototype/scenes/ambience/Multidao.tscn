@@ -1,9 +1,9 @@
 [gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://assets/Cena/ProtestoBandeirante/Cenario.jpeg" type="Texture" id=1]
-[ext_resource path="res://assets/Images/Composition/NucleoBandeirante/sindicalista_distrator_multidão3.png" type="Texture" id=2]
-[ext_resource path="res://assets/Images/Composition/NucleoBandeirante/no_cenario1.png" type="Texture" id=3]
-[ext_resource path="res://assets/Images/Composition/NucleoBandeirante/no_cenário3.png" type="Texture" id=4]
+[ext_resource path="res://assets/Cena/ProtestoBandeirante/sindicalista_distrator_multidão3.png" type="Texture" id=2]
+[ext_resource path="res://assets/Cena/ProtestoBandeirante/distrator1_line_colorido.png" type="Texture" id=3]
+[ext_resource path="res://assets/Cena/ProtestoBandeirante/distrator2_line_colorido.png" type="Texture" id=4]
 [ext_resource path="res://scenes/ambience/Multidao.gd" type="Script" id=5]
 [ext_resource path="res://scenes/AuxScenes/AudioController.tscn" type="PackedScene" id=7]
 [ext_resource path="res://soundtrack/hotel diamantina.mp3" type="AudioStream" id=8]
@@ -35,8 +35,8 @@ custom_styles/disabled = SubResource( 1 )
 custom_styles/normal = SubResource( 1 )
 
 [node name="Dist1" type="Sprite" parent="ButtonDist1"]
-position = Vector2( 115, 262 )
-scale = Vector2( 1.21034, 1.21034 )
+position = Vector2( 144, 254 )
+scale = Vector2( 0.334267, 0.334267 )
 texture = ExtResource( 3 )
 
 [node name="ButtonDist2" type="Button" parent="."]
@@ -52,7 +52,7 @@ custom_styles/normal = SubResource( 2 )
 
 [node name="Dist2" type="Sprite" parent="ButtonDist2"]
 position = Vector2( 125, 266 )
-scale = Vector2( 1.15326, 1.08602 )
+scale = Vector2( 0.299553, 0.3 )
 texture = ExtResource( 4 )
 
 [node name="MainMusic" parent="." instance=ExtResource( 7 )]
@@ -70,8 +70,8 @@ custom_styles/disabled = SubResource( 2 )
 custom_styles/normal = SubResource( 2 )
 
 [node name="Dist3" type="Sprite" parent="ButtonDist3"]
-position = Vector2( 104.228, 264.894 )
-scale = Vector2( 0.940218, 0.940218 )
+position = Vector2( 97.0001, 286 )
+scale = Vector2( 0.289532, 0.289532 )
 texture = ExtResource( 2 )
 
 [node name="PlayerBackPack" parent="." instance=ExtResource( 9 )]
