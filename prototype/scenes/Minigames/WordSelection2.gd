@@ -36,6 +36,16 @@ func get_elements():
 func connect_signal_options():
 	for i in range(max_options):
 		options[i].get_node("button").connect('pressed', self, 'press_option'+str(i))
+		
+func create_default_style():
+	for i in range(max_options):
+		options[i]["custom_styles/panel"].bg_color = Color(
+			0.3568627450980392, 0.5333333333333333, 0.6745098039215687, 0.5
+		)
+		options[i]["custom_styles/panel"].corner_radius_bottom_left = 10
+		options[i]["custom_styles/panel"].corner_radius_bottom_right = 10
+		options[i]["custom_styles/panel"].corner_radius_top_left = 10
+		options[i]["custom_styles/panel"].corner_radius_top_right = 10
 
 func _ready():
 	player_data = $PlayerBackPack/DiaryInventory/PlayerEntitiy.read()
@@ -43,6 +53,8 @@ func _ready():
 	
 	get_elements()
 	connect_signal_options()
+	
+	create_default_style()
 	
 func _process(delta):
 	if selections == len(correct_choice_indexes):
@@ -89,10 +101,14 @@ func get_total_selections():
 
 func option_pressed(option_id):
 	if not pressed_buttons[option_id]:
-		options[option_id]["custom_styles/panel"].bg_color = Color("#ff0000") 
+		options[option_id]["custom_styles/panel"].bg_color = Color(
+			0.3568627450980392, 0.5333333333333333, 0.6745098039215687, 1.0
+		) 
 		pressed_buttons[option_id] = true
 	else:
-		options[option_id]["custom_styles/panel"].bg_color = Color("#154965")
+		options[option_id]["custom_styles/panel"].bg_color = Color(
+			0.3568627450980392, 0.5333333333333333, 0.6745098039215687, 0.5
+		)
 		pressed_buttons[option_id] = false
 	
 	get_total_selections()
