@@ -8,6 +8,8 @@ signal end_folheto_raulino
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	var veicles = get_node("/root/Global")
+	veicles.locked_veicles[1] = 1
 	pass # Replace with function body.
 
 

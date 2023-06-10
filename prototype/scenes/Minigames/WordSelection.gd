@@ -7,6 +7,8 @@ var player_data
 signal end_word_selection
 
 func _ready():
+	var veicles = get_node("/root/Global")
+	veicles.locked_veicles[0] = 1
 	player_data = $Player.read()
 	$TryButton.disabled = true
 	$NextButton.disabled = true

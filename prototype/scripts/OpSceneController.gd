@@ -99,7 +99,7 @@ func create_player():
 			"soundtrack": -20,
 			"soundeffect": -20,
 			"audio_description": -20,
-			"current_scene": "access01"
+#			"current_scene": "access01"
 		}
 	)
 
@@ -156,12 +156,12 @@ func change_scene(scene):
 		get_tree().quit()
 
 	# Back to previous scenes
-	if current_scene_name == "menu" \
-	and $PlayerEntity.read()["current_scene"] != "menu":
-		scene = $PlayerEntity.read()["current_scene"]
+#	if current_scene_name == "menu" \
+#	and $PlayerEntity.read()["current_scene"] != "menu":
+#		scene = $PlayerEntity.read()["current_scene"]
 
-	if not(scene in "production,logo_opening,menu,episodes_selection"):
-		$PlayerEntity.modifier("current_scene", scene)
+#	if not(scene in "production,logo_opening,menu,episodes_selection"):
+#		$PlayerEntity.modifier("current_scene", scene)
 	#=============================
 
 	previous_played_scene.append(current_scene_name)

@@ -1,13 +1,12 @@
 extends CanvasLayer
 
 signal end_travel_scene
-var locked_veicles = [1,1,1]
-
+onready var veicles = get_node("/root/Global")
 func _ready():
 	pass # Replace with function body.
 
 func _on_RuralWillysButton_pressed():
-	if bool(locked_veicles[0]) == false:
+	if bool(veicles.locked_veicles[0]) == false:
 		$MessageBox/MessageText.text = "O veículo selecionado não está disponível"
 		$MessageBox.popup()
 	else:
@@ -15,7 +14,7 @@ func _on_RuralWillysButton_pressed():
 	pass # Replace with function body.
 
 func _on_ZebrinhaButton_pressed():
-	if bool(locked_veicles[1]) == false:
+	if bool(veicles.locked_veicles[1]) == false:
 		$MessageBox/MessageText.text = "O veículo selecionado não está disponível"
 		$MessageBox.popup()
 	else:
@@ -23,7 +22,7 @@ func _on_ZebrinhaButton_pressed():
 	pass # Replace with function body.
 
 func _on_BrasiliaButton_pressed():
-	if bool(locked_veicles[2]) == false:
+	if bool(veicles.locked_veicles[2]) == false:
 		$MessageBox/MessageText.text = "O veículo selecionado não está disponível"
 		$MessageBox.popup()
 	else:

@@ -6,7 +6,6 @@ var j = false
 var p = false
 var cont = 0
 onready var h = get_node("/root/Global")
-
 func _ready():
 	cont = h.counter
 	if cont != null:
