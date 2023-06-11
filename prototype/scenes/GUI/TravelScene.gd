@@ -3,6 +3,10 @@ extends CanvasLayer
 signal end_travel_scene
 onready var veicles = get_node("/root/Global")
 func _ready():
+	if bool(veicles.locked_veicles[0]) == true:
+		$ZebrinhaBloqueada.visible = false
+	if bool(veicles.locked_veicles[0]) == true:
+		$RuralWillysBloqueada.visible = false
 	pass # Replace with function body.
 
 func _on_RuralWillysButton_pressed():
@@ -27,3 +31,5 @@ func _on_BrasiliaButton_pressed():
 		$MessageBox.popup()
 	else:
 		emit_signal("end_travel_scene", "episode_intro")
+
+
