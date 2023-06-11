@@ -97,7 +97,13 @@ func _on_MapButton_pressed():
 	$MapTab.visible = true
 	$CharactersTab.visible = false
 	$AbillityTab.visible = false
-	pass # Replace with function body.
+	$MapTab/Map.modulate = Color(1,1,1,1)
+	$MapTab/City1/Highlight_NucleoBandeirante.visible = false
+	$MapTab/City2/Highlight_Taguatinga.visible = false
+	$MapTab/City3/Highlight_PlanoPiloto.visible = false
+	$MapTab/CityDescription.text = (
+	"""texto falando umpouco sobre a cidade e seu contexto 
+	   social histórico.""")
 
 
 func _on_CharactersButton_pressed():
@@ -128,6 +134,11 @@ func _on_City1Button_pressed():
 	momento para exigir a fixação daquele núcleo pioneiro. 
 	Nos arredores da SubPrefeitura, trabalhadores começaram
 	 a se identificar como "a turma da boa vontade".""")
+	$MapTab/City1/Highlight_NucleoBandeirante.visible = true
+	$MapTab/City2/Highlight_Taguatinga.visible = false
+	$MapTab/City3/Highlight_PlanoPiloto.visible = false
+	if $MapTab/Map.modulate == Color(1,1,1,1):
+		$MapTab/Fadeout_map.play("Fadeout_map")
 
 
 func _on_City2Button_pressed():
@@ -140,6 +151,11 @@ func _on_City2Button_pressed():
 	contingente populacional naquele momento, sendo o palco prin-
 	cipal do levante popular ocorrido em março de 1964. 
 	""")
+	$MapTab/City1/Highlight_NucleoBandeirante.visible = false
+	$MapTab/City2/Highlight_Taguatinga.visible = true
+	$MapTab/City3/Highlight_PlanoPiloto.visible = false
+	if $MapTab/Map.modulate == Color(1,1,1,1):
+		$MapTab/Fadeout_map.play("Fadeout_map")
 
 
 func _on_City3Button_pressed():
@@ -152,6 +168,11 @@ func _on_City3Button_pressed():
 	ndo multidões que vêm de todos os lugares do país reivindicando
 	direitos.""" 
 	)
+	$MapTab/City1/Highlight_NucleoBandeirante.visible = false
+	$MapTab/City2/Highlight_Taguatinga.visible = false
+	$MapTab/City3/Highlight_PlanoPiloto.visible = true
+	if $MapTab/Map.modulate == Color(1,1,1,1):
+		$MapTab/Fadeout_map.play("Fadeout_map")
 
 
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=83 format=2]
+[gd_scene load_steps=87 format=2]
 
 [ext_resource path="res://assets/Styles/Themes/Menu.tres" type="Theme" id=1]
 [ext_resource path="res://scenes/GUI/Diary.gd" type="Script" id=2]
@@ -56,6 +56,9 @@
 [ext_resource path="res://assets/Images/Composition/diary/Personagens/domingas_bloqueado.png" type="Texture" id=54]
 [ext_resource path="res://assets/Images/Composition/diary/Personagens/Raulino.png" type="Texture" id=55]
 [ext_resource path="res://assets/Images/Composition/diary/Personagens/Ranieri_bloqueado.png" type="Texture" id=56]
+[ext_resource path="res://assets/Images/Composition/diary/nuc.bandeirante.png" type="Texture" id=57]
+[ext_resource path="res://assets/Images/Composition/diary/planopiloto.png" type="Texture" id=58]
+[ext_resource path="res://assets/Images/Composition/diary/taguatinga.png" type="Texture" id=59]
 
 [sub_resource type="StyleBoxFlat" id=30]
 bg_color = Color( 1, 0, 0, 0 )
@@ -218,6 +221,21 @@ font_data = ExtResource( 12 )
 size = 25
 outline_color = Color( 0.196078, 0.282353, 0.376471, 1 )
 font_data = ExtResource( 12 )
+
+[sub_resource type="Animation" id=38]
+resource_name = "Fadeout_map"
+tracks/0/type = "value"
+tracks/0/path = NodePath("MapTab/Map:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.666667 ) ]
+}
 
 [sub_resource type="DynamicFont" id=19]
 size = 30
@@ -533,9 +551,12 @@ align = 1
 valign = 1
 
 [node name="MapTab" type="Tabs" parent="."]
-visible = false
 margin_right = 40.0
 margin_bottom = 24.0
+
+[node name="Fadeout_map" type="AnimationPlayer" parent="MapTab"]
+root_node = NodePath("../..")
+anims/Fadeout_map = SubResource( 38 )
 
 [node name="Map" type="Sprite" parent="MapTab"]
 position = Vector2( 705, 250.875 )
@@ -557,6 +578,12 @@ margin_top = 0.125031
 margin_right = 211.0
 margin_bottom = 32.125
 
+[node name="Highlight_NucleoBandeirante" type="Sprite" parent="MapTab/City1"]
+visible = false
+position = Vector2( 561, 176.125 )
+scale = Vector2( 0.638991, 0.638991 )
+texture = ExtResource( 57 )
+
 [node name="City2" type="Label" parent="MapTab"]
 margin_left = 161.0
 margin_top = 134.875
@@ -572,6 +599,12 @@ margin_top = 1.0
 margin_right = 132.0
 margin_bottom = 33.0
 
+[node name="Highlight_Taguatinga" type="Sprite" parent="MapTab/City2"]
+visible = false
+position = Vector2( 551, 124.125 )
+scale = Vector2( 0.563984, 0.563984 )
+texture = ExtResource( 59 )
+
 [node name="City3" type="Label" parent="MapTab"]
 margin_left = 161.0
 margin_top = 182.875
@@ -584,6 +617,12 @@ text = "-Plano Piloto"
 [node name="City3Button" type="TextureButton" parent="MapTab/City3"]
 margin_right = 138.0
 margin_bottom = 32.0
+
+[node name="Highlight_PlanoPiloto" type="Sprite" parent="MapTab/City3"]
+visible = false
+position = Vector2( 545, 69.125 )
+scale = Vector2( 0.557771, 0.557771 )
+texture = ExtResource( 58 )
 
 [node name="Panel" type="Panel" parent="MapTab"]
 margin_left = 156.822
@@ -618,6 +657,7 @@ align = 1
 valign = 1
 
 [node name="CharactersTab" type="Tabs" parent="."]
+visible = false
 margin_right = 40.0
 margin_bottom = 24.0
 

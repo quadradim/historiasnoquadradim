@@ -222,7 +222,7 @@ anims/ChatPop = SubResource( 4 )
 
 [node name="Multidao" type="Sprite" parent="."]
 visible = false
-modulate = Color( 0, 0, 0, 0.215686 )
+modulate = Color( 0.00147929, 0.00147929, 0.00147929, 0.201183 )
 position = Vector2( 514.247, 326 )
 scale = Vector2( 0.999999, 1.068 )
 texture = ExtResource( 10 )
