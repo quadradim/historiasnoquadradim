@@ -37,6 +37,7 @@ func _on_FirstButton_button_down():
 	if clues == 4:
 		clues += 1
 		$Button.disabled = false
+		$Popup.popup()
 		$UnlockedSkill.popup()
 		$UnlockedSkillAnimation.play("Popmenssage")
 
@@ -49,6 +50,7 @@ func _on_SecoondButton_button_down():
 	if clues == 4:
 		clues += 1
 		$Button.disabled = false
+		$Popup.popup()
 		$UnlockedSkill.popup()
 		$UnlockedSkillAnimation.play("Popmenssage")
 
@@ -62,6 +64,7 @@ func _on_ThirdButton_button_down():
 	if clues == 4:
 		clues += 1
 		$Button.disabled = false
+		$Popup.popup()
 		$UnlockedSkill.popup()
 		$UnlockedSkillAnimation.play("Popmenssage")
 
@@ -75,10 +78,12 @@ func _on_FourthButton_button_down():
 	if clues == 4:
 		clues += 1
 		$Button.disabled = false
+		$Popup.popup()
 		$UnlockedSkill.popup()
 		$UnlockedSkillAnimation.play("Popmenssage")
 
 func _on_UnlockedSkill_popup_hide():
 	$Player.modifier("ability",[1,0,0,0,0,0,0,0,0])
+	$Player.modifier("historiometer",0)
 
 #	$PlayerBackPack/DiaryInventory._ready()

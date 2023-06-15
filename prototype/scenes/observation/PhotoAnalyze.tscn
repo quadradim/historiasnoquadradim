@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://assets/Styles/Themes/Menu.tres" type="Theme" id=1]
 [ext_resource path="res://assets/Images/Composition/Menu/Padrão3.png" type="Texture" id=2]
@@ -14,6 +14,7 @@
 [ext_resource path="res://assets/Images/Composition/AnáliseDeFotos/Foto 1.png" type="Texture" id=12]
 [ext_resource path="res://scenes/AuxScenes/PlayerBackPack.tscn" type="PackedScene" id=13]
 [ext_resource path="res://entities/Player.tscn" type="PackedScene" id=14]
+[ext_resource path="res://assets/Images/Composition/diary/binoculos2.png" type="Texture" id=15]
 
 [sub_resource type="StyleBoxFlat" id=2]
 bg_color = Color( 0.972549, 0.882353, 0.435294, 1 )
@@ -51,17 +52,42 @@ border_blend = true
 
 [sub_resource type="Animation" id=10]
 resource_name = "Popmenssage"
+length = 2.0
 tracks/0/type = "value"
-tracks/0/path = NodePath("UnlockedSkill:rect_scale")
+tracks/0/path = NodePath("UnlockedSkill/Skill:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
+"times": PoolRealArray( 0, 1.6 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 20.364, 927.819 ), Vector2( 34.3636, 388.182 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("UnlockedSkill/Skill:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1.6 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0.0666667 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Popup/Fade:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
 "times": PoolRealArray( 0, 1 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 0.786, 0 ), Vector2( 0.785714, 0.785714 ) ]
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0.670588 ) ]
 }
 
 [node name="PhotoAnalyze" type="CanvasLayer"]
@@ -272,6 +298,19 @@ align = 1
 valign = 1
 autowrap = true
 
+[node name="Popup" type="Popup" parent="."]
+margin_left = 295.0
+margin_top = 157.0
+margin_right = 335.0
+margin_bottom = 197.0
+
+[node name="Fade" type="Panel" parent="Popup"]
+modulate = Color( 1, 1, 1, 0.670588 )
+margin_left = -297.0
+margin_top = -157.0
+margin_right = 728.0
+margin_bottom = 422.0
+
 [node name="UnlockedSkill" type="WindowDialog" parent="."]
 visible = true
 anchor_left = 0.5
@@ -299,6 +338,11 @@ text = "Parabens! Você desbloqueou a habilidade olhar aguçado, no seu diário 
 align = 1
 valign = 1
 autowrap = true
+
+[node name="Skill" type="Sprite" parent="UnlockedSkill"]
+position = Vector2( 34.3636, 388.182 )
+scale = Vector2( 0.564662, 0.564662 )
+texture = ExtResource( 15 )
 
 [node name="ClueMensage" type="WindowDialog" parent="."]
 anchor_left = 0.5
