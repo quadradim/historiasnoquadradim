@@ -79,10 +79,11 @@ func press_try():
 
 	if won:
 		$Player.modifier("ability",[1,1,1,1,0,0,0,1,1])
-		emit_signal("end_word_selection_2", "menu")
-
+		
 #		$PlayerBackPack/DiaryInventory._ready()
+		$Fade_Popup.popup()
 		$UnlockedSkill.popup()
+		$UnlockedSkillAnimation.play("Popmenssage")
 		
 	else:
 		tries += 1
@@ -93,6 +94,9 @@ func press_try():
 		if tries > 5:
 			give_hint()
 
+func _on_UnlockedSkill_popup_hide():
+	emit_signal("end_word_selection_2", "menu")
+	
 ##########################################
 func get_total_selections():
 	selections = 0
@@ -113,6 +117,7 @@ func option_pressed(option_id):
 	
 	get_total_selections()
 
+
 # This version doesn't gave lambda functions
 func press_option0():
 	option_pressed(0)
@@ -128,3 +133,5 @@ func press_option3():
 
 func press_option4():
 	option_pressed(4)
+
+

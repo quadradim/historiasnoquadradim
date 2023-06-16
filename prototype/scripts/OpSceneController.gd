@@ -158,9 +158,9 @@ func change_scene(scene):
 #	if current_scene_name == "menu" \
 #	and $PlayerEntity.read()["current_scene"] != "menu":
 #		scene = $PlayerEntity.read()["current_scene"]
-
+#
 #	if not(scene in "production,logo_opening,menu,episodes_selection"):
-#		$PlayerEntity.modifier("current_scene", scene)
+#		$PlayerEntity.modifier("travel_scene", scene)
 	#=============================
 
 	previous_played_scene.append(current_scene_name)

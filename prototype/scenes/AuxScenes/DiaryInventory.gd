@@ -6,7 +6,7 @@ var animation_finish = true
 
 #function for sum array for historiometer
 func sum_array(array):
-	var sum = 0.0
+	var sum = 0
 	for element in array:
 		 sum += element
 	return sum
