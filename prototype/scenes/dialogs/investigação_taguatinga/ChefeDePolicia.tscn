@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://assets/Images/Composition/Taguatinga/policial_distrator_sizeFULL.png" type="Texture" id=1]
 [ext_resource path="res://assets/Images/Composition/Taguatinga/3-Taguatinga (não-finalizado).png" type="Texture" id=2]
@@ -9,6 +9,47 @@
 [ext_resource path="res://scenes/AuxScenes/PlayerBackPack.tscn" type="PackedScene" id=7]
 [ext_resource path="res://assets/Styles/Themes/CharacterChoice.tres" type="Theme" id=8]
 [ext_resource path="res://entities/Player.tscn" type="PackedScene" id=9]
+[ext_resource path="res://assets/Images/Composition/diary/pasta2.png" type="Texture" id=10]
+
+[sub_resource type="Animation" id=1]
+resource_name = "Popmenssage"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("UnlockedSkill/Skill:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 2, 4 ),
+"transitions": PoolRealArray( 0.615573, 1 ),
+"update": 0,
+"values": [ Vector2( 244.364, 458.182 ), Vector2( 249.455, -190.909 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("UnlockedSkill/Skill:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 2, 4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Fade_Popup/Fade:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 2, 3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0.670588 ) ]
+}
 
 [node name="ChefeDePolicia" type="CanvasLayer"]
 script = ExtResource( 6 )
@@ -48,15 +89,28 @@ resize_panel = [ Vector2( 113, 26 ), Vector2( 70, 26 ) ]
 
 [node name="Player" parent="." instance=ExtResource( 9 )]
 
+[node name="Fade_Popup" type="Popup" parent="."]
+margin_left = 320.0
+margin_top = 400.0
+margin_right = 360.0
+margin_bottom = 440.0
+
+[node name="Fade" type="Panel" parent="Fade_Popup"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = -320.0
+margin_top = -400.0
+margin_right = 705.0
+margin_bottom = 179.0
+
 [node name="UnlockedSkill" type="WindowDialog" parent="."]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -21.0
-margin_top = -287.0
-margin_right = 475.0
-margin_bottom = -125.0
+margin_left = -192.0
+margin_top = 112.0
+margin_right = 304.0
+margin_bottom = 274.0
 rect_scale = Vector2( 0.785714, 0.785714 )
 theme = ExtResource( 8 )
 
@@ -74,6 +128,15 @@ text = "Parabéns! Foi desbloqueada a Habilidade escuta sensível."
 align = 1
 valign = 1
 autowrap = true
+
+[node name="Skill" type="Sprite" parent="UnlockedSkill"]
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 244.364, 458.182 )
+scale = Vector2( 0.550467, 0.550467 )
+texture = ExtResource( 10 )
+
+[node name="UnlockedSkillAnimation" type="AnimationPlayer" parent="."]
+anims/Popmenssage = SubResource( 1 )
 
 [connection signal="end_dialog" from="ChatBox" to="." method="_on_ChatBox_end_dialog"]
 [connection signal="popup_hide" from="UnlockedSkill" to="." method="_on_UnlockedSkill_popup_hide"]

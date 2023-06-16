@@ -60,10 +60,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 1.6 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 0.615573, 1 ),
 "update": 0,
-"values": [ Vector2( 20.364, 927.819 ), Vector2( 34.3636, 388.182 ) ]
+"values": [ Vector2( 249.455, 927.819 ), Vector2( 249.455, -190.909 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("UnlockedSkill/Skill:modulate")
@@ -72,13 +72,13 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 1.6 ),
+"times": PoolRealArray( 0, 2 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ Color( 1, 1, 1, 0.0666667 ), Color( 1, 1, 1, 1 ) ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("Popup/Fade:modulate")
+tracks/2/path = NodePath("Fade_Popup/Fade:modulate")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -298,14 +298,15 @@ align = 1
 valign = 1
 autowrap = true
 
-[node name="Popup" type="Popup" parent="."]
+[node name="Fade_Popup" type="Popup" parent="."]
+visible = true
 margin_left = 295.0
 margin_top = 157.0
 margin_right = 335.0
 margin_bottom = 197.0
 
-[node name="Fade" type="Panel" parent="Popup"]
-modulate = Color( 1, 1, 1, 0.670588 )
+[node name="Fade" type="Panel" parent="Fade_Popup"]
+modulate = Color( 1, 1, 1, 0 )
 margin_left = -297.0
 margin_top = -157.0
 margin_right = 728.0
@@ -317,12 +318,18 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -18.0
-margin_top = -288.0
-margin_right = 471.0
-margin_bottom = -88.0
+margin_left = -192.0
+margin_top = 112.0
+margin_right = 297.0
+margin_bottom = 312.0
 rect_scale = Vector2( 0.785714, 0.785714 )
 theme = ExtResource( 5 )
+
+[node name="Skill" type="Sprite" parent="UnlockedSkill"]
+modulate = Color( 1, 1, 1, 0.0666667 )
+position = Vector2( 249.455, 927.819 )
+scale = Vector2( 0.564662, 0.564662 )
+texture = ExtResource( 15 )
 
 [node name="Label" type="Label" parent="UnlockedSkill"]
 anchor_left = 0.5
@@ -338,11 +345,6 @@ text = "Parabens! Você desbloqueou a habilidade olhar aguçado, no seu diário 
 align = 1
 valign = 1
 autowrap = true
-
-[node name="Skill" type="Sprite" parent="UnlockedSkill"]
-position = Vector2( 34.3636, 388.182 )
-scale = Vector2( 0.564662, 0.564662 )
-texture = ExtResource( 15 )
 
 [node name="ClueMensage" type="WindowDialog" parent="."]
 anchor_left = 0.5
@@ -387,3 +389,4 @@ anims/Popmenssage = SubResource( 10 )
 [connection signal="button_down" from="PhotoPanel/PhotoTwo/ThirdButton" to="." method="_on_ThirdButton_button_down"]
 [connection signal="button_down" from="PhotoPanel/PhotoTwo/FourthButton" to="." method="_on_FourthButton_button_down"]
 [connection signal="popup_hide" from="UnlockedSkill" to="." method="_on_UnlockedSkill_popup_hide"]
+[connection signal="popup_hide" from="ClueMensage" to="." method="_on_ClueMensage_popup_hide"]

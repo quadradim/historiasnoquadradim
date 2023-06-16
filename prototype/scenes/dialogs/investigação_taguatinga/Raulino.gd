@@ -7,7 +7,9 @@ func _ready():
 	$Player.modifier("ability",[1,0,1,1,0,0,0,1,1])
 
 #	$PlayerBackPack/DiaryInventory._ready()
+	$Fade_Popup.popup()
 	$UnlockedSkill.popup()
+	$UnlockedSkillAnimation.play("Popmenssage")
 
 func _on_ChatBox_end_dialog():
 	$Player.modifier("characters",4)

@@ -94,7 +94,6 @@ func create_player():
 			"habilities": [],
 			"backpack": "res://assets/Images/Composition/CharacterChoice/mochilas/redimensionado/mochila01.png",
 			"ability": [0,0,0,0,0,0,0,0,0],
-			"historiometer":0,
 			"characters":0,
 			"soundtrack": -20,
 			"soundeffect": -20,
@@ -119,7 +118,7 @@ func _ready():
 
 	transition_animation.play("fade_out")
 
-	var initial_scene = "analyze_photos"
+	var initial_scene = "production"
 	load_control_scene(
 		scenes_data[initial_scene][0],
 		initial_scene,

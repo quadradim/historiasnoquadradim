@@ -4,6 +4,13 @@ var player_data
 signal end_diary
 var animation_finish = true
 
+#function for sum array for historiometer
+func sum_array(array):
+	var sum = 0.0
+	for element in array:
+		 sum += element
+	return sum
+
 func load_diary_statements():
 	player_data = $Player.read()
 	
@@ -49,23 +56,24 @@ func load_diary_statements():
 	$AbillityTab/Planeta.visible = player_data["ability"][8]
 	
 	#Load Historiometer
-	if player_data["historiometer"] > 0:
+	var historiometer = sum_array(player_data["ability"])
+	if historiometer > 0:
 		$AbillityTab/HistoriometroTab/Historiomentro1.visible = true
-	if player_data["historiometer"] > 1:
+	if historiometer > 1:
 		$AbillityTab/HistoriometroTab/Historiomentro2.visible = true
-	if player_data["historiometer"] > 2:
+	if historiometer > 2:
 		$AbillityTab/HistoriometroTab/Historiomentro3.visible = true
-	if player_data["historiometer"] > 3:
+	if historiometer > 3:
 		$AbillityTab/HistoriometroTab/Historiomentro4.visible = true
-	if player_data["historiometer"] > 4:
+	if historiometer > 4:
 		$AbillityTab/HistoriometroTab/Historiomentro5.visible = true
-	if player_data["historiometer"] > 5:
+	if historiometer > 5:
 		$AbillityTab/HistoriometroTab/Historiomentro6.visible = true
-	if player_data["historiometer"] > 6:
+	if historiometer > 6:
 		$AbillityTab/HistoriometroTab/Historiomentro7.visible = true
-	if player_data["historiometer"] > 7:
+	if historiometer > 7:
 		$AbillityTab/HistoriometroTab/Historiomentro8.visible = true
-	if player_data["historiometer"] > 8:
+	if historiometer > 8:
 		$AbillityTab/HistoriometroTab/Historiomentro9.visible = true		
 
 func _ready():

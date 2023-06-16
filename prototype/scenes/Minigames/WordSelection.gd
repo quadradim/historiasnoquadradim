@@ -133,9 +133,8 @@ func Try_Button():
 		$MessageBox.popup()
 		$NextButton.disabled = false
 		$TryButton.disabled = true
-		$UnlockedSkill.popup()
+		#$UnlockedSkill.popup()
 		$PlayerBackPack/DiaryInventory/PlayerEntitiy.modifier("ability",[1,0,0,1,0,0,0,0,1])
-
 		$PlayerBackPack/DiaryInventory._ready()
 	else:
 		errors_counter +=1
@@ -155,6 +154,16 @@ func Try_Button():
 		else:
 			$MessageBox/MessageText.text = "Resposta incorreta, tente novamente"
 			$MessageBox.popup()
+			
+func _on_MessageBox_popup_hide():
+	if $MessageBox/MessageText.text == "Resposta correta, parabéns":
+		$NextButton.disabled = false
+		$Fade_Popup.popup()
+		$UnlockedSkill.popup()
+		$UnlockedSkillAnimation.play("Popmenssage")
 
 func _on_NextButton_pressed():
 	emit_signal("end_word_selection","travel_scene")
+
+
+

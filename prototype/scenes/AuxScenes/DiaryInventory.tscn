@@ -451,6 +451,7 @@ align = 1
 valign = 1
 
 [node name="MapTab" type="Tabs" parent="."]
+visible = false
 anchor_bottom = 0.042
 margin_left = -36.0
 margin_top = 37.0
@@ -768,7 +769,6 @@ margin_bottom = 207.437
 position = Vector2( 694, 200 )
 
 [node name="AbillityTab" type="Tabs" parent="."]
-visible = false
 margin_left = -48.0
 margin_top = 38.4328
 margin_right = -8.0

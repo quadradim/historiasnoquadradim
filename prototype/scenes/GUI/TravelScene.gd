@@ -3,7 +3,7 @@ extends CanvasLayer
 signal end_travel_scene
 onready var veicles = get_node("/root/Global")
 func _ready():
-	if bool(veicles.locked_veicles[0]) == true:
+	if bool(veicles.locked_veicles[1]) == true:
 		$ZebrinhaBloqueada.visible = false
 	if bool(veicles.locked_veicles[0]) == true:
 		$RuralWillysBloqueada.visible = false

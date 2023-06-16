@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://assets/Styles/Themes/Menu.tres" type="Theme" id=1]
 [ext_resource path="res://assets/Images/Composition/diary/tape.png" type="Texture" id=2]
@@ -12,6 +12,8 @@
 [ext_resource path="res://assets/Styles/Themes/CharacterChoice.tres" type="Theme" id=10]
 [ext_resource path="res://scenes/AuxScenes/PlayerBackPack.tscn" type="PackedScene" id=11]
 [ext_resource path="res://entities/Player.tscn" type="PackedScene" id=12]
+[ext_resource path="res://assets/Images/Composition/diary/cubo2.png" type="Texture" id=13]
+[ext_resource path="res://assets/Images/Composition/diary/planeta2.png" type="Texture" id=14]
 
 [sub_resource type="DynamicFont" id=10]
 size = 24
@@ -76,6 +78,70 @@ font_data = ExtResource( 7 )
 [sub_resource type="DynamicFont" id=11]
 size = 23
 font_data = ExtResource( 7 )
+
+[sub_resource type="Animation" id=12]
+resource_name = "Popmenssage"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Skill:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 0.615572, 1 ),
+"update": 0,
+"values": [ Vector2( 1150.55, -244.364 ), Vector2( 468.364, -234.182 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Skill2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 0.615572, 1 ),
+"update": 0,
+"values": [ Vector2( -641.455, -244.364 ), Vector2( -10.182, -244.364 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Skill:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Skill2:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("../Fade_Popup/Fade:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.9 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0.670588 ) ]
+}
 
 [node name="CanvasLayer" type="CanvasLayer"]
 script = ExtResource( 8 )
@@ -358,16 +424,29 @@ visible = false
 
 [node name="Player" parent="." instance=ExtResource( 12 )]
 
-[node name="UnlockedSkill" type="WindowDialog" parent="."]
+[node name="Fade_Popup" type="Popup" parent="."]
 visible = true
+margin_left = 320.0
+margin_top = 400.0
+margin_right = 360.0
+margin_bottom = 440.0
+
+[node name="Fade" type="Panel" parent="Fade_Popup"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = -320.0
+margin_top = -400.0
+margin_right = 705.0
+margin_bottom = 179.0
+
+[node name="UnlockedSkill" type="WindowDialog" parent="."]
 anchor_left = 0.5
-anchor_top = 0.5
+anchor_top = 1.0
 anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -18.0
-margin_top = -288.0
-margin_right = 471.0
-margin_bottom = -88.0
+anchor_bottom = 1.0
+margin_left = -192.0
+margin_top = -176.0
+margin_right = 297.0
+margin_bottom = 24.0
 rect_scale = Vector2( 0.785714, 0.785714 )
 theme = ExtResource( 10 )
 
@@ -385,6 +464,22 @@ text = "Parabéns! Foram desbloqueadas as Habilidades criticidade e raciocínio 
 align = 1
 valign = 1
 autowrap = true
+
+[node name="Skill" type="Sprite" parent="UnlockedSkill"]
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 1150.55, -244.364 )
+scale = Vector2( 0.345715, 0.345715 )
+texture = ExtResource( 13 )
+
+[node name="Skill2" type="Sprite" parent="UnlockedSkill"]
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( -641.455, -244.364 )
+scale = Vector2( 0.512969, 0.512969 )
+texture = ExtResource( 14 )
+
+[node name="UnlockedSkillAnimation" type="AnimationPlayer" parent="."]
+root_node = NodePath("../UnlockedSkill")
+anims/Popmenssage = SubResource( 12 )
 
 [connection signal="pressed" from="TryButton" to="." method="Try_Button"]
 [connection signal="pressed" from="Word1/Word1Button" to="." method="word1_button"]

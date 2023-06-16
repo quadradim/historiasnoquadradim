@@ -38,8 +38,8 @@ position = Vector2( 159, 121 )
 scale = Vector2( 0.245359, 0.245359 )
 texture = ExtResource( 4 )
 
-[node name="ZebrinhaBloqueada" type="Sprite" parent="ZebrinhaButton"]
-position = Vector2( 158, 121 )
+[node name="ZebrinhaBloqueada" type="Sprite" parent="."]
+position = Vector2( 172, 351 )
 scale = Vector2( 0.245, 0.245 )
 texture = ExtResource( 10 )
 
@@ -54,8 +54,8 @@ position = Vector2( 127, 112 )
 scale = Vector2( 0.287182, 0.287182 )
 texture = ExtResource( 2 )
 
-[node name="RuralWillysBloqueada" type="Sprite" parent="RuralWillysButton"]
-position = Vector2( 128, 111 )
+[node name="RuralWillysBloqueada" type="Sprite" parent="."]
+position = Vector2( 556, 363 )
 scale = Vector2( 0.287, 0.287 )
 texture = ExtResource( 9 )
 
