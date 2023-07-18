@@ -7,7 +7,7 @@
 [ext_resource path="res://assets/Styles/Themes/CharacterChoice.tres" type="Theme" id=5]
 [ext_resource path="res://assets/icons/next.png" type="Texture" id=6]
 [ext_resource path="res://assets/icons/previous.png" type="Texture" id=7]
-[ext_resource path="res://scenes/observation/PhotoAnalyze.gd" type="Script" id=8]
+[ext_resource path="res://scenes/observation/PhotoAnalyze2.gd" type="Script" id=8]
 [ext_resource path="res://assets/Images/Composition/AnáliseDeFotos/Foto 5.png" type="Texture" id=9]
 [ext_resource path="res://assets/Fonts/bebas_neue/BebasNeue-Regular.otf" type="DynamicFontData" id=10]
 [ext_resource path="res://assets/Images/Composition/AnáliseDeFotos/circulo.png" type="Texture" id=11]
