@@ -1,0 +1,748 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://assets/Images/Composition/diary/binoculos2.png" type="Texture" id=1]
+[ext_resource path="res://assets/Images/Composition/diary/cubo2.png" type="Texture" id=2]
+[ext_resource path="res://assets/Images/Composition/diary/planeta2.png" type="Texture" id=3]
+[ext_resource path="res://assets/Images/Composition/diary/pasta2.png" type="Texture" id=4]
+[ext_resource path="res://assets/Images/Composition/diary/chapéu2.png" type="Texture" id=5]
+[ext_resource path="res://assets/Images/Composition/diary/livros2.png" type="Texture" id=6]
+[ext_resource path="res://assets/Images/Composition/diary/jogo_da_memória2.png" type="Texture" id=7]
+[ext_resource path="res://assets/Images/Composition/diary/jornal2.png" type="Texture" id=8]
+[ext_resource path="res://assets/Images/Composition/diary/cartazes.png" type="Texture" id=9]
+[ext_resource path="res://scenes/AuxScenes/Pop_Skills.gd" type="Script" id=10]
+
+[sub_resource type="Animation" id=1]
+resource_name = "Pop_skill"
+length = 7.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("Binoculos:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.7, 1.3, 1.7, 2.1, 2.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 178, 511 ), Vector2( 188, 438.48 ), Vector2( 168, 376.32 ), Vector2( 148, 334.88 ), Vector2( 178, 293.44 ), Vector2( 198, 252 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Binoculos:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1.5, 2.5 ),
+"transitions": PoolRealArray( 1, 0.63728, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Cartazes:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.6, 1, 1.4, 1.8, 2.1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 226, 515 ), Vector2( 200, 449.66 ), Vector2( 220, 384.33 ), Vector2( 250, 319 ), Vector2( 230, 270 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Cartazes:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0.6, 1.5, 2.1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Chapeu:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0.9, 1.3, 1.9, 2.5, 2.9, 3.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 121, 492 ), Vector2( 143, 453.66 ), Vector2( 133, 396.16 ), Vector2( 151, 338.66 ), Vector2( 141, 300.33 ), Vector2( 121, 262 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Chapeu:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0.9, 2.8, 3.3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Cubo:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 1.2, 1.6, 2.3, 2.9, 3.6, 4.1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 259, 539 ), Vector2( 270, 499.13 ), Vector2( 230, 429.37 ), Vector2( 240, 369.58 ), Vector2( 280, 299.82 ), Vector2( 259, 250 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Cubo:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 1.2, 3.6, 4.1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("jogo_da_memoria:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 2.1, 2.7, 3.1, 3.6, 4.1, 4.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 217, 522 ), Vector2( 190, 461.52 ), Vector2( 200, 421.2 ), Vector2( 180, 370.8 ), Vector2( 210, 302.4 ), Vector2( 217, 270 ) ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("jogo_da_memoria:modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 2.1, 4.1, 4.6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("jornal:position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 3, 3.7, 4.7, 5.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 117, 521 ), Vector2( 90, 442.25 ), Vector2( 130, 329.04 ), Vector2( 120, 250 ) ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("jornal:modulate")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 3, 4.9, 5.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("livros:position")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 3.6, 4.5, 5.2, 5.7, 6.2, 6.7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 153, 513 ), Vector2( 180, 446.8 ), Vector2( 160, 395.32 ), Vector2( 143, 358.54 ), Vector2( 150, 321.77 ), Vector2( 175, 285 ) ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("livros:modulate")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PoolRealArray( 3.6, 6.1, 6.7 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("pasta:position")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/keys = {
+"times": PoolRealArray( 4, 4.5, 5.3, 6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 145, 547 ), Vector2( 130, 480.25 ), Vector2( 100, 373.45 ), Vector2( 130, 280 ) ]
+}
+tracks/15/type = "value"
+tracks/15/path = NodePath("pasta:modulate")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/keys = {
+"times": PoolRealArray( 4, 5.4, 6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/16/type = "value"
+tracks/16/path = NodePath("estetoscopio:position")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/keys = {
+"times": PoolRealArray( 4.7, 5.3, 6.1, 7, 7.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 177, 472 ), Vector2( 200, 430.85 ), Vector2( 235, 361 ), Vector2( 215, 289.64 ), Vector2( 185, 250 ) ]
+}
+tracks/17/type = "value"
+tracks/17/path = NodePath("estetoscopio:modulate")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/keys = {
+"times": PoolRealArray( 4.7, 6.5, 7.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/18/type = "value"
+tracks/18/path = NodePath("Binoculos:visible")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/keys = {
+"times": PoolRealArray( 0, 2.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/19/type = "value"
+tracks/19/path = NodePath("Cartazes:visible")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/keys = {
+"times": PoolRealArray( 0.6, 2.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/20/type = "value"
+tracks/20/path = NodePath("Chapeu:visible")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/keys = {
+"times": PoolRealArray( 0.9, 3.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/21/type = "value"
+tracks/21/path = NodePath("Cubo:visible")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/keys = {
+"times": PoolRealArray( 1.2, 4.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/22/type = "value"
+tracks/22/path = NodePath("jogo_da_memoria:visible")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/keys = {
+"times": PoolRealArray( 2.1, 4.6 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/23/type = "value"
+tracks/23/path = NodePath("jornal:visible")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/keys = {
+"times": PoolRealArray( 3, 5.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/24/type = "value"
+tracks/24/path = NodePath("livros:visible")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/imported = false
+tracks/24/enabled = true
+tracks/24/keys = {
+"times": PoolRealArray( 3.6, 6.7 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/25/type = "value"
+tracks/25/path = NodePath("pasta:visible")
+tracks/25/interp = 1
+tracks/25/loop_wrap = true
+tracks/25/imported = false
+tracks/25/enabled = true
+tracks/25/keys = {
+"times": PoolRealArray( 4, 6 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/26/type = "value"
+tracks/26/path = NodePath("estetoscopio:visible")
+tracks/26/interp = 1
+tracks/26/loop_wrap = true
+tracks/26/imported = false
+tracks/26/enabled = true
+tracks/26/keys = {
+"times": PoolRealArray( 4.7, 7.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "Pop_skill2"
+length = 7.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("Binoculos:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.7, 1.3, 1.7, 2.1, 2.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 178, 511 ), Vector2( 188, 438.48 ), Vector2( 168, 376.32 ), Vector2( 148, 334.88 ), Vector2( 178, 293.44 ), Vector2( 198, 252 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Binoculos:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1.5, 2.5 ),
+"transitions": PoolRealArray( 1, 0.63728, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Cartazes:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.6, 1, 1.4, 1.8, 2.1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 226, 515 ), Vector2( 200, 449.66 ), Vector2( 220, 384.33 ), Vector2( 250, 319 ), Vector2( 230, 270 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Cartazes:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0.6, 1.5, 2.1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Chapeu:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0.9, 1.3, 1.9, 2.5, 2.9, 3.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 121, 492 ), Vector2( 143, 453.66 ), Vector2( 133, 396.16 ), Vector2( 151, 338.66 ), Vector2( 141, 300.33 ), Vector2( 121, 262 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Chapeu:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0.9, 2.8, 3.3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Cubo:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 1.2, 1.6, 2.3, 2.9, 3.6, 4.1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 259, 539 ), Vector2( 270, 499.13 ), Vector2( 230, 429.37 ), Vector2( 240, 369.58 ), Vector2( 280, 299.82 ), Vector2( 259, 250 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Cubo:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 1.2, 3.6, 4.1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("jogo_da_memoria:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 2.1, 2.7, 3.1, 3.6, 4.1, 4.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 217, 522 ), Vector2( 190, 461.52 ), Vector2( 200, 421.2 ), Vector2( 180, 370.8 ), Vector2( 210, 302.4 ), Vector2( 217, 270 ) ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("jogo_da_memoria:modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 2.1, 4.1, 4.6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("jornal:position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 3, 3.7, 4.7, 5.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 117, 521 ), Vector2( 90, 442.25 ), Vector2( 130, 329.04 ), Vector2( 120, 250 ) ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("jornal:modulate")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 3, 4.9, 5.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("livros:position")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 3.6, 4.5, 5.2, 5.7, 6.2, 6.7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 153, 513 ), Vector2( 180, 446.8 ), Vector2( 160, 395.32 ), Vector2( 143, 358.54 ), Vector2( 150, 321.77 ), Vector2( 175, 285 ) ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("livros:modulate")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PoolRealArray( 3.6, 6.1, 6.7 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("pasta:position")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/keys = {
+"times": PoolRealArray( 4, 4.5, 5.3, 6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 145, 547 ), Vector2( 130, 480.25 ), Vector2( 100, 373.45 ), Vector2( 130, 280 ) ]
+}
+tracks/15/type = "value"
+tracks/15/path = NodePath("pasta:modulate")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/keys = {
+"times": PoolRealArray( 4, 5.4, 6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/16/type = "value"
+tracks/16/path = NodePath("estetoscopio:position")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/keys = {
+"times": PoolRealArray( 4.7, 5.3, 6.1, 7, 7.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 177, 472 ), Vector2( 200, 430.85 ), Vector2( 235, 361 ), Vector2( 215, 289.64 ), Vector2( 185, 250 ) ]
+}
+tracks/17/type = "value"
+tracks/17/path = NodePath("estetoscopio:modulate")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/keys = {
+"times": PoolRealArray( 4.7, 6.5, 7.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/18/type = "value"
+tracks/18/path = NodePath("Binoculos:visible")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/keys = {
+"times": PoolRealArray( 0, 2.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/19/type = "value"
+tracks/19/path = NodePath("Cartazes:visible")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/keys = {
+"times": PoolRealArray( 0.6, 2.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/20/type = "value"
+tracks/20/path = NodePath("Chapeu:visible")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/keys = {
+"times": PoolRealArray( 0.9, 3.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/21/type = "value"
+tracks/21/path = NodePath("Cubo:visible")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/keys = {
+"times": PoolRealArray( 1.2, 4.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/22/type = "value"
+tracks/22/path = NodePath("jogo_da_memoria:visible")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/keys = {
+"times": PoolRealArray( 2.1, 4.6 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/23/type = "value"
+tracks/23/path = NodePath("jornal:visible")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/keys = {
+"times": PoolRealArray( 3, 5.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/24/type = "value"
+tracks/24/path = NodePath("livros:visible")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/imported = false
+tracks/24/enabled = true
+tracks/24/keys = {
+"times": PoolRealArray( 3.6, 6.7 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/25/type = "value"
+tracks/25/path = NodePath("pasta:visible")
+tracks/25/interp = 1
+tracks/25/loop_wrap = true
+tracks/25/imported = false
+tracks/25/enabled = true
+tracks/25/keys = {
+"times": PoolRealArray( 4, 6 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/26/type = "value"
+tracks/26/path = NodePath("estetoscopio:visible")
+tracks/26/interp = 1
+tracks/26/loop_wrap = true
+tracks/26/imported = false
+tracks/26/enabled = true
+tracks/26/keys = {
+"times": PoolRealArray( 4.7, 7.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+
+[node name="Pop_Skills" type="CanvasLayer"]
+script = ExtResource( 10 )
+
+[node name="Pop_animation" type="AnimationPlayer" parent="."]
+anims/Pop_skill = SubResource( 1 )
+
+[node name="Pop_animation2" type="AnimationPlayer" parent="."]
+anims/Pop_skill2 = SubResource( 2 )
+
+[node name="Binoculos" type="Sprite" parent="."]
+visible = false
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 198, 252 )
+scale = Vector2( 0.0975836, 0.0975836 )
+texture = ExtResource( 1 )
+
+[node name="Cartazes" type="Sprite" parent="."]
+visible = false
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 230, 270 )
+scale = Vector2( 0.098, 0.098 )
+texture = ExtResource( 9 )
+
+[node name="Chapeu" type="Sprite" parent="."]
+visible = false
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 121, 262 )
+scale = Vector2( 0.098, 0.098 )
+texture = ExtResource( 5 )
+
+[node name="Cubo" type="Sprite" parent="."]
+visible = false
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 259, 250 )
+scale = Vector2( 0.098, 0.098 )
+texture = ExtResource( 2 )
+
+[node name="jogo_da_memoria" type="Sprite" parent="."]
+visible = false
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 217, 270 )
+scale = Vector2( 0.098, 0.098 )
+texture = ExtResource( 7 )
+
+[node name="jornal" type="Sprite" parent="."]
+visible = false
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 120, 250 )
+scale = Vector2( 0.098, 0.098 )
+texture = ExtResource( 8 )
+
+[node name="livros" type="Sprite" parent="."]
+visible = false
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 175, 285 )
+scale = Vector2( 0.098, 0.098 )
+texture = ExtResource( 6 )
+
+[node name="pasta" type="Sprite" parent="."]
+visible = false
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 130, 280 )
+scale = Vector2( 0.098, 0.098 )
+texture = ExtResource( 4 )
+
+[node name="estetoscopio" type="Sprite" parent="."]
+visible = false
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 185, 250 )
+scale = Vector2( 0.098, 0.098 )
+texture = ExtResource( 3 )
+
+[node name="Loop_timer" type="Timer" parent="."]
+wait_time = 5.4
+
+[connection signal="animation_finished" from="Pop_animation" to="." method="_on_Pop_animation_animation_finished"]
+[connection signal="animation_started" from="Pop_animation" to="." method="_on_Pop_animation_animation_started"]
+[connection signal="animation_started" from="Pop_animation2" to="." method="_on_Pop_animation2_animation_started"]
+[connection signal="timeout" from="Loop_timer" to="." method="_on_Loop_timer_timeout"]
