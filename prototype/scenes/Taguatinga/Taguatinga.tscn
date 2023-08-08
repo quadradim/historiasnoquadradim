@@ -1,0 +1,279 @@
+[gd_scene load_steps=20 format=2]
+
+[ext_resource path="res://assets/Fonts/bebas_neue/BebasNeue-Regular.otf" type="DynamicFontData" id=1]
+[ext_resource path="res://assets/Images/Taguatinga/3-Taguatinga (não-finalizado).png" type="Texture" id=2]
+[ext_resource path="res://assets/Images/Taguatinga/caderno_pro_cenário.png" type="Texture" id=3]
+[ext_resource path="res://assets/Images/Taguatinga/raulino_resize25.png" type="Texture" id=4]
+[ext_resource path="res://assets/Images/Taguatinga/distrator_trabalhador_resize25.png" type="Texture" id=5]
+[ext_resource path="res://assets/Images/Taguatinga/no_cenário.png" type="Texture" id=6]
+[ext_resource path="res://assets/Images/Taguatinga/policial_distrator_sizeFULL.png" type="Texture" id=7]
+[ext_resource path="res://assets/Images/Taguatinga/no _cenário.png" type="Texture" id=8]
+[ext_resource path="res://assets/Images/Taguatinga/caderno_grande.png" type="Texture" id=9]
+[ext_resource path="res://assets/Images/Taguatinga/multidão.png" type="Texture" id=10]
+[ext_resource path="res://scenes/AuxScenes/ChatBox.tscn" type="PackedScene" id=11]
+[ext_resource path="res://scenes/Taguatinga/Taguatinga.gd" type="Script" id=12]
+[ext_resource path="res://assets/Themes/CharacterChoice.tres" type="Theme" id=13]
+[ext_resource path="res://scenes/AuxScenes/PlayerBackPack.tscn" type="PackedScene" id=14]
+
+
+[sub_resource type="Animation" id=1]
+resource_name = "NewGame"
+length = 1.5
+
+[sub_resource type="DynamicFont" id=2]
+size = 44
+font_data = ExtResource( 1 )
+
+[sub_resource type="Animation" id=3]
+resource_name = "FadeIn"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( -0.1, 2.5 ),
+"transitions": PoolRealArray( 2, 2 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 0.2 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../JoseMiguel:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( -0.1, 2.5 ),
+"transitions": PoolRealArray( 2, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0, 0, 0, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("../ChefeDePolicia:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( -0.1, 2.5 ),
+"transitions": PoolRealArray( 2, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0, 0, 0, 0 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("../DistratorPolicial:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( -0.1, 2.5 ),
+"transitions": PoolRealArray( 2, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0, 0, 0, 0 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Raulino:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( -0.1, 2.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("DistratorTrabalhador:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( -0.1, 2.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=5]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:light_mask")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 1 ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "ChatPop"
+tracks/0/type = "value"
+tracks/0/path = NodePath("ChatBox:rect_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1e-05, 1e-05 ), Vector2( 1, 1 ) ]
+}
+
+[node name="Taguatinga" type="CanvasLayer"]
+script = ExtResource( 12 )
+
+[node name="BackGround" type="Sprite" parent="."]
+position = Vector2( 512.234, 289 )
+texture = ExtResource( 2 )
+
+[node name="ChefeDePolicia" type="Sprite" parent="."]
+modulate = Color( 0.998521, 0.998521, 0.998521, 0.998521 )
+position = Vector2( 443, 443 )
+scale = Vector2( 0.906753, 0.906753 )
+texture = ExtResource( 7 )
+
+[node name="ChafeButton" type="TextureButton" parent="ChefeDePolicia"]
+anchor_bottom = 0.579
+margin_left = -119.0
+margin_top = -279.0
+margin_right = 115.0
+margin_bottom = -134.5
+
+[node name="DistratorPolicial" type="Sprite" parent="."]
+modulate = Color( 0.998521, 0.998521, 0.998521, 0.998521 )
+position = Vector2( 630, 465 )
+scale = Vector2( 0.93125, 0.93125 )
+texture = ExtResource( 6 )
+
+[node name="DistratorButton" type="TextureButton" parent="DistratorPolicial"]
+margin_left = -79.0
+margin_top = -249.0
+margin_right = 90.0
+margin_bottom = 120.0
+
+[node name="JoseMiguel" type="Sprite" parent="."]
+modulate = Color( 0.998521, 0.998521, 0.998521, 0.998521 )
+position = Vector2( 112, 423 )
+scale = Vector2( 0.471154, 0.471154 )
+texture = ExtResource( 8 )
+
+[node name="JoseButton" type="TextureButton" parent="JoseMiguel"]
+margin_left = -100.0
+margin_top = -248.0
+margin_right = 100.0
+margin_bottom = 248.0
+
+[node name="Caderno" type="Sprite" parent="."]
+position = Vector2( 870, 530 )
+texture = ExtResource( 3 )
+
+[node name="TextureButton" type="TextureButton" parent="Caderno"]
+margin_left = -54.0
+margin_top = -31.0
+margin_right = 57.0
+margin_bottom = 31.0
+
+[node name="FirstAccessMessageAnimation" type="AnimationPlayer" parent="."]
+method_call_mode = 1
+anims/NewGame = SubResource( 1 )
+
+[node name="NotebookWind" type="WindowDialog" parent="."]
+margin_left = 122.0
+margin_top = 88.0
+margin_right = 867.0
+margin_bottom = 470.0
+theme = ExtResource( 13 )
+
+[node name="Sprite" type="Sprite" parent="NotebookWind"]
+position = Vector2( 337, 135 )
+texture = ExtResource( 9 )
+
+[node name="Label" type="Label" parent="NotebookWind"]
+margin_left = 119.0
+margin_top = 254.0
+margin_right = 560.0
+margin_bottom = 356.0
+custom_colors/font_color = Color( 0.215686, 0.298039, 0.388235, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "Você Achou o item!"
+align = 1
+valign = 1
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+
+[node name="FadeInMultidao" type="AnimationPlayer" parent="."]
+root_node = NodePath("../Multidao")
+anims/FadeIn = SubResource( 3 )
+anims/RESET = SubResource( 5 )
+
+[node name="ChatPop" type="AnimationPlayer" parent="."]
+anims/ChatPop = SubResource( 4 )
+
+[node name="Multidao" type="Sprite" parent="."]
+visible = false
+modulate = Color( 0.00147929, 0.00147929, 0.00147929, 0.201183 )
+position = Vector2( 514.247, 326 )
+scale = Vector2( 0.999999, 1.068 )
+texture = ExtResource( 10 )
+
+[node name="DistratorTrabalhador" type="Sprite" parent="Multidao"]
+modulate = Color( 0.0384615, 0.0384615, 0.0384615, 0.0384615 )
+position = Vector2( 291.958, 25.2216 )
+scale = Vector2( 0.809268, 0.75774 )
+texture = ExtResource( 5 )
+
+[node name="DistratorTrabalhadorButton" type="TextureButton" parent="Multidao/DistratorTrabalhador"]
+margin_left = -97.0
+margin_top = -207.0
+margin_right = 104.0
+margin_bottom = 200.0
+
+[node name="Raulino" type="Sprite" parent="Multidao"]
+modulate = Color( 0.0384615, 0.0384615, 0.0384615, 0.0384615 )
+position = Vector2( -192.878, 34.3387 )
+scale = Vector2( 0.83562, 0.782415 )
+texture = ExtResource( 4 )
+
+[node name="RaulinoButton" type="TextureButton" parent="Multidao/Raulino"]
+margin_left = -104.0
+margin_top = -198.0
+margin_right = 111.0
+margin_bottom = 198.0
+
+[node name="ChatBox" parent="." instance=ExtResource( 11 )]
+visible = false
+margin_left = -72.0
+margin_top = 163.0
+margin_right = 24.0
+margin_bottom = 211.0
+rect_scale = Vector2( 1e-05, 1e-05 )
+has_profile = false
+
+[node name="FirstTimer" type="Timer" parent="."]
+wait_time = 3.0
+
+[node name="PlayerBackPack" parent="." instance=ExtResource( 14 )]
+visible = false
+
+[connection signal="pressed" from="ChefeDePolicia/ChafeButton" to="." method="_on_ChafeButton_pressed"]
+[connection signal="pressed" from="DistratorPolicial/DistratorButton" to="." method="_on_DistratorButton_pressed"]
+[connection signal="pressed" from="JoseMiguel/JoseButton" to="." method="_on_JosButton_pressed"]
+[connection signal="pressed" from="Caderno/TextureButton" to="." method="_on_TextureButton_pressed"]
+[connection signal="popup_hide" from="NotebookWind" to="." method="_on_NotebookWind_popup_hide"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="pressed" from="Multidao/DistratorTrabalhador/DistratorTrabalhadorButton" to="." method="_on_DistratorTrabalhadorButton_pressed"]
+[connection signal="pressed" from="Multidao/Raulino/RaulinoButton" to="." method="_on_RaulinoButton_pressed"]
+[connection signal="close_chat" from="ChatBox" to="." method="_on_ChatBox_close_chat"]
+[connection signal="timeout" from="FirstTimer" to="." method="_on_FirstTimer_timeout"]

@@ -1,15 +1,15 @@
 [gd_scene load_steps=13 format=2]
 
-[ext_resource path="res://assets/Images/Composition/TravelScene/brasilia.png" type="Texture" id=1]
-[ext_resource path="res://assets/Images/Composition/TravelScene/ruralwillys.png" type="Texture" id=2]
-[ext_resource path="res://assets/Images/Composition/TravelScene/Rodoviária_de_Brasília_with_busao.png" type="Texture" id=3]
-[ext_resource path="res://assets/Images/Composition/TravelScene/zebrinha.png" type="Texture" id=4]
+[ext_resource path="res://assets/Images/TravelScene/brasilia.png" type="Texture" id=1]
+[ext_resource path="res://assets/Images/TravelScene/ruralwillys.png" type="Texture" id=2]
+[ext_resource path="res://assets/Images/TravelScene/Rodoviária_de_Brasília_with_busao.png" type="Texture" id=3]
+[ext_resource path="res://assets/Images/TravelScene/zebrinha.png" type="Texture" id=4]
 [ext_resource path="res://assets/Fonts/bebas_neue/BebasNeue-Regular.ttf" type="DynamicFontData" id=5]
-[ext_resource path="res://assets/Styles/Themes/CharacterChoice.tres" type="Theme" id=6]
+[ext_resource path="res://assets/Themes/CharacterChoice.tres" type="Theme" id=6]
 [ext_resource path="res://scenes/GUI/TravelScene.gd" type="Script" id=7]
-[ext_resource path="res://assets/Images/Composition/TravelScene/placa.png" type="Texture" id=8]
-[ext_resource path="res://assets/Images/Composition/TravelScene/ruralwillysbloqueada.png" type="Texture" id=9]
-[ext_resource path="res://assets/Images/Composition/TravelScene/zebrinhabloqueada.png" type="Texture" id=10]
+[ext_resource path="res://assets/Images/TravelScene/placa.png" type="Texture" id=8]
+[ext_resource path="res://assets/Images/TravelScene/ruralwillysbloqueada.png" type="Texture" id=9]
+[ext_resource path="res://assets/Images/TravelScene/zebrinhabloqueada.png" type="Texture" id=10]
 
 [sub_resource type="DynamicFont" id=1]
 size = 20

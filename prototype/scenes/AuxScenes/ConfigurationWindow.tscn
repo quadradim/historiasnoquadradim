@@ -3,7 +3,7 @@
 [ext_resource path="res://scenes/AuxScenes/ConfigurationWindow.gd" type="Script" id=1]
 [ext_resource path="res://assets/Fonts/bebas_neue/BebasNeue-Regular.otf" type="DynamicFontData" id=2]
 [ext_resource path="res://entities/Player.tscn" type="PackedScene" id=3]
-[ext_resource path="res://assets/icons/audio.png" type="Texture" id=4]
+[ext_resource path="res://assets/Images/icons/audio.png" type="Texture" id=4]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.945098, 0.933333, 0.905882, 1 )

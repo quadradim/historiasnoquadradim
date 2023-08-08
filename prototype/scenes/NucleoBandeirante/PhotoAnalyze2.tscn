@@ -1,0 +1,358 @@
+[gd_scene load_steps=22 format=2]
+
+[ext_resource path="res://assets/Themes/Menu.tres" type="Theme" id=1]
+[ext_resource path="res://assets/Images/Menu/Padrão3.png" type="Texture" id=2]
+[ext_resource path="res://assets/Images/Menu/Padrão2.png" type="Texture" id=3]
+[ext_resource path="res://assets/Images/Menu/Padrão1.png" type="Texture" id=4]
+[ext_resource path="res://assets/Themes/CharacterChoice.tres" type="Theme" id=5]
+[ext_resource path="res://assets/Images/icons/next.png" type="Texture" id=6]
+[ext_resource path="res://assets/Images/icons/previous.png" type="Texture" id=7]
+[ext_resource path="res://scenes/NucleoBandeirante/PhotoAnalyze2.gd" type="Script" id=8]
+[ext_resource path="res://assets/Images/AnáliseDeFotos/Foto 5.png" type="Texture" id=9]
+[ext_resource path="res://assets/Fonts/bebas_neue/BebasNeue-Regular.otf" type="DynamicFontData" id=10]
+[ext_resource path="res://assets/Images/AnáliseDeFotos/circulo.png" type="Texture" id=11]
+[ext_resource path="res://assets/Images/AnáliseDeFotos/Foto 4.png" type="Texture" id=12]
+[ext_resource path="res://scenes/AuxScenes/PlayerBackPack.tscn" type="PackedScene" id=13]
+[ext_resource path="res://entities/Player.tscn" type="PackedScene" id=14]
+[ext_resource path="res://assets/Images/diary/livros2.png" type="Texture" id=15]
+[ext_resource path="res://assets/Images/AnáliseDeFotos/Foto 3.png" type="Texture" id=16]
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.972549, 0.882353, 0.435294, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0.45098, 0.533333, 0.556863, 0 )
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+expand_margin_left = 5.0
+expand_margin_right = 3.0
+shadow_color = Color( 0.0941176, 0.0627451, 0.0627451, 0.0784314 )
+shadow_size = 1
+shadow_offset = Vector2( 1, 2 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 30
+outline_color = Color( 0.0235294, 0.0313726, 0.109804, 1 )
+font_data = ExtResource( 10 )
+
+[sub_resource type="Animation" id=6]
+resource_name = "Instruction"
+length = 1.3
+
+[sub_resource type="StyleBoxFlat" id=9]
+border_width_left = 15
+border_width_top = 15
+border_width_right = 15
+border_width_bottom = 15
+border_color = Color( 0.141176, 0.0470588, 0.0470588, 1 )
+border_blend = true
+
+[sub_resource type="Animation" id=10]
+resource_name = "Popmenssage"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("UnlockedSkill/Skill:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 0.615573, 1 ),
+"update": 0,
+"values": [ Vector2( 249.455, 927.819 ), Vector2( 249.455, -190.909 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("UnlockedSkill/Skill:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0.0666667 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Fade_Popup/Fade:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0.670588 ) ]
+}
+
+[node name="PhotoAnalyze" type="CanvasLayer"]
+script = ExtResource( 8 )
+
+[node name="BackGround2" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 1 )
+color = Color( 0.945098, 0.933333, 0.905882, 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Subackground01" type="Sprite" parent="BackGround2"]
+position = Vector2( 214, 467 )
+scale = Vector2( 1.07312, 1.0007 )
+texture = ExtResource( 2 )
+
+[node name="Subackground02" type="Sprite" parent="BackGround2"]
+position = Vector2( 869, 417 )
+scale = Vector2( 0.80249, 0.809894 )
+texture = ExtResource( 4 )
+
+[node name="Subackground03" type="Sprite" parent="BackGround2"]
+position = Vector2( 861, 116 )
+scale = Vector2( 1.10653, 0.91619 )
+texture = ExtResource( 3 )
+
+[node name="Next" type="Button" parent="."]
+margin_left = 810.0
+margin_top = 252.0
+margin_right = 842.0
+margin_bottom = 328.0
+custom_styles/hover = SubResource( 2 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/focus = SubResource( 2 )
+custom_styles/disabled = SubResource( 2 )
+custom_styles/normal = SubResource( 2 )
+icon = ExtResource( 6 )
+expand_icon = true
+
+[node name="Prev" type="Button" parent="."]
+margin_left = 159.0
+margin_top = 249.0
+margin_right = 195.0
+margin_bottom = 325.0
+custom_styles/hover = SubResource( 2 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/focus = SubResource( 2 )
+custom_styles/disabled = SubResource( 2 )
+custom_styles/normal = SubResource( 2 )
+icon = ExtResource( 7 )
+
+[node name="Title" type="Label" parent="."]
+visible = false
+margin_left = 41.0
+margin_top = 33.0
+margin_right = 230.0
+margin_bottom = 108.0
+rect_pivot_offset = Vector2( 98, 32 )
+custom_colors/font_color = Color( 0.0235294, 0.0313726, 0.109804, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "Analise as Imagens"
+
+[node name="Button" type="Button" parent="."]
+margin_left = 880.0
+margin_top = 528.0
+margin_right = 992.0
+margin_bottom = 564.0
+theme = ExtResource( 5 )
+text = "Proximo"
+
+[node name="InstructionAnimation" type="AnimationPlayer" parent="."]
+method_call_mode = 1
+anims/Instruction = SubResource( 6 )
+
+[node name="PhotoPanel" type="Panel" parent="."]
+margin_left = 257.0
+margin_top = 48.0
+margin_right = 769.0
+margin_bottom = 551.0
+custom_styles/panel = SubResource( 9 )
+
+[node name="PhotoOne" type="Sprite" parent="PhotoPanel"]
+position = Vector2( 255, 252 )
+scale = Vector2( 0.618557, 0.587796 )
+texture = ExtResource( 9 )
+
+[node name="FirstClue" type="Sprite" parent="PhotoPanel/PhotoOne"]
+visible = false
+position = Vector2( 268.391, -157.967 )
+scale = Vector2( 1.57381, 0.855656 )
+texture = ExtResource( 11 )
+
+[node name="FirstButton" type="TextureButton" parent="PhotoPanel/PhotoOne"]
+margin_left = 111.0
+margin_top = -230.0
+margin_right = 388.0
+margin_bottom = -90.0
+
+[node name="SecondClue" type="Sprite" parent="PhotoPanel/PhotoOne"]
+visible = false
+position = Vector2( -2.30389, 125.057 )
+scale = Vector2( 3.21056, 1.55064 )
+texture = ExtResource( 11 )
+
+[node name="SecoondButton" type="TextureButton" parent="PhotoPanel/PhotoOne"]
+margin_left = -323.0
+margin_top = -33.0
+margin_right = 325.0
+margin_bottom = 283.0
+
+[node name="PhotoTwo" type="Sprite" parent="PhotoPanel"]
+visible = false
+position = Vector2( 257, 252 )
+scale = Vector2( 0.596059, 0.592221 )
+texture = ExtResource( 12 )
+
+[node name="ThirdClue" type="Sprite" parent="PhotoPanel/PhotoTwo"]
+visible = false
+position = Vector2( 109.079, -100.198 )
+scale = Vector2( 2.60884, 1.1788 )
+texture = ExtResource( 11 )
+
+[node name="ThirdButton" type="TextureButton" parent="PhotoPanel/PhotoTwo"]
+margin_left = -125.048
+margin_top = -204.675
+margin_right = 329.952
+margin_bottom = 10.325
+
+[node name="PhotoThree" type="Sprite" parent="PhotoPanel"]
+visible = false
+position = Vector2( 255.563, 249.523 )
+scale = Vector2( 0.617903, 0.591946 )
+texture = ExtResource( 16 )
+
+[node name="FourthClue" type="Sprite" parent="PhotoPanel/PhotoThree"]
+visible = false
+position = Vector2( 24.9837, 65.0011 )
+scale = Vector2( 1.66696, 1.08976 )
+texture = ExtResource( 11 )
+
+[node name="FourthButton" type="TextureButton" parent="PhotoPanel/PhotoThree"]
+margin_left = -53.0
+margin_top = -16.0
+margin_right = 167.0
+margin_bottom = 146.0
+
+[node name="PlayerBackPack" parent="." instance=ExtResource( 13 )]
+visible = false
+
+[node name="MinigameExplanation" type="WindowDialog" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -233.0
+margin_top = -118.0
+margin_right = 374.0
+margin_bottom = 80.0
+rect_scale = Vector2( 0.785714, 0.785714 )
+theme = ExtResource( 5 )
+
+[node name="MinigameMensage" type="Label" parent="MinigameExplanation"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -283.136
+margin_top = -115.545
+margin_right = 287.864
+margin_bottom = 174.455
+custom_colors/font_color = Color( 0.196078, 0.282353, 0.376471, 0.670588 )
+text = "Analise as imagens e encontre pontos que possam dizer mais sobre o que aconteceu no levante da turma da boa vontade.
+"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="Fade_Popup" type="Popup" parent="."]
+margin_left = 295.0
+margin_top = 157.0
+margin_right = 335.0
+margin_bottom = 197.0
+
+[node name="Fade" type="Panel" parent="Fade_Popup"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = -297.0
+margin_top = -157.0
+margin_right = 728.0
+margin_bottom = 422.0
+
+[node name="UnlockedSkill" type="WindowDialog" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -192.0
+margin_top = 112.0
+margin_right = 297.0
+margin_bottom = 312.0
+rect_scale = Vector2( 0.785714, 0.785714 )
+theme = ExtResource( 5 )
+
+[node name="Skill" type="Sprite" parent="UnlockedSkill"]
+modulate = Color( 1, 1, 1, 0.0666667 )
+position = Vector2( 249.455, 927.819 )
+scale = Vector2( 0.564662, 0.564662 )
+texture = ExtResource( 15 )
+
+[node name="Label" type="Label" parent="UnlockedSkill"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.627
+anchor_bottom = 0.5
+margin_left = -243.227
+margin_top = -91.0909
+margin_right = 179.67
+margin_bottom = 91.9091
+custom_colors/font_color = Color( 0.196078, 0.282353, 0.376471, 0.670588 )
+text = "Parabens! Você desbloqueou a habilidade curiosidade, no seu diário de bordo é possível checar seu progresso, através do historiômetro."
+align = 1
+valign = 1
+autowrap = true
+
+[node name="ClueMensage" type="WindowDialog" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -282.0
+margin_top = -80.0
+margin_right = 432.0
+margin_bottom = 165.0
+rect_scale = Vector2( 0.785714, 0.785714 )
+theme = ExtResource( 5 )
+
+[node name="Label" type="Label" parent="ClueMensage"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -341.727
+margin_top = -160.682
+margin_right = 347.273
+margin_bottom = 163.318
+custom_colors/font_color = Color( 0.196078, 0.282353, 0.376471, 0.670588 )
+text = "Observar como a placa está destruída, amassada ao chão e o que está escrito nela. Na placa está escrito prefeitura, mas o que se tem nesse período na capital são subprefeituras, pois as prefeituras são criadas somente após a reestruturação administrativa do Distrito Federal com a LEI Nº 4.545, DE 10 DE DEZEMBRO DE 1964."
+align = 1
+valign = 1
+autowrap = true
+
+[node name="UnlockedSkillAnimation" type="AnimationPlayer" parent="."]
+anims/Popmenssage = SubResource( 10 )
+
+[node name="Player" parent="." instance=ExtResource( 14 )]
+
+[connection signal="pressed" from="Next" to="." method="next_image"]
+[connection signal="pressed" from="Prev" to="." method="previous_image"]
+[connection signal="pressed" from="Button" to="." method="exit"]
+[connection signal="button_down" from="PhotoPanel/PhotoOne/FirstButton" to="." method="_on_FirstButton_button_down"]
+[connection signal="button_down" from="PhotoPanel/PhotoOne/SecoondButton" to="." method="_on_SecoondButton_button_down"]
+[connection signal="button_down" from="PhotoPanel/PhotoTwo/ThirdButton" to="." method="_on_ThirdButton_button_down"]
+[connection signal="button_down" from="PhotoPanel/PhotoThree/FourthButton" to="." method="_on_FourthButton_button_down"]
+[connection signal="popup_hide" from="UnlockedSkill" to="." method="_on_UnlockedSkill_popup_hide"]
+[connection signal="popup_hide" from="ClueMensage" to="." method="_on_ClueMensage_popup_hide"]

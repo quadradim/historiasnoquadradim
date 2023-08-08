@@ -1,0 +1,405 @@
+[gd_scene load_steps=23 format=2]
+
+[ext_resource path="res://assets/Themes/Menu.tres" type="Theme" id=1]
+[ext_resource path="res://assets/Images/diary/tape.png" type="Texture" id=2]
+[ext_resource path="res://assets/Images/WordSelection/caderno.png" type="Texture" id=3]
+[ext_resource path="res://assets/Images/Menu/Padrão3.png" type="Texture" id=4]
+[ext_resource path="res://assets/Images/Menu/Padrão2.png" type="Texture" id=5]
+[ext_resource path="res://assets/Images/Menu/Padrão1.png" type="Texture" id=6]
+[ext_resource path="res://assets/Fonts/bebas_neue/BebasNeue-Regular.ttf" type="DynamicFontData" id=7]
+[ext_resource path="res://scenes/NucleoBandeirante/WordSelection.gd" type="Script" id=8]
+[ext_resource path="res://assets/Images/WordSelection/papel.png" type="Texture" id=9]
+[ext_resource path="res://assets/Themes/CharacterChoice.tres" type="Theme" id=10]
+[ext_resource path="res://scenes/AuxScenes/PlayerBackPack.tscn" type="PackedScene" id=11]
+[ext_resource path="res://entities/Player.tscn" type="PackedScene" id=12]
+<<<<<<< Updated upstream:prototype/scenes/Minigames/WordSelection.tscn
+=======
+[ext_resource path="res://assets/Images/diary/cubo2.png" type="Texture" id=13]
+[ext_resource path="res://assets/Images/diary/planeta2.png" type="Texture" id=14]
+
+>>>>>>> Stashed changes:prototype/scenes/NucleoBandeirante/WordSelection.tscn
+
+[sub_resource type="DynamicFont" id=10]
+size = 24
+font_data = ExtResource( 7 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 24
+outline_color = Color( 0.698039, 0.768627, 0.0823529, 0.898039 )
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 7 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 24
+outline_color = Color( 0.698039, 0.768627, 0.0823529, 0.898039 )
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 7 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 24
+outline_color = Color( 0.698039, 0.768627, 0.0823529, 0.898039 )
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 7 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 24
+outline_color = Color( 0.698039, 0.768627, 0.0823529, 0.898039 )
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 7 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 24
+outline_color = Color( 0.698039, 0.768627, 0.0823529, 0.898039 )
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 7 )
+
+[sub_resource type="DynamicFont" id=7]
+size = 24
+outline_color = Color( 0.698039, 0.768627, 0.0823529, 0.898039 )
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 7 )
+
+[sub_resource type="DynamicFont" id=8]
+size = 24
+outline_color = Color( 0.698039, 0.768627, 0.0823529, 0.898039 )
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 7 )
+
+[sub_resource type="DynamicFont" id=9]
+size = 24
+outline_color = Color( 0.698039, 0.768627, 0.0823529, 0.898039 )
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 7 )
+
+[sub_resource type="DynamicFont" id=11]
+size = 23
+font_data = ExtResource( 7 )
+
+[node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource( 8 )
+
+[node name="BackGround2" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 1 )
+color = Color( 0.945098, 0.933333, 0.905882, 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Subackground01" type="Sprite" parent="BackGround2"]
+position = Vector2( 214, 467 )
+scale = Vector2( 1.07312, 1.0007 )
+texture = ExtResource( 4 )
+
+[node name="Subackground02" type="Sprite" parent="BackGround2"]
+position = Vector2( 869, 417 )
+scale = Vector2( 0.80249, 0.809894 )
+texture = ExtResource( 6 )
+
+[node name="Subackground03" type="Sprite" parent="BackGround2"]
+position = Vector2( 861, 116 )
+scale = Vector2( 1.10653, 0.91619 )
+texture = ExtResource( 5 )
+
+[node name="Cover" type="Sprite" parent="."]
+position = Vector2( 462.5, 282.609 )
+scale = Vector2( 0.228307, 0.243283 )
+texture = ExtResource( 3 )
+
+[node name="Pages" type="Sprite" parent="Cover"]
+position = Vector2( 15.3303, -10.7273 )
+scale = Vector2( 1.03939, 0.975408 )
+texture = ExtResource( 9 )
+
+[node name="InstructionText" type="Label" parent="."]
+margin_left = 175.0
+margin_top = 10.0
+margin_right = 706.0
+margin_bottom = 51.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 10 )
+text = "com quais das palavras abaixo podemos definir o que aconteceu?"
+
+[node name="TryButton" type="Button" parent="."]
+margin_left = 708.0
+margin_top = 443.0
+margin_right = 778.0
+margin_bottom = 479.0
+theme = ExtResource( 10 )
+text = "Ok"
+
+[node name="Tape1" type="Sprite" parent="."]
+position = Vector2( 200.5, 110.609 )
+rotation = 2.05076
+scale = Vector2( 0.356061, 0.356061 )
+texture = ExtResource( 2 )
+
+[node name="Word1" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -348.5
+margin_top = -199.391
+margin_right = -302.5
+margin_bottom = -136.391
+rect_rotation = -14.5
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "Greve"
+align = 1
+valign = 1
+
+[node name="Word1Button" type="TextureButton" parent="Word1"]
+margin_left = -59.541
+margin_top = 14.5558
+margin_right = 118.459
+margin_bottom = 49.5558
+
+[node name="Tape2" type="Sprite" parent="."]
+position = Vector2( 680.5, 137.609 )
+rotation = 2.35619
+scale = Vector2( 0.356, 0.356 )
+texture = ExtResource( 2 )
+
+[node name="Word2" type="Label" parent="."]
+margin_left = 639.5
+margin_top = 120.609
+margin_right = 719.5
+margin_bottom = 150.609
+rect_rotation = 6.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "Desordem"
+
+[node name="Word2Button" type="TextureButton" parent="Word2"]
+margin_left = -42.3971
+margin_top = -1.57693
+margin_right = 128.603
+margin_bottom = 30.4231
+
+[node name="Tape3" type="Sprite" parent="."]
+position = Vector2( 567.5, 447.609 )
+rotation = 1.91986
+scale = Vector2( 0.356, 0.356 )
+texture = ExtResource( 2 )
+
+[node name="Word3" type="Label" parent="."]
+margin_left = 521.5
+margin_top = 453.609
+margin_right = 590.5
+margin_bottom = 483.609
+rect_rotation = -20.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 4 )
+text = "Tumulto"
+
+[node name="Word3Button" type="TextureButton" parent="Word3"]
+margin_left = -44.1691
+margin_top = -4.3703
+margin_right = 133.831
+margin_bottom = 28.6297
+
+[node name="Tape4" type="Sprite" parent="."]
+position = Vector2( 709.5, 367.609 )
+rotation = -0.785398
+scale = Vector2( 0.356, 0.356 )
+texture = ExtResource( 2 )
+
+[node name="Word4" type="Label" parent="."]
+margin_left = 655.5
+margin_top = 348.609
+margin_right = 767.5
+margin_bottom = 378.609
+rect_rotation = 4.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 5 )
+text = "Reivindicação"
+
+[node name="Word4Button" type="TextureButton" parent="Word4"]
+margin_left = -34.1964
+margin_top = -1.61856
+margin_right = 141.804
+margin_bottom = 29.3814
+
+[node name="Tape5" type="Sprite" parent="."]
+position = Vector2( 320.5, 209.609 )
+rotation = 2.35619
+scale = Vector2( 0.356, 0.356 )
+texture = ExtResource( 2 )
+
+[node name="Word5" type="Label" parent="."]
+margin_left = 286.5
+margin_top = 192.609
+margin_right = 355.5
+margin_bottom = 222.609
+rect_rotation = 5.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 6 )
+text = "Baderna"
+
+[node name="Word5Button" type="TextureButton" parent="Word5"]
+margin_left = -56.3099
+margin_top = -1.09647
+margin_right = 121.69
+margin_bottom = 28.9035
+
+[node name="Tape6" type="Sprite" parent="."]
+position = Vector2( 596.5, 255.609 )
+rotation = 2.67035
+scale = Vector2( 0.356, 0.356 )
+texture = ExtResource( 2 )
+
+[node name="Word6" type="Label" parent="."]
+margin_left = 537.5
+margin_top = 214.609
+margin_right = 663.5
+margin_bottom = 244.609
+rect_rotation = 24.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 7 )
+text = "Desempregados"
+
+[node name="Word6Button" type="TextureButton" parent="Word6"]
+margin_left = -21.4247
+margin_top = -1.40746
+margin_right = 157.575
+margin_bottom = 29.5925
+
+[node name="Tape7" type="Sprite" parent="."]
+position = Vector2( 248.5, 431.609 )
+rotation = 2.19911
+scale = Vector2( 0.356, 0.356 )
+texture = ExtResource( 2 )
+
+[node name="Word7" type="Label" parent="."]
+margin_left = 193.5
+margin_top = 420.609
+margin_right = 315.5
+margin_bottom = 511.609
+rect_rotation = -3.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 8 )
+text = "Salário mínimo"
+
+[node name="Word7Button" type="TextureButton" parent="Word7"]
+margin_left = -36.003
+margin_top = -0.885468
+margin_right = 144.997
+margin_bottom = 32.1145
+
+[node name="Tape8" type="Sprite" parent="."]
+position = Vector2( 253.5, 319.609 )
+rotation = 2.62498
+scale = Vector2( 0.356, 0.356 )
+texture = ExtResource( 2 )
+
+[node name="Word8" type="Label" parent="."]
+margin_left = 202.5
+margin_top = 286.609
+margin_right = 327.5
+margin_bottom = 316.609
+rect_rotation = 22.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 9 )
+text = "Retornismo"
+
+[node name="Word8Button" type="TextureButton" parent="Word8"]
+anchor_left = -0.144
+anchor_top = 0.517
+anchor_right = -0.144
+anchor_bottom = 0.517
+margin_left = -14.0
+margin_top = -19.51
+margin_right = 166.0
+margin_bottom = 12.49
+
+[node name="MessageBox" type="WindowDialog" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -264.0
+margin_top = -106.0
+margin_right = 264.0
+margin_bottom = 106.0
+theme = ExtResource( 10 )
+
+[node name="MessageText" type="Label" parent="MessageBox"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -233.5
+margin_top = -80.0
+margin_right = 233.5
+margin_bottom = 80.0
+custom_colors/font_color = Color( 0.0235294, 0.0313726, 0.109804, 1 )
+custom_fonts/font = SubResource( 11 )
+text = "aaaaaaaaaaaa
+"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="NextButton" type="Button" parent="."]
+margin_left = 875.0
+margin_top = 500.0
+margin_right = 989.0
+margin_bottom = 540.0
+theme = ExtResource( 10 )
+text = "Próximo"
+
+[node name="PlayerBackPack" parent="." instance=ExtResource( 11 )]
+visible = false
+
+[node name="Player" parent="." instance=ExtResource( 12 )]
+
+[node name="UnlockedSkill" type="WindowDialog" parent="."]
+visible = true
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -18.0
+margin_top = -288.0
+margin_right = 471.0
+margin_bottom = -88.0
+rect_scale = Vector2( 0.785714, 0.785714 )
+theme = ExtResource( 10 )
+
+[node name="Label" type="Label" parent="UnlockedSkill"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.627
+anchor_bottom = 0.5
+margin_left = -243.227
+margin_top = -91.0909
+margin_right = 179.67
+margin_bottom = 91.9091
+custom_colors/font_color = Color( 0.196078, 0.282353, 0.376471, 0.670588 )
+text = "Parabéns! Foram desbloqueadas as Habilidades criticidade e raciocínio lógico. "
+align = 1
+valign = 1
+autowrap = true
+
+[connection signal="pressed" from="TryButton" to="." method="Try_Button"]
+[connection signal="pressed" from="Word1/Word1Button" to="." method="word1_button"]
+[connection signal="pressed" from="Word2/Word2Button" to="." method="word2_button"]
+[connection signal="pressed" from="Word3/Word3Button" to="." method="word3_button"]
+[connection signal="pressed" from="Word4/Word4Button" to="." method="word4_button"]
+[connection signal="pressed" from="Word5/Word5Button" to="." method="word5_button"]
+[connection signal="pressed" from="Word6/Word6Button" to="." method="word6_button"]
+[connection signal="pressed" from="Word7/Word7Button" to="." method="word7_button"]
+[connection signal="pressed" from="Word8/Word8Button" to="." method="word8_button"]
+[connection signal="popup_hide" from="MessageBox" to="." method="_on_MessageBox_popup_hide"]
+[connection signal="pressed" from="NextButton" to="." method="_on_NextButton_pressed"]

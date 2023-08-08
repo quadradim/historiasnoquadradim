@@ -1,9 +1,9 @@
 [gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://assets/Styles/Themes/Menu.tres" type="Theme" id=1]
-[ext_resource path="res://assets/Images/Composition/Menu/Padrão3.png" type="Texture" id=2]
-[ext_resource path="res://assets/Images/Composition/Menu/Padrão2.png" type="Texture" id=3]
-[ext_resource path="res://assets/Images/Composition/Menu/Padrão1.png" type="Texture" id=4]
+[ext_resource path="res://assets/Themes/Menu.tres" type="Theme" id=1]
+[ext_resource path="res://assets/Images/Menu/Padrão3.png" type="Texture" id=2]
+[ext_resource path="res://assets/Images/Menu/Padrão2.png" type="Texture" id=3]
+[ext_resource path="res://assets/Images/Menu/Padrão1.png" type="Texture" id=4]
 [ext_resource path="res://scenes/AuxScenes/ConfigurationWindow.tscn" type="PackedScene" id=5]
 
 [node name="Configurations" type="CanvasLayer"]

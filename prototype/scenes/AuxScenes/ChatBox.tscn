@@ -1,13 +1,13 @@
 [gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://scenes/AuxScenes/ChatBox.gd" type="Script" id=1]
-[ext_resource path="res://assets/Styles/Themes/ChatBox.tres" type="Theme" id=2]
-[ext_resource path="res://assets/Styles/Themes/Dialogs.tres" type="Theme" id=3]
-[ext_resource path="res://assets/icons/next.png" type="Texture" id=4]
-[ext_resource path="res://assets/icons/previous.png" type="Texture" id=5]
+[ext_resource path="res://assets/Themes/ChatBox.tres" type="Theme" id=2]
+[ext_resource path="res://assets/Themes/Dialogs.tres" type="Theme" id=3]
+[ext_resource path="res://assets/Images/icons/next.png" type="Texture" id=4]
+[ext_resource path="res://assets/Images/icons/previous.png" type="Texture" id=5]
 [ext_resource path="res://scenes/AuxScenes/ProfileImages.tscn" type="PackedScene" id=6]
 [ext_resource path="res://scenes/AuxScenes/MainCharacterImage.tscn" type="PackedScene" id=7]
-[ext_resource path="res://assets/Styles/Themes/CharacterChoice.tres" type="Theme" id=8]
+[ext_resource path="res://assets/Themes/CharacterChoice.tres" type="Theme" id=8]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.945098, 0.933333, 0.905882, 0.843137 )

@@ -1,8 +1,9 @@
 [gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://assets/Images/Composition/Menu/Logo.png" type="Texture" id=1]
-[ext_resource path="res://scripts/LogoOpening.gd" type="Script" id=2]
+[ext_resource path="res://assets/Images/Menu/Logo.png" type="Texture" id=1]
+[ext_resource path="res://scenes/GUI/LogoOpening.gd" type="Script" id=2]
 [ext_resource path="res://assets/Fonts/Godot-Fontpack-d244bf6170b399a6d4d26a0d906058ddf2dafdf1/fonts/montreal/Montreal-Regular.ttf" type="DynamicFontData" id=3]
+
 
 [sub_resource type="Animation" id=1]
 resource_name = "ResizeLogo"

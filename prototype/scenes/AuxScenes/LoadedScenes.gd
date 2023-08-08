@@ -85,7 +85,7 @@ var scenes_data = {
 		false,
 	],
 	'introd_lavadeiras': [
-		'res://scenes/Introductions/Lavadeiras.tscn',
+		'res://scenes/Introductions/IntroLavadeiras.tscn',
 		'introd_lava',
 		false,
 		null,
@@ -133,7 +133,7 @@ var scenes_data = {
 		false,
 	],
 	'intro_multidao': [
-		'res://scenes/Introductions/Multidao.tscn',
+		'res://scenes/Introductions/IntroMultidao.tscn',
 		'end_multidao',
 		true,
 		null,

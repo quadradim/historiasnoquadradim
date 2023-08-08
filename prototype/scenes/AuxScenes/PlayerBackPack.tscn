@@ -2,7 +2,7 @@
 
 [ext_resource path="res://scenes/AuxScenes/DiaryInventory.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/AuxScenes/PlayerBackPack.gd" type="Script" id=2]
-[ext_resource path="res://assets/Images/Composition/CharacterChoice/mochilas/redimensionado/mochila03.png" type="Texture" id=3]
+[ext_resource path="res://assets/Images/CharacterChoice/mochilas/mochila03.png" type="Texture" id=3]
 [ext_resource path="res://entities/Player.tscn" type="PackedScene" id=4]
 
 [sub_resource type="Animation" id=2]

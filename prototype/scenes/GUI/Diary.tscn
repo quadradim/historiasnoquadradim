@@ -1,64 +1,63 @@
-[gd_scene load_steps=87 format=2]
+[gd_scene load_steps=86 format=2]
 
-[ext_resource path="res://assets/Styles/Themes/Menu.tres" type="Theme" id=1]
+[ext_resource path="res://assets/Themes/Menu.tres" type="Theme" id=1]
 [ext_resource path="res://scenes/GUI/Diary.gd" type="Script" id=2]
-[ext_resource path="res://assets/Images/Composition/Menu/Padrão3.png" type="Texture" id=3]
-[ext_resource path="res://assets/Images/Composition/Menu/Padrão2.png" type="Texture" id=4]
-[ext_resource path="res://assets/Images/Composition/Menu/Padrão1.png" type="Texture" id=5]
-[ext_resource path="res://assets/Images/Composition/diary/diaryform.png" type="Texture" id=6]
-[ext_resource path="res://assets/Images/Composition/diary/ícone1.png" type="Texture" id=7]
-[ext_resource path="res://assets/Images/Composition/CharacterChoice/mochilas/redimensionado/mochila01.png" type="Texture" id=8]
-[ext_resource path="res://assets/Images/Composition/diary/cubo2.png" type="Texture" id=9]
+[ext_resource path="res://assets/Images/Menu/Padrão3.png" type="Texture" id=3]
+[ext_resource path="res://assets/Images/Menu/Padrão2.png" type="Texture" id=4]
+[ext_resource path="res://assets/Images/Menu/Padrão1.png" type="Texture" id=5]
+[ext_resource path="res://assets/Images/diary/diaryform.png" type="Texture" id=6]
+[ext_resource path="res://assets/Images/diary/ícone1.png" type="Texture" id=7]
+[ext_resource path="res://assets/Images/CharacterChoice/mochilas/mochila01.png" type="Texture" id=8]
+[ext_resource path="res://assets/Images/diary/cubo2.png" type="Texture" id=9]
 [ext_resource path="res://entities/Player.tscn" type="PackedScene" id=10]
-[ext_resource path="res://assets/Images/Composition/CharacterChoice/chapéu2.png" type="Texture" id=11]
 [ext_resource path="res://assets/Fonts/arial/Arialn.ttf" type="DynamicFontData" id=12]
-[ext_resource path="res://assets/Styles/Themes/CharacterChoice.tres" type="Theme" id=13]
+[ext_resource path="res://assets/Themes/CharacterChoice.tres" type="Theme" id=13]
 [ext_resource path="res://soundtrack/Loop5 - Diário.mp3" type="AudioStream" id=14]
 [ext_resource path="res://scenes/AuxScenes/AudioController.tscn" type="PackedScene" id=15]
-[ext_resource path="res://assets/Images/Composition/diary/ícone2.png" type="Texture" id=16]
-[ext_resource path="res://assets/Images/Composition/diary/ícone 3.png" type="Texture" id=17]
+[ext_resource path="res://assets/Images/diary/ícone2.png" type="Texture" id=16]
+[ext_resource path="res://assets/Images/diary/ícone 3.png" type="Texture" id=17]
 [ext_resource path="res://assets/Fonts/bebas_neue/BebasNeue-Regular.ttf" type="DynamicFontData" id=18]
-[ext_resource path="res://assets/Images/Composition/diary/mapa.png" type="Texture" id=19]
-[ext_resource path="res://assets/Images/Composition/diary/tape.png" type="Texture" id=20]
-[ext_resource path="res://assets/Images/Composition/diary/1.png" type="Texture" id=21]
-[ext_resource path="res://assets/Images/Composition/diary/Personagens/diario_de_bordo_bloqueado.png" type="Texture" id=22]
-[ext_resource path="res://assets/Images/Composition/diary/binoculos2.png" type="Texture" id=23]
-[ext_resource path="res://assets/Images/Composition/diary/cartazes.png" type="Texture" id=24]
-[ext_resource path="res://assets/Images/Composition/diary/planeta2.png" type="Texture" id=25]
-[ext_resource path="res://assets/Images/Composition/diary/livros2.png" type="Texture" id=26]
-[ext_resource path="res://assets/Images/Composition/diary/jornal2.png" type="Texture" id=27]
-[ext_resource path="res://assets/Images/Composition/diary/jogo_da_memória2.png" type="Texture" id=28]
-[ext_resource path="res://assets/Images/Composition/diary/chapéu2.png" type="Texture" id=29]
-[ext_resource path="res://assets/Images/Composition/diary/pasta2.png" type="Texture" id=30]
+[ext_resource path="res://assets/Images/diary/mapa.png" type="Texture" id=19]
+[ext_resource path="res://assets/Images/diary/tape.png" type="Texture" id=20]
+[ext_resource path="res://assets/Images/diary/1.png" type="Texture" id=21]
+[ext_resource path="res://assets/Images/diary/Personagens/diario_de_bordo_bloqueado.png" type="Texture" id=22]
+[ext_resource path="res://assets/Images/diary/binoculos2.png" type="Texture" id=23]
+[ext_resource path="res://assets/Images/diary/cartazes.png" type="Texture" id=24]
+[ext_resource path="res://assets/Images/diary/planeta2.png" type="Texture" id=25]
+[ext_resource path="res://assets/Images/diary/livros2.png" type="Texture" id=26]
+[ext_resource path="res://assets/Images/diary/jornal2.png" type="Texture" id=27]
+[ext_resource path="res://assets/Images/diary/jogo_da_memória2.png" type="Texture" id=28]
+[ext_resource path="res://assets/Images/diary/chapéu2.png" type="Texture" id=29]
+[ext_resource path="res://assets/Images/diary/pasta2.png" type="Texture" id=30]
 [ext_resource path="res://assets/Fonts/averia/Averia-BoldItalic.ttf" type="DynamicFontData" id=31]
-[ext_resource path="res://assets/Images/Composition/diary/historiômetro/0.png" type="Texture" id=32]
-[ext_resource path="res://assets/Images/Composition/diary/historiômetro/1.png" type="Texture" id=33]
-[ext_resource path="res://assets/Images/Composition/diary/historiômetro/6.png" type="Texture" id=34]
-[ext_resource path="res://assets/Images/Composition/diary/historiômetro/7.png" type="Texture" id=35]
-[ext_resource path="res://assets/Images/Composition/diary/historiômetro/4.png" type="Texture" id=36]
-[ext_resource path="res://assets/Images/Composition/diary/historiômetro/3.png" type="Texture" id=37]
-[ext_resource path="res://assets/Images/Composition/diary/historiômetro/8.png" type="Texture" id=38]
-[ext_resource path="res://assets/Images/Composition/diary/historiômetro/5.png" type="Texture" id=39]
-[ext_resource path="res://assets/Images/Composition/diary/historiômetro/2.png" type="Texture" id=40]
-[ext_resource path="res://assets/Images/Composition/diary/historiômetro/9.png" type="Texture" id=41]
-[ext_resource path="res://assets/Images/Composition/diary/Personagens/Diário_de_bordo.png" type="Texture" id=42]
-[ext_resource path="res://assets/Images/Composition/diary/Personagens/diário_de_bordo2.png" type="Texture" id=43]
-[ext_resource path="res://assets/Images/Composition/diary/Personagens/Diário_de_bordo_bloqueado.png" type="Texture" id=44]
-[ext_resource path="res://assets/Images/Composition/diary/Personagens/domingas.png" type="Texture" id=45]
-[ext_resource path="res://assets/Images/Composition/diary/Personagens/ranieri.png" type="Texture" id=46]
-[ext_resource path="res://assets/Images/Composition/diary/Lupa2.png" type="Texture" id=47]
-[ext_resource path="res://assets/Images/Composition/diary/reforma.png" type="Texture" id=48]
-[ext_resource path="res://assets/Images/Composition/diary/Personagens/Raulino_bloqueado.png" type="Texture" id=49]
-[ext_resource path="res://assets/Images/Composition/diary/Personagens/Diário_de_bordo_bloqueado1.png" type="Texture" id=50]
-[ext_resource path="res://assets/Images/Composition/diary/Personagens/diario_de_bordo.png" type="Texture" id=51]
-[ext_resource path="res://assets/Images/Composition/diary/Personagens/Diário_de_bordo1.png" type="Texture" id=52]
-[ext_resource path="res://assets/Images/Composition/diary/Personagens/diário_de_bordo_bloqueado2.png" type="Texture" id=53]
-[ext_resource path="res://assets/Images/Composition/diary/Personagens/domingas_bloqueado.png" type="Texture" id=54]
-[ext_resource path="res://assets/Images/Composition/diary/Personagens/Raulino.png" type="Texture" id=55]
-[ext_resource path="res://assets/Images/Composition/diary/Personagens/Ranieri_bloqueado.png" type="Texture" id=56]
-[ext_resource path="res://assets/Images/Composition/diary/nuc.bandeirante.png" type="Texture" id=57]
-[ext_resource path="res://assets/Images/Composition/diary/planopiloto.png" type="Texture" id=58]
-[ext_resource path="res://assets/Images/Composition/diary/taguatinga.png" type="Texture" id=59]
+[ext_resource path="res://assets/Images/diary/historiômetro/0.png" type="Texture" id=32]
+[ext_resource path="res://assets/Images/diary/historiômetro/1.png" type="Texture" id=33]
+[ext_resource path="res://assets/Images/diary/historiômetro/6.png" type="Texture" id=34]
+[ext_resource path="res://assets/Images/diary/historiômetro/7.png" type="Texture" id=35]
+[ext_resource path="res://assets/Images/diary/historiômetro/4.png" type="Texture" id=36]
+[ext_resource path="res://assets/Images/diary/historiômetro/3.png" type="Texture" id=37]
+[ext_resource path="res://assets/Images/diary/historiômetro/8.png" type="Texture" id=38]
+[ext_resource path="res://assets/Images/diary/historiômetro/5.png" type="Texture" id=39]
+[ext_resource path="res://assets/Images/diary/historiômetro/2.png" type="Texture" id=40]
+[ext_resource path="res://assets/Images/diary/historiômetro/9.png" type="Texture" id=41]
+[ext_resource path="res://assets/Images/diary/Personagens/Diário_de_bordo.png" type="Texture" id=42]
+[ext_resource path="res://assets/Images/diary/Personagens/diário_de_bordo2.png" type="Texture" id=43]
+[ext_resource path="res://assets/Images/diary/Personagens/Diário_de_bordo_bloqueado.png" type="Texture" id=44]
+[ext_resource path="res://assets/Images/diary/Personagens/domingas.png" type="Texture" id=45]
+[ext_resource path="res://assets/Images/diary/Personagens/ranieri.png" type="Texture" id=46]
+[ext_resource path="res://assets/Images/diary/Lupa2.png" type="Texture" id=47]
+[ext_resource path="res://assets/Images/diary/reforma.png" type="Texture" id=48]
+[ext_resource path="res://assets/Images/diary/Personagens/Raulino_bloqueado.png" type="Texture" id=49]
+[ext_resource path="res://assets/Images/diary/Personagens/Diário_de_bordo_bloqueado1.png" type="Texture" id=50]
+[ext_resource path="res://assets/Images/diary/Personagens/diario_de_bordo.png" type="Texture" id=51]
+[ext_resource path="res://assets/Images/diary/Personagens/Diário_de_bordo1.png" type="Texture" id=52]
+[ext_resource path="res://assets/Images/diary/Personagens/diário_de_bordo_bloqueado2.png" type="Texture" id=53]
+[ext_resource path="res://assets/Images/diary/Personagens/domingas_bloqueado.png" type="Texture" id=54]
+[ext_resource path="res://assets/Images/diary/Personagens/Raulino.png" type="Texture" id=55]
+[ext_resource path="res://assets/Images/diary/Personagens/Ranieri_bloqueado.png" type="Texture" id=56]
+[ext_resource path="res://assets/Images/diary/nuc.bandeirante.png" type="Texture" id=57]
+[ext_resource path="res://assets/Images/diary/planopiloto.png" type="Texture" id=58]
+[ext_resource path="res://assets/Images/diary/taguatinga.png" type="Texture" id=59]
 
 [sub_resource type="StyleBoxFlat" id=30]
 bg_color = Color( 1, 0, 0, 0 )
@@ -455,7 +454,7 @@ custom_styles/panel = SubResource( 14 )
 position = Vector2( 62.2287, 73.9168 )
 rotation = -1.5708
 scale = Vector2( 0.309605, 0.309605 )
-texture = ExtResource( 11 )
+texture = ExtResource( 29 )
 
 [node name="Tape" type="Sprite" parent="ProfileTab/ItemPanel01"]
 position = Vector2( 15.4455, 12.7994 )
@@ -483,7 +482,7 @@ custom_styles/panel = SubResource( 14 )
 position = Vector2( 63.608, 73.9396 )
 rotation = -1.5708
 scale = Vector2( 0.309605, 0.309605 )
-texture = ExtResource( 11 )
+texture = ExtResource( 29 )
 
 [node name="Tape" type="Sprite" parent="ProfileTab/ItemPanel02"]
 position = Vector2( 15.4455, 12.7994 )
@@ -510,7 +509,7 @@ custom_styles/panel = SubResource( 14 )
 position = Vector2( 62.2287, 73.9168 )
 rotation = -1.5708
 scale = Vector2( 0.309605, 0.309605 )
-texture = ExtResource( 11 )
+texture = ExtResource( 29 )
 
 [node name="Tape" type="Sprite" parent="ProfileTab/ItemPanel03"]
 position = Vector2( 15.4455, 12.7994 )

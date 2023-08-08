@@ -1,8 +1,9 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://assets/Images/Composition/CharacterChoice/binoculos2.png" type="Texture" id=1]
+[ext_resource path="res://assets/Images/diary/binoculos2.png" type="Texture" id=1]
 [ext_resource path="res://scenes/AuxScenes/ObjectSelection.gd" type="Script" id=2]
-[ext_resource path="res://assets/Images/Composition/CharacterChoice/binoculos.png" type="Texture" id=3]
+[ext_resource path="res://assets/Images/CharacterChoice/habilidades/binoculos.png" type="Texture" id=3]
+
 
 [node name="ObjectSelection" type="Node"]
 script = ExtResource( 2 )

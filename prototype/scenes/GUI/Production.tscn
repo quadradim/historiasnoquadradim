@@ -1,10 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://assets/Images/Composition/Production/unb-logo.png" type="Texture" id=1]
-[ext_resource path="res://scripts/Production.gd" type="Script" id=2]
+[ext_resource path="res://assets/Images/Production/unb-logo.png" type="Texture" id=1]
 
 [node name="Production" type="CanvasLayer"]
-script = ExtResource( 2 )
 
 [node name="OpeningDuration" type="Timer" parent="."]
 wait_time = 2.0

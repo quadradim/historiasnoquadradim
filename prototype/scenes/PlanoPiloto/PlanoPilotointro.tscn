@@ -1,0 +1,55 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://assets/Images/PlanoPilotoIntro/5-congresso nacional.png" type="Texture" id=1]
+[ext_resource path="res://assets/Images/PlanoPilotoIntro/no_cenário.png" type="Texture" id=2]
+[ext_resource path="res://scenes/PlanoPiloto/PlanoPilotointro.gd" type="Script" id=3]
+[ext_resource path="res://assets/Fonts/bebas_neue/BebasNeue-Regular.otf" type="DynamicFontData" id=4]
+[ext_resource path="res://assets/Themes/CharacterChoice.tres" type="Theme" id=5]
+
+[sub_resource type="DynamicFont" id=1]
+size = 34
+outline_color = Color( 0.215686, 0.298039, 0.388235, 1 )
+font_data = ExtResource( 4 )
+
+[node name="PlanoPilotoIntro" type="CanvasLayer"]
+script = ExtResource( 3 )
+
+[node name="CongressoNacional" type="Sprite" parent="."]
+position = Vector2( 510, 288 )
+texture = ExtResource( 1 )
+
+[node name="israelSilva" type="Sprite" parent="."]
+position = Vector2( 208, 528 )
+scale = Vector2( 0.482692, 0.455354 )
+texture = ExtResource( 2 )
+
+[node name="IsraelButton" type="TextureButton" parent="."]
+anchor_left = 0.591
+anchor_top = 1.326
+anchor_right = 0.591
+anchor_bottom = 1.326
+margin_left = -460.184
+margin_top = -349.776
+margin_right = -334.184
+margin_bottom = -187.776
+
+[node name="PopWindow" type="WindowDialog" parent="."]
+margin_left = 213.0
+margin_top = 196.0
+margin_right = 706.0
+margin_bottom = 349.0
+theme = ExtResource( 5 )
+
+[node name="Label" type="Label" parent="PopWindow"]
+margin_left = -21.0
+margin_top = 25.0
+margin_right = 507.0
+margin_bottom = 229.0
+custom_colors/font_color = Color( 0.215686, 0.298039, 0.388235, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "descubra o que está acontecendo na Esplanada dos ministérios
+"
+align = 1
+autowrap = true
+
+[connection signal="pressed" from="IsraelButton" to="." method="_on_IsraelButton_pressed"]

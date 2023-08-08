@@ -1,0 +1,129 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://assets/Themes/Menu.tres" type="Theme" id=1]
+[ext_resource path="res://assets/Themes/CharacterChoice.tres" type="Theme" id=2]
+[ext_resource path="res://scenes/AuxScenes/Pop_Skills.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/PlanoPiloto/Retro234.gd" type="Script" id=4]
+[ext_resource path="res://assets/Images/PlanoPilotoIntro/professora_resize25.png" type="Texture" id=5]
+[ext_resource path="res://assets/Images/PlanoPilotoIntro/5-congresso nacional.png" type="Texture" id=6]
+[ext_resource path="res://assets/Images/ProtestoBandeirante/Cenario.jpeg" type="Texture" id=7]
+[ext_resource path="res://assets/Images/Darcy/darcy.png" type="Texture" id=8]
+[ext_resource path="res://assets/Images/Menu/Padrão3.png" type="Texture" id=9]
+[ext_resource path="res://assets/Images/Menu/Padrão1.png" type="Texture" id=10]
+[ext_resource path="res://assets/Images/Menu/Padrão2.png" type="Texture" id=11]
+
+[sub_resource type="StyleBoxFlat" id=9]
+border_width_left = 15
+border_width_top = 15
+border_width_right = 15
+border_width_bottom = 15
+border_color = Color( 0.141176, 0.0470588, 0.0470588, 1 )
+border_blend = true
+
+[node name="PhotoAnalyze" type="CanvasLayer"]
+script = ExtResource( 4 )
+
+[node name="BackGround2" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 1 )
+color = Color( 0.945098, 0.933333, 0.905882, 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Subackground01" type="Sprite" parent="BackGround2"]
+position = Vector2( 214, 467 )
+scale = Vector2( 1.07312, 1.0007 )
+texture = ExtResource( 9 )
+
+[node name="Subackground02" type="Sprite" parent="BackGround2"]
+position = Vector2( 869, 417 )
+scale = Vector2( 0.80249, 0.809894 )
+texture = ExtResource( 10 )
+
+[node name="Subackground03" type="Sprite" parent="BackGround2"]
+position = Vector2( 861, 116 )
+scale = Vector2( 1.10653, 0.91619 )
+texture = ExtResource( 11 )
+
+[node name="PhotoPanel" type="Panel" parent="."]
+margin_left = 72.0
+margin_top = 64.0
+margin_right = 960.0
+margin_bottom = 512.0
+custom_styles/panel = SubResource( 9 )
+
+[node name="PhotoOne" type="Sprite" parent="PhotoPanel"]
+position = Vector2( 444, 224 )
+scale = Vector2( 0.2675, 0.277333 )
+texture = ExtResource( 7 )
+
+[node name="Suzana" type="Sprite" parent="PhotoPanel/PhotoOne"]
+position = Vector2( 912.15, 201.923 )
+scale = Vector2( 2.34921, 2.34921 )
+texture = ExtResource( 6 )
+
+[node name="PhotoTwo" type="Sprite" parent="PhotoPanel"]
+visible = false
+position = Vector2( 444, 224 )
+scale = Vector2( 0.308468, 0.250905 )
+texture = ExtResource( 8 )
+
+[node name="PhotoThree" type="Sprite" parent="PhotoPanel"]
+visible = false
+position = Vector2( 444, 224 )
+scale = Vector2( 0.835938, 0.717241 )
+texture = ExtResource( 6 )
+
+[node name="Domingas" type="Sprite" parent="PhotoPanel/PhotoThree"]
+position = Vector2( 373.882, 123.103 )
+scale = Vector2( 0.70434, 0.715491 )
+texture = ExtResource( 5 )
+
+[node name="MensagePanel" type="WindowDialog" parent="PhotoPanel"]
+visible = true
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -284.0
+margin_top = 64.0
+margin_right = 440.0
+margin_bottom = 238.0
+rect_scale = Vector2( 0.785714, 0.785714 )
+theme = ExtResource( 2 )
+
+[node name="Label" type="Label" parent="PhotoPanel/MensagePanel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -352.0
+margin_top = -77.0
+margin_right = 361.0
+margin_bottom = 106.0
+custom_colors/font_color = Color( 0.196078, 0.282353, 0.376471, 0.670588 )
+autowrap = true
+
+[node name="WritingTime" type="Timer" parent="PhotoPanel/MensagePanel"]
+wait_time = 0.05
+
+[node name="Button" type="Button" parent="."]
+margin_left = 848.0
+margin_top = 488.0
+margin_right = 984.0
+margin_bottom = 532.0
+theme = ExtResource( 2 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Continuar"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Pop_Skills" parent="." instance=ExtResource( 3 )]
+
+[connection signal="timeout" from="PhotoPanel/MensagePanel/WritingTime" to="." method="_on_WritingTime_timeout"]
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
