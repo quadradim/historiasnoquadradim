@@ -6,6 +6,7 @@ var scenes_data = {
 #		'audio' => null, 'path', 'continue'
 #		'audio_description' => []
 #		'has_backpack'
+#		'sound_effect' => []
 #	]
 	'production': [
 		'res://scenes/GUI/Production.tscn',
@@ -14,6 +15,7 @@ var scenes_data = {
 		null,
 		[],
 		false,
+		[],
 	],
 	'logo_opening': [
 		'res://scenes/GUI/LogoOpening.tscn',
@@ -22,6 +24,7 @@ var scenes_data = {
 		'res://soundtrack/Loop1 Intro.mp3',
 		[],
 		false,
+		[],
 	],
 	'menu': [
 		'res://scenes/GUI/Menu.tscn',
@@ -30,6 +33,7 @@ var scenes_data = {
 		'continue',
 		[],
 		false,
+		[],
 	],
 	'access01': [
 		'res://scenes/FirstAccess/Access01.tscn',
@@ -38,6 +42,7 @@ var scenes_data = {
 		'res://soundtrack/Loop2-Atualizado.mp3',
 		[],
 		false,
+		[],
 	],
 	'access02': [
 		'res://scenes/FirstAccess/Access02.tscn',
@@ -51,6 +56,7 @@ var scenes_data = {
 			"res://dialogs/audio_description/01_introduction/4_trecho.wav",
 		],
 		false,
+		[],
 	],
 	'character_choice': [
 		'res://scenes/FirstAccess/CharacterChoice.tscn',
@@ -59,6 +65,7 @@ var scenes_data = {
 		'res://soundtrack/Loop3x.mp3',
 		[],
 		false,
+		[],
 	],
 	'diary': [
 		'res://scenes/GUI/Diary.tscn',
@@ -67,14 +74,16 @@ var scenes_data = {
 		'res://soundtrack/Loop5 - Diário.mp3',
 		[],
 		false,
+		[],
 	],
 	'travel_scene': [
 		'res://scenes/GUI/TravelScene.tscn',
 		'end_travel_scene',
-		false,
-		null,
+		true,
+		'res://soundtrack/carros.mp3',
 		[],
 		false,
+		[],
 	],
 	'episode_intro':[
 		'res://scenes/Introductions/EpisodeIntro.tscn',
@@ -83,6 +92,7 @@ var scenes_data = {
 		null,
 		[],
 		false,
+		[],
 	],
 	'introd_lavadeiras': [
 		'res://scenes/Introductions/Lavadeiras.tscn',
@@ -91,6 +101,7 @@ var scenes_data = {
 		null,
 		[],
 		false,
+		[],
 	],
 	'suzana': [
 		'res://scenes/dialogs/Suazana.tscn',
@@ -99,6 +110,7 @@ var scenes_data = {
 		'continue',
 		[],
 		false,
+		[],
 	],
 	'episodes_selection': [
 		'res://scenes/GUI/EpisodeSelection.tscn',
@@ -107,6 +119,7 @@ var scenes_data = {
 		'continue',
 		[],
 		false,
+		[],
 	],
 	'analyze_photos': [
 		'res://scenes/observation/PhotoAnalyze.tscn',
@@ -115,6 +128,7 @@ var scenes_data = {
 		null,
 		[],
 		true,
+		[],
 	],
 	'lavadeiras': [
 		'res://scenes/ambience/Lavadeiras.tscn',
@@ -123,6 +137,7 @@ var scenes_data = {
 		'res://soundtrack/Loop4 Lavadeiras.mp3',
 		[],
 		true,
+		[],
 	],
 	'lavadeira_amiga': [
 		'res://scenes/dialogs/Lavadeira.tscn',
@@ -131,6 +146,7 @@ var scenes_data = {
 		'continue',
 		[],
 		false,
+		[],
 	],
 	'intro_multidao': [
 		'res://scenes/Introductions/Multidao.tscn',
@@ -139,6 +155,7 @@ var scenes_data = {
 		null,
 		[],
 		false,
+		[],
 	],
 	'multidao': [
 		'res://scenes/ambience/Multidao.tscn',
@@ -147,6 +164,7 @@ var scenes_data = {
 		"res://soundtrack/hotel diamantina.mp3",
 		[],
 		false,
+		[],
 	],
 	'distractor1_darcy': [
 		'res://scenes/dialogs/protesto_bandeirante/Distrator01.tscn',
@@ -155,6 +173,7 @@ var scenes_data = {
 		'continue',
 		[],
 		false,
+		[],
 	],
 	'distractor2_darcy': [
 		'res://scenes/dialogs/protesto_bandeirante/Distrator02.tscn',
@@ -163,6 +182,7 @@ var scenes_data = {
 		'continue',
 		[],
 		false,
+		[],
 	],
 	'distractor3_darcy': [
 		'res://scenes/dialogs/protesto_bandeirante/Distrator03.tscn',
@@ -171,6 +191,7 @@ var scenes_data = {
 		"res://soundtrack/Levante da Boa Vontade.mp3",
 		[],
 		false,
+		[],
 	],
 	'darcy_speech': [
 		'res://scenes/dialogs/Darcy.tscn',
@@ -192,6 +213,7 @@ var scenes_data = {
 			"res://dialogs/audio_description/03_darcy_speech/fala_11.wav",
 		],
 		false,
+		[],
 	],
 	'word_choice': [
 		'res://scenes/Minigames/WordSelection.tscn',
@@ -200,6 +222,7 @@ var scenes_data = {
 		null,
 		[],
 		true,
+		[],
 	],
 	'taguatinga_introduction':[
 		'res://scenes/Introductions/TaguaIntroduction.tscn',
@@ -208,6 +231,7 @@ var scenes_data = {
 		null,
 		[],
 		false,
+		[],
 	],
 	'Taguatinga': [
 		'res://scenes/ambience/Taguatinga.tscn',
@@ -216,6 +240,7 @@ var scenes_data = {
 		'res://soundtrack/Loop4 Lavadeiras.mp3',
 		[],
 		true,
+		[],
 	],
 	'jose_dialog':[
 		'res://scenes/dialogs/investigação_taguatinga/JoséMiguel.tscn',
@@ -224,6 +249,7 @@ var scenes_data = {
 		'continue',
 		[],
 		false,
+		[],
 	],
 	'policial_distrator_dialog':[
 		'res://scenes/dialogs/investigação_taguatinga/PolicialDistrator.tscn',
@@ -232,6 +258,7 @@ var scenes_data = {
 		'continue',
 		[],
 		false,
+		[],
 	],
 	'chefe_de_policia_dialog':[
 		'res://scenes/dialogs/investigação_taguatinga/ChefeDePolicia.tscn',
@@ -240,6 +267,7 @@ var scenes_data = {
 		'continue',
 		[],
 		true,
+		[],
 	],
 	'distrator_trabalhador_dialog':[
 		'res://scenes/dialogs/investigação_taguatinga/DistratorTrabalhador.tscn',
@@ -248,6 +276,7 @@ var scenes_data = {
 		'continue',
 		[],
 		false,
+		[],
 	],
 	'raulino_dialog':[
 		'res://scenes/dialogs/investigação_taguatinga/Raulino.tscn',
@@ -256,6 +285,7 @@ var scenes_data = {
 		'continue',
 		[],
 		true,
+		[],
 	],
 	'folheto_raulino':[
 		'res://scenes/ambience/FolhetoRaulino.tscn',
@@ -264,6 +294,7 @@ var scenes_data = {
 		null,
 		[],
 		false,
+		[],
 	],
 	'plano_piloto_intro':[
 		'res://scenes/Introductions/PlanoPilotointro.tscn',
@@ -272,6 +303,7 @@ var scenes_data = {
 		null,
 		[],
 		true,
+		[],
 	],
 	'israel_dialog':[
 		'res://scenes/dialogs/Esplanada/IsraeldaSilva.tscn',
@@ -280,6 +312,7 @@ var scenes_data = {
 		null,
 		[],
 		true,
+		[],
 	],
 	'ranieri_jornalista_dialog':[
 		'res://scenes/dialogs/Esplanada/RanieriJornalista.tscn',
@@ -288,6 +321,7 @@ var scenes_data = {
 		null,
 		[],
 		true,
+		[],
 	],
 	'israel_professora_dialog':[
 		'res://scenes/dialogs/Esplanada/IsraelProfessora.tscn',
@@ -296,6 +330,7 @@ var scenes_data = {
 		null,
 		[],
 		true,
+		[],
 	],
 	'word_selection_2':[
 		'res://scenes/Minigames/WordSelection2.tscn',
@@ -304,5 +339,6 @@ var scenes_data = {
 		null,
 		[],
 		true,
+		[],
 	]
 }

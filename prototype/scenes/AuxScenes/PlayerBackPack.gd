@@ -13,6 +13,8 @@ func _ready():
 
 func _on_TextureButton_pressed():
 	player_data = $DiaryInventory/PlayerEntitiy.read()
+	$BackpackSoundeffect.set_volume_db(player_data["soundeffect"])
+	$BackpackSoundeffect.play()
 	
 	if $DiaryInventory.visible == true:
 		$DiaryHideAnimation.play("DiaryHide")
@@ -35,3 +37,8 @@ func _on_DiaryPopAnimation_animation_finished(anim_name):
 
 func _on_BackPackBeating_animation_finished(anim_name):
 	$BackPack.scale = Vector2(0.203,0.203)
+
+
+func _on_BackpackSoundeffect_finished():
+	$BackpackSoundeffect.stop()
+	pass # Replace with function body.

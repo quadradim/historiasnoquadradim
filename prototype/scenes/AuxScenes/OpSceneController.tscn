@@ -64,5 +64,7 @@ anchor_bottom = 1.0
 mouse_filter = 2
 color = Color( 0, 0, 0, 0 )
 
+[node name="SoundEffect" type="AudioStreamPlayer" parent="."]
+
 [connection signal="finished" from="AudioDescription" to="." method="audio_description_finished"]
 [connection signal="back_menu" from="ConfigurationPopup" to="." method="setting_back_menu"]

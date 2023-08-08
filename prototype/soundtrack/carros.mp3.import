@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/carros.mp3-48c2db4b681cc7395eea186a993289d9.mp3str"
+
+[deps]
+
+source_file="res://soundtrack/carros.mp3"
+dest_files=[ "res://.import/carros.mp3-48c2db4b681cc7395eea186a993289d9.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,6 +1,8 @@
 extends CanvasLayer
 
 signal end_travel_scene
+signal start_audio
+
 onready var veicles = get_node("/root/Global")
 func _ready():
 	if bool(veicles.locked_veicles[1]) == true:

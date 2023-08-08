@@ -118,7 +118,7 @@ func _ready():
 
 	transition_animation.play("fade_out")
 
-	var initial_scene = "production"
+	var initial_scene = "travel_scene"
 	load_control_scene(
 		scenes_data[initial_scene][0],
 		initial_scene,
@@ -227,6 +227,13 @@ func play_audio_description():
 	$AudioDescription.play()
 	current_audio += 1
 
+func play_sound_effect():
+	var player_data = $PlayerEntity.read()
+	$SoundEffect.stream = load(scenes_data[current_scene_name][4][current_audio])
+	$SoundEffect.set_volume_db(player_data["soundeffect"])
+	$SoundEffect.play()
+	pass
+	
 func start_audio_description():
 	play_audio_description()
 
