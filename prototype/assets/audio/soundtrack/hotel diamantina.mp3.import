@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/hotel diamantina.mp3-c3a7b025b003d2a2ca12a9786f6b9a78.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/soundtrack/hotel diamantina.mp3"
+dest_files=[ "res://.import/hotel diamantina.mp3-c3a7b025b003d2a2ca12a9786f6b9a78.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

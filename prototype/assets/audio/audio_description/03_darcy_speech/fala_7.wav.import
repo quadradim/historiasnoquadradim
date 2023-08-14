@@ -1,0 +1,23 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/fala_7.wav-542837aadc82578db48867815146da80.sample"
+
+[deps]
+
+source_file="res://assets/audio/audio_description/03_darcy_speech/fala_7.wav"
+dest_files=[ "res://.import/fala_7.wav-542837aadc82578db48867815146da80.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

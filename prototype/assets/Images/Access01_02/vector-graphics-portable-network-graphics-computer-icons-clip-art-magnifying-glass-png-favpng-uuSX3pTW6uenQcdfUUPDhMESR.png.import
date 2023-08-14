@@ -1,0 +1,35 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/vector-graphics-portable-network-graphics-computer-icons-clip-art-magnifying-glass-png-favpng-uuSX3pTW6uenQcdfUUPDhMESR.png-6012e484b8ad1a54dc34776650a85784.stex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://assets/Images/Access01_02/vector-graphics-portable-network-graphics-computer-icons-clip-art-magnifying-glass-png-favpng-uuSX3pTW6uenQcdfUUPDhMESR.png"
+dest_files=[ "res://.import/vector-graphics-portable-network-graphics-computer-icons-clip-art-magnifying-glass-png-favpng-uuSX3pTW6uenQcdfUUPDhMESR.png-6012e484b8ad1a54dc34776650a85784.stex" ]
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/bptc_ldr=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+process/invert_color=false
+process/normal_map_invert_y=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

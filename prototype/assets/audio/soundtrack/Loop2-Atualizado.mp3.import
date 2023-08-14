@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Loop2-Atualizado.mp3-50568aea51778527107b1efafabb878c.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/soundtrack/Loop2-Atualizado.mp3"
+dest_files=[ "res://.import/Loop2-Atualizado.mp3-50568aea51778527107b1efafabb878c.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

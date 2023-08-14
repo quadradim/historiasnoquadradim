@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Loop5 - Diário.mp3-cb49189e611b29b99fb9789316a7414f.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/soundtrack/Loop5 - Diário.mp3"
+dest_files=[ "res://.import/Loop5 - Diário.mp3-cb49189e611b29b99fb9789316a7414f.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Loop Protesto Darcy.mp3-ab98ef34605a8a9878d17eff45cc0ea1.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/soundtrack/Loop Protesto Darcy.mp3"
+dest_files=[ "res://.import/Loop Protesto Darcy.mp3-ab98ef34605a8a9878d17eff45cc0ea1.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

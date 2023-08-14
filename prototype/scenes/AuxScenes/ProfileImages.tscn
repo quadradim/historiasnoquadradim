@@ -2,7 +2,7 @@
 
 [ext_resource path="res://scenes/AuxScenes/ProfileImages.gd" type="Script" id=1]
 [ext_resource path="res://assets/Fonts/bebas_neue/BebasNeue-Regular.otf" type="DynamicFontData" id=2]
-[ext_resource path="res://assets/Images/Composition/ProfileImages/suzana_face.png" type="Texture" id=3]
+[ext_resource path="res://assets/Images/ProfileImages/suzana_face.png" type="Texture" id=3]
 
 [sub_resource type="DynamicFont" id=20]
 size = 20

@@ -1,12 +1,13 @@
 [gd_scene load_steps=13 format=2]
 
-[ext_resource path="res://assets/Styles/Themes/Menu.tres" type="Theme" id=1]
-[ext_resource path="res://assets/Images/Composition/Menu/Padrão3.png" type="Texture" id=2]
-[ext_resource path="res://assets/Images/Composition/Menu/Padrão2.png" type="Texture" id=3]
-[ext_resource path="res://assets/Images/Composition/Menu/Padrão1.png" type="Texture" id=4]
+[ext_resource path="res://assets/Themes/Menu.tres" type="Theme" id=1]
+[ext_resource path="res://assets/Images/Menu/Padrão3.png" type="Texture" id=2]
+[ext_resource path="res://assets/Images/Menu/Padrão2.png" type="Texture" id=3]
+[ext_resource path="res://assets/Images/Menu/Padrão1.png" type="Texture" id=4]
 [ext_resource path="res://assets/Fonts/bebas_neue/BebasNeue-Regular.otf" type="DynamicFontData" id=5]
-[ext_resource path="res://assets/Images/Composition/Access01_02/Daco_4140150.png" type="Texture" id=7]
+[ext_resource path="res://assets/Images/Access01_02/Daco_4140150.png" type="Texture" id=7]
 [ext_resource path="res://assets/Fonts/type-writter/JMH Typewriter.ttf" type="DynamicFontData" id=8]
+
 
 [sub_resource type="GDScript" id=13]
 script/source = "extends CanvasLayer
