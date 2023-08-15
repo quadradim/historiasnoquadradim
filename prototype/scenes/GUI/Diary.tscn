@@ -20,7 +20,7 @@
 [ext_resource path="res://assets/Fonts/bebas_neue/BebasNeue-Regular.ttf" type="DynamicFontData" id=18]
 [ext_resource path="res://assets/Images/diary/mapa.png" type="Texture" id=19]
 [ext_resource path="res://assets/Images/diary/tape.png" type="Texture" id=20]
-[ext_resource path="res://assets/Images/diary/historiômetro/1.png" type="Texture" id=21]
+[ext_resource path="res://assets/Images/diary/1.png" type="Texture" id=21]
 [ext_resource path="res://assets/Images/diary/Personagens/diario_de_bordo_bloqueado.png" type="Texture" id=22]
 [ext_resource path="res://assets/Images/diary/binoculos2.png" type="Texture" id=23]
 [ext_resource path="res://assets/Images/CharacterChoice/habilidades/cartazes.png" type="Texture" id=24]
@@ -59,7 +59,6 @@
 [ext_resource path="res://assets/Images/diary/nuc.bandeirante.png" type="Texture" id=57]
 [ext_resource path="res://assets/Images/diary/planopiloto.png" type="Texture" id=58]
 [ext_resource path="res://assets/Images/diary/taguatinga.png" type="Texture" id=59]
-
 
 [sub_resource type="StyleBoxFlat" id=30]
 bg_color = Color( 1, 0, 0, 0 )
@@ -355,18 +354,18 @@ scale = Vector2( 0.352, 0.376 )
 texture = ExtResource( 7 )
 
 [node name="MapIcon" type="Sprite" parent="."]
-position = Vector2( 926, 193 )
-scale = Vector2( 0.337, 0.337 )
+position = Vector2( 922, 194 )
+scale = Vector2( 0.309373, 0.303304 )
 texture = ExtResource( 16 )
 
 [node name="CharactersIcon" type="Sprite" parent="."]
-position = Vector2( 928, 288 )
-scale = Vector2( 0.333, 0.333 )
+position = Vector2( 928, 289 )
+scale = Vector2( 0.264163, 0.266494 )
 texture = ExtResource( 17 )
 
 [node name="AbilityIcon" type="Sprite" parent="."]
-position = Vector2( 931, 392 )
-scale = Vector2( 0.321, 0.321 )
+position = Vector2( 931, 390 )
+scale = Vector2( 0.227473, 0.227473 )
 texture = ExtResource( 47 )
 
 [node name="PlayerEntitiy" parent="." instance=ExtResource( 10 )]
@@ -552,6 +551,7 @@ align = 1
 valign = 1
 
 [node name="MapTab" type="Tabs" parent="."]
+visible = false
 margin_right = 40.0
 margin_bottom = 24.0
 
@@ -855,7 +855,6 @@ margin_bottom = 209.0
 position = Vector2( 694, 200 )
 
 [node name="AbillityTab" type="Tabs" parent="."]
-visible = false
 margin_right = 40.0
 margin_bottom = 24.0
 
@@ -928,16 +927,22 @@ margin_right = 586.585
 margin_bottom = 549.02
 
 [node name="Cartazes" type="Sprite" parent="AbillityTab"]
-position = Vector2( 319.567, 131.567 )
-scale = Vector2( 0.147293, 0.147293 )
+position = Vector2( 319, 133 )
+scale = Vector2( 0.0831747, 0.0831747 )
 texture = ExtResource( 24 )
 
 [node name="CartazesButton" type="TextureButton" parent="AbillityTab/Cartazes"]
-anchor_bottom = 1.0
+anchor_left = -0.203269
+anchor_top = -0.233831
+anchor_right = 0.207534
+anchor_bottom = 0.74769
 margin_left = -411.0
 margin_top = -404.0
 margin_right = 417.0
 margin_bottom = -403.0
+__meta__ = {
+"_edit_use_anchors_": true
+}
 
 [node name="Chapeu" type="Sprite" parent="AbillityTab"]
 position = Vector2( 443, 131 )
