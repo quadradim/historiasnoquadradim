@@ -19,3 +19,8 @@ func _ready():
 func _on_NextButton_pressed():
 	emit_signal("end_taguatinga_introduction","Taguatinga")
 	pass # Replace with function body.
+
+
+func _on_StartAudio_timeout():
+	emit_signal("start_audio")
+	pass # Replace with function body.

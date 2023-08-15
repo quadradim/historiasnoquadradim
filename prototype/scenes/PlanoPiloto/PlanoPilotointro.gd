@@ -20,3 +20,8 @@ func _ready():
 func _on_IsraelButton_pressed():
 	emit_signal("end_plano_piloto_intro","israel_dialog")
 	pass # Replace with function body.
+
+
+func _on_StartAudio_timeout():
+	emit_signal("start_audio")
+	pass # Replace with function body.

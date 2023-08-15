@@ -6,7 +6,6 @@
 [ext_resource path="res://assets/Images/NucleoBandeirante/ícone_fala1.png" type="Texture" id=4]
 [ext_resource path="res://scenes/NucleoBandeirante/dialogs/Distrator01.gd" type="Script" id=5]
 
-
 [node name="Distrator01" type="CanvasLayer"]
 script = ExtResource( 5 )
 

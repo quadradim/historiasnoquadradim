@@ -81,7 +81,9 @@ var scenes_data = {
 		'end_episode_intro',
 		true,
 		null,
-		[],
+		[
+			"res://assets/audio/audio_description/02_locality_introduction/Cidade Livre Intro.wav",
+		],
 		false,
 	],
 	'introd_lavadeiras': [
@@ -206,7 +208,7 @@ var scenes_data = {
 		'end_taguatinga_introduction',
 		false,
 		null,
-		[],
+		["res://assets/audio/audio_description/02_locality_introduction/Taguatinga Intro.wav"],
 		false,
 	],
 	'Taguatinga': [
@@ -270,7 +272,7 @@ var scenes_data = {
 		'end_plano_piloto_intro',
 		false,
 		null,
-		[],
+		['res://assets/audio/audio_description/02_locality_introduction/Plano Piloto & Esplanada Intro.wav'],
 		true,
 	],
 	'israel_dialog':[

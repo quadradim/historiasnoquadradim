@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/som de mochila.mp3-df067875e24d49db2547d3131d8bef30.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/sound_effects/som de mochila.mp3"
+dest_files=[ "res://.import/som de mochila.mp3-df067875e24d49db2547d3131d8bef30.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

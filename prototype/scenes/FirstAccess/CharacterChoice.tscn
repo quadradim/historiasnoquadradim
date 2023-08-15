@@ -28,7 +28,6 @@
 [ext_resource path="res://scenes/AuxScenes/AudioController.tscn" type="PackedScene" id=26]
 [ext_resource path="res://assets/Images/CharacterChoice/mesa.png" type="Texture" id=27]
 
-
 [sub_resource type="StyleBoxFlat" id=3]
 bg_color = Color( 0.564706, 0.72549, 0.882353, 1 )
 border_width_left = 2

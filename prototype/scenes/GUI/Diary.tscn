@@ -1,4 +1,4 @@
-[gd_scene load_steps=87 format=2]
+[gd_scene load_steps=86 format=2]
 
 [ext_resource path="res://assets/Themes/Menu.tres" type="Theme" id=1]
 [ext_resource path="res://scenes/GUI/Diary.gd" type="Script" id=2]
@@ -20,7 +20,6 @@
 [ext_resource path="res://assets/Fonts/bebas_neue/BebasNeue-Regular.ttf" type="DynamicFontData" id=18]
 [ext_resource path="res://assets/Images/diary/mapa.png" type="Texture" id=19]
 [ext_resource path="res://assets/Images/diary/tape.png" type="Texture" id=20]
-[ext_resource path="res://assets/Images/diary/historiômetro/1.png" type="Texture" id=21]
 [ext_resource path="res://assets/Images/diary/Personagens/diario_de_bordo_bloqueado.png" type="Texture" id=22]
 [ext_resource path="res://assets/Images/diary/binoculos2.png" type="Texture" id=23]
 [ext_resource path="res://assets/Images/CharacterChoice/habilidades/cartazes.png" type="Texture" id=24]
@@ -59,7 +58,6 @@
 [ext_resource path="res://assets/Images/diary/nuc.bandeirante.png" type="Texture" id=57]
 [ext_resource path="res://assets/Images/diary/planopiloto.png" type="Texture" id=58]
 [ext_resource path="res://assets/Images/diary/taguatinga.png" type="Texture" id=59]
-
 
 [sub_resource type="StyleBoxFlat" id=30]
 bg_color = Color( 1, 0, 0, 0 )
@@ -679,7 +677,7 @@ align = 1
 [node name="CharactersBackground" type="Sprite" parent="CharactersTab"]
 position = Vector2( 329, 302 )
 scale = Vector2( 0.232984, 0.232984 )
-texture = ExtResource( 21 )
+texture = ExtResource( 33 )
 
 [node name="CharacterBackground" type="Panel" parent="CharactersTab"]
 anchor_left = -1.005
@@ -862,7 +860,7 @@ margin_bottom = 24.0
 [node name="CharactersBackground" type="Sprite" parent="AbillityTab"]
 position = Vector2( 328, 254 )
 scale = Vector2( 0.28875, 0.28875 )
-texture = ExtResource( 21 )
+texture = ExtResource( 33 )
 
 [node name="Title" type="Label" parent="AbillityTab"]
 anchor_left = -8.694

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Cascalho Click.mp3-206ad3b372b5cacdb34a23b9afac4f96.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/sound_effects/Cascalho Click.mp3"
+dest_files=[ "res://.import/Cascalho Click.mp3-206ad3b372b5cacdb34a23b9afac4f96.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

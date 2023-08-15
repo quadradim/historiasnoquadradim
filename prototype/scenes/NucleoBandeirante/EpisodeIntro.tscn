@@ -6,7 +6,6 @@
 [ext_resource path="res://assets/Images/Access01_02/mapa-satélite-de-brasília-brasil-ruas-da-cidade-128618769.png" type="Texture" id=4]
 [ext_resource path="res://assets/Images/Access01_02/Daco_4140150.png" type="Texture" id=5]
 
-
 [node name="EpisodeIntro" type="CanvasLayer"]
 script = ExtResource( 1 )
 
@@ -47,6 +46,7 @@ wait_time = 2.6
 [node name="PauseVideo" type="Timer" parent="."]
 wait_time = 2.5
 
+[connection signal="finished" from="VideoPlayer" to="." method="_on_VideoPlayer_finished"]
 [connection signal="pressed" from="NextButton" to="." method="_on_NextButton_pressed"]
 [connection signal="timeout" from="EnableButton" to="." method="_on_EnableButton_timeout"]
 [connection signal="timeout" from="StartVideo" to="." method="_on_StartVideo_timeout"]
