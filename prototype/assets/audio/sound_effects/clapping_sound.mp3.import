@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/clapping_sound.mp3-2f71e6d607f38cca08a4c2e0e582a409.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/sound_effects/clapping_sound.mp3"
+dest_files=[ "res://.import/clapping_sound.mp3-2f71e6d607f38cca08a4c2e0e582a409.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

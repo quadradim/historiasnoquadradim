@@ -1,12 +1,12 @@
 [gd_scene load_steps=8 format=2]
 
-[ext_resource path="res://scenes/dialogs/investigação_taguatinga/JoséMiguel.gd" type="Script" id=1]
-[ext_resource path="res://assets/Images/Composition/Taguatinga/3-Taguatinga (não-finalizado).png" type="Texture" id=2]
+[ext_resource path="res://scenes/Taguatinga/dialogs/JoséMiguel.gd" type="Script" id=1]
+[ext_resource path="res://assets/Images/Taguatinga/3-Taguatinga (não-finalizado).png" type="Texture" id=2]
 [ext_resource path="res://scenes/AuxScenes/ChatBox.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/AuxScenes/PlayerBackPack.tscn" type="PackedScene" id=4]
-[ext_resource path="res://assets/Images/Composition/Taguatinga/ícone_fala.png" type="Texture" id=5]
-[ext_resource path="res://assets/Images/Composition/Taguatinga/em_conversa.png" type="Texture" id=6]
-[ext_resource path="res://entities/Player.tscn" type="PackedScene" id=7]
+[ext_resource path="res://assets/Images/Taguatinga/ícone_fala.png" type="Texture" id=5]
+[ext_resource path="res://assets/Images/Taguatinga/em_conversa.png" type="Texture" id=6]
+[ext_resource path="res://scenes/AuxScenes/Player.tscn" type="PackedScene" id=7]
 
 [node name="CanvasLayer" type="CanvasLayer"]
 script = ExtResource( 1 )
