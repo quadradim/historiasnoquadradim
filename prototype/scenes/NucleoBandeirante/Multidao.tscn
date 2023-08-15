@@ -4,10 +4,11 @@
 [ext_resource path="res://assets/Images/ProtestoBandeirante/sindicalista_distrator_multidão3.png" type="Texture" id=2]
 [ext_resource path="res://assets/Images/ProtestoBandeirante/distrator1_line_colorido.png" type="Texture" id=3]
 [ext_resource path="res://assets/Images/ProtestoBandeirante/distrator2_line_colorido.png" type="Texture" id=4]
-[ext_resource path="res://scenes/ambience/Multidao.gd" type="Script" id=5]
+[ext_resource path="res://scenes/NucleoBandeirante/Multidao.gd" type="Script" id=5]
 [ext_resource path="res://scenes/AuxScenes/AudioController.tscn" type="PackedScene" id=7]
 [ext_resource path="res://assets/audio/soundtrack/hotel diamantina.mp3" type="AudioStream" id=8]
 [ext_resource path="res://scenes/AuxScenes/PlayerBackPack.tscn" type="PackedScene" id=9]
+
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.6, 0.6, 0.6, 0 )

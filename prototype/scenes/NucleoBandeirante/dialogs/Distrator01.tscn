@@ -1,10 +1,11 @@
 [gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://assets/Cena/ProtestoBandeirante/Cenario.jpeg" type="Texture" id=1]
-[ext_resource path="res://assets/Images/Composition/NucleoBandeirante/no_cenario1.png" type="Texture" id=2]
+[ext_resource path="res://assets/Images/ProtestoBandeirante/Cenario.jpeg" type="Texture" id=1]
+[ext_resource path="res://assets/Images/NucleoBandeirante/no_cenario1.png" type="Texture" id=2]
 [ext_resource path="res://scenes/AuxScenes/ChatBox.tscn" type="PackedScene" id=3]
-[ext_resource path="res://assets/Images/Composition/NucleoBandeirante/ícone_fala1.png" type="Texture" id=4]
-[ext_resource path="res://scenes/dialogs/protesto_bandeirante/Distrator01.gd" type="Script" id=5]
+[ext_resource path="res://assets/Images/NucleoBandeirante/ícone_fala1.png" type="Texture" id=4]
+[ext_resource path="res://scenes/NucleoBandeirante/dialogs/Distrator01.gd" type="Script" id=5]
+
 
 [node name="Distrator01" type="CanvasLayer"]
 script = ExtResource( 5 )

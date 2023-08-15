@@ -37,7 +37,7 @@ func load_control_scene(local, name, out_signal):
 	# 					  when you want out scene.
 	print(local)
 	var new_scene = SceneUsed.new()
-'1''1		1q	1''	1qa	'	1aq	''	1	'	1'	new_scene.instance = load(local).instance()
+	new_scene.instance = load(local).instance()
 	new_scene.instance.layer = -1
 	new_scene.out_signal = out_signal
 	new_scene.instance.connect(out_signal, self, 'change_scene')

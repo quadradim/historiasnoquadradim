@@ -5,8 +5,9 @@
 [ext_resource path="res://assets/Images/NucleoBandeirante/no_cenário (1).png" type="Texture" id=3]
 [ext_resource path="res://scenes/AuxScenes/AudioController.tscn" type="PackedScene" id=4]
 [ext_resource path="res://assets/audio/soundtrack/Loop4 Lavadeiras.mp3" type="AudioStream" id=5]
-[ext_resource path="res://scenes/ambience/Lavadeiras.gd" type="Script" id=6]
+[ext_resource path="res://scenes/NucleoBandeirante/Lavadeiras.gd" type="Script" id=6]
 [ext_resource path="res://scenes/AuxScenes/PlayerBackPack.tscn" type="PackedScene" id=7]
+
 
 
 [sub_resource type="StyleBoxFlat" id=1]
