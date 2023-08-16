@@ -19,7 +19,11 @@ func _on_TextureButton_pressed():
 	else:
 		$DiaryInventory.visible = true
 		$DiaryPopAnimation.play("DiaryPop")
+	$BackPackSoundEffect.play()
 
+func _process(delta):
+	$BackPackSoundEffect.update("soundeffect")
+	
 func _on_DiaryPopAnimation_animation_started(anim_name):
 	$BackPack/BackPackButton.visible = false
 	

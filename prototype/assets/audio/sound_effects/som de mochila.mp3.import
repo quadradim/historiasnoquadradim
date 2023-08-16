@@ -11,5 +11,5 @@ dest_files=[ "res://.import/som de mochila.mp3-df067875e24d49db2547d3131d8bef30.
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0

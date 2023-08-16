@@ -71,7 +71,7 @@ var scenes_data = {
 	'travel_scene': [
 		'res://scenes/GUI/TravelScene.tscn',
 		'end_travel_scene',
-		false,
+		true,
 		null,
 		[],
 		false,
