@@ -4,6 +4,7 @@
 [ext_resource path="res://scenes/GUI/Production.gd" type="Script" id=2]
 
 
+
 [node name="Production" type="CanvasLayer"]
 script = ExtResource( 2 )
 

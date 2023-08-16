@@ -8,7 +8,9 @@ func _ready():
 	if bool(veicles.locked_veicles[0]) == true:
 		$RuralWillysBloqueada.visible = false
 	pass # Replace with function body.
-
+func _start():
+	$SoundEffect.play()
+	
 func _on_RuralWillysButton_pressed():
 	if bool(veicles.locked_veicles[0]) == false:
 		$MessageBox/MessageText.text = "O veículo selecionado não está disponível"

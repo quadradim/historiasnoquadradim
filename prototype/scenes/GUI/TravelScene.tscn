@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://assets/Images/TravelScene/brasilia.png" type="Texture" id=1]
 [ext_resource path="res://assets/Images/TravelScene/ruralwillys.png" type="Texture" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://assets/Images/TravelScene/placa.png" type="Texture" id=8]
 [ext_resource path="res://assets/Images/TravelScene/ruralwillysbloqueada.png" type="Texture" id=9]
 [ext_resource path="res://assets/Images/TravelScene/zebrinhabloqueada.png" type="Texture" id=10]
+[ext_resource path="res://assets/audio/sound_effects/carros.mp3" type="AudioStream" id=11]
 
 [sub_resource type="DynamicFont" id=1]
 size = 20
@@ -110,6 +111,10 @@ valign = 1
 position = Vector2( 595, 220 )
 scale = Vector2( 0.158002, 0.158002 )
 texture = ExtResource( 8 )
+
+[node name="SoundEffect" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 11 )
+volume_db = 3.496
 
 [connection signal="pressed" from="ZebrinhaButton" to="." method="_on_ZebrinhaButton_pressed"]
 [connection signal="pressed" from="RuralWillysButton" to="." method="_on_RuralWillysButton_pressed"]
