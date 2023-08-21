@@ -4,6 +4,7 @@ var player_data
 signal end_analyze2
 var clues = 0
 
+
 func _ready():
 	player_data = $Player.read()
 	print(player_data)
