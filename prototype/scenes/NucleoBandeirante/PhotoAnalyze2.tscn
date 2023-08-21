@@ -17,7 +17,6 @@
 [ext_resource path="res://assets/Images/diary/livros2.png" type="Texture" id=15]
 [ext_resource path="res://assets/Images/AnáliseDeFotos/Foto 3.png" type="Texture" id=16]
 
-
 [sub_resource type="StyleBoxFlat" id=2]
 bg_color = Color( 0.972549, 0.882353, 0.435294, 1 )
 border_width_left = 2

@@ -134,6 +134,14 @@ var scenes_data = {
 		[],
 		false,
 	],
+	'analyze_photos2': [
+		'res://scenes/NucleoBandeirante/PhotoAnalyze2.tscn',
+		'end_analyze2',
+		false,
+		null,
+		[],
+		false,
+	],
 	'intro_multidao': [
 		'res://scenes/NucleoBandeirante/MultidaoDarcy.tscn',
 		'end_multidao',
