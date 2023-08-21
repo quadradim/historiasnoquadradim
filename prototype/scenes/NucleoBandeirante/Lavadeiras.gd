@@ -4,6 +4,7 @@ signal end_lavadeira
 
 func _ready():
 	$PlayerBackPack.visible = true
+	$MessageBox.popup()
 	pass # Replace with function body.
 
 func _process(delta):

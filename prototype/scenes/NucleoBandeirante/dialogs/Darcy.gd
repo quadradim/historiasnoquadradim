@@ -9,9 +9,12 @@ func _ready():
 	player_data = $Player.read()
 
 func start():
+	$MessageBox.popup()
+	
+func _on_MessageBox_popup_hide():
 	$ChatBox.start()
 	emit_signal("start_audio")
-	
+
 func end_speech():
 	$Player.modifier("characters",2)
 	$PlayerBackPack/DiaryInventory._ready()
@@ -26,3 +29,6 @@ func play_music():
 
 func next_dialog():
 	emit_signal("next_audio")
+
+
+

@@ -5,7 +5,6 @@
 [ext_resource path="res://assets/Fonts/arial/Arialn.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://scenes/AuxScenes/DiaryInventory.gd" type="Script" id=4]
 [ext_resource path="res://assets/Images/diary/Lupa2.png" type="Texture" id=5]
-[ext_resource path="res://assets/Images/diary/reforma.png" type="Texture" id=6]
 [ext_resource path="res://assets/Images/diary/cubo2.png" type="Texture" id=7]
 [ext_resource path="res://assets/Images/CharacterChoice/chapéu2.png" type="Texture" id=8]
 [ext_resource path="res://assets/Images/diary/diaryform.png" type="Texture" id=9]
@@ -14,10 +13,11 @@
 [ext_resource path="res://assets/Images/diary/ícone1.png" type="Texture" id=12]
 [ext_resource path="res://assets/Images/diary/cubo_off.png" type="Texture" id=13]
 [ext_resource path="res://assets/Images/diary/livros2.png" type="Texture" id=14]
-[ext_resource path="res://assets/Images/CharacterChoice/habilidades/cartazes.png" type="Texture" id=15]
+[ext_resource path="res://assets/Images/diary/cartazes.png" type="Texture" id=15]
 [ext_resource path="res://assets/audio/soundtrack/Loop5 - Diário.mp3" type="AudioStream" id=16]
 [ext_resource path="res://assets/Images/diary/jogo_da_memória2.png" type="Texture" id=17]
 [ext_resource path="res://assets/Images/diary/historiômetro/0.png" type="Texture" id=18]
+[ext_resource path="res://assets/Images/diary/1.png" type="Texture" id=19]
 [ext_resource path="res://assets/Images/diary/historiômetro/6.png" type="Texture" id=20]
 [ext_resource path="res://assets/Images/diary/ícone2.png" type="Texture" id=21]
 [ext_resource path="res://assets/Images/diary/tape.png" type="Texture" id=22]
@@ -297,7 +297,6 @@ texture = ExtResource( 5 )
 stream = ExtResource( 16 )
 
 [node name="ProfileTab" type="Tabs" parent="."]
-visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 287.0
@@ -311,10 +310,10 @@ custom_colors/font_color_bg = Color( 0, 0, 0, 1 )
 custom_colors/font_color_fg = Color( 0, 0, 0, 1 )
 
 [node name="Reforma" type="Sprite" parent="ProfileTab"]
-position = Vector2( 304.684, 603.792 )
+position = Vector2( 309.684, 588.792 )
 rotation = -1.5708
-scale = Vector2( 0.36878, 0.36878 )
-texture = ExtResource( 6 )
+scale = Vector2( 0.25523, 0.25523 )
+texture = ExtResource( 19 )
 
 [node name="BackpackPanel" type="Panel" parent="ProfileTab"]
 margin_left = 122.807
@@ -584,7 +583,7 @@ align = 1
 [node name="CharactersBackground" type="Sprite" parent="CharactersTab"]
 position = Vector2( 329, 302 )
 scale = Vector2( 0.232984, 0.232984 )
-texture = ExtResource( 36 )
+texture = ExtResource( 19 )
 
 [node name="CharacterBackground" type="Panel" parent="CharactersTab"]
 anchor_left = -1.005
@@ -768,6 +767,7 @@ margin_bottom = 207.437
 position = Vector2( 694, 200 )
 
 [node name="AbillityTab" type="Tabs" parent="."]
+visible = false
 margin_left = -48.0
 margin_top = 38.4328
 margin_right = -8.0
@@ -776,7 +776,7 @@ margin_bottom = 62.4328
 [node name="CharactersBackground" type="Sprite" parent="AbillityTab"]
 position = Vector2( 328, 254 )
 scale = Vector2( 0.28875, 0.28875 )
-texture = ExtResource( 36 )
+texture = ExtResource( 19 )
 
 [node name="Title" type="Label" parent="AbillityTab"]
 anchor_left = -8.694
@@ -866,16 +866,16 @@ scale = Vector2( 0.372387, 0.372387 )
 texture = ExtResource( 52 )
 
 [node name="Cartazes" type="Sprite" parent="AbillityTab"]
-position = Vector2( 319.567, 131.567 )
-scale = Vector2( 0.147293, 0.147293 )
+position = Vector2( 320, 133.567 )
+scale = Vector2( 0.140555, 0.140555 )
 texture = ExtResource( 15 )
 
 [node name="CartazesButton" type="TextureButton" parent="AbillityTab/Cartazes"]
 anchor_bottom = 1.0
-margin_left = -398.0
-margin_top = -401.0
-margin_right = 410.0
-margin_bottom = -414.0
+margin_left = -420.0
+margin_top = -420.0
+margin_right = 427.0
+margin_bottom = -430.0
 
 [node name="Chapeu2" type="Sprite" parent="AbillityTab"]
 position = Vector2( 446, 131.567 )
@@ -888,10 +888,10 @@ scale = Vector2( 0.131931, 0.131931 )
 texture = ExtResource( 24 )
 
 [node name="ChapéuButton" type="TextureButton" parent="AbillityTab/Chapeu"]
-margin_left = -440.0
-margin_top = -432.0
-margin_right = 440.0
-margin_bottom = 439.0
+margin_left = -432.044
+margin_top = -442.904
+margin_right = 447.956
+margin_bottom = 428.096
 
 [node name="Cubo2" type="Sprite" parent="AbillityTab"]
 position = Vector2( 192, 248.567 )

@@ -1,7 +1,7 @@
 extends CanvasLayer
 
 var player_data
-signal end_analyze
+signal end_analyze2
 var clues = 0
 
 func _ready():
@@ -32,7 +32,7 @@ func previous_image():
 		$PhotoPanel/PhotoThree.visible = false
 
 func exit():
-	emit_signal("end_analyze", "lavadeiras")
+	emit_signal("end_analyze2", "intro_multidao")
 
 func _on_MinigameExplanation_popup_hide():
 	$Title.visible = true
@@ -41,28 +41,28 @@ func _on_FirstButton_button_down():
 	if $PhotoPanel/PhotoOne/FirstClue.visible == false:
 		clues += 1
 	$PhotoPanel/PhotoOne/FirstClue.visible = true
-	$ClueMensage/Label.text = ("Hotel pequeno, com a presença de mulheres.")
+	$ClueMensage/Label.text = ("Há um hotel pequeno, com a presença de mulheres.")
 	$ClueMensage.popup()
 
 func _on_SecoondButton_button_down():
 	if $PhotoPanel/PhotoOne/SecondClue.visible == false:
 		clues += 1
 	$PhotoPanel/PhotoOne/SecondClue.visible = true
-	$ClueMensage/Label.text = ("Observar a expressão dos trabalhadores.")
+	$ClueMensage/Label.text = ("Observe a expressão dos trabalhadores.")
 	$ClueMensage.popup()
 
 func _on_ThirdButton_button_down():
 	if $PhotoPanel/PhotoTwo/ThirdClue.visible == false:
 		clues += 1
 	$PhotoPanel/PhotoTwo/ThirdClue.visible = true
-	$ClueMensage/Label.text = ("Parece haver um palanque improvisado, não é mesmo?")
+	$ClueMensage/Label.text = ("Parece haver um palanque improvisado, e estas pessoas parecem se vestir de maneira diferente das outras.")
 	$ClueMensage.popup()
 
 func _on_FourthButton_button_down():
 	if $PhotoPanel/PhotoThree/FourthClue.visible == false:
 		clues += 1
 	$PhotoPanel/PhotoThree/FourthClue.visible = true
-	$ClueMensage/Label.text = ("Quem você pensa que é, Cris Bumstead? Cbum? Eu acho que não")
+	$ClueMensage/Label.text = ("Observando mais de perto vemos que quem esta discursando é Darcy Ribeiro, chefe da Casa Civil do Governo João Goulart")
 	$ClueMensage.popup()
 
 func _on_UnlockedSkill_popup_hide():
