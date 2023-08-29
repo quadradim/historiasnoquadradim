@@ -2,7 +2,7 @@ extends CanvasLayer
 
 var player_data
 signal end_analyze2
-var clues = 0
+var correct = 0
 
 
 func _ready():
@@ -17,10 +17,14 @@ func next_image():
 		$PhotoPanel/PhotoOne.visible = false
 		$PhotoPanel/PhotoTwo.visible = true
 		$PhotoPanel/PhotoThree.visible = false
+		if correct == 3:
+			$FourthQuestion.popup()
 	elif $PhotoPanel/PhotoTwo.visible == true:
 		$PhotoPanel/PhotoOne.visible = false
 		$PhotoPanel/PhotoTwo.visible = false
 		$PhotoPanel/PhotoThree.visible = true
+		if correct == 5:
+			$SixthQuestion.popup()
 
 func previous_image():
 	if $PhotoPanel/PhotoTwo.visible == true:
@@ -36,34 +40,46 @@ func exit():
 	emit_signal("end_analyze2", "intro_multidao")
 
 func _on_MinigameExplanation_popup_hide():
-	$Title.visible = true
+	$FirstQuestion.popup()
+	$FirstQuestion/FirstAnswer.disabled = false
+	$SecondQuestion/SecondAnswer.disabled = true
+	$ThirdQuestion/ThirdAnswer.disabled = true
+	$FifthQuestion/FifthAnswer.disabled = true
 
-func _on_FirstButton_button_down():
-	if $PhotoPanel/PhotoOne/FirstClue.visible == false:
-		clues += 1
-	$PhotoPanel/PhotoOne/FirstClue.visible = true
-	$ClueMensage/Label.text = ("Há um hotel pequeno, com a presença de mulheres.")
+func _on_FirstAnswer_button_down():
+	correct += 1
+	$ClueMensage/Label.text = ("resposta correta, agora a proxima pergunta")
 	$ClueMensage.popup()
+	$FirstQuestion/FirstAnswer.disabled = true
+	$SecondQuestion/SecondAnswer.disabled = false
 
-func _on_SecoondButton_button_down():
-	if $PhotoPanel/PhotoOne/SecondClue.visible == false:
-		clues += 1
-	$PhotoPanel/PhotoOne/SecondClue.visible = true
-	$ClueMensage/Label.text = ("Observe a expressão dos trabalhadores.")
+func _on_SecondAnswer_button_down():
+	correct += 1
+	$ClueMensage/Label.text = ("Resposta correta, agora a proxima pergunta")
 	$ClueMensage.popup()
+	$SecondQuestion/SecondAnswer.disabled = true
+	$ThirdQuestion/ThirdAnswer.disabled = false
 
-func _on_ThirdButton_button_down():
-	if $PhotoPanel/PhotoTwo/ThirdClue.visible == false:
-		clues += 1
-	$PhotoPanel/PhotoTwo/ThirdClue.visible = true
-	$ClueMensage/Label.text = ("Parece haver um palanque improvisado, e estas pessoas parecem se vestir de maneira diferente das outras.")
+func _on_ThirdAnswer_button_down():
+	correct += 1
+	$ClueMensage/Label.text = ("Muito bom, vamos para a proxima imagem")
 	$ClueMensage.popup()
+	$ThirdQuestion/ThirdAnswer.disabled = true
 
-func _on_FourthButton_button_down():
-	if $PhotoPanel/PhotoThree/FourthClue.visible == false:
-		clues += 1
-	$PhotoPanel/PhotoThree/FourthClue.visible = true
-	$ClueMensage/Label.text = ("Observando mais de perto vemos que quem esta discursando é Darcy Ribeiro, chefe da Casa Civil do Governo João Goulart")
+func _on_FourthQuestion_popup_hide():
+	correct += 1
+	$FifthQuestion.popup()
+	$FifthQuestion/FifthAnswer.disabled = false
+
+func _on_FifthAnswer_button_down():
+	correct += 1
+	$ClueMensage/Label.text = ("Muito bom, vamos para a proxima imagem")
+	$ClueMensage.popup()
+	$FifthQuestion/FifthAnswer.disabled = true
+
+func _on_SixthAnswer_button_down():
+	correct += 1
+	$ClueMensage/Label.text = ("Parabéns você acertou todas as perguntas!")
 	$ClueMensage.popup()
 
 func _on_UnlockedSkill_popup_hide():
@@ -73,10 +89,12 @@ func _on_UnlockedSkill_popup_hide():
 #	$PlayerBackPack/DiaryInventory._ready()
 
 func _on_ClueMensage_popup_hide():
-	if clues == 4:
-		clues += 1
+	if correct == 6:
 		$Button.disabled = false
 		$Fade_Popup.popup()
 		$UnlockedSkill.popup()
 		$UnlockedSkillAnimation.play("Popmenssage")
-
+	elif correct == 1:
+		$SecondQuestion.popup()
+	elif correct == 2:
+		$ThirdQuestion.popup()

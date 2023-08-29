@@ -391,6 +391,7 @@ text = "Próximo"
 stream = ExtResource( 14 )
 
 [node name="ProfileTab" type="Tabs" parent="."]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 287.0
@@ -549,7 +550,6 @@ align = 1
 valign = 1
 
 [node name="MapTab" type="Tabs" parent="."]
-visible = false
 margin_right = 40.0
 margin_bottom = 24.0
 
