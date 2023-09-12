@@ -126,7 +126,10 @@ func word8_button():
 	print(player_choice)
 
 func _on_MessageBox_popup_hide():
-	if $MessageBox/MessageText.text == "Resposta correta, parabéns":
+	if $MessageBox/MessageText.text == "Resposta correta, parabéns. Mas Como começou a depredação da Subprefeitura do Núcleo Bandeirante?":
+		$MessageBox/MessageText.text = "A depredação da SubPrefeitura teve início após a reivindicação de trabalhadores que prestavam serviços à NOVACAP e se definiram como 'turma da boa vontade', por não receberem seus salários há muitos meses. Se somaram aos desempregados que já estavam revoltados em Taguatinga. Então o povo se juntou e já anunciava a greve, quando a repressão da GEB começou. Se instalou então o Levante da Turma da Boa Vontade. Os próximos dias serão intensos."
+		$MessageBox.popup()
+	elif $MessageBox/MessageText.text == "A depredação da SubPrefeitura teve início após a reivindicação de trabalhadores que prestavam serviços à NOVACAP e se definiram como 'turma da boa vontade', por não receberem seus salários há muitos meses. Se somaram aos desempregados que já estavam revoltados em Taguatinga. Então o povo se juntou e já anunciava a greve, quando a repressão da GEB começou. Se instalou então o Levante da Turma da Boa Vontade. Os próximos dias serão intensos.":
 		$NextButton.disabled = false
 		$Fade_Popup.popup()
 		$UnlockedSkill.popup()
@@ -135,7 +138,8 @@ func _on_MessageBox_popup_hide():
 func _on_TryButton_button_down():
 	print(correct_choice)
 	if len(player_choice) == 3 and player_choice[0] in correct_choice and player_choice[1] in correct_choice and player_choice[2] in correct_choice:
-		$MessageBox/MessageText.text = "Resposta correta, parabéns"
+		$InstructionText.hide()
+		$MessageBox/MessageText.text = "Resposta correta, parabéns. Mas Como começou a depredação da Subprefeitura do Núcleo Bandeirante?"
 		$MessageBox.popup()
 		$NextButton.disabled = false
 		$TryButton.disabled = true

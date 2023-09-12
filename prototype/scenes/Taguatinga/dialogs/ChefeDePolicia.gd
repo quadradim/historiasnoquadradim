@@ -3,13 +3,8 @@ var player_data
 
 signal end_chefe_de_policia_dialog
 
-func _ready():
-	player_data = $Player.read()
-	$Player.modifier("ability",[1,0,0,1,0,0,0,1,1])
-#	$PlayerBackPack/DiaryInventory._ready()
-	$Fade_Popup.popup()
-	$UnlockedSkill.popup()
-	$UnlockedSkillAnimation.play("Popmenssage")
+func _ready(): #tirar habilidade (habilidade ja foi desbloqueada na cena da suzana
+	pass
 
 func _on_ChatBox_end_dialog():
 	var j = get_node("/root/Global")

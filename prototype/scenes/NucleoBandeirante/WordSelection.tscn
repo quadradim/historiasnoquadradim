@@ -13,7 +13,7 @@
 [ext_resource path="res://scenes/AuxScenes/PlayerBackPack.tscn" type="PackedScene" id=11]
 [ext_resource path="res://scenes/AuxScenes/Player.tscn" type="PackedScene" id=12]
 [ext_resource path="res://assets/Images/diary/cubo2.png" type="Texture" id=13]
-[ext_resource path="res://assets/Images/diary/planeta2.png" type="Texture" id=14]
+[ext_resource path="res://assets/Images/diary/jornal2.png" type="Texture" id=14]
 [ext_resource path="res://scenes/AuxScenes/Button.tscn" type="PackedScene" id=15]
 
 [sub_resource type="DynamicFont" id=10]
@@ -384,14 +384,15 @@ margin_right = 166.0
 margin_bottom = 12.49
 
 [node name="MessageBox" type="WindowDialog" parent="."]
+visible = true
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -264.0
-margin_top = -106.0
-margin_right = 264.0
-margin_bottom = 106.0
+margin_left = -481.0
+margin_top = -225.0
+margin_right = 485.0
+margin_bottom = 191.0
 theme = ExtResource( 10 )
 
 [node name="MessageText" type="Label" parent="MessageBox"]
@@ -399,14 +400,13 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -233.5
-margin_top = -80.0
-margin_right = 233.5
-margin_bottom = 80.0
+margin_left = -469.0
+margin_top = -181.0
+margin_right = 470.0
+margin_bottom = 143.0
 custom_colors/font_color = Color( 0.0235294, 0.0313726, 0.109804, 1 )
 custom_fonts/font = SubResource( 11 )
-text = "aaaaaaaaaaaa
-"
+text = "aaaaaaaaaaaa"
 align = 1
 valign = 1
 autowrap = true
@@ -467,13 +467,13 @@ autowrap = true
 [node name="Skill" type="Sprite" parent="UnlockedSkill"]
 modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 1150.55, -244.364 )
-scale = Vector2( 0.345715, 0.345715 )
+scale = Vector2( 0.34973, 0.34973 )
 texture = ExtResource( 13 )
 
 [node name="Skill2" type="Sprite" parent="UnlockedSkill"]
 modulate = Color( 1, 1, 1, 0 )
 position = Vector2( -641.455, -244.364 )
-scale = Vector2( 0.512969, 0.512969 )
+scale = Vector2( 0.479516, 0.479516 )
 texture = ExtResource( 14 )
 
 [node name="UnlockedSkillAnimation" type="AnimationPlayer" parent="."]
