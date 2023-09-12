@@ -32,19 +32,6 @@ func _on_WritingTime_timeout():
 		$TutorialText.text = current_text
 	$WritingTime.start()
 
-func _on_Mapa_pressed():
-	if presses_count < text_tutorials.size() - 1:
-		$TutorialText.text = ''
-		text_position+=1
-		current_text = ''
-		current_text_pos = 0
-		presses_count += 1
-		$Mapa.disabled = true
-		$FinishWriting.start()
-
-		emit_signal("next_audio")
-	else:
-		emit_signal("end_access02", "character_choice")
 
 func start_writing():
 	emit_signal("start_audio")
@@ -60,3 +47,19 @@ func music_finished():
 func _on_FinishWriting_timeout():
 	$Mapa.disabled = false
 
+
+
+func _on_Mapa_button_down():
+	if presses_count < text_tutorials.size() - 1:
+		$TutorialText.text = ''
+		text_position+=1
+		current_text = ''
+		current_text_pos = 0
+		presses_count += 1
+		$Mapa.disabled = true
+		$FinishWriting.start()
+
+		emit_signal("next_audio")
+	else:
+		emit_signal("end_access02", "character_choice")
+	pass # Replace with function body.

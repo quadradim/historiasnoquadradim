@@ -2,7 +2,7 @@
 
 [ext_resource path="res://assets/Fonts/type-writter/JMH Typewriter.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://assets/Themes/Menu.tres" type="Theme" id=2]
-[ext_resource path="res://assets/Themes/CharacterChoice.tres" type="Theme" id=3]
+[ext_resource path="res://scenes/AuxScenes/Button.tscn" type="PackedScene" id=3]
 [ext_resource path="res://assets/Images/Access01_02/Daco_4140150.png" type="Texture" id=4]
 [ext_resource path="res://assets/Images/Menu/Padrão2.png" type="Texture" id=5]
 [ext_resource path="res://assets/Images/Menu/Padrão3.png" type="Texture" id=6]
@@ -63,12 +63,11 @@ margin_right = 328.0
 margin_bottom = 192.0
 custom_styles/panel = SubResource( 1 )
 
-[node name="Next" type="Button" parent="."]
+[node name="Next" parent="." instance=ExtResource( 3 )]
 margin_left = 843.0
 margin_top = 501.0
 margin_right = 938.0
 margin_bottom = 537.0
-theme = ExtResource( 3 )
 text = "Próximo"
 
 [node name="Daco4140150" type="Sprite" parent="."]
@@ -94,4 +93,4 @@ E para começar análise algumas fotos..."
 autowrap = true
 clip_text = true
 
-[connection signal="pressed" from="Next" to="." method="_on_Next_pressed"]
+[connection signal="button_down" from="Next" to="." method="_on_Next_button_down"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=2]
+[gd_scene load_steps=36 format=2]
 
 [ext_resource path="res://assets/Themes/Menu.tres" type="Theme" id=1]
 [ext_resource path="res://assets/Images/CharacterChoice/mochilas/redimensionado/mochila01.png" type="Texture" id=2]
@@ -27,6 +27,8 @@
 [ext_resource path="res://assets/audio/soundtrack/Loop3x.mp3" type="AudioStream" id=25]
 [ext_resource path="res://scenes/AuxScenes/AudioController.tscn" type="PackedScene" id=26]
 [ext_resource path="res://assets/Images/CharacterChoice/mesa.png" type="Texture" id=27]
+[ext_resource path="res://scenes/AuxScenes/Button.tscn" type="PackedScene" id=28]
+[ext_resource path="res://assets/audio/sound_effects/som de mochila.mp3" type="AudioStream" id=29]
 
 [sub_resource type="StyleBoxFlat" id=3]
 bg_color = Color( 0.564706, 0.72549, 0.882353, 1 )
@@ -359,16 +361,12 @@ margin_right = 258.0
 margin_bottom = 115.0
 text = "Escolha três habilidades as quais você se identifica."
 
-[node name="ContinueButton" type="Button" parent="."]
+[node name="ContinueButton" parent="." instance=ExtResource( 28 )]
 margin_left = 867.0
 margin_top = 512.0
 margin_right = 1001.0
 margin_bottom = 556.0
-theme = ExtResource( 15 )
 text = "Continuar"
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="MessageBox" type="WindowDialog" parent="."]
 anchor_left = 0.5
@@ -444,6 +442,9 @@ autowrap = true
 [node name="MainMusic" parent="." instance=ExtResource( 26 )]
 stream = ExtResource( 25 )
 
+[node name="BackPackSound" parent="." instance=ExtResource( 26 )]
+stream = ExtResource( 29 )
+
 [connection signal="clicked_object" from="TabContainer/Estilo/CreationPanel/back01" to="." method="choose_a_backpack"]
 [connection signal="clicked_object" from="TabContainer/Estilo/CreationPanel/back02" to="." method="choose_a_backpack"]
 [connection signal="clicked_object" from="TabContainer/Estilo/CreationPanel/back03" to="." method="choose_a_backpack"]
@@ -459,4 +460,4 @@ stream = ExtResource( 25 )
 [connection signal="clicked_object" from="TabContainer/Habilidades/CreationPanel/hab07" to="." method="choose_an_hability"]
 [connection signal="clicked_object" from="TabContainer/Habilidades/CreationPanel/hab08" to="." method="choose_an_hability"]
 [connection signal="clicked_object" from="TabContainer/Habilidades/CreationPanel/hab09" to="." method="choose_an_hability"]
-[connection signal="pressed" from="ContinueButton" to="." method="end_character_choice"]
+[connection signal="button_down" from="ContinueButton" to="." method="_on_ContinueButton_button_down"]

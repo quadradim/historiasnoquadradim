@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://scenes/Taguatinga/FolhetoRaulino.gd" type="Script" id=1]
-[ext_resource path="res://assets/Themes/CharacterChoice.tres" type="Theme" id=2]
+[ext_resource path="res://scenes/AuxScenes/Button.tscn" type="PackedScene" id=2]
 [ext_resource path="res://assets/Images/Access01_02/mapa-satélite-de-brasília-brasil-ruas-da-cidade-128618769.png" type="Texture" id=3]
 [ext_resource path="res://assets/Images/Access01_02/Daco_4140150.png" type="Texture" id=4]
 [ext_resource path="res://assets/Fonts/type-writter/JMH Typewriter.ttf" type="DynamicFontData" id=6]
@@ -120,21 +120,14 @@ __meta__ = {
 [node name="WritingTime" type="Timer" parent="."]
 wait_time = 0.05
 
-[node name="Continuar" type="Button" parent="."]
+[node name="Continuar" parent="." instance=ExtResource( 2 )]
 margin_left = 704.0
 margin_top = 432.0
 margin_right = 840.0
 margin_bottom = 476.0
-theme = ExtResource( 2 )
-custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
-custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Continuar"
-__meta__ = {
-"_edit_use_anchors_": true
-}
 
 [node name="FinishWriting" type="Timer" parent="."]
 wait_time = 5.0
 
-[connection signal="pressed" from="Continuar" to="." method="_on_Continuar_pressed"]
+[connection signal="button_down" from="Continuar" to="." method="_on_Continuar_button_down"]

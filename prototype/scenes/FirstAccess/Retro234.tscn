@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://assets/Themes/Menu.tres" type="Theme" id=1]
 [ext_resource path="res://assets/Images/Menu/Padrão3.png" type="Texture" id=2]
@@ -13,7 +13,7 @@
 [ext_resource path="res://assets/Images/ProtestoBandeirante/Cenario.jpeg" type="Texture" id=11]
 [ext_resource path="res://scenes/AuxScenes/Pop_Skills.tscn" type="PackedScene" id=12]
 [ext_resource path="res://assets/Images/diary/historiômetro/9.png" type="Texture" id=13]
-
+[ext_resource path="res://scenes/AuxScenes/Button.tscn" type="PackedScene" id=14]
 
 [sub_resource type="StyleBoxFlat" id=9]
 border_width_left = 15
@@ -132,6 +132,8 @@ __meta__ = {
 position = Vector2( 160, 536.794 )
 scale = Vector2( 0.700742, 0.612077 )
 texture = ExtResource( 13 )
+
+[node name="Button2" parent="." instance=ExtResource( 14 )]
 
 [connection signal="timeout" from="PhotoPanel/MensagePanel/WritingTime" to="." method="_on_WritingTime_timeout"]
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

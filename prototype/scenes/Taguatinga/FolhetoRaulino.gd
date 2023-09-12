@@ -40,6 +40,7 @@ func _on_WritingTime_timeout():
 #	pass
 
 
-func _on_Continuar_pressed():
+
+func _on_Continuar_button_down():
 	emit_signal("end_folheto_raulino","travel_scene")
 	pass # Replace with function body.

@@ -4,7 +4,7 @@
 [ext_resource path="res://assets/Images/Access01_02/mapa-satélite-de-brasília-brasil-ruas-da-cidade-128618769.png" type="Texture" id=2]
 [ext_resource path="res://assets/Images/TaguaIntroduction/correio0.png" type="Texture" id=3]
 [ext_resource path="res://scenes/Taguatinga/TaguaIntroduction.gd" type="Script" id=4]
-[ext_resource path="res://assets/Themes/CharacterChoice.tres" type="Theme" id=5]
+[ext_resource path="res://scenes/AuxScenes/Button.tscn" type="PackedScene" id=5]
 
 [node name="TaguaIntroduction" type="CanvasLayer"]
 script = ExtResource( 4 )
@@ -22,15 +22,11 @@ texture = ExtResource( 1 )
 position = Vector2( 533, 282 )
 texture = ExtResource( 3 )
 
-[node name="NextButton" type="Button" parent="."]
+[node name="NextButton" parent="." instance=ExtResource( 5 )]
 margin_left = 449.0
 margin_top = 506.0
 margin_right = 585.0
 margin_bottom = 550.0
-theme = ExtResource( 5 )
-custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
-custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Continuar"
 
 [node name="StartAudio" type="Timer" parent="."]
@@ -38,5 +34,5 @@ wait_time = 2.6
 one_shot = true
 autostart = true
 
-[connection signal="pressed" from="NextButton" to="." method="_on_NextButton_pressed"]
+[connection signal="button_down" from="NextButton" to="." method="_on_NextButton_button_down"]
 [connection signal="timeout" from="StartAudio" to="." method="_on_StartAudio_timeout"]

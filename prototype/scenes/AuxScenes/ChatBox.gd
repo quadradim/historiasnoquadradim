@@ -198,8 +198,6 @@ func _on_Writting_Timer_timeout():
 	Time_to_write()
 	pass # Replace with function body.
 
-func _on_NextButton_pressed():
+func _on_NextButton_button_down():
 	emit_signal("close_chat")
 	pass # Replace with function body.
-
-

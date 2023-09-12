@@ -1,7 +1,8 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://scenes/GUI/Menu.gd" type="Script" id=1]
 [ext_resource path="res://assets/Themes/Menu.tres" type="Theme" id=2]
+[ext_resource path="res://scenes/AuxScenes/Button.tscn" type="PackedScene" id=3]
 [ext_resource path="res://assets/Images/Menu/Padrão2.png" type="Texture" id=5]
 [ext_resource path="res://assets/Images/Menu/Logo.png" type="Texture" id=6]
 [ext_resource path="res://assets/Images/Menu/Padrão1.png" type="Texture" id=7]
@@ -9,8 +10,6 @@
 [ext_resource path="res://scenes/AuxScenes/ConfigurationWindow.tscn" type="PackedScene" id=10]
 [ext_resource path="res://scenes/AuxScenes/AudioController.tscn" type="PackedScene" id=11]
 [ext_resource path="res://assets/audio/soundtrack/Loop1 Intro.mp3" type="AudioStream" id=12]
-
-
 
 [sub_resource type="Animation" id=1]
 resource_name = "BackgroundChange"
@@ -41,6 +40,7 @@ __meta__ = {
 
 [node name="ConfigurationWindow" parent="MenuControl" instance=ExtResource( 10 )]
 layer = 2
+visible = false
 
 [node name="Background1" type="ColorRect" parent="MenuControl"]
 anchor_right = 1.0
@@ -67,19 +67,25 @@ position = Vector2( 198, 469 )
 scale = Vector2( 1.02949, 1.11117 )
 texture = ExtResource( 8 )
 
-[node name="StartBtn" type="Button" parent="MenuControl"]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -144.0
-margin_right = 123.0
-margin_bottom = 63.0
+[node name="StartBtn" parent="MenuControl" instance=ExtResource( 3 )]
+margin_left = 368.0
+margin_top = 288.0
+margin_right = 635.0
+margin_bottom = 351.0
 theme = ExtResource( 2 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "Iniciar"
 
-[node name="ConfigBtn" type="Button" parent="MenuControl"]
+[node name="EpisodesBtn" parent="MenuControl" instance=ExtResource( 3 )]
+margin_left = 368.0
+margin_top = 360.0
+margin_right = 636.0
+margin_bottom = 423.0
+theme = ExtResource( 2 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Episódios"
+
+[node name="ConfigBtn" parent="MenuControl" instance=ExtResource( 3 )]
 margin_left = 368.0
 margin_top = 432.0
 margin_right = 636.0
@@ -88,7 +94,7 @@ theme = ExtResource( 2 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "Configurações"
 
-[node name="Sair" type="Button" parent="MenuControl"]
+[node name="Sair" parent="MenuControl" instance=ExtResource( 3 )]
 margin_left = 368.0
 margin_top = 504.0
 margin_right = 636.0
@@ -96,15 +102,6 @@ margin_bottom = 567.0
 theme = ExtResource( 2 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "Sair"
-
-[node name="EpisodesBtn" type="Button" parent="MenuControl"]
-margin_left = 368.0
-margin_top = 360.0
-margin_right = 636.0
-margin_bottom = 423.0
-theme = ExtResource( 2 )
-custom_colors/font_color = Color( 1, 1, 1, 1 )
-text = "Episódios"
 
 [node name="Logo" type="Sprite" parent="MenuControl"]
 position = Vector2( 501, 139 )
@@ -118,8 +115,9 @@ anims/BackgroundChange = SubResource( 1 )
 stream = ExtResource( 12 )
 
 [connection signal="exit_button" from="MenuControl/ConfigurationWindow" to="." method="exit_configuration"]
-[connection signal="pressed" from="MenuControl/StartBtn" to="." method="press_game_start"]
-[connection signal="pressed" from="MenuControl/ConfigBtn" to="." method="config_pressed"]
-[connection signal="pressed" from="MenuControl/Sair" to="." method="quit_game"]
-[connection signal="pressed" from="MenuControl/EpisodesBtn" to="." method="episodes_selection_pressed"]
+[connection signal="button_down" from="MenuControl/StartBtn" to="." method="_on_Button_button_down"]
+[connection signal="button_down" from="MenuControl/StartBtn" to="." method="_on_StartBtn_button_down"]
+[connection signal="button_down" from="MenuControl/EpisodesBtn" to="." method="_on_EpisodesBtn_button_down"]
+[connection signal="button_down" from="MenuControl/ConfigBtn" to="." method="_on_ConfigBtn_button_down"]
+[connection signal="button_down" from="MenuControl/Sair" to="." method="_on_Sair_button_down"]
 [connection signal="animation_finished" from="MenuAnimation" to="." method="animation_finished"]

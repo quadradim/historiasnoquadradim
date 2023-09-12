@@ -76,8 +76,19 @@ func choose_a_backpack(object_id, object_source,object_name,description):
 	selected_backpack.select_object()
 	
 	$TabContainer/Estilo/BackpackZoom.texture = object_source
+	$BackPackSound.play()
 
-func end_character_choice():
+
+
+
+func play_music():
+	return $MainMusic
+	
+func music_finished():
+	$MainMusic.play()
+
+
+func _on_ContinueButton_button_down():
 	if id_item_selected.size() < 0:
 		$MessageBox/MessageText.text = "Selecione mais {items} habilidade(s)".format(
 			{"items": 3-id_item_selected.size()}
@@ -86,8 +97,8 @@ func end_character_choice():
 	elif not selected_backpack:
 		$MessageBox/MessageText.text = "Selecione uma mochila"
 		$MessageBox.popup()
-	elif len($PlayerName.text) < 4:
-		$MessageBox/MessageText.text = "O nome necessita de no mínimo 5 caracteres"
+	elif len($PlayerName.text) < 3:
+		$MessageBox/MessageText.text = "O nome necessita de no mínimo 3 caracteres"
 		$MessageBox.popup()
 	else:
 		var items_selected_info = []
@@ -110,9 +121,4 @@ func end_character_choice():
 		)
 		print($PlayerEntity.read())
 		emit_signal("end_choice", "diary")
-
-func play_music():
-	return $MainMusic
-	
-func music_finished():
-	$MainMusic.play()
+	pass # Replace with function body.

@@ -125,8 +125,14 @@ func word8_button():
 		$TryButton.disabled = true
 	print(player_choice)
 
+func _on_MessageBox_popup_hide():
+	if $MessageBox/MessageText.text == "Resposta correta, parabéns":
+		$NextButton.disabled = false
+		$Fade_Popup.popup()
+		$UnlockedSkill.popup()
+		$UnlockedSkillAnimation.play("Popmenssage")
 
-func Try_Button():
+func _on_TryButton_button_down():
 	print(correct_choice)
 	if len(player_choice) == 3 and player_choice[0] in correct_choice and player_choice[1] in correct_choice and player_choice[2] in correct_choice:
 		$MessageBox/MessageText.text = "Resposta correta, parabéns"
@@ -155,15 +161,9 @@ func Try_Button():
 			$MessageBox/MessageText.text = "Resposta incorreta, tente novamente"
 			$MessageBox.popup()
 			
-func _on_MessageBox_popup_hide():
-	if $MessageBox/MessageText.text == "Resposta correta, parabéns":
-		$NextButton.disabled = false
-		$Fade_Popup.popup()
-		$UnlockedSkill.popup()
-		$UnlockedSkillAnimation.play("Popmenssage")
+	pass # Replace with function body.
 
-func _on_NextButton_pressed():
+
+func _on_NextButton_button_down():
 	emit_signal("end_word_selection","travel_scene")
-
-
-
+	pass # Replace with function body.

@@ -21,9 +21,6 @@ func previous_image():
 		$PhotoPanel/PhotoOne.visible = true
 		$PhotoPanel/PhotoTwo.visible = false
 
-func exit():
-	emit_signal("end_analyze", "lavadeiras")
-
 func _on_MinigameExplanation_popup_hide():
 	$Title.visible = true
 
@@ -72,3 +69,8 @@ func _on_ClueMensage_popup_hide():
 		$Fade_Popup.popup()
 		$UnlockedSkill.popup()
 		$UnlockedSkillAnimation.play("Popmenssage")
+
+
+func _on_Button_button_down():
+	emit_signal("end_analyze", "lavadeiras")
+	pass # Replace with function body.

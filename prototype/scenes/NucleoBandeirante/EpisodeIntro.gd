@@ -18,12 +18,6 @@ func _ready():
 #func _process(delta):
 #	pass
 
-
-func _on_NextButton_pressed():
-	emit_signal("end_episode_intro", "introd_lavadeiras")
-	pass # Replace with function body.
-
-
 func _on_EnableButton_timeout():
 	$NextButton.disabled = false
 	pass # Replace with function body.
@@ -43,3 +37,8 @@ func _on_PauseVideo_timeout():
 	pass # Replace with function body.
 
 
+
+
+func _on_NextButton_button_down():
+	emit_signal("end_episode_intro", "introd_lavadeiras")
+	pass # Replace with function body.

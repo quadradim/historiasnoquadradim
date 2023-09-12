@@ -77,8 +77,9 @@ func _ready():
 func _process(delta):
 	$MainMusic.update("soundtrack")
 
-func _on_Button_pressed():
+func _on_NextButton_button_down():
 	emit_signal("end_diary", "travel_scene")
+	pass # Replace with function body.
 
 func play_music():
 	return $MainMusic
@@ -248,3 +249,6 @@ func _on_PlanetaButton_pressed():
 	$AbillityTab/DescriptionText.text = ("Forma de se posicionar, criticar evidências e elaborar inferências")
 	$AbillityTab/AbillityName.text = ("criticidade")
 	pass
+
+
+

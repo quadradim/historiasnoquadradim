@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=2]
+[gd_scene load_steps=27 format=2]
 
 [ext_resource path="res://assets/Themes/Menu.tres" type="Theme" id=1]
 [ext_resource path="res://assets/Images/diary/tape.png" type="Texture" id=2]
@@ -14,7 +14,7 @@
 [ext_resource path="res://scenes/AuxScenes/Player.tscn" type="PackedScene" id=12]
 [ext_resource path="res://assets/Images/diary/cubo2.png" type="Texture" id=13]
 [ext_resource path="res://assets/Images/diary/planeta2.png" type="Texture" id=14]
-
+[ext_resource path="res://scenes/AuxScenes/Button.tscn" type="PackedScene" id=15]
 
 [sub_resource type="DynamicFont" id=10]
 size = 24
@@ -190,13 +190,12 @@ custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 10 )
 text = "com quais das palavras abaixo podemos definir o que aconteceu?"
 
-[node name="TryButton" type="Button" parent="."]
+[node name="TryButton" parent="." instance=ExtResource( 15 )]
 margin_left = 708.0
 margin_top = 443.0
 margin_right = 778.0
 margin_bottom = 479.0
-theme = ExtResource( 10 )
-text = "Ok"
+text = "OK"
 
 [node name="Tape1" type="Sprite" parent="."]
 position = Vector2( 200.5, 110.609 )
@@ -412,12 +411,11 @@ align = 1
 valign = 1
 autowrap = true
 
-[node name="NextButton" type="Button" parent="."]
+[node name="NextButton" parent="." instance=ExtResource( 15 )]
 margin_left = 875.0
 margin_top = 500.0
 margin_right = 989.0
 margin_bottom = 540.0
-theme = ExtResource( 10 )
 text = "Próximo"
 
 [node name="PlayerBackPack" parent="." instance=ExtResource( 11 )]
@@ -482,7 +480,7 @@ texture = ExtResource( 14 )
 root_node = NodePath("../UnlockedSkill")
 anims/Popmenssage = SubResource( 12 )
 
-[connection signal="pressed" from="TryButton" to="." method="Try_Button"]
+[connection signal="button_down" from="TryButton" to="." method="_on_TryButton_button_down"]
 [connection signal="pressed" from="Word1/Word1Button" to="." method="word1_button"]
 [connection signal="pressed" from="Word2/Word2Button" to="." method="word2_button"]
 [connection signal="pressed" from="Word3/Word3Button" to="." method="word3_button"]
@@ -492,4 +490,4 @@ anims/Popmenssage = SubResource( 12 )
 [connection signal="pressed" from="Word7/Word7Button" to="." method="word7_button"]
 [connection signal="pressed" from="Word8/Word8Button" to="." method="word8_button"]
 [connection signal="popup_hide" from="MessageBox" to="." method="_on_MessageBox_popup_hide"]
-[connection signal="pressed" from="NextButton" to="." method="_on_NextButton_pressed"]
+[connection signal="button_down" from="NextButton" to="." method="_on_NextButton_button_down"]

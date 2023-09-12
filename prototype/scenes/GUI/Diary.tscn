@@ -47,6 +47,7 @@
 [ext_resource path="res://assets/Images/diary/Personagens/domingas.png" type="Texture" id=45]
 [ext_resource path="res://assets/Images/diary/Personagens/ranieri.png" type="Texture" id=46]
 [ext_resource path="res://assets/Images/diary/Lupa2.png" type="Texture" id=47]
+[ext_resource path="res://scenes/AuxScenes/Button.tscn" type="PackedScene" id=48]
 [ext_resource path="res://assets/Images/diary/Personagens/Raulino_bloqueado.png" type="Texture" id=49]
 [ext_resource path="res://assets/Images/diary/Personagens/Diário_de_bordo_bloqueado1.png" type="Texture" id=50]
 [ext_resource path="res://assets/Images/diary/Personagens/diario_de_bordo.png" type="Texture" id=51]
@@ -196,10 +197,6 @@ tracks/3/keys = {
 "update": 0,
 "values": [ Vector2( 0.220659, 0.220659 ), Vector2( 0.321, 0.321 ) ]
 }
-
-[sub_resource type="DynamicFont" id=18]
-size = 23
-font_data = ExtResource( 18 )
 
 [sub_resource type="StyleBoxFlat" id=13]
 bg_color = Color( 0.92549, 0.886275, 0.835294, 1 )
@@ -377,14 +374,11 @@ anims/NewGame = SubResource( 17 )
 root_node = NodePath("../CharactersTab")
 anims/ProfileAnimation = SubResource( 28 )
 
-[node name="NextButton" type="Button" parent="."]
+[node name="NextButton" parent="." instance=ExtResource( 48 )]
 margin_left = 885.0
 margin_top = 517.0
 margin_right = 1017.0
 margin_bottom = 567.0
-rect_pivot_offset = Vector2( 47, 27 )
-theme = ExtResource( 13 )
-custom_fonts/font = SubResource( 18 )
 text = "Próximo"
 
 [node name="MainMusic" parent="." instance=ExtResource( 15 )]
@@ -1115,7 +1109,7 @@ autowrap = true
 [connection signal="pressed" from="AbillityButton" to="." method="_on_AbillityButton_pressed"]
 [connection signal="animation_finished" from="FirstAccessMessageAnimation" to="." method="_on_FirstAccessMessageAnimation_animation_finished2"]
 [connection signal="animation_finished" from="IconsAnimation" to="." method="_on_IconsAnimation_animation_finished"]
-[connection signal="pressed" from="NextButton" to="." method="_on_Button_pressed"]
+[connection signal="button_down" from="NextButton" to="." method="_on_NextButton_button_down"]
 [connection signal="pressed" from="MapTab/City1/City1Button" to="." method="_on_City1Button_pressed"]
 [connection signal="pressed" from="MapTab/City2/City2Button" to="." method="_on_City2Button_pressed"]
 [connection signal="pressed" from="MapTab/City3/City3Button" to="." method="_on_City3Button_pressed"]

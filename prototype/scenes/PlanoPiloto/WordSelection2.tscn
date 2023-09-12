@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://assets/Images/WordSelection2/a.png" type="Texture" id=1]
 [ext_resource path="res://assets/Images/PlanoPilotoIntro/5-congresso nacional.png" type="Texture" id=2]
@@ -12,7 +12,7 @@
 [ext_resource path="res://assets/Fonts/bebas_neue/BebasNeue-Regular.ttf" type="DynamicFontData" id=10]
 [ext_resource path="res://scenes/AuxScenes/Player.tscn" type="PackedScene" id=11]
 [ext_resource path="res://assets/Images/CharacterChoice/habilidades/cartazes.png" type="Texture" id=12]
-
+[ext_resource path="res://scenes/AuxScenes/Button.tscn" type="PackedScene" id=13]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.0823529, 0.286275, 0.396078, 1 )
@@ -157,13 +157,12 @@ texture = ExtResource( 4 )
 margin_right = 338.0
 margin_bottom = 47.0
 
-[node name="TryButton" type="Button" parent="."]
+[node name="TryButton" parent="." instance=ExtResource( 13 )]
 margin_left = 834.0
 margin_top = 494.0
 margin_right = 904.0
-margin_bottom = 534.0
-theme = ExtResource( 9 )
-text = "  Próximo "
+margin_bottom = 538.0
+text = "  Próximo"
 
 [node name="MessageBox" type="WindowDialog" parent="."]
 anchor_left = 0.5
@@ -247,5 +246,5 @@ texture = ExtResource( 12 )
 [node name="UnlockedSkillAnimation" type="AnimationPlayer" parent="."]
 anims/Popmenssage = SubResource( 8 )
 
-[connection signal="pressed" from="TryButton" to="." method="press_try"]
+[connection signal="button_down" from="TryButton" to="." method="_on_TryButton_button_down"]
 [connection signal="popup_hide" from="UnlockedSkill" to="." method="_on_UnlockedSkill_popup_hide"]

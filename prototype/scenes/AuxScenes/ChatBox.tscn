@@ -7,7 +7,7 @@
 [ext_resource path="res://assets/Images/icons/previous.png" type="Texture" id=5]
 [ext_resource path="res://scenes/AuxScenes/ProfileImages.tscn" type="PackedScene" id=6]
 [ext_resource path="res://scenes/AuxScenes/MainCharacterImage.tscn" type="PackedScene" id=7]
-[ext_resource path="res://assets/Themes/CharacterChoice.tres" type="Theme" id=8]
+[ext_resource path="res://scenes/AuxScenes/Button.tscn" type="PackedScene" id=8]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.945098, 0.933333, 0.905882, 0.843137 )
@@ -97,16 +97,11 @@ wait_time = 0.02
 [node name="Writting_Timer" type="Timer" parent="."]
 wait_time = 3.0
 
-[node name="NextButton" type="Button" parent="."]
-visible = false
+[node name="NextButton" parent="." instance=ExtResource( 8 )]
 margin_left = -22.0
 margin_top = 73.0
 margin_right = 68.0
 margin_bottom = 102.0
-theme = ExtResource( 8 )
-custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
-custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "OK"
 
 [connection signal="Display" from="." to="SupportingCharacterChatBox/ProfileImages" method="_on_ChatBox_Display"]
@@ -114,4 +109,4 @@ text = "OK"
 [connection signal="pressed" from="Next" to="." method="next_dialog"]
 [connection signal="timeout" from="Timer" to="." method="Time_to_write"]
 [connection signal="timeout" from="Writting_Timer" to="." method="_on_Writting_Timer_timeout"]
-[connection signal="pressed" from="NextButton" to="." method="_on_NextButton_pressed"]
+[connection signal="button_down" from="NextButton" to="." method="_on_NextButton_button_down"]

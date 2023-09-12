@@ -36,9 +36,6 @@ func previous_image():
 		$PhotoPanel/PhotoTwo.visible = true
 		$PhotoPanel/PhotoThree.visible = false
 
-func exit():
-	emit_signal("end_analyze2", "intro_multidao")
-
 func _on_MinigameExplanation_popup_hide():
 	$FirstQuestion.popup()
 	$FirstQuestion/FirstAnswer.disabled = false
@@ -98,3 +95,8 @@ func _on_ClueMensage_popup_hide():
 		$SecondQuestion.popup()
 	elif correct == 2:
 		$ThirdQuestion.popup()
+
+
+func _on_Button_button_down():
+	emit_signal("end_analyze2", "intro_multidao")
+	pass # Replace with function body.

@@ -66,33 +66,7 @@ func give_hint():
 			$MessageBox/MessageText.text = "Palavra "+selection_names[index]+" incorreta"
 			$MessageBox.popup()
 			break
-	
-func press_try():
-	var won = true
-	if selections == len(correct_choice_indexes):
-		for element in correct_choice_indexes:
-			if not pressed_buttons[element]:
-				won = false
-				break
-	else:
-		won = false
 
-	if won:
-		$Player.modifier("ability",[1,1,1,1,0,0,0,1,1])
-		
-#		$PlayerBackPack/DiaryInventory._ready()
-		$Fade_Popup.popup()
-		$UnlockedSkill.popup()
-		$UnlockedSkillAnimation.play("Popmenssage")
-		
-	else:
-		tries += 1
-
-		$MessageBox/MessageText.text = "Resposta incorreta, tente novamente"
-		$MessageBox.popup()
-		
-		if tries > 5:
-			give_hint()
 
 func _on_UnlockedSkill_popup_hide():
 	emit_signal("end_word_selection_2", "menu")
@@ -135,3 +109,32 @@ func press_option4():
 	option_pressed(4)
 
 
+
+
+func _on_TryButton_button_down():
+	var won = true
+	if selections == len(correct_choice_indexes):
+		for element in correct_choice_indexes:
+			if not pressed_buttons[element]:
+				won = false
+				break
+	else:
+		won = false
+
+	if won:
+		$Player.modifier("ability",[1,1,1,1,0,0,0,1,1])
+		
+#		$PlayerBackPack/DiaryInventory._ready()
+		$Fade_Popup.popup()
+		$UnlockedSkill.popup()
+		$UnlockedSkillAnimation.play("Popmenssage")
+		
+	else:
+		tries += 1
+
+		$MessageBox/MessageText.text = "Resposta incorreta, tente novamente"
+		$MessageBox.popup()
+		
+		if tries > 5:
+			give_hint()
+	pass # Replace with function body.
