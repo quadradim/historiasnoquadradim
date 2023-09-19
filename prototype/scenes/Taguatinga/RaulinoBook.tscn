@@ -1,22 +1,13 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=9 format=2]
 
-[ext_resource path="res://assets/Fonts/type-writter/JMH Typewriter.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://scenes/Taguatinga/RaulinoBook.gd" type="Script" id=2]
 [ext_resource path="res://assets/Images/Taguatinga/raulino_resize25.png" type="Texture" id=3]
-[ext_resource path="res://assets/Images/WordSelection/caderno.png" type="Texture" id=4]
+[ext_resource path="res://assets/Images/Taguatinga/caderno_contas_raulino.png" type="Texture" id=4]
 [ext_resource path="res://assets/Images/Taguatinga/3-Taguatinga (não-finalizado).png" type="Texture" id=5]
 [ext_resource path="res://assets/Images/Taguatinga/multidão.png" type="Texture" id=6]
 [ext_resource path="res://scenes/AuxScenes/Button.tscn" type="PackedScene" id=7]
 [ext_resource path="res://scenes/AuxScenes/PlayerBackPack.tscn" type="PackedScene" id=8]
 [ext_resource path="res://scenes/AuxScenes/Player.tscn" type="PackedScene" id=9]
-[ext_resource path="res://assets/Images/Access01_02/vector-graphics-portable-network-graphics-computer-icons-clip-art-magnifying-glass-png-favpng-uuSX3pTW6uenQcdfUUPDhMESR.png" type="Texture" id=10]
-
-[sub_resource type="DynamicFont" id=1]
-size = 20
-outline_color = Color( 0, 0, 0, 1 )
-use_mipmaps = true
-use_filter = true
-font_data = ExtResource( 1 )
 
 [node name="CanvasLayer" type="CanvasLayer"]
 script = ExtResource( 2 )
@@ -39,49 +30,17 @@ scale = Vector2( 1.29625, 1.29625 )
 texture = ExtResource( 3 )
 
 [node name="Sprite3" type="Sprite" parent="."]
-position = Vector2( 512, 280 )
-scale = Vector2( 0.208431, 0.208431 )
+position = Vector2( 511.192, 279.5 )
+scale = Vector2( 0.289503, 0.289503 )
 texture = ExtResource( 4 )
-
-[node name="TutorialText" type="Label" parent="."]
-anchor_left = -0.0292969
-anchor_top = -0.0885417
-anchor_right = -0.046875
-anchor_bottom = 0.0277778
-margin_left = 270.0
-margin_top = 187.0
-margin_right = 822.0
-margin_bottom = 424.0
-rect_rotation = -1.0
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_constants/line_spacing = 6
-custom_fonts/font = SubResource( 1 )
-autowrap = true
-__meta__ = {
-"_edit_use_anchors_": true
-}
-
-[node name="WritingTime" type="Timer" parent="."]
-wait_time = 0.05
-
-[node name="vector-graphics-portable-network-graphics-computer-icons-clip-art-magnifying-glass-png-favpng-uuSX3pTW6uenQcdfUUPDhMESR" type="Sprite" parent="WritingTime"]
-visible = false
-position = Vector2( 856, 296 )
-scale = Vector2( 0.183537, 0.183537 )
-texture = ExtResource( 10 )
 
 [node name="PlayerBackPack" parent="." instance=ExtResource( 8 )]
 
-[node name="FinishWriting" type="Timer" parent="."]
-wait_time = 5.0
-
 [node name="Continuar" parent="." instance=ExtResource( 7 )]
-margin_left = 704.0
-margin_top = 432.0
-margin_right = 840.0
-margin_bottom = 476.0
+margin_left = 784.0
+margin_top = 496.0
+margin_right = 920.0
+margin_bottom = 540.0
 text = "Continuar"
 
-[connection signal="timeout" from="WritingTime" to="." method="_on_WritingTime_timeout"]
-[connection signal="timeout" from="FinishWriting" to="." method="_on_FinishWriting_timeout"]
 [connection signal="button_down" from="Continuar" to="." method="_on_Continuar_button_down"]

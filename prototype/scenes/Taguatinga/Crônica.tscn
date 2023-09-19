@@ -1,10 +1,58 @@
 [gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://scenes/Taguatinga/FolhetoRaulino.gd" type="Script" id=1]
 [ext_resource path="res://scenes/AuxScenes/Button.tscn" type="PackedScene" id=2]
 [ext_resource path="res://assets/Images/Access01_02/mapa-satélite-de-brasília-brasil-ruas-da-cidade-128618769.png" type="Texture" id=3]
 [ext_resource path="res://assets/Images/Access01_02/Daco_4140150.png" type="Texture" id=4]
 [ext_resource path="res://assets/Fonts/type-writter/JMH Typewriter.ttf" type="DynamicFontData" id=6]
+
+[sub_resource type="GDScript" id=2]
+script/source = "extends CanvasLayer
+
+signal end_folheto_raulino
+# Declare member variables here. Examples:
+# var a = 2
+# var b = \"text\"
+
+var text_position = 0
+var current_text_pos = 0
+var current_text = ''
+var presses_count = 0
+var text_tutorials = ['Crônica do livro: “Um solitário à espreita” de Milton Hatoum.',
+'UM ILUSTRE REFUGIADO POLÍTICO',
+'[...] Me lembrei do poema “Brasília enigmática”, de Nicolas Behr:',
+'Brasília, faltam exatos 3232 dias',
+'para o nosso acerto de contas',
+'me deves um poema',
+'te devo um olhar terno',
+'na beira do Paranoá pego um pedaço de pau',
+'entre um pneu velho e um peixe morto',
+'(uma garça por testemunha)',
+'não me reconheces',
+'não te reconheço.']
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	var veicles = get_node(\"/root/Global\")
+	veicles.locked_veicles[1] = 1
+	$WritingTime.start()
+	pass # Replace with function body.
+
+func _on_WritingTime_timeout():
+	if current_text_pos < len(text_tutorials[text_position]) and self.layer != -1:
+		current_text += text_tutorials[text_position][current_text_pos]
+		current_text_pos += 1
+		$TutorialText1.text = current_text
+	$WritingTime.start()
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+#func _process(delta):
+#	pass
+
+
+
+func _on_Continuar_button_down():
+	emit_signal(\"end_folheto_raulino\",\"travel_scene\")
+	pass # Replace with function body.
+"
 
 [sub_resource type="DynamicFont" id=1]
 size = 20
@@ -14,7 +62,7 @@ use_filter = true
 font_data = ExtResource( 6 )
 
 [node name="FolhetoRaulino" type="CanvasLayer"]
-script = ExtResource( 1 )
+script = SubResource( 2 )
 
 [node name="Background" type="ColorRect" parent="."]
 anchor_right = 1.0
