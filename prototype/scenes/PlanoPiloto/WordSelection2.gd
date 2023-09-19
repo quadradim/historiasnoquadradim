@@ -122,7 +122,7 @@ func _on_TryButton_button_down():
 		won = false
 
 	if won:
-		$Player.modifier("ability",[1,1,1,1,0,0,0,1,1])
+		$Player.modifier("ability",[1,1,1,1,0,1,1,1,1])
 		
 #		$PlayerBackPack/DiaryInventory._ready()
 		$Fade_Popup.popup()

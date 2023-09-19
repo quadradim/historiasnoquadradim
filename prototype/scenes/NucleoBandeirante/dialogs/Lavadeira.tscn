@@ -9,7 +9,6 @@
 [ext_resource path="res://assets/Images/NucleoBandeirante/no_cenário (1).png" type="Texture" id=7]
 [ext_resource path="res://scenes/AuxScenes/PlayerBackPack.tscn" type="PackedScene" id=8]
 
-
 [node name="Lavadeira" type="CanvasLayer"]
 script = ExtResource( 6 )
 

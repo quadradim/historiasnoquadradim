@@ -144,7 +144,7 @@ func _on_TryButton_button_down():
 		$NextButton.disabled = false
 		$TryButton.disabled = true
 		#$UnlockedSkill.popup()
-		$PlayerBackPack/DiaryInventory/PlayerEntitiy.modifier("ability",[1,0,0,1,0,0,0,0,1])
+		$PlayerBackPack/DiaryInventory/PlayerEntitiy.modifier("ability",[1,0,0,1,0,1,1,0,1])
 		$PlayerBackPack/DiaryInventory._ready()
 	else:
 		errors_counter +=1

@@ -98,6 +98,7 @@ wait_time = 0.02
 wait_time = 3.0
 
 [node name="NextButton" parent="." instance=ExtResource( 8 )]
+visible = false
 margin_left = -22.0
 margin_top = 73.0
 margin_right = 68.0

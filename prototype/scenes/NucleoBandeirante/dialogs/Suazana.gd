@@ -24,7 +24,7 @@ func end_suzana_scene():
 	
 	
 	$PlayerBackPack/DiaryInventory._ready()
-	$PlayerBackPack/DiaryInventory/PlayerEntitiy.modifier("ability",[1,0,0,0,0,0,0,0,1])
+	$PlayerBackPack/DiaryInventory/PlayerEntitiy.modifier("ability",[1,0,0,0,0,0,1,0,1])
 
 #	$PlayerBackPack/DiaryInventory._ready()
 	$Fade_Popup.popup()
