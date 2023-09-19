@@ -275,6 +275,22 @@ var scenes_data = {
 		[],
 		false,
 	],
+	'raulino2_dialog':[
+		'res://scenes/Taguatinga/dialogs/Raulino2.tscn',
+		'end_raulino2_dialog',
+		false,
+		'continue',
+		[],
+		true,
+	],
+	'cronica_raulino':[
+		'res://scenes/Taguatinga/RaulinoCronica.tscn',
+		'end_cronica_raulino',
+		false,
+		null,
+		[],
+		false,
+	],
 	'plano_piloto_intro':[
 		'res://scenes/PlanoPiloto/PlanoPilotointro.tscn',
 		'end_plano_piloto_intro',
