@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=2]
+[gd_scene load_steps=37 format=2]
 
 [ext_resource path="res://assets/Themes/Menu.tres" type="Theme" id=1]
 [ext_resource path="res://assets/Images/CharacterChoice/mochilas/redimensionado/mochila01.png" type="Texture" id=2]
@@ -77,6 +77,22 @@ tracks/0/keys = {
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ Vector2( 1e-05, 1e-05 ), Vector2( 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=9]
+resource_name = "BackPackShake"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/path = NodePath("TabContainer/Estilo/BackpackZoom:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 627, 241 ), Vector2( 627, 271 ) ]
 }
 
 [node name="CharacterChoice" type="CanvasLayer"]
@@ -444,6 +460,9 @@ stream = ExtResource( 25 )
 
 [node name="BackPackSound" parent="." instance=ExtResource( 26 )]
 stream = ExtResource( 29 )
+
+[node name="BackPackShake" type="AnimationPlayer" parent="."]
+anims/BackPackShake = SubResource( 9 )
 
 [connection signal="clicked_object" from="TabContainer/Estilo/CreationPanel/back01" to="." method="choose_a_backpack"]
 [connection signal="clicked_object" from="TabContainer/Estilo/CreationPanel/back02" to="." method="choose_a_backpack"]

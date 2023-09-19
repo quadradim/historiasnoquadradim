@@ -77,6 +77,7 @@ func choose_a_backpack(object_id, object_source,object_name,description):
 	
 	$TabContainer/Estilo/BackpackZoom.texture = object_source
 	$BackPackSound.play()
+	$BackPackShake.play("BackPackShake")
 
 
 
