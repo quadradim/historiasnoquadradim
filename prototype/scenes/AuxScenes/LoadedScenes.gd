@@ -330,5 +330,13 @@ var scenes_data = {
 		null,
 		[],
 		true,
+	],
+	'retrospectiva':[
+		'res://scenes/FirstAccess/Retro234.tscn',
+		'end_retrospectiva',
+		false,
+		null,
+		[],
+		false,
 	]
 }

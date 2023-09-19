@@ -1,5 +1,5 @@
 extends CanvasLayer
-
+onready var veicles = get_node("/root/Global")
 
 signal end_cronica_raulino
 # Declare member variables here. Examples:
@@ -59,5 +59,6 @@ func _on_Continuar_button_down():
 		
 
 func _on_ChatBox_end_dialog():
+	veicles.locked_veicles[1] = 1
 	emit_signal("end_cronica_raulino","travel_scene")
 

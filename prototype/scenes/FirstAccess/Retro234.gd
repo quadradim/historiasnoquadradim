@@ -1,5 +1,5 @@
 extends Node
-
+signal end_retrospectiva
 
 # Declare member variables here. Examples:
 # var a = 2
@@ -34,7 +34,13 @@ func _on_WritingTime_timeout():
 func start_writing():
 	$PhotoPanel/MensagePanel/WritingTime.start()
 
-func _on_Button_pressed():
+func show():
+	if text_position == 1:
+		$PhotoPanel/PhotoTwo.visible = true
+	elif text_position == 4:
+		$PhotoPanel/PhotoThree.visible = true
+
+func _on_Button2_button_down():
 	if presses_count < text1.size() - 1:
 		$PhotoPanel/MensagePanel/Label.text = ''
 		text_position+=1
@@ -42,10 +48,6 @@ func _on_Button_pressed():
 		current_text_pos = 0
 		presses_count += 1
 		show()
-		
-func show():
-	if text_position == 1:
-		$PhotoPanel/PhotoTwo.visible = true
-	elif text_position == 4:
-		$PhotoPanel/PhotoThree.visible = true
-	
+	else:
+		emit_signal('end_retrospectiva', 'menu')
+	pass # Replace with function body.

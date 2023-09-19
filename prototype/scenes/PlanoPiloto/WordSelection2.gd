@@ -69,7 +69,7 @@ func give_hint():
 
 
 func _on_UnlockedSkill_popup_hide():
-	emit_signal("end_word_selection_2", "menu")
+	emit_signal("end_word_selection_2", "retrospectiva")
 	
 ##########################################
 func get_total_selections():
