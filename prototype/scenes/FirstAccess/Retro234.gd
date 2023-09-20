@@ -16,7 +16,8 @@ var text1 = ['Taguatinga surgiu pela resistência de pessoas migrantes que foram
 'Por trabalharem há meses sem receber salários, nos arredores da SubPrefeitura, trabalhadores começaram a se identificar como "a turma da boa vontade".',
 'Desde o início de sua existência, a Esplanada dos Ministérios é palco de manifestações populares, recebendo multidões que reivindicam direitos.',
 'Em 1964, os jornais noticiam que a população do Distrito Federal ocupou a Esplanada em oposição ao chamado movimento retornista e em defesa da permanência de Brasília como capital.',
-'Por outro lado, algumas notícias e entrevistas de parlamentares revelam que essa não era uma possibilidade e nem pauta de reuniões nas comissões da câmara dos deputados. A realidade é que essas reivindicações estavam relacionadas às promessas aos trabalhadores não cumpridas pelo Governo.']
+'Por outro lado, algumas notícias e entrevistas de parlamentares revelam que essa não era uma possibilidade e nem pauta de reuniões nas comissões da câmara dos deputados.', 
+'A realidade é que essas reivindicações estavam relacionadas às promessas aos trabalhadores não cumpridas pelo Governo.']
 
 
 # Called when the node enters the scene tree for the first time.

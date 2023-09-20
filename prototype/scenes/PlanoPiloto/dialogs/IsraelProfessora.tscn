@@ -10,22 +10,24 @@
 [ext_resource path="res://scenes/PlanoPiloto/dialogs/IsraelProfessora.gd" type="Script" id=8]
 [ext_resource path="res://scenes/AuxScenes/PlayerBackPack.tscn" type="PackedScene" id=9]
 
-
 [node name="CanvasLayer" type="CanvasLayer"]
 script = ExtResource( 8 )
 
 [node name="Congresso" type="Sprite" parent="."]
-position = Vector2( 514, 287 )
+position = Vector2( 368.345, 204.5 )
+scale = Vector2( 1.28448, 1.28448 )
 texture = ExtResource( 1 )
 
 [node name="Israel" type="Sprite" parent="."]
-position = Vector2( 701, 370 )
+position = Vector2( 708, 378.069 )
+scale = Vector2( 0.961111, 0.961111 )
 texture = ExtResource( 2 )
 
 [node name="Professora" type="Sprite" parent="."]
-position = Vector2( 386, 413 )
-scale = Vector2( 1.18077, 1.18077 )
+position = Vector2( 410, 427 )
+scale = Vector2( 1.16923, 1.16923 )
 texture = ExtResource( 3 )
+flip_h = true
 
 [node name="ChatBox" parent="." instance=ExtResource( 4 )]
 margin_left = -45.0
@@ -34,11 +36,11 @@ margin_right = 51.0
 margin_bottom = 187.0
 chat = "*I*PROFESSORA DOMINGAS! 
 *O*Oi, Israel, que bom te encontrar por aqui, menino. Você veio por conta da confusão que está no Congresso?
-*I*Sim, professora, o meu pai não pôde vir, mas ele também está preocupado com essa tentativa de voltar à capital para o Rio de Janeiro
-*O*Pois é… Estão falando disso como a causa da confusão, mas eu suspeito que não é bem assim, ouvi até que o governo pode cair a qualquer momento. Sei, não viu, mas essa coisa do retornismo tem cara de cortina de fumaça, pra confundir a gente.
-*P*Eu li mesmo num jornal que o presidente da câmara nega o retornismo. Mas então o que está motivando essa multidão, professora?
+*I*Sim, professora, o meu pai não pôde vir, mas ele também está preocupado com essa tentativa de voltar à capital para o Rio de Janeiro!
+*O*Pois é… Estão falando disso como a causa da confusão, mas eu suspeito que não é bem assim… Ouvi até que o governo pode cair a qualquer momento. Sei não, viu… Mas essa coisa do retornismo tem cara de cortina de fumaça, pra confundir a gente.
+*I*Eu ouvi mesmo um jornalista aqui dizendo que o presidente da câmara nega o retornismo. Mas então o que está motivando essa multidão, professora?
 *O* É um pouco de tudo. O povo não aguenta mais as condições de vida, falta tudo. Nós, professoras mesmo, acabamos de sair de uma greve grande, a Turma da Boa Vontade tá revoltada lá em Taguatinga e na Cidade Livre, crianças sem escola e mães sem alimento para colocar na mesa. 
-*P*Caramba! Isso é desesperador, professora! 
+*I*Caramba! Isso é desesperador, professora! 
 *O*É… Aqui em Brasília se tornou essa desesperança, mas no Brasil todo a gente sabe que a vida não tá fácil para os trabalhadores, desde as reformas do Jango  que estão incomodando os setores mais conservadores. 
 *I*Será que tem a ver com aquele grande movimento que aconteceu no Rio de Janeiro que reuniu várias pessoas em defesa das reformas de base?
 *P*Sim! Foi o Comício da Central do Brasil, com mais de 150 mil pessoas reunidas. Parece que o medo dos mais poderosos é o povo nas ruas. Olhem esta notícia: [Entrega para eles um exemplar de jornal]

@@ -10,7 +10,6 @@
 [ext_resource path="res://assets/Fonts/bebas_neue/BebasNeue-Regular.otf" type="DynamicFontData" id=8]
 [ext_resource path="res://scenes/AuxScenes/PlayerBackPack.tscn" type="PackedScene" id=9]
 
-
 [sub_resource type="DynamicFont" id=1]
 size = 34
 outline_color = Color( 0.215686, 0.298039, 0.388235, 1 )
@@ -38,7 +37,7 @@ chat = "P*O que está acontecendo por aqui? O que é toda essa gente?
 *P* Ah, mas eu duvido que exista um risco de acabar com a nova capital…  
 *I*Não sei ao certo! Sei que meu pai me falou que os deputados querem voltar para o Rio de Janeiro e que Brasília pode não ser mais a capital. Vamos lutar pelos nossos direitos e permanecer aqui até uma resposta das promessas desse governo. 
 *P*Sua família também está aqui? 
-*I*Minha família está na Vila Planalto, onde moramos aqui em Brasília."
+*I*Minha família está na Vila Planalto."
 img = [ ExtResource( 4 ), ExtResource( 5 ) ]
 cha = [ "P", "I" ]
 image_scales = [ Vector2( 0.1, 0.1 ), Vector2( 0.67, 0.685 ) ]
