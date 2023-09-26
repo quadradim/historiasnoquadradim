@@ -44,7 +44,8 @@ chat = "*I*PROFESSORA DOMINGAS!
 *O*É… Aqui em Brasília se tornou essa desesperança, mas no Brasil todo a gente sabe que a vida não tá fácil para os trabalhadores, desde as reformas do Jango  que estão incomodando os setores mais conservadores. 
 *I*Será que tem a ver com aquele grande movimento que aconteceu no Rio de Janeiro que reuniu várias pessoas em defesa das reformas de base?
 *P*Sim! Foi o Comício da Central do Brasil, com mais de 150 mil pessoas reunidas. Parece que o medo dos mais poderosos é o povo nas ruas. Olhem esta notícia: [Entrega para eles um exemplar de jornal]
-*I*Então quer dizer que o que está acontecendo aqui não é somente um movimento localizado, faz parte de um contexto mais amplo! "
+*I*Então quer dizer que o que está acontecendo aqui não é somente um movimento localizado, faz parte de um contexto mais amplo!
+*P*Olha, aqui parece que tem uma pista importante! É uma gravação da rádio. Vamos ouvir?"
 img = [ ExtResource( 7 ), ExtResource( 6 ), ExtResource( 5 ) ]
 cha = [ "I", "O", "P" ]
 image_scales = [ Vector2( 0.67, 0.68 ), Vector2( 0.67, 0.68 ), Vector2( 0.1, 0.1 ) ]

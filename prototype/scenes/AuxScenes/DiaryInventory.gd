@@ -207,49 +207,48 @@ func _on_FirstAccessMessage_popup_hide():
 
 
 func _on_BinoculosButton_pressed():
-	$AbillityTab/AbillityName.text = ("olhar aguçado")
+	$AbillityTab/AbillityName.text = ("Olhar aguçado")
 	$AbillityTab/DescriptionText.text = ("Análise atenta aos detalhes aparentemente insignificantes")
 	pass # Replace with function body.
 
-
 func _on_CartazesButton_pressed():
-	$AbillityTab/AbillityName.text = ("problematização")
+	$AbillityTab/AbillityName.text = ("Problematização")
 	$AbillityTab/DescriptionText.text = ("Método de ir além de pensamentos do senso comum")
 	pass # Replace with function body.
 
 func _on_ChapuButton_pressed():
-	$AbillityTab/AbillityName.text = ("capacidade investigativa")
+	$AbillityTab/AbillityName.text = ("Capacidade Investigativa")
 	$AbillityTab/DescriptionText.text = ("Formulação de perguntas e busca pelas respostas de maneira autônoma e independente")
 	pass # Replace with function body.
 
 func _on_CuboButton_pressed():
-	$AbillityTab/AbillityName.text = ("raciocínio lógico")
+	$AbillityTab/AbillityName.text = ("Raciocínio Lógico")
 	$AbillityTab/DescriptionText.text = ("Organização do pensamento para a resolução de um problema")
 	pass # Replace with function body.
 
 func _on_jogoDaMemriaButton_pressed():
-	$AbillityTab/AbillityName.text = ("memorização")
+	$AbillityTab/AbillityName.text = ("Memorização")
 	$AbillityTab/DescriptionText.text = ("Processo mental para reunir informações de forma sistemática")
 	pass # Replace with function body.
 
 func _on_JornalButton_pressed():
-	$AbillityTab/AbillityName.text = ("curiosidade")
-	$AbillityTab/DescriptionText.text = ("Interesse por conhecer coisas novas")
+	$AbillityTab/AbillityName.text = ("Criticidade")
+	$AbillityTab/DescriptionText.text = ("Forma dese posicionar, criticarevidências e elaborarinferências")
 	pass # Replace with function body.
 
 func _on_LivrosButton_pressed():
-	$AbillityTab/AbillityName.text = ("seletividade")
-	$AbillityTab/DescriptionText.text = ("Capacidade de identificar fontes que permitam reconhecer vestígios da história")
+	$AbillityTab/AbillityName.text = ("Curiosidade")
+	$AbillityTab/DescriptionText.text = ("Interesse porconhecer coisas novas")
 	pass # Replace with function body.
 
 func _on_PastaButton_pressed():
-	$AbillityTab/AbillityName.text = ("escuta sensível")
-	$AbillityTab/DescriptionText.text = ("Atenção ao que é dito e capacidade de compreensão do que não parece óbvio")
+	$AbillityTab/AbillityName.text = ("Seletividade")
+	$AbillityTab/DescriptionText.text = ("Capacidade deidentificar fontes que permitamreconhecer vestígios da história")
 	pass # Replace with function body.
 
 func _on_PlanetaButton_pressed():
-	$AbillityTab/DescriptionText.text = ("Forma de se posicionar, criticar evidências e elaborar inferências")
-	$AbillityTab/AbillityName.text = ("criticidade")
+	$AbillityTab/DescriptionText.text = ("Atenção aoque é dito e capacidade decompreensão do que nãoparece óbvio")
+	$AbillityTab/AbillityName.text = ("Escuta Sensível")
 	pass
 
 func _on_Character1Button_pressed():
