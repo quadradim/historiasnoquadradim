@@ -118,7 +118,7 @@ func _ready():
 
 	transition_animation.play("fade_out")
 
-	var initial_scene = "israel_professora_dialog" #production
+	var initial_scene = "production" #production
 	load_control_scene(
 		scenes_data[initial_scene][0],
 		initial_scene,

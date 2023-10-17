@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://assets/Images/PlanoPilotoIntro/5-congresso nacional.png" type="Texture" id=1]
 [ext_resource path="res://assets/Images/PlanoPilotoIntro/Em_Conversa (2).png" type="Texture" id=2]
@@ -9,6 +9,36 @@
 [ext_resource path="res://assets/Images/PlanoPilotoIntro/ícone_fala.png" type="Texture" id=7]
 [ext_resource path="res://scenes/PlanoPiloto/dialogs/IsraelProfessora.gd" type="Script" id=8]
 [ext_resource path="res://scenes/AuxScenes/PlayerBackPack.tscn" type="PackedScene" id=9]
+
+[sub_resource type="Animation" id=1]
+resource_name = "Zoom1"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Israel:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.961111, 0.961111 ), Vector2( 1.112, 1.112 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "Zoom2"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Professora:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1.16923, 1.16923 ), Vector2( 1.285, 1.285 ) ]
+}
 
 [node name="CanvasLayer" type="CanvasLayer"]
 script = ExtResource( 8 )
@@ -54,4 +84,10 @@ resize_panel = [ Vector2( 120, 26 ), Vector2( 125, 26 ), Vector2( 113, 26 ) ]
 
 [node name="PlayerBackPack" parent="." instance=ExtResource( 9 )]
 
+[node name="CharacterZoom" type="AnimationPlayer" parent="."]
+anims/Zoom1 = SubResource( 1 )
+anims/Zoom2 = SubResource( 2 )
+
 [connection signal="end_dialog" from="ChatBox" to="." method="_on_ChatBox_end_dialog"]
+[connection signal="next_dialog" from="ChatBox" to="." method="_on_ChatBox_next_dialog"]
+[connection signal="start_chat" from="ChatBox" to="." method="_on_ChatBox_start_chat"]

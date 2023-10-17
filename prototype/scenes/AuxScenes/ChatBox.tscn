@@ -96,6 +96,7 @@ wait_time = 0.02
 
 [node name="Writting_Timer" type="Timer" parent="."]
 wait_time = 3.0
+one_shot = true
 
 [node name="NextButton" parent="." instance=ExtResource( 8 )]
 visible = false

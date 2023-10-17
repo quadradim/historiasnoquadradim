@@ -10,6 +10,8 @@ signal change_face2
 signal change_face3
 signal change_face4
 signal close_chat
+signal next_dialog
+signal start_chat
 
 export (Array, Resource) var img
 export (Array, String) var cha
@@ -129,6 +131,7 @@ func Time_to_write():
 		
 
 func next_dialog():
+	emit_signal("next_dialog")
 	if text_position < line_counter/2 -1:
 		reset_current_text()
 		text_position += 1
@@ -195,6 +198,7 @@ func previous_dialog():
 				)
 
 func _on_Writting_Timer_timeout():
+	emit_signal("start_chat")
 	Time_to_write()
 	pass # Replace with function body.
 
