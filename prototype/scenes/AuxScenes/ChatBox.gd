@@ -131,7 +131,6 @@ func Time_to_write():
 		
 
 func next_dialog():
-	emit_signal("next_dialog")
 	if text_position < line_counter/2 -1:
 		reset_current_text()
 		text_position += 1
@@ -167,6 +166,7 @@ func next_dialog():
 					resize_panel[profile_image_indices[text_position]]
 				)
 		emit_signal("new_dialog")
+		emit_signal("next_dialog")
 	else:
 		emit_signal("end_dialog")
 
