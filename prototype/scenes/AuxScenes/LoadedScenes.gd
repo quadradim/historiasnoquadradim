@@ -323,6 +323,14 @@ var scenes_data = {
 		[],
 		true,
 	],
+	'radio_israel_prof':[
+		'res://scenes/PlanoPiloto/dialogs/RadioIsraelProf.tscn',
+		'end_radio_israel_prof',
+		true,
+		null,
+		["res://assets/audio/audio_description/04_radio_plano_piloto/radio.wav",],
+		false,
+	],
 	'word_selection_2':[
 		'res://scenes/PlanoPiloto/WordSelection2.tscn',
 		'end_word_selection_2',

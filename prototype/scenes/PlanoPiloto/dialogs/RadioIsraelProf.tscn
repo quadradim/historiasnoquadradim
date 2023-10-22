@@ -1,0 +1,56 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://scenes/PlanoPiloto/dialogs/RadioIsraelProf.gd" type="Script" id=1]
+[ext_resource path="res://assets/Images/PlanoPilotoIntro/radio1.png" type="Texture" id=2]
+[ext_resource path="res://assets/Images/PlanoPilotoIntro/radio.png" type="Texture" id=3]
+[ext_resource path="res://scenes/AuxScenes/AudioController.tscn" type="PackedScene" id=4]
+[ext_resource path="res://assets/audio/audio_description/04_radio_plano_piloto/radio.wav" type="AudioStream" id=5]
+[ext_resource path="res://scenes/AuxScenes/ChatBox.tscn" type="PackedScene" id=6]
+[ext_resource path="res://assets/Images/PlanoPilotoIntro/ícone_fala.png" type="Texture" id=7]
+[ext_resource path="res://assets/Images/PlanoPilotoIntro/professora_domingas_profile.png" type="Texture" id=8]
+[ext_resource path="res://scenes/AuxScenes/PlayerBackPack.tscn" type="PackedScene" id=9]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource( 1 )
+
+[node name="TextureButton" type="TextureButton" parent="."]
+margin_left = 352.0
+margin_top = 224.0
+margin_right = 616.0
+margin_bottom = 480.0
+
+[node name="RadioBeforeClick" type="Sprite" parent="."]
+position = Vector2( 512, 272 )
+scale = Vector2( 0.422877, 0.422877 )
+texture = ExtResource( 2 )
+
+[node name="RadioAfterClick" type="Sprite" parent="."]
+position = Vector2( 512, 272 )
+scale = Vector2( 0.42258, 0.42258 )
+texture = ExtResource( 3 )
+
+[node name="ChatBox" parent="." instance=ExtResource( 6 )]
+margin_top = 168.0
+margin_bottom = 216.0
+chat = "*I*É, parece que estamos às vésperas de um golpe, não é mesmo, professora!?  
+*O*Parece que a nossa sociedade pode mudar muito nos próximos anos, mas temos que permanecer mobilizados e em luta! Não se esqueçam disso, meninos."
+img = [ ExtResource( 7 ), ExtResource( 8 ) ]
+cha = [ "I", "O" ]
+image_scales = [ Vector2( 0.67, 0.68 ), Vector2( 0.67, 0.68 ) ]
+nam = [ "Israel da Silva", "Prof. Domingas" ]
+resize_panel = [ Vector2( 120, 26 ), Vector2( 125, 26 ) ]
+
+[node name="AudioStreamPlayer" parent="." instance=ExtResource( 4 )]
+stream = ExtResource( 5 )
+
+[node name="PlayerBackPack" parent="." instance=ExtResource( 9 )]
+visible = false
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 96.0
+one_shot = true
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_TextureButton_pressed"]
+[connection signal="end_dialog" from="ChatBox" to="." method="_on_ChatBox_end_dialog"]
+[connection signal="finished" from="AudioStreamPlayer" to="." method="_on_AudioStreamPlayer_finished"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

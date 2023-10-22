@@ -11,7 +11,7 @@ func _ready():
 func _on_ChatBox_end_dialog():
 	$PlayerBackPack/DiaryInventory/PlayerEntitiy.modifier("characters",6)
 	$PlayerBackPack/DiaryInventory._ready()
-	emit_signal("end_israel_professora_dialog","word_selection_2")
+	emit_signal("end_israel_professora_dialog","radio_israel_prof")
 
 
 	
