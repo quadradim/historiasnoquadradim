@@ -112,8 +112,6 @@ autowrap = true
 [node name="WritingTime" type="Timer" parent="PhotoPanel/MensagePanel"]
 wait_time = 0.05
 
-[node name="Pop_Skills" parent="." instance=ExtResource( 12 )]
-
 [node name="Historiometro" type="Sprite" parent="."]
 position = Vector2( 160, 536.794 )
 scale = Vector2( 0.700742, 0.612077 )
@@ -124,6 +122,9 @@ margin_left = 824.0
 margin_top = 488.0
 margin_right = 961.0
 text = "Continuar"
+
+[node name="Pop_Skills" parent="." instance=ExtResource( 12 )]
+layer = 2
 
 [connection signal="timeout" from="PhotoPanel/MensagePanel/WritingTime" to="." method="_on_WritingTime_timeout"]
 [connection signal="button_down" from="Button2" to="." method="_on_Button2_button_down"]

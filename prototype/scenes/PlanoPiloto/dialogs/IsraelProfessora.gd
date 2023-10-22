@@ -26,10 +26,20 @@ func _on_ChatBox_next_dialog():
 	if($ChatBox.cha[$ChatBox.profile_image_indices[i]]) == "I":
 		$CharacterZoom.play("Zoom1")
 	if($ChatBox.cha[$ChatBox.profile_image_indices[i]]) == "O":
-		$CharacterZoom.play("Zoom2")
+		$CharacterZoom.play("Zoom2") 
 	pass # Replace with function body.
 
 
 func _on_ChatBox_start_chat():
 	$CharacterZoom.play("Zoom1")
+	pass # Replace with function body.
+
+
+func _on_ChatBox_previous_dialog():
+	i-=1
+	$CharacterZoom.seek(0,true)
+	if($ChatBox.cha[$ChatBox.profile_image_indices[i]]) == "I":
+		$CharacterZoom.play("Zoom1")
+	if($ChatBox.cha[$ChatBox.profile_image_indices[i]]) == "O":
+		$CharacterZoom.play("Zoom2") 
 	pass # Replace with function body.

@@ -22,8 +22,10 @@ var text1 = ['Taguatinga surgiu pela resistência de pessoas migrantes que foram
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	$Pop_Skills/Pop_animation.play("Pop_skill")
 	$PhotoPanel/MensagePanel.visible = true
 	$PhotoPanel/MensagePanel/WritingTime.start()
+
 
 func _on_WritingTime_timeout():
 	if current_text_pos < len(text1[text_position]) and self.layer != -1:

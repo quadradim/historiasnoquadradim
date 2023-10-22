@@ -12,6 +12,7 @@ signal change_face4
 signal close_chat
 signal next_dialog
 signal start_chat
+signal previous_dialog
 
 export (Array, Resource) var img
 export (Array, String) var cha
@@ -196,7 +197,8 @@ func previous_dialog():
 					image_scales[profile_image_indices[text_position]],
 					resize_panel[profile_image_indices[text_position]]
 				)
-
+		emit_signal("previous_dialog")
+	
 func _on_Writting_Timer_timeout():
 	emit_signal("start_chat")
 	Time_to_write()

@@ -90,4 +90,5 @@ anims/Zoom2 = SubResource( 2 )
 
 [connection signal="end_dialog" from="ChatBox" to="." method="_on_ChatBox_end_dialog"]
 [connection signal="next_dialog" from="ChatBox" to="." method="_on_ChatBox_next_dialog"]
+[connection signal="previous_dialog" from="ChatBox" to="." method="_on_ChatBox_previous_dialog"]
 [connection signal="start_chat" from="ChatBox" to="." method="_on_ChatBox_start_chat"]
