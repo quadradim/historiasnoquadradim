@@ -7,12 +7,13 @@ signal next_audio
 
 func _ready():
 	player_data = $Player.read()
+	$ChatBox.visible = false
 
 func start():
 	$MessageBox.popup()
 	
 func _on_MessageBox_popup_hide():
-	$ChatBox.start()
+	$ChatBox.visible = true
 	emit_signal("start_audio")
 
 func end_speech():
