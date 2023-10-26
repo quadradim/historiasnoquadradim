@@ -115,7 +115,6 @@ anims/BackgroundChange = SubResource( 1 )
 stream = ExtResource( 12 )
 
 [connection signal="exit_button" from="MenuControl/ConfigurationWindow" to="." method="exit_configuration"]
-[connection signal="button_down" from="MenuControl/StartBtn" to="." method="_on_Button_button_down"]
 [connection signal="button_down" from="MenuControl/StartBtn" to="." method="_on_StartBtn_button_down"]
 [connection signal="button_down" from="MenuControl/EpisodesBtn" to="." method="_on_EpisodesBtn_button_down"]
 [connection signal="button_down" from="MenuControl/ConfigBtn" to="." method="_on_ConfigBtn_button_down"]
