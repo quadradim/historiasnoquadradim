@@ -186,7 +186,7 @@ var scenes_data = {
 		'res://scenes/NucleoBandeirante/dialogs/Darcy.tscn',
 		'end_darcy_speech',
 		true,
-		"res://soundtrack/Loop Protesto Darcy.mp3",
+		"res://assets/audio/soundtrack/Loop Protesto Darcy.mp3",
 		[
 			"res://assets/audio/audio_description/03_darcy_speech/fala_1.wav",
 			"res://assets/audio/audio_description/03_darcy_speech/fala_2.wav",

@@ -15,7 +15,6 @@ func _ready():
 #func _process(delta):
 #	pass
 
-
-func _on_Button_button_down():
+func _on_Button_button_down():	
 	$ClickSoundEffect.play()
 	pass # Replace with function body.

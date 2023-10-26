@@ -40,7 +40,6 @@ __meta__ = {
 
 [node name="ConfigurationWindow" parent="MenuControl" instance=ExtResource( 10 )]
 layer = 2
-visible = false
 
 [node name="Background1" type="ColorRect" parent="MenuControl"]
 anchor_right = 1.0
