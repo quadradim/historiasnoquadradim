@@ -100,7 +100,7 @@ func create_player():
 			# default for sfx
 			"soundeffect": -20,
 			# default for dub
-			"audio_description": +8,#before: -20,
+			"audio_description": +8, # before: -20,
 #			"current_scene": "access01"
 		}
 	)
