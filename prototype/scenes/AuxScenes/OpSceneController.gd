@@ -42,8 +42,8 @@ func load_control_scene(local, name, out_signal):
 	new_scene.out_signal = out_signal
 	new_scene.instance.connect(out_signal, self, 'change_scene')
 
-	# new_scene.instance.connect('start_audio', self, 'start_audio_description')
-	# new_scene.instance.connect('next_audio', self, 'change_audio_description')
+	new_scene.instance.connect('start_audio', self, 'start_audio_description')
+	new_scene.instance.connect('next_audio', self, 'change_audio_description')
 
 	used_scenes.append(new_scene)
 	
@@ -92,7 +92,7 @@ func create_player():
 		{
 			"name": "none",
 			"habilities": [],
-			"backpack": "res://assets/Images/CharacterChoice/mochilas/redimensionado/mochila01.png",
+			"backpack": "res://assets/Images/Composition/CharacterChoice/mochilas/redimensionado/mochila01.png",
 			"ability": [0,0,0,0,0,0,0,0,0],
 			"characters":0,
 			# default for music
@@ -130,7 +130,7 @@ func _ready():
 
 	used_scenes[0].instance.layer = 1
 
-func _process(_delta):
+func _process(delta):
 	$Audio.update('soundtrack')
 	$AudioDescription.update('audio_description')
 	

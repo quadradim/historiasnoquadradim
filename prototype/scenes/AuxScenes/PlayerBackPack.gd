@@ -21,21 +21,21 @@ func _on_TextureButton_pressed():
 		$DiaryPopAnimation.play("DiaryPop")
 	$BackPackSoundEffect.play()
 
-func _process(_delta):
+func _process(delta):
 	$BackPackSoundEffect.update("soundeffect")
 	
-func _on_DiaryPopAnimation_animation_started(_anim_name):
+func _on_DiaryPopAnimation_animation_started(anim_name):
 	$BackPack/BackPackButton.visible = false
 	
-func _on_DiaryHideAnimation_animation_started(_anim_name):
+func _on_DiaryHideAnimation_animation_started(anim_name):
 	$BackPack/BackPackButton.visible = false
 	
-func _on_DiaryHideAnimation_animation_finished(_anim_name):
+func _on_DiaryHideAnimation_animation_finished(anim_name):
 	$DiaryInventory.visible = false
 	$BackPack/BackPackButton.visible = true
 
-func _on_DiaryPopAnimation_animation_finished(_anim_name):
+func _on_DiaryPopAnimation_animation_finished(anim_name):
 	$BackPack/BackPackButton.visible = true
 
-func _on_BackPackBeating_animation_finished(_anim_name):
+func _on_BackPackBeating_animation_finished(anim_name):
 	$BackPack.scale = Vector2(0.203,0.203)
