@@ -69,6 +69,7 @@ func select_level():
 #	if bool(current_episode[2]) and bool(locked_episodes[2]):
 #		print("level3")
 #		emit_signal("end_episode_selection", "level3")
+	pass
 
 func back_menu():
 	emit_signal("end_episode_selection", "menu")
