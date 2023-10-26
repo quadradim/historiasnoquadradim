@@ -22,7 +22,7 @@ func _ready():
 	$WritingTime.start()
 	$Mapa.disabled = true
 
-func _process(_delta):
+func _process(delta):
 	$MainMusic.update("soundtrack")
 
 func _on_WritingTime_timeout():
