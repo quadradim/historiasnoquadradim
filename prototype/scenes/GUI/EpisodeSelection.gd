@@ -60,15 +60,15 @@ func back_pressed():
 			$Padlock.visible = false
 
 func select_level():
-	if bool(current_episode[0]) and bool(locked_episodes[0]):
-		print("level1")
-		emit_signal("end_episode_selection", "level1")
-	if bool(current_episode[1]) and bool(locked_episodes[1]):
-		print("level2")
-		emit_signal("end_episode_selection", "level2")
-	if bool(current_episode[2]) and bool(locked_episodes[2]):
-		print("level3")
-		emit_signal("end_episode_selection", "level3")
+#	if bool(current_episode[0]) and bool(locked_episodes[0]):
+#		print("level1")
+#		emit_signal("end_episode_selection", "level1")
+#	if bool(current_episode[1]) and bool(locked_episodes[1]):
+#		print("level2")
+#		emit_signal("end_episode_selection", "level2")
+#	if bool(current_episode[2]) and bool(locked_episodes[2]):
+#		print("level3")
+#		emit_signal("end_episode_selection", "level3")
 
 func back_menu():
 	emit_signal("end_episode_selection", "menu")
