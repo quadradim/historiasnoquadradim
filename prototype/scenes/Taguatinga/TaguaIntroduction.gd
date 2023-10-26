@@ -1,5 +1,6 @@
 extends CanvasLayer
 
+signal start_audio
 signal end_taguatinga_introduction
 # Declare member variables here. Examples:
 # var a = 2

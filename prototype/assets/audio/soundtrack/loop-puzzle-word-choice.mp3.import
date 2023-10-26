@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/loop-puzzle-word-choice.mp3-3f5ee776d54c5c3502cff84ffa6fde37.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/soundtrack/loop-puzzle-word-choice.mp3"
+dest_files=[ "res://.import/loop-puzzle-word-choice.mp3-3f5ee776d54c5c3502cff84ffa6fde37.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

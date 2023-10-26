@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://assets/Images/ProtestoBandeirante/Cenario.jpeg" type="Texture" id=1]
 [ext_resource path="res://assets/Images/NucleoBandeirante/sindicalista_distrator_multidão3.png" type="Texture" id=2]
@@ -6,7 +6,7 @@
 [ext_resource path="res://assets/Images/NucleoBandeirante/ícone_fala2.png" type="Texture" id=4]
 [ext_resource path="res://scenes/NucleoBandeirante/dialogs/Distrator03.gd" type="Script" id=5]
 [ext_resource path="res://scenes/AuxScenes/PlayerBackPack.tscn" type="PackedScene" id=6]
-
+[ext_resource path="res://scenes/AuxScenes/AudioController.tscn" type="PackedScene" id=7]
 
 [node name="Distrator03" type="CanvasLayer"]
 script = ExtResource( 5 )
@@ -35,5 +35,7 @@ nam = [ "", "Sindicalista" ]
 resize_panel = [ Vector2( 0, 0 ), Vector2( 100, 26 ) ]
 
 [node name="PlayerBackPack" parent="." instance=ExtResource( 6 )]
+
+[node name="MainMusic" parent="." instance=ExtResource( 7 )]
 
 [connection signal="end_dialog" from="ChatBox" to="." method="end_distractor_dialog"]

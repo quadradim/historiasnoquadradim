@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/sindicalista.mp3-a6a3a99a5f61333c83f072ef433d5d2e.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/soundtrack/sindicalista.mp3"
+dest_files=[ "res://.import/sindicalista.mp3-a6a3a99a5f61333c83f072ef433d5d2e.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

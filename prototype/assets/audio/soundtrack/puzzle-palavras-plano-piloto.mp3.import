@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/puzzle-palavras-plano-piloto.mp3-77c4a2576ba41dcce5d26526f6550ba0.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/soundtrack/puzzle-palavras-plano-piloto.mp3"
+dest_files=[ "res://.import/puzzle-palavras-plano-piloto.mp3-77c4a2576ba41dcce5d26526f6550ba0.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

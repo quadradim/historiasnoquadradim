@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/loop-intro-darcy.mp3-0a58c77b54cdbbe5854051a1d24e06a2.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/soundtrack/loop-intro-darcy.mp3"
+dest_files=[ "res://.import/loop-intro-darcy.mp3-0a58c77b54cdbbe5854051a1d24e06a2.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

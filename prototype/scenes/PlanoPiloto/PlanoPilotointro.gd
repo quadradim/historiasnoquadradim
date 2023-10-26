@@ -1,7 +1,7 @@
 extends CanvasLayer
 
 signal end_plano_piloto_intro
-
+signal start_audio
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"

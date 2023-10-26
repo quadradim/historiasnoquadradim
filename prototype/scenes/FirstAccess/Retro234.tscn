@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://assets/Themes/Menu.tres" type="Theme" id=1]
 [ext_resource path="res://assets/Images/Menu/Padrão3.png" type="Texture" id=2]
@@ -14,6 +14,7 @@
 [ext_resource path="res://scenes/AuxScenes/Pop_Skills.tscn" type="PackedScene" id=12]
 [ext_resource path="res://assets/Images/diary/historiômetro/9.png" type="Texture" id=13]
 [ext_resource path="res://scenes/AuxScenes/Button.tscn" type="PackedScene" id=14]
+[ext_resource path="res://scenes/AuxScenes/AudioController.tscn" type="PackedScene" id=16]
 
 [sub_resource type="StyleBoxFlat" id=9]
 border_width_left = 15
@@ -125,6 +126,8 @@ text = "Continuar"
 
 [node name="Pop_Skills" parent="." instance=ExtResource( 12 )]
 layer = 2
+
+[node name="MainMusic" parent="." instance=ExtResource( 16 )]
 
 [connection signal="timeout" from="PhotoPanel/MensagePanel/WritingTime" to="." method="_on_WritingTime_timeout"]
 [connection signal="button_down" from="Button2" to="." method="_on_Button2_button_down"]

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/tema-retrospectiva.mp3-bf12a18355c90fadfd61f433139a6d51.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/soundtrack/tema-retrospectiva.mp3"
+dest_files=[ "res://.import/tema-retrospectiva.mp3-bf12a18355c90fadfd61f433139a6d51.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

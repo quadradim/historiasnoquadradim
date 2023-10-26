@@ -15,7 +15,6 @@
 [ext_resource path="res://assets/Themes/CharacterChoice.tres" type="Theme" id=13]
 [ext_resource path="res://scenes/AuxScenes/PlayerBackPack.tscn" type="PackedScene" id=14]
 
-
 [sub_resource type="Animation" id=1]
 resource_name = "NewGame"
 length = 1.5

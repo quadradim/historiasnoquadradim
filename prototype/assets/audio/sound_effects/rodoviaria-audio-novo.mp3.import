@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/rodoviaria-audio-novo.mp3-fb820494fb3945ec66ddfb2f12139cde.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/sound_effects/rodoviaria-audio-novo.mp3"
+dest_files=[ "res://.import/rodoviaria-audio-novo.mp3-fb820494fb3945ec66ddfb2f12139cde.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

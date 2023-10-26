@@ -53,7 +53,7 @@ align = 1
 autowrap = true
 
 [node name="StartAudio" type="Timer" parent="."]
-wait_time = 2.6
+wait_time = 3.0
 one_shot = true
 autostart = true
 

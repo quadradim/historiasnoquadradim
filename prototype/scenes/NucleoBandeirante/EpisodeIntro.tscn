@@ -37,7 +37,7 @@ text = "Continuar"
 wait_time = 3.0
 
 [node name="StartVideo" type="Timer" parent="."]
-wait_time = 2.6
+wait_time = 3.0
 one_shot = true
 
 [node name="PauseVideo" type="Timer" parent="."]

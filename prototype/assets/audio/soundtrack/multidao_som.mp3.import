@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/multidao_som.mp3-a76575ac3a95a985e47e67a1bb3ec85b.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/soundtrack/multidao_som.mp3"
+dest_files=[ "res://.import/multidao_som.mp3-a76575ac3a95a985e47e67a1bb3ec85b.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

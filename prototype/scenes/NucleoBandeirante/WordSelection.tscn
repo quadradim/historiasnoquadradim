@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=2]
+[gd_scene load_steps=29 format=2]
 
 [ext_resource path="res://assets/Themes/Menu.tres" type="Theme" id=1]
 [ext_resource path="res://assets/Images/diary/tape.png" type="Texture" id=2]
@@ -15,6 +15,7 @@
 [ext_resource path="res://assets/Images/diary/cubo2.png" type="Texture" id=13]
 [ext_resource path="res://assets/Images/diary/jornal2.png" type="Texture" id=14]
 [ext_resource path="res://scenes/AuxScenes/Button.tscn" type="PackedScene" id=15]
+[ext_resource path="res://scenes/AuxScenes/ChatBox.tscn" type="PackedScene" id=16]
 
 [sub_resource type="DynamicFont" id=10]
 size = 24
@@ -142,6 +143,21 @@ tracks/4/keys = {
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0.670588 ) ]
+}
+
+[sub_resource type="Animation" id=13]
+resource_name = "ChatPop"
+tracks/0/type = "value"
+tracks/0/path = NodePath("ChatBox:rect_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1e-05, 1e-05 ), Vector2( 1, 1 ) ]
 }
 
 [node name="CanvasLayer" type="CanvasLayer"]
@@ -389,10 +405,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -481.0
-margin_top = -225.0
-margin_right = 485.0
-margin_bottom = 191.0
+margin_left = -236.0
+margin_top = -86.0
+margin_right = 169.0
+margin_bottom = 88.0
 theme = ExtResource( 10 )
 
 [node name="MessageText" type="Label" parent="MessageBox"]
@@ -400,10 +416,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -469.0
-margin_top = -181.0
-margin_right = 470.0
-margin_bottom = 143.0
+margin_left = -145.5
+margin_top = -53.5
+margin_right = 142.5
+margin_bottom = 46.5
 custom_colors/font_color = Color( 0.0235294, 0.0313726, 0.109804, 1 )
 custom_fonts/font = SubResource( 11 )
 text = "aaaaaaaaaaaa"
@@ -432,9 +448,9 @@ margin_bottom = 440.0
 
 [node name="Fade" type="Panel" parent="Fade_Popup"]
 modulate = Color( 1, 1, 1, 0 )
-margin_left = -320.0
+margin_left = -321.0
 margin_top = -400.0
-margin_right = 705.0
+margin_right = 704.0
 margin_bottom = 179.0
 
 [node name="UnlockedSkill" type="WindowDialog" parent="."]
@@ -480,6 +496,18 @@ texture = ExtResource( 14 )
 root_node = NodePath("../UnlockedSkill")
 anims/Popmenssage = SubResource( 12 )
 
+[node name="ChatBox" parent="." instance=ExtResource( 16 )]
+visible = false
+margin_left = -64.0
+margin_top = 157.0
+margin_right = 32.0
+margin_bottom = 205.0
+rect_scale = Vector2( 1e-05, 1e-05 )
+has_profile = false
+
+[node name="ChatPop" type="AnimationPlayer" parent="."]
+anims/ChatPop = SubResource( 13 )
+
 [connection signal="button_down" from="TryButton" to="." method="_on_TryButton_button_down"]
 [connection signal="pressed" from="Word1/Word1Button" to="." method="word1_button"]
 [connection signal="pressed" from="Word2/Word2Button" to="." method="word2_button"]
@@ -491,3 +519,4 @@ anims/Popmenssage = SubResource( 12 )
 [connection signal="pressed" from="Word8/Word8Button" to="." method="word8_button"]
 [connection signal="popup_hide" from="MessageBox" to="." method="_on_MessageBox_popup_hide"]
 [connection signal="button_down" from="NextButton" to="." method="_on_NextButton_button_down"]
+[connection signal="close_chat" from="ChatBox" to="." method="_on_ChatBox_close_chat"]

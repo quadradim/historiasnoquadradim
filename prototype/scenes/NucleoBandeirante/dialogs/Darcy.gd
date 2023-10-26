@@ -4,8 +4,10 @@ var player_data
 
 signal start_audio
 signal next_audio
+signal start_chat
 
 func _ready():
+	$ChatBox/Writting_Timer.stop()
 	player_data = $Player.read()
 	$ChatBox.visible = false
 
@@ -14,6 +16,7 @@ func start():
 	
 func _on_MessageBox_popup_hide():
 	$ChatBox.visible = true
+	$ChatBox._on_Writting_Timer_timeout()
 	emit_signal("start_audio")
 
 func end_speech():

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/loop-analise-de-fotos2.mp3-ee86bef7ea180a428a963d1ae0116c62.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/soundtrack/loop-analise-de-fotos2.mp3"
+dest_files=[ "res://.import/loop-analise-de-fotos2.mp3-ee86bef7ea180a428a963d1ae0116c62.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/clapping_sound.mp3-96c7a98ea79cb9a4f84bc38a61583bcd.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/audio_description/03_darcy_speech/clapping_sound.mp3"
+dest_files=[ "res://.import/clapping_sound.mp3-96c7a98ea79cb9a4f84bc38a61583bcd.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

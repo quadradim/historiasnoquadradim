@@ -26,6 +26,8 @@ func _ready():
 	$PhotoPanel/MensagePanel.visible = true
 	$PhotoPanel/MensagePanel/WritingTime.start()
 
+func _process(delta):
+	$MainMusic.update("soundtrack")
 
 func _on_WritingTime_timeout():
 	if current_text_pos < len(text1[text_position]) and self.layer != -1:
@@ -42,6 +44,9 @@ func show():
 		$PhotoPanel/PhotoTwo.visible = true
 	elif text_position == 4:
 		$PhotoPanel/PhotoThree.visible = true
+		
+func play_music():
+	return $MainMusic
 
 func _on_Button2_button_down():
 	if presses_count < text1.size() - 1:

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/puzzle_cidadelivre_loop.mp3-ee8ad27feecc6b7cf313ed6987f6b1b7.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/soundtrack/puzzle_cidadelivre_loop.mp3"
+dest_files=[ "res://.import/puzzle_cidadelivre_loop.mp3-ee8ad27feecc6b7cf313ed6987f6b1b7.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

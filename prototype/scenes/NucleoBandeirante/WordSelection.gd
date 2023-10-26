@@ -127,13 +127,12 @@ func word8_button():
 
 func _on_MessageBox_popup_hide():
 	if $MessageBox/MessageText.text == "Resposta correta, parabéns. Mas Como começou a depredação da Subprefeitura do Núcleo Bandeirante?":
-		$MessageBox/MessageText.text = "A depredação da SubPrefeitura teve início após a reivindicação de trabalhadores que prestavam serviços à NOVACAP e se definiram como 'turma da boa vontade', por não receberem seus salários há muitos meses. Se somaram aos desempregados que já estavam revoltados em Taguatinga. Então o povo se juntou e já anunciava a greve, quando a repressão da GEB começou. Se instalou então o Levante da Turma da Boa Vontade. Os próximos dias serão intensos."
-		$MessageBox.popup()
-	elif $MessageBox/MessageText.text == "A depredação da SubPrefeitura teve início após a reivindicação de trabalhadores que prestavam serviços à NOVACAP e se definiram como 'turma da boa vontade', por não receberem seus salários há muitos meses. Se somaram aos desempregados que já estavam revoltados em Taguatinga. Então o povo se juntou e já anunciava a greve, quando a repressão da GEB começou. Se instalou então o Levante da Turma da Boa Vontade. Os próximos dias serão intensos.":
-		$NextButton.disabled = false
-		$Fade_Popup.popup()
-		$UnlockedSkill.popup()
-		$UnlockedSkillAnimation.play("Popmenssage")
+		$MessageBox/MessageText.hide()
+		$ChatBox.visible = true
+		$ChatBox/ChatText.text = "A depredação da SubPrefeitura teve início após a reivindicação de trabalhadores que prestavam serviços à NOVACAP e se definiram como 'turma da boa vontade', por não receberem seus salários há muitos meses..."
+		$ChatPop.play("ChatPop")
+		
+
 
 func _on_TryButton_button_down():
 	print(correct_choice)
@@ -170,4 +169,18 @@ func _on_TryButton_button_down():
 
 func _on_NextButton_button_down():
 	emit_signal("end_word_selection","travel_scene")
+	pass # Replace with function body.
+
+
+func _on_ChatBox_close_chat():
+	if $ChatBox/ChatText.text == "A depredação da SubPrefeitura teve início após a reivindicação de trabalhadores que prestavam serviços à NOVACAP e se definiram como 'turma da boa vontade', por não receberem seus salários há muitos meses...":
+		$ChatBox/ChatText.text = "Se somaram aos desempregados que já estavam revoltados em Taguatinga. Então o povo se juntou e já anunciava a greve, quando a repressão da GEB começou. Se instalou então o Levante da Turma da Boa Vontade. Os próximos dias serão intensos."
+		
+	elif $ChatBox/ChatText.text == "Se somaram aos desempregados que já estavam revoltados em Taguatinga. Então o povo se juntou e já anunciava a greve, quando a repressão da GEB começou. Se instalou então o Levante da Turma da Boa Vontade. Os próximos dias serão intensos.":
+		$ChatBox.visible = false
+		$NextButton.disabled = false
+		$Fade_Popup.popup()
+		$UnlockedSkill.popup()
+		$UnlockedSkillAnimation.play("Popmenssage")
+	
 	pass # Replace with function body.
