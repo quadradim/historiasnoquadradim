@@ -79,7 +79,7 @@ func load_diary_statements():
 func _ready():
 	pass
 	
-func _process(delta):
+func _process(_delta):
 	$MainMusic.update("soundtrack")
 
 func _on_Button_pressed():
@@ -184,12 +184,12 @@ func _on_City3Button_pressed():
 
 
 
-func _on_FirstAccessMessageAnimation_animation_finished2(anim_name):
+func _on_FirstAccessMessageAnimation_animation_finished2(_anim_name):
 	$IconsAnimation.play("ProfileAnimation")
 	pass # Replace with function body.
 
 
-func _on_IconsAnimation_animation_finished(anim_name):
+func _on_IconsAnimation_animation_finished(_anim_name):
 	if not animation_finish:
 		$IconsAnimation.play("ProfileAnimation")
 	else:

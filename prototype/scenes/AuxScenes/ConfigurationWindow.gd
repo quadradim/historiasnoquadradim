@@ -41,7 +41,7 @@ func _ready():
 		
 	update_volume()
 	
-func _process(delta):
+func _process(_delta):
 	player_data = $PlayerEntity.read()
 	update_volume()
 

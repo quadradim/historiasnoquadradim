@@ -10,7 +10,7 @@ func _ready():
 	$FirstAccessMessage.popup()
 	$PopUpPlayer.play("Dale")
 
-func _process(delta):
+func _process(_delta):
 	$MainMusic.update("soundtrack")
 
 func click_magnifier(event):
@@ -18,7 +18,7 @@ func click_magnifier(event):
 		$AnimationPlayer.play("MagnifierMove")
 		discover = true
 
-func magnifier_move_finished(anim_name):
+func magnifier_move_finished(_anim_name):
 	$Control/NoteArea.visible = true
 	
 	if not animation_finish:

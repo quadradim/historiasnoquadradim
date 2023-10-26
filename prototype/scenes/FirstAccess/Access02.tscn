@@ -72,6 +72,6 @@ stream = ExtResource( 7 )
 wait_time = 5.0
 
 [connection signal="timeout" from="WritingTime" to="." method="_on_WritingTime_timeout"]
-[connection signal="button_down" from="Mapa" to="." method="_on_Mapa_button_down"]
 [connection signal="button_down" from="Mapa" to="." method="_on_Button_button_down"]
+[connection signal="button_down" from="Mapa" to="." method="_on_Mapa_button_down"]
 [connection signal="timeout" from="FinishWriting" to="." method="_on_FinishWriting_timeout"]

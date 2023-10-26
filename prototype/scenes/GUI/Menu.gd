@@ -6,7 +6,7 @@ func _ready():
 	$MenuControl/ConfigurationWindow.get_child(0).hide()
 	$MenuAnimation.play("BackgroundChange")
 
-func animation_finished(anim_name):
+func animation_finished(_anim_name):
 	$MenuAnimation.play_backwards("BackgroundChange")
 
 func _on_StartBtn_button_down():
@@ -28,7 +28,7 @@ func _on_Sair_button_down():
 	emit_signal("end_menu", "quit")
 	pass # Replace with function body.
 	
-func _process(delta):
+func _process(_delta):
 	$MainMusic.update("soundtrack")
 	
 func play_music():
