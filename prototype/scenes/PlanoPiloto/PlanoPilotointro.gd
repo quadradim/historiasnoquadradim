@@ -26,3 +26,8 @@ func _on_IsraelButton_pressed():
 func _on_StartAudio_timeout():
 	emit_signal("start_audio")
 	pass # Replace with function body.
+
+
+func _on_ChatBox_close_chat():
+	$ChatBox.visible = false
+	pass # Replace with function body.

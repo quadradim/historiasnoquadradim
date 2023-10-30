@@ -27,3 +27,8 @@ func _on_StartAudio_timeout():
 func _on_NextButton_button_down():
 	emit_signal("end_taguatinga_introduction","Taguatinga")
 	pass # Replace with function body.
+
+
+func _on_ChatBox_close_chat():
+	$ChatBox.visible = false
+	pass # Replace with function body.
