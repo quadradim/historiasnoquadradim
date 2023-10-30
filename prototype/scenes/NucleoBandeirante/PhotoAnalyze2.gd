@@ -11,8 +11,10 @@ func _ready():
 	$MinigameExplanation.popup()
 	$InstructionAnimation.play("Instruction")
 	$Button.disabled = true
+	$Next.disabled = true
 
 func next_image():
+	$Next.disabled = true
 	if $PhotoPanel/PhotoOne.visible == true:
 		$PhotoPanel/PhotoOne.visible = false
 		$PhotoPanel/PhotoTwo.visible = true
@@ -49,7 +51,7 @@ func _on_FirstAnswer_button_down():
 	$ClueMensage.popup()
 	$FirstQuestion/FirstAnswer.disabled = true
 	$SecondQuestion/SecondAnswer.disabled = false
-
+	
 func _on_SecondAnswer_button_down():
 	correct += 1
 	$ClueMensage/Label.text = ("Resposta correta, agora a proxima pergunta")
@@ -62,23 +64,28 @@ func _on_ThirdAnswer_button_down():
 	$ClueMensage/Label.text = ("Muito bom, vamos para a proxima imagem")
 	$ClueMensage.popup()
 	$ThirdQuestion/ThirdAnswer.disabled = true
+	$Next.disabled = false
+	
 
 func _on_FourthQuestion_popup_hide():
 	correct += 1
 	$FifthQuestion.popup()
 	$FifthQuestion/FifthAnswer.disabled = false
 
+
 func _on_FifthAnswer_button_down():
 	correct += 1
 	$ClueMensage/Label.text = ("Muito bom, vamos para a proxima imagem")
 	$ClueMensage.popup()
 	$FifthQuestion/FifthAnswer.disabled = true
-
+	$Next.disabled = false
+	
 func _on_SixthAnswer_button_down():
 	correct += 1
 	$ClueMensage/Label.text = ("Parabéns você acertou todas as perguntas!")
 	$ClueMensage.popup()
 
+	
 func _on_UnlockedSkill_popup_hide():
 	$Player.modifier("ability",[1,0,0,0,0,0,1,0,0])
 	$Player.modifier("historiometer",0)
