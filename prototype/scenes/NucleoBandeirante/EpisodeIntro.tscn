@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://scenes/NucleoBandeirante/EpisodeIntro.gd" type="Script" id=1]
 [ext_resource path="res://scenes/AuxScenes/Button.tscn" type="PackedScene" id=2]
 [ext_resource path="res://assets/Animation/ezgif.com-gif-maker.webm" type="VideoStream" id=3]
 [ext_resource path="res://assets/Images/Access01_02/mapa-satélite-de-brasília-brasil-ruas-da-cidade-128618769.png" type="Texture" id=4]
 [ext_resource path="res://assets/Images/Access01_02/Daco_4140150.png" type="Texture" id=5]
+[ext_resource path="res://scenes/AuxScenes/ChatBox.tscn" type="PackedScene" id=6]
 
 [node name="EpisodeIntro" type="CanvasLayer"]
 script = ExtResource( 1 )
@@ -15,26 +16,36 @@ scale = Vector2( 0.641147, 0.641147 )
 texture = ExtResource( 4 )
 
 [node name="Paper" type="Sprite" parent="."]
-position = Vector2( 517, 297 )
+position = Vector2( 475, 276 )
 scale = Vector2( 0.977174, 0.977174 )
 texture = ExtResource( 5 )
 
 [node name="VideoPlayer" type="VideoPlayer" parent="."]
-margin_left = 105.0
-margin_top = 46.0
-margin_right = 945.0
-margin_bottom = 482.0
+margin_left = 70.0
+margin_top = 28.0
+margin_right = 910.0
+margin_bottom = 464.0
 stream = ExtResource( 3 )
 
+[node name="ChatBox" parent="." instance=ExtResource( 6 )]
+margin_left = -57.0
+margin_top = 157.0
+margin_right = 39.0
+margin_bottom = 205.0
+chat = "Cidade Livre, conhecida a época como \"cidade livre\" este era o lugar em que o comércio e a vida social aconteciam durante a construção da nova capital.
+"
+has_profile = false
+
 [node name="NextButton" parent="." instance=ExtResource( 2 )]
-margin_left = 449.0
-margin_top = 506.0
-margin_right = 585.0
-margin_bottom = 550.0
+margin_left = 875.0
+margin_top = 517.0
+margin_right = 1011.0
+margin_bottom = 561.0
 text = "Continuar"
 
 [node name="EnableButton" type="Timer" parent="."]
 wait_time = 3.0
+one_shot = true
 
 [node name="StartVideo" type="Timer" parent="."]
 wait_time = 3.0
@@ -42,8 +53,10 @@ one_shot = true
 
 [node name="PauseVideo" type="Timer" parent="."]
 wait_time = 2.5
+one_shot = true
 
 [connection signal="finished" from="VideoPlayer" to="." method="_on_VideoPlayer_finished"]
+[connection signal="close_chat" from="ChatBox" to="." method="_on_ChatBox_close_chat"]
 [connection signal="button_down" from="NextButton" to="." method="_on_NextButton_button_down"]
 [connection signal="timeout" from="EnableButton" to="." method="_on_EnableButton_timeout"]
 [connection signal="timeout" from="StartVideo" to="." method="_on_StartVideo_timeout"]
