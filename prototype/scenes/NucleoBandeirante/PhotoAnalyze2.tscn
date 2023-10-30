@@ -127,6 +127,7 @@ icon = ExtResource( 6 )
 expand_icon = true
 
 [node name="Prev" type="Button" parent="."]
+visible = false
 margin_left = 159.0
 margin_top = 249.0
 margin_right = 195.0
