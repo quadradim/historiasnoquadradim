@@ -13,6 +13,7 @@ func _ready():
 	
 func _process(delta):
 	$CarSoundEffect.update("soundeffect")
+	$MainMusic.update("soundtrack")
 	
 func _on_RuralWillysButton_pressed():
 	if bool(veicles.locked_veicles[0]) == false:

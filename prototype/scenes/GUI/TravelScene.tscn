@@ -104,6 +104,8 @@ texture = ExtResource( 8 )
 [node name="CarSoundEffect" parent="." instance=ExtResource( 12 )]
 stream = ExtResource( 11 )
 
+[node name="MainMusic" parent="." instance=ExtResource( 12 )]
+
 [connection signal="pressed" from="ZebrinhaButton" to="." method="_on_ZebrinhaButton_pressed"]
 [connection signal="pressed" from="RuralWillysButton" to="." method="_on_RuralWillysButton_pressed"]
 [connection signal="pressed" from="BrasiliaButton" to="." method="_on_BrasiliaButton_pressed"]

@@ -9,7 +9,10 @@ var player_data
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	player_data = $Player.read()
-
+	
+func _process(delta):
+	$MainMusic.update("soundtrack")
+	
 func _on_ChatBox_end_dialog():
 	$Player.modifier("characters",3)
 #	$PlayerBackPack/DiaryInventory._ready()

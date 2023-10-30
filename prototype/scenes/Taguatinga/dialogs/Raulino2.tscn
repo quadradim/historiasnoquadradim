@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://assets/Images/Taguatinga/3-Taguatinga (não-finalizado).png" type="Texture" id=1]
 [ext_resource path="res://assets/Images/Taguatinga/multidão.png" type="Texture" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://assets/Images/Jogador/JOGADOR.png" type="Texture" id=7]
 [ext_resource path="res://scenes/Taguatinga/dialogs/Raulino2.gd" type="Script" id=8]
 [ext_resource path="res://scenes/AuxScenes/PlayerBackPack.tscn" type="PackedScene" id=9]
+[ext_resource path="res://scenes/AuxScenes/AudioController.tscn" type="PackedScene" id=10]
 [ext_resource path="res://scenes/AuxScenes/Player.tscn" type="PackedScene" id=11]
 
 [node name="CanvasLayer" type="CanvasLayer"]
@@ -49,5 +50,7 @@ resize_panel = [ Vector2( 113, 26 ), Vector2( 90, 26 ), Vector2( 113, 26 ) ]
 [node name="PlayerBackPack" parent="." instance=ExtResource( 9 )]
 
 [node name="PlayerBackPack2" parent="." instance=ExtResource( 9 )]
+
+[node name="MainMusic" parent="." instance=ExtResource( 10 )]
 
 [connection signal="end_dialog" from="ChatBox" to="." method="_on_ChatBox_end_dialog"]

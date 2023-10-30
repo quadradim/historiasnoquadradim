@@ -1,5 +1,6 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
+[ext_resource path="res://scenes/AuxScenes/AudioController.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/AuxScenes/Button.tscn" type="PackedScene" id=2]
 [ext_resource path="res://assets/Images/Access01_02/mapa-satélite-de-brasília-brasil-ruas-da-cidade-128618769.png" type="Texture" id=3]
 [ext_resource path="res://assets/Images/Access01_02/Daco_4140150.png" type="Texture" id=4]
@@ -36,6 +37,9 @@ func _ready():
 	veicles.locked_veicles[1] = 1
 	$WritingTime.start()
 	pass # Replace with function body.
+	
+func _process(delta):
+	$MainMusic.update(\"soundtrack\")
 
 func _on_WritingTime_timeout():
 	if current_text_pos < len(text_tutorials[text_position]) and self.layer != -1:
@@ -177,5 +181,7 @@ text = "Continuar"
 
 [node name="FinishWriting" type="Timer" parent="."]
 wait_time = 5.0
+
+[node name="MainMusic" parent="." instance=ExtResource( 1 )]
 
 [connection signal="button_down" from="Continuar" to="." method="_on_Continuar_button_down"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://assets/Images/Taguatinga/no_cenário.png" type="Texture" id=1]
 [ext_resource path="res://assets/Images/Taguatinga/3-Taguatinga (não-finalizado).png" type="Texture" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://assets/Images/Jogador/JOGADOR.png" type="Texture" id=4]
 [ext_resource path="res://assets/Images/Taguatinga/distrator_perfil.png" type="Texture" id=5]
 [ext_resource path="res://scenes/Taguatinga/dialogs/PolicialDistrator.gd" type="Script" id=6]
+[ext_resource path="res://scenes/AuxScenes/AudioController.tscn" type="PackedScene" id=7]
 
 [node name="PolicialDistrator" type="CanvasLayer"]
 script = ExtResource( 6 )
@@ -45,6 +46,8 @@ nam = [ "Historiadora", "Policial" ]
 resize_panel = [ Vector2( 113, 26 ), Vector2( 70, 26 ) ]
 
 [node name="Sprite3" type="Sprite" parent="."]
+
+[node name="MainMusic" parent="." instance=ExtResource( 7 )]
 
 [connection signal="close_chat" from="ChatBox" to="." method="_on_ChatBox_close_chat"]
 [connection signal="end_dialog" from="ChatBox" to="." method="_on_ChatBox_end_dialog"]

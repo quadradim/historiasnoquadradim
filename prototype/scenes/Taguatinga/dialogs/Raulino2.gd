@@ -10,6 +10,8 @@ signal end_raulino2_dialog
 func _ready():
 	pass # Replace with function body.
 
-
+func _process(delta):
+	$MainMusic.update("soundtrack")
+	
 func _on_ChatBox_end_dialog():
 	emit_signal("end_raulino2_dialog","cronica_raulino")

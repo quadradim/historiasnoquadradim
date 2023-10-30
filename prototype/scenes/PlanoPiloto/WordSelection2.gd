@@ -55,8 +55,10 @@ func _ready():
 	connect_signal_options()
 	
 	create_default_style()
+
 	
 func _process(delta):
+	$MainMusic.update("soundtrack")
 	if selections == len(correct_choice_indexes):
 		$TryButton.disabled = false
 

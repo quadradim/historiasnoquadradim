@@ -6,6 +6,9 @@ var i = 0
 
 func _ready():
 	player_data = $Player.read()
+	
+func _process(delta):
+	$MainMusic.update("soundtrack")
 
 func _on_ChatBox_end_dialog():
 	$PopWindow.popup()

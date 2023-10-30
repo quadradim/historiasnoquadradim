@@ -8,6 +8,10 @@ var i = 0
 func _ready():
 	player_data = $PlayerBackPack/DiaryInventory/PlayerEntitiy.read()
 
+func _process(delta):
+	$MainMusic.update("soundtrack")
+	
+
 func _on_ChatBox_end_dialog():
 	$PlayerBackPack/DiaryInventory/PlayerEntitiy.modifier("characters",6)
 	$PlayerBackPack/DiaryInventory._ready()

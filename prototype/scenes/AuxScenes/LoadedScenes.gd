@@ -223,7 +223,7 @@ var scenes_data = {
 		'res://scenes/Taguatinga/Taguatinga.tscn',
 		'end_taguatinga',
 		true,
-		'continnue',
+		'continue',
 		[],
 		true,
 	],
