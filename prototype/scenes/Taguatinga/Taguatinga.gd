@@ -19,6 +19,9 @@ func _ready():
 	$DistratorPolicial.modulate = "ffffff"
 	$ChefeDePolicia.modulate = "ffffff"
 
+func _process(delta):
+	$MainMusic.update("soundtrack")
+	
 func _on_TextureButton_pressed():
 	$NotebookWind.popup()
 	$Caderno.visible = false

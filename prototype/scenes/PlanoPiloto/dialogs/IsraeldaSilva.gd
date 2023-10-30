@@ -4,6 +4,9 @@ signal end_israel_dialog
 
 func _ready():
 	player_data = $PlayerBackPack/DiaryInventory/PlayerEntitiy.read()
+	
+func _process(delta):
+	$MainMusic.update("soundtrack")
 
 func _on_ChatBox_end_dialog():
 	$PopWindow.popup()

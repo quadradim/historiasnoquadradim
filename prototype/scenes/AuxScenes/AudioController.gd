@@ -1,6 +1,5 @@
 extends AudioStreamPlayer
 
-signal end_lavadeiras
 
 func _ready():
 	pass # Replace with function body.

@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://assets/Images/Access01_02/Daco_4140150.png" type="Texture" id=1]
 [ext_resource path="res://assets/Images/Access01_02/mapa-satélite-de-brasília-brasil-ruas-da-cidade-128618769.png" type="Texture" id=2]
 [ext_resource path="res://assets/Images/TaguaIntroduction/correio0.png" type="Texture" id=3]
 [ext_resource path="res://scenes/Taguatinga/TaguaIntroduction.gd" type="Script" id=4]
 [ext_resource path="res://scenes/AuxScenes/Button.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/AuxScenes/AudioController.tscn" type="PackedScene" id=6]
 
 [node name="TaguaIntroduction" type="CanvasLayer"]
 script = ExtResource( 4 )
@@ -33,6 +34,8 @@ text = "Continuar"
 wait_time = 3.0
 one_shot = true
 autostart = true
+
+[node name="MainMusic" parent="." instance=ExtResource( 6 )]
 
 [connection signal="button_down" from="NextButton" to="." method="_on_NextButton_button_down"]
 [connection signal="timeout" from="StartAudio" to="." method="_on_StartAudio_timeout"]

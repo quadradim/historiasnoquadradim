@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://scenes/Taguatinga/dialogs/JoséMiguel.gd" type="Script" id=1]
 [ext_resource path="res://assets/Images/Taguatinga/3-Taguatinga (não-finalizado).png" type="Texture" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://assets/Images/Taguatinga/ícone_fala.png" type="Texture" id=5]
 [ext_resource path="res://assets/Images/Taguatinga/em_conversa.png" type="Texture" id=6]
 [ext_resource path="res://scenes/AuxScenes/Player.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scenes/AuxScenes/AudioController.tscn" type="PackedScene" id=8]
 
 [node name="CanvasLayer" type="CanvasLayer"]
 script = ExtResource( 1 )
@@ -44,5 +45,7 @@ resize_panel = [ Vector2( 113, 26 ), Vector2( 101, 26 ) ]
 
 [node name="PlayerBackPack" parent="." instance=ExtResource( 4 )]
 visible = false
+
+[node name="MainMusic" parent="." instance=ExtResource( 8 )]
 
 [connection signal="end_dialog" from="ChatBox" to="." method="_on_ChatBox_end_dialog"]

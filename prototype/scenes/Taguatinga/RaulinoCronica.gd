@@ -25,6 +25,9 @@ func _ready():
 	$WritingTime.start()
 	$Continuar.disabled = true
 
+func _process(delta):
+	$MainMusic.update("soundtrack")
+
 func _on_WritingTime_timeout():
 	if current_text_pos < len(text_tutorials[text_position]) and self.layer != -1:
 		current_text += text_tutorials[text_position][current_text_pos]
