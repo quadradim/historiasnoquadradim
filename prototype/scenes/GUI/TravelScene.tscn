@@ -26,30 +26,30 @@ scale = Vector2( 0.384167, 0.384167 )
 texture = ExtResource( 3 )
 
 [node name="ZebrinhaButton" type="TextureButton" parent="."]
-margin_left = 14.0
-margin_top = 230.0
-margin_right = 359.0
-margin_bottom = 450.0
+margin_left = 52.0
+margin_top = 293.0
+margin_right = 349.0
+margin_bottom = 419.0
 
 [node name="Zebrinha" type="Sprite" parent="ZebrinhaButton"]
-position = Vector2( 159, 121 )
-scale = Vector2( 0.245359, 0.245359 )
+position = Vector2( 134, 79 )
+scale = Vector2( 0.245, 0.245 )
 texture = ExtResource( 4 )
 
 [node name="ZebrinhaBloqueada" type="Sprite" parent="."]
 modulate = Color( 0.47451, 0.47451, 0.47451, 1 )
-position = Vector2( 172, 351 )
+position = Vector2( 186, 372 )
 scale = Vector2( 0.245, 0.245 )
 texture = ExtResource( 10 )
 
 [node name="RuralWillysButton" type="TextureButton" parent="."]
-margin_left = 428.0
-margin_top = 252.0
-margin_right = 682.0
+margin_left = 454.0
+margin_top = 300.0
+margin_right = 659.0
 margin_bottom = 494.0
 
 [node name="RuralWillys" type="Sprite" parent="RuralWillysButton"]
-position = Vector2( 127, 112 )
+position = Vector2( 101, 64 )
 scale = Vector2( 0.287182, 0.287182 )
 texture = ExtResource( 2 )
 
@@ -60,13 +60,13 @@ scale = Vector2( 0.287, 0.287 )
 texture = ExtResource( 9 )
 
 [node name="BrasiliaButton" type="TextureButton" parent="."]
-margin_left = 751.0
-margin_top = 232.0
-margin_right = 1022.0
-margin_bottom = 405.0
+margin_left = 757.0
+margin_top = 262.0
+margin_right = 1003.0
+margin_bottom = 391.0
 
 [node name="Brasilia" type="Sprite" parent="BrasiliaButton"]
-position = Vector2( 142, 79 )
+position = Vector2( 136, 49 )
 scale = Vector2( 0.281909, 0.281909 )
 texture = ExtResource( 1 )
 

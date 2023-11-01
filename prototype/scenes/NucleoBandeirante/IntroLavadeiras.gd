@@ -4,8 +4,9 @@ signal introd_lava
 
 func _ready():
 	pass
-
-
+	
+func _process(delta):
+	$MainMusic.update("soundtrack")
 
 func _on_Next_button_down():
 	emit_signal("introd_lava", "analyze_photos")
