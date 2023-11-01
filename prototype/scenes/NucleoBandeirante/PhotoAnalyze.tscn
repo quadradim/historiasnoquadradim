@@ -271,6 +271,7 @@ margin_bottom = -27.0
 visible = false
 
 [node name="MinigameExplanation" type="WindowDialog" parent="."]
+visible = true
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -287,13 +288,12 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -283.136
-margin_top = -115.545
-margin_right = 287.864
-margin_bottom = 174.455
+margin_left = -271.682
+margin_top = -127.0
+margin_right = 257.318
+margin_bottom = 142.0
 custom_colors/font_color = Color( 0.196078, 0.282353, 0.376471, 0.670588 )
-text = "Analise as imagens e encontre pontos que possam dizer mais sobre o que aconteceu no levante da turma da boa vontade.
-"
+text = "Agora você deverá analisar as fotos a seguir. Clique na imagem para encontrar pontos que possam dizer mais sobre o que aconteceu no levante da Turma da Boa Vontade."
 align = 1
 valign = 1
 autowrap = true
@@ -307,13 +307,12 @@ margin_bottom = 197.0
 
 [node name="Fade" type="Panel" parent="Fade_Popup"]
 modulate = Color( 1, 1, 1, 0 )
-margin_left = -297.0
-margin_top = -157.0
-margin_right = 728.0
-margin_bottom = 422.0
+margin_left = -294.0
+margin_top = -160.0
+margin_right = 731.0
+margin_bottom = 419.0
 
 [node name="UnlockedSkill" type="WindowDialog" parent="."]
-visible = true
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5

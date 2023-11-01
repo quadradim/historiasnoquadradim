@@ -90,7 +90,7 @@ var scenes_data = {
 		'res://scenes/NucleoBandeirante/introLavadeiras.tscn',
 		'introd_lava',
 		false,
-		null,
+		'res://assets/audio/soundtrack/loop-analise-de-fotos2.mp3',
 		[],
 		false,
 	],

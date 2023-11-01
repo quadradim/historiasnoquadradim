@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://assets/Fonts/type-writter/JMH Typewriter.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://assets/Themes/Menu.tres" type="Theme" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://assets/Images/Menu/Padrão3.png" type="Texture" id=6]
 [ext_resource path="res://assets/Images/Menu/Padrão1.png" type="Texture" id=7]
 [ext_resource path="res://scenes/NucleoBandeirante/IntroLavadeiras.gd" type="Script" id=8]
+[ext_resource path="res://scenes/AuxScenes/AudioController.tscn" type="PackedScene" id=9]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.945098, 0.933333, 0.905882, 1 )
@@ -92,5 +93,7 @@ text = "A história trazida pelo nosso primeiro arco vem desses tempos frios de 
 E para começar análise algumas fotos..."
 autowrap = true
 clip_text = true
+
+[node name="MainMusic" parent="." instance=ExtResource( 9 )]
 
 [connection signal="button_down" from="Next" to="." method="_on_Next_button_down"]
