@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://assets/Themes/Menu.tres" type="Theme" id=1]
 [ext_resource path="res://assets/Images/Menu/Padrão3.png" type="Texture" id=2]
@@ -16,6 +16,7 @@
 [ext_resource path="res://scenes/AuxScenes/Player.tscn" type="PackedScene" id=14]
 [ext_resource path="res://assets/Images/diary/livros2.png" type="Texture" id=15]
 [ext_resource path="res://assets/Images/AnáliseDeFotos/Foto 3.png" type="Texture" id=16]
+[ext_resource path="res://assets/Themes/Dialogs.tres" type="Theme" id=17]
 
 [sub_resource type="StyleBoxFlat" id=2]
 bg_color = Color( 0.972549, 0.882353, 0.435294, 1 )
@@ -114,10 +115,10 @@ scale = Vector2( 1.10653, 0.91619 )
 texture = ExtResource( 3 )
 
 [node name="Next" type="Button" parent="."]
-margin_left = 810.0
-margin_top = 252.0
-margin_right = 842.0
-margin_bottom = 328.0
+margin_left = 824.0
+margin_top = 249.0
+margin_right = 856.0
+margin_bottom = 325.0
 custom_styles/hover = SubResource( 2 )
 custom_styles/pressed = SubResource( 2 )
 custom_styles/focus = SubResource( 2 )
@@ -151,21 +152,21 @@ method_call_mode = 1
 anims/Instruction = SubResource( 6 )
 
 [node name="PhotoPanel" type="Panel" parent="."]
-margin_left = 257.0
-margin_top = 48.0
-margin_right = 769.0
-margin_bottom = 551.0
+margin_left = 195.0
+margin_top = 8.0
+margin_right = 808.0
+margin_bottom = 440.0
 custom_styles/panel = SubResource( 9 )
 
 [node name="PhotoOne" type="Sprite" parent="PhotoPanel"]
-position = Vector2( 255, 252 )
-scale = Vector2( 0.618557, 0.587796 )
+position = Vector2( 306, 220 )
+scale = Vector2( 0.75, 0.508095 )
 texture = ExtResource( 9 )
 
 [node name="PhotoTwo" type="Sprite" parent="PhotoPanel"]
 visible = false
-position = Vector2( 257, 252 )
-scale = Vector2( 0.596059, 0.592221 )
+position = Vector2( 306, 220 )
+scale = Vector2( 0.716749, 0.51192 )
 texture = ExtResource( 12 )
 
 [node name="ThirdClue" type="Sprite" parent="PhotoPanel/PhotoTwo"]
@@ -182,8 +183,8 @@ margin_bottom = 10.325
 
 [node name="PhotoThree" type="Sprite" parent="PhotoPanel"]
 visible = false
-position = Vector2( 255.563, 249.523 )
-scale = Vector2( 0.617903, 0.591946 )
+position = Vector2( 306.563, 220 )
+scale = Vector2( 0.749515, 0.51711 )
 texture = ExtResource( 16 )
 
 [node name="FourthClue" type="Sprite" parent="PhotoPanel/PhotoThree"]
@@ -198,27 +199,23 @@ margin_top = -151.0
 margin_right = 142.0
 margin_bottom = 133.0
 
-[node name="FirstQuestion" type="WindowDialog" parent="."]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -255.0
-margin_top = 136.0
-margin_right = 403.0
-margin_bottom = 301.0
-rect_scale = Vector2( 0.785714, 0.785714 )
-theme = ExtResource( 5 )
+[node name="FirstQuestion" type="Panel" parent="."]
+visible = false
+margin_left = 184.0
+margin_top = 403.0
+margin_right = 816.0
+margin_bottom = 572.0
+theme = ExtResource( 17 )
 
 [node name="FirstQuestion" type="Label" parent="FirstQuestion"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -333.5
-margin_top = -97.5
-margin_right = 331.5
-margin_bottom = 96.5
+margin_left = -316.0
+margin_top = -80.5
+margin_right = 312.0
+margin_bottom = 72.5
 custom_colors/font_color = Color( 0.196078, 0.282353, 0.376471, 0.670588 )
 text = "Observe as experessões das pessoas. O que elas demonstram?
 A) alegria
@@ -229,32 +226,40 @@ valign = 1
 autowrap = true
 
 [node name="FirstAnswer" type="TextureButton" parent="FirstQuestion"]
-margin_left = 263.0
-margin_top = 81.0
-margin_right = 395.0
-margin_bottom = 112.0
+margin_left = 248.0
+margin_top = 85.0
+margin_right = 376.0
+margin_bottom = 111.0
 
-[node name="SecondQuestion" type="WindowDialog" parent="."]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -255.0
-margin_top = 136.0
-margin_right = 403.0
-margin_bottom = 301.0
-rect_scale = Vector2( 0.785714, 0.785714 )
-theme = ExtResource( 5 )
+[node name="WrongAnswer" type="TextureButton" parent="FirstQuestion"]
+margin_left = 264.0
+margin_top = 45.0
+margin_right = 360.0
+margin_bottom = 74.0
+
+[node name="WrongAnswer2" type="TextureButton" parent="FirstQuestion"]
+margin_left = 272.0
+margin_top = 125.0
+margin_right = 352.0
+margin_bottom = 154.0
+
+[node name="SecondQuestion" type="Panel" parent="."]
+visible = false
+margin_left = 184.0
+margin_top = 403.0
+margin_right = 816.0
+margin_bottom = 572.0
+theme = ExtResource( 17 )
 
 [node name="SecondQuestion" type="Label" parent="SecondQuestion"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -329.0
-margin_top = -82.5
-margin_right = 329.0
-margin_bottom = 82.5
+margin_left = -316.0
+margin_top = -84.5
+margin_right = 312.0
+margin_bottom = 80.5
 custom_colors/font_color = Color( 0.196078, 0.282353, 0.376471, 0.670588 )
 text = "Há mulheres na foto?
 A) sim
@@ -264,31 +269,33 @@ valign = 1
 autowrap = true
 
 [node name="SecondAnswer" type="TextureButton" parent="SecondQuestion"]
-margin_left = 294.0
-margin_top = 61.0
-margin_right = 365.0
-margin_bottom = 101.0
+margin_left = 288.0
+margin_top = 69.0
+margin_right = 344.0
+margin_bottom = 93.0
 
-[node name="ThirdQuestion" type="WindowDialog" parent="."]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -255.0
-margin_top = 136.0
-margin_right = 403.0
-margin_bottom = 305.0
-rect_scale = Vector2( 0.785714, 0.785714 )
-theme = ExtResource( 5 )
+[node name="WrongAnswer" type="TextureButton" parent="SecondQuestion"]
+margin_left = 280.0
+margin_top = 109.0
+margin_right = 344.0
+margin_bottom = 133.0
+
+[node name="ThirdQuestion" type="Panel" parent="."]
+visible = false
+margin_left = 184.0
+margin_top = 403.0
+margin_right = 816.0
+margin_bottom = 572.0
+theme = ExtResource( 17 )
 
 [node name="ThirdQuestion" type="Label" parent="ThirdQuestion"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -329.0
+margin_left = -316.0
 margin_top = -84.5
-margin_right = 323.0
+margin_right = 312.0
 margin_bottom = 84.5
 custom_colors/font_color = Color( 0.196078, 0.282353, 0.376471, 0.670588 )
 text = "Perceba que há um hotel na foto, quem são essas pessoas perto dele?
@@ -299,20 +306,26 @@ valign = 1
 autowrap = true
 
 [node name="ThirdAnswer" type="TextureButton" parent="ThirdQuestion"]
-margin_left = 263.0
-margin_top = 122.0
-margin_right = 386.0
-margin_bottom = 163.0
+margin_left = 256.0
+margin_top = 128.0
+margin_right = 376.0
+margin_bottom = 160.0
+
+[node name="WrongAnswer" type="TextureButton" parent="ThirdQuestion"]
+margin_left = 264.0
+margin_top = 93.0
+margin_right = 360.0
+margin_bottom = 117.0
 
 [node name="FourthQuestion" type="WindowDialog" parent="."]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -255.0
-margin_top = 136.0
-margin_right = 403.0
-margin_bottom = 305.0
+margin_left = -264.0
+margin_top = -96.0
+margin_right = 394.0
+margin_bottom = 73.0
 rect_scale = Vector2( 0.785714, 0.785714 )
 theme = ExtResource( 5 )
 
@@ -331,27 +344,23 @@ align = 1
 valign = 1
 autowrap = true
 
-[node name="FifthQuestion" type="WindowDialog" parent="."]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -259.0
-margin_top = 104.0
-margin_right = 404.0
-margin_bottom = 314.0
-rect_scale = Vector2( 0.785714, 0.785714 )
-theme = ExtResource( 5 )
+[node name="FifthQuestion" type="Panel" parent="."]
+visible = false
+margin_left = 184.0
+margin_top = 376.0
+margin_right = 816.0
+margin_bottom = 572.0
+theme = ExtResource( 17 )
 
 [node name="FifthQuestion" type="Label" parent="FifthQuestion"]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -326.5
-margin_top = -91.0
-margin_right = 323.5
-margin_bottom = 101.0
+anchor_left = 0.497
+anchor_top = 0.364
+anchor_right = 0.497
+anchor_bottom = 0.364
+margin_left = -314.104
+margin_top = -69.344
+margin_right = 313.896
+margin_bottom = 122.656
 custom_colors/font_color = Color( 0.196078, 0.282353, 0.376471, 0.670588 )
 text = "Parece haver um palanque, não é mesmo. E as pessoas em destaque as pessoas em destaque se vestem de maneira diferente das que ouvem?
 a) Não
@@ -361,32 +370,34 @@ valign = 1
 autowrap = true
 
 [node name="FifthAnswer" type="TextureButton" parent="FifthQuestion"]
-margin_left = 53.0
-margin_top = 173.0
-margin_right = 605.0
-margin_bottom = 202.0
+margin_left = 40.0
+margin_top = 160.0
+margin_right = 590.0
+margin_bottom = 189.0
 
-[node name="SixthQuestion" type="WindowDialog" parent="."]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -255.0
-margin_top = 115.0
-margin_right = 403.0
-margin_bottom = 330.0
-rect_scale = Vector2( 0.785714, 0.785714 )
-theme = ExtResource( 5 )
+[node name="WrongAnswer" type="TextureButton" parent="FifthQuestion"]
+margin_left = 284.0
+margin_top = 121.0
+margin_right = 344.0
+margin_bottom = 148.0
+
+[node name="SixthQuestion" type="Panel" parent="."]
+visible = false
+margin_left = 184.0
+margin_top = 376.0
+margin_right = 816.0
+margin_bottom = 572.0
+theme = ExtResource( 17 )
 
 [node name="SixthQuestion" type="Label" parent="SixthQuestion"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -329.0
-margin_top = -96.0455
-margin_right = 323.0
-margin_bottom = 95.9545
+margin_left = -324.0
+margin_top = -98.0
+margin_right = 328.0
+margin_bottom = 94.0
 custom_colors/font_color = Color( 0.196078, 0.282353, 0.376471, 0.670588 )
 text = "Observando mais de perto quem discursa, vemos que há um personagem central. Quem é ele?
 a) Juscelino Kubitschek, senador eleito por GO
@@ -397,10 +408,22 @@ valign = 1
 autowrap = true
 
 [node name="SixthAnswer" type="TextureButton" parent="SixthQuestion"]
-margin_left = 20.0
-margin_top = 127.0
-margin_right = 630.0
-margin_bottom = 163.0
+margin_left = 16.0
+margin_top = 120.0
+margin_right = 621.0
+margin_bottom = 149.0
+
+[node name="WrongAnswer" type="TextureButton" parent="SixthQuestion"]
+margin_left = 86.0
+margin_top = 82.0
+margin_right = 547.0
+margin_bottom = 109.0
+
+[node name="WrongAnswer2" type="TextureButton" parent="SixthQuestion"]
+margin_left = 60.0
+margin_top = 159.0
+margin_right = 576.0
+margin_bottom = 186.0
 
 [node name="PlayerBackPack" parent="." instance=ExtResource( 13 )]
 visible = false
@@ -428,6 +451,34 @@ margin_right = 287.864
 margin_bottom = 150.273
 custom_colors/font_color = Color( 0.196078, 0.282353, 0.376471, 0.670588 )
 text = "Você chegou até uma grande multidão. Analise as fotos e responda as perguntas a seguir."
+align = 1
+valign = 1
+autowrap = true
+
+[node name="WrongAnswerMessage" type="WindowDialog" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -240.0
+margin_top = -96.0
+margin_right = 367.0
+margin_bottom = 102.0
+rect_scale = Vector2( 0.785714, 0.785714 )
+theme = ExtResource( 5 )
+
+[node name="WrongAnswerMessage" type="Label" parent="WrongAnswerMessage"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -283.136
+margin_top = -139.727
+margin_right = 287.864
+margin_bottom = 150.273
+custom_colors/font_color = Color( 0.196078, 0.282353, 0.376471, 0.670588 )
+text = "Resposta errada
+mas não desista! tente novamente"
 align = 1
 valign = 1
 autowrap = true
@@ -516,11 +567,18 @@ autowrap = true
 [connection signal="button_down" from="PhotoPanel/PhotoTwo/ThirdButton" to="." method="_on_ThirdButton_button_down"]
 [connection signal="button_down" from="PhotoPanel/PhotoThree/FourthButton" to="." method="_on_FourthButton_button_down"]
 [connection signal="button_down" from="FirstQuestion/FirstAnswer" to="." method="_on_FirstAnswer_button_down"]
+[connection signal="button_down" from="FirstQuestion/WrongAnswer" to="." method="_on_WrongAnswer_button_down"]
+[connection signal="button_down" from="FirstQuestion/WrongAnswer2" to="." method="_on_WrongAnswer_button_down"]
 [connection signal="button_down" from="SecondQuestion/SecondAnswer" to="." method="_on_SecondAnswer_button_down"]
+[connection signal="button_down" from="SecondQuestion/WrongAnswer" to="." method="_on_WrongAnswer_button_down"]
 [connection signal="button_down" from="ThirdQuestion/ThirdAnswer" to="." method="_on_ThirdAnswer_button_down"]
+[connection signal="button_down" from="ThirdQuestion/WrongAnswer" to="." method="_on_WrongAnswer_button_down"]
 [connection signal="popup_hide" from="FourthQuestion" to="." method="_on_FourthQuestion_popup_hide"]
 [connection signal="button_down" from="FifthQuestion/FifthAnswer" to="." method="_on_FifthAnswer_button_down"]
+[connection signal="button_down" from="FifthQuestion/WrongAnswer" to="." method="_on_WrongAnswer_button_down"]
 [connection signal="button_down" from="SixthQuestion/SixthAnswer" to="." method="_on_SixthAnswer_button_down"]
+[connection signal="button_down" from="SixthQuestion/WrongAnswer" to="." method="_on_WrongAnswer_button_down"]
+[connection signal="button_down" from="SixthQuestion/WrongAnswer2" to="." method="_on_WrongAnswer_button_down"]
 [connection signal="popup_hide" from="MinigameExplanation" to="." method="_on_MinigameExplanation_popup_hide"]
 [connection signal="popup_hide" from="UnlockedSkill" to="." method="_on_UnlockedSkill_popup_hide"]
 [connection signal="popup_hide" from="ClueMensage" to="." method="_on_ClueMensage_popup_hide"]

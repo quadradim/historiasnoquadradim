@@ -20,13 +20,19 @@ func next_image():
 		$PhotoPanel/PhotoTwo.visible = true
 		$PhotoPanel/PhotoThree.visible = false
 		if correct == 3:
+			$ThirdQuestion.visible = false
 			$FourthQuestion.popup()
 	elif $PhotoPanel/PhotoTwo.visible == true:
 		$PhotoPanel/PhotoOne.visible = false
 		$PhotoPanel/PhotoTwo.visible = false
 		$PhotoPanel/PhotoThree.visible = true
 		if correct == 5:
-			$SixthQuestion.popup()
+			$FifthQuestion.visible = false
+			$SixthQuestion.visible = true
+			$SixthQuestion/SixthAnswer.disabled = false
+			$SixthQuestion/WrongAnswer.disabled = false
+			$SixthQuestion/WrongAnswer2.disabled = false
+
 
 func previous_image():
 	if $PhotoPanel/PhotoTwo.visible == true:
@@ -39,7 +45,7 @@ func previous_image():
 		$PhotoPanel/PhotoThree.visible = false
 
 func _on_MinigameExplanation_popup_hide():
-	$FirstQuestion.popup()
+	$FirstQuestion.visible = true
 	$FirstQuestion/FirstAnswer.disabled = false
 	$SecondQuestion/SecondAnswer.disabled = true
 	$ThirdQuestion/ThirdAnswer.disabled = true
@@ -50,27 +56,34 @@ func _on_FirstAnswer_button_down():
 	$ClueMensage/Label.text = ("resposta correta, agora a proxima pergunta")
 	$ClueMensage.popup()
 	$FirstQuestion/FirstAnswer.disabled = true
+	$FirstQuestion/WrongAnswer.disabled = true
+	$FirstQuestion/WrongAnswer2.disabled = true
 	$SecondQuestion/SecondAnswer.disabled = false
-	
+	$SecondQuestion/WrongAnswer.disabled = false
+
 func _on_SecondAnswer_button_down():
 	correct += 1
 	$ClueMensage/Label.text = ("Resposta correta, agora a proxima pergunta")
 	$ClueMensage.popup()
 	$SecondQuestion/SecondAnswer.disabled = true
+	$SecondQuestion/WrongAnswer.disabled = true
 	$ThirdQuestion/ThirdAnswer.disabled = false
+	$ThirdQuestion/WrongAnswer.disabled = false
 
 func _on_ThirdAnswer_button_down():
 	correct += 1
 	$ClueMensage/Label.text = ("Muito bom, vamos para a proxima imagem")
 	$ClueMensage.popup()
 	$ThirdQuestion/ThirdAnswer.disabled = true
+	$ThirdQuestion/WrongAnswer.disabled = true
 	$Next.disabled = false
 	
 
 func _on_FourthQuestion_popup_hide():
 	correct += 1
-	$FifthQuestion.popup()
+	$FifthQuestion.visible = true
 	$FifthQuestion/FifthAnswer.disabled = false
+	$FifthQuestion/WrongAnswer.disabled = false
 
 
 func _on_FifthAnswer_button_down():
@@ -78,6 +91,7 @@ func _on_FifthAnswer_button_down():
 	$ClueMensage/Label.text = ("Muito bom, vamos para a proxima imagem")
 	$ClueMensage.popup()
 	$FifthQuestion/FifthAnswer.disabled = true
+	$FifthQuestion/WrongAnswer.disabled = true
 	$Next.disabled = false
 	
 func _on_SixthAnswer_button_down():
@@ -99,11 +113,17 @@ func _on_ClueMensage_popup_hide():
 		$UnlockedSkill.popup()
 		$UnlockedSkillAnimation.play("Popmenssage")
 	elif correct == 1:
-		$SecondQuestion.popup()
+		$FirstQuestion.visible = false
+		$SecondQuestion.visible = true
 	elif correct == 2:
-		$ThirdQuestion.popup()
+		$SecondQuestion.visible = false
+		$ThirdQuestion.visible = true
 
 
 func _on_Button_button_down():
 	emit_signal("end_analyze2", "intro_multidao")
 	pass # Replace with function body.
+
+
+func _on_WrongAnswer_button_down():
+	$WrongAnswerMessage.popup()
