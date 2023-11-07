@@ -1,11 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://assets/Images/ProtestoBandeirante/Cenario.jpeg" type="Texture" id=1]
-[ext_resource path="res://assets/Images/NucleoBandeirante/no_cenário3.png" type="Texture" id=2]
+[ext_resource path="res://assets/Images/ProtestoBandeirante/distrator2_line_colorido.png" type="Texture" id=2]
 [ext_resource path="res://scenes/AuxScenes/ChatBox.tscn" type="PackedScene" id=3]
 [ext_resource path="res://assets/Images/NucleoBandeirante/ícone_fala3.png" type="Texture" id=4]
 [ext_resource path="res://scenes/NucleoBandeirante/dialogs/Distrator02.gd" type="Script" id=5]
-
+[ext_resource path="res://assets/Images/ProtestoBandeirante/Placa_Transparente.png" type="Texture" id=6]
 
 [node name="Distrator02" type="CanvasLayer"]
 script = ExtResource( 5 )
@@ -16,9 +16,14 @@ scale = Vector2( 0.385, 0.385 )
 texture = ExtResource( 1 )
 
 [node name="Dist2" type="Sprite" parent="."]
-position = Vector2( 501, 396 )
-scale = Vector2( 1.21743, 1.21743 )
+position = Vector2( 512, 372 )
+scale = Vector2( 0.31942, 0.319419 )
 texture = ExtResource( 2 )
+
+[node name="PaoOuMorte" type="Sprite" parent="Dist2"]
+position = Vector2( 25.4108, -133.406 )
+scale = Vector2( 1.04593, 0.698522 )
+texture = ExtResource( 6 )
 
 [node name="ChatBox" parent="." instance=ExtResource( 3 )]
 margin_top = 152.0

@@ -30,7 +30,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 1 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 1.065, 1.065 ), Vector2( 1.2, 1.2 ) ]
+"values": [ Vector2( 0.397, 0.397 ), Vector2( 0.447, 0.447 ) ]
 }
 
 [sub_resource type="Animation" id=3]
@@ -59,9 +59,10 @@ scale = Vector2( 1.2931, 1.2931 )
 texture = ExtResource( 3 )
 
 [node name="Jornalista" type="Sprite" parent="."]
-position = Vector2( 657, 418 )
-scale = Vector2( 1.065, 1.065 )
+position = Vector2( 736, 528 )
+scale = Vector2( 0.397, 0.397 )
 texture = ExtResource( 1 )
+flip_h = true
 
 [node name="Ranieri" type="Sprite" parent="."]
 position = Vector2( 306, 520 )

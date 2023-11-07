@@ -204,7 +204,7 @@ margin_right = 706.0
 margin_bottom = 51.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 10 )
-text = "com quais das palavras abaixo podemos definir o que aconteceu?"
+text = "como podemos definir o que aconteceu com apenas 3 palavras?"
 
 [node name="TryButton" parent="." instance=ExtResource( 15 )]
 margin_left = 708.0
