@@ -29,8 +29,8 @@ scale = Vector2( 1.38534, 1.38534 )
 texture = ExtResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 557, 307 )
-scale = Vector2( 0.87795, 0.907911 )
+position = Vector2( 512, 448 )
+scale = Vector2( 0.459325, 0.475 )
 texture = ExtResource( 7 )
 
 [node name="ChatBox" parent="." instance=ExtResource( 4 )]

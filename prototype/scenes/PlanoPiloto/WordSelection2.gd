@@ -48,6 +48,7 @@ func create_default_style():
 		options[i]["custom_styles/panel"].corner_radius_top_right = 10
 
 func _ready():
+	$MessageBox.popup()
 	player_data = $Player.read()
 	$TryButton.disabled = true
 	

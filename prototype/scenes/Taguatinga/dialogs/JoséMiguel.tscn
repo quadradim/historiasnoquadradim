@@ -5,7 +5,7 @@
 [ext_resource path="res://scenes/AuxScenes/ChatBox.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/AuxScenes/PlayerBackPack.tscn" type="PackedScene" id=4]
 [ext_resource path="res://assets/Images/Taguatinga/ícone_fala.png" type="Texture" id=5]
-[ext_resource path="res://assets/Images/Taguatinga/em_conversa.png" type="Texture" id=6]
+[ext_resource path="res://assets/Images/Taguatinga/no _cenário.png" type="Texture" id=6]
 [ext_resource path="res://scenes/AuxScenes/Player.tscn" type="PackedScene" id=7]
 [ext_resource path="res://scenes/AuxScenes/AudioController.tscn" type="PackedScene" id=8]
 
@@ -18,8 +18,8 @@ scale = Vector2( 1.61897, 1.61897 )
 texture = ExtResource( 2 )
 
 [node name="JoséMiguel" type="Sprite" parent="."]
-position = Vector2( 366, 302 )
-scale = Vector2( 1.33718, 1.33718 )
+position = Vector2( 280, 571 )
+scale = Vector2( 0.568068, 0.568068 )
 texture = ExtResource( 6 )
 
 [node name="ChatBox" parent="." instance=ExtResource( 3 )]

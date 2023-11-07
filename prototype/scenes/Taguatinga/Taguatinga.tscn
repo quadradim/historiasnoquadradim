@@ -145,34 +145,34 @@ texture = ExtResource( 7 )
 
 [node name="ChafeButton" type="TextureButton" parent="ChefeDePolicia"]
 anchor_bottom = 0.579
-margin_left = -119.0
-margin_top = -279.0
+margin_left = -105.0
+margin_top = -236.0
 margin_right = 115.0
 margin_bottom = -134.5
 
 [node name="DistratorPolicial" type="Sprite" parent="."]
 modulate = Color( 0.998521, 0.998521, 0.998521, 0.998521 )
-position = Vector2( 630, 465 )
-scale = Vector2( 0.93125, 0.93125 )
+position = Vector2( 672, 456 )
+scale = Vector2( 0.20478, 0.20478 )
 texture = ExtResource( 6 )
 
 [node name="DistratorButton" type="TextureButton" parent="DistratorPolicial"]
-margin_left = -79.0
-margin_top = -249.0
-margin_right = 90.0
-margin_bottom = 120.0
+margin_left = -313.0
+margin_top = -1001.0
+margin_right = 356.0
+margin_bottom = 605.0
 
 [node name="JoseMiguel" type="Sprite" parent="."]
 modulate = Color( 0.998521, 0.998521, 0.998521, 0.998521 )
-position = Vector2( 112, 423 )
-scale = Vector2( 0.471154, 0.471154 )
+position = Vector2( 88, 407 )
+scale = Vector2( 0.109315, 0.109315 )
 texture = ExtResource( 8 )
 
 [node name="JoseButton" type="TextureButton" parent="JoseMiguel"]
-margin_left = -100.0
-margin_top = -248.0
-margin_right = 100.0
-margin_bottom = 248.0
+margin_left = -375.062
+margin_top = -969.673
+margin_right = 347.938
+margin_bottom = 979.327
 
 [node name="Caderno" type="Sprite" parent="."]
 position = Vector2( 870, 530 )

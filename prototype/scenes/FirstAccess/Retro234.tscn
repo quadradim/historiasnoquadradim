@@ -64,18 +64,16 @@ scale = Vector2( 0.2675, 0.277333 )
 texture = ExtResource( 11 )
 
 [node name="Suzana" type="Sprite" parent="PhotoPanel/PhotoOne"]
-position = Vector2( 912.15, 201.923 )
-scale = Vector2( 2.34921, 2.34921 )
+position = Vector2( 977.154, 98.4178 )
+scale = Vector2( 0.707574, 0.707574 )
 texture = ExtResource( 9 )
 
 [node name="PhotoTwo" type="Sprite" parent="PhotoPanel"]
-visible = false
 position = Vector2( 444, 224 )
 scale = Vector2( 0.308468, 0.250905 )
 texture = ExtResource( 10 )
 
 [node name="PhotoThree" type="Sprite" parent="PhotoPanel"]
-visible = false
 position = Vector2( 444, 224 )
 scale = Vector2( 0.835938, 0.717241 )
 texture = ExtResource( 7 )

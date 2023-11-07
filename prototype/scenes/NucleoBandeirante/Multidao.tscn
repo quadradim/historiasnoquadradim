@@ -1,10 +1,11 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://assets/Images/ProtestoBandeirante/Cenario.jpeg" type="Texture" id=1]
 [ext_resource path="res://assets/Images/ProtestoBandeirante/sindicalista_distrator_multidão3.png" type="Texture" id=2]
 [ext_resource path="res://assets/Images/ProtestoBandeirante/distrator1_line_colorido.png" type="Texture" id=3]
 [ext_resource path="res://assets/Images/ProtestoBandeirante/distrator2_line_colorido.png" type="Texture" id=4]
 [ext_resource path="res://scenes/NucleoBandeirante/Multidao.gd" type="Script" id=5]
+[ext_resource path="res://assets/Images/ProtestoBandeirante/Placa_Transparente.png" type="Texture" id=6]
 [ext_resource path="res://scenes/AuxScenes/AudioController.tscn" type="PackedScene" id=7]
 [ext_resource path="res://assets/audio/soundtrack/hotel diamantina.mp3" type="AudioStream" id=8]
 [ext_resource path="res://scenes/AuxScenes/PlayerBackPack.tscn" type="PackedScene" id=9]
@@ -54,6 +55,11 @@ custom_styles/normal = SubResource( 2 )
 position = Vector2( 125, 266 )
 scale = Vector2( 0.299553, 0.3 )
 texture = ExtResource( 4 )
+
+[node name="Sprite" type="Sprite" parent="ButtonDist2/Dist2"]
+position = Vector2( 23.1058, -121.038 )
+scale = Vector2( 1.09436, 0.748487 )
+texture = ExtResource( 6 )
 
 [node name="MainMusic" parent="." instance=ExtResource( 7 )]
 stream = ExtResource( 8 )

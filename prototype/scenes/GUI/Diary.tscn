@@ -1074,6 +1074,7 @@ scale = Vector2( 0.777, 0.777 )
 texture = ExtResource( 41 )
 
 [node name="FirstAccessMessage" type="WindowDialog" parent="."]
+visible = true
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -1096,7 +1097,7 @@ margin_top = -98.5
 margin_right = 232.5
 margin_bottom = 93.5
 custom_colors/font_color = Color( 0.196078, 0.282353, 0.376471, 0.670588 )
-text = "O seu guia durante o jogo é o Diário de Bordo. Nele você encontrará quatro abas: 
+text = "O seu guia durante o jogo será o Diário de Bordo. Nele você encontrará quatro abas: 
 Informações da jogadora; Mapa ; Personagens e Registro da investigação. Folheie seu diário
 e depois clique em PRÓXIMO para prosseguir"
 align = 1
