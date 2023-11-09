@@ -1,18 +1,22 @@
 extends CanvasLayer
 
 signal distractor_selected
-
+onready var dist = get_node("/root/Global")
+var counter = 0
 func _ready():
+	counter = dist.distratores
 	pass
 	
 func distractor1_pressed():
 	emit_signal("distractor_selected", "distractor1_darcy")
 
 func distractor2_pressed():
-	emit_signal("distractor_selected", "distractor2_darcy")
+	if counter ==1:
+		emit_signal("distractor_selected", "distractor2_darcy")
 
 func distractor3_pressed():
-	emit_signal("distractor_selected", "distractor3_darcy")
+	if counter ==2:
+		emit_signal("distractor_selected", "distractor3_darcy")
 
 func _process(delta):
 	$MainMusic.update("soundtrack")

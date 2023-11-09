@@ -2,6 +2,7 @@ extends Node
 
 var counter
 var locked_veicles = [0,0,1]
+var distratores
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"

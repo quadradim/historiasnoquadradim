@@ -121,7 +121,7 @@ func _ready():
 
 	transition_animation.play("fade_out")
 
-	var initial_scene = "production" #production
+	var initial_scene = "multidao" #production
 	load_control_scene(
 		scenes_data[initial_scene][0],
 		initial_scene,
@@ -170,12 +170,12 @@ func change_scene(scene):
 	if len(previous_played_scene) > 2:
 		previous_played_scene.pop_front()
 
-	if scene == 'distractor3_darcy' and not(characters_darcy[0] and characters_darcy[1]):
-		return
-	if scene == 'distractor1_darcy':
-		characters_darcy[0] = 1
-	if scene == 'distractor2_darcy':
-		characters_darcy[1] = 1
+#	if scene == 'distractor3_darcy' and not(characters_darcy[0] and characters_darcy[1]):
+#		return
+#	if scene == 'distractor1_darcy':
+#		characters_darcy[0] = 1
+#	if scene == 'distractor2_darcy':
+#		characters_darcy[1] = 1
 
 	for current_scene in scenes_data:
 		if scene == current_scene:

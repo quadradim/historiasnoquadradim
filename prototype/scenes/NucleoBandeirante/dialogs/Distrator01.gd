@@ -6,6 +6,8 @@ func _ready():
 	pass
 
 func end_distractor_dialog():
+	var c = get_node("/root/Global")
+	c.distratores = 1
 	emit_signal("distractor_dialog", "multidao")
 
 func start():
