@@ -1,9 +1,6 @@
 extends CanvasLayer
 
 signal end_taguatinga
-var b = false
-var j = false
-var p = false
 var cont = 0
 onready var h = get_node("/root/Global")
 func _ready():
