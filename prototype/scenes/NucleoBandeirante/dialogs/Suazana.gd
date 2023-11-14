@@ -28,6 +28,7 @@ func end_suzana_scene():
 
 #	$PlayerBackPack/DiaryInventory._ready()
 	$Fade_Popup.popup()
+	$UnlockedSkillAudio.play()
 	$UnlockedSkill.popup()
 	$UnlockedSkillAnimation.play("Popmenssage")
 

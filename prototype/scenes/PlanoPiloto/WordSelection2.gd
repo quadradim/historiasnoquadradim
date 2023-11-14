@@ -129,6 +129,7 @@ func _on_TryButton_button_down():
 		
 #		$PlayerBackPack/DiaryInventory._ready()
 		$Fade_Popup.popup()
+		$UnlockedSkillAudio.play()
 		$UnlockedSkill.popup()
 		$UnlockedSkillAnimation.play("Popmenssage")
 		

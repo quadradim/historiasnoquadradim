@@ -67,6 +67,7 @@ func _on_ClueMensage_popup_hide():
 		clues += 1
 		$Button.disabled = false
 		$Fade_Popup.popup()
+		$UnlockedSkillAudio.play()
 		$UnlockedSkill.popup()
 		$UnlockedSkillAnimation.play("Popmenssage")
 

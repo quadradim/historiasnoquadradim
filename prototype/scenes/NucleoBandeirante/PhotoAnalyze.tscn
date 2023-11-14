@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://assets/Themes/Menu.tres" type="Theme" id=1]
 [ext_resource path="res://assets/Images/Menu/Padrão3.png" type="Texture" id=2]
@@ -16,6 +16,8 @@
 [ext_resource path="res://scenes/AuxScenes/Player.tscn" type="PackedScene" id=14]
 [ext_resource path="res://assets/Images/diary/binoculos2.png" type="Texture" id=15]
 [ext_resource path="res://scenes/AuxScenes/Button.tscn" type="PackedScene" id=16]
+[ext_resource path="res://scenes/AuxScenes/AudioController.tscn" type="PackedScene" id=17]
+[ext_resource path="res://assets/audio/sound_effects/unlock_ability.mp3" type="AudioStream" id=18]
 
 [sub_resource type="StyleBoxFlat" id=2]
 bg_color = Color( 0.972549, 0.882353, 0.435294, 1 )
@@ -376,6 +378,10 @@ autowrap = true
 anims/Popmenssage = SubResource( 10 )
 
 [node name="Player" parent="." instance=ExtResource( 14 )]
+
+[node name="UnlockedSkillAudio" parent="." instance=ExtResource( 17 )]
+stream = ExtResource( 18 )
+volume_db = -8.0
 
 [connection signal="pressed" from="Next" to="." method="next_image"]
 [connection signal="pressed" from="Prev" to="." method="previous_image"]
