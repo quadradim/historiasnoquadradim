@@ -110,6 +110,7 @@ func _on_ClueMensage_popup_hide():
 	if correct == 6:
 		$Button.disabled = false
 		$Fade_Popup.popup()
+		$UnlockedSkillAudio.play()
 		$UnlockedSkill.popup()
 		$UnlockedSkillAnimation.play("Popmenssage")
 	elif correct == 1:

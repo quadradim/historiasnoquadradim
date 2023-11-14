@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=2]
+[gd_scene load_steps=31 format=2]
 
 [ext_resource path="res://assets/Themes/Menu.tres" type="Theme" id=1]
 [ext_resource path="res://assets/Images/diary/tape.png" type="Texture" id=2]
@@ -16,6 +16,8 @@
 [ext_resource path="res://assets/Images/diary/jornal2.png" type="Texture" id=14]
 [ext_resource path="res://scenes/AuxScenes/Button.tscn" type="PackedScene" id=15]
 [ext_resource path="res://scenes/AuxScenes/ChatBox.tscn" type="PackedScene" id=16]
+[ext_resource path="res://scenes/AuxScenes/AudioController.tscn" type="PackedScene" id=17]
+[ext_resource path="res://assets/audio/sound_effects/unlock_ability.mp3" type="AudioStream" id=18]
 
 [sub_resource type="DynamicFont" id=10]
 size = 24
@@ -507,6 +509,10 @@ has_profile = false
 
 [node name="ChatPop" type="AnimationPlayer" parent="."]
 anims/ChatPop = SubResource( 13 )
+
+[node name="UnlockedSkillAudio" parent="." instance=ExtResource( 17 )]
+stream = ExtResource( 18 )
+volume_db = -8.0
 
 [connection signal="button_down" from="TryButton" to="." method="_on_TryButton_button_down"]
 [connection signal="pressed" from="Word1/Word1Button" to="." method="word1_button"]

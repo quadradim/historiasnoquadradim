@@ -7,6 +7,7 @@ func _ready():
 	$Player.modifier("ability",[1,0,1,1,0,1,1,1,1])
 #	$PlayerBackPack/DiaryInventory._ready()
 	$Fade_Popup.popup()
+	$UnlockedSkillAudio.play()
 	$UnlockedSkill.popup()
 	$UnlockedSkillAnimation.play("Popmenssage")
 	

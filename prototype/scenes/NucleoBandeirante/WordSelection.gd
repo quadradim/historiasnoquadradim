@@ -180,6 +180,7 @@ func _on_ChatBox_close_chat():
 		$ChatBox.visible = false
 		$NextButton.disabled = false
 		$Fade_Popup.popup()
+		$UnlockedSkillAudio.play()
 		$UnlockedSkill.popup()
 		$UnlockedSkillAnimation.play("Popmenssage")
 	
