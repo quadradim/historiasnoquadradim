@@ -50,12 +50,12 @@ scale = Vector2( 1.28448, 1.28448 )
 texture = ExtResource( 1 )
 
 [node name="Israel" type="Sprite" parent="."]
-position = Vector2( 652, 462 )
+position = Vector2( 328, 451 )
 scale = Vector2( 0.648, 0.648 )
 texture = ExtResource( 2 )
 
 [node name="Professora" type="Sprite" parent="."]
-position = Vector2( 410, 427 )
+position = Vector2( 621, 406 )
 scale = Vector2( 1.16923, 1.16923 )
 texture = ExtResource( 3 )
 flip_h = true

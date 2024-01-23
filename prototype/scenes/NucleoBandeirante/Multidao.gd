@@ -6,7 +6,7 @@ var counter = 0
 func _ready():
 	counter = dist.distratores
 	if counter == 2:
-		$ButtonDist3/Dist3.modulate = Color(1,1,1)
+		$ButtonDist3/Dist3.visible = true
 	pass
 	
 func distractor1_pressed():
