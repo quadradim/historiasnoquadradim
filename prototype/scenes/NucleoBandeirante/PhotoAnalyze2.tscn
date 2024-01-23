@@ -202,7 +202,6 @@ margin_right = 142.0
 margin_bottom = 133.0
 
 [node name="FirstQuestion" type="Panel" parent="."]
-visible = false
 margin_left = 184.0
 margin_top = 403.0
 margin_right = 816.0
@@ -233,17 +232,35 @@ margin_top = 85.0
 margin_right = 376.0
 margin_bottom = 111.0
 
+[node name="Sprite" type="Sprite" parent="FirstQuestion/FirstAnswer"]
+visible = false
+position = Vector2( 5.99999, 15 )
+scale = Vector2( 0.23, 0.23 )
+texture = ExtResource( 11 )
+
 [node name="WrongAnswer" type="TextureButton" parent="FirstQuestion"]
 margin_left = 264.0
 margin_top = 45.0
 margin_right = 360.0
 margin_bottom = 74.0
 
+[node name="Sprite" type="Sprite" parent="FirstQuestion/WrongAnswer"]
+visible = false
+position = Vector2( 7.00002, 16 )
+scale = Vector2( 0.21, 0.2 )
+texture = ExtResource( 11 )
+
 [node name="WrongAnswer2" type="TextureButton" parent="FirstQuestion"]
 margin_left = 272.0
 margin_top = 125.0
 margin_right = 352.0
 margin_bottom = 154.0
+
+[node name="Sprite" type="Sprite" parent="FirstQuestion/WrongAnswer2"]
+visible = false
+position = Vector2( 8.50002, 14.5 )
+scale = Vector2( 0.215, 0.215 )
+texture = ExtResource( 11 )
 
 [node name="SecondQuestion" type="Panel" parent="."]
 visible = false
@@ -276,11 +293,23 @@ margin_top = 69.0
 margin_right = 344.0
 margin_bottom = 93.0
 
+[node name="Sprite" type="Sprite" parent="SecondQuestion/SecondAnswer"]
+visible = false
+position = Vector2( 2.50001, 12 )
+scale = Vector2( 0.225, 0.23 )
+texture = ExtResource( 11 )
+
 [node name="WrongAnswer" type="TextureButton" parent="SecondQuestion"]
 margin_left = 280.0
 margin_top = 109.0
 margin_right = 344.0
 margin_bottom = 133.0
+
+[node name="Sprite" type="Sprite" parent="SecondQuestion/WrongAnswer"]
+visible = false
+position = Vector2( 8.00002, 12 )
+scale = Vector2( 0.23, 0.23 )
+texture = ExtResource( 11 )
 
 [node name="ThirdQuestion" type="Panel" parent="."]
 visible = false
@@ -313,11 +342,23 @@ margin_top = 128.0
 margin_right = 376.0
 margin_bottom = 160.0
 
+[node name="Sprite" type="Sprite" parent="ThirdQuestion/ThirdAnswer"]
+visible = false
+position = Vector2( 5.00001, 14.5 )
+scale = Vector2( 0.21, 0.205 )
+texture = ExtResource( 11 )
+
 [node name="WrongAnswer" type="TextureButton" parent="ThirdQuestion"]
 margin_left = 264.0
 margin_top = 93.0
 margin_right = 360.0
 margin_bottom = 117.0
+
+[node name="Sprite" type="Sprite" parent="ThirdQuestion/WrongAnswer"]
+visible = false
+position = Vector2( 6, 10.5 )
+scale = Vector2( 0.23, 0.215 )
+texture = ExtResource( 11 )
 
 [node name="FourthQuestion" type="WindowDialog" parent="."]
 anchor_left = 0.5
@@ -377,11 +418,23 @@ margin_top = 160.0
 margin_right = 590.0
 margin_bottom = 189.0
 
+[node name="Sprite" type="Sprite" parent="FifthQuestion/FifthAnswer"]
+visible = false
+position = Vector2( 6.5, 16.5 )
+scale = Vector2( 0.205, 0.225 )
+texture = ExtResource( 11 )
+
 [node name="WrongAnswer" type="TextureButton" parent="FifthQuestion"]
 margin_left = 284.0
 margin_top = 121.0
 margin_right = 344.0
 margin_bottom = 148.0
+
+[node name="Sprite" type="Sprite" parent="FifthQuestion/WrongAnswer"]
+visible = false
+position = Vector2( 5.50001, 16 )
+scale = Vector2( 0.215, 0.21 )
+texture = ExtResource( 11 )
 
 [node name="SixthQuestion" type="Panel" parent="."]
 visible = false
@@ -415,17 +468,35 @@ margin_top = 120.0
 margin_right = 621.0
 margin_bottom = 149.0
 
+[node name="Sprite" type="Sprite" parent="SixthQuestion/SixthAnswer"]
+visible = false
+position = Vector2( 6.5, 15.5 )
+scale = Vector2( 0.255, 0.215 )
+texture = ExtResource( 11 )
+
 [node name="WrongAnswer" type="TextureButton" parent="SixthQuestion"]
 margin_left = 86.0
 margin_top = 82.0
 margin_right = 547.0
 margin_bottom = 109.0
 
+[node name="Sprite" type="Sprite" parent="SixthQuestion/WrongAnswer"]
+visible = false
+position = Vector2( 8.50001, 15.5 )
+scale = Vector2( 0.235, 0.215 )
+texture = ExtResource( 11 )
+
 [node name="WrongAnswer2" type="TextureButton" parent="SixthQuestion"]
 margin_left = 60.0
 margin_top = 159.0
 margin_right = 576.0
 margin_bottom = 186.0
+
+[node name="Sprite" type="Sprite" parent="SixthQuestion/WrongAnswer2"]
+visible = false
+position = Vector2( 6.49999, 15.5 )
+scale = Vector2( 0.225, 0.215 )
+texture = ExtResource( 11 )
 
 [node name="PlayerBackPack" parent="." instance=ExtResource( 13 )]
 visible = false
@@ -574,17 +645,24 @@ volume_db = -8.0
 [connection signal="button_down" from="PhotoPanel/PhotoThree/FourthButton" to="." method="_on_FourthButton_button_down"]
 [connection signal="button_down" from="FirstQuestion/FirstAnswer" to="." method="_on_FirstAnswer_button_down"]
 [connection signal="button_down" from="FirstQuestion/WrongAnswer" to="." method="_on_WrongAnswer_button_down"]
+[connection signal="button_down" from="FirstQuestion/WrongAnswer" to="." method="_on_WrongAnswer1_button_down"]
 [connection signal="button_down" from="FirstQuestion/WrongAnswer2" to="." method="_on_WrongAnswer_button_down"]
+[connection signal="button_down" from="FirstQuestion/WrongAnswer2" to="." method="_on_WrongAnswer2_button_down"]
 [connection signal="button_down" from="SecondQuestion/SecondAnswer" to="." method="_on_SecondAnswer_button_down"]
 [connection signal="button_down" from="SecondQuestion/WrongAnswer" to="." method="_on_WrongAnswer_button_down"]
+[connection signal="button_down" from="SecondQuestion/WrongAnswer" to="." method="_on_WrongAnswer3_button_down"]
 [connection signal="button_down" from="ThirdQuestion/ThirdAnswer" to="." method="_on_ThirdAnswer_button_down"]
 [connection signal="button_down" from="ThirdQuestion/WrongAnswer" to="." method="_on_WrongAnswer_button_down"]
+[connection signal="button_down" from="ThirdQuestion/WrongAnswer" to="." method="_on_WrongAnswer4_button_down"]
 [connection signal="popup_hide" from="FourthQuestion" to="." method="_on_FourthQuestion_popup_hide"]
 [connection signal="button_down" from="FifthQuestion/FifthAnswer" to="." method="_on_FifthAnswer_button_down"]
 [connection signal="button_down" from="FifthQuestion/WrongAnswer" to="." method="_on_WrongAnswer_button_down"]
+[connection signal="button_down" from="FifthQuestion/WrongAnswer" to="." method="_on_WrongAnswer5_button_down"]
 [connection signal="button_down" from="SixthQuestion/SixthAnswer" to="." method="_on_SixthAnswer_button_down"]
 [connection signal="button_down" from="SixthQuestion/WrongAnswer" to="." method="_on_WrongAnswer_button_down"]
+[connection signal="button_down" from="SixthQuestion/WrongAnswer" to="." method="_on_WrongAnswer6_button_down"]
 [connection signal="button_down" from="SixthQuestion/WrongAnswer2" to="." method="_on_WrongAnswer_button_down"]
+[connection signal="button_down" from="SixthQuestion/WrongAnswer2" to="." method="_on_WrongAnswer7_button_down"]
 [connection signal="popup_hide" from="MinigameExplanation" to="." method="_on_MinigameExplanation_popup_hide"]
 [connection signal="popup_hide" from="UnlockedSkill" to="." method="_on_UnlockedSkill_popup_hide"]
 [connection signal="popup_hide" from="ClueMensage" to="." method="_on_ClueMensage_popup_hide"]

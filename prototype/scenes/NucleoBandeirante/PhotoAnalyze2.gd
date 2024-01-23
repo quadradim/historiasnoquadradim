@@ -3,7 +3,7 @@ extends CanvasLayer
 var player_data
 signal end_analyze2
 var correct = 0
-
+var a
 
 func _ready():
 	player_data = $Player.read()
@@ -53,6 +53,7 @@ func _on_MinigameExplanation_popup_hide():
 
 func _on_FirstAnswer_button_down():
 	correct += 1
+	$FirstQuestion/FirstAnswer/Sprite.visible = true
 	$ClueMensage/Label.text = ("resposta correta, agora a proxima pergunta")
 	$ClueMensage.popup()
 	$FirstQuestion/FirstAnswer.disabled = true
@@ -63,6 +64,7 @@ func _on_FirstAnswer_button_down():
 
 func _on_SecondAnswer_button_down():
 	correct += 1
+	$SecondQuestion/SecondAnswer/Sprite.visible = true
 	$ClueMensage/Label.text = ("Resposta correta, agora a proxima pergunta")
 	$ClueMensage.popup()
 	$SecondQuestion/SecondAnswer.disabled = true
@@ -72,6 +74,7 @@ func _on_SecondAnswer_button_down():
 
 func _on_ThirdAnswer_button_down():
 	correct += 1
+	$ThirdQuestion/ThirdAnswer/Sprite.visible = true
 	$ClueMensage/Label.text = ("Muito bom, vamos para a proxima imagem")
 	$ClueMensage.popup()
 	$ThirdQuestion/ThirdAnswer.disabled = true
@@ -88,6 +91,7 @@ func _on_FourthQuestion_popup_hide():
 
 func _on_FifthAnswer_button_down():
 	correct += 1
+	$FifthQuestion/FifthAnswer/Sprite.visible = true
 	$ClueMensage/Label.text = ("Muito bom, vamos para a proxima imagem")
 	$ClueMensage.popup()
 	$FifthQuestion/FifthAnswer.disabled = true
@@ -96,6 +100,7 @@ func _on_FifthAnswer_button_down():
 	
 func _on_SixthAnswer_button_down():
 	correct += 1
+	$SixthQuestion/SixthAnswer/Sprite.visible = true
 	$ClueMensage/Label.text = ("Parabéns você acertou todas as perguntas!")
 	$ClueMensage.popup()
 
@@ -128,3 +133,24 @@ func _on_Button_button_down():
 
 func _on_WrongAnswer_button_down():
 	$WrongAnswerMessage.popup()
+
+func _on_WrongAnswer1_button_down():
+	$FirstQuestion/WrongAnswer/Sprite.visible = true
+
+func _on_WrongAnswer2_button_down():
+	$FirstQuestion/WrongAnswer2/Sprite.visible = true
+
+func _on_WrongAnswer3_button_down():
+	$SecondQuestion/WrongAnswer/Sprite.visible = true
+
+func _on_WrongAnswer4_button_down():
+	$ThirdQuestion/WrongAnswer/Sprite.visible = true
+
+func _on_WrongAnswer5_button_down():
+	$FifthQuestion/WrongAnswer/Sprite.visible = true
+
+func _on_WrongAnswer6_button_down():
+	$SixthQuestion/WrongAnswer/Sprite.visible = true
+
+func _on_WrongAnswer7_button_down():
+	$SixthQuestion/WrongAnswer2/Sprite.visible = true
