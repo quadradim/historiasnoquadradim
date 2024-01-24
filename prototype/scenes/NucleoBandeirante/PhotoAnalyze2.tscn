@@ -14,7 +14,7 @@
 [ext_resource path="res://assets/Images/AnáliseDeFotos/Foto 4.png" type="Texture" id=12]
 [ext_resource path="res://scenes/AuxScenes/PlayerBackPack.tscn" type="PackedScene" id=13]
 [ext_resource path="res://scenes/AuxScenes/Player.tscn" type="PackedScene" id=14]
-[ext_resource path="res://assets/Images/diary/livros2.png" type="Texture" id=15]
+[ext_resource path="res://assets/Images/diary/livros_on.png" type="Texture" id=15]
 [ext_resource path="res://assets/Images/AnáliseDeFotos/Foto 3.png" type="Texture" id=16]
 [ext_resource path="res://assets/Themes/Dialogs.tres" type="Theme" id=17]
 [ext_resource path="res://scenes/AuxScenes/AudioController.tscn" type="PackedScene" id=18]
@@ -584,7 +584,6 @@ theme = ExtResource( 5 )
 [node name="Skill" type="Sprite" parent="UnlockedSkill"]
 modulate = Color( 1, 1, 1, 0.0666667 )
 position = Vector2( 249.455, 927.819 )
-scale = Vector2( 0.564662, 0.564662 )
 texture = ExtResource( 15 )
 
 [node name="Label" type="Label" parent="UnlockedSkill"]
@@ -646,11 +645,11 @@ volume_db = -8.0
 [connection signal="button_down" from="FirstQuestion/FirstAnswer" to="." method="_on_FirstAnswer_button_down"]
 [connection signal="button_down" from="FirstQuestion/WrongAnswer" to="." method="_on_WrongAnswer1_button_down"]
 [connection signal="button_down" from="FirstQuestion/WrongAnswer" to="." method="_on_WrongAnswer_button_down"]
-[connection signal="button_down" from="FirstQuestion/WrongAnswer2" to="." method="_on_WrongAnswer2_button_down"]
 [connection signal="button_down" from="FirstQuestion/WrongAnswer2" to="." method="_on_WrongAnswer_button_down"]
+[connection signal="button_down" from="FirstQuestion/WrongAnswer2" to="." method="_on_WrongAnswer2_button_down"]
 [connection signal="button_down" from="SecondQuestion/SecondAnswer" to="." method="_on_SecondAnswer_button_down"]
-[connection signal="button_down" from="SecondQuestion/WrongAnswer" to="." method="_on_WrongAnswer_button_down"]
 [connection signal="button_down" from="SecondQuestion/WrongAnswer" to="." method="_on_WrongAnswer3_button_down"]
+[connection signal="button_down" from="SecondQuestion/WrongAnswer" to="." method="_on_WrongAnswer_button_down"]
 [connection signal="button_down" from="ThirdQuestion/ThirdAnswer" to="." method="_on_ThirdAnswer_button_down"]
 [connection signal="button_down" from="ThirdQuestion/WrongAnswer" to="." method="_on_WrongAnswer_button_down"]
 [connection signal="button_down" from="ThirdQuestion/WrongAnswer" to="." method="_on_WrongAnswer4_button_down"]
@@ -661,8 +660,8 @@ volume_db = -8.0
 [connection signal="button_down" from="SixthQuestion/SixthAnswer" to="." method="_on_SixthAnswer_button_down"]
 [connection signal="button_down" from="SixthQuestion/WrongAnswer" to="." method="_on_WrongAnswer6_button_down"]
 [connection signal="button_down" from="SixthQuestion/WrongAnswer" to="." method="_on_WrongAnswer_button_down"]
-[connection signal="button_down" from="SixthQuestion/WrongAnswer2" to="." method="_on_WrongAnswer_button_down"]
 [connection signal="button_down" from="SixthQuestion/WrongAnswer2" to="." method="_on_WrongAnswer7_button_down"]
+[connection signal="button_down" from="SixthQuestion/WrongAnswer2" to="." method="_on_WrongAnswer_button_down"]
 [connection signal="popup_hide" from="MinigameExplanation" to="." method="_on_MinigameExplanation_popup_hide"]
 [connection signal="popup_hide" from="UnlockedSkill" to="." method="_on_UnlockedSkill_popup_hide"]
 [connection signal="popup_hide" from="ClueMensage" to="." method="_on_ClueMensage_popup_hide"]

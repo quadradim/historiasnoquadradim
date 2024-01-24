@@ -11,7 +11,7 @@
 [ext_resource path="res://scenes/AuxScenes/PlayerBackPack.tscn" type="PackedScene" id=9]
 [ext_resource path="res://assets/Themes/CharacterChoice.tres" type="Theme" id=10]
 [ext_resource path="res://scenes/AuxScenes/Player.tscn" type="PackedScene" id=11]
-[ext_resource path="res://assets/Images/diary/chapéu2.png" type="Texture" id=12]
+[ext_resource path="res://assets/Images/diary/chapéu_on.png" type="Texture" id=12]
 [ext_resource path="res://scenes/AuxScenes/AudioController.tscn" type="PackedScene" id=13]
 [ext_resource path="res://assets/audio/sound_effects/unlock_ability.mp3" type="AudioStream" id=14]
 
@@ -100,7 +100,6 @@ resize_panel = [ Vector2( 113, 26 ), Vector2( 90, 26 ), Vector2( 113, 26 ) ]
 [node name="PlayerBackPack" parent="." instance=ExtResource( 9 )]
 
 [node name="Fade_Popup" type="Popup" parent="."]
-visible = true
 margin_left = 320.0
 margin_top = 400.0
 margin_right = 360.0
@@ -114,7 +113,6 @@ margin_right = 705.0
 margin_bottom = 179.0
 
 [node name="UnlockedSkill" type="WindowDialog" parent="."]
-visible = true
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -144,7 +142,6 @@ autowrap = true
 [node name="Skill" type="Sprite" parent="UnlockedSkill"]
 modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 250, 468.364 )
-scale = Vector2( 0.552805, 0.552805 )
 texture = ExtResource( 12 )
 
 [node name="PlayerBackPack2" parent="." instance=ExtResource( 9 )]
@@ -158,4 +155,9 @@ anims/Popmenssage = SubResource( 1 )
 stream = ExtResource( 14 )
 volume_db = -8.0
 
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
 [connection signal="end_dialog" from="ChatBox" to="." method="_on_ChatBox_end_dialog"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

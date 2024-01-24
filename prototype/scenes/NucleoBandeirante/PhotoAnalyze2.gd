@@ -106,7 +106,7 @@ func _on_SixthAnswer_button_down():
 
 	
 func _on_UnlockedSkill_popup_hide():
-	$Player.modifier("ability",[1,0,0,0,0,0,1,0,0])
+	$Player.modifier("ability",[1,1,0,0,0,0,0,0,0])
 	$Player.modifier("historiometer",0)
 
 #	$PlayerBackPack/DiaryInventory._ready()

@@ -881,23 +881,17 @@ margin_bottom = 142.0
 position = Vector2( 694, 200 )
 
 [node name="AbillityTab" type="Tabs" parent="."]
-margin_left = -5.0
-margin_top = 33.0
-margin_right = 35.0
-margin_bottom = 57.0
+margin_left = -2.0
+margin_top = 26.0
+margin_right = 38.0
+margin_bottom = 50.0
 
-[node name="AbillityTab" type="Tabs" parent="AbillityTab"]
-margin_left = 3.0
-margin_top = -7.0
-margin_right = 43.0
-margin_bottom = 17.0
-
-[node name="CharactersBackground" type="Sprite" parent="AbillityTab/AbillityTab"]
+[node name="CharactersBackground" type="Sprite" parent="AbillityTab"]
 position = Vector2( 329, 255 )
 scale = Vector2( 0.28875, 0.28875 )
 texture = ExtResource( 21 )
 
-[node name="Title" type="Label" parent="AbillityTab/AbillityTab"]
+[node name="Title" type="Label" parent="AbillityTab"]
 anchor_left = -8.694
 anchor_top = -1.175
 anchor_right = -8.694
@@ -911,7 +905,7 @@ custom_fonts/font = SubResource( 39 )
 text = "HABILIDADES"
 align = 1
 
-[node name="CharacterBackground" type="Panel" parent="AbillityTab/AbillityTab"]
+[node name="CharacterBackground" type="Panel" parent="AbillityTab"]
 anchor_left = -1.005
 anchor_top = -0.811
 anchor_right = -1.005
@@ -925,7 +919,7 @@ __meta__ = {
 "_editor_description_": "	"
 }
 
-[node name="AbillityName" type="Label" parent="AbillityTab/AbillityTab"]
+[node name="AbillityName" type="Label" parent="AbillityTab"]
 anchor_left = -8.694
 anchor_top = -1.175
 anchor_right = -8.694
@@ -938,7 +932,7 @@ custom_colors/font_color = Color( 0.4, 0.631373, 0.862745, 1 )
 custom_fonts/font = SubResource( 39 )
 align = 1
 
-[node name="DescriptionText" type="Label" parent="AbillityTab/AbillityTab"]
+[node name="DescriptionText" type="Label" parent="AbillityTab"]
 margin_left = 551.0
 margin_top = 118.0
 margin_right = 873.0
@@ -949,211 +943,211 @@ text = "Descrição de habilidades."
 align = 1
 autowrap = true
 
-[node name="BinoculosOff" type="Sprite" parent="AbillityTab/AbillityTab"]
+[node name="BinoculosOff" type="Sprite" parent="AbillityTab"]
 position = Vector2( 199.327, 132.327 )
 scale = Vector2( 0.343, 0.343 )
 texture = ExtResource( 9 )
 
-[node name="Binoculos" type="Sprite" parent="AbillityTab/AbillityTab"]
+[node name="Binoculos" type="Sprite" parent="AbillityTab"]
 position = Vector2( 199.327, 132.327 )
 scale = Vector2( 0.343144, 0.343144 )
 texture = ExtResource( 61 )
 
-[node name="BinoculosButton" type="TextureButton" parent="AbillityTab/AbillityTab/Binoculos"]
+[node name="BinoculosButton" type="TextureButton" parent="AbillityTab/Binoculos"]
 margin_left = -182.0
 margin_top = -164.0
 margin_right = 171.0
 margin_bottom = 171.0
 
-[node name="LivrosOff" type="Sprite" parent="AbillityTab/AbillityTab"]
+[node name="LivrosOff" type="Sprite" parent="AbillityTab"]
 position = Vector2( 323, 134 )
 scale = Vector2( 0.383, 0.383 )
 texture = ExtResource( 28 )
 
-[node name="Livros" type="Sprite" parent="AbillityTab/AbillityTab"]
+[node name="Livros" type="Sprite" parent="AbillityTab"]
 position = Vector2( 323, 134 )
 scale = Vector2( 0.383333, 0.383333 )
 texture = ExtResource( 64 )
 
-[node name="LivrosButton" type="TextureButton" parent="AbillityTab/AbillityTab/Livros"]
+[node name="LivrosButton" type="TextureButton" parent="AbillityTab/Livros"]
 margin_left = -164.0
 margin_top = -154.0
 margin_right = 150.0
 margin_bottom = 151.0
 
-[node name="JornalOff" type="Sprite" parent="AbillityTab/AbillityTab"]
+[node name="JornalOff" type="Sprite" parent="AbillityTab"]
 position = Vector2( 441, 135 )
 scale = Vector2( 0.29, 0.29 )
 texture = ExtResource( 23 )
 
-[node name="Jornal" type="Sprite" parent="AbillityTab/AbillityTab"]
+[node name="Jornal" type="Sprite" parent="AbillityTab"]
 position = Vector2( 441, 135 )
 scale = Vector2( 0.289902, 0.289902 )
 texture = ExtResource( 67 )
 
-[node name="JornalButton" type="TextureButton" parent="AbillityTab/AbillityTab/Jornal"]
+[node name="JornalButton" type="TextureButton" parent="AbillityTab/Jornal"]
 margin_left = -193.169
 margin_top = -206.967
 margin_right = 220.831
 margin_bottom = 186.033
 
-[node name="CuboOff" type="Sprite" parent="AbillityTab/AbillityTab"]
+[node name="CuboOff" type="Sprite" parent="AbillityTab"]
 position = Vector2( 197, 253.546 )
 scale = Vector2( 0.371, 0.371 )
 texture = ExtResource( 27 )
 
-[node name="Cubo" type="Sprite" parent="AbillityTab/AbillityTab"]
+[node name="Cubo" type="Sprite" parent="AbillityTab"]
 position = Vector2( 197, 253.546 )
 scale = Vector2( 0.371336, 0.371336 )
 texture = ExtResource( 62 )
 
-[node name="CuboButton" type="TextureButton" parent="AbillityTab/AbillityTab/Cubo"]
+[node name="CuboButton" type="TextureButton" parent="AbillityTab/Cubo"]
 margin_left = -159.0
 margin_top = -144.0
 margin_right = 164.0
 margin_bottom = 165.0
 
-[node name="PlanetaOff" type="Sprite" parent="AbillityTab/AbillityTab"]
+[node name="PlanetaOff" type="Sprite" parent="AbillityTab"]
 position = Vector2( 321, 258 )
 scale = Vector2( 0.365, 0.365 )
 texture = ExtResource( 24 )
 
-[node name="Planeta" type="Sprite" parent="AbillityTab/AbillityTab"]
+[node name="Planeta" type="Sprite" parent="AbillityTab"]
 position = Vector2( 321, 258 )
 scale = Vector2( 0.364821, 0.382364 )
 texture = ExtResource( 65 )
 
-[node name="PlanetaButton" type="TextureButton" parent="AbillityTab/AbillityTab/Planeta"]
+[node name="PlanetaButton" type="TextureButton" parent="AbillityTab/Planeta"]
 margin_left = -167.206
 margin_top = -156.919
 margin_right = 161.794
 margin_bottom = 149.081
 
-[node name="ChapeuOff" type="Sprite" parent="AbillityTab/AbillityTab"]
+[node name="ChapeuOff" type="Sprite" parent="AbillityTab"]
 position = Vector2( 451, 261 )
 scale = Vector2( 0.319, 0.319 )
 texture = ExtResource( 30 )
 
-[node name="Chapeu" type="Sprite" parent="AbillityTab/AbillityTab"]
+[node name="Chapeu" type="Sprite" parent="AbillityTab"]
 position = Vector2( 451, 261 )
 scale = Vector2( 0.319218, 0.319218 )
 texture = ExtResource( 66 )
 
-[node name="ChapéuButton" type="TextureButton" parent="AbillityTab/AbillityTab/Chapeu"]
+[node name="ChapéuButton" type="TextureButton" parent="AbillityTab/Chapeu"]
 margin_left = -206.755
 margin_top = -197.357
 margin_right = 172.245
 margin_bottom = 162.643
 
-[node name="PastaOff" type="Sprite" parent="AbillityTab/AbillityTab"]
+[node name="PastaOff" type="Sprite" parent="AbillityTab"]
 position = Vector2( 202, 376 )
 scale = Vector2( 0.358, 0.358 )
 texture = ExtResource( 29 )
 
-[node name="Pasta" type="Sprite" parent="AbillityTab/AbillityTab"]
+[node name="Pasta" type="Sprite" parent="AbillityTab"]
 position = Vector2( 202, 376 )
 scale = Vector2( 0.358306, 0.358306 )
 texture = ExtResource( 68 )
 
-[node name="PastaButton" type="TextureButton" parent="AbillityTab/AbillityTab/Pasta"]
+[node name="PastaButton" type="TextureButton" parent="AbillityTab/Pasta"]
 margin_left = -181.0
 margin_top = -156.0
 margin_right = 159.0
 margin_bottom = 170.0
 
-[node name="CartazesOff" type="Sprite" parent="AbillityTab/AbillityTab"]
+[node name="CartazesOff" type="Sprite" parent="AbillityTab"]
 position = Vector2( 321, 374 )
 scale = Vector2( 0.321, 0.321 )
 texture = ExtResource( 25 )
 
-[node name="Cartazes" type="Sprite" parent="AbillityTab/AbillityTab"]
+[node name="Cartazes" type="Sprite" parent="AbillityTab"]
 position = Vector2( 321, 374 )
 scale = Vector2( 0.320847, 0.320847 )
 texture = ExtResource( 63 )
 
-[node name="CartazesButton" type="TextureButton" parent="AbillityTab/AbillityTab/Cartazes"]
+[node name="CartazesButton" type="TextureButton" parent="AbillityTab/Cartazes"]
 anchor_bottom = 1.0
 margin_left = -184.0
 margin_top = -168.0
 margin_right = 187.0
 margin_bottom = -116.0
 
-[node name="JogoDaMemoriaOff" type="Sprite" parent="AbillityTab/AbillityTab"]
+[node name="JogoDaMemoriaOff" type="Sprite" parent="AbillityTab"]
 position = Vector2( 443, 376 )
 scale = Vector2( 0.319, 0.319 )
 texture = ExtResource( 26 )
 
-[node name="JogoDaMemoria" type="Sprite" parent="AbillityTab/AbillityTab"]
+[node name="JogoDaMemoria" type="Sprite" parent="AbillityTab"]
 position = Vector2( 443, 376 )
 scale = Vector2( 0.319218, 0.319218 )
 texture = ExtResource( 69 )
 
-[node name="jogoDaMemóriaButton" type="TextureButton" parent="AbillityTab/AbillityTab/JogoDaMemoria"]
+[node name="jogoDaMemóriaButton" type="TextureButton" parent="AbillityTab/JogoDaMemoria"]
 margin_left = -178.562
 margin_top = -178.562
 margin_right = 196.438
 margin_bottom = 181.438
 
-[node name="HistoriometroTab" type="Tabs" parent="AbillityTab/AbillityTab"]
+[node name="HistoriometroTab" type="Tabs" parent="AbillityTab"]
 margin_right = 40.0
 margin_bottom = 24.0
 
-[node name="Historiometro0" type="Sprite" parent="AbillityTab/AbillityTab/HistoriometroTab"]
+[node name="Historiometro0" type="Sprite" parent="AbillityTab/HistoriometroTab"]
 position = Vector2( 706, 355 )
 scale = Vector2( 0.776515, 0.776515 )
 texture = ExtResource( 32 )
 
-[node name="Historiometro1" type="Sprite" parent="AbillityTab/AbillityTab/HistoriometroTab"]
+[node name="Historiometro1" type="Sprite" parent="AbillityTab/HistoriometroTab"]
 visible = false
 position = Vector2( 706, 355 )
 scale = Vector2( 0.777, 0.777 )
 texture = ExtResource( 33 )
 
-[node name="Historiometro2" type="Sprite" parent="AbillityTab/AbillityTab/HistoriometroTab"]
+[node name="Historiometro2" type="Sprite" parent="AbillityTab/HistoriometroTab"]
 visible = false
 position = Vector2( 706, 355 )
 scale = Vector2( 0.777, 0.777 )
 texture = ExtResource( 40 )
 
-[node name="Historiometro3" type="Sprite" parent="AbillityTab/AbillityTab/HistoriometroTab"]
+[node name="Historiometro3" type="Sprite" parent="AbillityTab/HistoriometroTab"]
 visible = false
 position = Vector2( 706, 355 )
 rotation = -0.00155145
 scale = Vector2( 0.777, 0.777 )
 texture = ExtResource( 37 )
 
-[node name="Historiometro4" type="Sprite" parent="AbillityTab/AbillityTab/HistoriometroTab"]
+[node name="Historiometro4" type="Sprite" parent="AbillityTab/HistoriometroTab"]
 visible = false
 position = Vector2( 706, 355 )
 rotation = -0.00155145
 scale = Vector2( 0.777, 0.777 )
 texture = ExtResource( 36 )
 
-[node name="Historiometro5" type="Sprite" parent="AbillityTab/AbillityTab/HistoriometroTab"]
+[node name="Historiometro5" type="Sprite" parent="AbillityTab/HistoriometroTab"]
 visible = false
 position = Vector2( 705.926, 355 )
 scale = Vector2( 0.777, 0.777 )
 texture = ExtResource( 39 )
 
-[node name="Historiometro6" type="Sprite" parent="AbillityTab/AbillityTab/HistoriometroTab"]
+[node name="Historiometro6" type="Sprite" parent="AbillityTab/HistoriometroTab"]
 visible = false
 position = Vector2( 705.926, 355 )
 scale = Vector2( 0.777, 0.777 )
 texture = ExtResource( 34 )
 
-[node name="Historiometro7" type="Sprite" parent="AbillityTab/AbillityTab/HistoriometroTab"]
+[node name="Historiometro7" type="Sprite" parent="AbillityTab/HistoriometroTab"]
 visible = false
 position = Vector2( 705.926, 355 )
 scale = Vector2( 0.777, 0.777 )
 texture = ExtResource( 35 )
 
-[node name="Historiometro8" type="Sprite" parent="AbillityTab/AbillityTab/HistoriometroTab"]
+[node name="Historiometro8" type="Sprite" parent="AbillityTab/HistoriometroTab"]
 visible = false
 position = Vector2( 705.926, 355 )
 scale = Vector2( 0.777, 0.777 )
 texture = ExtResource( 38 )
 
-[node name="Historiometro9" type="Sprite" parent="AbillityTab/AbillityTab/HistoriometroTab"]
+[node name="Historiometro9" type="Sprite" parent="AbillityTab/HistoriometroTab"]
 visible = false
 position = Vector2( 705.926, 355 )
 scale = Vector2( 0.777, 0.777 )
@@ -1199,8 +1193,8 @@ autowrap = true
 [connection signal="pressed" from="MapTab/City1/City1Button" to="." method="_on_City1Button_pressed"]
 [connection signal="pressed" from="MapTab/City2/City2Button" to="." method="_on_City2Button_pressed"]
 [connection signal="pressed" from="MapTab/City3/City3Button" to="." method="_on_City3Button_pressed"]
-[connection signal="pressed" from="CharactersTab/Suzana/SuzanaButton" to="." method="_on_SuzanaButton_pressed"]
 [connection signal="pressed" from="CharactersTab/Suzana/SuzanaButton" to="." method="_on_Character1Button_pressed"]
+[connection signal="pressed" from="CharactersTab/Suzana/SuzanaButton" to="." method="_on_SuzanaButton_pressed"]
 [connection signal="pressed" from="CharactersTab/Darcy/DarcyButton" to="." method="_on_DarcyButton_pressed"]
 [connection signal="pressed" from="CharactersTab/JoseMiguel/JoseMiguelButton" to="." method="_on_JoseMiguelButton_pressed"]
 [connection signal="pressed" from="CharactersTab/ChefDePolicia/ChefDePoliciaButton" to="." method="_on_ChefDePoliciaButton_pressed"]

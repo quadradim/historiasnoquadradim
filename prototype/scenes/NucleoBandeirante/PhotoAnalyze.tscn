@@ -329,7 +329,6 @@ theme = ExtResource( 5 )
 [node name="Skill" type="Sprite" parent="UnlockedSkill"]
 modulate = Color( 1, 1, 1, 0.0666667 )
 position = Vector2( 249.455, 927.819 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 15 )
 
 [node name="Label" type="Label" parent="UnlockedSkill"]

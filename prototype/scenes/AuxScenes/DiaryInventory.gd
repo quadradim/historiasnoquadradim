@@ -47,35 +47,35 @@ func load_diary_statements():
 		
 	#Load Abilitys
 	$AbillityTab/Binoculos.visible = player_data["ability"][0]
-	$AbillityTab/Cartazes.visible = player_data["ability"][1]
-	$AbillityTab/Chapeu.visible = player_data["ability"][2]
+	$AbillityTab/Livros.visible = player_data["ability"][1]
+	$AbillityTab/Jornal.visible = player_data["ability"][2]
 	$AbillityTab/Cubo.visible = player_data["ability"][3]
-	$AbillityTab/JogoDaMemoria.visible = player_data["ability"][4]
-	$AbillityTab/Jornal.visible = player_data["ability"][5]
-	$AbillityTab/Livros.visible = player_data["ability"][6]
-	$AbillityTab/Pasta.visible = player_data["ability"][7]
-	$AbillityTab/Planeta.visible = player_data["ability"][8]
+	$AbillityTab/Planeta.visible = player_data["ability"][4]
+	$AbillityTab/Chapeu.visible = player_data["ability"][5]
+	$AbillityTab/Pasta.visible = player_data["ability"][6]
+	$AbillityTab/Cartazes.visible = player_data["ability"][7]
+	$AbillityTab/JogoDaMemoria.visible = player_data["ability"][8]
 	
 	#Load Historiometer
 	var historiometer = sum_array(player_data["ability"])
 	if historiometer > 0:
 		$AbillityTab/HistoriometroTab/Historiometro1.visible = true
 	if historiometer > 1:
-		$AbillityTab/HistoriometroTab/Historiomentro2.visible = true
+		$AbillityTab/HistoriometroTab/Historiometro2.visible = true
 	if historiometer > 2:
-		$AbillityTab/HistoriometroTab/Historiomentro3.visible = true
+		$AbillityTab/HistoriometroTab/Historiometro3.visible = true
 	if historiometer > 3:
-		$AbillityTab/HistoriometroTab/Historiomentro4.visible = true
+		$AbillityTab/HistoriometroTab/Historiometro4.visible = true
 	if historiometer > 4:
-		$AbillityTab/HistoriometroTab/Historiomentro5.visible = true
+		$AbillityTab/HistoriometroTab/Historiometro5.visible = true
 	if historiometer > 5:
-		$AbillityTab/HistoriometroTab/Historiomentro6.visible = true
+		$AbillityTab/HistoriometroTab/Historiometro6.visible = true
 	if historiometer > 6:
-		$AbillityTab/HistoriometroTab/Historiomentro7.visible = true
+		$AbillityTab/HistoriometroTab/Historiometro7.visible = true
 	if historiometer > 7:
-		$AbillityTab/HistoriometroTab/Historiomentro8.visible = true
+		$AbillityTab/HistoriometroTab/Historiometro8.visible = true
 	if historiometer > 8:
-		$AbillityTab/HistoriometroTab/Historiomentro9.visible = true		
+		$AbillityTab/HistoriometroTab/Historiometro9.visible = true		
 
 func _ready():
 	pass

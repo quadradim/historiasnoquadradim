@@ -72,7 +72,7 @@ func give_hint():
 
 
 func _on_UnlockedSkill_popup_hide():
-	emit_signal("end_word_selection_2", "retrospectiva")
+	emit_signal("end_word_selection_2", "jornalista_dialog")
 	
 ##########################################
 func get_total_selections():
@@ -125,7 +125,7 @@ func _on_TryButton_button_down():
 		won = false
 
 	if won:
-		$Player.modifier("ability",[1,1,1,1,0,1,1,1,1])
+		$Player.modifier("ability",[1,1,1,1,1,1,1,1,0])
 		
 #		$PlayerBackPack/DiaryInventory._ready()
 		$Fade_Popup.popup()

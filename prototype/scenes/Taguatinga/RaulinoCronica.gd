@@ -1,5 +1,6 @@
 extends CanvasLayer
 onready var veicles = get_node("/root/Global")
+var player_data
 
 signal end_cronica_raulino
 # Declare member variables here. Examples:
@@ -21,6 +22,19 @@ func _ready():
 	$ChatBox.visible = false
 	$Sprite3.visible = true
 	$TutorialText.visible = true
+	$Timer.start()
+
+func _on_Timer_timeout():
+	pass # Replace with function body.
+	player_data = $Player.read()
+	$Player.modifier("ability",[1,1,1,1,1,1,1,0,0])
+#	$PlayerBackPack/DiaryInventory._ready()
+	$Fade_Popup.popup()
+	$UnlockedSkillAudio.play()
+	$UnlockedSkill.popup()
+	$UnlockedSkillAnimation.play("Popmenssage")
+
+func _on_UnlockedSkill_popup_hide():
 	$FinishWriting.start()
 	$WritingTime.start()
 	$Continuar.disabled = true

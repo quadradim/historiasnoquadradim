@@ -39,14 +39,14 @@ func _ready():
 		$CharactersTab/Sindicalista.visible = true
 	#Load Abilitys
 	$AbillityTab/Binoculos.visible = player_data["ability"][0]
-	$AbillityTab/Cartazes.visible = player_data["ability"][1]
-	$AbillityTab/Chapeu.visible = player_data["ability"][2]
+	$AbillityTab/Livros.visible = player_data["ability"][1]
+	$AbillityTab/Jornal.visible = player_data["ability"][2]
 	$AbillityTab/Cubo.visible = player_data["ability"][3]
-	$AbillityTab/JogoDaMemoria.visible = player_data["ability"][4]
-	$AbillityTab/Jornal.visible = player_data["ability"][5]
-	$AbillityTab/Livros.visible = player_data["ability"][6]
-	$AbillityTab/Pasta.visible = player_data["ability"][7]
-	$AbillityTab/Planeta.visible = player_data["ability"][8]
+	$AbillityTab/Planeta.visible = player_data["ability"][4]
+	$AbillityTab/Chapeu.visible = player_data["ability"][5]
+	$AbillityTab/Pasta.visible = player_data["ability"][6]
+	$AbillityTab/Cartazes.visible = player_data["ability"][7]
+	$AbillityTab/JogoDaMemoria.visible = player_data["ability"][8]
 	
 	#Load Historiometer
 	if player_data["historiometer"] > 0:

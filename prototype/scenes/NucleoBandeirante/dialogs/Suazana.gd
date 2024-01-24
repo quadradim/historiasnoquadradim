@@ -21,17 +21,5 @@ func start():
 
 func end_suzana_scene():
 	$PlayerBackPack/DiaryInventory/PlayerEntitiy.modifier("characters",1)
-	
-	
-	$PlayerBackPack/DiaryInventory._ready()
-	$PlayerBackPack/DiaryInventory/PlayerEntitiy.modifier("ability",[1,0,0,0,0,0,1,0,1])
-
-#	$PlayerBackPack/DiaryInventory._ready()
-	$Fade_Popup.popup()
-	$UnlockedSkillAudio.play()
-	$UnlockedSkill.popup()
-	$UnlockedSkillAnimation.play("Popmenssage")
-
-
-func _on_UnlockedSkill_popup_hide():
 	emit_signal("end_suzana_scene", "analyze_photos2")
+

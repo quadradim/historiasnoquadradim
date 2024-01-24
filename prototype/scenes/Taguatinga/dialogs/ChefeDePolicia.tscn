@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://assets/Images/Taguatinga/policial_distrator_sizeFULL.png" type="Texture" id=1]
 [ext_resource path="res://assets/Images/Taguatinga/3-Taguatinga (não-finalizado).png" type="Texture" id=2]
@@ -9,7 +9,9 @@
 [ext_resource path="res://scenes/AuxScenes/PlayerBackPack.tscn" type="PackedScene" id=7]
 [ext_resource path="res://assets/Themes/CharacterChoice.tres" type="Theme" id=8]
 [ext_resource path="res://scenes/AuxScenes/Player.tscn" type="PackedScene" id=9]
-[ext_resource path="res://assets/Images/diary/pasta2.png" type="Texture" id=10]
+[ext_resource path="res://assets/Images/diary/escuta_on.png" type="Texture" id=10]
+[ext_resource path="res://assets/audio/sound_effects/unlock_ability.mp3" type="AudioStream" id=11]
+[ext_resource path="res://scenes/AuxScenes/AudioController.tscn" type="PackedScene" id=12]
 
 [sub_resource type="Animation" id=1]
 resource_name = "Popmenssage"
@@ -132,11 +134,19 @@ autowrap = true
 [node name="Skill" type="Sprite" parent="UnlockedSkill"]
 modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 244.364, 458.182 )
-scale = Vector2( 0.550467, 0.550467 )
 texture = ExtResource( 10 )
 
 [node name="UnlockedSkillAnimation" type="AnimationPlayer" parent="."]
 anims/Popmenssage = SubResource( 1 )
 
+[node name="UnlockedSkillAudio" parent="." instance=ExtResource( 12 )]
+stream = ExtResource( 11 )
+volume_db = -8.0
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
 [connection signal="end_dialog" from="ChatBox" to="." method="_on_ChatBox_end_dialog"]
 [connection signal="popup_hide" from="UnlockedSkill" to="." method="_on_UnlockedSkill_popup_hide"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

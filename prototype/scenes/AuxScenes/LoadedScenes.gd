@@ -341,6 +341,14 @@ var scenes_data = {
 		[],
 		true,
 	],
+	'jornalista_dialog':[
+		'res://scenes/PlanoPiloto/dialogs/Jornalista.tscn',
+		'end_jornalista_dialog',
+		true,
+		'res://assets/audio/soundtrack/taguatinga-longo.mp3',
+		[],
+		true,
+	],
 	'retrospectiva':[
 		'res://scenes/FirstAccess/Retro234.tscn',
 		'end_retrospectiva',
