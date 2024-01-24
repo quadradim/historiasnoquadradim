@@ -27,23 +27,24 @@ func load_diary_statements():
 	
 	#Load Characters
 	if player_data["characters"] > 0:
-		$CharactersTab/Character1.visible = true
+		$CharactersTab/Suzana.visible = true
 	if player_data["characters"] > 1:
-		$CharactersTab/Character2.visible = true
+		$CharactersTab/Darcy.visible = true
 	if player_data["characters"] > 2:
-		$CharactersTab/Character3.visible = true
+		$CharactersTab/JoseMiguel.visible = true
 	if player_data["characters"] > 3:
-		$CharactersTab/Character4.visible = true
+		$CharactersTab/ChefDePolicia.visible = true
 	if player_data["characters"] > 4:
-		$CharactersTab/Character5.visible = true
+		$CharactersTab/Raulino.visible = true
 	if player_data["characters"] > 5:
-		$CharactersTab/Character6.visible = true
+		$CharactersTab/Israel.visible = true
 	if player_data["characters"] > 6:
-		$CharactersTab/Character7.visible = true
+		$CharactersTab/ProfessoraDomingas.visible = true
 	if player_data["characters"] > 7:
-		$CharactersTab/Character8.visible = true
+		$CharactersTab/Ranieri.visible = true
 	if player_data["characters"] > 8:
-		$CharactersTab/Character9.visible = true
+		$CharactersTab/Sindicalista.visible = true
+		
 	#Load Abilitys
 	$AbillityTab/Binoculos.visible = player_data["ability"][0]
 	$AbillityTab/Cartazes.visible = player_data["ability"][1]
@@ -58,7 +59,7 @@ func load_diary_statements():
 	#Load Historiometer
 	var historiometer = sum_array(player_data["ability"])
 	if historiometer > 0:
-		$AbillityTab/HistoriometroTab/Historiomentro1.visible = true
+		$AbillityTab/HistoriometroTab/Historiometro1.visible = true
 	if historiometer > 1:
 		$AbillityTab/HistoriometroTab/Historiomentro2.visible = true
 	if historiometer > 2:

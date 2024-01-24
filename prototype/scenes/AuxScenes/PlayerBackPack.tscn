@@ -92,7 +92,6 @@ anims/DiaryHide = SubResource( 3 )
 
 [node name="DiaryInventory" parent="." instance=ExtResource( 1 )]
 visible = false
-rect_scale = Vector2( 1e-05, 1e-05 )
 
 [node name="BackPackBeating" type="AnimationPlayer" parent="."]
 anims/Beating = SubResource( 4 )

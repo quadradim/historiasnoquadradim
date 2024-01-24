@@ -47,7 +47,7 @@ func _ready():
 
 func _process(delta):
 	$MainMusic.update("soundtrack")
-
+	$BackPackSound.update("soundeffect")
 # Deactivate Button if not defined	
 #func _process(delta):
 #	if id_item_selected.size() == 3 and selected_backpack:

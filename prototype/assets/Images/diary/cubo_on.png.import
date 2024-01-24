@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/chapéu2.png-e7bbd5e8de4c3e98815c1d8cb3b59c78.stex"
+path="res://.import/cubo_on.png-8cd79e920e73645e9423907ef6374302.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Images/diary/chapéu2.png"
-dest_files=[ "res://.import/chapéu2.png-e7bbd5e8de4c3e98815c1d8cb3b59c78.stex" ]
+source_file="res://assets/Images/diary/cubo_on.png"
+dest_files=[ "res://.import/cubo_on.png-8cd79e920e73645e9423907ef6374302.stex" ]
 
 [params]
 

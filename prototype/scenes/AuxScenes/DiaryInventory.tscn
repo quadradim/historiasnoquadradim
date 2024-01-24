@@ -1,4 +1,4 @@
-[gd_scene load_steps=88 format=2]
+[gd_scene load_steps=91 format=2]
 
 [ext_resource path="res://scenes/AuxScenes/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/AuxScenes/AudioController.tscn" type="PackedScene" id=2]
@@ -6,39 +6,38 @@
 [ext_resource path="res://scenes/AuxScenes/DiaryInventory.gd" type="Script" id=4]
 [ext_resource path="res://assets/Images/diary/Lupa2.png" type="Texture" id=5]
 [ext_resource path="res://assets/Images/diary/reforma.png" type="Texture" id=6]
-[ext_resource path="res://assets/Images/diary/cubo2.png" type="Texture" id=7]
+[ext_resource path="res://assets/Images/diary/binoculos_on.png" type="Texture" id=7]
 [ext_resource path="res://assets/Images/CharacterChoice/chapéu2.png" type="Texture" id=8]
 [ext_resource path="res://assets/Images/diary/diaryform.png" type="Texture" id=9]
 [ext_resource path="res://assets/Images/CharacterChoice/mochilas/redimensionado/mochila01.png" type="Texture" id=10]
 [ext_resource path="res://assets/Images/diary/Personagens/Diário_de_bordo_bloqueado1.png" type="Texture" id=11]
 [ext_resource path="res://assets/Images/diary/ícone1.png" type="Texture" id=12]
 [ext_resource path="res://assets/Images/diary/cubo_off.png" type="Texture" id=13]
-[ext_resource path="res://assets/Images/diary/livros2.png" type="Texture" id=14]
-[ext_resource path="res://assets/Images/diary/cartazes.png" type="Texture" id=15]
+[ext_resource path="res://assets/Images/diary/cubo_on.png" type="Texture" id=14]
+[ext_resource path="res://assets/Images/diary/cartazes_on.png" type="Texture" id=15]
 [ext_resource path="res://assets/audio/soundtrack/Loop5 - Diário.mp3" type="AudioStream" id=16]
-[ext_resource path="res://assets/Images/diary/jogo_da_memória2.png" type="Texture" id=17]
+[ext_resource path="res://assets/Images/diary/livros_on.png" type="Texture" id=17]
 [ext_resource path="res://assets/Images/diary/historiômetro/0.png" type="Texture" id=18]
 [ext_resource path="res://assets/Images/diary/1.png" type="Texture" id=19]
 [ext_resource path="res://assets/Images/diary/historiômetro/6.png" type="Texture" id=20]
 [ext_resource path="res://assets/Images/diary/ícone2.png" type="Texture" id=21]
 [ext_resource path="res://assets/Images/diary/tape.png" type="Texture" id=22]
 [ext_resource path="res://assets/Images/diary/historiômetro/7.png" type="Texture" id=23]
-[ext_resource path="res://assets/Images/diary/chapéu2.png" type="Texture" id=24]
+[ext_resource path="res://assets/Images/diary/escuta_on.png" type="Texture" id=24]
 [ext_resource path="res://assets/Images/diary/mapa.png" type="Texture" id=25]
 [ext_resource path="res://assets/Images/diary/historiômetro/4.png" type="Texture" id=26]
 [ext_resource path="res://assets/Images/diary/historiômetro/3.png" type="Texture" id=27]
 [ext_resource path="res://assets/Images/diary/historiômetro/8.png" type="Texture" id=28]
-[ext_resource path="res://assets/Images/diary/planeta2.png" type="Texture" id=29]
-[ext_resource path="res://assets/Images/diary/binoculos2.png" type="Texture" id=30]
-[ext_resource path="res://assets/Images/diary/jornal2.png" type="Texture" id=31]
+[ext_resource path="res://assets/Images/diary/chapéu_on.png" type="Texture" id=29]
+[ext_resource path="res://assets/Images/diary/jornal_on.png" type="Texture" id=30]
+[ext_resource path="res://assets/Images/diary/pasta_on.png" type="Texture" id=31]
 [ext_resource path="res://assets/Images/diary/historiômetro/5.png" type="Texture" id=32]
 [ext_resource path="res://assets/Images/diary/historiômetro/2.png" type="Texture" id=33]
 [ext_resource path="res://assets/Images/diary/ícone 3.png" type="Texture" id=34]
-[ext_resource path="res://assets/Images/diary/pasta2.png" type="Texture" id=35]
+[ext_resource path="res://assets/Images/diary/jogo da memória_on.png" type="Texture" id=35]
 [ext_resource path="res://assets/Images/diary/historiômetro/1.png" type="Texture" id=36]
 [ext_resource path="res://assets/Fonts/bebas_neue/BebasNeue-Regular.ttf" type="DynamicFontData" id=37]
 [ext_resource path="res://assets/Fonts/averia/Averia-BoldItalic.ttf" type="DynamicFontData" id=38]
-[ext_resource path="res://assets/Images/diary/Personagens/diario_de_bordo_bloqueado.png" type="Texture" id=39]
 [ext_resource path="res://assets/Images/diary/Personagens/diario_de_bordo.png" type="Texture" id=40]
 [ext_resource path="res://assets/Images/diary/Personagens/Diário_de_bordo.png" type="Texture" id=41]
 [ext_resource path="res://assets/Images/diary/Personagens/Diário_de_bordo_bloqueado.png" type="Texture" id=42]
@@ -63,6 +62,8 @@
 [ext_resource path="res://assets/Images/diary/nuc.bandeirante.png" type="Texture" id=61]
 [ext_resource path="res://assets/Images/diary/planopiloto.png" type="Texture" id=62]
 [ext_resource path="res://assets/Images/diary/taguatinga.png" type="Texture" id=63]
+[ext_resource path="res://assets/Images/diary/Personagens/diario_de_bordo_bloqueado1.png" type="Texture" id=64]
+[ext_resource path="res://assets/Images/diary/Personagens/diario_de_bordo_bloqueado (1).png" type="Texture" id=65]
 
 [sub_resource type="StyleBoxFlat" id=31]
 bg_color = Color( 1, 0, 0, 0 )
@@ -194,29 +195,40 @@ corner_radius_bottom_left = 5
 size = 14
 font_data = ExtResource( 37 )
 
-[sub_resource type="DynamicFont" id=49]
+[sub_resource type="DynamicFont" id=55]
 size = 35
 font_data = ExtResource( 37 )
 
-[sub_resource type="StyleBoxFlat" id=50]
+[sub_resource type="StyleBoxFlat" id=56]
 bg_color = Color( 0.92549, 0.886275, 0.835294, 1 )
 corner_radius_top_left = 3
 corner_radius_top_right = 3
 corner_radius_bottom_right = 3
 corner_radius_bottom_left = 3
 
-[sub_resource type="StyleBoxFlat" id=51]
+[sub_resource type="StyleBoxFlat" id=57]
 bg_color = Color( 0.92549, 0.886275, 0.835294, 1 )
 corner_radius_top_left = 3
 corner_radius_top_right = 3
 corner_radius_bottom_right = 3
 corner_radius_bottom_left = 3
 
-[sub_resource type="DynamicFont" id=52]
+[sub_resource type="DynamicFont" id=58]
 size = 24
 font_data = ExtResource( 37 )
 
-[sub_resource type="DynamicFont" id=53]
+[sub_resource type="DynamicFont" id=59]
+size = 35
+font_data = ExtResource( 37 )
+
+[sub_resource type="StyleBoxFlat" id=60]
+bg_color = Color( 0.92549, 0.886275, 0.835294, 1 )
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[sub_resource type="DynamicFont" id=61]
 size = 24
 font_data = ExtResource( 38 )
 
@@ -578,7 +590,7 @@ margin_top = 100.2
 margin_right = 790.76
 margin_bottom = 143.2
 custom_colors/font_color = Color( 0.4, 0.631373, 0.862745, 1 )
-custom_fonts/font = SubResource( 49 )
+custom_fonts/font = SubResource( 55 )
 text = "Personagens"
 align = 1
 
@@ -596,7 +608,7 @@ margin_left = 568.2
 margin_top = 93.464
 margin_right = 919.2
 margin_bottom = 362.464
-custom_styles/panel = SubResource( 50 )
+custom_styles/panel = SubResource( 56 )
 __meta__ = {
 "_editor_description_": "	"
 }
@@ -607,175 +619,179 @@ margin_left = 538.0
 margin_top = 356.0
 margin_right = 879.0
 margin_bottom = 474.552
-custom_styles/panel = SubResource( 51 )
+custom_styles/panel = SubResource( 57 )
 
 [node name="DescriptionText" type="Label" parent="CharactersTab"]
-margin_left = 538.0
-margin_top = 356.0
-margin_right = 879.0
-margin_bottom = 478.0
+margin_left = 549.0
+margin_top = 360.0
+margin_right = 865.0
+margin_bottom = 473.0
 custom_colors/font_color = Color( 0.290196, 0.211765, 0.290196, 1 )
-custom_fonts/font = SubResource( 52 )
-text = "Texto falando umpouco sobre o personagem e seu contexto social historico."
+custom_fonts/font = SubResource( 58 )
+text = "Texto falando um pouco sobre o personagem e seu contexto social historico."
 autowrap = true
 
-[node name="Character10" type="Sprite" parent="CharactersTab"]
-position = Vector2( 225, 206 )
-scale = Vector2( 0.317073, 0.317073 )
+[node name="SuzanaBlock" type="Sprite" parent="CharactersTab"]
+position = Vector2( 225, 207 )
+scale = Vector2( 0.303841, 0.303841 )
 texture = ExtResource( 42 )
 
-[node name="Character1" type="Sprite" parent="CharactersTab"]
+[node name="Suzana" type="Sprite" parent="CharactersTab"]
 visible = false
-position = Vector2( 225, 206 )
-scale = Vector2( 0.317, 0.317 )
+position = Vector2( 225, 207 )
+scale = Vector2( 0.304, 0.304 )
 texture = ExtResource( 41 )
 
-[node name="Character1Button" type="TextureButton" parent="CharactersTab/Character1"]
-margin_left = -167.0
-margin_top = -158.0
-margin_right = 142.0
-margin_bottom = 139.0
+[node name="SuzanaButton" type="TextureButton" parent="CharactersTab/Suzana"]
+margin_left = -167.763
+margin_top = -164.474
+margin_right = 148.237
+margin_bottom = 141.526
 
-[node name="Character11" type="Sprite" parent="CharactersTab"]
-position = Vector2( 331, 211 )
-scale = Vector2( 0.336812, 0.336811 )
+[node name="DarcyBlock" type="Sprite" parent="CharactersTab"]
+position = Vector2( 330, 213 )
+scale = Vector2( 0.331, 0.331 )
 texture = ExtResource( 46 )
 
-[node name="Character2" type="Sprite" parent="CharactersTab"]
+[node name="Darcy" type="Sprite" parent="CharactersTab"]
 visible = false
-position = Vector2( 331, 211 )
-scale = Vector2( 0.337, 0.337 )
+position = Vector2( 330, 213 )
+scale = Vector2( 0.330556, 0.330556 )
 texture = ExtResource( 44 )
 
-[node name="Character2Button" type="TextureButton" parent="CharactersTab/Character2"]
+[node name="DarcyButton" type="TextureButton" parent="CharactersTab/Darcy"]
 anchor_bottom = 1.0
-margin_left = -166.0
-margin_top = -160.0
-margin_right = 113.0
-margin_bottom = -112.0
+margin_left = -169.412
+margin_top = -169.412
+margin_right = 120.588
+margin_bottom = -113.412
 
-[node name="Character12" type="Sprite" parent="CharactersTab"]
-position = Vector2( 423, 203 )
-scale = Vector2( 0.351261, 0.351261 )
-texture = ExtResource( 39 )
+[node name="JoseMiguelBlock" type="Sprite" parent="CharactersTab"]
+position = Vector2( 422, 204 )
+scale = Vector2( 0.344, 0.344 )
+texture = ExtResource( 65 )
 
-[node name="Character3" type="Sprite" parent="CharactersTab"]
+[node name="JoseMiguel" type="Sprite" parent="CharactersTab"]
 visible = false
-position = Vector2( 423, 203 )
-scale = Vector2( 0.351, 0.351 )
+position = Vector2( 422, 204 )
+scale = Vector2( 0.344, 0.344 )
 texture = ExtResource( 40 )
 
-[node name="Character3Button" type="TextureButton" parent="CharactersTab/Character3"]
+[node name="JoseMiguelButton" type="TextureButton" parent="CharactersTab/JoseMiguel"]
 margin_left = -142.0
-margin_top = -140.0
-margin_right = 134.0
+margin_top = -137.0
+margin_right = 145.0
 margin_bottom = 136.0
 
-[node name="Character13" type="Sprite" parent="CharactersTab"]
-position = Vector2( 225, 303 )
-scale = Vector2( 0.325203, 0.325203 )
+[node name="ChefeDePoliciaBlock" type="Sprite" parent="CharactersTab"]
+position = Vector2( 223, 306 )
+scale = Vector2( 0.227333, 0.227333 )
+texture = ExtResource( 64 )
+
+[node name="ChefDePolicia" type="Sprite" parent="CharactersTab"]
+visible = false
+position = Vector2( 888.563, 238.563 )
+
+[node name="ChefDePoliciaButton" type="TextureButton" parent="CharactersTab/ChefDePolicia"]
+margin_left = -712.563
+margin_top = 18.437
+margin_right = -615.563
+margin_bottom = 110.437
+
+[node name="RaulinoBlock" type="Sprite" parent="CharactersTab"]
+position = Vector2( 324, 303 )
+scale = Vector2( 0.327, 0.327 )
 texture = ExtResource( 50 )
 
-[node name="Character4" type="Sprite" parent="CharactersTab"]
+[node name="Raulino" type="Sprite" parent="CharactersTab"]
 visible = false
-position = Vector2( 225, 303 )
-scale = Vector2( 0.325, 0.325 )
+position = Vector2( 324, 303 )
+scale = Vector2( 0.315, 0.327 )
 texture = ExtResource( 57 )
 
-[node name="Character4Button" type="TextureButton" parent="CharactersTab/Character4"]
-margin_left = -157.0
-margin_top = -148.0
-margin_right = 141.0
-margin_bottom = 138.0
+[node name="RaulinoButton" type="TextureButton" parent="CharactersTab/Raulino"]
+margin_left = -152.795
+margin_top = -143.627
+margin_right = 143.205
+margin_bottom = 137.373
 
-[node name="Character14" type="Sprite" parent="CharactersTab"]
-position = Vector2( 324, 305 )
-scale = Vector2( 0.311905, 0.311905 )
+[node name="IsraelBlock" type="Sprite" parent="CharactersTab"]
+position = Vector2( 423, 305 )
+scale = Vector2( 0.317, 0.317 )
 texture = ExtResource( 11 )
 
-[node name="Character5" type="Sprite" parent="CharactersTab"]
+[node name="Israel" type="Sprite" parent="CharactersTab"]
 visible = false
-position = Vector2( 324, 305 )
+position = Vector2( 423, 305 )
 scale = Vector2( 0.317073, 0.317073 )
 texture = ExtResource( 45 )
 
-[node name="Character5Button" type="TextureButton" parent="CharactersTab/Character5"]
+[node name="IsraelButton" type="TextureButton" parent="CharactersTab/Israel"]
 margin_left = -157.692
 margin_top = -157.692
 margin_right = 151.308
 margin_bottom = 142.308
 
-[node name="Character15" type="Sprite" parent="CharactersTab"]
-position = Vector2( 422, 302 )
-scale = Vector2( 0.333333, 0.333333 )
+[node name="ProfessoraDomingasBlock" type="Sprite" parent="CharactersTab"]
+position = Vector2( 223, 401 )
+scale = Vector2( 0.337, 0.337 )
 texture = ExtResource( 54 )
 
-[node name="Character6" type="Sprite" parent="CharactersTab"]
+[node name="ProfessoraDomingas" type="Sprite" parent="CharactersTab"]
 visible = false
-position = Vector2( 421, 302 )
+position = Vector2( 223, 401 )
 scale = Vector2( 0.337398, 0.337398 )
 texture = ExtResource( 58 )
 
-[node name="Character6Button" type="TextureButton" parent="CharactersTab/Character6"]
-margin_left = -145.229
-margin_top = -136.338
-margin_right = 147.771
-margin_bottom = 136.662
+[node name="ProfessoraDomingasButton" type="TextureButton" parent="CharactersTab/ProfessoraDomingas"]
+margin_left = -139.0
+margin_top = -136.0
+margin_right = 139.0
+margin_bottom = 140.0
 
-[node name="Character16" type="Sprite" parent="CharactersTab"]
-position = Vector2( 224, 402 )
-scale = Vector2( 0.32364, 0.32364 )
+[node name="RanieriBlock" type="Sprite" parent="CharactersTab"]
+position = Vector2( 325, 397 )
+scale = Vector2( 0.365, 0.365 )
 texture = ExtResource( 59 )
 
-[node name="Character7" type="Sprite" parent="CharactersTab"]
+[node name="Ranieri" type="Sprite" parent="CharactersTab"]
 visible = false
-position = Vector2( 224, 402 )
-scale = Vector2( 0.324, 0.324 )
+position = Vector2( 325, 397 )
+scale = Vector2( 0.364709, 0.364709 )
 texture = ExtResource( 60 )
 
-[node name="Character7Button" type="TextureButton" parent="CharactersTab/Character7"]
-margin_left = -145.0
-margin_top = -151.0
-margin_right = 142.0
-margin_bottom = 148.0
+[node name="RanieriButton" type="TextureButton" parent="CharactersTab/Ranieri"]
+margin_left = -140.0
+margin_top = -118.0
+margin_right = 123.0
+margin_bottom = 140.0
 
-[node name="Character17" type="Sprite" parent="CharactersTab"]
-position = Vector2( 1183.2, 509.522 )
-scale = Vector2( 0.0994374, 0.0994374 )
+[node name="SindicalistaBlock" type="Sprite" parent="CharactersTab"]
+position = Vector2( 325, 397 )
+scale = Vector2( 0.364709, 0.364709 )
 
-[node name="Character8" type="Sprite" parent="CharactersTab"]
-position = Vector2( 888.563, 238.563 )
+[node name="Sindicalista" type="Sprite" parent="CharactersTab"]
+position = Vector2( 325, 397 )
+scale = Vector2( 0.364709, 0.364709 )
 
-[node name="Character8Button" type="TextureButton" parent="CharactersTab/Character8"]
-margin_left = -613.0
-margin_top = 115.0
-margin_right = -517.0
-margin_bottom = 210.0
-
-[node name="Character18" type="Sprite" parent="CharactersTab"]
-position = Vector2( 1183.2, 509.522 )
-scale = Vector2( 0.0994374, 0.0994374 )
-
-[node name="Character9" type="Sprite" parent="CharactersTab"]
-position = Vector2( 888.563, 238.563 )
-
-[node name="Character9Button" type="TextureButton" parent="CharactersTab/Character9"]
-margin_left = -514.563
-margin_top = 115.437
-margin_right = -417.563
-margin_bottom = 207.437
+[node name="SindicalistaButton" type="TextureButton" parent="CharactersTab/Sindicalista"]
+visible = false
+margin_left = 134.0
+margin_top = -118.0
+margin_right = 400.0
+margin_bottom = 142.0
 
 [node name="CharacterZoom" type="Sprite" parent="CharactersTab"]
 position = Vector2( 694, 200 )
 
 [node name="AbillityTab" type="Tabs" parent="."]
-margin_left = -48.0
-margin_top = 38.4328
-margin_right = -8.0
-margin_bottom = 62.4328
+margin_left = -52.0
+margin_top = 64.0
+margin_right = -12.0
+margin_bottom = 88.0
 
 [node name="CharactersBackground" type="Sprite" parent="AbillityTab"]
-position = Vector2( 328, 254 )
+position = Vector2( 329, 255 )
 scale = Vector2( 0.28875, 0.28875 )
 texture = ExtResource( 19 )
 
@@ -789,22 +805,8 @@ margin_top = 49.2
 margin_right = 782.76
 margin_bottom = 92.2
 custom_colors/font_color = Color( 0.4, 0.631373, 0.862745, 1 )
-custom_fonts/font = SubResource( 49 )
+custom_fonts/font = SubResource( 59 )
 text = "HABILIDADES"
-align = 1
-
-[node name="HistoriometroTitle" type="Label" parent="AbillityTab"]
-anchor_left = -8.694
-anchor_top = -1.175
-anchor_right = -8.694
-anchor_bottom = -1.175
-margin_left = 928.76
-margin_top = 302.2
-margin_right = 1175.76
-margin_bottom = 345.2
-custom_colors/font_color = Color( 0.4, 0.631373, 0.862745, 1 )
-custom_fonts/font = SubResource( 49 )
-text = "Historiômetro"
 align = 1
 
 [node name="CharacterBackground" type="Panel" parent="AbillityTab"]
@@ -816,7 +818,7 @@ margin_left = 578.2
 margin_top = 73.464
 margin_right = 912.2
 margin_bottom = 276.464
-custom_styles/panel = SubResource( 50 )
+custom_styles/panel = SubResource( 60 )
 __meta__ = {
 "_editor_description_": "	"
 }
@@ -831,227 +833,233 @@ margin_top = 92.2
 margin_right = 1213.76
 margin_bottom = 136.2
 custom_colors/font_color = Color( 0.4, 0.631373, 0.862745, 1 )
-custom_fonts/font = SubResource( 49 )
+custom_fonts/font = SubResource( 59 )
 align = 1
 
 [node name="DescriptionText" type="Label" parent="AbillityTab"]
-margin_left = 544.0
-margin_top = 119.0
-margin_right = 866.0
-margin_bottom = 253.0
+margin_left = 551.0
+margin_top = 118.0
+margin_right = 873.0
+margin_bottom = 252.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_fonts/font = SubResource( 53 )
+custom_fonts/font = SubResource( 61 )
 text = "Descrição de habilidades."
 align = 1
 autowrap = true
 
-[node name="Binoculos2" type="Sprite" parent="AbillityTab"]
-position = Vector2( 193.875, 132.442 )
-scale = Vector2( 0.27443, 0.27443 )
+[node name="BinoculosOff" type="Sprite" parent="AbillityTab"]
+position = Vector2( 199.327, 132.327 )
+scale = Vector2( 0.343, 0.343 )
 texture = ExtResource( 47 )
 
 [node name="Binoculos" type="Sprite" parent="AbillityTab"]
-position = Vector2( 194, 132.567 )
-scale = Vector2( 0.102218, 0.102218 )
-texture = ExtResource( 30 )
+position = Vector2( 199.327, 132.327 )
+scale = Vector2( 0.343144, 0.343144 )
+texture = ExtResource( 7 )
 
 [node name="BinoculosButton" type="TextureButton" parent="AbillityTab/Binoculos"]
-margin_left = -577.199
-margin_top = -586.98
-margin_right = 576.801
-margin_bottom = 549.02
+margin_left = -182.0
+margin_top = -164.0
+margin_right = 171.0
+margin_bottom = 171.0
 
-[node name="Cartazes2" type="Sprite" parent="AbillityTab"]
-position = Vector2( 320, 132.567 )
-scale = Vector2( 0.372387, 0.372387 )
+[node name="LivrosOff" type="Sprite" parent="AbillityTab"]
+position = Vector2( 323, 134 )
+scale = Vector2( 0.383, 0.383 )
+texture = ExtResource( 56 )
+
+[node name="Livros" type="Sprite" parent="AbillityTab"]
+position = Vector2( 323, 134 )
+scale = Vector2( 0.383333, 0.383333 )
+texture = ExtResource( 17 )
+
+[node name="LivrosButton" type="TextureButton" parent="AbillityTab/Livros"]
+margin_left = -164.0
+margin_top = -154.0
+margin_right = 150.0
+margin_bottom = 151.0
+
+[node name="JornalOff" type="Sprite" parent="AbillityTab"]
+position = Vector2( 441, 135 )
+scale = Vector2( 0.29, 0.29 )
+texture = ExtResource( 49 )
+
+[node name="Jornal" type="Sprite" parent="AbillityTab"]
+position = Vector2( 441, 135 )
+scale = Vector2( 0.289902, 0.289902 )
+texture = ExtResource( 30 )
+
+[node name="JornalButton" type="TextureButton" parent="AbillityTab/Jornal"]
+margin_left = -193.169
+margin_top = -206.967
+margin_right = 220.831
+margin_bottom = 186.033
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="CuboOff" type="Sprite" parent="AbillityTab"]
+position = Vector2( 197, 253.546 )
+scale = Vector2( 0.371, 0.371 )
+texture = ExtResource( 13 )
+
+[node name="Cubo" type="Sprite" parent="AbillityTab"]
+position = Vector2( 197, 253.546 )
+scale = Vector2( 0.371336, 0.371336 )
+texture = ExtResource( 14 )
+
+[node name="CuboButton" type="TextureButton" parent="AbillityTab/Cubo"]
+margin_left = -159.0
+margin_top = -144.0
+margin_right = 164.0
+margin_bottom = 165.0
+
+[node name="PlanetaOff" type="Sprite" parent="AbillityTab"]
+position = Vector2( 321, 258 )
+scale = Vector2( 0.365, 0.365 )
+texture = ExtResource( 51 )
+
+[node name="Planeta" type="Sprite" parent="AbillityTab"]
+position = Vector2( 321, 258 )
+scale = Vector2( 0.364821, 0.382364 )
+texture = ExtResource( 24 )
+
+[node name="PlanetaButton" type="TextureButton" parent="AbillityTab/Planeta"]
+margin_left = -167.206
+margin_top = -156.919
+margin_right = 161.794
+margin_bottom = 149.081
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="ChapeuOff" type="Sprite" parent="AbillityTab"]
+position = Vector2( 451, 261 )
+scale = Vector2( 0.319, 0.319 )
+texture = ExtResource( 55 )
+
+[node name="Chapeu" type="Sprite" parent="AbillityTab"]
+position = Vector2( 451, 261 )
+scale = Vector2( 0.319218, 0.319218 )
+texture = ExtResource( 29 )
+
+[node name="ChapéuButton" type="TextureButton" parent="AbillityTab/Chapeu"]
+margin_left = -206.755
+margin_top = -197.357
+margin_right = 172.245
+margin_bottom = 162.643
+
+[node name="PastaOff" type="Sprite" parent="AbillityTab"]
+position = Vector2( 202, 376 )
+scale = Vector2( 0.358, 0.358 )
+texture = ExtResource( 53 )
+
+[node name="Pasta" type="Sprite" parent="AbillityTab"]
+position = Vector2( 202, 376 )
+scale = Vector2( 0.358306, 0.358306 )
+texture = ExtResource( 31 )
+
+[node name="PastaButton" type="TextureButton" parent="AbillityTab/Pasta"]
+margin_left = -181.0
+margin_top = -156.0
+margin_right = 159.0
+margin_bottom = 170.0
+
+[node name="CartazesOff" type="Sprite" parent="AbillityTab"]
+position = Vector2( 321, 374 )
+scale = Vector2( 0.321, 0.321 )
 texture = ExtResource( 52 )
 
 [node name="Cartazes" type="Sprite" parent="AbillityTab"]
-position = Vector2( 320, 133.567 )
-scale = Vector2( 0.140555, 0.140555 )
+position = Vector2( 321, 374 )
+scale = Vector2( 0.320847, 0.320847 )
 texture = ExtResource( 15 )
 
 [node name="CartazesButton" type="TextureButton" parent="AbillityTab/Cartazes"]
 anchor_bottom = 1.0
-margin_left = -420.0
-margin_top = -420.0
-margin_right = 427.0
-margin_bottom = -430.0
+margin_left = -184.0
+margin_top = -168.0
+margin_right = 187.0
+margin_bottom = -116.0
 
-[node name="Chapeu2" type="Sprite" parent="AbillityTab"]
-position = Vector2( 446, 131.567 )
-scale = Vector2( 0.31778, 0.31778 )
-texture = ExtResource( 55 )
-
-[node name="Chapeu" type="Sprite" parent="AbillityTab"]
-position = Vector2( 443, 131 )
-scale = Vector2( 0.131931, 0.131931 )
-texture = ExtResource( 24 )
-
-[node name="ChapéuButton" type="TextureButton" parent="AbillityTab/Chapeu"]
-margin_left = -432.044
-margin_top = -442.904
-margin_right = 447.956
-margin_bottom = 428.096
-
-[node name="Cubo2" type="Sprite" parent="AbillityTab"]
-position = Vector2( 192, 248.567 )
-scale = Vector2( 0.364821, 0.364821 )
-texture = ExtResource( 13 )
-
-[node name="Cubo" type="Sprite" parent="AbillityTab"]
-position = Vector2( 191.945, 248.491 )
-scale = Vector2( 0.079256, 0.079256 )
-texture = ExtResource( 7 )
-
-[node name="CuboButton" type="TextureButton" parent="AbillityTab/Cubo"]
-margin_left = -718.0
-margin_top = -637.0
-margin_right = 809.0
-margin_bottom = 776.0
-
-[node name="JogoDaMemoria2" type="Sprite" parent="AbillityTab"]
-position = Vector2( 320, 254.567 )
-scale = Vector2( 0.315054, 0.315054 )
+[node name="JogoDaMemoriaOff" type="Sprite" parent="AbillityTab"]
+position = Vector2( 443, 376 )
+scale = Vector2( 0.319, 0.319 )
 texture = ExtResource( 48 )
 
 [node name="JogoDaMemoria" type="Sprite" parent="AbillityTab"]
-position = Vector2( 320, 253 )
-scale = Vector2( 0.130692, 0.130692 )
-texture = ExtResource( 17 )
-
-[node name="jogoDaMemóriaButton" type="TextureButton" parent="AbillityTab/JogoDaMemoria"]
-margin_left = -466.746
-margin_top = -416.497
-margin_right = 444.254
-margin_bottom = 463.503
-
-[node name="Jornal2" type="Sprite" parent="AbillityTab"]
-position = Vector2( 446.5, 255.067 )
-scale = Vector2( 0.348534, 0.348534 )
-texture = ExtResource( 49 )
-
-[node name="Jornal" type="Sprite" parent="AbillityTab"]
-position = Vector2( 445, 254 )
-scale = Vector2( 0.13319, 0.13319 )
-texture = ExtResource( 31 )
-
-[node name="JornalButton" type="TextureButton" parent="AbillityTab/Jornal"]
-margin_left = -435.468
-margin_top = -431.209
-margin_right = 442.532
-margin_bottom = 431.791
-
-[node name="Livros2" type="Sprite" parent="AbillityTab"]
-position = Vector2( 196.078, 373.489 )
-scale = Vector2( 0.332813, 0.332813 )
-texture = ExtResource( 56 )
-
-[node name="Livros" type="Sprite" parent="AbillityTab"]
-position = Vector2( 196, 373 )
-scale = Vector2( 0.124023, 0.124023 )
-texture = ExtResource( 14 )
-
-[node name="LivrosButton" type="TextureButton" parent="AbillityTab/Livros"]
-margin_left = -468.0
-margin_top = -447.0
-margin_right = 475.0
-margin_bottom = 480.0
-
-[node name="Pasta2" type="Sprite" parent="AbillityTab"]
-position = Vector2( 314, 374.567 )
-scale = Vector2( 0.351042, 0.351042 )
-texture = ExtResource( 53 )
-
-[node name="Pasta" type="Sprite" parent="AbillityTab"]
-position = Vector2( 314, 374 )
-scale = Vector2( 0.138127, 0.138127 )
+position = Vector2( 443, 376 )
+scale = Vector2( 0.319218, 0.319218 )
 texture = ExtResource( 35 )
 
-[node name="PastaButton" type="TextureButton" parent="AbillityTab/Pasta"]
-margin_left = -391.0
-margin_top = -391.0
-margin_right = 478.0
-margin_bottom = 434.0
-
-[node name="Planeta2" type="Sprite" parent="AbillityTab"]
-position = Vector2( 442, 377.567 )
-scale = Vector2( 0.366532, 0.384157 )
-texture = ExtResource( 51 )
-
-[node name="Planeta" type="Sprite" parent="AbillityTab"]
-position = Vector2( 439.008, 372.508 )
-scale = Vector2( 0.128853, 0.135049 )
-texture = ExtResource( 29 )
-
-[node name="PlanetaButton" type="TextureButton" parent="AbillityTab/Planeta"]
-margin_left = -419.144
-margin_top = -414.226
-margin_right = 511.856
-margin_bottom = 444.774
+[node name="jogoDaMemóriaButton" type="TextureButton" parent="AbillityTab/JogoDaMemoria"]
+margin_left = -178.562
+margin_top = -178.562
+margin_right = 196.438
+margin_bottom = 181.438
 
 [node name="HistoriometroTab" type="Tabs" parent="AbillityTab"]
 margin_right = 40.0
 margin_bottom = 24.0
 
-[node name="Historiomentro0" type="Sprite" parent="AbillityTab/HistoriometroTab"]
-position = Vector2( 706, 377 )
+[node name="Historiometro0" type="Sprite" parent="AbillityTab/HistoriometroTab"]
+position = Vector2( 706, 355 )
 scale = Vector2( 0.776515, 0.776515 )
 texture = ExtResource( 18 )
 
-[node name="Historiomentro1" type="Sprite" parent="AbillityTab/HistoriometroTab"]
+[node name="Historiometro1" type="Sprite" parent="AbillityTab/HistoriometroTab"]
 visible = false
-position = Vector2( 706, 377 )
+position = Vector2( 706, 355 )
 scale = Vector2( 0.777, 0.777 )
 texture = ExtResource( 36 )
 
-[node name="Historiomentro2" type="Sprite" parent="AbillityTab/HistoriometroTab"]
+[node name="Historiometro2" type="Sprite" parent="AbillityTab/HistoriometroTab"]
 visible = false
-position = Vector2( 706, 377 )
+position = Vector2( 706, 355 )
 scale = Vector2( 0.777, 0.777 )
 texture = ExtResource( 33 )
 
-[node name="Historiomentro3" type="Sprite" parent="AbillityTab/HistoriometroTab"]
+[node name="Historiometro3" type="Sprite" parent="AbillityTab/HistoriometroTab"]
 visible = false
-position = Vector2( 706, 377 )
+position = Vector2( 706, 355 )
 rotation = -0.00155145
 scale = Vector2( 0.777, 0.777 )
 texture = ExtResource( 27 )
 
-[node name="Historiomentro4" type="Sprite" parent="AbillityTab/HistoriometroTab"]
+[node name="Historiometro4" type="Sprite" parent="AbillityTab/HistoriometroTab"]
 visible = false
-position = Vector2( 706, 377 )
+position = Vector2( 706, 355 )
 rotation = -0.00155145
 scale = Vector2( 0.777, 0.777 )
 texture = ExtResource( 26 )
 
-[node name="Historiomentro5" type="Sprite" parent="AbillityTab/HistoriometroTab"]
+[node name="Historiometro5" type="Sprite" parent="AbillityTab/HistoriometroTab"]
 visible = false
-position = Vector2( 706, 377 )
+position = Vector2( 705.926, 355 )
 scale = Vector2( 0.777, 0.777 )
 texture = ExtResource( 32 )
 
-[node name="Historiomentro6" type="Sprite" parent="AbillityTab/HistoriometroTab"]
+[node name="Historiometro6" type="Sprite" parent="AbillityTab/HistoriometroTab"]
 visible = false
-position = Vector2( 706, 377 )
+position = Vector2( 705.926, 355 )
 scale = Vector2( 0.777, 0.777 )
 texture = ExtResource( 20 )
 
-[node name="Historiomentro7" type="Sprite" parent="AbillityTab/HistoriometroTab"]
+[node name="Historiometro7" type="Sprite" parent="AbillityTab/HistoriometroTab"]
 visible = false
-position = Vector2( 706, 377 )
+position = Vector2( 705.926, 355 )
 scale = Vector2( 0.777, 0.777 )
 texture = ExtResource( 23 )
 
-[node name="Historiomentro8" type="Sprite" parent="AbillityTab/HistoriometroTab"]
+[node name="Historiometro8" type="Sprite" parent="AbillityTab/HistoriometroTab"]
 visible = false
-position = Vector2( 706, 377 )
+position = Vector2( 705.926, 355 )
 scale = Vector2( 0.777, 0.777 )
 texture = ExtResource( 28 )
 
-[node name="Historiomentro9" type="Sprite" parent="AbillityTab/HistoriometroTab"]
+[node name="Historiometro9" type="Sprite" parent="AbillityTab/HistoriometroTab"]
 visible = false
-position = Vector2( 706, 377 )
+position = Vector2( 705.926, 355 )
 scale = Vector2( 0.777, 0.777 )
 texture = ExtResource( 43 )
 
@@ -1062,19 +1070,3 @@ texture = ExtResource( 43 )
 [connection signal="pressed" from="MapTab/City1/City1Button" to="." method="_on_City1Button_pressed"]
 [connection signal="pressed" from="MapTab/City2/City2Button" to="." method="_on_City2Button_pressed"]
 [connection signal="pressed" from="MapTab/City3/City3Button" to="." method="_on_City3Button_pressed"]
-[connection signal="pressed" from="CharactersTab/Character1/Character1Button" to="." method="_on_Character1Button_pressed"]
-[connection signal="pressed" from="CharactersTab/Character2/Character2Button" to="." method="_on_Character2Button_pressed"]
-[connection signal="pressed" from="CharactersTab/Character3/Character3Button" to="." method="_on_Character3Button_pressed"]
-[connection signal="pressed" from="CharactersTab/Character4/Character4Button" to="." method="_on_Character4Button_pressed"]
-[connection signal="pressed" from="CharactersTab/Character5/Character5Button" to="." method="_on_Character5Button_pressed"]
-[connection signal="pressed" from="CharactersTab/Character6/Character6Button" to="." method="_on_Character6Button_pressed"]
-[connection signal="pressed" from="CharactersTab/Character7/Character7Button" to="." method="_on_Character7Button_pressed"]
-[connection signal="pressed" from="AbillityTab/Binoculos/BinoculosButton" to="." method="_on_BinoculosButton_pressed"]
-[connection signal="pressed" from="AbillityTab/Cartazes/CartazesButton" to="." method="_on_CartazesButton_pressed"]
-[connection signal="pressed" from="AbillityTab/Chapeu/ChapéuButton" to="." method="_on_ChapuButton_pressed"]
-[connection signal="pressed" from="AbillityTab/Cubo/CuboButton" to="." method="_on_CuboButton_pressed"]
-[connection signal="pressed" from="AbillityTab/JogoDaMemoria/jogoDaMemóriaButton" to="." method="_on_jogoDaMemriaButton_pressed"]
-[connection signal="pressed" from="AbillityTab/Jornal/JornalButton" to="." method="_on_JornalButton_pressed"]
-[connection signal="pressed" from="AbillityTab/Livros/LivrosButton" to="." method="_on_LivrosButton_pressed"]
-[connection signal="pressed" from="AbillityTab/Pasta/PastaButton" to="." method="_on_PastaButton_pressed"]
-[connection signal="pressed" from="AbillityTab/Planeta/PlanetaButton" to="." method="_on_PlanetaButton_pressed"]

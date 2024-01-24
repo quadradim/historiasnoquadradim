@@ -76,7 +76,7 @@ custom_styles/disabled = SubResource( 2 )
 custom_styles/normal = SubResource( 2 )
 
 [node name="Dist3" type="Sprite" parent="ButtonDist3"]
-modulate = Color( 0.0784314, 0.0784314, 0.0784314, 1 )
+visible = false
 position = Vector2( 97.0001, 286 )
 scale = Vector2( 0.289532, 0.289532 )
 texture = ExtResource( 2 )

@@ -14,7 +14,7 @@
 [ext_resource path="res://assets/Images/AnáliseDeFotos/Foto 1.png" type="Texture" id=12]
 [ext_resource path="res://scenes/AuxScenes/PlayerBackPack.tscn" type="PackedScene" id=13]
 [ext_resource path="res://scenes/AuxScenes/Player.tscn" type="PackedScene" id=14]
-[ext_resource path="res://assets/Images/diary/binoculos2.png" type="Texture" id=15]
+[ext_resource path="res://assets/Images/diary/binoculos_on.png" type="Texture" id=15]
 [ext_resource path="res://scenes/AuxScenes/Button.tscn" type="PackedScene" id=16]
 [ext_resource path="res://scenes/AuxScenes/AudioController.tscn" type="PackedScene" id=17]
 [ext_resource path="res://assets/audio/sound_effects/unlock_ability.mp3" type="AudioStream" id=18]
@@ -329,7 +329,7 @@ theme = ExtResource( 5 )
 [node name="Skill" type="Sprite" parent="UnlockedSkill"]
 modulate = Color( 1, 1, 1, 0.0666667 )
 position = Vector2( 249.455, 927.819 )
-scale = Vector2( 0.564662, 0.564662 )
+scale = Vector2( 1, 1 )
 texture = ExtResource( 15 )
 
 [node name="Label" type="Label" parent="UnlockedSkill"]

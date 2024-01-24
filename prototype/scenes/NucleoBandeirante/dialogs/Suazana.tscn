@@ -9,7 +9,7 @@
 [ext_resource path="res://assets/Themes/CharacterChoice.tres" type="Theme" id=7]
 [ext_resource path="res://scenes/AuxScenes/AudioController.tscn" type="PackedScene" id=8]
 [ext_resource path="res://assets/audio/soundtrack/Loop4 Lavadeiras.mp3" type="AudioStream" id=9]
-[ext_resource path="res://assets/Images/diary/planeta2.png" type="Texture" id=10]
+[ext_resource path="res://assets/Images/diary/escuta_on.png" type="Texture" id=10]
 [ext_resource path="res://assets/audio/sound_effects/unlock_ability.mp3" type="AudioStream" id=11]
 [ext_resource path="res://scenes/AuxScenes/PlayerBackPack.tscn" type="PackedScene" id=13]
 
@@ -137,7 +137,6 @@ autowrap = true
 [node name="Skill" type="Sprite" parent="UnlockedSkill"]
 modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 250, 468.364 )
-scale = Vector2( 0.552805, 0.552805 )
 texture = ExtResource( 10 )
 
 [node name="UnlockedSkillAnimation" type="AnimationPlayer" parent="."]

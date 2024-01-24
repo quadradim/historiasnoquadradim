@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/pasta2.png-72523b14c249b928d63eaa79b9630301.stex"
+path="res://.import/escuta_on.png-defd2e4d6b37c72b7bfb39cbca2b56e3.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Images/diary/pasta2.png"
-dest_files=[ "res://.import/pasta2.png-72523b14c249b928d63eaa79b9630301.stex" ]
+source_file="res://assets/Images/diary/escuta_on.png"
+dest_files=[ "res://.import/escuta_on.png-defd2e4d6b37c72b7bfb39cbca2b56e3.stex" ]
 
 [params]
 

@@ -31,6 +31,14 @@ var scenes_data = {
 		[],
 		false,
 	],
+	'episodes_selection': [
+		'res://scenes/GUI/EpisodeSelection.tscn',
+		'end_episode_selection',
+		false,
+		'continue',
+		[],
+		false,
+	],
 	'access01': [
 		'res://scenes/FirstAccess/Access01.tscn',
 		'end_access01',
@@ -76,6 +84,7 @@ var scenes_data = {
 		[],
 		false,
 	],
+	#Nucleo Bandeirante
 	'episode_intro':[
 		'res://scenes/NucleoBandeirante/EpisodeIntro.tscn',
 		'end_episode_intro',
@@ -91,22 +100,6 @@ var scenes_data = {
 		'introd_lava',
 		false,
 		'res://assets/audio/soundtrack/loop-analise-de-fotos2.mp3',
-		[],
-		false,
-	],
-	'suzana': [
-		'res://scenes/NucleoBandeirante/dialogs/Suazana.tscn',
-		'end_suzana_scene',
-		true,
-		'continue',
-		[],
-		false,
-	],
-	'episodes_selection': [
-		'res://scenes/GUI/EpisodeSelection.tscn',
-		'end_episode_selection',
-		false,
-		'continue',
 		[],
 		false,
 	],
@@ -129,6 +122,14 @@ var scenes_data = {
 	'lavadeira_amiga': [
 		'res://scenes/NucleoBandeirante/dialogs/Lavadeira.tscn',
 		'end_lavadeira',
+		true,
+		'continue',
+		[],
+		false,
+	],
+	'suzana': [
+		'res://scenes/NucleoBandeirante/dialogs/Suazana.tscn',
+		'end_suzana_scene',
 		true,
 		'continue',
 		[],
@@ -211,6 +212,7 @@ var scenes_data = {
 		[],
 		true,
 	],
+	#Taguatinga
 	'taguatinga_introduction':[
 		'res://scenes/Taguatinga/TaguaIntroduction.tscn',
 		'end_taguatinga_introduction',

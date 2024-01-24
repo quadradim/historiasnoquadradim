@@ -90,7 +90,7 @@ rect_pivot_offset = Vector2( 256, 152 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 4 )
 text = "A história trazida pelo nosso primeiro arco vem desses tempos frios de planalto central e nos conduz até o episódio que inicia essa aventura investigativa: a Cidade Livre.
-E para começar análise algumas fotos..."
+E para começar analise algumas fotos..."
 autowrap = true
 clip_text = true
 

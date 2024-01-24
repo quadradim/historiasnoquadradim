@@ -27,6 +27,7 @@ var current_text = ''
 var current_dialog = []
 var image_scale = {}
 var line_counter = 0
+var player_data
 
 export(bool) var has_profile
 export(bool) var chat2
@@ -82,6 +83,10 @@ func setChat(var a):
 	chat = a
 	
 func _ready():
+	player_data = $Player.read()
+	$MainCharacterChatBox/MainCharacterImage/Panel/Label.text = player_data["name"]
+	$MainCharacterChatBox/MainCharacterImage/Panel.rect_position = Vector2(-63-len(player_data["name"])*8,-8)
+	$MainCharacterChatBox/MainCharacterImage/Panel.rect_size = Vector2(22+len(player_data["name"])*8,25)
 #	image_scale[0] = Vector2(0.05,0.05)
 #	image_scale[1] = Vector2(0.175,0.175)
 #	load_file(str(chat_res))

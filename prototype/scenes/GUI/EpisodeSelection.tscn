@@ -75,23 +75,24 @@ corner_radius_bottom_left = 3
 script = ExtResource( 8 )
 
 [node name="BackGround" type="ColorRect" parent="."]
-margin_right = 1025.0
+margin_left = 1.0
+margin_right = 1026.0
 margin_bottom = 575.0
 color = Color( 0.945098, 0.933333, 0.905882, 1 )
 
 [node name="Padrão1" type="Sprite" parent="."]
-position = Vector2( 889, 373 )
-scale = Vector2( 0.275947, 0.275947 )
+position = Vector2( 872.267, 416.725 )
+scale = Vector2( 0.790035, 0.790035 )
 texture = ExtResource( 7 )
 
 [node name="Padrão2" type="Sprite" parent="."]
-position = Vector2( 109, 125 )
-scale = Vector2( 0.261364, 0.261364 )
+position = Vector2( 140, 118 )
+scale = Vector2( 0.935484, 0.935484 )
 texture = ExtResource( 6 )
 
 [node name="Padrão3" type="Sprite" parent="."]
-position = Vector2( 188, 423 )
-scale = Vector2( 0.285606, 0.285606 )
+position = Vector2( 168, 491 )
+scale = Vector2( 0.832609, 0.832609 )
 texture = ExtResource( 5 )
 
 [node name="Level1" type="Sprite" parent="."]

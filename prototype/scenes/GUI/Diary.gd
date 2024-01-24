@@ -20,23 +20,23 @@ func _ready():
 	
 	#Load Characters
 	if player_data["characters"] > 0:
-		$CharactersTab/Character1.visible = true
+		$CharactersTab/Suzana.visible = true
 	if player_data["characters"] > 1:
-		$CharactersTab/Character2.visible = true
+		$CharactersTab/Darcy.visible = true
 	if player_data["characters"] > 2:
-		$CharactersTab/Character3.visible = true
+		$CharactersTab/JoseMiguel.visible = true
 	if player_data["characters"] > 3:
-		$CharactersTab/Character4.visible = true
+		$CharactersTab/ChefDePolicia.visible = true
 	if player_data["characters"] > 4:
-		$CharactersTab/Character5.visible = true
+		$CharactersTab/Raulino.visible = true
 	if player_data["characters"] > 5:
-		$CharactersTab/Character6.visible = true
+		$CharactersTab/Israel.visible = true
 	if player_data["characters"] > 6:
-		$CharactersTab/Character7.visible = true
+		$CharactersTab/ProfessoraDomingas.visible = true
 	if player_data["characters"] > 7:
-		$CharactersTab/Character8.visible = true
+		$CharactersTab/Ranieri.visible = true
 	if player_data["characters"] > 8:
-		$CharactersTab/Character9.visible = true
+		$CharactersTab/Sindicalista.visible = true
 	#Load Abilitys
 	$AbillityTab/Binoculos.visible = player_data["ability"][0]
 	$AbillityTab/Cartazes.visible = player_data["ability"][1]
@@ -87,7 +87,7 @@ func play_music():
 func music_finished():
 	$MainMusic.play()
 
-
+#Tabs 
 func _on_PlayerButton_pressed():
 	$ProfileTab.visible = true
 	$MapTab.visible = false
@@ -123,14 +123,7 @@ func _on_AbillityButton_pressed():
 	$AbillityTab.visible = true	
 	pass # Replace with function body.
 
-
-func _on_Character1Button_pressed():
-	$CharactersTab/CharacterZoom.texture = $CharactersTab/Character1.texture
-	$CharactersTab/CharacterZoom.scale = Vector2(0.316,0.316)
-	$CharactersTab/DescriptionText.text = ("Dona Suzana")
-	pass # Replace with function body.
-
-
+  #City Tab
 func _on_City1Button_pressed():
 	$MapTab/CityDescription.text = (
 	"""Núcleo Bandeirante: Localidade provisória, conhecida
@@ -203,7 +196,7 @@ func _on_FirstAccessMessage_popup_hide():
 	$IconsAnimation.stop()
 	pass # Replace with function body.
 
-
+#Ability Tab 
 func _on_BinoculosButton_pressed():
 	$AbillityTab/AbillityName.text = ("olhar aguçado")
 	$AbillityTab/DescriptionText.text = ("Análise atenta aos detalhes aparentemente insignificantes")
@@ -250,5 +243,69 @@ func _on_PlanetaButton_pressed():
 	$AbillityTab/AbillityName.text = ("criticidade")
 	pass
 
+#Characters Tab
+func _on_SuzanaButton_pressed():
+	$CharactersTab/CharacterZoom.texture = $CharactersTab/Suzana.texture
+	$CharactersTab/CharacterZoom.position = Vector2(697,211)
+	$CharactersTab/CharacterZoom.scale = Vector2(0.95,0.95)
+	$CharactersTab/DescriptionText.text = ("Dona Suzana")
+	pass # Replace with function body.
+
+func _on_DarcyButton_pressed():
+	$CharactersTab/CharacterZoom.texture = $CharactersTab/Darcy.texture
+	$CharactersTab/CharacterZoom.position = Vector2(715,236)
+	$CharactersTab/CharacterZoom.scale = Vector2(0.95,0.95)
+	$CharactersTab/DescriptionText.text = ("Darcy")
+	pass # Replace with function body.
 
 
+func _on_JoseMiguelButton_pressed():
+	$CharactersTab/CharacterZoom.texture = $CharactersTab/JoseMiguel.texture
+	$CharactersTab/CharacterZoom.position = Vector2(698,217)
+	$CharactersTab/CharacterZoom.scale = Vector2(0.95,0.95)
+	$CharactersTab/DescriptionText.text = ("Jose Miguel")
+	pass # Replace with function body.
+
+
+func _on_ChefDePoliciaButton_pressed():
+	$CharactersTab/CharacterZoom.texture = $CharactersTab/ChefDePolicia.texture
+	$CharactersTab/CharacterZoom.position = Vector2(697,211)
+	$CharactersTab/CharacterZoom.scale = Vector2(0.95,0.95)
+	$CharactersTab/DescriptionText.text = ("Chefe de Policia")
+	pass # Replace with function body.
+
+
+func _on_RaulinoButton_pressed():
+	$CharactersTab/CharacterZoom.texture = $CharactersTab/Raulino.texture
+	$CharactersTab/CharacterZoom.position = Vector2(703,210)
+	$CharactersTab/CharacterZoom.scale = Vector2(0.95,0.95)
+	$CharactersTab/DescriptionText.text = ("Raulino")
+	pass # Replace with function body.
+
+
+func _on_IsraelButton_pressed():
+	$CharactersTab/CharacterZoom.texture = $CharactersTab/Israel.texture
+	$CharactersTab/CharacterZoom.position = Vector2(707,212)
+	$CharactersTab/CharacterZoom.scale = Vector2(0.95,0.95)
+	$CharactersTab/DescriptionText.text = ("Israel")
+	pass # Replace with function body.
+
+
+func _on_ProfessoraDomingasButton_pressed():
+	$CharactersTab/CharacterZoom.texture = $CharactersTab/ProfessoraDomingas.texture
+	$CharactersTab/CharacterZoom.position = Vector2(704,210)
+	$CharactersTab/CharacterZoom.scale = Vector2(0.95,0.95)
+	$CharactersTab/DescriptionText.text = ("Professora Domingas")
+	pass # Replace with function body.
+
+
+func _on_RanieriButton_pressed():
+	$CharactersTab/CharacterZoom.texture = $CharactersTab/Ranieri.texture
+	$CharactersTab/CharacterZoom.position = Vector2(707,213)
+	$CharactersTab/CharacterZoom.scale = Vector2(0.95,0.95)
+	$CharactersTab/DescriptionText.text = ("Ranieri")
+	pass # Replace with function body.
+
+
+func _on_SindicalistaButton_pressed():
+	pass # Replace with function body.
